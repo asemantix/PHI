@@ -4,8 +4,220 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Φ pour les Journalistes — Sources protégées, preuves opposables | AION ASEMANTIX</title>
-<meta name="description" content="Φ par AION ASEMANTIX — protection des sources garantie par construction matérielle. Déchiffrement local uniquement, aucune métadonnée centralisée, preuves opposables. Sans cloud, sans tiers de confiance.">
-<meta name="keywords" content="protection sources journalistes, communication chiffrée journaliste, sécurisation enquête investigation, signature presse opposable, secret des sources mathématique, lanceur d'alerte anonyme, journalisme investigation souverain, alternative Signal ProtonMail, Inline-Offline journaliste, résistance quantique presse">
+<meta name="description" content="Communication souveraine pour journalistes d'investigation. Sources anonymes garanties par construction. Sans cloud, sans serveur, sans tiers — le secret des sources est mathématique.">
+<meta name="keywords" content="protection sources journalistes, communication chiffrée journaliste, sécurisation enquête, signature presse, secret des sources, lanceur d'alerte, journalisme investigation">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0e1c35;
+    --navy-deep: #08111f;
+    --navy-soft: #1a2942;
+    --gold: #c8a84b;
+    --gold-deep: #8b6914;
+    --gold-soft: #e2c87a;
+    --paper: #ffffff;
+    --paper-soft: #fafaf7;
+    --paper-deep: #f4f1e8;
+    --rule: #e6e3dc;
+    --ink: #0e1c35;
+    --ink-muted: #4a5a73;
+    --ink-faded: #8a96a8;
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-mono: "IBM Plex Mono", Consolas, monospace;
+    --font-sans: "IBM Plex Sans", -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; line-height: 1; }
+  .nav-logo img { height: 38px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta { padding: 9px 22px; background: var(--navy); color: white !important; border-radius: 4px; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.06em; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--navy-deep); color: white !important; }
+  @media (max-width: 720px) { .nav-inner { padding: 14px 20px; } .nav-logo img { height: 32px; } .nav-links a:not(.nav-cta) { display: none; } }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 24px 40px 0; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-faded); letter-spacing: 0.12em; text-transform: uppercase; }
+  .breadcrumb a { color: var(--ink-muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--navy); }
+  .breadcrumb span { color: var(--gold-deep); }
+
+  /* ── HERO ── */
+  .hero { max-width: 1200px; margin: 0 auto; padding: 60px 40px 100px; }
+  .hero-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 32px; font-weight: 500; }
+  .hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.08; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 900px; letter-spacing: -0.01em; }
+  .hero-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
+  .hero-sub { font-family: var(--font-display); font-style: italic; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.55; color: var(--ink-muted); max-width: 720px; margin-bottom: 44px; font-weight: 400; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { padding: 14px 32px; background: var(--navy); color: white; border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--navy-deep); }
+  .btn-secondary { padding: 14px 32px; background: transparent; color: var(--navy); border: 1px solid var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
+  .btn-secondary:hover { background: var(--navy); color: white; }
+
+  /* ── SECTION ── */
+  .section { padding: 100px 0; border-top: 1px solid var(--rule); }
+  .section-soft { background: var(--paper-soft); }
+  .section-navy { background: var(--navy); color: var(--paper); }
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .section-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 24px; font-weight: 500; }
+  .section-navy .section-eyebrow { color: var(--gold-soft); }
+  .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 880px; letter-spacing: -0.01em; }
+  .section-navy .section-title { color: var(--paper); }
+  .section-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
+  .section-navy .section-title em { color: var(--gold-soft); }
+  .section-lead { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.65; color: var(--ink-muted); max-width: 760px; margin-bottom: 56px; font-weight: 400; }
+  .section-navy .section-lead { color: rgba(250,250,247,0.75); }
+
+  /* ── DOULEUR CARDS ── */
+  .douleur-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
+  .douleur-card { background: var(--paper); padding: 36px 32px; }
+  .douleur-num { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600; }
+  .douleur-title { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 16px; }
+  .douleur-text { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
+  @media (max-width: 880px) { .douleur-grid { grid-template-columns: 1fr; } }
+
+  /* ── PIVOT CITATION ── */
+  .pivot-citation { max-width: 880px; margin: 60px auto 0; padding: 60px 50px; background: var(--navy); border-left: 4px solid var(--gold); position: relative; }
+  .pivot-citation::before { content: "«"; position: absolute; top: 20px; left: 30px; font-family: var(--font-display); font-size: 5rem; color: var(--gold-soft); line-height: 1; opacity: 0.5; font-style: italic; }
+  .pivot-citation p { font-family: var(--font-display); font-style: italic; font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.4; color: var(--paper); font-weight: 400; text-align: center; padding-left: 30px; }
+
+  /* ── ACTES MÉDICAUX ── */
+  .actes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
+  .acte-card { background: var(--paper); padding: 40px 36px; display: flex; flex-direction: column; }
+  .acte-num { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.24em; color: var(--gold-deep); margin-bottom: 14px; font-weight: 600; }
+  .acte-title { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 22px; }
+  .acte-context-label, .acte-phi-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; display: block; }
+  .acte-context-label { color: var(--ink-faded); }
+  .acte-phi-label { color: var(--gold-deep); margin-top: 18px; }
+  .acte-context, .acte-phi { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; font-weight: 300; }
+  .acte-phi { color: var(--ink); }
+  @media (max-width: 880px) { .actes-grid { grid-template-columns: 1fr; } }
+
+  /* ── COMPARATIF TABLE ── */
+  .comparatif-wrapper { margin-top: 56px; overflow-x: auto; }
+  .comparatif-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.9rem; }
+  .comparatif-table th, .comparatif-table td { padding: 18px 20px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .comparatif-table thead th { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; padding-bottom: 14px; border-bottom: 2px solid var(--navy); }
+  .comparatif-table thead th.col-phi { color: var(--gold-deep); }
+  .comparatif-table tbody th { font-weight: 500; color: var(--ink); font-size: 0.92rem; }
+  .comparatif-table td { color: var(--ink-muted); font-weight: 300; }
+  .comparatif-table .col-phi { background: rgba(200,168,75,0.06); color: var(--ink); font-weight: 500; }
+  .comparatif-table tbody tr:hover { background: var(--paper-soft); }
+  .comparatif-table tbody tr:hover .col-phi { background: rgba(200,168,75,0.12); }
+
+  /* ── CONFORMITÉ ── */
+  .conformite-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 56px; }
+  .conformite-card { padding: 32px 30px; background: var(--paper); border-left: 3px solid var(--gold); }
+  .conformite-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; font-weight: 600; }
+  .conformite-title { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.35; font-weight: 500; color: var(--navy); margin-bottom: 14px; }
+  .conformite-text { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
+  @media (max-width: 760px) { .conformite-grid { grid-template-columns: 1fr; } }
+
+  /* ── TARIFICATION ── */
+  .tarif-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+  .tarif-card { padding: 36px 32px; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; display: flex; flex-direction: column; }
+  .tarif-card-featured { background: var(--navy); color: var(--paper); border-color: var(--navy); }
+  .tarif-eyebrow { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600; }
+  .tarif-card-featured .tarif-eyebrow { color: var(--gold-soft); }
+  .tarif-name { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.25; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
+  .tarif-card-featured .tarif-name { color: var(--paper); }
+  .tarif-price { font-family: var(--font-display); font-size: 2rem; line-height: 1; font-weight: 500; color: var(--navy); margin: 16px 0 28px; }
+  .tarif-card-featured .tarif-price { color: var(--gold-soft); }
+  .tarif-price small { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-muted); font-weight: 300; display: block; margin-top: 6px; }
+  .tarif-card-featured .tarif-price small { color: rgba(250,250,247,0.6); }
+  .tarif-list { list-style: none; padding: 0; margin: 0 0 32px; flex: 1; }
+  .tarif-list li { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-muted); line-height: 1.55; font-weight: 300; padding: 8px 0 8px 22px; position: relative; border-bottom: 1px solid var(--rule); }
+  .tarif-card-featured .tarif-list li { color: rgba(250,250,247,0.7); border-bottom-color: rgba(255,255,255,0.1); }
+  .tarif-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold-deep); font-weight: 500; }
+  .tarif-card-featured .tarif-list li::before { color: var(--gold-soft); }
+  .tarif-cta { display: block; text-align: center; padding: 14px 24px; background: var(--navy); color: white !important; border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; }
+  .tarif-cta:hover { background: var(--navy-deep); }
+  .tarif-card-featured .tarif-cta { background: var(--gold); color: var(--navy) !important; }
+  .tarif-card-featured .tarif-cta:hover { background: var(--gold-soft); }
+  @media (max-width: 880px) { .tarif-grid { grid-template-columns: 1fr; } }
+
+  /* ── FAQ ── */
+  .faq-list { margin-top: 56px; }
+  .faq-item { border-bottom: 1px solid var(--rule); padding: 28px 0; }
+  .faq-question { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.4; font-weight: 500; color: var(--navy); margin-bottom: 14px; cursor: pointer; position: relative; padding-right: 36px; }
+  .faq-question::after { content: "+"; color: var(--gold-deep); font-weight: 400; font-size: 1.4rem; line-height: 1; transition: transform 0.2s; position: absolute; right: 0; top: 4px; }
+  .faq-item.open .faq-question::after { transform: rotate(45deg); transform-origin: center; }
+  .faq-answer { font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink-muted); line-height: 1.7; font-weight: 300; max-width: 880px; }
+
+  /* ── CTA FINAL ── */
+  .cta-final { padding: 120px 0; background: var(--navy); color: var(--paper); text-align: center; }
+  .cta-final-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; }
+  .cta-final h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15; font-weight: 500; color: var(--paper); margin-bottom: 24px; letter-spacing: -0.01em; }
+  .cta-final h2 em { color: var(--gold-soft); font-style: italic; font-weight: 400; }
+  .cta-final p { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.6; color: rgba(250,250,247,0.7); margin-bottom: 44px; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .cta-final-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-gold { padding: 14px 32px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
+  .btn-gold:hover { background: var(--gold-soft); }
+  .btn-ghost { padding: 14px 32px; background: transparent; color: var(--paper); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--paper); }
+
+  /* ── SIDEBAR PROFESSIONS ── */
+  .professions { padding: 80px 0; background: var(--paper-soft); border-top: 1px solid var(--rule); }
+  .professions-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .professions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+  .profession-link { padding: 18px 22px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink); text-decoration: none; font-weight: 400; transition: all 0.2s; display: flex; align-items: center; justify-content: space-between; }
+  .profession-link:hover { border-color: var(--gold); background: var(--paper); }
+  .profession-link::after { content: "→"; color: var(--gold-deep); }
+  @media (max-width: 880px) { .professions-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .professions-grid { grid-template-columns: 1fr; } }
+
+
+  /* Φ — marque stylisée */
+  em.brand, .brand-em { font-style: italic; font-weight: inherit; color: inherit; }
+  sup.reg, .brand-reg { font-size: 0.55em; font-weight: 400; vertical-align: super; margin-left: 0.05em; opacity: 0.85; font-style: normal; }
+
+  .sec-header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .sec-header-back { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+  .sec-header-back:hover { color: var(--navy); }
+  .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--gold-deep); font-weight: 500; text-decoration: none; line-height: 1; }
+  @media (max-width: 720px) { .sec-header { padding: 0 24px; } }
+
+
+  /* FOOTER */
+  .footer { background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 60px 48px 36px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-brand { text-align: center; margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid rgba(200,168,75,0.2); }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 3.2rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 12px; }
+  .footer-line { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 12px; }
+  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--gold-soft); margin-bottom: 3px; }
+  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 0.85rem; color: rgba(226,200,122,0.75); }
+  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 32px; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-soft); font-weight: 500; margin-bottom: 14px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--gold-soft); }
+  .footer-meta { border-top: 1px solid rgba(200,168,75,0.15); padding-top: 22px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.35); line-height: 1.8; }
+  .footer-meta strong { color: var(--gold-soft); font-weight: 500; }
+  @media (max-width: 720px) { .footer { padding: 48px 24px 28px; } .footer-nav { grid-template-columns: 1fr; gap: 24px; } }
+
+
+  /* ── HEADER CTA ── */
+  .sec-header-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
+  .sec-header-cta:hover { background: var(--navy-deep); }
+  .sec-header-cta .phi-cta { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; margin-left: 4px; letter-spacing: 0; color: var(--gold-soft); }
+  @media (max-width: 720px) { .sec-header-cta { display: none; } }
+</style>
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="AION ASEMANTIX">
 <link rel="canonical" href="https://phi-signature.fr/professions/journalistes.html">
@@ -44,171 +256,22 @@
   ]}
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0e1c35;
-    --navy-deep: #08111f;
-    --navy-soft: #1a2942;
-    --gold: #c8a84b;
-    --gold-deep: #8b6914;
-    --gold-soft: #e2c87a;
-    --paper: #ffffff;
-    --paper-soft: #fafaf7;
-    --paper-deep: #f4f1e8;
-    --rule: #e6e3dc;
-    --ink: #0e1c35;
-    --ink-muted: #4a5a73;
-    --ink-faded: #8a96a8;
-    --font-display: "Playfair Display", Georgia, serif;
-    --font-mono: "IBM Plex Mono", Consolas, monospace;
-    --font-sans: "IBM Plex Sans", -apple-system, sans-serif;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-sans); color: var(--ink); background: var(--paper); line-height: 1.6; font-weight: 300; -webkit-font-smoothing: antialiased; }
-
-  /* ── HEADER SIMPLE ── */
-  .sec-header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-  .sec-header-back { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
-  .sec-header-back:hover { color: var(--navy); }
-  .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--gold-deep); font-weight: 500; text-decoration: none; line-height: 1; }
-  @media (max-width: 720px) { .sec-header { padding: 0 24px; } }
-
-  /* ── HEADER CTA ── */
-  .sec-header-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
-  .sec-header-cta:hover { background: var(--navy-deep); }
-  .sec-header-cta .phi-cta { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; margin-left: 4px; letter-spacing: 0; color: var(--gold-soft); }
-  @media (max-width: 720px) { .sec-header-cta { display: none; } }
-
-  /* ── HERO ── */
-  .hero { max-width: 1200px; margin: 0 auto; padding: 60px 40px 100px; }
-  .hero-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 32px; font-weight: 500; }
-  .hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.08; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 900px; letter-spacing: -0.01em; }
-  .hero-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
-  .hero-sub { font-family: var(--font-display); font-style: italic; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.55; color: var(--ink-muted); max-width: 720px; margin-bottom: 44px; font-weight: 400; }
-  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary { padding: 14px 32px; background: var(--navy); color: white; border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
-  .btn-primary:hover { background: var(--navy-deep); }
-  .btn-secondary { padding: 14px 32px; background: transparent; color: var(--navy); border: 1px solid var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
-  .btn-secondary:hover { background: var(--navy); color: white; }
-
-  /* ── SECTION ── */
-  .section { padding: 100px 0; border-top: 1px solid var(--rule); }
-  .section-soft { background: var(--paper-soft); }
-  .section-navy { background: var(--navy); color: var(--paper); }
-  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-  .section-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 24px; font-weight: 500; }
-  .section-navy .section-eyebrow { color: var(--gold-soft); }
-  .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 880px; letter-spacing: -0.01em; }
-  .section-navy .section-title { color: var(--paper); }
-  .section-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
-  .section-navy .section-title em { color: var(--gold-soft); }
-  .section-lead { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.65; color: var(--ink-muted); max-width: 760px; margin-bottom: 56px; font-weight: 400; }
-  .section-navy .section-lead { color: rgba(250,250,247,0.75); }
-
-  /* ── DOULEUR CARDS ── */
-  .douleur-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
-  .douleur-card { background: var(--paper); padding: 36px 32px; }
-  .douleur-num { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600; }
-  .douleur-title { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 16px; }
-  .douleur-text { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
-  @media (max-width: 880px) { .douleur-grid { grid-template-columns: 1fr; } }
-
-  /* ── ACTES ── */
-  .actes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
-  .acte-card { background: var(--paper); padding: 40px 36px; display: flex; flex-direction: column; }
-  .acte-num { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.24em; color: var(--gold-deep); margin-bottom: 14px; font-weight: 600; }
-  .acte-title { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 22px; }
-  .acte-context-label, .acte-phi-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; display: block; }
-  .acte-context-label { color: var(--ink-faded); }
-  .acte-phi-label { color: var(--gold-deep); margin-top: 18px; }
-  .acte-context, .acte-phi { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; font-weight: 300; }
-  .acte-phi { color: var(--ink); }
-  @media (max-width: 880px) { .actes-grid { grid-template-columns: 1fr; } }
-
-  /* ── COMPARATIF TABLE ── */
-  .comparatif-wrapper { margin-top: 56px; overflow-x: auto; }
-  .comparatif-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.9rem; }
-  .comparatif-table th, .comparatif-table td { padding: 18px 20px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: middle; }
-  .comparatif-table thead th { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; padding-bottom: 14px; border-bottom: 2px solid var(--navy); }
-  .comparatif-table thead th.col-phi { color: var(--gold-deep); }
-  .comparatif-table tbody th { font-weight: 500; color: var(--ink); font-size: 0.92rem; }
-  .comparatif-table td { color: var(--ink-muted); font-weight: 300; }
-  .comparatif-table .col-phi { background: rgba(200,168,75,0.06); color: var(--ink); font-weight: 500; }
-  .comparatif-table tbody tr:hover { background: var(--paper-soft); }
-  .comparatif-table tbody tr:hover .col-phi { background: rgba(200,168,75,0.12); }
-
-  /* ── CONFORMITÉ ── */
-  .conformite-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 56px; }
-  .conformite-card { padding: 32px 30px; background: var(--paper); border-left: 3px solid var(--gold); }
-  .conformite-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; font-weight: 600; }
-  .conformite-title { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.35; font-weight: 500; color: var(--navy); margin-bottom: 14px; }
-  .conformite-text { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
-  @media (max-width: 760px) { .conformite-grid { grid-template-columns: 1fr; } }
-
-  /* ── FAQ ── */
-  .faq-list { margin-top: 56px; }
-  .faq-item { border-bottom: 1px solid var(--rule); padding: 28px 0; }
-  .faq-question { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.4; font-weight: 500; color: var(--navy); margin-bottom: 14px; cursor: pointer; position: relative; padding-right: 36px; }
-  .faq-question::after { content: "+"; color: var(--gold-deep); font-weight: 400; font-size: 1.4rem; line-height: 1; transition: transform 0.2s; position: absolute; right: 0; top: 4px; }
-  .faq-item.open .faq-question::after { transform: rotate(45deg); transform-origin: center; }
-  .faq-answer { font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink-muted); line-height: 1.7; font-weight: 300; max-width: 880px; }
-
-  /* ── CTA FINAL ── */
-  .cta-final { padding: 120px 0; background: var(--navy); color: var(--paper); text-align: center; }
-  .cta-final-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; }
-  .cta-final h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15; font-weight: 500; color: var(--paper); margin-bottom: 24px; letter-spacing: -0.01em; }
-  .cta-final h2 em { color: var(--gold-soft); font-style: italic; font-weight: 400; }
-  .cta-final p { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.6; color: rgba(250,250,247,0.7); margin-bottom: 44px; max-width: 620px; margin-left: auto; margin-right: auto; }
-  .cta-final-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-gold { padding: 14px 32px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
-  .btn-gold:hover { background: var(--gold-soft); }
-  .btn-ghost { padding: 14px 32px; background: transparent; color: var(--paper); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--paper); }
-
-  /* ── SIDEBAR PROFESSIONS ── */
-  .professions { padding: 80px 0; background: var(--paper-soft); border-top: 1px solid var(--rule); }
-  .professions-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-  .professions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
-  .profession-link { padding: 18px 22px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink); text-decoration: none; font-weight: 400; transition: all 0.2s; display: flex; align-items: center; justify-content: space-between; }
-  .profession-link:hover { border-color: var(--gold); background: var(--paper); }
-  .profession-link::after { content: "→"; color: var(--gold-deep); }
-  @media (max-width: 880px) { .professions-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px) { .professions-grid { grid-template-columns: 1fr; } }
-
-  /* ── MARQUE Φ ── */
-  em.brand, .brand-em { font-style: italic; font-weight: inherit; color: inherit; }
-  sup.reg, .brand-reg { font-size: 0.55em; font-weight: 400; vertical-align: super; margin-left: 0.05em; opacity: 0.85; font-style: normal; }
-
-  /* ── FOOTER ── */
-  .footer { background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 60px 48px 36px; }
-  .footer-inner { max-width: 1100px; margin: 0 auto; }
-  .footer-brand { text-align: center; margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid rgba(200,168,75,0.2); }
-  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 3.2rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 12px; }
-  .footer-line { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 12px; }
-  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--gold-soft); margin-bottom: 3px; }
-  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 0.85rem; color: rgba(226,200,122,0.75); }
-  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 32px; }
-  .footer-col h4 { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-soft); font-weight: 500; margin-bottom: 14px; }
-  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
-  .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
-  .footer-col a:hover { color: var(--gold-soft); }
-  .footer-meta { border-top: 1px solid rgba(200,168,75,0.15); padding-top: 22px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.35); line-height: 1.8; }
-  .footer-meta strong { color: var(--gold-soft); font-weight: 500; }
-  @media (max-width: 720px) { .footer { padding: 48px 24px 28px; } .footer-nav { grid-template-columns: 1fr; gap: 24px; } }
-</style>
 </head>
 <body>
-
 <header class="sec-header">
-  <a href="../index.html" class="sec-header-back">← Retour</a>
-  <a href="../index.html" class="sec-header-phi">Φ</a>
+  <div style="display:flex;align-items:center;gap:28px;">
+    <a href="../index.html" class="sec-header-back">← Retour</a>
+    <a href="../index.html" class="sec-header-phi">Φ</a>
+  </div>
   <a href="../tarifications.html" class="sec-header-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </header>
+
+
+
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a> › <a href="../professions.html">Professions</a> › <span>Journalistes</span>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -244,7 +307,7 @@
       <div class="douleur-card">
         <div class="douleur-num">01 · Métadonnées</div>
         <h3 class="douleur-title">Le chiffrement n'est pas le secret</h3>
-        <p class="douleur-text">Signal chiffre le transport. ProtonMail aussi. Mais les deux déchiffrent vos contenus dans leur couche applicative — ils voient vos documents en clair à l'ouverture. Signal connaît qui parle à qui. ProtonMail conserve les métadonnées (expéditeur, destinataire, horodatage). En cas de réquisition judiciaire, ces données suffisent à identifier une source — et le contenu lui-même est accessible aux opérateurs.</p>
+        <p class="douleur-text">Signal chiffre le transport. ProtonMail aussi. Mais les deux déchiffrent vos contenus sur leurs propres serveurs — ils voient vos documents en clair. Signal connaît qui parle à qui. ProtonMail conserve les métadonnées (expéditeur, destinataire, horodatage). En cas de réquisition judiciaire, ces données suffisent à identifier une source — et le contenu lui-même est accessible aux opérateurs.</p>
       </div>
       <div class="douleur-card">
         <div class="douleur-num">02 · Juridictions</div>
@@ -280,10 +343,10 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin:0 0 32px;">
       <div style="background:var(--paper-soft);padding:28px 30px;">
         <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faded);font-weight:600;margin-bottom:12px;">Signal · ProtonMail · WhatsApp</div>
-        <p style="font-family:var(--font-sans);font-size:0.9rem;color:var(--ink-muted);line-height:1.65;font-weight:300;">Le chiffrement de bout en bout protège le <em>transport</em>. Mais le déchiffrement final a lieu dans la couche applicative de l'éditeur — qui voit vos contenus en clair, conserve des métadonnées, et peut répondre à une réquisition judiciaire.</p>
+        <p style="font-family:var(--font-sans);font-size:0.9rem;color:var(--ink-muted);line-height:1.65;font-weight:300;">Le chiffrement de bout en bout protège le <em>transport</em>. Mais le déchiffrement final a lieu sur les serveurs de l'éditeur — qui voit vos contenus en clair, conserve des métadonnées, et peut répondre à une réquisition judiciaire.</p>
       </div>
       <div style="background:var(--navy);padding:28px 30px;">
-        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:12px;">Φ — Inline-Offline®</div>
+        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:12px;">Φ — Inline-Offline<sup class="reg">®</sup></div>
         <p style="font-family:var(--font-sans);font-size:0.9rem;color:var(--paper);line-height:1.65;font-weight:400;">Le déchiffrement ne se produit <strong>jamais</strong> sur un serveur. Il a lieu exclusivement dans l'app Φ, sur le dispositif physique du destinataire autorisé. Aucun serveur Φ n'existe. Aucun contenu n'est visible en dehors des deux dispositifs légitimes.</p>
       </div>
     </div>
@@ -375,7 +438,6 @@
         <tbody>
           <tr><th>Déchiffrement des contenus</th><td>Sur les serveurs Signal</td><td>Sur les serveurs Proton (interface web)</td><td>Sur les serveurs Meta</td><td class="col-phi">Uniquement dans l'app Φ · sur votre dispositif · jamais ailleurs</td></tr>
           <tr><th>Hébergement</th><td>États-Unis (AWS)</td><td>Suisse</td><td>Meta · États-Unis</td><td class="col-phi">Aucun serveur · Local</td></tr>
-          <tr><th>Canal de transport</th><td>Plateforme propriétaire</td><td>Plateforme propriétaire</td><td>Plateforme propriétaire</td><td class="col-phi">Indifférent — Gmail, Outlook, clé USB…</td></tr>
           <tr><th>Conserve les métadonnées</th><td>Oui (qui parle à qui)</td><td>Oui (expéditeur/destinataire)</td><td>Oui (massif)</td><td class="col-phi">Aucune métadonnée centralisée</td></tr>
           <tr><th>Numéro de téléphone requis</th><td>Oui</td><td>Non</td><td>Oui</td><td class="col-phi">Non — anonymat structurel</td></tr>
           <tr><th>Identifie la source en cas de réquisition</th><td>Possible (via numéro)</td><td>Possible (cas avéré 2021)</td><td>Oui (Meta coopère)</td><td class="col-phi">Impossible mathématiquement</td></tr>
@@ -420,10 +482,10 @@
   </div>
 </section>
 
-<!-- TARIFICATION -->
+<!-- TARIFICATION (grands comptes) -->
 <section class="section" id="tarification">
   <div class="section-inner">
-    <div class="section-eyebrow">Rédactions &amp; sur mesure</div>
+    <div class="section-eyebrow">Grands comptes &amp; sur mesure</div>
     <h2 class="section-title">Chaque rédaction a<br><em>ses propres exigences.</em></h2>
     <p class="section-lead">Journaliste indépendant, rédaction d'investigation, agence de presse, groupe multi-titres — les volumétries, les déploiements multi-pays, les intégrations CMS et les besoins juridiques diffèrent. <em class="brand">Φ</em> adapte son déploiement à votre dossier, pas l'inverse.</p>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); margin-top: 56px; border: 1px solid var(--rule);">
@@ -442,6 +504,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- CANAL PORTEUR INDIFFÉRENT -->
 <section class="section section-soft">
@@ -464,24 +527,11 @@
       <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Tout autre canal</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">capable de transporter un fichier ou un blob d'octets</span></div>
     </div>
 
-    <p style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.78; color: var(--ink); margin-bottom: 32px; font-weight: 400;">
-      Dans tous les cas, le canal porteur ne voit que des octets chiffrés indistinguables de bruit aléatoire. <strong style="color: var(--navy); font-weight: 500;">Gmail ne sait pas qu'il transporte une enquête d'investigation.</strong> ProtonMail ne sait pas qu'il achemine les révélations d'un lanceur d'alerte. Signal ne sait pas qu'il porte les preuves d'une corruption. Aucun de ces opérateurs ne peut reconstituer le contenu, parce que la clé de déchiffrement ne quitte jamais l'enclave matérielle des dispositifs légitimes.
+    <p style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.78; color: var(--ink); margin-bottom: 24px; font-weight: 400;">
+      Dans tous les cas, le canal porteur ne voit que des octets chiffrés indistinguables de bruit aléatoire. <strong style="color: var(--navy); font-weight: 500;">Gmail ne sait pas qu'il transporte une convention d'honoraires.</strong> ProtonMail ne sait pas qu'il achemine une conclusion d'avocat. Signal ne sait pas qu'il porte une signature contractuelle. Aucun de ces opérateurs ne peut reconstituer le contenu, parce que la clé de déchiffrement ne quitte jamais l'enclave matérielle des dispositifs légitimes.
     </p>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin-bottom: 32px;">
-      <div style="background: var(--paper-soft); padding: 32px 30px;">
-        <div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; margin-bottom: 14px;">Signal, ProtonMail — messageries E2E</div>
-        <p style="font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.7; color: var(--ink-muted); font-weight: 300; margin-bottom: 14px;">Le transport est chiffré. Mais le déchiffrement a lieu dans leur couche applicative — visible dans leur interface, accessible à leur infrastructure. En cas de réquisition, l'opérateur peut coopérer et livrer métadonnées ou contenus.</p>
-        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faded); letter-spacing: 0.04em;">Transit chiffré · Déchiffrement applicatif côté opérateur</p>
-      </div>
-      <div style="background: var(--navy); padding: 32px 30px;">
-        <div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); font-weight: 600; margin-bottom: 14px;">Inline-Offline<sup style="font-size: 0.55rem;">®</sup> — procédé Φ</div>
-        <p style="font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.7; color: rgba(250,250,247,0.82); font-weight: 300; margin-bottom: 14px;">Le transit est chiffré. Le déchiffrement n'a lieu que dans l'enclave matérielle de l'app Φ sur l'appareil physique du destinataire. Aucun opérateur intermédiaire n'exécute le déchiffrement — même à l'ouverture. Aucune réquisition ne peut rien obtenir.</p>
-        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--gold-soft); letter-spacing: 0.04em;">Transit chiffré · Déchiffrement exclusivement local, dans le silicium</p>
-      </div>
-    </div>
-
-    <div style="background: var(--navy); color: var(--paper); padding: 36px 40px; border-radius: 6px; border-left: 4px solid var(--gold); text-align: center;">
+    <div style="background: var(--navy); color: var(--paper); padding: 36px 40px; border-radius: 6px; border-left: 4px solid var(--gold); margin-top: 32px; text-align: center;">
       <p style="font-family: var(--font-display); font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--paper); font-weight: 500; margin: 0;">
         Votre messagerie devient un facteur.<br>
         <em style="font-style: normal; color: var(--gold-soft); font-weight: 600;">Plus jamais un témoin.</em>
@@ -491,7 +541,7 @@
 </section>
 
 <!-- FAQ -->
-<section class="section">
+<section class="section section-soft">
   <div class="section-inner">
     <div class="section-eyebrow">Questions fréquentes</div>
     <h2 class="section-title">Ce que les journalistes<br><em>nous demandent.</em></h2>
@@ -510,7 +560,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-question"><em class="brand">Φ</em> remplace-t-elle Signal ou ProtonMail pour les journalistes ?</div>
-        <p class="faq-answer"><em class="brand">Φ</em> repose sur une architecture fondamentalement différente. Signal et ProtonMail chiffrent le transport — mais déchiffrent les contenus dans leur couche applicative, qui voit donc vos documents en clair à l'ouverture. Avec <em class="brand">Φ</em>, le déchiffrement ne se produit jamais sur un serveur : il a lieu exclusivement dans l'app, sur le dispositif physique du destinataire. Aucun opérateur intermédiaire ne voit quoi que ce soit. Pour des conversations rapides, Signal reste utile. Pour la protection des sources, l'authenticité des documents et la preuve probatoire opposable, <em class="brand">Φ</em> est la seule solution structurellement souveraine.</p>
+        <p class="faq-answer"><em class="brand">Φ</em> repose sur une architecture fondamentalement différente. Signal et ProtonMail chiffrent le transport — mais déchiffrent les contenus sur leurs propres serveurs, qui voient donc vos documents en clair. Avec <em class="brand">Φ</em>, le déchiffrement ne se produit jamais sur un serveur : il a lieu exclusivement dans l'app, sur le dispositif physique du destinataire. Aucun opérateur intermédiaire ne voit quoi que ce soit. Pour des conversations rapides, Signal reste utile. Pour la protection des sources, l'authenticité des documents et la preuve probatoire opposable, <em class="brand">Φ</em> est la seule solution structurellement souveraine.</p>
       </div>
       <div class="faq-item">
         <div class="faq-question">Comment prouver l'authenticité d'un document reçu d'une source ?</div>
@@ -539,7 +589,7 @@
 <!-- AUTRES PROFESSIONS -->
 <section class="professions">
   <div class="professions-inner">
-    <div class="section-eyebrow">L'ÉCOSYSTÈME AION ASEMANTIX</div>
+    <div class="section-eyebrow"><em class="brand">Φ</em> pour votre profession</div>
     <h2 class="section-title">D'autres professions<br><em>exigeantes.</em></h2>
     <div class="professions-grid">
       <a href="justice.html" class="profession-link">Avocats &amp; Notaires</a>
@@ -593,7 +643,9 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
   });
 </script>
 

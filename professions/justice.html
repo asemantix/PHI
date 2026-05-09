@@ -195,10 +195,17 @@
 <body>
 
 <header class="sec-header">
-  <a href="../index.html" class="sec-header-back">← Retour</a>
-  <a href="../index.html" class="sec-header-phi">Φ</a>
+  <div style="display:flex;align-items:center;gap:28px;">
+    <a href="../index.html" class="sec-header-back">← Retour</a>
+    <a href="../index.html" class="sec-header-phi">Φ</a>
+  </div>
   <a href="../tarifications.html" class="sec-header-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </header>
+
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a> › <a href="../professions.html">Professions</a> › <span>Justice</span>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -258,7 +265,7 @@
     </h2>
     <div style="display: inline-flex; align-items: center; gap: 18px; padding: 14px 24px; background: var(--paper-deep); border-left: 3px solid var(--gold); margin: 32px 0 40px; max-width: 100%;">
       <span style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">Procédé propriétaire breveté</span>
-      <span style="font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--navy); font-weight: 500;">Inline-Offline®</span>
+      <span style="font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--navy); font-weight: 500;">Inline-Offline<sup class="reg">®</sup></span>
     </div>
     <p class="section-lead">
       C'est exactement ce que produit <em class="brand">Φ</em>. Une preuve mathématique gravée dans le keystore matériel du dispositif de l'avocat ou du notaire, et de celui du client. Deux journaux miroirs, cryptographiquement interdépendants, qui rendent la contestation devant tout tribunal structurellement impossible.
@@ -273,7 +280,7 @@
         <p style="font-family:var(--font-sans);font-size:0.9rem;color:var(--ink-muted);line-height:1.65;font-weight:300;">Ces services chiffrent le transport — mais déchiffrent vos documents sur leurs propres serveurs. L'éditeur voit vos actes en clair, les stocke, et peut les produire en réponse à une réquisition judiciaire ou une faille de sécurité. Le secret professionnel repose sur une promesse contractuelle, pas sur une impossibilité technique.</p>
       </div>
       <div style="background:var(--navy);padding:28px 30px;">
-        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:12px;">Φ — Inline-Offline®</div>
+        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:12px;">Φ — Inline-Offline<sup class="reg">®</sup></div>
         <p style="font-family:var(--font-sans);font-size:0.9rem;color:var(--paper);line-height:1.65;font-weight:400;">Le déchiffrement ne se produit <strong>jamais</strong> sur un serveur. Il a lieu exclusivement dans l'app Φ, sur le dispositif physique du destinataire autorisé. Aucun serveur Φ n'existe. Vos actes juridiques ne sont visibles nulle part en dehors des deux dispositifs légitimes. Le secret professionnel est garanti par construction matérielle.</p>
       </div>
     </div>
@@ -335,7 +342,7 @@
         <span class="acte-context-label">Aujourd'hui</span>
         <p class="acte-context">Vos échanges entre confrères transitent par votre messagerie professionnelle, hébergée le plus souvent chez Microsoft 365 ou Google Workspace. Vos pièces, conclusions, projets de protocole, voient ces serveurs en clair — alors même que l'article 66-5 de la loi de 1971 impose le secret professionnel absolu sur ces correspondances.</p>
         <span class="acte-phi-label">Avec <em class="brand">Φ</em></span>
-        <p class="acte-phi">Vos correspondances confraternelles transitent en chiffré bout-en-bout via <em class="brand">Φ</em>. Inline-Offline® : la messagerie ne voit que des octets chiffrés. Le document ne s'ouvre que dans l'enclave du destinataire confrère légitime. Le secret professionnel est garanti par construction matérielle, non par engagement contractuel d'un opérateur tiers.</p>
+        <p class="acte-phi">Vos correspondances confraternelles transitent en chiffré bout-en-bout via <em class="brand">Φ</em>. Inline-Offline<sup class="reg">®</sup> : la messagerie ne voit que des octets chiffrés. Le document ne s'ouvre que dans l'enclave du destinataire confrère légitime. Le secret professionnel est garanti par construction matérielle, non par engagement contractuel d'un opérateur tiers.</p>
       </div>
     </div>
   </div>
@@ -486,7 +493,7 @@
 
       <div class="faq-item">
         <div class="faq-question"><em class="brand">Φ</em> respecte-t-elle le secret professionnel de l'avocat ?</div>
-        <p class="faq-answer">Oui. <em class="brand">Φ</em> respecte l'article 66-5 de la loi de 1971 par construction matérielle. Aucun serveur AION ASEMANTIX n'existe pour stocker vos correspondances. Le document ne s'ouvre que dans l'enclave sécurisée du dispositif autorisé. Point essentiel : la messagerie professionnelle de l'avocat (Gmail, Outlook, messagerie de cabinet) qui transporte le document à faire signer, et la messagerie personnelle du destinataire qui renvoie le document signé, ne voient jamais le contenu en clair. Procédé Inline-Offline® — le document chiffré ne s'ouvre que dans l'application des dispositifs légitimes. C'est une architecture fondamentalement différente de celle de Signal, ProtonMail ou WhatsApp, qui déchiffrent les contenus sur leurs serveurs avant de les afficher.</p>
+        <p class="faq-answer">Oui. <em class="brand">Φ</em> respecte l'article 66-5 de la loi de 1971 par construction matérielle. Aucun serveur AION ASEMANTIX n'existe pour stocker vos correspondances. Le document ne s'ouvre que dans l'enclave sécurisée du dispositif autorisé. Point essentiel : la messagerie professionnelle de l'avocat (Gmail, Outlook, messagerie de cabinet) qui transporte le document à faire signer, et la messagerie personnelle du destinataire qui renvoie le document signé, ne voient jamais le contenu en clair. Procédé Inline-Offline<sup class="reg">®</sup> — le document chiffré ne s'ouvre que dans l'application des dispositifs légitimes. C'est une architecture fondamentalement différente de celle de Signal, ProtonMail ou WhatsApp, qui déchiffrent les contenus sur leurs serveurs avant de les afficher.</p>
       </div>
 
       <div class="faq-item">
