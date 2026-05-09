@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════ SEO ═══════════════════════════ -->
+<title>Échanges confidentiels — Φ par AION ASEMANTIX | Alternative WeTransfer souveraine, post-quantique</title>
+<meta name="description" content="Transmettez vos documents confidentiels sans serveur, sans cloud, sans tiers de confiance. Φ par Asemantix : alternative française à WeTransfer, Dropbox, Drive et OneDrive. Chiffrement post-quantique inline-offline — aucun intermédiaire ne lit vos contenus.">
+<meta name="keywords" content="alternative WeTransfer, transfert fichier sécurisé sans cloud, envoyer document confidentiel, transmission probatoire fichier, messagerie sans serveur, alternative Dropbox, alternative ProtonMail, inline-offline, Phi signature, AION ASEMANTIX, post-quantique">
+<meta name="author" content="AION ASEMANTIX">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://phi-signature.fr/echanges_confidentiels.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/echanges_confidentiels.html">
+<meta property="og:site_name" content="Φ — AION ASEMANTIX">
+<meta property="og:title" content="Échanges confidentiels — Φ | Alternative WeTransfer souveraine, post-quantique">
+<meta property="og:description" content="Transmettre vos documents confidentiels sans serveur, sans cloud, sans tiers. Vos correspondances ne sont vues par personne — pas même nous.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Échanges confidentiels — Φ par Asemantix">
+<meta name="twitter:description" content="Alternative française à WeTransfer, Dropbox, ProtonMail. Chiffrement post-quantique inline-offline. Sans serveur. Sans tiers.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<!-- Favicon Φ inline -->
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+
+<!-- JSON-LD : Article + BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Échanges confidentiels — Φ",
+      "description": "Une transmission chiffrée au-delà du bout-en-bout, jusque dans le silicium — inline-offline, post-quantique, jamais lisible nulle part ailleurs que sur les dispositifs des parties.",
+      "author": {
+        "@type": "Organization",
+        "name": "AION ASEMANTIX",
+        "url": "https://phi-signature.fr/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "AION ASEMANTIX",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://phi-signature.fr/og-image.jpg"
+        }
+      },
+      "image": "https://phi-signature.fr/og-image.jpg",
+      "datePublished": "2026-05-01",
+      "dateModified": "2026-05-09",
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Échanges confidentiels", "item": "https://phi-signature.fr/echanges_confidentiels.html"}
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0e1c35;
+    --navy-deep: #08111f;
+    --gold: #c8a84b;
+    --gold-deep: #8b6914;
+    --gold-light: #e2c87a;
+    --paper: #fafaf7;
+    --paper-soft: #f4f1e8;
+    --ink: #1d2330;
+    --ink-muted: #6c7384;
+    --rule: rgba(200, 168, 75, 0.3);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--navy);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+  }
+
+  /* ─── BOUTONS STICKY EN HAUT À DROITE ─── */
+  .top-actions {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .top-cta {
+    background: var(--navy);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 12px 22px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: background 0.2s;
+    backdrop-filter: blur(8px);
+  }
+  .top-cta:hover { background: var(--navy-deep); }
+  .top-cta .phi-cta {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-left: 4px;
+    letter-spacing: 0;
+    color: var(--gold-light);
+  }
+  .top-evaluate {
+    background: rgba(250, 250, 247, 0.85);
+    color: var(--gold-deep);
+    text-decoration: none;
+    padding: 12px 22px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    transition: all 0.2s;
+    backdrop-filter: blur(8px);
+  }
+  .top-evaluate:hover { background: var(--gold); color: var(--paper); }
+
+  @media (max-width: 720px) {
+    .top-actions { top: 16px; right: 16px; gap: 8px; }
+    .top-cta, .top-evaluate { padding: 10px 16px; font-size: 0.62rem; letter-spacing: 0.15em; }
+  }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb {
+    padding: 32px 48px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .breadcrumb a {
+    color: var(--gold-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .breadcrumb a:hover { color: var(--navy); border-color: var(--navy); }
+  .breadcrumb-sep { margin: 0 12px; opacity: 0.5; color: var(--gold); }
+
+  /* ─── HERO PAGE ─── */
+  .page-hero {
+    padding: 60px 48px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .page-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 28px;
+    font-weight: 600;
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+  .page-title em { font-style: italic; font-weight: 600; }
+
+  .page-lede {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+    max-width: 760px;
+    margin: 0 auto 40px;
+    font-weight: 400;
+  }
+
+  /* ─── SÉPARATEUR OR ─── */
+  .section-divider {
+    width: 100%;
+    background: var(--paper);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-divider-line {
+    width: 100px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.7;
+  }
+
+  /* ─── ZONE D'INSERTION DE CONTENU ─── */
+  .content-zone {
+    padding: 80px 48px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .placeholder {
+    padding: 80px 48px;
+    background: var(--paper-soft);
+    border: 1px dashed var(--rule);
+    border-radius: 4px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-muted);
+    margin: 0 auto;
+    max-width: 880px;
+  }
+  .placeholder strong {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 18px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ─── LIEN VERS PAGE TECHNIQUE ─── */
+  .approfondir {
+    padding: 80px 48px 100px;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .approfondir-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+  .approfondir-title {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .approfondir-title em { font-style: italic; }
+  .approfondir-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold-deep);
+    text-decoration: none;
+    padding: 14px 26px;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1.5px solid var(--gold);
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .approfondir-link:hover {
+    background: var(--gold);
+    color: var(--paper);
+  }
+
+  /* ─── FOOTER MINIMAL ─── */
+  .footer {
+    background: var(--navy-deep);
+    color: rgba(255,255,255,0.5);
+    padding: 40px 48px;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    line-height: 1.8;
+  }
+  .footer a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    margin: 0 12px;
+    transition: color 0.2s;
+  }
+  .footer a:hover { color: var(--gold-light); }
+  .footer-meta {
+    margin-top: 18px;
+    color: rgba(255,255,255,0.35);
+  }
+  .footer-meta strong { color: var(--gold-light); font-weight: 500; }
+
+  @media (max-width: 720px) {
+    .page-hero { padding: 40px 24px 60px; }
+    .page-title { font-size: 2.4rem; }
+    .page-lede { font-size: 1.1rem; }
+    .breadcrumb { padding: 20px 24px 0; }
+    .content-zone, .approfondir { padding: 60px 24px; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════ */
+  /* SECTION PROBLÈME — Vos documents passent entre les mains    */
+  /* ═══════════════════════════════════════════════════════════ */
+  .problem {
+    background: var(--paper);
+    padding: 110px 40px 100px;
+    border-top: 1px solid var(--rule);
+  }
+  .problem-inner { max-width: 1200px; margin: 0 auto; }
+  .problem-section-title {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    text-align: center;
+    margin-bottom: 56px;
+    font-weight: 600;
+  }
+  .problem-headline {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 56px;
+    letter-spacing: -0.01em;
+  }
+  .problem-banner {
+    max-width: 880px;
+    margin: 0 auto 80px;
+    padding: 36px 40px;
+    border-top: 0.5px solid var(--gold);
+    border-bottom: 0.5px solid var(--gold);
+    text-align: center;
+  }
+  .problem-banner-facts {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.65;
+    font-style: italic;
+  }
+  .problem-banner-facts strong {
+    color: var(--navy);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .problem-columns {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 60px;
+    margin-bottom: 72px;
+  }
+  .problem-divider {
+    background: linear-gradient(to bottom, transparent 0%, var(--gold) 15%, var(--gold) 85%, transparent 100%);
+    width: 1px;
+  }
+  .problem-col { padding: 0 16px; }
+  .problem-col-title {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 28px;
+    line-height: 1.5;
+    min-height: 60px;
+  }
+  .tool-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    border-top: 1px solid var(--rule);
+  }
+  .tool-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .tool-name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--navy);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .tool-detail {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+  .tool-detail em {
+    font-style: italic;
+    color: var(--ink);
+  }
+  .problem-col-body p {
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    color: var(--ink);
+    line-height: 1.65;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  .problem-col-body p:last-child { margin-bottom: 0; }
+  .problem-col-body em {
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+  .problem-col-body strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .problem-conclusion {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.4;
+    max-width: 640px;
+    margin: 0 auto;
+    letter-spacing: -0.005em;
+  }
+  .problem-conclusion em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+
+  /* ═══════════════════════════════════════════════════════════ */
+  /* SECTION RÉPONSE — Sans serveur. Sans connexion.             */
+  /* ═══════════════════════════════════════════════════════════ */
+  .response {
+    background: var(--paper-soft);
+    padding: 110px 40px 100px;
+    border-top: 1px solid var(--rule);
+  }
+  .response-inner { max-width: 1200px; margin: 0 auto; }
+  .response-section-title {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    text-align: center;
+    margin-bottom: 56px;
+    font-weight: 600;
+  }
+  .response-headline {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-align: center;
+    line-height: 1.25;
+    margin-bottom: 56px;
+    letter-spacing: -0.01em;
+  }
+  .response-banner {
+    max-width: 880px;
+    margin: 0 auto 80px;
+    padding: 36px 40px;
+    border-top: 0.5px solid var(--gold);
+    border-bottom: 0.5px solid var(--gold);
+    text-align: center;
+  }
+  .response-banner p {
+    font-family: var(--font-display);
+    color: var(--ink);
+    font-size: 1.12rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+  .response-banner p:last-child { margin-bottom: 0; }
+  .response-banner em {
+    font-style: italic;
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .response-banner strong {
+    color: var(--gold-deep);
+    font-weight: 600;
+  }
+  .response-columns {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    gap: 60px;
+    margin-bottom: 72px;
+  }
+  .response-divider {
+    background: linear-gradient(to bottom, transparent 0%, var(--gold) 15%, var(--gold) 85%, transparent 100%);
+    width: 1px;
+  }
+  .response-col { padding: 0 16px; }
+  .response-col-title {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-weight: 600;
+    margin-bottom: 36px;
+    line-height: 1.5;
+    min-height: 60px;
+  }
+  .response-col-body p {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--ink);
+    line-height: 1.65;
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  .response-col-body p:last-of-type { margin-bottom: 28px; }
+  .response-col-body em {
+    font-style: italic;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+  .response-col-body strong {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .response-col-link {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 4px;
+    transition: color 0.2s, border-color 0.2s;
+    font-weight: 600;
+  }
+  .response-col-link:hover {
+    color: var(--navy);
+    border-bottom-color: var(--navy);
+  }
+  .response-conclusion {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--navy);
+    line-height: 1.5;
+    max-width: 640px;
+    margin: 0 auto;
+    letter-spacing: -0.005em;
+  }
+  .response-conclusion em {
+    font-style: italic;
+    color: var(--gold-deep);
+  }
+  @media (max-width: 860px) {
+    .problem, .response { padding: 72px 24px 64px; }
+    .problem-headline, .response-headline { font-size: 1.7rem; margin-bottom: 40px; }
+    .problem-banner, .response-banner { padding: 28px 24px; margin-bottom: 56px; }
+    .problem-banner-facts { font-size: 1rem; }
+    .response-banner p { font-size: 1rem; }
+    .problem-columns, .response-columns {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    .problem-divider, .response-divider {
+      width: 60%;
+      height: 1px;
+      margin: 0 auto;
+      background: linear-gradient(to right, transparent 0%, var(--gold) 50%, transparent 100%);
+    }
+    .problem-col-title, .response-col-title { min-height: auto; font-size: 0.76rem; }
+    .problem-col-body p, .response-col-body p { font-size: 0.98rem; }
+    .problem-conclusion, .response-conclusion { font-size: 1.25rem; }
+    .tool-name { font-size: 1rem; }
+    .tool-detail { font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ TOP ACTIONS STICKY ═══════════════════════════ -->
+<div class="top-actions">
+  <a href="evaluer.html" class="top-evaluate">Évaluer</a>
+  <a href="tarifications.html" class="top-cta">Accéder à <span class="phi-cta">Φ</span></a>
+</div>
+
+<!-- ═══════════════════════════ BREADCRUMB ═══════════════════════════ -->
+<nav class="breadcrumb">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb-sep">·</span>
+  <span>Échanges confidentiels</span>
+</nav>
+
+<!-- ═══════════════════════════ HERO PAGE ═══════════════════════════ -->
+<header class="page-hero">
+  <div class="page-eyebrow">L'échange</div>
+  <h1 class="page-title">
+    Échanges <em>confidentiels</em>.
+  </h1>
+  <p class="page-lede">
+    Une transmission chiffrée au-delà du bout-en-bout, jusque dans le silicium —
+    inline-offline, post-quantique, jamais lisible nulle part ailleurs que sur les dispositifs des parties.
+  </p>
+</header>
+
+<!-- ═══════════════════════════ SÉPARATEUR ═══════════════════════════ -->
+<div class="section-divider">
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ═══════════════════════════ SECTION PROBLÈME ═══════════════════════════ -->
+<section class="problem">
+  <div class="problem-inner">
+
+    <div class="problem-section-title">Le Problème</div>
+
+    <h2 class="problem-headline">
+      Vos documents les plus sensibles<br>
+      passent entre les mains de tous.
+    </h2>
+
+    <div class="problem-banner">
+      <p class="problem-banner-facts">
+        Pour transmettre, vous utilisez ces outils tous les jours.
+        <strong>Aucun n'est conçu pour la confidentialité de votre métier.</strong>
+        Tous laissent une trace, voient ou stockent vos contenus.
+      </p>
+    </div>
+
+    <div class="problem-columns">
+
+      <!-- COLONNE GAUCHE — TOUTES LES MESSAGERIES -->
+      <div class="problem-col">
+        <div class="problem-col-title">Les messageries<br>que vous utilisez</div>
+
+        <ul class="tool-list">
+          <li>
+            <span class="tool-name">WhatsApp · Messenger</span>
+            <span class="tool-detail"><em>Meta</em> — métadonnées exploitées, sauvegardes iCloud / Drive en clair</span>
+          </li>
+          <li>
+            <span class="tool-name">iMessage</span>
+            <span class="tool-detail"><em>Apple</em> — restauration iCloud en clair, soumis au Cloud Act</span>
+          </li>
+          <li>
+            <span class="tool-name">Telegram</span>
+            <span class="tool-detail">Serveurs propriétaires, chiffrement E2E optionnel et non par défaut</span>
+          </li>
+          <li>
+            <span class="tool-name">Signal</span>
+            <span class="tool-detail">Serveurs hébergés sur <em>AWS</em> — flux interceptables et stockables</span>
+          </li>
+          <li>
+            <span class="tool-name">Outlook · Microsoft 365</span>
+            <span class="tool-detail"><em>Microsoft</em> — Cloud Act, indexation par Copilot</span>
+          </li>
+          <li>
+            <span class="tool-name">Gmail</span>
+            <span class="tool-detail"><em>Google</em> — Cloud Act, analyse par Gemini</span>
+          </li>
+          <li>
+            <span class="tool-name">ProtonMail</span>
+            <span class="tool-detail">Suisse — soumis à la juridiction helvétique, métadonnées disponibles</span>
+          </li>
+        </ul>
+
+        <div class="problem-col-body">
+          <p><strong>Le chiffrement s'arrête à leurs serveurs.</strong> Là, vos contenus redeviennent lisibles.</p>
+          <p>Leurs intelligences artificielles — <em>Microsoft Copilot</em>, <em>Google Gemini</em>, <em>Apple Intelligence</em>, <em>Meta AI</em> — analysent, indexent, profilent.</p>
+          <p>Vos données sont monétisées sans votre consentement explicite : profils comportementaux vendus aux annonceurs, contenus utilisés pour entraîner les modèles d'IA.</p>
+        </div>
+      </div>
+
+      <div class="problem-divider"></div>
+
+      <!-- COLONNE DROITE — PLATEFORMES DE TRANSFERT -->
+      <div class="problem-col">
+        <div class="problem-col-title">Les plateformes par<br>lesquelles vous transmettez</div>
+
+        <ul class="tool-list">
+          <li>
+            <span class="tool-name">WeTransfer</span>
+            <span class="tool-detail">Pays-Bas, racheté par <em>Bending Spoons</em> (Italie) — fichiers stockés en clair</span>
+          </li>
+          <li>
+            <span class="tool-name">Dropbox</span>
+            <span class="tool-detail"><em>États-Unis</em> — Cloud Act, clés détenues par Dropbox</span>
+          </li>
+          <li>
+            <span class="tool-name">Google Drive</span>
+            <span class="tool-detail"><em>Google</em> — Cloud Act, indexation par Gemini</span>
+          </li>
+          <li>
+            <span class="tool-name">OneDrive</span>
+            <span class="tool-detail"><em>Microsoft</em> — Cloud Act, indexation par Copilot</span>
+          </li>
+          <li>
+            <span class="tool-name">iCloud Drive</span>
+            <span class="tool-detail"><em>Apple</em> — Cloud Act, clés détenues par Apple</span>
+          </li>
+        </ul>
+
+        <div class="problem-col-body">
+          <p><strong>Vos fichiers sont stockés en clair sur leurs serveurs.</strong></p>
+          <p>Les opérateurs y ont accès, leurs IA les indexent, leurs systèmes peuvent les transmettre aux autorités américaines au titre du <em>Cloud Act</em>.</p>
+          <p>Vos pièces patrimoniales, vos contrats, vos correspondances sensibles — tout devient consultable, exploitable, monétisable.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="problem-conclusion">
+      Vos correspondances sont vues.<br>
+      <em>Elles seront lues.</em>
+    </p>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ SECTION RÉPONSE ═══════════════════════════ -->
+<section class="response">
+  <div class="response-inner">
+
+    <div class="response-section-title">La Réponse — Φ</div>
+
+    <h2 class="response-headline">
+      Vous échangez en confiance.<br>
+      Sans serveur. Sans connexion. Sans trace.
+    </h2>
+
+    <div class="response-banner">
+      <p>
+        <em>Φ</em> ne ressemble à aucun de ces outils. <strong>Nous n'avons pas de serveurs.</strong> Notre application n'est pas connectée. Elle est <em>inline-offline</em>.
+      </p>
+      <p>
+        Tout se passe localement, sur votre dispositif et sur celui de votre destinataire — sans qu'aucun intermédiaire ne voie ou ne stocke vos contenus.
+      </p>
+    </div>
+
+    <div class="response-columns">
+
+      <!-- COLONNE GAUCHE — INLINE-OFFLINE -->
+      <div class="response-col">
+        <div class="response-col-title">Aucun serveur.<br>Aucune messagerie.</div>
+        <div class="response-col-body">
+          <p>L'application <em>Φ</em> ne possède aucun serveur. Elle ne s'y connecte pas. Aucune donnée ne quitte jamais votre dispositif en clair.</p>
+          <p>Les fichiers transitent par votre messagerie habituelle — WhatsApp, mail, n'importe laquelle — mais <strong>chiffrés au-delà du bout-en-bout</strong>, c'est-à-dire jusque dans le silicium de chaque dispositif.</p>
+          <p>Pour chaque transmission, votre destinataire ouvre <em>la sienne</em>, sur son propre dispositif. <strong>Aucun autre dispositif au monde</strong> ne peut lire le contenu — pas même un serveur que nous aurions oublié.</p>
+        </div>
+        <a href="la_mecanique_probatoire.html" class="response-col-link">Comprendre inline-offline ↗</a>
+      </div>
+
+      <div class="response-divider"></div>
+
+      <!-- COLONNE DROITE — POST-QUANTIQUE -->
+      <div class="response-col">
+        <div class="response-col-title">Résistance à<br>l'ordinateur quantique</div>
+        <div class="response-col-body">
+          <p>Cryptographie post-quantique <em>ML-DSA</em> et <em>ML-KEM</em>, conforme aux standards <em>NIST 2024</em>.</p>
+          <p>Les données interceptées aujourd'hui restent <strong>illisibles demain</strong>, même par un ordinateur quantique de classe Starling — annoncé par IBM pour 2029.</p>
+          <p><em>Harvest now, decrypt never.</em></p>
+        </div>
+        <a href="resistance_quantique.html" class="response-col-link">Cryptographie post-quantique ↗</a>
+      </div>
+
+    </div>
+
+    <p class="response-conclusion">
+      Vos correspondances sont protégées.<br>
+      <em>Personne ne les a vues.</em><br>
+      <em>Personne ne les lira.</em>
+    </p>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ SÉPARATEUR ═══════════════════════════ -->
+<div class="section-divider">
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ═══════════════════════════ APPROFONDIR ═══════════════════════════ -->
+<section class="approfondir">
+  <div class="approfondir-eyebrow">Comprendre la cryptographie</div>
+  <h2 class="approfondir-title">
+    Comment l'échange post-quantique <em>résiste</em>.
+  </h2>
+  <a href="resistance_quantique.html" class="approfondir-link">
+    Résistance post-quantique ↗
+  </a>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer">
+  <div>
+    <a href="index.html">Accueil</a>
+    <a href="la_signature_probatoire.html">Signature probatoire</a>
+    <a href="echanges_confidentiels.html">Échanges confidentiels</a>
+    <a href="la_mecanique_probatoire.html">Mécanique probatoire</a>
+    <a href="resistance_quantique.html">Résistance post-quantique</a>
+  </div>
+  <div class="footer-meta">
+    <strong>AION ASEMANTIX</strong> · Lyon · FR 2604755 · FR 2605317<br>
+    © 2026 — Φ — La signature mathématique de votre vie numérique
+  </div>
+</footer>
+
+</body>
+</html>
