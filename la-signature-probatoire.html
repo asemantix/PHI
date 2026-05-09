@@ -244,48 +244,6 @@
   }
   .approfondir-link:hover { background: var(--gold); color: var(--paper); }
 
-  /* ─── sup.reg ─── */
-  sup.reg {
-    font-size: 0.55em;
-    font-weight: 400;
-    vertical-align: super;
-    margin-left: 0.05em;
-    opacity: 0.85;
-    font-style: normal;
-  }
-
-  /* ─── FOOTER ─── */
-  .footer {
-    background: var(--navy-deep);
-    color: rgba(255,255,255,0.5);
-    padding: 40px 48px;
-    text-align: center;
-    font-family: var(--font-mono);
-    font-size: 0.66rem;
-    letter-spacing: 0.18em;
-    line-height: 1.8;
-  }
-  .footer a {
-    color: rgba(255,255,255,0.65);
-    text-decoration: none;
-    margin: 0 12px;
-    transition: color 0.2s;
-  }
-  .footer a:hover { color: var(--gold-light); }
-  .footer-meta {
-    margin-top: 18px;
-    color: rgba(255,255,255,0.35);
-  }
-  .footer-meta strong { color: var(--gold-light); font-weight: 500; }
-
-  @media (max-width: 720px) {
-    .page-hero { padding: 40px 24px 60px; }
-    .page-title { font-size: 2.4rem; }
-    .page-lede { font-size: 1.1rem; }
-    .breadcrumb { padding: 20px 24px 0; }
-    .approfondir { padding: 60px 24px; }
-  }
-
   /* ══ SECTION PROBLÈME ══ */
   .problem { background: var(--paper); padding: 110px 40px 100px; border-top: 1px solid var(--rule); }
   .problem-inner { max-width: 1200px; margin: 0 auto; }
@@ -333,6 +291,36 @@
     .problem-col-body p, .response-col-body p { font-size: 1rem; }
     .problem-conclusion, .response-conclusion { font-size: 1.25rem; }
   }
+
+  /* ─── sup.reg ─── */
+  sup.reg {
+    font-size: 0.55em;
+    font-weight: 400;
+    vertical-align: super;
+    margin-left: 0.05em;
+    opacity: 0.85;
+    font-style: normal;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer { background: var(--navy-deep); color: rgba(255,255,255,0.6); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; padding: 64px 48px 48px; display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; }
+  @media (max-width: 860px) { .footer-inner { grid-template-columns: 1fr; gap: 40px; padding: 48px 24px 40px; } }
+  .footer-brand { display: flex; flex-direction: column; gap: 0; }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 2.8rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 18px; }
+  .footer-line { width: 40px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 14px; }
+  .footer-baseline-1 { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .footer-baseline-2 { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 540px) { .footer-nav { grid-template-columns: 1fr; } }
+  .footer-col h4 { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 0 0 18px; }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; }
+  .footer-col ul li { padding: 7px 0; border-bottom: 1px solid rgba(200,168,75,0.12); }
+  .footer-col ul li:last-child { border-bottom: none; }
+  .footer-col ul li a { font-family: var(--font-sans); font-size: 0.88rem; color: rgba(255,255,255,0.6); text-decoration: none; font-weight: 300; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-meta { grid-column: 1 / -1; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.14em; color: rgba(255,255,255,0.35); line-height: 1.9; }
+  .footer-meta strong { color: rgba(255,255,255,0.55); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -484,24 +472,46 @@
   <h2 class="approfondir-title">
     Comment la signature probatoire <em>fonctionne</em>.
   </h2>
-  <a href="comment-ca-marche.html" class="approfondir-link">
+  <a href="la-mecanique-probatoire.html" class="approfondir-link">
     La mécanique probatoire ↗
   </a>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
 <footer class="footer">
-  <div>
-    <a href="index.html">Accueil</a>
-    <a href="la-signature-probatoire.html">Signature probatoire</a>
-    <a href="echanges-confidentiels.html">Échanges confidentiels</a>
-    <a href="comment-ca-marche.html">Mécanique probatoire</a>
-    <a href="resistance-quantique.html">Résistance post-quantique</a>
-    <a href="professions.html">Professions</a>
-  </div>
-  <div class="footer-meta">
-    <strong>AION ASEMANTIX</strong> · Lyon · asemantix@proton.me · FR 2604755 · FR 2605317<br>
-    © 2026 — Φ — La signature mathématique de votre vie numérique
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature mathématique</div>
+      <div class="footer-baseline-2">de votre vie numérique</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="lapp-en-action.html">Voir l'app en action</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="vos-suggestions.html">Évaluer</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>AION ASEMANTIX</strong> · Lyon, France · asemantix@proton.me<br>
+      FR 2604755 · FR 2605317 · Brevet divisionnaire en cours<br>
+      © 2026 — Tous droits réservés
+    </div>
   </div>
 </footer>
 
