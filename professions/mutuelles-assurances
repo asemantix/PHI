@@ -6,6 +6,59 @@
 <title>Φ pour Mutuelles &amp; Assurances — Signature opposable | AION ASEMANTIX</title>
 <meta name="description" content="Signature électronique souveraine pour mutuelles et assurances. Opposabilité mathématique des contrats. Conformité RGPD données médicales. Sans cloud externe.">
 <meta name="keywords" content="signature électronique assurance, mutuelle santé, opposabilité contrat, déclaration sinistre opposable, RGPD assurance, alternative DocuSign assurance, conformité ACPR">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="AION ASEMANTIX">
+<link rel="canonical" href="https://phi-signature.fr/professions/mutuelles-assurances.html">
+<meta name="theme-color" content="#0e1c35">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/professions/mutuelles-assurances.html">
+<meta property="og:site_name" content="Φ — AION ASEMANTIX">
+<meta property="og:title" content="Φ pour Mutuelles &amp; Assurances — Signature opposable, RGPD données médicales">
+<meta property="og:description" content="Φ par AION ASEMANTIX — souscriptions opposables, déclarations de sinistre horodatées, conformité RGPD article 9 par construction. Sans cloud, sans tiers de confiance.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Φ pour Mutuelles &amp; Assurances — AION ASEMANTIX">
+<meta property="og:image:type" content="image/jpeg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Φ pour Mutuelles &amp; Assurances — Signature opposable">
+<meta name="twitter:description" content="Φ par AION ASEMANTIX — opposabilité mathématique, RGPD données médicales par construction, déchiffrement local uniquement. Sans tiers de confiance.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://phi-signature.fr/professions/mutuelles-assurances.html",
+  "name": "Φ pour Mutuelles &amp; Assurances — Signature opposable",
+  "url": "https://phi-signature.fr/professions/mutuelles-assurances.html",
+  "description": "Signature électronique souveraine pour mutuelles et assurances. Opposabilité mathématique des contrats. Conformité RGPD données médicales par construction. Sans cloud externe.",
+  "inLanguage": "fr-FR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AION ASEMANTIX",
+    "url": "https://phi-signature.fr"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Professions", "item": "https://phi-signature.fr/professions.html" },
+      { "@type": "ListItem", "position": 3, "name": "Mutuelles &amp; Assurances", "item": "https://phi-signature.fr/professions/mutuelles-assurances.html" }
+    ]
+  }
+}
+</script>
+
+<!-- Favicon SVG inline -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26' font-family='serif' fill='%23c8a84b'>Φ</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -87,12 +140,7 @@
   .douleur-text { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
   @media (max-width: 880px) { .douleur-grid { grid-template-columns: 1fr; } }
 
-  /* ── PIVOT CITATION ── */
-  .pivot-citation { max-width: 880px; margin: 60px auto 0; padding: 60px 50px; background: var(--navy); border-left: 4px solid var(--gold); position: relative; }
-  .pivot-citation::before { content: "«"; position: absolute; top: 20px; left: 30px; font-family: var(--font-display); font-size: 5rem; color: var(--gold-soft); line-height: 1; opacity: 0.5; font-style: italic; }
-  .pivot-citation p { font-family: var(--font-display); font-style: italic; font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.4; color: var(--paper); font-weight: 400; text-align: center; padding-left: 30px; }
-
-  /* ── ACTES MÉDICAUX ── */
+  /* ── ACTES ── */
   .actes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
   .acte-card { background: var(--paper); padding: 40px 36px; display: flex; flex-direction: column; }
   .acte-num { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.24em; color: var(--gold-deep); margin-bottom: 14px; font-weight: 600; }
@@ -124,29 +172,6 @@
   .conformite-text { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
   @media (max-width: 760px) { .conformite-grid { grid-template-columns: 1fr; } }
 
-  /* ── TARIFICATION ── */
-  .tarif-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
-  .tarif-card { padding: 36px 32px; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; display: flex; flex-direction: column; }
-  .tarif-card-featured { background: var(--navy); color: var(--paper); border-color: var(--navy); }
-  .tarif-eyebrow { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600; }
-  .tarif-card-featured .tarif-eyebrow { color: var(--gold-soft); }
-  .tarif-name { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.25; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
-  .tarif-card-featured .tarif-name { color: var(--paper); }
-  .tarif-price { font-family: var(--font-display); font-size: 2rem; line-height: 1; font-weight: 500; color: var(--navy); margin: 16px 0 28px; }
-  .tarif-card-featured .tarif-price { color: var(--gold-soft); }
-  .tarif-price small { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-muted); font-weight: 300; display: block; margin-top: 6px; }
-  .tarif-card-featured .tarif-price small { color: rgba(250,250,247,0.6); }
-  .tarif-list { list-style: none; padding: 0; margin: 0 0 32px; flex: 1; }
-  .tarif-list li { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-muted); line-height: 1.55; font-weight: 300; padding: 8px 0 8px 22px; position: relative; border-bottom: 1px solid var(--rule); }
-  .tarif-card-featured .tarif-list li { color: rgba(250,250,247,0.7); border-bottom-color: rgba(255,255,255,0.1); }
-  .tarif-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold-deep); font-weight: 500; }
-  .tarif-card-featured .tarif-list li::before { color: var(--gold-soft); }
-  .tarif-cta { display: block; text-align: center; padding: 14px 24px; background: var(--navy); color: white !important; border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; }
-  .tarif-cta:hover { background: var(--navy-deep); }
-  .tarif-card-featured .tarif-cta { background: var(--gold); color: var(--navy) !important; }
-  .tarif-card-featured .tarif-cta:hover { background: var(--gold-soft); }
-  @media (max-width: 880px) { .tarif-grid { grid-template-columns: 1fr; } }
-
   /* ── FAQ ── */
   .faq-list { margin-top: 56px; }
   .faq-item { border-bottom: 1px solid var(--rule); padding: 28px 0; }
@@ -177,7 +202,6 @@
   @media (max-width: 880px) { .professions-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 480px) { .professions-grid { grid-template-columns: 1fr; } }
 
-
   /* ── MARQUE Φ ── */
   em.brand, .brand-em { font-style: italic; font-weight: inherit; color: inherit; }
   sup.reg, .brand-reg { font-size: 0.55em; font-weight: 400; vertical-align: super; margin-left: 0.05em; opacity: 0.85; font-style: normal; }
@@ -198,6 +222,12 @@
   .footer-meta { border-top: 1px solid rgba(200,168,75,0.15); padding-top: 22px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.35); line-height: 1.8; }
   .footer-meta strong { color: var(--gold-soft); font-weight: 500; }
   @media (max-width: 720px) { .footer { padding: 48px 24px 28px; } .footer-nav { grid-template-columns: 1fr; gap: 24px; } }
+
+  /* ── HEADER CTA ── */
+  .sec-header-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
+  .sec-header-cta:hover { background: var(--navy-deep); }
+  .sec-header-cta .phi-cta { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; margin-left: 4px; letter-spacing: 0; color: var(--gold-soft); }
+  @media (max-width: 720px) { .sec-header-cta { display: none; } }
 </style>
 </head>
 <body>
@@ -205,9 +235,12 @@
 <header class="sec-header">
   <a href="../index.html" class="sec-header-back">← Retour</a>
   <a href="../index.html" class="sec-header-phi">Φ</a>
+  <a href="../tarifications.html" class="sec-header-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </header>
 
-
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a> › <a href="../professions.html">Professions</a> › <span>Mutuelles &amp; Assurances</span>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -237,7 +270,7 @@
     <h2 class="section-title">Vos contrats sont signés.<br><em>Mais ils sont contestés.</em></h2>
     <p class="section-lead">
       Le secteur de l'assurance subit une explosion du contentieux. Les assurés contestent les exclusions de garantie, les conditions générales, les déclarations sur l'honneur, les notifications de résiliation.
-      Et la charge de la preuve vous incombe presque toujours. Or vos signatures électroniques actuelles — DocuSign, Yousign, Adobe Sign — produisent des certificats délivrés par des tiers, hébergés sur des serveurs étrangers, dont la valeur probatoire dépend de la pérennité commerciale d'opérateurs sur lesquels vous n'avez aucun contrôle.
+      Et la charge de la preuve vous incombe presque toujours. Or vos signatures électroniques actuelles — DocuSign, Yousign, Adobe Sign — chiffrent le transport mais déchiffrent vos documents sur leurs propres serveurs. L'éditeur voit vos actes en clair, y compris vos questionnaires médicaux. La conformité par contrat de sous-traitance reste théorique face à un contentieux réel.
     </p>
     <div class="douleur-grid">
       <div class="douleur-card">
@@ -247,8 +280,8 @@
       </div>
       <div class="douleur-card">
         <div class="douleur-num">02 · Données médicales</div>
-        <h3 class="douleur-title">En clair chez des prestataires</h3>
-        <p class="douleur-text">Pour les mutuelles santé et l'assurance prévoyance, les questionnaires médicaux, les certificats, les déclarations de pathologies sont des données sensibles au sens de l'article 9 RGPD. Or les plateformes de signature actuelles lisent ces données en clair — et même les messageries dites « chiffrées de bout en bout » (ProtonMail, Signal) déchiffrent le contenu dans leur couche applicative à l'ouverture : le document apparaît en clair dans leur interface, sur leur infrastructure. La conformité par contrat de sous-traitance reste théorique.</p>
+        <h3 class="douleur-title">Déchiffrées chez des prestataires</h3>
+        <p class="douleur-text">Pour les mutuelles santé et l'assurance prévoyance, les questionnaires médicaux, les certificats, les déclarations de pathologies sont des données sensibles au sens de l'article 9 RGPD. Or les plateformes de signature actuelles déchiffrent ces données côté serveur — et même les messageries dites « chiffrées de bout en bout » (ProtonMail, Signal) déchiffrent le contenu dans leur couche applicative à l'ouverture : le document apparaît en clair dans leur interface, sur leur infrastructure. La conformité par contrat de sous-traitance reste théorique.</p>
       </div>
       <div class="douleur-card">
         <div class="douleur-num">03 · Répudiation</div>
@@ -280,6 +313,20 @@
       Pas un service hébergé chez un prestataire de signature. Pas un certificat délivré par un tiers de confiance. Pas une dépendance à un opérateur externe.
       Une boîte noire probatoire qui se vérifie elle-même. <strong style="color: var(--ink); font-weight: 500;">L'expert judiciaire recalcule G. Si le résultat correspond, l'acte est authentique.</strong>
     </p>
+
+    <!-- ENCART E2E vs INLINE-OFFLINE -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin-top: 40px;">
+      <div style="background: var(--paper-soft); padding: 32px 30px;">
+        <div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; margin-bottom: 14px;">DocuSign, Yousign, Adobe Sign — et même ProtonMail</div>
+        <p style="font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.7; color: var(--ink-muted); font-weight: 300; margin-bottom: 14px;">Le transport est chiffré. Mais le document est déchiffré et rendu en clair par leur infrastructure à l'ouverture — visible dans leur interface, accessible à leur environnement d'exécution. L'éditeur voit vos questionnaires médicaux.</p>
+        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faded); letter-spacing: 0.04em;">Transit chiffré · Déchiffrement applicatif côté opérateur</p>
+      </div>
+      <div style="background: var(--navy); padding: 32px 30px;">
+        <div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); font-weight: 600; margin-bottom: 14px;">Inline-Offline<sup style="font-size: 0.55rem;">®</sup> — procédé Φ</div>
+        <p style="font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.7; color: rgba(250,250,247,0.82); font-weight: 300; margin-bottom: 14px;">Le déchiffrement n'a lieu que dans l'enclave matérielle de l'application Φ, sur l'appareil physique du destinataire autorisé. Aucun serveur intermédiaire, aucune couche applicative tierce n'exécute le déchiffrement. L'éditeur ne peut pas voir vos questionnaires médicaux — jamais.</p>
+        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--gold-soft); letter-spacing: 0.04em;">Transit chiffré · Déchiffrement exclusivement local, dans le silicium</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -306,7 +353,7 @@
         <span class="acte-context-label">Aujourd'hui</span>
         <p class="acte-context">Pour les contrats prévoyance, dépendance, emprunteur, le questionnaire médical recense les pathologies, traitements, antécédents familiaux. L'assuré peut être tenté de minimiser. En cas de sinistre, votre médecin-conseil examine les déclarations. Si une fausse déclaration est établie, vous pouvez contester la prise en charge — mais à condition d'avoir une preuve probatoire solide du contenu déclaré au moment de la souscription.</p>
         <span class="acte-phi-label">Avec <em class="brand">Φ</em></span>
-        <p class="acte-phi">Le questionnaire médical est scellé, hashé en SHA3-256, signé biométriquement par l'assuré. Toute modification ultérieure est mathématiquement détectable. Le contenu déclaré est inviolablement gravé dans la boîte noire probatoire de l'assuré et la vôtre. Conforme à l'article 9 RGPD (données sensibles) par construction.</p>
+        <p class="acte-phi">Le questionnaire médical est scellé, hashé en SHA3-256, signé biométriquement par l'assuré. Toute modification ultérieure est mathématiquement détectable. Le contenu déclaré est inviolablement gravé dans la boîte noire probatoire de l'assuré et la vôtre. Conforme à l'article 9 RGPD (données sensibles) par construction : déchiffrement uniquement dans l'application Φ, sur le dispositif autorisé.</p>
       </div>
       <div class="acte-card">
         <div class="acte-num">Acte 03</div>
@@ -364,10 +411,8 @@
         <tbody>
           <tr><th>Hébergement</th><td>AWS · États-Unis</td><td>Adobe Cloud</td><td>Azure · Europe</td><td class="col-phi">Aucun serveur · Local</td></tr>
           <tr><th>Soumis au Cloud Act</th><td>Oui</td><td>Oui</td><td>Indirectement</td><td class="col-phi">Non — par construction</td></tr>
+          <tr><th>Déchiffrement des documents</th><td>Côté serveur éditeur</td><td>Côté serveur éditeur</td><td>Côté serveur éditeur</td><td class="col-phi">Uniquement dans l'app Φ · sur votre dispositif · jamais ailleurs</td></tr>
           <tr><th>Canal de transport</th><td>Plateforme propriétaire</td><td>Plateforme propriétaire</td><td>Plateforme propriétaire</td><td class="col-phi">Indifférent — Gmail, Proton, Signal, clé USB…</td></tr>
-          <tr><th>L'opérateur de messagerie voit-il le contenu ?</th><td>Oui (plateforme dédiée)</td><td>Oui (plateforme dédiée)</td><td>Oui (plateforme dédiée)</td><td class="col-phi">Non — octets chiffrés indistinguables de bruit</td></tr>
-          <tr><th>Déchiffrement du document</th><td>Côté serveur éditeur</td><td>Côté serveur éditeur</td><td>Côté serveur éditeur</td><td class="col-phi">Exclusivement local — enclave matérielle du dispositif autorisé</td></tr>
-          <tr><th>Messagerie E2E suffit-elle à protéger ?</th><td>—</td><td>—</td><td>—</td><td class="col-phi">Non nécessaire — Inline-Offline® rend le canal indifférent</td></tr>
           <tr><th>Conformité RGPD données médicales</th><td>Risque (chiffré at-rest seulement)</td><td>Risque</td><td>Acceptable</td><td class="col-phi">Oui — asémantique par construction</td></tr>
           <tr><th>Opposabilité du consentement éclairé</th><td>Faible</td><td>Faible</td><td>Moyenne</td><td class="col-phi">Mathématiquement établie</td></tr>
           <tr><th>Preuve probatoire en cas de litige</th><td>Certificat à demander</td><td>Certificat à demander</td><td>Certificat à demander</td><td class="col-phi">Boîte noire probatoire exportable</td></tr>
@@ -396,7 +441,7 @@
       <div class="conformite-card">
         <div class="conformite-label">RGPD · UE 2016/679 · Art. 9</div>
         <h3 class="conformite-title">Données sensibles</h3>
-        <p class="conformite-text">Les questionnaires médicaux, les déclarations de pathologies, les certificats sont des données sensibles au sens de l'article 9 RGPD. <em class="brand">Φ</em> les protège par construction matérielle, et non par contrat : aucun serveur n'a accès au contenu — y compris les messageries « chiffrées de bout en bout ». Le chiffrement E2E protège le transit, mais le déchiffrement reste applicatif chez l'opérateur. Avec Inline-Offline<sup class="reg">®</sup>, le document chiffré ne s'ouvre que dans le silicium du dispositif autorisé. Même l'opérateur de transport ne peut pas en déchiffrer le contenu à l'ouverture.</p>
+        <p class="conformite-text">Les questionnaires médicaux, les déclarations de pathologies, les certificats sont des données sensibles au sens de l'article 9 RGPD. <em class="brand">Φ</em> les protège par construction matérielle, et non par contrat : aucun serveur n'a accès au contenu. Avec Inline-Offline<sup class="reg">®</sup>, le document chiffré ne s'ouvre que dans le silicium du dispositif autorisé. L'éditeur ne voit jamais vos données médicales — contrairement aux messageries E2E dont le déchiffrement reste applicatif.</p>
       </div>
       <div class="conformite-card">
         <div class="conformite-label">Code des assurances · Art. L. 113-2</div>
@@ -417,7 +462,7 @@
   </div>
 </section>
 
-<!-- TARIFICATION (grands comptes) -->
+<!-- TARIFICATION -->
 <section class="section" id="tarification">
   <div class="section-inner">
     <div class="section-eyebrow">Grands comptes &amp; sur mesure</div>
@@ -428,18 +473,17 @@
         <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600;">Tarification standard</div>
         <h3 style="font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 16px;">Voir nos formules publiques</h3>
         <p style="font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; margin-bottom: 28px;">Pour les courtiers individuels et les structures de taille modeste, nos formules sont disponibles sur la page tarifications dédiée.</p>
-        <a href="tarifications.html" class="btn-secondary" style="font-size: 0.86rem; padding: 12px 24px;">Consulter les tarifs &rarr;</a>
+        <a href="../tarifications.html" class="btn-secondary" style="font-size: 0.86rem; padding: 12px 24px;">Consulter les tarifs &rarr;</a>
       </div>
       <div style="background: var(--navy); color: var(--paper); padding: 40px 36px;">
         <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 18px; font-weight: 600;">Grands comptes</div>
         <h3 style="font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--paper); margin-bottom: 16px;">Une approche dédiée à votre échelle</h3>
         <p style="font-family: var(--font-sans); font-size: 0.92rem; color: rgba(250,250,247,0.7); line-height: 1.65; font-weight: 300; margin-bottom: 28px;">Volumétrie illimitée, intégration aux systèmes back-office, exigences réglementaires sectorielles, déploiement multi-marques. Nous étudions votre dossier avec vous.</p>
-        <a href="#" style="display: inline-block; padding: 12px 24px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;">Contacter la direction Assurance &rarr;</a>
+        <a href="../contact.html" style="display: inline-block; padding: 12px 24px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;">Contacter la direction Assurance &rarr;</a>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- CANAL PORTEUR INDIFFÉRENT -->
 <section class="section section-soft">
@@ -459,26 +503,11 @@
       <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Slack, Microsoft Teams, Discord</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">en pièces jointes</span></div>
       <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Google Drive, OneDrive, Dropbox</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">partage de fichiers</span></div>
       <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Clé USB, support physique</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">remise en main propre</span></div>
-      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Tout autre canal</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">capable de transporter un fichier ou un blob d'octets</span></div>
     </div>
 
     <p style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.78; color: var(--ink); margin-bottom: 32px; font-weight: 400;">
-      Dans tous les cas, le canal porteur ne voit que des octets chiffrés indistinguables de bruit aléatoire. <strong style="color: var(--navy); font-weight: 500;">Gmail ne sait pas qu'il transporte un questionnaire médical.</strong> ProtonMail ne sait pas qu'il achemine un avenant de contrat. Signal ne sait pas qu'il porte une déclaration de sinistre. Aucun de ces opérateurs ne peut reconstituer le contenu, parce que la clé de déchiffrement ne quitte jamais l'enclave matérielle des dispositifs légitimes.
+      Dans tous les cas, le canal porteur ne voit que des octets chiffrés indistinguables de bruit aléatoire. <strong style="color: var(--navy); font-weight: 500;">Gmail ne sait pas qu'il transporte un questionnaire médical.</strong> ProtonMail ne sait pas qu'il achemine un avenant de contrat. Même à l'ouverture, le contenu reste chiffré jusqu'à l'enclave matérielle du dispositif autorisé.
     </p>
-
-    <!-- ENCART E2E vs INLINE-OFFLINE -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin-bottom: 32px;">
-      <div style="background: var(--paper-soft); padding: 32px 30px;">
-        <div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; margin-bottom: 14px;">Messageries E2E — ProtonMail, Signal…</div>
-        <p style="font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.7; color: var(--ink-muted); font-weight: 300; margin-bottom: 14px;">Le transport est chiffré. Mais le « bout » de la chaîne, c'est leur serveur ou leur code applicatif. À l'ouverture du message, le document est déchiffré et rendu en clair par leur infrastructure — visible dans leur interface web, accessible à leur environnement d'exécution.</p>
-        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faded); letter-spacing: 0.04em;">Transit chiffré · Déchiffrement applicatif côté opérateur</p>
-      </div>
-      <div style="background: var(--navy); padding: 32px 30px;">
-        <div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); font-weight: 600; margin-bottom: 14px;">Inline-Offline<sup style="font-size: 0.55rem;">®</sup> — procédé Φ</div>
-        <p style="font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.7; color: rgba(250,250,247,0.82); font-weight: 300; margin-bottom: 14px;">Le transit est chiffré. Et le déchiffrement n'a lieu que dans l'enclave matérielle de l'application Φ, sur l'appareil physique du destinataire. Aucun serveur intermédiaire, aucune couche applicative tierce n'exécute le déchiffrement. L'opérateur de messagerie transporte un flux d'octets qu'il ne peut pas lire, même à l'ouverture.</p>
-        <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--gold-soft); letter-spacing: 0.04em;">Transit chiffré · Déchiffrement exclusivement local, dans le silicium</p>
-      </div>
-    </div>
 
     <div style="background: var(--navy); color: var(--paper); padding: 36px 40px; border-radius: 6px; border-left: 4px solid var(--gold); margin-top: 0; text-align: center;">
       <p style="font-family: var(--font-display); font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--paper); font-weight: 500; margin: 0;">
@@ -497,7 +526,7 @@
     <div class="faq-list">
       <div class="faq-item open">
         <div class="faq-question"><em class="brand">Φ</em> est-elle conforme RGPD pour traiter des données médicales ?</div>
-        <p class="faq-answer"><em class="brand">Φ</em> est conforme à l'article 9 RGPD (données sensibles) par architecture. L'application est strictement locale, ne se connecte à aucun serveur, ne traite aucune donnée à l'extérieur du dispositif. Les questionnaires médicaux, certificats et antécédents ne sont jamais accessibles à AION ASEMANTIX. La conformité est garantie par l'absence d'accès, non par l'engagement contractuel d'un sous-traitant.</p>
+        <p class="faq-answer"><em class="brand">Φ</em> est conforme à l'article 9 RGPD (données sensibles) par architecture. L'application est strictement locale, ne se connecte à aucun serveur, ne traite aucune donnée à l'extérieur du dispositif. Les questionnaires médicaux, certificats et antécédents ne sont jamais accessibles à AION ASEMANTIX. Contrairement aux messageries E2E dont le déchiffrement reste applicatif chez l'opérateur, Inline-Offline® garantit que le contenu ne quitte jamais l'enclave matérielle du dispositif autorisé. La conformité est garantie par l'absence d'accès, non par l'engagement contractuel d'un sous-traitant.</p>
       </div>
       <div class="faq-item">
         <div class="faq-question">Comment <em class="brand">Φ</em> établit-elle l'opposabilité du consentement éclairé ?</div>
@@ -529,8 +558,8 @@
     <h2>Vos contentieux méritent mieux<br><em>qu'un certificat délivré par un tiers étranger.</em></h2>
     <p>Demandez une présentation institutionnelle confidentielle adaptée à votre organisme. 60 minutes pour comprendre. Une stratégie probatoire pour rendre vos contestations structurellement impossibles.</p>
     <div class="cta-final-actions">
-      <a href="#" class="btn-gold">Accéder à <em class="brand">Φ</em></a>
-      <a href="#" class="btn-ghost">Télécharger le livre blanc assurance</a>
+      <a href="../tarifications.html" class="btn-gold">Accéder à <em class="brand">Φ</em></a>
+      <a href="../contact.html" class="btn-ghost">Demander une démonstration</a>
     </div>
   </div>
 </section>
@@ -544,11 +573,11 @@
       <a href="justice.html" class="profession-link">Avocats &amp; Notaires</a>
       <a href="medecins.html" class="profession-link">Médecins</a>
       <a href="banques.html" class="profession-link">Banques</a>
-      <a href="#" class="profession-link">RH &amp; Compliance</a>
-      <a href="#" class="profession-link">Family Offices</a>
-      <a href="#" class="profession-link">Journalistes</a>
-      <a href="#" class="profession-link">Ministères &amp; Administrations</a>
-      <a href="#" class="profession-link">→ Toutes les professions</a>
+      <a href="rh-compliance.html" class="profession-link">RH &amp; Compliance</a>
+      <a href="../contact.html" class="profession-link">Family Offices</a>
+      <a href="journalistes.html" class="profession-link">Journalistes</a>
+      <a href="../contact.html" class="profession-link">Ministères &amp; Administrations</a>
+      <a href="../professions.html" class="profession-link">→ Toutes les professions</a>
     </div>
   </div>
 </section>
@@ -592,11 +621,12 @@
 
 <script>
   document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => {
-      q.parentElement.classList.toggle('open');
-    });
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
   });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
