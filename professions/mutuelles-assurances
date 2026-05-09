@@ -479,7 +479,7 @@
         <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 18px; font-weight: 600;">Grands comptes</div>
         <h3 style="font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--paper); margin-bottom: 16px;">Une approche dédiée à votre échelle</h3>
         <p style="font-family: var(--font-sans); font-size: 0.92rem; color: rgba(250,250,247,0.7); line-height: 1.65; font-weight: 300; margin-bottom: 28px;">Volumétrie illimitée, intégration aux systèmes back-office, exigences réglementaires sectorielles, déploiement multi-marques. Nous étudions votre dossier avec vous.</p>
-        <a href="#" style="display: inline-block; padding: 12px 24px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;">Contacter la direction Assurance &rarr;</a>
+        <a href="../contact.html" style="display: inline-block; padding: 12px 24px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;">Contacter la direction Assurance &rarr;</a>
       </div>
     </div>
   </div>
@@ -574,8 +574,8 @@
     <h2>Vos contentieux méritent mieux<br><em>qu'un certificat délivré par un tiers étranger.</em></h2>
     <p>Demandez une présentation institutionnelle confidentielle adaptée à votre organisme. 60 minutes pour comprendre. Une stratégie probatoire pour rendre vos contestations structurellement impossibles.</p>
     <div class="cta-final-actions">
-      <a href="#" class="btn-gold">Accéder à <em class="brand">Φ</em></a>
-      <a href="#" class="btn-ghost">Télécharger le livre blanc assurance</a>
+      <a href="../tarifications.html" class="btn-gold">Accéder à <em class="brand">Φ</em></a>
+      <a href="../contact.html" class="btn-ghost">Télécharger le livre blanc assurance</a>
     </div>
   </div>
 </section>
@@ -589,11 +589,11 @@
       <a href="justice.html" class="profession-link">Avocats &amp; Notaires</a>
       <a href="medecins.html" class="profession-link">Médecins</a>
       <a href="banques.html" class="profession-link">Banques</a>
-      <a href="#" class="profession-link">RH &amp; Compliance</a>
-      <a href="#" class="profession-link">Family Offices</a>
-      <a href="#" class="profession-link">Journalistes</a>
-      <a href="#" class="profession-link">Ministères &amp; Administrations</a>
-      <a href="#" class="profession-link">→ Toutes les professions</a>
+      <a href="rh-compliance.html" class="profession-link">RH &amp; Compliance</a>
+      <a href="../contact.html" class="profession-link">Family Offices</a>
+      <a href="journalistes.html" class="profession-link">Journalistes</a>
+      <a href="../contact.html" class="profession-link">Ministères &amp; Administrations</a>
+      <a href="../professions.html" class="profession-link">→ Toutes les professions</a>
     </div>
   </div>
 </section>
