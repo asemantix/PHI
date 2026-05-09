@@ -5,206 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Φ pour les Médecins — Signature opposable, secret médical absolu | AION ASEMANTIX</title>
 <meta name="description" content="Φ par AION ASEMANTIX — signature électronique souveraine pour médecins. Secret médical absolu, preuve probatoire opposable, conformité RGPD, HDS, Code pénal. Sans cloud, sans tiers de confiance.">
-<meta name="keywords" content="Phi signature médecin, signature électronique santé, secret médical numérique, preuve opposable médecale, conformité RGPD santé, HDS, MSSanté alternative, Doctolib alternative, AION ASEMANTIX, Inline-Offline, signature post-quantique">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --navy: #0e1c35;
-    --navy-deep: #08111f;
-    --navy-soft: #1a2942;
-    --gold: #c8a84b;
-    --gold-deep: #8b6914;
-    --gold-soft: #e2c87a;
-    --paper: #ffffff;
-    --paper-soft: #fafaf7;
-    --paper-deep: #f4f1e8;
-    --rule: #e6e3dc;
-    --ink: #0e1c35;
-    --ink-muted: #4a5a73;
-    --ink-faded: #8a96a8;
-    --font-display: "Playfair Display", Georgia, serif;
-    --font-mono: "IBM Plex Mono", Consolas, monospace;
-    --font-sans: "IBM Plex Sans", -apple-system, sans-serif;
-  }
- 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: var(--font-sans);
-    color: var(--ink);
-    background: var(--paper);
-    line-height: 1.6;
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-  }
- 
-  /* ── NAV ── */
-  .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
-  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { display: flex; align-items: center; text-decoration: none; line-height: 1; }
-  .nav-logo img { height: 38px; width: auto; display: block; }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
-  .nav-links a { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--navy); }
-  .nav-cta { padding: 9px 22px; background: var(--navy); color: white !important; border-radius: 4px; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.06em; transition: background 0.2s; }
-  .nav-cta:hover { background: var(--navy-deep); color: white !important; }
-  @media (max-width: 720px) { .nav-inner { padding: 14px 20px; } .nav-logo img { height: 32px; } .nav-links a:not(.nav-cta) { display: none; } }
- 
-  /* ── BREADCRUMB ── */
-  .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 24px 40px 0; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-faded); letter-spacing: 0.12em; text-transform: uppercase; }
-  .breadcrumb a { color: var(--ink-muted); text-decoration: none; }
-  .breadcrumb a:hover { color: var(--navy); }
-  .breadcrumb span { color: var(--gold-deep); }
- 
-  /* ── HERO ── */
-  .hero { max-width: 1200px; margin: 0 auto; padding: 60px 40px 100px; }
-  .hero-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 32px; font-weight: 500; }
-  .hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.08; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 900px; letter-spacing: -0.01em; }
-  .hero-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
-  .hero-sub { font-family: var(--font-display); font-style: italic; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.55; color: var(--ink-muted); max-width: 720px; margin-bottom: 44px; font-weight: 400; }
-  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary { padding: 14px 32px; background: var(--navy); color: white; border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
-  .btn-primary:hover { background: var(--navy-deep); }
-  .btn-secondary { padding: 14px 32px; background: transparent; color: var(--navy); border: 1px solid var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
-  .btn-secondary:hover { background: var(--navy); color: white; }
- 
-  /* ── SECTION ── */
-  .section { padding: 100px 0; border-top: 1px solid var(--rule); }
-  .section-soft { background: var(--paper-soft); }
-  .section-navy { background: var(--navy); color: var(--paper); }
-  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-  .section-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 24px; font-weight: 500; }
-  .section-navy .section-eyebrow { color: var(--gold-soft); }
-  .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 880px; letter-spacing: -0.01em; }
-  .section-navy .section-title { color: var(--paper); }
-  .section-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
-  .section-navy .section-title em { color: var(--gold-soft); }
-  .section-lead { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.65; color: var(--ink-muted); max-width: 760px; margin-bottom: 56px; font-weight: 400; }
-  .section-navy .section-lead { color: rgba(250,250,247,0.75); }
- 
-  /* ── DOULEUR CARDS ── */
-  .douleur-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
-  .douleur-card { background: var(--paper); padding: 36px 32px; }
-  .douleur-num { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600; }
-  .douleur-title { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 16px; }
-  .douleur-text { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
-  @media (max-width: 880px) { .douleur-grid { grid-template-columns: 1fr; } }
- 
-  /* ── PIVOT CITATION ── */
-  .pivot-citation { max-width: 880px; margin: 60px auto 0; padding: 60px 50px; background: var(--navy); border-left: 4px solid var(--gold); position: relative; }
-  .pivot-citation::before { content: "«"; position: absolute; top: 20px; left: 30px; font-family: var(--font-display); font-size: 5rem; color: var(--gold-soft); line-height: 1; opacity: 0.5; font-style: italic; }
-  .pivot-citation p { font-family: var(--font-display); font-style: italic; font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.4; color: var(--paper); font-weight: 400; text-align: center; padding-left: 30px; }
- 
-  /* ── ACTES MÉDICAUX ── */
-  .actes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
-  .acte-card { background: var(--paper); padding: 40px 36px; display: flex; flex-direction: column; }
-  .acte-num { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.24em; color: var(--gold-deep); margin-bottom: 14px; font-weight: 600; }
-  .acte-title { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 22px; }
-  .acte-context-label, .acte-phi-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; display: block; }
-  .acte-context-label { color: var(--ink-faded); }
-  .acte-phi-label { color: var(--gold-deep); margin-top: 18px; }
-  .acte-context, .acte-phi { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; font-weight: 300; }
-  .acte-phi { color: var(--ink); }
-  @media (max-width: 880px) { .actes-grid { grid-template-columns: 1fr; } }
- 
-  /* ── COMPARATIF TABLE ── */
-  .comparatif-wrapper { margin-top: 56px; overflow-x: auto; }
-  .comparatif-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.9rem; }
-  .comparatif-table th, .comparatif-table td { padding: 18px 20px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: middle; }
-  .comparatif-table thead th { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; padding-bottom: 14px; border-bottom: 2px solid var(--navy); }
-  .comparatif-table thead th.col-phi { color: var(--gold-deep); }
-  .comparatif-table tbody th { font-weight: 500; color: var(--ink); font-size: 0.92rem; }
-  .comparatif-table td { color: var(--ink-muted); font-weight: 300; }
-  .comparatif-table .col-phi { background: rgba(200,168,75,0.06); color: var(--ink); font-weight: 500; }
-  .comparatif-table tbody tr:hover { background: var(--paper-soft); }
-  .comparatif-table tbody tr:hover .col-phi { background: rgba(200,168,75,0.12); }
- 
-  /* ── CONFORMITÉ ── */
-  .conformite-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 56px; }
-  .conformite-card { padding: 32px 30px; background: var(--paper); border-left: 3px solid var(--gold); }
-  .conformite-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; font-weight: 600; }
-  .conformite-title { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.35; font-weight: 500; color: var(--navy); margin-bottom: 14px; }
-  .conformite-text { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
-  @media (max-width: 760px) { .conformite-grid { grid-template-columns: 1fr; } }
- 
-  /* ── TARIFICATION ── */
-  .tarif-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
-  .tarif-card { padding: 36px 32px; background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; display: flex; flex-direction: column; }
-  .tarif-card-featured { background: var(--navy); color: var(--paper); border-color: var(--navy); }
-  .tarif-eyebrow { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600; }
-  .tarif-card-featured .tarif-eyebrow { color: var(--gold-soft); }
-  .tarif-name { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.25; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
-  .tarif-card-featured .tarif-name { color: var(--paper); }
-  .tarif-price { font-family: var(--font-display); font-size: 2rem; line-height: 1; font-weight: 500; color: var(--navy); margin: 16px 0 28px; }
-  .tarif-card-featured .tarif-price { color: var(--gold-soft); }
-  .tarif-price small { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink-muted); font-weight: 300; display: block; margin-top: 6px; }
-  .tarif-card-featured .tarif-price small { color: rgba(250,250,247,0.6); }
-  .tarif-list { list-style: none; padding: 0; margin: 0 0 32px; flex: 1; }
-  .tarif-list li { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-muted); line-height: 1.55; font-weight: 300; padding: 8px 0 8px 22px; position: relative; border-bottom: 1px solid var(--rule); }
-  .tarif-card-featured .tarif-list li { color: rgba(250,250,247,0.7); border-bottom-color: rgba(255,255,255,0.1); }
-  .tarif-list li::before { content: "→"; position: absolute; left: 0; color: var(--gold-deep); font-weight: 500; }
-  .tarif-card-featured .tarif-list li::before { color: var(--gold-soft); }
-  .tarif-cta { display: block; text-align: center; padding: 14px 24px; background: var(--navy); color: white !important; border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; }
-  .tarif-cta:hover { background: var(--navy-deep); }
-  .tarif-card-featured .tarif-cta { background: var(--gold); color: var(--navy) !important; }
-  .tarif-card-featured .tarif-cta:hover { background: var(--gold-soft); }
-  @media (max-width: 880px) { .tarif-grid { grid-template-columns: 1fr; } }
- 
-  /* ── FAQ ── */
-  .faq-list { margin-top: 56px; }
-  .faq-item { border-bottom: 1px solid var(--rule); padding: 28px 0; }
-  .faq-question { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.4; font-weight: 500; color: var(--navy); margin-bottom: 14px; cursor: pointer; position: relative; padding-right: 36px; }
-  .faq-question::after { content: "+"; color: var(--gold-deep); font-weight: 400; font-size: 1.4rem; line-height: 1; transition: transform 0.2s; position: absolute; right: 0; top: 4px; }
-  .faq-item.open .faq-question::after { transform: rotate(45deg); transform-origin: center; }
-  .faq-answer { font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink-muted); line-height: 1.7; font-weight: 300; max-width: 880px; }
- 
-  /* ── CTA FINAL ── */
-  .cta-final { padding: 120px 0; background: var(--navy); color: var(--paper); text-align: center; }
-  .cta-final-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; }
-  .cta-final h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15; font-weight: 500; color: var(--paper); margin-bottom: 24px; letter-spacing: -0.01em; }
-  .cta-final h2 em { color: var(--gold-soft); font-style: italic; font-weight: 400; }
-  .cta-final p { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.6; color: rgba(250,250,247,0.7); margin-bottom: 44px; max-width: 620px; margin-left: auto; margin-right: auto; }
-  .cta-final-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-gold { padding: 14px 32px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
-  .btn-gold:hover { background: var(--gold-soft); }
-  .btn-ghost { padding: 14px 32px; background: transparent; color: var(--paper); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--paper); }
- 
-  /* ── SIDEBAR PROFESSIONS ── */
-  .professions { padding: 80px 0; background: var(--paper-soft); border-top: 1px solid var(--rule); }
-  .professions-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-  .professions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
-  .profession-link { padding: 18px 22px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink); text-decoration: none; font-weight: 400; transition: all 0.2s; display: flex; align-items: center; justify-content: space-between; }
-  .profession-link:hover { border-color: var(--gold); background: var(--paper); }
-  .profession-link::after { content: "→"; color: var(--gold-deep); }
-  @media (max-width: 880px) { .professions-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px) { .professions-grid { grid-template-columns: 1fr; } }
- 
- 
-  /* Φ — marque stylisée */
-  em.brand, .brand-em { font-style: italic; font-weight: inherit; color: inherit; }
-  sup.reg, .brand-reg { font-size: 0.55em; font-weight: 400; vertical-align: super; margin-left: 0.05em; opacity: 0.85; font-style: normal; }
- 
-  /* HEADER SECONDAIRE */
-  .sec-header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-  .sec-header-back { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
-  .sec-header-back:hover { color: var(--navy); }
-  .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--gold-deep); font-weight: 500; text-decoration: none; line-height: 1; }
-  @media (max-width: 720px) { .sec-header { padding: 0 24px; } }
- 
-</style>
- 
+<meta name="keywords" content="Phi signature médecin, signature électronique santé, secret médical numérique, preuve opposable médicale, conformité RGPD santé, HDS, MSSanté alternative, Doctolib alternative, AION ASEMANTIX, Inline-Offline, signature post-quantique">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="AION ASEMANTIX">
 <link rel="canonical" href="https://phi-signature.fr/professions/medecins.html">
 <meta name="theme-color" content="#0e1c35">
- 
-<!-- Favicon Φ -->
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
- 
-<!-- Open Graph -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26' font-family='serif' fill='%23c8a84b'>Φ</text></svg>">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://phi-signature.fr/professions/medecins.html">
@@ -216,14 +22,10 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Φ pour les Médecins — AION ASEMANTIX">
 <meta property="og:image:type" content="image/jpeg">
- 
-<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Φ pour les Médecins — Signature opposable, secret médical absolu">
 <meta name="twitter:description" content="Φ par AION ASEMANTIX — signature souveraine pour médecins. Secret médical absolu, RGPD, HDS. Sans cloud.">
 <meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
- 
-<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -233,30 +35,162 @@
   "url": "https://phi-signature.fr/professions/medecins.html",
   "description": "Signature électronique souveraine pour médecins. Secret médical absolu, preuve probatoire opposable, conformité RGPD, HDS. Sans cloud, sans tiers de confiance.",
   "inLanguage": "fr-FR",
-  "isPartOf": { "@type": "WebSite", "@id": "https://phi-signature.fr/#website" },
-  "publisher": { "@type": "Organization", "name": "AION ASEMANTIX", "url": "https://phi-signature.fr/", "email": "asemantix@proton.me" },
+  "publisher": { "@type": "Organization", "name": "AION ASEMANTIX", "url": "https://phi-signature.fr/" },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/" },
-      { "@type": "ListItem", "position": 2, "name": "Médecins", "item": "https://phi-signature.fr/professions/medecins.html" }
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Professions", "item": "https://phi-signature.fr/professions.html" },
+      { "@type": "ListItem", "position": 3, "name": "Médecins", "item": "https://phi-signature.fr/professions/medecins.html" }
     ]
   }
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0e1c35; --navy-deep: #08111f; --navy-soft: #1a2942;
+    --gold: #c8a84b; --gold-deep: #8b6914; --gold-soft: #e2c87a;
+    --paper: #ffffff; --paper-soft: #fafaf7; --paper-deep: #f4f1e8;
+    --rule: #e6e3dc; --ink: #0e1c35; --ink-muted: #4a5a73; --ink-faded: #8a96a8;
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-mono: "IBM Plex Mono", Consolas, monospace;
+    --font-sans: "IBM Plex Sans", -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-sans); color: var(--ink); background: var(--paper); line-height: 1.6; font-weight: 300; -webkit-font-smoothing: antialiased; }
+
+  .sec-header { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .sec-header-back { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; transition: color 0.2s; }
+  .sec-header-back:hover { color: var(--navy); }
+  .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 2rem; color: var(--gold-deep); font-weight: 500; text-decoration: none; line-height: 1; }
+  .sec-header-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
+  .sec-header-cta:hover { background: var(--navy-deep); }
+  .sec-header-cta .phi-cta { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; margin-left: 4px; letter-spacing: 0; color: var(--gold-soft); }
+  @media (max-width: 720px) { .sec-header { padding: 0 24px; } .sec-header-cta { display: none; } }
+
+  .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 24px 40px 0; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-faded); letter-spacing: 0.12em; text-transform: uppercase; }
+  .breadcrumb a { color: var(--ink-muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--navy); }
+  .breadcrumb span { color: var(--gold-deep); }
+
+  .hero { max-width: 1200px; margin: 0 auto; padding: 60px 40px 100px; }
+  .hero-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 32px; font-weight: 500; }
+  .hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.08; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 900px; letter-spacing: -0.01em; }
+  .hero-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
+  .hero-sub { font-family: var(--font-display); font-style: italic; font-size: clamp(1.05rem, 1.7vw, 1.3rem); line-height: 1.55; color: var(--ink-muted); max-width: 720px; margin-bottom: 44px; font-weight: 400; }
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { padding: 14px 32px; background: var(--navy); color: white; border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--navy-deep); }
+  .btn-secondary { padding: 14px 32px; background: transparent; color: var(--navy); border: 1px solid var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
+  .btn-secondary:hover { background: var(--navy); color: white; }
+
+  .section { padding: 100px 0; border-top: 1px solid var(--rule); }
+  .section-soft { background: var(--paper-soft); }
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .section-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 24px; font-weight: 500; }
+  .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; font-weight: 500; color: var(--navy); margin-bottom: 28px; max-width: 880px; letter-spacing: -0.01em; }
+  .section-title em { color: var(--gold-deep); font-style: italic; font-weight: 400; }
+  .section-lead { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.65; color: var(--ink-muted); max-width: 760px; margin-bottom: 56px; font-weight: 400; }
+
+  .douleur-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
+  .douleur-card { background: var(--paper); padding: 36px 32px; }
+  .douleur-num { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; color: var(--gold-deep); margin-bottom: 18px; font-weight: 600; }
+  .douleur-title { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 16px; }
+  .douleur-text { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
+  @media (max-width: 880px) { .douleur-grid { grid-template-columns: 1fr; } }
+
+  .actes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); margin-top: 56px; }
+  .acte-card { background: var(--paper); padding: 40px 36px; display: flex; flex-direction: column; }
+  .acte-num { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.24em; color: var(--gold-deep); margin-bottom: 14px; font-weight: 600; }
+  .acte-title { font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 22px; }
+  .acte-context-label, .acte-phi-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; display: block; }
+  .acte-context-label { color: var(--ink-faded); }
+  .acte-phi-label { color: var(--gold-deep); margin-top: 18px; }
+  .acte-context, .acte-phi { font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; font-weight: 300; }
+  .acte-phi { color: var(--ink); }
+  @media (max-width: 880px) { .actes-grid { grid-template-columns: 1fr; } }
+
+  .comparatif-wrapper { margin-top: 56px; overflow-x: auto; }
+  .comparatif-table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 0.9rem; }
+  .comparatif-table th, .comparatif-table td { padding: 18px 20px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+  .comparatif-table thead th { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; padding-bottom: 14px; border-bottom: 2px solid var(--navy); }
+  .comparatif-table thead th.col-phi { color: var(--gold-deep); }
+  .comparatif-table tbody th { font-weight: 500; color: var(--ink); font-size: 0.92rem; }
+  .comparatif-table td { color: var(--ink-muted); font-weight: 300; }
+  .comparatif-table .col-phi { background: rgba(200,168,75,0.06); color: var(--ink); font-weight: 500; }
+  .comparatif-table tbody tr:hover { background: var(--paper-soft); }
+  .comparatif-table tbody tr:hover .col-phi { background: rgba(200,168,75,0.12); }
+
+  .conformite-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 56px; }
+  .conformite-card { padding: 32px 30px; background: var(--paper); border-left: 3px solid var(--gold); }
+  .conformite-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; font-weight: 600; }
+  .conformite-title { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.35; font-weight: 500; color: var(--navy); margin-bottom: 14px; }
+  .conformite-text { font-family: var(--font-sans); font-size: 0.9rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
+  @media (max-width: 760px) { .conformite-grid { grid-template-columns: 1fr; } }
+
+  .faq-list { margin-top: 56px; }
+  .faq-item { border-bottom: 1px solid var(--rule); padding: 28px 0; }
+  .faq-question { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.4; font-weight: 500; color: var(--navy); margin-bottom: 14px; cursor: pointer; position: relative; padding-right: 36px; }
+  .faq-question::after { content: "+"; color: var(--gold-deep); font-weight: 400; font-size: 1.4rem; line-height: 1; transition: transform 0.2s; position: absolute; right: 0; top: 4px; }
+  .faq-item.open .faq-question::after { transform: rotate(45deg); transform-origin: center; }
+  .faq-answer { font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink-muted); line-height: 1.7; font-weight: 300; max-width: 880px; }
+
+  .cta-final { padding: 120px 0; background: var(--navy); color: var(--paper); text-align: center; }
+  .cta-final-inner { max-width: 800px; margin: 0 auto; padding: 0 40px; }
+  .cta-final h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15; font-weight: 500; color: var(--paper); margin-bottom: 24px; letter-spacing: -0.01em; }
+  .cta-final h2 em { color: var(--gold-soft); font-style: italic; font-weight: 400; }
+  .cta-final p { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.6; color: rgba(250,250,247,0.7); margin-bottom: 44px; max-width: 620px; margin-left: auto; margin-right: auto; }
+  .cta-final-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-gold { padding: 14px 32px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s; display: inline-block; }
+  .btn-gold:hover { background: var(--gold-soft); }
+  .btn-ghost { padding: 14px 32px; background: transparent; color: var(--paper); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; font-family: var(--font-sans); font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; display: inline-block; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: var(--paper); }
+
+  .professions { padding: 80px 0; background: var(--paper-soft); border-top: 1px solid var(--rule); }
+  .professions-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+  .professions-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+  .profession-link { padding: 18px 22px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; font-family: var(--font-sans); font-size: 0.88rem; color: var(--ink); text-decoration: none; font-weight: 400; transition: all 0.2s; display: flex; align-items: center; justify-content: space-between; }
+  .profession-link:hover { border-color: var(--gold); }
+  .profession-link::after { content: "→"; color: var(--gold-deep); }
+  @media (max-width: 880px) { .professions-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .professions-grid { grid-template-columns: 1fr; } }
+
+  em.brand { font-style: italic; font-weight: inherit; color: inherit; }
+  sup.reg { font-size: 0.55em; font-weight: 400; vertical-align: super; margin-left: 0.05em; opacity: 0.85; font-style: normal; }
+
+  .footer { background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 60px 48px 36px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-brand { text-align: center; margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid rgba(200,168,75,0.2); }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 3.2rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 12px; }
+  .footer-line { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 12px; }
+  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--gold-soft); margin-bottom: 3px; }
+  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 0.85rem; color: rgba(226,200,122,0.75); }
+  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 32px; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-soft); font-weight: 500; margin-bottom: 14px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--gold-soft); }
+  .footer-meta { border-top: 1px solid rgba(200,168,75,0.15); padding-top: 22px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.35); line-height: 1.8; }
+  .footer-meta strong { color: var(--gold-soft); font-weight: 500; }
+  @media (max-width: 720px) { .footer { padding: 48px 24px 28px; } .footer-nav { grid-template-columns: 1fr; gap: 24px; } }
+</style>
 </head>
 <body>
+
 <header class="sec-header">
   <a href="../index.html" class="sec-header-back">← Retour</a>
   <a href="../index.html" class="sec-header-phi">Φ</a>
+  <a href="../tarifications.html" class="sec-header-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </header>
- 
- 
- 
-<!-- BREADCRUMB -->
- 
- 
-<!-- HERO -->
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a> › <a href="../professions.html">Professions</a> › <span>Médecins</span>
+</nav>
+
 <section class="hero">
   <div class="hero-eyebrow">Pour les professionnels de santé · Brevet français FR 2604755</div>
   <h1 class="hero-title">
@@ -275,8 +209,7 @@
     <a href="#actes" class="btn-secondary">Voir les six actes médicaux</a>
   </div>
 </section>
- 
-<!-- DOULEUR ACTUELLE -->
+
 <section class="section section-soft">
   <div class="section-inner">
     <div class="section-eyebrow">Aujourd'hui — dans votre cabinet, dans votre service</div>
@@ -305,8 +238,7 @@
     </div>
   </div>
 </section>
- 
-<!-- PIVOT -->
+
 <section class="section">
   <div class="section-inner">
     <div class="section-eyebrow">Le pivot</div>
@@ -316,9 +248,8 @@
     </h2>
     <div style="display: inline-flex; align-items: center; gap: 18px; padding: 14px 24px; background: var(--paper-deep); border-left: 3px solid var(--gold); margin: 32px 0 40px; max-width: 100%;">
       <span style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">Procédé propriétaire breveté</span>
-      <span style="font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--navy); font-weight: 500;">Inline-Offline®</span>
+      <span style="font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--navy); font-weight: 500;">Inline-Offline<sup class="reg">®</sup></span>
     </div>
- 
     <p class="section-lead">
       C'est exactement ce que produit <em class="brand">Φ</em>. Une preuve mathématique gravée dans le keystore matériel de votre dispositif et de celui de votre patient.
       Deux journaux miroirs, cryptographiquement interdépendants, qui rendent la contestation structurellement impossible.
@@ -327,29 +258,24 @@
       Pas un service hébergé chez un éditeur de santé. Pas un abonnement à un tiers de confiance. Pas un certificat délivré par une autorité externe.
       Une boîte noire probatoire qui se vérifie elle-même. <strong style="color: var(--ink); font-weight: 500;">L'expert judiciaire recalcule G. Si le résultat correspond, l'acte est authentique.</strong>
     </p>
- 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin:0 0 32px;">
       <div style="background:var(--paper-soft);padding:28px 30px;">
         <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-faded);font-weight:600;margin-bottom:12px;">MSSanté · Doctolib · messageries chiffrées</div>
         <p style="font-family:var(--font-sans);font-size:0.9rem;color:var(--ink-muted);line-height:1.65;font-weight:300;">Ces services chiffrent le transport — mais déchiffrent vos données médicales sur leurs propres serveurs. L'éditeur voit vos comptes-rendus, vos prescriptions, vos diagnostics en clair, et peut y accéder en cas de réquisition ou de faille.</p>
       </div>
       <div style="background:var(--navy);padding:28px 30px;">
-        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:12px;">Φ — Inline-Offline®</div>
+        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:12px;">Φ — Inline-Offline<sup style="font-size:0.55em;">®</sup></div>
         <p style="font-family:var(--font-sans);font-size:0.9rem;color:var(--paper);line-height:1.65;font-weight:400;">Le déchiffrement ne se produit <strong>jamais</strong> sur un serveur. Il a lieu exclusivement dans l'app Φ, sur le dispositif physique du destinataire autorisé. Vos données médicales ne sont lisibles nulle part en dehors des deux dispositifs légitimes. Le secret médical est garanti par architecture.</p>
       </div>
     </div>
- 
   </div>
 </section>
- 
-<!-- SIX ACTES MÉDICAUX -->
+
 <section class="section section-soft" id="actes">
   <div class="section-inner">
     <div class="section-eyebrow">Cas d'usage médecin</div>
     <h2 class="section-title">Six actes du quotidien.<br><em>Six preuves opposables.</em></h2>
-    <p class="section-lead">
-      <em class="brand">Φ</em> n'est pas un outil supplémentaire dans votre poste de travail. C'est l'infrastructure qui transforme vos actes médicaux courants en preuves probatoires inviolables, sans alourdir votre pratique.
-    </p>
+    <p class="section-lead"><em class="brand">Φ</em> n'est pas un outil supplémentaire dans votre poste de travail. C'est l'infrastructure qui transforme vos actes médicaux courants en preuves probatoires inviolables, sans alourdir votre pratique.</p>
     <div class="actes-grid">
       <div class="acte-card">
         <div class="acte-num">Acte 01</div>
@@ -371,7 +297,7 @@
         <div class="acte-num">Acte 03</div>
         <h3 class="acte-title">Ordonnance opposable</h3>
         <span class="acte-context-label">Aujourd'hui</span>
-        <p class="acte-context">Vous prescrivez. L'ordonnance est imprimée ou transmise par email. Le patient la présente au pharmacien. Rien ne prouve que l'ordonnance reçue est exactement celle que vous avez signée — ni qu'elle ne sera pas modifiée frauduleusement (ajout de molécules, modification de posologie, falsification de signature).</p>
+        <p class="acte-context">Vous prescrivez. L'ordonnance est imprimée ou transmise par email. Le patient la présente au pharmacien. Rien ne prouve que l'ordonnance reçue est exactement celle que vous avez signée — ni qu'elle ne sera pas modifiée frauduleusement.</p>
         <span class="acte-phi-label">Avec <em class="brand">Φ</em></span>
         <p class="acte-phi">L'ordonnance est scellée à votre identité cryptographique, à votre dispositif, à votre biométrie. Le pharmacien (équipé de <em class="brand">Φ</em>) ouvre l'ordonnance dans son application — qui vérifie automatiquement l'intégrité du document et l'authenticité du prescripteur. Toute modification est immédiatement détectée. Toute falsification est mathématiquement impossible.</p>
       </div>
@@ -389,7 +315,7 @@
         <span class="acte-context-label">Aujourd'hui</span>
         <p class="acte-context">Le patient refuse une intervention recommandée. Vous devez documenter ce refus pour vous protéger juridiquement. Une simple annotation dans le dossier médical reste contestable. Une lettre recommandée coûte cher et n'a pas de valeur probatoire de la lecture.</p>
         <span class="acte-phi-label">Avec <em class="brand">Φ</em></span>
-        <p class="acte-phi">Vous transmettez au patient, via <em class="brand">Φ</em>, le document exposant les risques et la recommandation médicale. Le journal probatoire enregistre la réception sur son dispositif, l'ouverture du document, la durée de consultation. Le patient choisit alors &mdash; ou non &mdash; de signer. Dans le cas d'un refus, c'est précisément <strong style="color: var(--ink); font-weight: 500;">l'absence de signature en retour, formellement actée et horodatée par le journal</strong>, qui constitue la preuve. Le patient ne pourra plus contester avoir reçu, lu et compris l'information : son silence cryptographique est lui-même opposable.</p>
+        <p class="acte-phi">Vous transmettez au patient, via <em class="brand">Φ</em>, le document exposant les risques et la recommandation médicale. Le journal probatoire enregistre la réception, l'ouverture, la durée de consultation. Dans le cas d'un refus, <strong style="color: var(--ink); font-weight: 500;">l'absence de signature en retour, formellement actée et horodatée par le journal</strong>, constitue la preuve. Le patient ne pourra plus contester avoir reçu, lu et compris l'information.</p>
       </div>
       <div class="acte-card">
         <div class="acte-num">Acte 06</div>
@@ -402,8 +328,7 @@
     </div>
   </div>
 </section>
- 
-<!-- COMPARATIF -->
+
 <section class="section">
   <div class="section-inner">
     <div class="section-eyebrow">Comparatif — pourquoi <em class="brand">Φ</em> plutôt qu'un autre</div>
@@ -412,12 +337,7 @@
     <div class="comparatif-wrapper">
       <table class="comparatif-table">
         <thead>
-          <tr>
-            <th>Critère</th>
-            <th>MSSanté</th>
-            <th>Doctolib</th>
-            <th class="col-phi"><em class="brand">Φ</em></th>
-          </tr>
+          <tr><th>Critère</th><th>MSSanté</th><th>Doctolib</th><th class="col-phi"><em class="brand">Φ</em></th></tr>
         </thead>
         <tbody>
           <tr><th>Déchiffrement des données médicales</th><td>Sur les serveurs ANS</td><td>Sur les serveurs Doctolib (AWS)</td><td class="col-phi">Uniquement dans l'app Φ · sur votre dispositif · jamais ailleurs</td></tr>
@@ -435,8 +355,7 @@
     </div>
   </div>
 </section>
- 
-<!-- CONFORMITÉ -->
+
 <section class="section section-soft">
   <div class="section-inner">
     <div class="section-eyebrow">Conformité juridique</div>
@@ -466,8 +385,7 @@
     </div>
   </div>
 </section>
- 
-<!-- TARIFICATION -->
+
 <section class="section" id="tarification">
   <div class="section-inner">
     <div class="section-eyebrow">Grands comptes &amp; sur mesure</div>
@@ -484,39 +402,26 @@
         <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); margin-bottom: 18px; font-weight: 600;">Grands comptes</div>
         <h3 style="font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; font-weight: 500; color: var(--paper); margin-bottom: 16px;">Une approche dédiée à votre échelle</h3>
         <p style="font-family: var(--font-sans); font-size: 0.92rem; color: rgba(250,250,247,0.7); line-height: 1.65; font-weight: 300; margin-bottom: 28px;">Volumétrie, intégration aux systèmes existants, exigences réglementaires sectorielles, déploiement multi-sites. Nous étudions votre dossier avec vous.</p>
-        <a href="#" style="display: inline-block; padding: 12px 24px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;">Contacter l'équipe Santé &rarr;</a>
+        <a href="../contact.html" style="display: inline-block; padding: 12px 24px; background: var(--gold); color: var(--navy); border-radius: 4px; font-family: var(--font-sans); font-size: 0.86rem; font-weight: 500; letter-spacing: 0.04em; text-decoration: none; transition: background 0.2s;">Contacter l'équipe Santé &rarr;</a>
       </div>
     </div>
   </div>
 </section>
- 
- 
-<!-- CANAL PORTEUR INDIFFÉRENT -->
+
 <section class="section section-soft">
   <div class="section-inner">
     <div class="section-eyebrow">Le canal porteur est indifférent</div>
     <h2 class="section-title">Vous gardez Gmail.<br><em>Gmail ne vous voit plus.</em></h2>
-    <p class="section-lead">
-      Vous n'avez rien à changer à votre infrastructure existante. <em class="brand">Φ</em> transmet ses contenus à travers le canal de votre choix — votre messagerie professionnelle américaine, votre messagerie chiffrée non-américaine, votre messagerie instantanée, votre Drive partagé, ou même une clé USB remise en main propre.
-    </p>
- 
+    <p class="section-lead">Vous n'avez rien à changer à votre infrastructure existante. <em class="brand">Φ</em> transmet ses contenus à travers le canal de votre choix — votre messagerie professionnelle américaine, votre messagerie chiffrée, votre messagerie instantanée, ou même une clé USB remise en main propre.</p>
     <div style="background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 32px 36px; margin: 32px 0; columns: 2; column-gap: 36px; font-family: var(--font-sans); font-size: 0.96rem; line-height: 1.75; color: var(--ink); font-weight: 400;">
-      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Gmail Workspace, Outlook 365, Yahoo Mail</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">messageries grand public américaines</span></div>
-      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">ProtonMail (Suisse), Tutanota (Allemagne), Mailfence (Belgique), Mailo (France)</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">messageries chiffrées non-américaines</span></div>
+      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Gmail Workspace, Outlook 365</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">messageries grand public américaines</span></div>
+      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">ProtonMail, Tutanota, Mailfence, Mailo</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">messageries chiffrées non-américaines</span></div>
       <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Signal, WhatsApp, Telegram</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">en pièces jointes</span></div>
-      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">iMessage, SMS MMS</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">fichiers ≤ taille limite</span></div>
-      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">AirDrop, Nearby Share</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">transmission locale</span></div>
-      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Slack, Microsoft Teams, Discord</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">en pièces jointes</span></div>
+      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Slack, Microsoft Teams</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">en pièces jointes</span></div>
       <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Google Drive, OneDrive, Dropbox</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">partage de fichiers</span></div>
       <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Clé USB, support physique</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">remise en main propre</span></div>
-      <div style="break-inside: avoid; padding: 6px 0;">✓ <strong style="color: var(--navy); font-weight: 500;">Tout autre canal</strong><br><span style="color: var(--ink-muted); font-style: italic; font-size: 0.88rem;">capable de transporter un fichier ou un blob d'octets</span></div>
     </div>
- 
-    <p style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.78; color: var(--ink); margin-bottom: 24px; font-weight: 400;">
-      Dans tous les cas, le canal porteur ne voit que des octets chiffrés indistinguables de bruit aléatoire. <strong style="color: var(--navy); font-weight: 500;">Gmail ne sait pas qu'il transporte une convention d'honoraires.</strong> ProtonMail ne sait pas qu'il achemine une conclusion d'avocat. Signal ne sait pas qu'il porte une signature contractuelle. Aucun de ces opérateurs ne peut reconstituer le contenu, parce que la clé de déchiffrement ne quitte jamais l'enclave matérielle des dispositifs légitimes.
-    </p>
- 
-    <div style="background: var(--navy); color: var(--paper); padding: 36px 40px; border-radius: 6px; border-left: 4px solid var(--gold); margin-top: 32px; text-align: center;">
+    <div style="background: var(--navy); color: var(--paper); padding: 36px 40px; border-radius: 6px; border-left: 4px solid var(--gold); text-align: center;">
       <p style="font-family: var(--font-display); font-style: italic; font-size: 1.4rem; line-height: 1.4; color: var(--paper); font-weight: 500; margin: 0;">
         Votre messagerie devient un facteur.<br>
         <em style="font-style: normal; color: var(--gold-soft); font-weight: 600;">Plus jamais un témoin.</em>
@@ -524,8 +429,7 @@
     </div>
   </div>
 </section>
- 
-<!-- FAQ -->
+
 <section class="section section-soft">
   <div class="section-inner">
     <div class="section-eyebrow">Questions fréquentes</div>
@@ -533,15 +437,15 @@
     <div class="faq-list">
       <div class="faq-item open">
         <div class="faq-question"><em class="brand">Φ</em> remplace-t-elle MSSanté ?</div>
-        <p class="faq-answer"><em class="brand">Φ</em> couvre tous les cas d'usage de MSSanté — échanges entre confrères, transmission de comptes-rendus, prescription électronique — avec une preuve probatoire structurellement supérieure et sans nécessiter de carte CPS. La migration ne demande aucune intégration informatique : <em class="brand">Φ</em> utilise vos messageries existantes (Gmail, Outlook, Pro Santé Connect) sans dépendre d'elles.</p>
+        <p class="faq-answer"><em class="brand">Φ</em> couvre tous les cas d'usage de MSSanté — échanges entre confrères, transmission de comptes-rendus, prescription électronique — avec une preuve probatoire structurellement supérieure et sans nécessiter de carte CPS. La migration ne demande aucune intégration informatique : <em class="brand">Φ</em> utilise vos messageries existantes sans dépendre d'elles.</p>
       </div>
       <div class="faq-item">
         <div class="faq-question"><em class="brand">Φ</em> est-elle conforme au RGPD pour les données de santé ?</div>
-        <p class="faq-answer"><em class="brand">Φ</em> est conforme par architecture. L'application est strictement locale, ne se connecte à aucun serveur, ne traite aucune donnée à l'extérieur du dispositif. Les biométries vivantes ne sont jamais transmises ni stockées en clair — elles servent uniquement à dériver la signature et disparaissent. L'éditeur n'a techniquement aucun moyen d'accéder à vos données de santé.</p>
+        <p class="faq-answer"><em class="brand">Φ</em> est conforme par architecture. L'application est strictement locale, ne se connecte à aucun serveur, ne traite aucune donnée à l'extérieur du dispositif. Les biométries vivantes ne sont jamais transmises ni stockées en clair. L'éditeur n'a techniquement aucun moyen d'accéder à vos données de santé.</p>
       </div>
       <div class="faq-item">
         <div class="faq-question">Comment <em class="brand">Φ</em> garantit-elle le secret médical ?</div>
-        <p class="faq-answer">Le secret médical (article 226-13 du Code pénal) exige que les informations confiées par un patient à son médecin ne soient connues que de ce médecin et des professionnels participant à sa prise en charge. <em class="brand">Φ</em> garantit cette restriction par construction matérielle : aucun serveur n'existe pour stocker vos données, et le document ne s'ouvre que dans le silicium du dispositif autorisé. Pas même <em class="brand">Φ</em> ne peut accéder à vos comptes-rendus.</p>
+        <p class="faq-answer">Le secret médical (article 226-13 du Code pénal) exige que les informations confiées par un patient à son médecin ne soient connues que de ce médecin et des professionnels participant à sa prise en charge. <em class="brand">Φ</em> garantit cette restriction par construction matérielle : aucun serveur n'existe pour stocker vos données, et le document ne s'ouvre que dans le silicium du dispositif autorisé.</p>
       </div>
       <div class="faq-item">
         <div class="faq-question">Que se passe-t-il si AION ASEMANTIX disparaît ?</div>
@@ -553,42 +457,40 @@
       </div>
       <div class="faq-item">
         <div class="faq-question">Quelle est la valeur juridique d'une signature <em class="brand">Φ</em> en justice médicale ?</div>
-        <p class="faq-answer">La signature est conforme à l'article 26 du règlement eIDAS (signature électronique avancée) et à l'article 1366 du Code civil (force probante de l'écrit électronique). En cas de litige avec un patient, vous produisez votre certificat exportable depuis l'application — l'expert judiciaire recalcule la fonction G à partir des cinq paramètres et vérifie l'authenticité de l'acte. Aucun tiers de confiance n'est nécessaire.</p>
+        <p class="faq-answer">La signature est conforme à l'article 26 du règlement eIDAS (signature électronique avancée) et à l'article 1366 du Code civil. En cas de litige, vous produisez votre certificat exportable depuis l'application — l'expert judiciaire recalcule la fonction G à partir des cinq paramètres et vérifie l'authenticité de l'acte. Aucun tiers de confiance n'est nécessaire.</p>
       </div>
     </div>
   </div>
 </section>
- 
-<!-- CTA FINAL -->
+
 <section class="cta-final">
   <div class="cta-final-inner">
     <h2>Vos patients méritent mieux<br><em>qu'un cloud étranger.</em></h2>
     <p>Demandez une démonstration confidentielle adaptée à votre pratique. 30 minutes pour comprendre. Une carrière entière pour ne plus dépendre de personne.</p>
     <div class="cta-final-actions">
-      <a href="#" class="btn-gold">Accéder à <em class="brand">Φ</em></a>
-      <a href="#" class="btn-ghost">Télécharger le livre blanc santé</a>
+      <a href="../tarifications.html" class="btn-gold">Accéder à <em class="brand">Φ</em></a>
+      <a href="../contact.html" class="btn-ghost">Demander une démonstration</a>
     </div>
   </div>
 </section>
- 
-<!-- AUTRES PROFESSIONS -->
+
 <section class="professions">
   <div class="professions-inner">
     <div class="section-eyebrow"><em class="brand">Φ</em> pour votre profession</div>
     <h2 class="section-title">D'autres professions<br><em>exigeantes.</em></h2>
     <div class="professions-grid">
-      <a href="../justice.html" class="profession-link">Avocats &amp; Notaires</a>
-      <a href="#" class="profession-link">Banques</a>
-      <a href="#" class="profession-link">Mutuelles &amp; Assurances</a>
-      <a href="#" class="profession-link">RH &amp; Compliance</a>
-      <a href="#" class="profession-link">Family Offices</a>
-      <a href="#" class="profession-link">Journalistes</a>
-      <a href="#" class="profession-link">Ministères &amp; Administrations</a>
-      <a href="#" class="profession-link">→ Toutes les professions</a>
+      <a href="justice.html" class="profession-link">Avocats &amp; Notaires</a>
+      <a href="banques.html" class="profession-link">Banques</a>
+      <a href="mutuelles-assurances.html" class="profession-link">Mutuelles &amp; Assurances</a>
+      <a href="rh-compliance.html" class="profession-link">RH &amp; Compliance</a>
+      <a href="../contact.html" class="profession-link">Family Offices</a>
+      <a href="journalistes.html" class="profession-link">Journalistes</a>
+      <a href="../contact.html" class="profession-link">Ministères &amp; Administrations</a>
+      <a href="../professions.html" class="profession-link">→ Toutes les professions</a>
     </div>
   </div>
 </section>
- 
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -625,15 +527,12 @@
     </div>
   </div>
 </footer>
- 
+
 <script>
   document.querySelectorAll('.faq-question').forEach(q => {
-    q.addEventListener('click', () => {
-      q.parentElement.classList.toggle('open');
-    });
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
   });
 </script>
- 
 </body>
 </html>
 
