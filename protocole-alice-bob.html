@@ -1,1 +1,902 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le protocole Alice et Bob — Φ · AION ASEMANTIX</title>
+<meta name="description" content="Le protocole Φ entre deux dispositifs souverains : envoi chiffré, lecture mesurée, signature probatoire bilatérale, certificat opposable. Par AION ASEMANTIX.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="AION ASEMANTIX">
+<link rel="canonical" href="https://phi-signature.fr/protocole-alice-bob.html">
+<meta name="theme-color" content="#0e1c35">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/protocole-alice-bob.html">
+<meta property="og:title" content="Le protocole Alice et Bob — Φ · AION ASEMANTIX">
+<meta property="og:description" content="Le protocole Φ : envoi chiffré, lecture mesurée, signature bilatérale, certificat opposable.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://phi-signature.fr/protocole-alice-bob.html",
+  "name": "Le protocole Alice et Bob — Φ",
+  "url": "https://phi-signature.fr/protocole-alice-bob.html",
+  "inLanguage": "fr-FR",
+  "isPartOf": { "@type": "WebSite", "@id": "https://phi-signature.fr/#website" },
+  "publisher": { "@type": "Organization", "name": "AION ASEMANTIX" },
+  "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/" },
+    { "@type": "ListItem", "position": 2, "name": "Le protocole Alice et Bob", "item": "https://phi-signature.fr/protocole-alice-bob.html" }
+  ]}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<style>
+  :root {
+    --navy: #0e1c35; --navy-deep: #08111f;
+    --gold: #c8a84b; --gold-deep: #8b6914; --gold-light: #e2c87a;
+    --paper: #fafaf7; --paper-soft: #f4f1e8;
+    --ink: #1d2330; --ink-muted: #6c7384;
+    --rule: rgba(200,168,75,0.3);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-sans: 'IBM Plex Sans', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0; background: var(--paper); color: var(--navy); font-family: var(--font-sans); line-height: 1.6; }
+  a { color: inherit; }
+
+  .sec-header { position: sticky; top: 0; z-index: 100; background: rgba(250,250,247,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); padding: 16px 48px; display: flex; align-items: center; justify-content: space-between; }
+  .sec-header-back { font-family: var(--font-mono); font-size: .7rem; color: var(--ink-muted); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+  .sec-header-back:hover { color: var(--navy); }
+  .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 1.5rem; color: var(--gold); font-weight: 500; text-decoration: none; }
+  .sec-header-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; }
+  .sec-header-cta .phi-cta { font-family: var(--font-display); font-style: italic; font-size: .95rem; margin-left: 4px; color: var(--gold-light); }
+  @media (max-width: 720px) { .sec-header { padding: 14px 20px; } .sec-header-cta { display: none; } }
+
+  .breadcrumb { padding: 32px 48px 0; max-width: 1200px; margin: 0 auto; font-family: var(--font-mono); font-size: .66rem; color: var(--ink-muted); letter-spacing: .18em; text-transform: uppercase; }
+  .breadcrumb a { color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+  .breadcrumb-sep { margin: 0 12px; opacity: .5; color: var(--gold); }
+
+  .page-header { padding: 100px 40px 80px; text-align: center; border-bottom: 1px solid var(--rule); }
+  .page-eyebrow { font-family: var(--font-mono); font-size: .78rem; color: var(--gold-deep); letter-spacing: .42em; text-transform: uppercase; margin-bottom: 36px; font-weight: 600; }
+  .page-title { font-family: var(--font-display); font-size: 3rem; font-weight: 600; color: var(--navy); line-height: 1.15; letter-spacing: -.015em; margin: 0 auto 28px; max-width: 780px; }
+  .page-title em { font-style: italic; font-weight: 500; color: var(--gold-deep); }
+  .page-lead { font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--ink-muted); line-height: 1.6; max-width: 720px; margin: 0 auto; }
+
+  .section { padding: 110px 40px 100px; border-top: 1px solid var(--rule); }
+  .section-soft { background: var(--paper-soft); }
+  .section-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+  .section-num { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .42em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 48px; font-weight: 600; }
+  .section-title { font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; color: var(--navy); line-height: 1.2; letter-spacing: -.01em; margin-bottom: 28px; }
+  .section-title em { font-style: italic; font-weight: 500; }
+  .section-lead { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--ink-muted); line-height: 1.55; max-width: 680px; margin: 0 auto 56px; }
+
+  .schema { margin: 0 auto 56px; max-width: 860px; }
+  .schema-caption { font-family: var(--font-mono); font-size: .7rem; color: var(--ink-muted); text-align: center; margin-top: 20px; letter-spacing: .18em; text-transform: uppercase; }
+
+  .prose { max-width: 720px; margin: 48px auto 0; text-align: left; }
+  .prose p { font-family: var(--font-display); font-size: 1.12rem; color: var(--ink); line-height: 1.72; margin-bottom: 20px; }
+  .prose em { font-style: italic; font-weight: 500; }
+  .prose strong { font-weight: 600; color: var(--navy); }
+
+  .bullets { list-style: none; padding: 0; margin: 32px auto 0; max-width: 720px; text-align: left; }
+  .bullets li { font-family: var(--font-display); font-size: 1.08rem; color: var(--ink); line-height: 1.65; padding: 13px 0 13px 28px; position: relative; border-bottom: 1px solid var(--rule); }
+  .bullets li:last-child { border-bottom: none; }
+  .bullets li::before { content: "—"; position: absolute; left: 0; color: var(--gold-deep); }
+  .bullets li strong { font-weight: 600; color: var(--navy); }
+
+  .pivot { max-width: 640px; margin: 56px auto 0; text-align: center; }
+  .pivot-flourish { display: flex; justify-content: center; margin-bottom: 24px; }
+  .pivot p { font-family: var(--font-display); font-size: 1.28rem; color: var(--navy); line-height: 1.5; font-weight: 500; margin: 0; }
+  .pivot em { font-style: italic; font-weight: 600; }
+
+  .encart { margin: 52px auto 0; padding: 34px 30px; background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; max-width: 760px; text-align: left; }
+  .section-soft .encart { background: var(--paper-soft); }
+  .encart-eyebrow { font-family: var(--font-mono); font-size: .7rem; color: var(--gold-deep); letter-spacing: .42em; text-transform: uppercase; margin-bottom: 14px; font-weight: 500; }
+  .encart h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--navy); line-height: 1.5; margin: 0 0 20px; font-weight: 500; }
+  .encart p { font-family: var(--font-sans); font-size: .93rem; color: var(--ink-muted); line-height: 1.7; margin-bottom: 14px; font-weight: 300; }
+  .encart p strong { color: var(--ink); font-weight: 600; }
+  .encart-conclusion { font-family: var(--font-display); font-style: italic; font-size: 1.05rem !important; color: var(--navy) !important; font-weight: 500 !important; margin-top: 20px !important; padding-top: 18px; border-top: 1px solid var(--rule); }
+
+  .nav-context { background: var(--paper); padding: 60px 40px 80px; border-top: 1px solid var(--rule); }
+  .nav-context-inner { max-width: 880px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+  .nav-context a { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 4px; }
+  .nav-context a.cta-primary { color: var(--navy); font-weight: 600; border-bottom-width: 2px; }
+
+  .footer { background: var(--navy-deep); color: rgba(255,255,255,.75); padding: 80px 48px 40px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(200,168,75,.2); }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 4.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 18px; }
+  .footer-line { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 18px; }
+  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--gold-light); margin-bottom: 4px; }
+  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(226,200,122,.8); }
+  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .32em; text-transform: uppercase; color: var(--gold-light); font-weight: 500; margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(255,255,255,.75); text-decoration: none; }
+  .footer-meta { border-top: 1px solid rgba(200,168,75,.15); padding-top: 28px; text-align: center; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .18em; color: rgba(255,255,255,.4); line-height: 1.8; }
+  .footer-meta strong { color: var(--gold-light); font-weight: 500; }
+  @media (max-width: 720px) {
+    .page-title { font-size: 2.1rem; } .page-lead { font-size: 1.05rem; }
+    .section { padding: 70px 24px; } .section-title { font-size: 1.8rem; }
+    .nav-context-inner { flex-direction: column; text-align: center; }
+    .footer { padding: 60px 24px 30px; } .footer-nav { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="sec-header">
+  <div style="display:flex;align-items:center;gap:28px;">
+    <a href="index.html" class="sec-header-back">← Retour</a>
+    <a href="index.html" class="sec-header-phi">Φ</a>
+  </div>
+  <a href="tarifications.html" class="sec-header-cta">Accéder à <span class="phi-cta">Φ</span></a>
+</header>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb-sep">·</span>
+  <span>Le protocole Alice et Bob</span>
+</nav>
+
+<header class="page-header">
+  <div class="page-eyebrow">Le protocole</div>
+  <h1 class="page-title">Alice envoie. Bob signe.<br><em>La preuve existe.</em></h1>
+  <p class="page-lead">
+    Le détail pas à pas du protocole entre deux dispositifs Φ — de l'envoi chiffré jusqu'au certificat opposable, en passant par la lecture mesurée et la signature triade.
+  </p>
+</header>
+
+<!-- ═══ VUE D'ENSEMBLE ═══ -->
+<section class="section" id="section-01">
+  <div class="section-inner">
+    <div class="section-num">01 — Vue d'ensemble du protocole</div>
+    <h2 class="section-title">Huit actes. <em>Un seul récit probatoire.</em></h2>
+    <p class="section-lead">Chaque acte est inscrit simultanément dans deux journaux indépendants — celui d'Alice et celui de Bob. Aucune des deux parties ne peut réécrire l'histoire.</p>
+
+    <!-- DIAGRAMME PRINCIPAL : TIMELINE ALICE / RÉSEAU / BOB -->
+    <div class="schema">
+      <svg viewBox="0 0 860 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;margin:0 auto;">
+        <defs>
+          <linearGradient id="goldThread" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.4"/>
+            <stop offset="50%" stop-color="#c8a84b" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#c8a84b" stop-opacity="0.4"/>
+          </linearGradient>
+          <linearGradient id="dblThread" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.6"/>
+            <stop offset="50%" stop-color="#c8a84b" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#c8a84b" stop-opacity="0.6"/>
+          </linearGradient>
+          <radialGradient id="deviceHalo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.1"/>
+            <stop offset="100%" stop-color="#c8a84b" stop-opacity="0"/>
+          </radialGradient>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <marker id="arrGray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#6c7384" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+
+        <!-- Coins en L - décoration -->
+        <g stroke="#c8a84b" stroke-width="0.5" fill="none" opacity="0.45">
+          <path d="M 24 24 L 48 24 M 24 24 L 24 48"/><circle cx="48" cy="24" r="1" fill="#c8a84b" stroke="none"/>
+          <path d="M 836 24 L 812 24 M 836 24 L 836 48"/><circle cx="812" cy="24" r="1" fill="#c8a84b" stroke="none"/>
+          <path d="M 24 656 L 48 656 M 24 656 L 24 632"/><circle cx="48" cy="656" r="1" fill="#c8a84b" stroke="none"/>
+          <path d="M 836 656 L 812 656 M 836 656 L 836 632"/><circle cx="812" cy="656" r="1" fill="#c8a84b" stroke="none"/>
+        </g>
+
+        <!-- ALICE device -->
+        <g transform="translate(160,54)">
+          <circle r="52" fill="url(#deviceHalo)"/>
+          <circle r="38" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.9"/>
+          <circle r="33" fill="none" stroke="#0e1c35" stroke-width="0.35" opacity="0.5"/>
+          <g stroke="#0e1c35" stroke-width="0.55" opacity="0.75">
+            <line x1="0" y1="-38" x2="0" y2="-43"/>
+            <line x1="26.9" y1="-26.9" x2="30.4" y2="-30.4"/>
+            <line x1="38" y1="0" x2="43" y2="0"/>
+            <line x1="26.9" y1="26.9" x2="30.4" y2="30.4"/>
+            <line x1="0" y1="38" x2="0" y2="43"/>
+            <line x1="-26.9" y1="26.9" x2="-30.4" y2="30.4"/>
+            <line x1="-38" y1="0" x2="-43" y2="0"/>
+            <line x1="-26.9" y1="-26.9" x2="-30.4" y2="-30.4"/>
+          </g>
+          <circle r="28" fill="none" stroke="#c8a84b" stroke-width="0.85"/>
+          <circle cx="0" cy="-28" r="2" fill="#c8a84b"/>
+          <circle cx="0" cy="28" r="2" fill="#c8a84b"/>
+          <circle cx="-28" cy="0" r="2" fill="#c8a84b"/>
+          <circle cx="28" cy="0" r="2" fill="#c8a84b"/>
+          <text x="0" y="5" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" font-style="italic" font-weight="500" fill="#0e1c35">σ</text>
+          <text x="12" y="11" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8b6914">a</text>
+        </g>
+        <text x="160" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#0e1c35" font-weight="600" letter-spacing="3">ALICE</text>
+        <text x="160" y="138" text-anchor="middle" font-family="Playfair Display, serif" font-size="10" font-style="italic" fill="#6c7384">journal probatoire σa</text>
+
+        <!-- BOB device -->
+        <g transform="translate(700,54)">
+          <circle r="52" fill="url(#deviceHalo)"/>
+          <circle r="38" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.9"/>
+          <circle r="33" fill="none" stroke="#0e1c35" stroke-width="0.35" opacity="0.5"/>
+          <g stroke="#0e1c35" stroke-width="0.55" opacity="0.75">
+            <line x1="0" y1="-38" x2="0" y2="-43"/>
+            <line x1="26.9" y1="-26.9" x2="30.4" y2="-30.4"/>
+            <line x1="38" y1="0" x2="43" y2="0"/>
+            <line x1="26.9" y1="26.9" x2="30.4" y2="30.4"/>
+            <line x1="0" y1="38" x2="0" y2="43"/>
+            <line x1="-26.9" y1="26.9" x2="-30.4" y2="30.4"/>
+            <line x1="-38" y1="0" x2="-43" y2="0"/>
+            <line x1="-26.9" y1="-26.9" x2="-30.4" y2="-30.4"/>
+          </g>
+          <circle r="28" fill="none" stroke="#c8a84b" stroke-width="0.85"/>
+          <circle cx="0" cy="-28" r="2" fill="#c8a84b"/>
+          <circle cx="0" cy="28" r="2" fill="#c8a84b"/>
+          <circle cx="-28" cy="0" r="2" fill="#c8a84b"/>
+          <circle cx="28" cy="0" r="2" fill="#c8a84b"/>
+          <text x="0" y="5" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" font-style="italic" font-weight="500" fill="#0e1c35">σ</text>
+          <text x="12" y="11" font-family="IBM Plex Mono, monospace" font-size="9" fill="#8b6914">b</text>
+        </g>
+        <text x="700" y="122" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#0e1c35" font-weight="600" letter-spacing="3">BOB</text>
+        <text x="700" y="138" text-anchor="middle" font-family="Playfair Display, serif" font-size="10" font-style="italic" fill="#6c7384">journal probatoire σb</text>
+
+        <!-- RÉSEAU / Canal central -->
+        <g transform="translate(430,54)">
+          <rect x="-44" y="-22" width="88" height="44" rx="3" fill="#fafaf7" stroke="#6c7384" stroke-width="0.7" stroke-dasharray="3,2"/>
+          <text x="0" y="-3" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#6c7384" letter-spacing="2" font-weight="500">RÉSEAU</text>
+          <text x="0" y="10" text-anchor="middle" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#6c7384">chiffré · opaque</text>
+          <!-- Lock -->
+          <g transform="translate(34,0)">
+            <rect x="-4" y="-2" width="8" height="8" rx="1" fill="none" stroke="#6c7384" stroke-width="0.7"/>
+            <path d="M -2.5 -2 L -2.5 -4.5 a 2.5 2.5 0 0 1 5 0 L 2.5 -2" fill="none" stroke="#6c7384" stroke-width="0.7"/>
+          </g>
+        </g>
+
+        <!-- TIMELINES verticales -->
+        <line x1="160" y1="160" x2="160" y2="610" stroke="#0e1c35" stroke-width="0.6" opacity="0.25"/>
+        <line x1="700" y1="160" x2="700" y2="610" stroke="#0e1c35" stroke-width="0.6" opacity="0.25"/>
+        <line x1="430" y1="100" x2="430" y2="610" stroke="#6c7384" stroke-width="0.4" opacity="0.18" stroke-dasharray="3,4"/>
+
+        <!-- ─── ACTE 1 : DOC_SENT → ─── -->
+        <g transform="translate(0,195)">
+          <!-- Alice log entry -->
+          <rect x="50" y="-14" width="184" height="28" fill="rgba(200,168,75,0.06)" stroke="#c8a84b" stroke-width="0.8" rx="2"/>
+          <text x="62" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="600">#01</text>
+          <text x="86" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="500">DOC_SENT</text>
+          <text x="62" y="11" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.5">τ : 14:32:00</text>
+          <text x="222" y="11" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">h:8f3a…</text>
+          <!-- Arrow to Bob through network -->
+          <line x1="238" y1="0" x2="620" y2="0" stroke="#c8a84b" stroke-width="1.1" marker-end="url(#arr)"/>
+          <!-- Bob log entry -->
+          <rect x="626" y="-14" width="184" height="28" fill="rgba(200,168,75,0.06)" stroke="#c8a84b" stroke-width="0.8" rx="2"/>
+          <text x="638" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="600">#01</text>
+          <text x="662" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="500">DOC_RECV</text>
+          <text x="638" y="11" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.5">τ : 14:32:01</text>
+          <text x="798" y="11" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">h:8f3a…</text>
+          <!-- same hash label -->
+          <text x="430" y="-8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" opacity="0.7">enveloppe chiffrée</text>
+          <!-- Connector to timeline -->
+          <line x1="160" y1="-22" x2="160" y2="-14" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="160" cy="-22" r="2" fill="#c8a84b"/>
+          <line x1="700" y1="-22" x2="700" y2="-14" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="700" cy="-22" r="2" fill="#c8a84b"/>
+        </g>
+
+        <!-- ─── ACTE 2 : ACK_OPEN ← ─── -->
+        <g transform="translate(0,270)">
+          <rect x="626" y="-14" width="184" height="28" fill="rgba(200,168,75,0.06)" stroke="#c8a84b" stroke-width="0.8" rx="2"/>
+          <text x="638" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="600">#02</text>
+          <text x="662" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="500">DOC_OPEN</text>
+          <text x="638" y="11" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.5">τ : 14:33:12</text>
+          <text x="798" y="11" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">h:2c91…</text>
+          <line x1="620" y1="0" x2="238" y2="0" stroke="#c8a84b" stroke-width="0.9" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+          <rect x="50" y="-14" width="184" height="28" fill="rgba(200,168,75,0.06)" stroke="#c8a84b" stroke-width="0.8" rx="2"/>
+          <text x="62" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="600">#02</text>
+          <text x="86" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="500">ACK_OPEN</text>
+          <text x="62" y="11" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.5">τ : 14:33:12</text>
+          <text x="222" y="11" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">h:2c91…</text>
+          <text x="430" y="-8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" opacity="0.7">accusé d'ouverture</text>
+          <line x1="160" y1="-22" x2="160" y2="-14" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="700" y1="-22" x2="700" y2="-14" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+        </g>
+
+        <!-- LECTURE MESURÉE box (Bob) -->
+        <g transform="translate(0,330)">
+          <rect x="596" y="-20" width="240" height="40" fill="#fafaf7" stroke="#c8a84b" stroke-width="1" rx="3"/>
+          <rect x="596" y="-20" width="4" height="40" rx="1" fill="#c8a84b"/>
+          <text x="610" y="-3" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" letter-spacing="1.5" font-weight="600">LECTURE MESURÉE</text>
+          <text x="610" y="11" font-family="Playfair Display, serif" font-size="11" font-style="italic" fill="#0e1c35">Durée : 02:14 · mesure active</text>
+          <line x1="700" y1="-28" x2="700" y2="-20" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+        </g>
+
+        <!-- ─── ACTE 3 : ACK_READ ← ─── -->
+        <g transform="translate(0,400)">
+          <rect x="626" y="-14" width="184" height="28" fill="rgba(200,168,75,0.06)" stroke="#c8a84b" stroke-width="0.8" rx="2"/>
+          <text x="638" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="600">#03</text>
+          <text x="662" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="500">DOC_READ</text>
+          <text x="638" y="11" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.5">τ : 14:35:26</text>
+          <text x="798" y="11" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">h:e07d…</text>
+          <line x1="620" y1="0" x2="238" y2="0" stroke="#c8a84b" stroke-width="0.9" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+          <rect x="50" y="-14" width="184" height="28" fill="rgba(200,168,75,0.06)" stroke="#c8a84b" stroke-width="0.8" rx="2"/>
+          <text x="62" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="600">#03</text>
+          <text x="86" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="500">ACK_READ</text>
+          <text x="62" y="11" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.5">τ : 14:35:26</text>
+          <text x="222" y="11" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">h:e07d…</text>
+          <text x="430" y="-8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" opacity="0.7">fin de lecture · 02:14</text>
+          <line x1="160" y1="-22" x2="160" y2="-14" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+          <line x1="700" y1="-22" x2="700" y2="-14" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+        </g>
+
+        <!-- SIGNATURE TRIADE box (Bob) -->
+        <g transform="translate(0,460)">
+          <rect x="596" y="-20" width="240" height="40" fill="#fafaf7" stroke="#c8a84b" stroke-width="1" rx="3"/>
+          <rect x="596" y="-20" width="4" height="40" rx="1" fill="#c8a84b"/>
+          <text x="610" y="-3" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" letter-spacing="1.5" font-weight="600">SIGNATURE TRIADE</text>
+          <text x="610" y="11" font-family="Playfair Display, serif" font-size="11" font-style="italic" fill="#0e1c35">Signature · Mention · Biométrie</text>
+          <line x1="700" y1="-28" x2="700" y2="-20" stroke="#c8a84b" stroke-width="0.5" opacity="0.4"/>
+        </g>
+
+        <!-- ─── ACTE 4 : ACK_SIGN — double thread fort ─── -->
+        <g transform="translate(0,515)">
+          <rect x="626" y="-16" width="184" height="32" fill="rgba(200,168,75,0.14)" stroke="#c8a84b" stroke-width="1.4" rx="2"/>
+          <text x="638" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="700">#04</text>
+          <text x="662" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="700">DOC_SIGN</text>
+          <text x="638" y="13" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.7">τ : 14:38:44</text>
+          <text x="798" y="13" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914" font-weight="600">h:a4f2…</text>
+          <!-- Double golden thread -->
+          <path d="M 620 0 C 550 -14, 320 -14, 238 0" fill="none" stroke="url(#dblThread)" stroke-width="2.2" stroke-linecap="round" marker-end="url(#arr)"/>
+          <path d="M 620 0 C 550 14, 320 14, 238 0" fill="none" stroke="url(#dblThread)" stroke-width="2.2" stroke-linecap="round"/>
+          <rect x="50" y="-16" width="184" height="32" fill="rgba(200,168,75,0.14)" stroke="#c8a84b" stroke-width="1.4" rx="2"/>
+          <text x="62" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" font-weight="700">#04</text>
+          <text x="86" y="-1" font-family="IBM Plex Mono, monospace" font-size="8" fill="#0e1c35" font-weight="700">ACK_SIGN</text>
+          <text x="62" y="13" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" opacity="0.7">τ : 14:38:44</text>
+          <text x="222" y="13" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914" font-weight="600">h:a4f2…</text>
+          <text x="430" y="-22" text-anchor="middle" font-family="Playfair Display, serif" font-size="10" font-style="italic" fill="#8b6914">hashs entrelacés · même valeur G</text>
+          <line x1="160" y1="-24" x2="160" y2="-16" stroke="#c8a84b" stroke-width="0.7" opacity="0.6"/>
+          <circle cx="160" cy="-24" r="2.5" fill="#c8a84b"/>
+          <line x1="700" y1="-24" x2="700" y2="-16" stroke="#c8a84b" stroke-width="0.7" opacity="0.6"/>
+          <circle cx="700" cy="-24" r="2.5" fill="#c8a84b"/>
+        </g>
+
+        <!-- ─── CERT bilatéral ─── -->
+        <g transform="translate(0,595)">
+          <!-- Alice CERT -->
+          <rect x="50" y="-18" width="184" height="36" fill="#fafaf7" stroke="#5a8033" stroke-width="1.2" rx="3"/>
+          <text x="142" y="-2" text-anchor="middle" font-family="Playfair Display, serif" font-size="13" font-weight="500" fill="#0e1c35">Certificat <tspan font-style="italic" fill="#8b6914">Φ</tspan></text>
+          <text x="142" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#5a8033" letter-spacing="1.5" font-weight="600">DÉLIVRÉ · σa</text>
+          <line x1="160" y1="-26" x2="160" y2="-18" stroke="#5a8033" stroke-width="0.8" opacity="0.6"/>
+
+          <!-- Bob CERT -->
+          <rect x="626" y="-18" width="184" height="36" fill="#fafaf7" stroke="#5a8033" stroke-width="1.2" rx="3"/>
+          <text x="718" y="-2" text-anchor="middle" font-family="Playfair Display, serif" font-size="13" font-weight="500" fill="#0e1c35">Certificat <tspan font-style="italic" fill="#8b6914">Φ</tspan></text>
+          <text x="718" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#5a8033" letter-spacing="1.5" font-weight="600">DÉLIVRÉ · σb</text>
+          <line x1="700" y1="-26" x2="700" y2="-18" stroke="#5a8033" stroke-width="0.8" opacity="0.6"/>
+
+          <!-- Connector between certs -->
+          <line x1="238" y1="0" x2="622" y2="0" stroke="#5a8033" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.55"/>
+          <text x="430" y="-6" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#5a8033" letter-spacing="1.5" font-weight="600">SYMÉTRIE PROBATOIRE CONFIRMÉE</text>
+        </g>
+
+        <!-- LÉGENDE events -->
+        <g transform="translate(336,168)">
+          <text x="0" y="0" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" letter-spacing="1">— → flux chiffré (solid)</text>
+          <text x="0" y="12" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="1">- → accusé (tirets)</text>
+          <text x="0" y="24" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914" letter-spacing="1">═ → hashs entrelacés</text>
+        </g>
+      </svg>
+      <div class="schema-caption">Diagramme A · Protocole complet Alice / Bob — huit actes probatoires</div>
+    </div>
+
+    <div class="prose">
+      <p>Le protocole se déroule en <strong>quatre échanges</strong> — chacun inscrit simultanément dans les deux journaux. Les hashs sont identiques des deux côtés : c'est la preuve que les deux parties ont bien vécu le même événement, au même instant.</p>
+      <p>La signature finale (<em>ACK_SIGN / DOC_SIGN</em>) produit la même valeur G dans les deux enclaves. Toute divergence entre les journaux d'Alice et de Bob rend le certificat impossible à délivrer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 02 : ENVELOPPE CHIFFRÉE ═══ -->
+<section class="section section-soft" id="section-02">
+  <div class="section-inner">
+    <div class="section-num">02 — L'enveloppe chiffrée</div>
+    <h2 class="section-title">Le réseau voit <em>une enveloppe.</em><br>Pas un document.</h2>
+    <p class="section-lead">Le document voyage chiffré. Ni le serveur de messagerie, ni WhatsApp, ni AirDrop, ni aucun intermédiaire ne peut en lire le contenu. Le déchiffrement n'a lieu que dans l'enclave de Bob.</p>
+
+    <div class="schema">
+      <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;margin:0 auto;">
+        <defs>
+          <linearGradient id="envThread" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.6"/>
+            <stop offset="50%" stop-color="#c8a84b" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#c8a84b" stop-opacity="0.6"/>
+          </linearGradient>
+        </defs>
+        <!-- Alice device - small -->
+        <g transform="translate(120,130)">
+          <circle r="56" fill="rgba(200,168,75,0.05)"/>
+          <circle r="42" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.8"/>
+          <text x="0" y="4" text-anchor="middle" font-family="Playfair Display, serif" font-size="18" font-style="italic" font-weight="500" fill="#0e1c35">σ</text>
+          <text x="10" y="10" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">a</text>
+          <!-- Doc inside -->
+          <rect x="-14" y="-22" width="20" height="26" rx="1.5" fill="rgba(200,168,75,0.1)" stroke="#c8a84b" stroke-width="0.6"/>
+          <text x="-4" y="6" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="5" fill="#8b6914">PDF</text>
+        </g>
+        <text x="120" y="192" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#0e1c35" font-weight="600" letter-spacing="2">ALICE</text>
+        <text x="120" y="206" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-style="italic" fill="#6c7384">chiffre localement</text>
+
+        <!-- ENCRYPTION arrow -->
+        <g transform="translate(0,130)">
+          <line x1="168" y1="0" x2="230" y2="0" stroke="#c8a84b" stroke-width="1.5"/>
+          <!-- Lock symbol -->
+          <g transform="translate(200,0)">
+            <rect x="-8" y="-5" width="16" height="12" rx="1.5" fill="white" stroke="#c8a84b" stroke-width="1"/>
+            <path d="M -4 -5 L -4 -9 a 4 4 0 0 1 8 0 L 4 -5" fill="none" stroke="#c8a84b" stroke-width="1"/>
+            <circle cx="0" cy="1" r="1.5" fill="#c8a84b"/>
+          </g>
+          <text x="200" y="22" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#8b6914" letter-spacing="1.5">CHIFFREMENT</text>
+          <text x="200" y="33" text-anchor="middle" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#6c7384">ML-KEM-768</text>
+        </g>
+
+        <!-- ENCRYPTED ENVELOPE (traveling) -->
+        <g transform="translate(430,130)">
+          <rect x="-70" y="-35" width="140" height="70" rx="4" fill="#fafaf7" stroke="#6c7384" stroke-width="0.9"/>
+          <rect x="-66" y="-31" width="132" height="62" rx="3" fill="rgba(14,28,53,0.03)" stroke="none"/>
+          <!-- Envelope flap -->
+          <path d="M -70 -35 L 0 10 L 70 -35" fill="none" stroke="#6c7384" stroke-width="0.7"/>
+          <!-- Lock in center -->
+          <g transform="translate(0,8)">
+            <circle r="14" fill="rgba(200,168,75,0.08)" stroke="#c8a84b" stroke-width="0.8"/>
+            <rect x="-4" y="-2" width="8" height="10" rx="1" fill="none" stroke="#c8a84b" stroke-width="0.9"/>
+            <path d="M -3 -2 L -3 -5 a 3 3 0 0 1 6 0 L 3 -2" fill="none" stroke="#c8a84b" stroke-width="0.9"/>
+          </g>
+          <text x="0" y="-18" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6" fill="#6c7384" opacity="0.7">DESTINATAIRE · BOB</text>
+        </g>
+        <text x="430" y="192" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#6c7384" font-weight="600" letter-spacing="2">RÉSEAU</text>
+        <text x="430" y="206" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-style="italic" fill="#6c7384">contenu illisible · opaque</text>
+        <!-- "Does not see" labels -->
+        <text x="430" y="222" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#993333" opacity="0.65" letter-spacing="1">Mail · WhatsApp · AirDrop · GSM : illisible</text>
+
+        <!-- Transport arrows -->
+        <line x1="244" y1="130" x2="354" y2="130" stroke="#6c7384" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrGray)"/>
+        <line x1="510" y1="130" x2="620" y2="130" stroke="#6c7384" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrGray)"/>
+
+        <!-- Bob device -->
+        <g transform="translate(740,130)">
+          <circle r="56" fill="rgba(200,168,75,0.05)"/>
+          <circle r="42" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.8"/>
+          <text x="0" y="4" text-anchor="middle" font-family="Playfair Display, serif" font-size="18" font-style="italic" font-weight="500" fill="#0e1c35">σ</text>
+          <text x="10" y="10" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914">b</text>
+          <!-- Decrypted doc inside -->
+          <rect x="-14" y="-22" width="20" height="26" rx="1.5" fill="rgba(200,168,75,0.1)" stroke="#c8a84b" stroke-width="0.6"/>
+          <text x="-4" y="6" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="5" fill="#8b6914">PDF</text>
+        </g>
+        <text x="740" y="192" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#0e1c35" font-weight="600" letter-spacing="2">BOB</text>
+        <text x="740" y="206" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-style="italic" fill="#6c7384">déchiffre localement</text>
+
+        <!-- DECRYPTION arrow -->
+        <g transform="translate(0,130)">
+          <line x1="628" y1="0" x2="686" y2="0" stroke="#c8a84b" stroke-width="1.5" marker-end="url(#arr)"/>
+          <g transform="translate(656,0)">
+            <rect x="-8" y="-5" width="16" height="12" rx="1.5" fill="white" stroke="#5a8033" stroke-width="1"/>
+            <path d="M -4 -5 L -4 -9 a 4 4 0 0 1 8 0 L 4 -5" fill="none" stroke="#5a8033" stroke-width="1"/>
+            <circle cx="0" cy="1" r="1.5" fill="#5a8033"/>
+          </g>
+          <text x="656" y="22" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#5a8033" letter-spacing="1.5">DÉCHIFFREMENT</text>
+          <text x="656" y="33" text-anchor="middle" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#6c7384">dans l'enclave σb</text>
+        </g>
+
+        <!-- INLINE / OFFLINE labels -->
+        <text x="320" y="56" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" letter-spacing="2" font-weight="600">INLINE</text>
+        <text x="320" y="68" text-anchor="middle" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#6c7384">transport sur le réseau</text>
+        <text x="680" y="56" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" letter-spacing="2" font-weight="600">OFFLINE</text>
+        <text x="680" y="68" text-anchor="middle" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#6c7384">déchiffrement hors réseau</text>
+        <line x1="200" y1="80" x2="600" y2="80" stroke="#c8a84b" stroke-width="0.4" opacity="0.35" stroke-dasharray="2,4"/>
+        <line x1="600" y1="75" x2="600" y2="240" stroke="#c8a84b" stroke-width="0.4" opacity="0.35"/>
+        <text x="600" y="248" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914" opacity="0.6">Inline-Offline®</text>
+      </svg>
+      <div class="schema-caption">Diagramme B · L'enveloppe chiffrée — procédé Inline-Offline®</div>
+    </div>
+
+    <div class="encart">
+      <div class="encart-eyebrow">Inline-Offline® · Brevet déposé</div>
+      <h3>Le transport <strong>ne voit que l'enveloppe</strong>. Le contenu ne se révèle qu'à destination.</h3>
+      <p>Alice chiffre le document sur son dispositif avant envoi. L'enveloppe chiffrée transite par n'importe quel canal — messagerie, mail, AirDrop, SMS. Le canal ne sait pas ce qu'il transporte.</p>
+      <p>Bob reçoit l'enveloppe. Son dispositif Φ la déchiffre <strong>dans l'enclave matérielle</strong> — jamais sur un serveur, jamais en clair sur le réseau. La décision de déchiffrement appartient au silicium de Bob, pas au serveur de messagerie.</p>
+      <p class="encart-conclusion">C'est la différence fondamentale avec le chiffrement de bout-en-bout des messageries. Proton, Signal, WhatsApp chiffrent le transport — mais l'éditeur peut déchiffrer sur ses serveurs. Φ ne peut pas : le déchiffrement a lieu dans l'enclave du destinataire, hors d'atteinte de tout serveur.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 03 : LECTURE MESURÉE ═══ -->
+<section class="section" id="section-03">
+  <div class="section-inner">
+    <div class="section-num">03 — La lecture mesurée</div>
+    <h2 class="section-title">Bob lit. <em>Le temps est mesuré.</em><br>La preuve est déjà constituée.</h2>
+    <p class="section-lead">Avant de signer, Bob lit le document. La durée de lecture est mesurée par un compteur matériel, inscrite dans le journal de Bob, confirmée au journal d'Alice. C'est la première preuve que le signataire a eu connaissance du document.</p>
+    <ul class="bullets">
+      <li><strong>Durée objective</strong> — mesurée par le compteur matériel du dispositif, non falsifiable</li>
+      <li><strong>Durée minimale</strong> — paramétrable selon le type de document. En dessous du seuil, la signature est impossible</li>
+      <li><strong>Durée inscrite</strong> — elle figure dans le certificat final, vérifiable par tout expert</li>
+      <li><strong>Contre-preuve de précipitation</strong> — aucune partie ne peut prétendre avoir signé sans lire</li>
+    </ul>
+    <div class="pivot">
+      <div class="pivot-flourish"><svg viewBox="0 0 120 8" width="120" height="8"><line x1="0" y1="4" x2="50" y2="4" stroke="#c8a84b" stroke-width="0.6" opacity="0.6"/><circle cx="60" cy="4" r="2" fill="#c8a84b"/><line x1="70" y1="4" x2="120" y2="4" stroke="#c8a84b" stroke-width="0.6" opacity="0.6"/></svg></div>
+      <p>Même les <em>Conditions Générales d'Utilisation</em> de Φ lui-même sont lues sous minutage — première démonstration du procédé dès l'installation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 04 : CERTIFICAT ═══ -->
+<!-- ═══ 04 : VÉRIFICATEUR ═══ -->
+<section class="section" id="section-04">
+  <div class="section-inner">
+    <div class="section-num">04 — Le vérificateur déterministe</div>
+    <h2 class="section-title">Le certificat <em>n'est pas automatique.</em><br>Le vérificateur statue.</h2>
+    <p class="section-lead">Avant toute délivrance du certificat, un vérificateur déterministe analyse la cohérence entre quatre sources indépendantes. Aucune intervention discrétionnaire. Si les journaux divergent — aucun certificat.</p>
+
+    <div class="schema">
+      <svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:780px;height:auto;display:block;margin:0 auto;">
+        <defs>
+          <radialGradient id="verifHaloAB" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#c8a84b" stop-opacity="0"/>
+          </radialGradient>
+          <marker id="arrV" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#5a8033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+          <marker id="arrR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#993333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+
+        <!-- Corner marks -->
+        <g stroke="#c8a84b" stroke-width="0.5" fill="none" opacity="0.55">
+          <path d="M 32 32 L 56 32 M 32 32 L 32 56"/><circle cx="56" cy="32" r="1.2" fill="#c8a84b" stroke="none"/>
+          <path d="M 728 32 L 704 32 M 728 32 L 728 56"/><circle cx="704" cy="32" r="1.2" fill="#c8a84b" stroke="none"/>
+          <path d="M 32 448 L 56 448 M 32 448 L 32 424"/><circle cx="56" cy="448" r="1.2" fill="#c8a84b" stroke="none"/>
+          <path d="M 728 448 L 704 448 M 728 448 L 728 424"/><circle cx="704" cy="448" r="1.2" fill="#c8a84b" stroke="none"/>
+        </g>
+
+        <text x="380" y="58" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8b6914" letter-spacing="3.5" font-weight="500">ANALYSE DÉTERMINISTE DE COHÉRENCE</text>
+        <line x1="180" y1="72" x2="580" y2="72" stroke="#c8a84b" stroke-width="0.4" opacity="0.5"/>
+
+        <!-- Source 1: Journal Alice -->
+        <g transform="translate(110,145)">
+          <circle r="40" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.9"/>
+          <circle r="35" fill="none" stroke="#0e1c35" stroke-width="0.3" opacity="0.5"/>
+          <g stroke="#0e1c35" stroke-width="0.5" opacity="0.7">
+            <line x1="0" y1="-40" x2="0" y2="-44"/><line x1="0" y1="40" x2="0" y2="44"/>
+            <line x1="-40" y1="0" x2="-44" y2="0"/><line x1="40" y1="0" x2="44" y2="0"/>
+          </g>
+          <text x="0" y="-4" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" letter-spacing="1" font-weight="600">JOURNAL</text>
+          <text x="0" y="8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914" letter-spacing="1" font-weight="600">ALICE σa</text>
+          <circle cx="0" cy="-35" r="1.4" fill="#c8a84b"/>
+        </g>
+        <text x="110" y="206" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-style="italic" fill="#6c7384">données locales Alice</text>
+
+        <!-- Source 2: Journal Bob -->
+        <g transform="translate(110,268)">
+          <circle r="40" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.9"/>
+          <circle r="35" fill="none" stroke="#0e1c35" stroke-width="0.3" opacity="0.5"/>
+          <g stroke="#0e1c35" stroke-width="0.5" opacity="0.7">
+            <line x1="0" y1="-40" x2="0" y2="-44"/><line x1="0" y1="40" x2="0" y2="44"/>
+            <line x1="-40" y1="0" x2="-44" y2="0"/><line x1="40" y1="0" x2="44" y2="0"/>
+          </g>
+          <text x="0" y="-4" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" letter-spacing="1" font-weight="600">JOURNAL</text>
+          <text x="0" y="8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#8b6914" letter-spacing="1" font-weight="600">BOB σb</text>
+          <circle cx="0" cy="-35" r="1.4" fill="#c8a84b"/>
+        </g>
+        <text x="110" y="330" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-style="italic" fill="#6c7384">données reçues de Bob</text>
+
+        <!-- Source 3: Canal externe -->
+        <g transform="translate(110,385)">
+          <circle r="40" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.9"/>
+          <circle r="35" fill="none" stroke="#0e1c35" stroke-width="0.3" opacity="0.5"/>
+          <g stroke="#0e1c35" stroke-width="0.5" opacity="0.7">
+            <line x1="0" y1="-40" x2="0" y2="-44"/><line x1="0" y1="40" x2="0" y2="44"/>
+            <line x1="-40" y1="0" x2="-44" y2="0"/><line x1="40" y1="0" x2="44" y2="0"/>
+          </g>
+          <text x="0" y="-4" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" letter-spacing="1" font-weight="600">CANAL</text>
+          <text x="0" y="8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" letter-spacing="1" font-weight="600">EXTERNE</text>
+          <circle cx="0" cy="-35" r="1.4" fill="#c8a84b"/>
+        </g>
+        <text x="110" y="445" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-style="italic" fill="#6c7384">traces indépendantes</text>
+
+        <!-- Source 4: Compteur matériel -->
+        <g transform="translate(370,420)">
+          <circle r="40" fill="#fafaf7" stroke="#0e1c35" stroke-width="0.9"/>
+          <circle r="35" fill="none" stroke="#0e1c35" stroke-width="0.3" opacity="0.5"/>
+          <g stroke="#0e1c35" stroke-width="0.5" opacity="0.7">
+            <line x1="0" y1="-40" x2="0" y2="-44"/><line x1="0" y1="40" x2="0" y2="44"/>
+            <line x1="-40" y1="0" x2="-44" y2="0"/><line x1="40" y1="0" x2="44" y2="0"/>
+          </g>
+          <text x="0" y="-4" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" letter-spacing="1" font-weight="600">COMPTEUR</text>
+          <text x="0" y="8" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#0e1c35" letter-spacing="1" font-weight="600">MATÉRIEL τ</text>
+          <circle cx="0" cy="-35" r="1.4" fill="#c8a84b"/>
+        </g>
+
+        <!-- Arrows from sources to verifier -->
+        <g stroke="#c8a84b" stroke-width="0.75" fill="none" opacity="0.7" marker-end="url(#arrV)">
+          <path d="M 152 145 Q 250 210, 330 252"/>
+          <path d="M 152 268 Q 250 262, 330 258"/>
+          <path d="M 152 380 Q 250 320, 330 272"/>
+          <path d="M 370 380 Q 370 330, 370 320"/>
+        </g>
+
+        <!-- VÉRIFICATEUR (center) -->
+        <g transform="translate(370,270)">
+          <circle r="62" fill="url(#verifHaloAB)"/>
+          <circle r="46" fill="#fafaf7" stroke="#0e1c35" stroke-width="1.1"/>
+          <circle r="42" fill="none" stroke="#0e1c35" stroke-width="0.4" opacity="0.5"/>
+          <g stroke="#0e1c35" stroke-width="0.6" opacity="0.7">
+            <line x1="0" y1="-46" x2="0" y2="-51"/>
+            <line x1="32.5" y1="-32.5" x2="36" y2="-36"/>
+            <line x1="46" y1="0" x2="51" y2="0"/>
+            <line x1="32.5" y1="32.5" x2="36" y2="36"/>
+            <line x1="0" y1="46" x2="0" y2="51"/>
+            <line x1="-32.5" y1="32.5" x2="-36" y2="36"/>
+            <line x1="-46" y1="0" x2="-51" y2="0"/>
+            <line x1="-32.5" y1="-32.5" x2="-36" y2="-36"/>
+          </g>
+          <circle r="32" fill="none" stroke="#c8a84b" stroke-width="0.8"/>
+          <circle cx="0" cy="-32" r="1.4" fill="#c8a84b"/>
+          <circle cx="0" cy="32" r="1.4" fill="#c8a84b"/>
+          <circle cx="-32" cy="0" r="1.4" fill="#c8a84b"/>
+          <circle cx="32" cy="0" r="1.4" fill="#c8a84b"/>
+          <text x="0" y="-5" text-anchor="middle" font-family="Playfair Display, serif" font-size="12" font-style="italic" fill="#0e1c35">vérificateur</text>
+          <text x="0" y="9" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.5" fill="#8b6914" letter-spacing="2">DÉTERMINISTE</text>
+          <text x="0" y="22" text-anchor="middle" font-family="Playfair Display, serif" font-size="9" font-style="italic" fill="#6c7384">analyse de cohérence</text>
+        </g>
+
+        <!-- IF COHERENT → CERTIFICATE (both sides) -->
+        <g transform="translate(600,195)">
+          <rect x="-66" y="-26" width="132" height="52" fill="#fafaf7" stroke="#5a8033" stroke-width="1.2" rx="3"/>
+          <text x="0" y="-4" text-anchor="middle" font-family="Playfair Display, serif" font-size="13" font-weight="500" fill="#0e1c35">Certificat <tspan font-style="italic" fill="#8b6914">Φ</tspan></text>
+          <text x="0" y="12" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#5a8033" letter-spacing="1.5" font-weight="600">ALICE · BOB</text>
+          <text x="0" y="23" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.5" fill="#5a8033" letter-spacing="1" font-weight="500">DÉLIVRÉ DES DEUX CÔTÉS</text>
+        </g>
+        <!-- Arrow to certificate -->
+        <line x1="420" y1="255" x2="530" y2="210" stroke="#5a8033" stroke-width="1.1" marker-end="url(#arrG)" opacity="0.9"/>
+        <text x="490" y="222" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#5a8033" letter-spacing="1.5" font-weight="600">SI COHÉRENT</text>
+
+        <!-- IF INCOHERENT → NO CERTIFICATE -->
+        <g transform="translate(600,355)">
+          <rect x="-66" y="-22" width="132" height="44" fill="rgba(153,51,51,0.04)" stroke="#993333" stroke-width="0.9" rx="3" stroke-dasharray="3,2"/>
+          <text x="0" y="-3" text-anchor="middle" font-family="Playfair Display, serif" font-size="12" font-style="italic" fill="#993333" opacity="0.9">aucun certificat</text>
+          <text x="0" y="13" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="6.5" fill="#993333" letter-spacing="1.5" opacity="0.8">JOURNAUX DIVERGENTS</text>
+        </g>
+        <!-- Arrow to no-certificate -->
+        <line x1="420" y1="284" x2="530" y2="340" stroke="#993333" stroke-width="0.8" stroke-dasharray="4,3" marker-end="url(#arrR)" opacity="0.65"/>
+        <text x="490" y="338" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" fill="#993333" letter-spacing="1.5" opacity="0.8">SI INCOHÉRENT</text>
+
+        <!-- Bottom label -->
+        <text x="370" y="470" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="1.5">règles fixes · reproductibles · sans intervention discrétionnaire</text>
+      </svg>
+      <div class="schema-caption">Schéma C · Analyse déterministe — quatre sources → vérificateur → certificat bilatéral ou refus</div>
+    </div>
+
+    <div class="prose">
+      <p>Le vérificateur analyse quatre sources <strong>strictement indépendantes</strong> : le journal d'Alice, le journal de Bob, les traces du canal de communication, et le compteur matériel τ — ancré dans le silicium des deux dispositifs.</p>
+      <p>Si les hashs des journaux concordent, si les horodatages sont cohérents, si les entrées sont dans le bon ordre irréversible — le certificat est délivré <em>simultanément des deux côtés</em>. Sinon, <strong>aucun certificat n'est émis</strong>, d'aucun côté. Il n'existe pas de certificat partiel.</p>
+    </div>
+
+    <div class="encart">
+      <div class="encart-eyebrow">Ce que le vérificateur détecte</div>
+      <h3>Toute tentative de manipulation <strong>produit une incohérence détectable</strong>.</h3>
+      <p><strong>Antidatage.</strong> Le compteur matériel strictement croissant rend impossible l'insertion d'une entrée avec une date antérieure. Une entrée antidatée produit un compteur incohérent — le vérificateur rejette.</p>
+      <p><strong>Réécriture du journal.</strong> Chaque entrée est chaînée à la précédente par un hash. Modifier une entrée casse toute la chaîne — divergence immédiate avec le journal de l'autre partie.</p>
+      <p><strong>Contestation unilatérale.</strong> Bob ne peut pas prétendre ne pas avoir signé si son journal porte DOC_SIGN avec le même hash qu'Alice. Alice ne peut pas prétendre n'avoir jamais envoyé si son journal porte DOC_SENT avec le même hash que le journal de Bob.</p>
+      <p class="encart-conclusion">Le juge n'arbitre pas entre deux versions.<br>Il lit un seul certificat — la même preuve dans les deux journaux.</p>
+    </div>
+
+    <div class="pivot">
+      <div class="pivot-flourish"><svg viewBox="0 0 120 8" width="120" height="8"><line x1="0" y1="4" x2="50" y2="4" stroke="#c8a84b" stroke-width="0.6" opacity="0.6"/><circle cx="60" cy="4" r="2" fill="#c8a84b"/><line x1="70" y1="4" x2="120" y2="4" stroke="#c8a84b" stroke-width="0.6" opacity="0.6"/></svg></div>
+      <p>La preuve n'est pas produite — elle est <em>constatée</em>.<br>Par un vérificateur que personne ne contrôle.</p>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:.7rem;color:var(--ink-muted);text-align:center;margin-top:36px;line-height:1.7;letter-spacing:.04em;">Procédé objet du brevet divisionnaire — revendications R1 (analyse déterministe de cohérence) et R1bis (attestation dérivée à divulgation nulle de connaissance).</p>
+  </div>
+</section>
+
+<!-- ═══ 05 : CERTIFICAT ═══ -->
+<section class="section section-soft" id="section-04">
+  <div class="section-inner">
+    <div class="section-num">05 — Le certificat bilatéral</div>
+    <h2 class="section-title">Un certificat <em>pour chaque partie.</em><br>Un seul récit.</h2>
+    <p class="section-lead">À l'issue du protocole, Alice et Bob détiennent chacun leur certificat Φ. Les deux sont identiques dans leur structure, symétriques dans leurs preuves, et se contredisent mutuellement s'ils sont altérés.</p>
+
+    <div class="schema">
+      <svg viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:860px;height:auto;display:block;margin:0 auto;">
+        <defs>
+          <radialGradient id="certHalo" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#c8a84b" stop-opacity="0.12"/>
+            <stop offset="100%" stop-color="#c8a84b" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- CERT ALICE -->
+        <g transform="translate(190,170)">
+          <circle r="110" fill="url(#certHalo)"/>
+          <rect x="-120" y="-118" width="240" height="236" rx="6" fill="#fafaf7" stroke="#5a8033" stroke-width="1.2"/>
+          <rect x="-116" y="-114" width="232" height="228" rx="4" fill="none" stroke="#5a8033" stroke-width="0.4" opacity="0.5"/>
+          <!-- Corner marks -->
+          <g stroke="#c8a84b" stroke-width="0.6" fill="none" opacity="0.7">
+            <path d="M -108 -106 L -108 -112 L -102 -112"/>
+            <path d="M 108 -106 L 108 -112 L 102 -112"/>
+            <path d="M -108 106 L -108 112 L -102 112"/>
+            <path d="M 108 106 L 108 112 L 102 112"/>
+          </g>
+          <!-- Check -->
+          <circle cx="0" cy="-82" r="18" fill="rgba(90,128,51,0.1)" stroke="#5a8033" stroke-width="1"/>
+          <path d="M -8 -82 L -2 -76 L 10 -88" fill="none" stroke="#5a8033" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Title -->
+          <text x="0" y="-48" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" letter-spacing="3" font-weight="600">CERTIFICAT Φ</text>
+          <line x1="-80" y1="-38" x2="80" y2="-38" stroke="#c8a84b" stroke-width="0.6"/>
+          <!-- Phi Sigma a -->
+          <text x="0" y="-18" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" font-style="italic" font-weight="500" fill="#0e1c35">Φ</text>
+          <text x="14" y="-10" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8b6914">σa</text>
+          <!-- Data -->
+          <text x="-104" y="8" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Expéditeur</text>
+          <text x="104" y="8" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#0e1c35">Alice ✓ Φ</text>
+          <text x="-104" y="22" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Destinataire</text>
+          <text x="104" y="22" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#0e1c35">Bob ✓ Φ</text>
+          <line x1="-104" y1="30" x2="104" y2="30" stroke="#c8a84b" stroke-width="0.3" opacity="0.5"/>
+          <text x="-104" y="44" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Lecture mesurée</text>
+          <text x="104" y="44" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#0e1c35">02:14</text>
+          <text x="-104" y="58" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Signature</text>
+          <text x="104" y="58" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#5a8033">✓</text>
+          <text x="-104" y="72" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Mention</text>
+          <text x="104" y="72" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#5a8033">✓</text>
+          <text x="-104" y="86" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Biométrie</text>
+          <text x="104" y="86" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#5a8033">✓</text>
+          <line x1="-104" y1="94" x2="104" y2="94" stroke="#c8a84b" stroke-width="0.3" opacity="0.5"/>
+          <text x="-104" y="108" font-family="IBM Plex Mono, monospace" font-size="6.5" fill="#8b6914" opacity="0.7" letter-spacing="0.5">h: a4f2c9e1b83d7f…</text>
+          <text x="0" y="114" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="5.5" fill="#6c7384" letter-spacing="0.5">Réf. Φ-2026-05-10-A7F3</text>
+        </g>
+
+        <!-- CERT BOB -->
+        <g transform="translate(670,170)">
+          <circle r="110" fill="url(#certHalo)"/>
+          <rect x="-120" y="-118" width="240" height="236" rx="6" fill="#fafaf7" stroke="#5a8033" stroke-width="1.2"/>
+          <rect x="-116" y="-114" width="232" height="228" rx="4" fill="none" stroke="#5a8033" stroke-width="0.4" opacity="0.5"/>
+          <g stroke="#c8a84b" stroke-width="0.6" fill="none" opacity="0.7">
+            <path d="M -108 -106 L -108 -112 L -102 -112"/>
+            <path d="M 108 -106 L 108 -112 L 102 -112"/>
+            <path d="M -108 106 L -108 112 L -102 112"/>
+            <path d="M 108 106 L 108 112 L 102 112"/>
+          </g>
+          <circle cx="0" cy="-82" r="18" fill="rgba(90,128,51,0.1)" stroke="#5a8033" stroke-width="1"/>
+          <path d="M -8 -82 L -2 -76 L 10 -88" fill="none" stroke="#5a8033" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="0" y="-48" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="8" fill="#8b6914" letter-spacing="3" font-weight="600">CERTIFICAT Φ</text>
+          <line x1="-80" y1="-38" x2="80" y2="-38" stroke="#c8a84b" stroke-width="0.6"/>
+          <text x="0" y="-18" text-anchor="middle" font-family="Playfair Display, serif" font-size="22" font-style="italic" font-weight="500" fill="#0e1c35">Φ</text>
+          <text x="14" y="-10" font-family="IBM Plex Mono, monospace" font-size="10" fill="#8b6914">σb</text>
+          <text x="-104" y="8" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Expéditeur</text>
+          <text x="104" y="8" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#0e1c35">Alice ✓ Φ</text>
+          <text x="-104" y="22" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Destinataire</text>
+          <text x="104" y="22" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#0e1c35">Bob ✓ Φ</text>
+          <line x1="-104" y1="30" x2="104" y2="30" stroke="#c8a84b" stroke-width="0.3" opacity="0.5"/>
+          <text x="-104" y="44" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Lecture mesurée</text>
+          <text x="104" y="44" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#0e1c35">02:14</text>
+          <text x="-104" y="58" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Signature</text>
+          <text x="104" y="58" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#5a8033">✓</text>
+          <text x="-104" y="72" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Mention</text>
+          <text x="104" y="72" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#5a8033">✓</text>
+          <text x="-104" y="86" font-family="IBM Plex Mono, monospace" font-size="7" fill="#6c7384" letter-spacing="0.5">Biométrie</text>
+          <text x="104" y="86" text-anchor="end" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#5a8033">✓</text>
+          <line x1="-104" y1="94" x2="104" y2="94" stroke="#c8a84b" stroke-width="0.3" opacity="0.5"/>
+          <text x="-104" y="108" font-family="IBM Plex Mono, monospace" font-size="6.5" fill="#8b6914" opacity="0.7" letter-spacing="0.5">h: a4f2c9e1b83d7f…</text>
+          <text x="0" y="114" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="5.5" fill="#6c7384" letter-spacing="0.5">Réf. Φ-2026-05-10-A7F3</text>
+        </g>
+
+        <!-- Connector between certs -->
+        <g transform="translate(0,170)">
+          <line x1="314" y1="0" x2="546" y2="0" stroke="#5a8033" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.65"/>
+          <g transform="translate(430,0)">
+            <rect x="-60" y="-13" width="120" height="26" fill="#fafaf7" stroke="#5a8033" stroke-width="0.8" rx="3"/>
+            <text x="0" y="-1" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="#5a8033" letter-spacing="1.5" font-weight="600">MÊME HASH</text>
+            <text x="0" y="10" text-anchor="middle" font-family="Playfair Display, serif" font-size="8" font-style="italic" fill="#6c7384">symétrie confirmée</text>
+          </g>
+        </g>
+
+        <!-- Labels -->
+        <text x="190" y="310" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#5a8033" letter-spacing="2" font-weight="600">ALICE DÉTIENT</text>
+        <text x="670" y="310" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" fill="#5a8033" letter-spacing="2" font-weight="600">BOB DÉTIENT</text>
+        <text x="430" y="330" text-anchor="middle" font-family="Playfair Display, serif" font-size="10" font-style="italic" fill="#6c7384">vérifiable par tout expert ou juge · sans tiers de confiance</text>
+      </svg>
+      <div class="schema-caption">Diagramme C · Certificats symétriques — Alice et Bob</div>
+    </div>
+
+    <div class="prose">
+      <p>Le hash <em>a4f2…</em> apparaît dans les deux certificats. C'est la même valeur G, calculée dans deux enclaves distinctes, sur la base des mêmes intrants. Toute tentative d'altération d'un certificat produit un hash divergent — et la preuve s'effondre d'elle-même, sans qu'un tiers ait besoin d'arbitrer.</p>
+    </div>
+    <div class="pivot" style="margin-top:40px">
+      <div class="pivot-flourish"><svg viewBox="0 0 120 8" width="120" height="8"><line x1="0" y1="4" x2="50" y2="4" stroke="#c8a84b" stroke-width="0.6" opacity="0.6"/><circle cx="60" cy="4" r="2" fill="#c8a84b"/><line x1="70" y1="4" x2="120" y2="4" stroke="#c8a84b" stroke-width="0.6" opacity="0.6"/></svg></div>
+      <p>La contestation unilatérale est <em>structurellement impossible</em>.<br>Les deux journaux se contredisent mutuellement.</p>
+    </div>
+    <p style="font-family:var(--font-mono);font-size:.7rem;color:var(--ink-muted);text-align:center;margin-top:36px;line-height:1.7;letter-spacing:.04em;">Propriété objet du brevet <strong style="color:var(--ink)">FR 2605317</strong> — symétrie probatoire et impossibilité de contestation unilatérale.</p>
+  </div>
+</section>
+
+<!-- POUR EN SAVOIR PLUS -->
+<section style="background:var(--paper-soft);padding:80px 40px;border-top:1px solid var(--rule);">
+  <div style="max-width:880px;margin:0 auto;text-align:center;">
+    <div style="font-family:var(--font-mono);font-size:.7rem;color:var(--gold-deep);letter-spacing:.42em;text-transform:uppercase;margin-bottom:22px;font-weight:600">Pour aller plus loin</div>
+    <h2 style="font-family:var(--font-display);font-size:1.8rem;color:var(--navy);margin:0 0 40px;font-weight:500;">Approfondir <em style="font-style:italic">le procédé.</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:880px;margin:0 auto;">
+      <div style="text-align:left;padding:22px;background:var(--paper);border:1px solid var(--rule);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--gold-deep);letter-spacing:.32em;text-transform:uppercase;margin-bottom:10px;font-weight:600">Architecture</div>
+        <div style="font-family:var(--font-display);font-size:1.08rem;color:var(--navy);margin-bottom:12px;font-weight:500;line-height:1.4">La mécanique probatoire</div>
+        <div style="font-family:var(--font-sans);font-size:.88rem;color:var(--ink-muted);line-height:1.6;font-weight:300;">Les cinq étapes du procédé — en détail technique complet.</div>
+        <a href="la-mecanique-probatoire.html" style="color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold);font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:inline-block;margin-top:12px;padding-bottom:2px;">Lire →</a>
+      </div>
+      <div style="text-align:left;padding:22px;background:var(--paper);border:1px solid var(--rule);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--gold-deep);letter-spacing:.32em;text-transform:uppercase;margin-bottom:10px;font-weight:600">Cryptographie</div>
+        <div style="font-family:var(--font-display);font-size:1.08rem;color:var(--navy);margin-bottom:12px;font-weight:500;line-height:1.4">Résistance quantique</div>
+        <div style="font-family:var(--font-sans);font-size:.88rem;color:var(--ink-muted);line-height:1.6;font-weight:300;">ML-DSA-65, ML-KEM-768 — l'architecture post-quantique de Φ.</div>
+        <a href="resistance-quantique.html" style="color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold);font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:inline-block;margin-top:12px;padding-bottom:2px;">Lire →</a>
+      </div>
+      <div style="text-align:left;padding:22px;background:var(--paper);border:1px solid var(--rule);border-radius:4px;">
+        <div style="font-family:var(--font-mono);font-size:.65rem;color:var(--gold-deep);letter-spacing:.32em;text-transform:uppercase;margin-bottom:10px;font-weight:600">Droit</div>
+        <div style="font-family:var(--font-display);font-size:1.08rem;color:var(--navy);margin-bottom:12px;font-weight:500;line-height:1.4">Conformité juridique</div>
+        <div style="font-family:var(--font-sans);font-size:.88rem;color:var(--ink-muted);line-height:1.6;font-weight:300;">Articles 1366 et 1367 du Code civil, eIDAS 2 — la validité en droit.</div>
+        <a href="conformite.html" style="color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold);font-family:var(--font-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;display:inline-block;margin-top:12px;padding-bottom:2px;">Lire →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="nav-context">
+  <div class="nav-context-inner">
+    <a href="la-mecanique-probatoire.html">← La mécanique probatoire</a>
+    <a href="tarifications.html" class="cta-primary">Accéder à <em style="font-style:italic;color:var(--gold-deep)">Φ</em> →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature mathématique</div>
+      <div class="footer-baseline-2">de votre vie numérique</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="protocole-alice-bob.html">Le protocole Alice et Bob</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="vos-suggestions.html">Évaluer</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>AION ASEMANTIX</strong> · Lyon, France · asemantix@proton.me<br>
+      FR 2604755 · FR 2605317 · Brevet divisionnaire en cours<br>
+      © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
