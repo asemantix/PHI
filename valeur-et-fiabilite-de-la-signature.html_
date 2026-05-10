@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valeur et fiabilité de la signature Φ — Documentation juridique · AION ASEMANTIX</title>
+<meta name="description" content="Documentation juridique et technique de la signature Φ par AION ASEMANTIX. Valeur probante, fiabilité du procédé, acte de signature, preuve autonome. Conforme eIDAS art. 26 et articles 1366–1367 du Code civil.">
+<meta name="keywords" content="valeur probante signature électronique, fiabilité signature Phi, preuve autonome sans tiers, eIDAS article 26, code civil 1366 1367, signature post-quantique probante, AION ASEMANTIX, Inline-Offline, brevet FR 2605317">
+<meta name="robots" content="index, follow">
+<meta name="author" content="AION ASEMANTIX">
+<link rel="canonical" href="https://phi-signature.fr/valeur-et-fiabilite-de-la-signature.html">
+<meta name="theme-color" content="#0e1c35">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/valeur-et-fiabilite-de-la-signature.html">
+<meta property="og:site_name" content="Φ — AION ASEMANTIX">
+<meta property="og:title" content="Valeur et fiabilité de la signature Φ — Documentation juridique">
+<meta property="og:description" content="Valeur probante, fiabilité du procédé, acte de signature, preuve autonome. Conforme eIDAS art. 26 et articles 1366–1367 du Code civil.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@asemantix">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#1a2942;
+  --gold:#c8a84b;--gold-deep:#8b6914;--gold-soft:#e2c87a;
+  --ink:#0e1c35;--ink-muted:#4a5a73;--ink-faded:#8a96a8;
+  --paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;
+  --rule:#e6e3dc;
+  --font-d:"Playfair Display",Georgia,serif;
+  --font-m:"IBM Plex Mono",Consolas,monospace;
+  --font-s:"IBM Plex Sans",-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper-soft);color:var(--ink);font-family:var(--font-s);font-weight:300;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+nav{position:sticky;top:0;left:0;right:0;z-index:100;background:var(--paper);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;border-bottom:1px solid var(--rule)}
+.nav-brand{font-family:var(--font-d);font-size:2rem;font-style:italic;color:var(--gold-deep);font-weight:500;text-decoration:none;line-height:1}
+.nav-back{font-family:var(--font-m);font-size:.68rem;color:var(--gold-deep);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
+.nav-back:hover{color:var(--navy)}
+.nav-cta{background:var(--navy);color:var(--paper);text-decoration:none;padding:10px 20px;font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s}
+.nav-cta:hover{background:var(--navy-deep)}
+.nav-cta .phi{font-family:var(--font-d);font-style:italic;font-size:.9rem;margin-left:4px;letter-spacing:0;color:var(--gold-soft)}
+@media(max-width:720px){nav{padding:0 24px}.nav-cta{display:none}}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:960px;margin:0 auto;padding:20px 48px 0;font-family:var(--font-m);font-size:.62rem;color:var(--ink-faded);letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+.breadcrumb a{color:var(--gold-deep);text-decoration:none}
+.breadcrumb a:hover{color:var(--navy)}
+.breadcrumb-sep{margin:0 10px;opacity:.5;color:var(--gold)}
+@media(max-width:720px){.breadcrumb{padding:16px 24px 0}}
+
+/* HERO */
+.page-hero{background:var(--navy);padding:80px 48px 72px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.015) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.page-hero-inner{position:relative;z-index:2}
+.page-hero-label{font-family:var(--font-m);font-size:.68rem;color:rgba(200,168,75,.55);letter-spacing:.38em;text-transform:uppercase;margin-bottom:22px}
+.page-hero-phi{font-family:var(--font-d);font-style:italic;font-size:4rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:20px}
+.page-hero-title{font-family:var(--font-d);font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:400;color:var(--paper);line-height:1.2;margin-bottom:16px;letter-spacing:-.01em}
+.page-hero-sub{font-family:var(--font-d);font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.45);max-width:560px;margin:0 auto}
+
+/* CONTENT */
+.content{max-width:880px;margin:0 auto;padding:80px 48px}
+@media(max-width:720px){.content{padding:48px 24px}}
+
+/* INTRO BLOCK */
+.intro-block{background:var(--paper);border-left:3px solid var(--gold);padding:32px 40px;margin-bottom:64px;border:.5px solid var(--rule);border-left-width:3px}
+.intro-block p{font-family:var(--font-d);font-size:1.15rem;color:var(--navy);line-height:1.85;font-weight:400}
+
+/* SECTION */
+.sec-block{margin-bottom:60px}
+.sec-num{font-family:var(--font-m);font-size:.65rem;color:var(--gold-deep);letter-spacing:.28em;margin-bottom:10px;font-weight:600;text-transform:uppercase}
+.sec-title{font-family:var(--font-d);font-size:1.7rem;font-weight:400;color:var(--navy);margin-bottom:18px;line-height:1.25;letter-spacing:-.01em}
+.sec-title em{font-style:italic;color:var(--gold-deep)}
+.sec-body{font-family:var(--font-s);font-size:.95rem;color:var(--ink-muted);line-height:1.85;margin-bottom:18px;font-weight:300}
+.sec-divider{border:none;border-top:1px solid var(--rule);margin:56px 0}
+
+/* LISTE */
+.elegant-list{list-style:none;padding:0;margin:16px 0}
+.elegant-list li{font-family:var(--font-m);font-size:.8rem;color:var(--ink-muted);padding:10px 0;border-bottom:1px solid var(--rule);letter-spacing:.04em;line-height:1.65;display:flex;gap:12px;align-items:flex-start;font-weight:400}
+.elegant-list li::before{content:'→';color:var(--gold-deep);flex-shrink:0;margin-top:1px}
+
+/* HIGHLIGHT BOX */
+.highlight{background:var(--paper-deep);border:.5px solid rgba(200,168,75,.3);border-left:3px solid var(--gold);padding:24px 28px;margin:22px 0}
+.highlight-title{font-family:var(--font-m);font-size:.65rem;color:var(--gold-deep);letter-spacing:.26em;text-transform:uppercase;margin-bottom:10px;font-weight:600}
+.highlight-body{font-family:var(--font-s);font-size:.92rem;color:var(--ink);line-height:1.78;font-weight:300}
+
+/* ENGAGEMENT BOX */
+.engagement-box{background:var(--navy);padding:48px;margin:64px 0;position:relative;overflow:hidden}
+.engagement-box::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.012) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.engagement-box .sec-num{color:rgba(200,168,75,.5)}
+.engagement-box .sec-title{color:var(--gold);font-size:1.9rem}
+.engagement-box .sec-body{color:rgba(255,255,255,.5);font-family:var(--font-s)}
+.engagement-box .elegant-list li{color:rgba(255,255,255,.5);border-bottom-color:rgba(255,255,255,.06)}
+.engagement-box .elegant-list li::before{color:var(--gold)}
+.engagement-box .highlight{background:rgba(255,255,255,.04);border-color:rgba(200,168,75,.15);border-left-color:rgba(200,168,75,.5)}
+.engagement-box .highlight-title{color:rgba(200,168,75,.65)}
+.engagement-box .highlight-body{color:rgba(255,255,255,.55)}
+
+/* GESTE MANUSCRIT */
+.geste-block{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin:28px 0;border:.5px solid var(--rule)}
+.geste-cell{background:var(--paper-soft);padding:28px}
+.geste-cell-navy{background:var(--navy);padding:28px}
+.geste-label{font-family:var(--font-m);font-size:.6rem;color:var(--ink-faded);letter-spacing:.24em;text-transform:uppercase;margin-bottom:10px}
+.geste-label-light{font-family:var(--font-m);font-size:.6rem;color:rgba(200,168,75,.45);letter-spacing:.24em;text-transform:uppercase;margin-bottom:10px}
+.geste-content{font-family:var(--font-d);font-style:italic;font-size:1.9rem;color:var(--navy);margin-bottom:8px;border-bottom:1px solid var(--rule);padding-bottom:10px;font-weight:400}
+.geste-desc{font-family:var(--font-m);font-size:.7rem;color:var(--ink-muted);line-height:1.7;letter-spacing:.04em}
+@media(max-width:600px){.geste-block{grid-template-columns:1fr}}
+
+/* CONCLUSION */
+.conclusion{border:.5px solid rgba(200,168,75,.3);background:var(--paper);padding:48px;text-align:center;margin:48px 0}
+.conclusion-phi{font-family:var(--font-d);font-style:italic;font-size:3rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:18px}
+.conclusion-title{font-family:var(--font-d);font-size:1.8rem;font-weight:400;color:var(--navy);margin-bottom:14px}
+.conclusion-body{font-family:var(--font-s);font-size:.92rem;color:var(--ink-muted);line-height:1.85;max-width:600px;margin:0 auto 28px;font-weight:300}
+.conclusion-note{font-family:var(--font-m);font-size:.65rem;color:var(--ink-faded);letter-spacing:.1em;line-height:2}
+.btn-retour{display:inline-block;font-family:var(--font-m);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;background:var(--navy);color:var(--paper);text-decoration:none;padding:15px 32px;margin-bottom:24px;border-radius:2px;transition:background .2s;font-weight:500}
+.btn-retour:hover{background:var(--navy-deep)}
+
+/* FOOTER */
+.footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:60px 48px 36px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(200,168,75,.2)}
+.footer-phi{font-family:var(--font-d);font-style:italic;font-size:3.2rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:12px}
+.footer-line{width:48px;height:1px;background:var(--gold);margin:0 auto 12px}
+.footer-baseline-1{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--gold-soft);margin-bottom:3px}
+.footer-baseline-2{font-family:var(--font-d);font-style:italic;font-size:.85rem;color:rgba(226,200,122,.75)}
+.footer-nav{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-col h4{font-family:var(--font-m);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);font-weight:500;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col a{font-family:var(--font-d);font-style:italic;font-size:.92rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:var(--gold-soft)}
+.footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px}
+.footer-link-special:hover{color:var(--gold-soft)!important;border-color:var(--gold)!important}
+.footer-meta{border-top:1px solid rgba(200,168,75,.15);padding-top:22px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
+.footer-meta strong{color:var(--gold-soft);font-weight:500}
+@media(max-width:720px){.footer{padding:48px 24px 28px}.footer-nav{grid-template-columns:1fr;gap:24px}}
+
+sup.reg{font-size:.55em;font-weight:400;vertical-align:super;margin-left:.05em;opacity:.85;font-style:normal}
+</style>
+</head>
+<body>
+
+<nav>
+  <div style="display:flex;align-items:center;gap:28px;">
+    <a href="index.html" class="nav-back">← Retour</a>
+    <a href="index.html" class="nav-brand">Φ</a>
+  </div>
+  <a href="tarifications.html" class="nav-cta">Accéder à<span class="phi"> Φ</span></a>
+</nav>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb-sep">›</span>
+  <span>Valeur et fiabilité de la signature</span>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label">Documentation juridique &amp; technique</div>
+    <div class="page-hero-phi">Φ</div>
+    <h1 class="page-hero-title">Valeur et fiabilité<br>de la signature <em style="font-style:italic;color:var(--gold-soft)">Φ</em></h1>
+    <p class="page-hero-sub">Un acte de signature — pas un simple accès.</p>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="intro-block">
+    <p>La signature réalisée via <em style="font-family:var(--font-d);font-style:italic;color:var(--gold-deep)">Φ</em> ne repose pas sur la seule utilisation d'un compte, d'un email ou d'un code reçu. Elle repose sur un acte effectué par le signataire, à partir de son dispositif, au moment de la signature — combinant simultanément des éléments techniques et comportementaux liés entre eux.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="sec-block">
+    <div class="sec-num">01</div>
+    <h2 class="sec-title">Un acte de signature,<br><em>pas un simple accès</em></h2>
+    <p class="sec-body">Contrairement aux systèmes reposant principalement sur des accès (email, SMS, comptes), la signature <em style="font-family:var(--font-d);font-style:italic">Φ</em> ne repose pas sur une hypothèse d'accès, mais sur la combinaison d'éléments techniques et comportementaux réalisés simultanément au moment de l'acte.</p>
+    <ul class="elegant-list">
+      <li>L'utilisation du dispositif physique du signataire</li>
+      <li>La production d'une signature cryptographique post-quantique (ML-DSA-65 · FIPS 204)</li>
+      <li>La réalisation d'un geste manuscrit dynamique</li>
+      <li>L'écriture d'une mention manuscrite (ex. « lu et approuvé »)</li>
+      <li>L'enregistrement des événements dans un journal chaîné inaltérable</li>
+    </ul>
+    <div class="highlight">
+      <div class="highlight-title">Principe fondamental</div>
+      <div class="highlight-body">Ces éléments forment un ensemble cohérent, produit au moment de l'acte. Ils ne peuvent être modifiés sans altérer l'ensemble — ce qui rend toute falsification détectable et toute contestation unilatérale structurellement impossible.</div>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- SECTION 2 — GESTE MANUSCRIT -->
+  <div class="sec-block">
+    <div class="sec-num">02</div>
+    <h2 class="sec-title">Le geste manuscrit —<br><em>dimension vivante de l'acte</em></h2>
+    <p class="sec-body"><em style="font-family:var(--font-d);font-style:italic">Φ</em> intègre un geste manuscrit dynamique comme composante de l'attestation. Ce geste est capturé dans sa dynamique au moment de l'acte, et lié à l'empreinte biométrique enrôlée lors de la création de l'identité <em style="font-family:var(--font-d);font-style:italic">Φ</em>.</p>
+
+    <div class="geste-block">
+      <div class="geste-cell">
+        <div class="geste-label">Signature manuscrite</div>
+        <div class="geste-content">Alice Dupont</div>
+        <div class="geste-desc">Geste capturé dans sa dynamique<br>Tracé au doigt sur l'écran tactile<br>Lié à l'empreinte enrôlée</div>
+      </div>
+      <div class="geste-cell">
+        <div class="geste-label">Mention manuscrite</div>
+        <div class="geste-content" style="font-size:1.35rem">Lu et approuvé</div>
+        <div class="geste-desc">Phrase contextuelle manuscrite<br>Tracée librement à chaque acte<br>Inscrite dans l'attestation</div>
+      </div>
+    </div>
+
+    <ul class="elegant-list">
+      <li>Signature manuscrite complète, traçable depuis l'enclave matérielle</li>
+      <li>Mention manuscrite libre — « lu et approuvé », « bon pour accord »</li>
+      <li>Dynamique capturée — pas une image statique</li>
+      <li>Fusionnée dans la signature cryptographique post-quantique</li>
+      <li>Gabarit enrôlé à la création de l'identité <em style="font-family:var(--font-d);font-style:italic">Φ</em>, stocké exclusivement sur le dispositif</li>
+    </ul>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- SECTION 3 -->
+  <div class="sec-block">
+    <div class="sec-num">03</div>
+    <h2 class="sec-title">Une preuve fondée sur<br><em>la cohérence des éléments</em></h2>
+    <p class="sec-body">La preuve résulte de la cohérence de quatre dimensions simultanées, liées entre elles et non séparables. La modification de l'une invalide l'ensemble — et rend la falsification mathématiquement détectable.</p>
+    <ul class="elegant-list">
+      <li>Le dispositif utilisé — identifiants matériels intrinsèques non exportables (Secure Enclave / Hardware Keystore)</li>
+      <li>Les actions réalisées — envoi, lecture (durée mesurée), signature, refus</li>
+      <li>Le geste manuscrit — dynamique capturée au moment de l'acte</li>
+      <li>La chronologie des événements — journal chaîné par compteur monotone, inaltérable</li>
+    </ul>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- SECTION 4 -->
+  <div class="sec-block">
+    <div class="sec-num">04</div>
+    <h2 class="sec-title">Une preuve détenue<br><em>par les parties elles-mêmes</em></h2>
+    <p class="sec-body">La preuve n'est pas conservée ni attestée par un tiers. Elle est produite et détenue directement par les signataires, sous la forme d'un certificat de preuve complet, exportable depuis l'application.</p>
+    <ul class="elegant-list">
+      <li>Le document signé dans son intégralité (hash SHA3-256)</li>
+      <li>Les signatures cryptographiques ML-DSA-65 des deux parties</li>
+      <li>Les interactions — lecture, durée, signature, refus éventuel</li>
+      <li>Le journal des événements chronologiquement chaîné</li>
+    </ul>
+    <div class="highlight">
+      <div class="highlight-title">Portabilité de la preuve</div>
+      <div class="highlight-body">Ce certificat peut être conservé, transmis et vérifié indépendamment — sans connexion, sans serveur, sans tiers de confiance. Il est auto-contenu et produisible tel quel devant toute juridiction. Même si <em style="font-family:var(--font-d);font-style:italic">Φ</em> disparaît, la preuve demeure.</div>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- SECTION 5 -->
+  <div class="sec-block">
+    <div class="sec-num">05</div>
+    <h2 class="sec-title">Lecture, signature et refus —<br><em>trois actes distincts</em></h2>
+    <p class="sec-body"><em style="font-family:var(--font-d);font-style:italic">Φ</em> distingue clairement trois états, chacun constituant une preuve distincte et opposable.</p>
+    <ul class="elegant-list">
+      <li>La signature du document — avec biométrie, geste dynamique et mention manuscrite</li>
+      <li>Le refus de signer — acte explicite inscrit dans le journal, opposable</li>
+      <li>La consultation du document — durée mesurée, preuve de prise de connaissance effective</li>
+    </ul>
+    <div class="highlight">
+      <div class="highlight-title">Principe de réalité</div>
+      <div class="highlight-body">Seules les actions effectivement réalisées et partagées constituent des éléments de preuve. L'absence de réponse ne constitue pas une preuve — et ne peut être opposée.</div>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- SECTION 6 -->
+  <div class="sec-block">
+    <div class="sec-num">06</div>
+    <h2 class="sec-title">Appréciation de la valeur probante</h2>
+    <p class="sec-body">Conformément au droit applicable, la valeur probante d'une signature électronique est appréciée au regard de la fiabilité du procédé utilisé (art. 1367 al. 2 du Code civil). La signature <em style="font-family:var(--font-d);font-style:italic">Φ</em> fournit un ensemble d'éléments permettant d'apprécier cette fiabilité.</p>
+    <ul class="elegant-list">
+      <li>L'identification du signataire par son dispositif physique lié à ses identifiants matériels</li>
+      <li>La manifestation de son consentement par biométrie et geste manuscrit dynamique</li>
+      <li>La traçabilité des actions dans un journal chaîné inaltérable, ancré dans le compteur monotone hardware</li>
+      <li>La cohérence temporelle de l'ensemble des éléments</li>
+      <li>La résistance post-quantique du procédé — ML-DSA-65 · ML-KEM-768 (NIST FIPS 203/204, août 2024)</li>
+    </ul>
+  </div>
+
+  <!-- ENGAGEMENT BOX -->
+  <div class="engagement-box">
+    <div style="position:relative;z-index:2">
+      <div class="sec-num">Engagement · Acte de signature</div>
+      <h2 class="sec-title" style="color:var(--gold);font-size:1.9rem;margin-bottom:22px">Ce que vous reconnaissez<br>en signant avec <em style="font-style:italic">Φ</em></h2>
+      <p class="sec-body">En apposant votre signature sur un document via <em style="font-family:var(--font-d);font-style:italic;color:rgba(200,168,75,.8)">Φ</em>, vous manifestez votre consentement et votre intention de vous engager. La signature est réalisée en deux temps — un geste manuscrit dynamique correspondant à votre signature, et l'écriture manuscrite d'une mention telle que « lu et approuvé ». Ces gestes sont captés dans leur dynamique au moment de l'acte, dans l'enclave matérielle de votre dispositif.</p>
+
+      <div class="highlight" style="margin:24px 0">
+        <div class="highlight-title">Vous reconnaissez expressément</div>
+        <ul class="elegant-list" style="margin:0">
+          <li>Agir en votre nom propre, depuis votre dispositif personnel</li>
+          <li>Avoir pris connaissance du document pendant la durée mesurée, opposable</li>
+          <li>Exprimer votre consentement de manière libre et éclairée</li>
+          <li>Être à l'origine de la signature et de la mention manuscrite</li>
+        </ul>
+      </div>
+
+      <p class="sec-body" style="margin-top:22px">L'ensemble formé par le document, la signature manuscrite, la mention « lu et approuvé », les éléments techniques associés et le journal chaîné des événements constitue une preuve cohérente de l'acte de signature, recalculable par tout expert judiciaire.</p>
+
+      <div class="highlight" style="margin-top:22px">
+        <div class="highlight-title">Portée de la signature</div>
+        <div class="highlight-body">La signature ainsi réalisée traduit un engagement de même nature que celui exprimé par une signature manuscrite, renforcé par la combinaison d'un geste manuscrit dynamique, d'un dispositif contrôlé par le procédé Inline-Offline<sup class="reg">®</sup> et d'un enregistrement chronologique inviolable des actions.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7 -->
+  <div class="sec-block">
+    <div class="sec-num">07</div>
+    <h2 class="sec-title">En cas de contestation</h2>
+    <p class="sec-body">En cas de contestation, il pourra être tenu compte des éléments suivants pour apprécier si l'acte de signature a été effectivement réalisé par le signataire.</p>
+    <ul class="elegant-list">
+      <li>L'utilisation du dispositif physique du signataire, identifié par ses identifiants matériels intrinsèques</li>
+      <li>La production d'une signature cryptographique post-quantique ML-DSA-65 liée à ce dispositif</li>
+      <li>La réalisation d'une signature manuscrite dynamique au moment de l'acte</li>
+      <li>La correspondance entre l'empreinte biométrique présentée et le gabarit enrôlé — conservé exclusivement sur le dispositif du signataire, jamais transmis à aucune entité externe</li>
+      <li>L'écriture d'une mention manuscrite dynamique (« lu et approuvé » ou équivalent)</li>
+      <li>L'enregistrement des événements dans un journal chaîné par compteur monotone</li>
+      <li>La cohérence temporelle de l'ensemble des éléments entre eux</li>
+      <li>Le hash SHA3-256 du document, identique dans les deux journaux miroirs (émetteur et signataire)</li>
+    </ul>
+    <div class="highlight">
+      <div class="highlight-title">Indépendance vis-à-vis de tout tiers</div>
+      <div class="highlight-body">Le procédé <em style="font-family:var(--font-d);font-style:italic">Φ</em> — Inline-Offline<sup class="reg">®</sup> — ne repose pas sur l'intervention d'un prestataire de confiance pour attester des événements. La preuve est vérifiable indépendamment, à partir des seuls éléments produits lors de l'acte de signature, sans réquisition possible d'aucune autorité externe. Aucun serveur ne détient de données déchiffrables.</div>
+    </div>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="conclusion">
+    <div class="conclusion-phi">Φ</div>
+    <div class="conclusion-title">Conclusion</div>
+    <p class="conclusion-body">La signature <em style="font-family:var(--font-d);font-style:italic">Φ</em> repose sur un ensemble d'éléments techniques et comportementaux réalisés au moment de l'acte, liés entre eux de manière cohérente par le procédé Inline-Offline<sup class="reg">®</sup>. Elle permet d'établir une preuve fiable, autonome, sans dépendance à un tiers — susceptible d'être appréciée au regard des exigences légales applicables devant toute juridiction.</p>
+    <a href="index.html" class="btn-retour">← Retour à l'application</a>
+    <div class="conclusion-note">
+      Brevet français FR 2604755 · FR 2605317 · AION ASEMANTIX · Lyon 2026<br>
+      Conforme règlement eIDAS UE 910/2014, art. 26 · Articles 1366 et 1367 du Code civil français<br>
+      Preuves, signatures et documents sont et demeurent votre propriété exclusive.
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature mathématique</div>
+      <div class="footer-baseline-2">de votre vie numérique</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+          <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
+          <li><a href="lapp-en-action.html">Voir l'app en action</a></li>
+          <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="vos-suggestions.html">Évaluer</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ-quand-docusign-existe.html" class="footer-link-special">Pourquoi Φ quand DocuSign existe ?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>AION ASEMANTIX</strong> · Lyon, France · asemantix@proton.me<br>
+      FR 2604755 · FR 2605317 · Brevet divisionnaire en cours<br>
+      © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
