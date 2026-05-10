@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portefeuille de brevets — AION ASEMANTIX · Φ</title>
+<meta name="description" content="39 inventions brevetées. 7 familles techniques. Un seul fil conducteur : transmettre, authentifier et prouver sans métadonnées, sans tiers, sans horloge externe. AION ASEMANTIX.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="AION ASEMANTIX">
+<link rel="canonical" href="https://phi-signature.fr/portefeuille-brevets.html">
+<meta name="theme-color" content="#0e1c35">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/portefeuille-brevets.html">
+<meta property="og:site_name" content="Φ — AION ASEMANTIX">
+<meta property="og:title" content="Portefeuille de brevets — AION ASEMANTIX · Φ">
+<meta property="og:description" content="39 inventions. 7 familles. Un seul fil conducteur.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@asemantix">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#1a2942;--gold:#c8a84b;--gold-deep:#8b6914;--gold-soft:#e2c87a;--paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;--rule:#e6e3dc;--ink:#0e1c35;--ink-muted:#4a5a73;--ink-faded:#8a96a8;--font-d:"Playfair Display",Georgia,serif;--font-m:"IBM Plex Mono",Consolas,monospace;--font-s:"IBM Plex Sans",-apple-system,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-s);color:var(--ink);background:var(--paper);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:16px 48px;display:flex;align-items:center;justify-content:space-between}
+.nav-phi{font-family:var(--font-d);font-style:italic;font-size:2rem;color:var(--gold-deep);font-weight:500;text-decoration:none;line-height:1}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-family:var(--font-m);font-size:.7rem;color:var(--ink-muted);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{padding:9px 22px;background:var(--navy);color:white!important;border-radius:4px;font-weight:500;font-size:.78rem;letter-spacing:.06em;transition:background .2s}
+.nav-cta:hover{background:var(--navy-deep)!important}
+@media(max-width:720px){.nav-inner{padding:14px 24px}.nav-links a:not(.nav-cta){display:none}}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1200px;margin:0 auto;padding:24px 48px 0;font-family:var(--font-m);font-size:.7rem;color:var(--ink-faded);letter-spacing:.12em;text-transform:uppercase}
+.breadcrumb a{color:var(--gold-deep);text-decoration:none}
+.breadcrumb a:hover{color:var(--navy)}
+.breadcrumb span{color:var(--gold)}
+@media(max-width:720px){.breadcrumb{padding:16px 24px 0}}
+
+/* HERO */
+.hero{background:var(--navy);padding:80px 48px 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.015) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}
+.hero-eyebrow{font-family:var(--font-m);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,168,75,.55);margin-bottom:24px;font-weight:500}
+.hero-title{font-family:var(--font-d);font-size:clamp(2.4rem,5vw,4rem);line-height:1.08;font-weight:500;color:var(--paper);margin-bottom:22px;letter-spacing:-.01em}
+.hero-title em{color:var(--gold-soft);font-style:italic}
+.hero-sub{font-family:var(--font-d);font-style:italic;font-size:1.15rem;color:rgba(255,255,255,.45);max-width:660px;line-height:1.6}
+
+/* CHIFFRES */
+.chiffres{background:var(--paper-deep);border-bottom:1px solid var(--rule)}
+.chiffres-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(3,1fr)}
+.chiffre{padding:40px 0;text-align:center;border-right:1px solid var(--rule)}
+.chiffre:last-child{border-right:none}
+.chiffre-n{font-family:var(--font-d);font-size:3.2rem;font-weight:500;color:var(--gold-deep);line-height:1;margin-bottom:8px}
+.chiffre-label{font-family:var(--font-m);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faded);font-weight:500}
+@media(max-width:600px){.chiffres-inner{grid-template-columns:1fr}.chiffre{border-right:none;border-bottom:1px solid var(--rule)}.chiffre:last-child{border-bottom:none}}
+
+/* FIL CONDUCTEUR */
+.fil{max-width:1200px;margin:0 auto;padding:64px 48px;border-bottom:1px solid var(--rule)}
+.fil-inner{max-width:760px;margin:0 auto;text-align:center}
+.fil-eyebrow{font-family:var(--font-m);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px;font-weight:600}
+.fil-text{font-family:var(--font-d);font-size:1.45rem;line-height:1.55;color:var(--navy);font-weight:400}
+.fil-text em{font-style:italic;color:var(--gold-deep);font-weight:500}
+@media(max-width:720px){.fil{padding:48px 24px}}
+
+/* FAMILLES */
+.familles{max-width:1200px;margin:0 auto;padding:80px 48px}
+@media(max-width:720px){.familles{padding:48px 24px}}
+.famille{display:grid;grid-template-columns:80px 1fr;gap:0;margin-bottom:1px;background:var(--paper)}
+.famille:last-child{margin-bottom:0}
+.famille-num{background:var(--paper-deep);border:.5px solid var(--rule);display:flex;align-items:flex-start;justify-content:center;padding:32px 0;font-family:var(--font-m);font-size:.65rem;color:var(--gold-deep);letter-spacing:.22em;font-weight:600;text-transform:uppercase}
+.famille-body{border:.5px solid var(--rule);border-left:none;padding:32px 40px}
+.famille-title{font-family:var(--font-d);font-size:1.35rem;font-weight:500;color:var(--navy);margin-bottom:8px;letter-spacing:-.008em}
+.famille-title em{font-style:italic;color:var(--gold-deep)}
+.famille-desc{font-family:var(--font-s);font-size:.9rem;color:var(--ink-muted);line-height:1.7;margin-bottom:16px;font-weight:300}
+.famille-brevets{display:flex;flex-wrap:wrap;gap:6px}
+.brevet-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.1em;color:var(--navy);background:var(--paper-deep);border:.5px solid var(--rule);padding:5px 10px;border-radius:2px;font-weight:500;text-transform:uppercase}
+@media(max-width:600px){.famille{grid-template-columns:1fr}.famille-num{padding:16px 24px;justify-content:flex-start}.famille-body{border-left:.5px solid var(--rule);border-top:none;padding:24px}.famille:last-child .famille-body{border-bottom:.5px solid var(--rule)}}
+
+/* CONCLUSION */
+.conclusion{background:var(--navy);padding:80px 48px;text-align:center;position:relative;overflow:hidden}
+.conclusion::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.012) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.conclusion-inner{max-width:720px;margin:0 auto;position:relative;z-index:2}
+.conclusion-phi{font-family:var(--font-d);font-style:italic;font-size:3rem;color:var(--gold);line-height:1;margin-bottom:24px}
+.conclusion-text{font-family:var(--font-d);font-size:clamp(1.3rem,2.5vw,1.9rem);line-height:1.45;color:var(--paper);font-weight:400;margin-bottom:32px}
+.conclusion-text em{color:var(--gold-soft);font-style:italic}
+.conclusion-sub{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(200,168,75,.4);line-height:2}
+@media(max-width:720px){.conclusion{padding:60px 24px}}
+
+/* FOOTER */
+.footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:60px 48px 36px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(200,168,75,.2)}
+.footer-phi{font-family:var(--font-d);font-style:italic;font-size:3.2rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:12px}
+.footer-line{width:48px;height:1px;background:var(--gold);margin:0 auto 12px}
+.footer-baseline-1{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--gold-soft);margin-bottom:3px}
+.footer-baseline-2{font-family:var(--font-d);font-style:italic;font-size:.85rem;color:rgba(226,200,122,.75)}
+.footer-nav{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-col h4{font-family:var(--font-m);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);font-weight:500;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col a{font-family:var(--font-d);font-style:italic;font-size:.92rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:var(--gold-soft)}
+.footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px}
+.footer-link-special:hover{color:var(--gold-soft)!important;border-color:var(--gold)!important}
+.footer-meta{border-top:1px solid rgba(200,168,75,.15);padding-top:22px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
+.footer-meta strong{color:var(--gold-soft);font-weight:500}
+@media(max-width:720px){.footer{padding:48px 24px 28px}.footer-nav{grid-template-columns:1fr;gap:24px}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-phi">Φ</a>
+    <nav class="nav-links">
+      <a href="a-propos.html">À propos</a>
+      <a href="la-mecanique-probatoire.html">La mécanique</a>
+      <a href="tarifications.html" class="nav-cta">Accéder à Φ</a>
+    </nav>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a> <span>›</span>
+  <a href="a-propos.html">À propos</a> <span>›</span>
+  Portefeuille de brevets
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">AION ASEMANTIX · Propriété intellectuelle</div>
+    <h1 class="hero-title">39 inventions.<br><em>Un seul fil conducteur.</em></h1>
+    <p class="hero-sub">Transmettre, authentifier et prouver — sans métadonnées, sans tiers de confiance, sans horloge externe.</p>
+  </div>
+</section>
+
+<div class="chiffres">
+  <div class="chiffres-inner">
+    <div class="chiffre">
+      <div class="chiffre-n">39</div>
+      <div class="chiffre-label">Inventions brevetées</div>
+    </div>
+    <div class="chiffre">
+      <div class="chiffre-n">7</div>
+      <div class="chiffre-label">Familles techniques</div>
+    </div>
+    <div class="chiffre">
+      <div class="chiffre-n">1</div>
+      <div class="chiffre-label">Découverte fondatrice</div>
+    </div>
+  </div>
+</div>
+
+<div class="fil">
+  <div class="fil-inner">
+    <div class="fil-eyebrow">La découverte fondatrice</div>
+    <p class="fil-text">Le temps est une propriété <em>intrinsèque aux systèmes</em> — endogène, thermodynamique, mesurable sans horloge externe. De cette intuition, toutes les inventions ont découlé. Chacune appelant la suivante.</p>
+  </div>
+</div>
+
+<div class="familles">
+
+  <div class="famille">
+    <div class="famille-num">01</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Transport <em>asémantique</em> — le socle</h2>
+      <p class="famille-desc">Des fragments transmis mathématiquement indistinguables du bruit aléatoire, validés localement sans métadonnées, sans serveur, sans sémantique applicative. La décision d'acceptation est indépendante du canal et du contenu. C'est le fondement de tout le reste.</p>
+      <div class="famille-brevets">
+        <span class="brevet-tag">CAMÉLÉON</span>
+        <span class="brevet-tag">PIP POLYMORPHE</span>
+        <span class="brevet-tag">BRIDGE</span>
+        <span class="brevet-tag">Orchestrateur</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">02</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Messagerie &amp; commande<br><em>sur canal hostile</em></h2>
+      <p class="famille-desc">Messagerie sécurisée, boîte aux lettres asémantique et télécommande de dispositifs contraints — tous trois fonctionnant sans infrastructure centralisée, sans métadonnées apparentes, avec acquittement implicite. Le trafic légitime est indistinguable du bruit pour tout observateur externe.</p>
+      <div class="famille-brevets">
+        <span class="brevet-tag">OCTOPUS</span>
+        <span class="brevet-tag">MAILBOX</span>
+        <span class="brevet-tag">SÉSAME</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">03</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Anonymat &amp; non-traçabilité <em>réseau</em></h2>
+      <p class="famille-desc">Identifiants non corrélables, identités réseau multiples simultanées, VPN indétectable par analyse de trafic, trafic collectif décorrélé, dispositif fantôme. Un observateur ne peut corréler deux identifiants distincts ni détecter l'existence d'une communication.</p>
+      <div class="famille-brevets">
+        <span class="brevet-tag">PIP GHOST</span>
+        <span class="brevet-tag">SHADOW CROWD</span>
+        <span class="brevet-tag">HYDRA</span>
+        <span class="brevet-tag">PIP VPN</span>
+        <span class="brevet-tag">CLOAK</span>
+        <span class="brevet-tag">FANTOM INTERNET</span>
+        <span class="brevet-tag">PIP SATELLITE</span>
+        <span class="brevet-tag">PIP POLYMORPHE ÉLARGI</span>
+        <span class="brevet-tag">PONT CHRONOS</span>
+        <span class="brevet-tag">QUANTUM</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">04</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Temps thermodynamique <em>endogène</em> — TUTE</h2>
+      <p class="famille-desc">Application directe de la découverte fondatrice : le temps comme grandeur physique locale, mesurée par l'énergie dissipée, strictement monotone croissante, sans référence externe. Une métrique temporelle souveraine, applicable à l'informatique, aux réseaux, à la gestion de batteries, aux grilles énergétiques.</p>
+      <div class="famille-brevets">
+        <span class="brevet-tag">TUTE</span>
+        <span class="brevet-tag">ENERGYSYNC</span>
+        <span class="brevet-tag">KERNEL CHRONOS</span>
+        <span class="brevet-tag">COMPUTE TUTE</span>
+        <span class="brevet-tag">BATTERIES TUTE</span>
+        <span class="brevet-tag">TUTE GRID</span>
+        <span class="brevet-tag">TOKEN TUTE</span>
+        <span class="brevet-tag">GÉNÉRALISTE</span>
+        <span class="brevet-tag">RPAG</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">05</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Authentification &amp; identité <em>sans tiers</em></h2>
+      <p class="famille-desc">Signature, jeton à usage unique, resynchronisation cryptographique et infrastructure de confiance décentralisée — sans autorité de certification, sans serveur, sans certificat X.509. La confiance est physique, ancrée dans l'énergie mesurée et les identifiants matériels intrinsèques du dispositif.</p>
+      <div class="famille-brevets">
+        <span class="brevet-tag">AUTHENTIX</span>
+        <span class="brevet-tag">HEIMDALL</span>
+        <span class="brevet-tag">EPKI</span>
+        <span class="brevet-tag">ANCHORS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">06</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Confidentialité &amp; intégrité <em>des données</em></h2>
+      <p class="famille-desc">Accès view-once avec effacement cryptographique, chaînage d'historique d'états sans métadonnées d'ordonnancement, reprise de session sans serveur central, et communication polymorphe autonome sans horloge partagée — y compris dans des environnements sans infrastructure.</p>
+      <div class="famille-brevets">
+        <span class="brevet-tag">BLACKBOX</span>
+        <span class="brevet-tag">VCH</span>
+        <span class="brevet-tag">PHOENIX</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">07</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Infrastructure <em>systèmes</em></h2>
+      <p class="famille-desc">Système d'exploitation entièrement post-quantique, ordinateur sans dispositif fixe dont l'environnement n'existe qu'en mémoire vive, passerelle domestique asémantique, paiement indistinguable du bruit, et protection autonome par profil énergétique sans base de signatures malware.</p>
+      <div class="famille-brevets">
+        <span class="brevet-tag">Q-DOS</span>
+        <span class="brevet-tag">ORDINATEUR LIQUIDE</span>
+        <span class="brevet-tag">FHOME</span>
+        <span class="brevet-tag">AION PAY</span>
+        <span class="brevet-tag">SEKHMET</span>
+        <span class="brevet-tag">BATTERIES (FR2602027)</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<section class="conclusion">
+  <div class="conclusion-inner">
+    <div class="conclusion-phi">Φ</div>
+    <p class="conclusion-text">7 familles. 39 inventions.<br><em>Aucune dépendance à un tiers.</em><br>Aucune licence tierce. Aucun algorithme propriétaire d'un éditeur étranger.</p>
+    <div class="conclusion-sub">
+      FR 2604755 · FR 2605317 · et 37 autres · Brevet divisionnaire en cours<br>
+      AION ASEMANTIX · Lyon · © 2026
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature mathématique</div>
+      <div class="footer-baseline-2">de votre vie numérique</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+          <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
+          <li><a href="lapp-en-action.html">Voir l'app en action</a></li>
+          <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
+          <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur et fiabilité de la signature</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ-quand-docusign-existe.html" class="footer-link-special">Pourquoi Φ quand DocuSign existe ?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>AION ASEMANTIX</strong> · Lyon, France · asemantix@proton.me<br>
+      FR 2604755 · FR 2605317 · Brevet divisionnaire en cours<br>
+      © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
