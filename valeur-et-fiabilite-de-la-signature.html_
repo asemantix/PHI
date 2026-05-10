@@ -162,21 +162,21 @@ sup.reg{font-size:.55em;font-weight:400;vertical-align:super;margin-left:.05em;o
     <div class="page-hero-label">Documentation juridique &amp; technique</div>
     <div class="page-hero-phi">Φ</div>
     <h1 class="page-hero-title">Valeur et fiabilité<br>de la signature <em style="font-style:italic;color:var(--gold-soft)">Φ</em></h1>
-    <p class="page-hero-sub">Un acte de signature — pas un simple accès.</p>
+    <p class="page-hero-sub">Nous n'avons pas amélioré la signature électronique. Nous l'avons remplacée par une preuve.</p>
   </div>
 </div>
 
 <div class="content">
 
   <div class="intro-block">
-    <p>La signature réalisée via <em style="font-family:var(--font-d);font-style:italic;color:var(--gold-deep)">Φ</em> ne repose pas sur la seule utilisation d'un compte, d'un email ou d'un code reçu. Elle repose sur un acte effectué par le signataire, à partir de son dispositif, au moment de la signature — combinant simultanément des éléments techniques et comportementaux liés entre eux.</p>
+    <p>Quand j'ai conçu <em style="font-family:var(--font-d);font-style:italic;color:var(--gold-deep)">Φ</em>, une question s'imposait : pourquoi la preuve de vos engagements devrait-elle vivre sur les serveurs d'une entreprise américaine que vous n'avez pas choisie ? La signature électronique telle qu'elle existait répondait à un besoin de commodité — pas à un besoin de preuve. Nous avons construit autre chose : un acte réalisé par le signataire, sur son dispositif, au moment précis de la signature, combinant simultanément des éléments techniques et comportementaux qui ne peuvent être séparés. Une preuve qui vous appartient. Pour toujours.</p>
   </div>
 
   <!-- SECTION 1 -->
   <div class="sec-block">
     <div class="sec-num">01</div>
-    <h2 class="sec-title">Un acte de signature,<br><em>pas un simple accès</em></h2>
-    <p class="sec-body">Contrairement aux systèmes reposant principalement sur des accès (email, SMS, comptes), la signature <em style="font-family:var(--font-d);font-style:italic">Φ</em> ne repose pas sur une hypothèse d'accès, mais sur la combinaison d'éléments techniques et comportementaux réalisés simultanément au moment de l'acte.</p>
+    <h2 class="sec-title">Ce que les autres appellent signature,<br><em>nous appelons accès</em></h2>
+    <p class="sec-body">Les systèmes dominants — DocuSign, Adobe Sign, Yousign — reposent sur une hypothèse : si vous avez accédé à votre email, vous avez signé. Φ repose sur une réalité différente : la signature est un acte, pas un clic. Elle combine simultanément des éléments techniques et comportementaux réalisés au moment précis de l'engagement.</p>
     <ul class="elegant-list">
       <li>L'utilisation du dispositif physique du signataire</li>
       <li>La production d'une signature cryptographique post-quantique (ML-DSA-65 · FIPS 204)</li>
@@ -195,8 +195,8 @@ sup.reg{font-size:.55em;font-weight:400;vertical-align:super;margin-left:.05em;o
   <!-- SECTION 2 — GESTE MANUSCRIT -->
   <div class="sec-block">
     <div class="sec-num">02</div>
-    <h2 class="sec-title">Le geste manuscrit —<br><em>dimension vivante de l'acte</em></h2>
-    <p class="sec-body"><em style="font-family:var(--font-d);font-style:italic">Φ</em> intègre un geste manuscrit dynamique comme composante de l'attestation. Ce geste est capturé dans sa dynamique au moment de l'acte, et lié à l'empreinte biométrique enrôlée lors de la création de l'identité <em style="font-family:var(--font-d);font-style:italic">Φ</em>.</p>
+    <h2 class="sec-title">La main, pas le mot de passe —<br><em>le geste qui fait la preuve</em></h2>
+    <p class="sec-body">Nous aurions pu nous contenter d'une signature cryptographique. Nous ne l'avons pas fait. La signature manuscrite dynamique est au cœur de <em style="font-family:var(--font-d);font-style:italic">Φ</em> — parce qu'un juge comprend un geste. Parce qu'un engagement qui ne passe pas par le corps est un engagement sans mémoire. Ce geste est capturé dans sa dynamique au moment de l'acte, lié à l'empreinte biométrique enrôlée lors de la création de l'identité <em style="font-family:var(--font-d);font-style:italic">Φ</em>.</p>
 
     <div class="geste-block">
       <div class="geste-cell">
@@ -240,8 +240,8 @@ sup.reg{font-size:.55em;font-weight:400;vertical-align:super;margin-left:.05em;o
   <!-- SECTION 4 -->
   <div class="sec-block">
     <div class="sec-num">04</div>
-    <h2 class="sec-title">Une preuve détenue<br><em>par les parties elles-mêmes</em></h2>
-    <p class="sec-body">La preuve n'est pas conservée ni attestée par un tiers. Elle est produite et détenue directement par les signataires, sous la forme d'un certificat de preuve complet, exportable depuis l'application.</p>
+    <h2 class="sec-title">La preuve vous appartient —<br><em>pas à nous</em></h2>
+    <p class="sec-body">C'est peut-être ce qui distingue le plus fondamentalement <em style="font-family:var(--font-d);font-style:italic">Φ</em> de tout ce qui existe. La preuve n'est pas conservée ni attestée par un tiers. Elle est produite et détenue directement par les signataires, sous la forme d'un certificat de preuve complet, exportable depuis l'application. Si nous disparaissons demain, votre preuve reste. C'était une contrainte de conception. C'est devenu un engagement.</p>
     <ul class="elegant-list">
       <li>Le document signé dans son intégralité (hash SHA3-256)</li>
       <li>Les signatures cryptographiques ML-DSA-65 des deux parties</li>
@@ -338,8 +338,8 @@ sup.reg{font-size:.55em;font-weight:400;vertical-align:super;margin-left:.05em;o
   <!-- CONCLUSION -->
   <div class="conclusion">
     <div class="conclusion-phi">Φ</div>
-    <div class="conclusion-title">Conclusion</div>
-    <p class="conclusion-body">La signature <em style="font-family:var(--font-d);font-style:italic">Φ</em> repose sur un ensemble d'éléments techniques et comportementaux réalisés au moment de l'acte, liés entre eux de manière cohérente par le procédé Inline-Offline<sup class="reg">®</sup>. Elle permet d'établir une preuve fiable, autonome, sans dépendance à un tiers — susceptible d'être appréciée au regard des exigences légales applicables devant toute juridiction.</p>
+    <div class="conclusion-title">Ce que nous avons construit</div>
+    <p class="conclusion-body">La signature <em style="font-family:var(--font-d);font-style:italic">Φ</em> n'est pas une amélioration. C'est une rupture. Elle repose sur la conviction qu'une preuve qui dépend d'un tiers n'est pas une preuve — c'est une promesse. Nous avons construit la seule signature qui ne se répudie pas. Vos preuves sont en miroir. Elles se valident mutuellement. Ni vous, ni votre contradicteur ne pouvez les contester unilatéralement. Mathématiquement.</p>
     <a href="index.html" class="btn-retour">← Retour à l'application</a>
     <div class="conclusion-note">
       Brevet français FR 2604755 · FR 2605317 · AION ASEMANTIX · Lyon 2026<br>
