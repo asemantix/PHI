@@ -179,6 +179,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 
 <section class="args">
   <div class="args-inner">
+
     <div class="arg">
       <div class="arg-num">01</div>
       <div class="arg-body">
@@ -196,6 +197,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <p class="arg-lede">La valeur cryptographique G est calculée, scellée et conservée localement. Un juge peut la <strong>recalculer</strong> avec votre doigt, votre téléphone et le document original. Pas besoin de nous. Pas besoin de DocuSign. Pas besoin de personne.</p>
       </div>
     </div>
+
+    <!-- ✦ ARG 02 — MODIFICATION : dispositif légitime ajouté -->
     <div class="arg">
       <div class="arg-num">02</div>
       <div class="arg-body">
@@ -207,12 +210,13 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
           </div>
           <div class="arg-col">
             <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text">Vos documents <strong>ne quittent jamais votre enclave.</strong> Ils traversent internet chiffrés — indistinguables du bruit aléatoire. Pas de serveur. Pas de Cloud Act. Pas d'IA qui analyse. <strong>Confidentialité structurelle.</strong></div>
+            <div class="arg-col-text">Vos documents <strong>ne quittent jamais votre enclave.</strong> Ils traversent internet chiffrés — indistinguables du bruit aléatoire. Pas de serveur. Pas de Cloud Act. Pas d'IA qui analyse.<br><br>Le déchiffrement ne peut avoir lieu que dans <strong>l'enclave matérielle du dispositif qui porte l'identité Φ du destinataire autorisé.</strong> Aucun autre dispositif — même équipé de l'app — ne peut l'ouvrir. <strong>Confidentialité structurelle.</strong></div>
           </div>
         </div>
-        <p class="arg-lede">Ce n'est pas une politique de confidentialité. C'est une <strong>impossibilité technique.</strong> Nous ne pouvons pas lire vos documents. Personne ne le peut. Pas même nous.</p>
+        <p class="arg-lede">Ce n'est pas une politique de confidentialité. C'est une <strong>impossibilité technique.</strong> Le document chiffré voyage sur le réseau comme une enveloppe aveugle — lisible par personne. Un seul endroit au monde peut l'ouvrir : l'enclave du bon dispositif, avec la bonne identité Φ. <strong>Nous ne pouvons pas lire vos documents. Personne ne le peut. Pas même nous.</strong></p>
       </div>
     </div>
+
     <div class="arg">
       <div class="arg-num">03</div>
       <div class="arg-body">
@@ -230,6 +234,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <p class="arg-lede">Chaque acte est inscrit dans un journal cryptographiquement chaîné, ancré dans un <strong>compteur monotone matériel</strong> — irréversible, non réinitialisable, gravé dans le silicium. La falsification est structurellement impossible.</p>
       </div>
     </div>
+
     <div class="arg">
       <div class="arg-num">04</div>
       <div class="arg-body">
@@ -247,6 +252,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <p class="arg-lede">Des agences et acteurs malveillants <strong>récoltent déjà</strong> vos échanges chiffrés aujourd'hui, en attendant les ordinateurs quantiques. Avec <em>Φ</em>, ils peuvent récolter. Ils ne déchiffreront jamais.</p>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -258,7 +264,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <tr><th>Critère</th><th>DocuSign · Yousign · Adobe Sign</th><th class="phi-col">Φ</th></tr>
       </thead>
       <tbody>
-        <tr><td>Transport et déchiffrement</td><td class="no">HTTPS standard · documents déchiffrés et accessibles en clair sur leurs serveurs</td><td class="yes phi-data">Chiffrement post-quantique en transit · déchiffrement exclusivement dans l'enclave matérielle de Φ</td></tr>
+        <tr><td>Transport et déchiffrement</td><td class="no">HTTPS standard · documents déchiffrés et accessibles en clair sur leurs serveurs</td><td class="yes phi-data">Chiffrement post-quantique en transit · déchiffrement exclusivement dans l'enclave matérielle du dispositif Φ autorisé</td></tr>
         <tr><td>Lieu de la preuve</td><td class="no">Serveurs tiers</td><td class="yes phi-data">Votre dispositif · Pour toujours</td></tr>
         <tr><td>Cloud Act applicable</td><td class="no">Oui (serveurs US pour DocuSign et Adobe)</td><td class="yes phi-data">Inapplicable — rien à saisir</td></tr>
         <tr><td>Survie si prestataire ferme</td><td class="no">Preuves perdues</td><td class="yes phi-data">Preuves intactes · Autonomes</td></tr>
@@ -343,25 +349,39 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
       <div class="footer-baseline-1">La signature mathématique</div>
       <div class="footer-baseline-2">de votre vie numérique</div>
     </div>
-    <div class="footer-nav">
+    <div class="footer-nav" style="grid-template-columns:1fr 1fr 1fr;gap:40px">
       <div class="footer-col">
         <h4>Comprendre</h4>
         <ul>
           <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
           <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
           <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
           <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
           <li><a href="conformite.html">Conformité</a></li>
           <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
-          <li><a href="lapp-en-action.html">Voir l'app en action</a></li>
           <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
+          <li><a href="lapp-en-action.html">Voir l'app en action</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Professions</h4>
+        <ul>
+          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="professions/justice.html">Justice</a></li>
+          <li><a href="professions/medecins.html">Santé</a></li>
+          <li><a href="professions/banques.html">Banques &amp; finance</a></li>
+          <li><a href="professions/mutuelles-assurances.html">Mutuelles &amp; assurances</a></li>
+          <li><a href="professions/rh-compliance.html">RH &amp; compliance</a></li>
+          <li><a href="professions/journalistes.html">Journalistes</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Accéder</h4>
         <ul>
           <li><a href="tarifications.html">Accéder à Φ</a></li>
-          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="portefeuille-brevets.html">Portefeuille de brevets</a></li>
           <li><a href="vos-suggestions.html">Évaluer</a></li>
           <li><a href="contact.html">Demander une démonstration</a></li>
           <li><a href="contact.html">Nous contacter</a></li>
