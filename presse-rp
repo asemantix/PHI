@@ -1,1 +1,591 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace Presse Φ — Dossier, angles éditoriaux, contacts journalistes · AION ASEMANTIX</title>
+<meta name="description" content="Espace presse de Φ (AION ASEMANTIX) : dossier de presse, kit visuel, angles éditoriaux, citations. Première signature post-quantique sans serveur — Inline-Offline®. Canal confidentiel pour l'investigation journalistique. Brevet FR 2604755.">
+<meta name="keywords" content="presse Phi signature électronique, AION ASEMANTIX dossier presse, journaliste cybersécurité signature post-quantique, souveraineté numérique France, contact presse signature électronique, Inline-Offline presse, Harvest now decrypt never presse, ML-DSA ML-KEM journaliste, espace presse signature sans tiers">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="AION ASEMANTIX">
+<link rel="canonical" href="https://phi-signature.fr/presse-rp.html">
+<meta name="theme-color" content="#0e1c35">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
 
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/presse-rp.html">
+<meta property="og:site_name" content="Φ — AION ASEMANTIX">
+<meta property="og:title" content="Espace Presse Φ — Signature post-quantique sans tiers de confiance · AION ASEMANTIX">
+<meta property="og:description" content="Dossier de presse, kit visuel, angles éditoriaux et contacts. Φ : première infrastructure probatoire sans serveur, post-quantique native. Canal confidentiel dédié aux journalistes d'investigation.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Espace Presse Φ — AION ASEMANTIX">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:publisher" content="https://phi-signature.fr">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@asemantix">
+<meta name="twitter:title" content="Espace Presse Φ — Dossier, angles éditoriaux, contacts · AION ASEMANTIX">
+<meta name="twitter:description" content="Signature post-quantique sans serveur. Canal confidentiel pour l'investigation. Dossier de presse Φ.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<!-- JSON-LD : WebPage + FAQPage + BreadcrumbList + Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://phi-signature.fr/presse-rp.html#webpage",
+      "name": "Espace Presse Φ — AION ASEMANTIX",
+      "url": "https://phi-signature.fr/presse-rp.html",
+      "description": "Espace presse de Φ : dossier de presse, kit visuel, angles éditoriaux, citations citables, contacts. Première signature électronique post-quantique sans serveur.",
+      "inLanguage": "fr",
+      "about": [
+        {"@type": "Thing", "name": "Signature électronique post-quantique", "description": "Infrastructure probatoire sans serveur, sans tiers de confiance, résistante aux ordinateurs quantiques."},
+        {"@type": "Thing", "name": "Inline-Offline®", "description": "Procédé de transmission dans lequel les données traversent Internet chiffrées, sans déchiffrement sur aucun serveur intermédiaire."},
+        {"@type": "Thing", "name": "Harvest now, decrypt never", "description": "Principe architectural de Φ : les communications sont indéchiffrables même par les futurs ordinateurs quantiques."}
+      ],
+      "mentions": [
+        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Fonction G, procédé probatoire"},
+        {"@type": "CreativeWork", "name": "Brevet FR 2604822 — Co-signatures multipartites"},
+        {"@type": "CreativeWork", "name": "Brevet FR 2605317 — Architecture cryptographique post-quantique"},
+        {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
+        {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"},
+        {"@type": "Legislation", "name": "Cloud Act — Clarifying Lawful Overseas Use of Data Act (2018)"}
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "AION ASEMANTIX",
+        "url": "https://phi-signature.fr"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://phi-signature.fr/presse-rp.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que Φ (Phi) d'AION ASEMANTIX ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Φ est la première infrastructure de transmission probatoire et de signature électronique sans serveur, post-quantique native. Elle permet de transmettre des documents et de produire des signatures juridiquement opposables sans dépendance à un tiers de confiance, à un serveur central ou à une autorité de certification commerciale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que le procédé Inline-Offline® de Φ ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inline-Offline® est le procédé breveté de transmission de Φ : les données traversent Internet sous forme d'octets chiffrés indistinguables du bruit aléatoire. Aucun serveur intermédiaire — ni celui d'AION ASEMANTIX, ni ceux des messageries porteuses — ne peut déchiffrer le contenu. Le déchiffrement n'a lieu que dans l'enclave matérielle du dispositif du destinataire légitime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment Φ protège-t-il les sources des journalistes ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Φ permet à un journaliste d'établir un canal confidentiel direct avec une source sans passer par aucun serveur tiers susceptible d'être réquisitionné. Le Canal Φ est structurellement hors d'atteinte du Cloud Act américain et de toute juridiction extraterritoriale, parce qu'aucun serveur AION ASEMANTIX n'existe dans la chaîne de transmission."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi Φ résiste-t-il aux futurs ordinateurs quantiques ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Φ utilise ML-DSA-65 (NIST FIPS 204) pour les signatures et ML-KEM-768 (NIST FIPS 203) pour les échanges de clés — les premiers standards officiels post-quantiques publiés par le NIST en août 2024. Les algorithmes RSA et ECDSA utilisés par les solutions concurrentes (DocuSign, Yousign, ProtonMail) sont cassables par l'algorithme de Shor dès la maturité des ordinateurs quantiques."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Espace Presse", "item": "https://phi-signature.fr/presse-rp.html"}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "AION ASEMANTIX",
+      "url": "https://phi-signature.fr",
+      "email": "asemantix@proton.me",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lyon",
+        "addressCountry": "FR"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0e1c35;
+    --navy-deep: #08111f;
+    --navy-soft: #1a2942;
+    --gold: #c8a84b;
+    --gold-deep: #8b6914;
+    --gold-soft: #e2c87a;
+    --paper: #ffffff;
+    --paper-soft: #fafaf7;
+    --paper-deep: #f4f1e8;
+    --rule: #e6e3dc;
+    --ink: #0e1c35;
+    --ink-muted: #4a5a73;
+    --ink-faded: #8a96a8;
+    --font-display: "Playfair Display", Georgia, serif;
+    --font-mono: "IBM Plex Mono", Consolas, monospace;
+    --font-sans: "IBM Plex Sans", -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .sec-header { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); padding: 16px 48px; display: flex; align-items: center; justify-content: space-between; }
+  .sec-header-back { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .sec-header-back:hover { color: var(--navy); }
+  .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 1.5rem; color: var(--gold-deep); font-weight: 500; text-decoration: none; line-height: 1; }
+  .sec-header-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 11px 20px; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background .2s; }
+  .sec-header-cta:hover { background: var(--navy-deep); }
+  @media(max-width:720px) { .sec-header { padding: 14px 20px; } .sec-header-cta { display: none; } }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 24px 40px 0; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-faded); letter-spacing: 0.12em; text-transform: uppercase; }
+  .breadcrumb a { color: var(--gold-deep); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--navy); }
+  .breadcrumb span { color: var(--gold); }
+
+  /* ── PRESSE CONTAINER ── */
+  .presse-container { max-width: 1100px; margin: 0 auto; padding: 60px 32px; }
+  .presse-hero { padding: 32px 0 56px; }
+  .presse-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 18px; }
+  .presse-h1 { font-family: var(--font-display); font-size: 2.8rem; line-height: 1.15; font-weight: 500; color: var(--navy); margin-bottom: 22px; letter-spacing: -0.012em; max-width: 800px; }
+  .presse-h1 em { font-style: italic; color: var(--gold-deep); font-weight: 500; }
+  .presse-lead { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; line-height: 1.6; color: var(--ink-muted); max-width: 760px; font-weight: 400; }
+
+  .presse-section { margin-bottom: 72px; }
+  .presse-section-title { font-family: var(--font-display); font-size: 1.85rem; line-height: 1.22; font-weight: 500; color: var(--navy); margin-bottom: 20px; letter-spacing: -0.01em; }
+  .presse-section-title em { font-style: italic; color: var(--gold-deep); font-weight: 500; }
+  .presse-text { font-family: var(--font-sans); font-size: 1rem; line-height: 1.78; color: var(--ink); font-weight: 400; margin-bottom: 18px; }
+  .presse-text strong { font-weight: 500; color: var(--navy); }
+  .presse-text em { font-style: italic; color: var(--navy); font-weight: 400; }
+
+  /* USP cards */
+  .usp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 56px 0; }
+  .usp-card { background: var(--navy); color: var(--paper); padding: 40px 36px; border-radius: 6px; border-top: 3px solid var(--gold); }
+  .usp-tag { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-soft); font-weight: 600; margin-bottom: 14px; }
+  .usp-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: var(--paper); margin-bottom: 16px; line-height: 1.2; letter-spacing: -0.008em; }
+  .usp-name em { font-style: italic; color: var(--gold-soft); }
+  .usp-desc { font-family: var(--font-sans); font-size: 0.95rem; line-height: 1.7; color: rgba(250,250,247,0.85); margin-bottom: 20px; font-weight: 400; }
+  .usp-desc strong { color: var(--paper); font-weight: 500; }
+  .usp-desc em { font-style: italic; color: var(--gold-soft); font-weight: 400; }
+  .usp-quote { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; line-height: 1.5; color: var(--gold-soft); padding-top: 18px; border-top: 1px solid rgba(250,250,247,0.15); font-weight: 500; }
+
+  /* Angles éditoriaux */
+  .angles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+  .angle-card { background: var(--paper-soft); border-left: 3px solid var(--gold); padding: 24px 28px; border-radius: 4px; }
+  .angle-num { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold-deep); font-weight: 600; margin-bottom: 10px; text-transform: uppercase; }
+  .angle-title { font-family: var(--font-display); font-size: 1.18rem; line-height: 1.3; font-weight: 500; color: var(--navy); margin-bottom: 12px; letter-spacing: -0.005em; }
+  .angle-text { font-family: var(--font-sans); font-size: 0.92rem; line-height: 1.65; color: var(--ink-muted); font-weight: 400; }
+
+  /* Citations citables */
+  .quotes-block { background: var(--paper-deep); padding: 40px 44px; border-radius: 6px; margin-top: 32px; }
+  .quote-item { padding: 22px 0; border-bottom: 1px solid var(--rule); }
+  .quote-item:last-child { border-bottom: 0; }
+  .quote-text { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; line-height: 1.5; color: var(--navy); font-weight: 500; margin-bottom: 8px; }
+  .quote-text em { font-style: normal; color: var(--gold-deep); font-weight: 600; }
+  .quote-attribution { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.14em; color: var(--ink-muted); text-transform: uppercase; }
+
+  /* Kit ressources */
+  .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px; }
+  .resource-card { background: var(--paper); border: 1px solid var(--rule); padding: 28px 24px; border-radius: 4px; transition: border-color 0.2s; display: block; text-decoration: none; }
+  .resource-card:hover { border-color: var(--gold); }
+  .resource-icon { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.22em; color: var(--gold-deep); font-weight: 600; margin-bottom: 12px; text-transform: uppercase; }
+  .resource-title { font-family: var(--font-display); font-size: 1.12rem; font-weight: 500; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .resource-text { font-family: var(--font-sans); font-size: 0.86rem; line-height: 1.55; color: var(--ink-muted); font-weight: 400; }
+
+  /* Contact bloc */
+  .contact-block { background: var(--navy); color: var(--paper); padding: 48px 44px; border-radius: 6px; margin: 56px 0; }
+  .contact-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-soft); font-weight: 600; margin-bottom: 14px; }
+  .contact-title { font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; color: var(--paper); margin-bottom: 16px; line-height: 1.25; }
+  .contact-title em { font-style: italic; color: var(--gold-soft); }
+  .contact-text { font-family: var(--font-sans); font-size: 0.96rem; line-height: 1.75; color: rgba(250,250,247,0.85); margin-bottom: 20px; max-width: 620px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 28px; }
+  .contact-card { padding: 22px 24px; background: rgba(250,250,247,0.05); border-radius: 4px; border-left: 3px solid var(--gold); }
+  .contact-card-label { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.18em; color: var(--gold-soft); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; }
+  .contact-card-name { font-family: var(--font-display); font-size: 1.05rem; color: var(--paper); margin-bottom: 4px; font-weight: 500; }
+  .contact-card-detail { font-family: var(--font-mono); font-size: 0.8rem; color: rgba(250,250,247,0.75); line-height: 1.55; }
+
+  /* Chiffres-clés */
+  .keynums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 40px 0; border: 1px solid var(--rule); }
+  .keynum-card { padding: 28px 22px; text-align: center; border-right: 1px solid var(--rule); }
+  .keynum-card:last-child { border-right: 0; }
+  .keynum-value { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; color: var(--gold-deep); margin-bottom: 6px; line-height: 1; }
+  .keynum-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.16em; color: var(--ink-muted); text-transform: uppercase; line-height: 1.4; }
+
+  /* Branding inline */
+  em.brand, .brand-em { font-style: italic; font-weight: inherit; color: var(--gold-deep); }
+  sup.reg, .brand-reg { font-size: 0.55em; font-weight: 400; vertical-align: super; margin-left: 0.05em; opacity: 0.85; font-style: normal; }
+
+  /* FOOTER */
+  .footer { background: var(--navy-deep); color: rgba(255,255,255,.75); padding: 80px 48px 40px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(200,168,75,.2); }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 4.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 18px; }
+  .footer-line { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 18px; }
+  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--gold-soft); margin-bottom: 4px; }
+  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(226,200,122,.8); }
+  .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .32em; text-transform: uppercase; color: var(--gold-soft); font-weight: 500; margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; font-weight: 400; }
+  .footer-col a:hover { color: var(--gold-soft); }
+  .footer-meta { border-top: 1px solid rgba(200,168,75,.15); padding-top: 28px; text-align: center; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .18em; color: rgba(255,255,255,.4); line-height: 1.8; }
+  .footer-meta strong { color: var(--gold-soft); font-weight: 500; }
+  @media(max-width:720px) {
+    .footer { padding: 60px 24px 30px; }
+    .footer-phi { font-size: 3.5rem; }
+    .footer-nav { grid-template-columns: 1fr; gap: 32px; }
+    .usp-grid, .angles-grid { grid-template-columns: 1fr; }
+    .resources-grid, .keynums { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .presse-container { padding: 40px 18px; }
+    .presse-h1 { font-size: 1.95rem; }
+    .presse-section-title { font-size: 1.5rem; }
+    .quotes-block, .contact-block { padding: 32px 24px; }
+  }
+  @media(max-width:540px) {
+    .resources-grid, .keynums { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="sec-header">
+  <div style="display:flex;align-items:center;gap:24px">
+    <a href="index.html" class="sec-header-back">← Accueil</a>
+    <a href="index.html" class="sec-header-phi">Φ</a>
+  </div>
+  <a href="tarifications.html" class="sec-header-cta">Accéder à Φ</a>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a> <span>›</span> Espace Presse
+</nav>
+
+<div class="presse-container">
+
+  <!-- HERO -->
+  <div class="presse-hero">
+    <div class="presse-eyebrow">Espace Presse · Journalistes</div>
+    <h1 class="presse-h1">Une infrastructure probatoire qui ne dépend de <em>personne.</em><br><em>Pas même de nous.</em></h1>
+    <p class="presse-lead">
+      <em class="brand">Φ</em> est la première solution au monde qui combine transmission probatoire <em class="brand">Inline-Offline</em><sup class="reg">®</sup>, signature opposable mathématique, et résistance native aux ordinateurs quantiques. Sans serveur. Sans cloud. Sans tiers de confiance. Cette page rassemble les éléments dont vous pouvez avoir besoin pour écrire ou parler de nous.
+    </p>
+  </div>
+
+  <!-- USP — les 2 arguments-clés -->
+  <section class="presse-section">
+    <h2 class="presse-section-title">Deux arguments<br><em>qu'aucun acteur du marché ne peut tenir.</em></h2>
+    <p class="presse-text">
+      Pour un journaliste qui découvre <em class="brand">Φ</em>, deux propriétés architecturales suffisent à comprendre pourquoi cette solution ouvre une catégorie qui n'existait pas. Toutes les autres caractéristiques en découlent.
+    </p>
+
+    <div class="usp-grid">
+
+      <div class="usp-card">
+        <div class="usp-tag">USP n°1 · Architecture</div>
+        <h3 class="usp-name">Le canal <em>Inline-Offline<sup style="font-size:.55em;font-style:normal;">®</sup></em></h3>
+        <p class="usp-desc">
+          Le document n'est <strong>jamais déchiffré chez un opérateur</strong>. Il transite chiffré entre l'enclave matérielle de l'émetteur et celle du destinataire — la messagerie qui le porte (Gmail, Outlook, n'importe laquelle) ne voit que des octets indistincts. <strong>Aucun serveur AION ASEMANTIX n'existe</strong> dans la chaîne. Le procédé fonctionne <em>par construction architecturale</em>, pas par engagement contractuel.
+        </p>
+        <p class="usp-desc">
+          Là où WhatsApp, Signal, ProtonMail chiffrent dans les tuyaux mais déchiffrent à l'arrivée sur leur plateforme, <em class="brand">Φ</em> ne possède aucune plateforme à atteindre. <strong>Le contenu n'existe en clair que dans l'enclave des deux dispositifs légitimes</strong>.
+        </p>
+        <div class="usp-quote">
+          « Nous, nous n'avons pas de chez nous. »
+        </div>
+      </div>
+
+      <div class="usp-card">
+        <div class="usp-tag">USP n°2 · Résistance</div>
+        <h3 class="usp-name">La réponse <em>post-quantique</em></h3>
+        <p class="usp-desc">
+          Tout ce qui est intercepté aujourd'hui — chiffré ou non — pourra être déchiffré demain par les ordinateurs quantiques. La menace s'appelle <em>Harvest now, decrypt later</em> : des États stockent en ce moment même des téraoctets de communications chiffrées en attendant la puissance de calcul.
+        </p>
+        <p class="usp-desc">
+          <em class="brand">Φ</em> utilise <strong>ML-DSA-65 et ML-KEM-768</strong>, les standards post-quantiques validés par le NIST en août 2024. Une preuve produite aujourd'hui restera mathématiquement opposable et confidentielle dans dix, vingt, cinquante ans — y compris face à un futur ordinateur quantique. Procédé déposé sous le brevet <strong>FR 2605317</strong>.
+        </p>
+        <div class="usp-quote">
+          <em>Harvest now, decrypt never</em><sup style="font-size:.55em;font-style:normal;">™</sup>.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHIFFRES-CLÉS -->
+  <section class="presse-section">
+    <h2 class="presse-section-title">Chiffres-clés.</h2>
+    <div class="keynums">
+      <div class="keynum-card">
+        <div class="keynum-value">60</div>
+        <div class="keynum-label">Inventions brevetées<br>8 familles techniques</div>
+      </div>
+      <div class="keynum-card">
+        <div class="keynum-value">0</div>
+        <div class="keynum-label">Serveur dans la chaîne<br>de transmission</div>
+      </div>
+      <div class="keynum-card">
+        <div class="keynum-value">5 €</div>
+        <div class="keynum-label">Par mois<br>plan Solo particuliers</div>
+      </div>
+      <div class="keynum-card">
+        <div class="keynum-value">2024</div>
+        <div class="keynum-label">Standards NIST<br>ML-DSA / ML-KEM intégrés</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANGLES ÉDITORIAUX -->
+  <section class="presse-section">
+    <h2 class="presse-section-title">Angles <em>éditoriaux possibles.</em></h2>
+    <p class="presse-text">
+      <em class="brand">Φ</em> se prête à plusieurs angles selon la ligne éditoriale du média. Voici quelques pistes pour vous orienter — non exhaustives, et toutes documentables avec la fondatrice ou ses conseillers techniques.
+    </p>
+
+    <div class="angles-grid">
+
+      <div class="angle-card">
+        <div class="angle-num">Angle 01 · Tech &amp; Cybersécurité</div>
+        <h3 class="angle-title">La première signature électronique sans serveur, post-quantique native</h3>
+        <p class="angle-text">Démonstration technique du procédé Inline-Offline®, intégration ML-DSA-65 / ML-KEM-768, comparaison avec DocuSign / Adobe Sign / Yousign, explication de la fonction G probatoire. Public : développeurs, RSSI, cryptographes.</p>
+      </div>
+
+      <div class="angle-card">
+        <div class="angle-num">Angle 02 · Souveraineté numérique</div>
+        <h3 class="angle-title">Une alternative française au Cloud Act et aux GAFAM</h3>
+        <p class="angle-text">Pour la première fois, un acteur français propose une infrastructure probatoire totalement déconnectée des serveurs étrangers. Aucune juridiction ne peut réquisitionner ce qui n'existe nulle part. Public : médias politiques, économique, défense, ANSSI.</p>
+      </div>
+
+      <div class="angle-card">
+        <div class="angle-num">Angle 03 · Démocratisation</div>
+        <h3 class="angle-title">La confidentialité absolue à 5 € par mois</h3>
+        <p class="angle-text">Politique commerciale mass market : recevoir gratuit à vie, plan particulier à 5 €/mois, plan pro à 120 €/an. La confidentialité top secret structurelle n'est plus réservée aux ministères et aux grands cabinets. Public : médias grand public, France Inter, podcasts citoyens.</p>
+      </div>
+
+      <div class="angle-card">
+        <div class="angle-num">Angle 04 · Portrait fondatrice</div>
+        <h3 class="angle-title">Une trajectoire singulière : commerciale IBM, entrepreneur 1991, théoricienne du temps</h3>
+        <p class="angle-text">La fondatrice d'AION ASEMANTIX vient du commerce, pas de la technique. Elle a pourtant déposé des brevets internationaux dans plusieurs domaines (flacon plastique anti-hystérésis, cosmologie du temps endogène, et désormais signature probatoire). Public : médias économiques, French Tech, Madame Figaro.</p>
+      </div>
+
+      <div class="angle-card">
+        <div class="angle-num">Angle 05 · Sciences &amp; cosmologie</div>
+        <h3 class="angle-title">L'ontologie du temps endogène, du nautile à la signature numérique</h3>
+        <p class="angle-text">L'écosystème AION ASEMANTIX descend d'une définition fondatrice : le temps est endogène aux systèmes, propriété intrinsèque de l'énergie dissipative. La fonction Φ au cœur du procédé reproduit, dans le silicium, la logique mathématique selon laquelle l'univers produit ses preuves d'existence. Public : médias culturels, sciences, podcasts ontologie.</p>
+      </div>
+
+      <div class="angle-card">
+        <div class="angle-num">Angle 06 · Géopolitique &amp; quantique</div>
+        <h3 class="angle-title">Harvest now, decrypt never — la course contre les ordinateurs quantiques</h3>
+        <p class="angle-text">États-Unis, Chine, Russie stockent aujourd'hui des téraoctets de communications chiffrées en attendant la puissance quantique. <em class="brand">Φ</em> est conçue pour résister non pas aux ordinateurs actuels, mais à ceux des années 2030–2040. Sujet géopolitique, technologique, prospectif. Public : médias internationaux, défense, prospective.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CITATIONS CITABLES -->
+  <section class="presse-section">
+    <h2 class="presse-section-title">Citations <em>prêtes à l'emploi.</em></h2>
+    <p class="presse-text">
+      Si vous avez besoin de citations brèves et frappantes pour ouvrir, illustrer ou conclure un papier, voici quelques formulations issues de notre architecture éditoriale. Vous pouvez les utiliser librement, en attribution à la fondatrice d'AION ASEMANTIX ou à <em class="brand">Φ</em>.
+    </p>
+
+    <div class="quotes-block">
+
+      <div class="quote-item">
+        <p class="quote-text">« Eux disent <em>bout-en-bout</em> et déchiffrent chez eux. Nous, nous n'avons pas de chez nous. »</p>
+        <p class="quote-attribution">AION ASEMANTIX · Fondatrice</p>
+      </div>
+
+      <div class="quote-item">
+        <p class="quote-text">« Le top secret n'est pas un palier. <em>C'est notre architecture.</em> »</p>
+        <p class="quote-attribution">AION ASEMANTIX · Fondatrice</p>
+      </div>
+
+      <div class="quote-item">
+        <p class="quote-text">« Si AION ASEMANTIX disparaissait demain, Φ continuerait de fonctionner. <em>Vos preuves resteraient opposables.</em> »</p>
+        <p class="quote-attribution">AION ASEMANTIX · Fondatrice</p>
+      </div>
+
+      <div class="quote-item">
+        <p class="quote-text">« Le papier sort. <em>Le numérique reste chiffré.</em> »</p>
+        <p class="quote-attribution">AION ASEMANTIX · Architecture Inline-Offline®</p>
+      </div>
+
+      <div class="quote-item">
+        <p class="quote-text">« Une signature électronique selon Φ est, dans son principe mathématique, le même objet qu'une coquille de nautile : un système qui dissipe son énergie en préservant son intégrité, et qui produit, à chaque instant, <em>une trace inviolable de ce qu'il était à l'instant précédent.</em> »</p>
+        <p class="quote-attribution">AION ASEMANTIX · Page « Pourquoi Φ »</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESSOURCES -->
+  <section class="presse-section">
+    <h2 class="presse-section-title">Kit <em>ressources.</em></h2>
+    <p class="presse-text">
+      Logos, biographie de la fondatrice, fiche technique brevets, captures d'écran de l'application — tout ce dont vous avez besoin pour illustrer un papier.
+    </p>
+
+    <div class="resources-grid">
+
+      <a href="#" class="resource-card">
+        <div class="resource-icon">PDF · 1.2 Mo</div>
+        <div class="resource-title">Dossier de presse complet</div>
+        <div class="resource-text">Présentation AION ASEMANTIX, parcours fondatrice, brevets détaillés, architecture technique, roadmap.</div>
+      </a>
+
+      <a href="#" class="resource-card">
+        <div class="resource-icon">ZIP · Logos &amp; visuels</div>
+        <div class="resource-title">Kit visuel Φ</div>
+        <div class="resource-text">Logos PNG/SVG haute définition, fonds clairs et sombres, captures d'écran de l'app, charte couleurs.</div>
+      </a>
+
+      <a href="portefeuille-brevets.html" class="resource-card">
+        <div class="resource-icon">PDF · Fiche technique</div>
+        <div class="resource-title">Portefeuille de brevets</div>
+        <div class="resource-text">FR 2604755 (Fonction G), FR 2604822 (PACT), FR 2605317 (post-quantique), divisionnaire en cours. 60 inventions, 8 familles.</div>
+      </a>
+
+      <a href="#" class="resource-card">
+        <div class="resource-icon">PDF · 8 pages</div>
+        <div class="resource-title">Livre blanc — architecture probatoire</div>
+        <div class="resource-text">Description technique du procédé, pour lecteurs avertis (RSSI, cryptographes, experts judiciaires).</div>
+      </a>
+
+      <a href="#" class="resource-card">
+        <div class="resource-icon">JPEG · HD</div>
+        <div class="resource-title">Photographies fondatrice</div>
+        <div class="resource-text">Plusieurs cadrages disponibles, format portrait et paysage. Crédits à mentionner précisés en métadonnées.</div>
+      </a>
+
+      <a href="lapp-en-action.html" class="resource-card">
+        <div class="resource-icon">Lien · YouTube</div>
+        <div class="resource-title">Démonstration vidéo</div>
+        <div class="resource-text">Présentation de l'app de bout en bout, du scellement initial à la vérification probatoire. 4 min 20.</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CONTACT PRESSE -->
+  <section class="presse-section">
+    <div class="contact-block">
+      <div class="contact-eyebrow">Contact direct</div>
+      <h2 class="contact-title">Une question, un papier en cours,<br>une <em>interview à programmer ?</em></h2>
+      <p class="contact-text">
+        Nous sommes une structure légère et nous répondons vite. Pour les demandes presse — interviews, fact-checking, démonstrations, expertise technique sur la cryptographie ou la souveraineté numérique — un seul interlocuteur. Pour les sujets sensibles (sources protégées, journalisme d'investigation), un canal dédié est disponible sur demande.
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <div class="contact-card-label">Presse générale</div>
+          <div class="contact-card-name">Direction AION ASEMANTIX</div>
+          <div class="contact-card-detail">asemantix@proton.me<br>+33 (0)1 — sur demande</div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-label">Sources protégées · Investigation</div>
+          <div class="contact-card-name">Canal sécurisé dédié</div>
+          <div class="contact-card-detail">Communiqué chiffré sur demande<br>via <em>Φ</em> elle-même</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI MAINTENANT -->
+  <section class="presse-section">
+    <h2 class="presse-section-title">Pourquoi <em>maintenant ?</em></h2>
+    <p class="presse-text">
+      Le moment <em class="brand">Φ</em> est le résultat d'une convergence de plusieurs facteurs simultanés. Pour un journaliste, c'est exactement ce qui rend ce sujet d'actualité <em>aujourd'hui</em>, pas dans cinq ans.
+    </p>
+    <ul style="font-family: var(--font-sans); font-size: 1rem; line-height: 1.85; color: var(--ink); padding-left: 22px; margin-bottom: 24px; font-weight: 400;">
+      <li><strong>Standards post-quantiques NIST publiés en août 2024</strong> — le cadre normatif existe désormais, Φ en est l'une des premières applications industrielles européennes.</li>
+      <li><strong>Cloud Act sous tension renouvelée</strong> avec les évolutions géopolitiques 2025-2026 — la souveraineté numérique européenne devient un sujet politique majeur.</li>
+      <li><strong>Multiplication des fuites de données chez les acteurs cloud majeurs</strong> — la promesse "bout-en-bout" perd sa crédibilité auprès du grand public et des professions sensibles.</li>
+      <li><strong>Maturité de l'IA générative</strong> qui rend possible la conception industrielle complète d'un produit cryptographique avancé par une fondatrice non-technicienne, en accélérant les cycles R&amp;D.</li>
+    </ul>
+    <p class="presse-text">
+      <em class="brand">Φ</em> n'est donc pas un produit cherchant son moment. C'est une réponse architecturale qui arrive précisément quand <strong>le réel l'exige</strong>.
+    </p>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature mathématique</div>
+      <div class="footer-baseline-2">de votre vie numérique</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+          <li><a href="portefeuille-brevets.html">Portefeuille de brevets</a></li>
+          <li><a href="lapp-en-action.html">Voir l'app en action</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="a-propos/aion.html">À propos</a></li>
+          <li><a href="assistance.html">Assistance</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ-quand-docusign-existe.html">Pourquoi Φ quand DocuSign existe ?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>AION ASEMANTIX</strong> · Lyon, France · asemantix@proton.me<br>
+      FR 2604755 · FR 2605317 · Brevet divisionnaire en cours<br>
+      © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
