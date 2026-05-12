@@ -164,8 +164,6 @@
 :root{--navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#1a2942;--gold:#c8a84b;--gold-deep:#8b6914;--gold-soft:#e2c87a;--ink:#1d2330;--ink-muted:#4a5163;--ink-faded:#6c7384;--paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;--rule:#e6e3dc;--font-d:"Playfair Display",Georgia,serif;--font-m:"IBM Plex Mono","SF Mono",Menlo,monospace;--font-s:"IBM Plex Sans",-apple-system,system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-weight:300;-webkit-font-smoothing:antialiased}
- 
-/* HEADER */
 .sec-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
 .sec-header-back{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
 .sec-header-back:hover{color:var(--navy)}
@@ -174,15 +172,11 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-wei
 .sec-header-cta:hover{background:var(--navy-deep)}
 .sec-header-cta .phi-cta{font-family:var(--font-d);font-style:italic;font-size:.9rem;margin-left:4px;letter-spacing:0;color:var(--gold-soft)}
 @media(max-width:720px){.sec-header{padding:0 24px}.sec-header-cta{display:none}}
- 
-/* BREADCRUMB */
 .breadcrumb{padding:24px 64px 0;max-width:960px;margin:0 auto;font-family:var(--font-m);font-size:.62rem;color:var(--ink-faded);letter-spacing:.18em;text-transform:uppercase;font-weight:500}
 .breadcrumb a{color:var(--gold-deep);text-decoration:none}
 .breadcrumb a:hover{color:var(--navy)}
 .breadcrumb-sep{margin:0 10px;opacity:.5;color:var(--gold)}
 @media(max-width:720px){.breadcrumb{padding:16px 24px 0}}
- 
-/* HERO */
 .hero{background:var(--navy);padding:72px 64px 64px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.018) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
 .hero-halo{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(200,168,75,.065) 0%,transparent 62%);pointer-events:none}
@@ -193,14 +187,10 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-wei
 .hero-title em{font-style:italic;color:var(--gold-soft)}
 .hero-sub{font-family:var(--font-d);font-style:italic;font-size:1.1rem;color:rgba(250,250,247,.5);line-height:1.65;max-width:640px;margin-top:20px}
 .hero-rule{width:60px;height:1px;background:var(--gold);opacity:.5;margin:28px 0}
- 
-/* ANSWER BAND */
 .answer-band{background:var(--paper-deep);padding:48px 64px;border-bottom:1px solid var(--rule)}
 .answer-inner{max-width:960px;margin:0 auto}
 .answer-text{font-family:var(--font-d);font-size:clamp(1.15rem,2vw,1.5rem);font-weight:500;color:var(--navy);line-height:1.55;letter-spacing:-.01em}
 .answer-text em{font-style:italic;color:var(--gold-deep)}
- 
-/* LE DEAL INVISIBLE */
 .deal-sec{padding:80px 64px;background:var(--paper-soft);border-bottom:2px solid var(--rule)}
 .deal-inner{max-width:960px;margin:0 auto}
 .deal-ey{font-family:var(--font-m);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px;font-weight:500}
@@ -210,12 +200,10 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-wei
 .deal-text{font-family:var(--font-s);font-size:1.02rem;color:var(--ink-muted);line-height:1.85;font-weight:300;margin-bottom:22px}
 .deal-text em{font-style:italic;color:var(--navy);font-weight:500}
 .deal-text strong{color:var(--ink);font-weight:500}
-.deal-list{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--ink-muted);line-height:2.1;padding-left:0;list-style:none;margin-bottom:22px;border-left:2px solid rgba(200,168,75,.3);padding-left:20px}
+.deal-list{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--ink-muted);line-height:2.1;list-style:none;margin-bottom:22px;border-left:2px solid rgba(200,168,75,.3);padding-left:20px}
 .deal-list li::before{content:"·  ";color:var(--gold-deep);font-style:normal}
 .deal-quote{margin-top:40px;padding:32px 36px;background:var(--navy);border-left:4px solid var(--gold);border-radius:2px;font-family:var(--font-d);font-size:1.32rem;font-weight:600;color:var(--paper);line-height:1.7;font-style:normal}
 .deal-quote span{display:block;margin-top:16px;font-size:1rem;font-style:italic;color:var(--gold-soft);font-weight:400}
- 
-/* ARGS */
 .args{padding:80px 64px;background:var(--paper)}
 .args-inner{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:0}
 .args-header{margin-bottom:0}
@@ -236,8 +224,6 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-wei
 .arg-col-text .strike{text-decoration:line-through;opacity:.45}
 .arg-lede{font-family:var(--font-d);font-style:italic;font-size:1rem;color:var(--ink-muted);line-height:1.7;max-width:680px}
 .arg-lede strong{font-style:normal;font-weight:500;color:var(--navy)}
- 
-/* TABLE */
 .table-sec{padding:0 64px 80px;background:var(--paper)}
 .table-inner{max-width:960px;margin:0 auto}
 .table-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:28px}
@@ -251,8 +237,6 @@ td:first-child{color:var(--ink);font-weight:400}
 td.yes{color:#2d6a4f;font-weight:500}
 td.no{color:#a33030}
 td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
- 
-/* HARVEST */
 .harvest-sec{background:var(--navy);padding:72px 64px}
 .harvest-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .harvest-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:rgba(200,168,75,.6);margin-bottom:16px}
@@ -265,8 +249,6 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .harvest-item-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,168,75,.6);margin-bottom:6px}
 .harvest-item-text{font-family:var(--font-s);font-size:.85rem;color:rgba(250,250,247,.6);line-height:1.55;font-weight:300}
 .harvest-item-text strong{color:var(--paper);font-weight:500}
- 
-/* TRUST */
 .trust-sec{background:var(--paper-deep);padding:72px 64px}
 .trust-inner{max-width:960px;margin:0 auto}
 .trust-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px}
@@ -278,8 +260,6 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .trust-item-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
 .trust-item-title{font-family:var(--font-d);font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.25}
 .trust-item-body{font-family:var(--font-s);font-size:.82rem;color:var(--ink-muted);line-height:1.65;font-weight:300}
- 
-/* CTA */
 .cta-sec{background:var(--navy);padding:90px 64px;text-align:center}
 .cta-inner{max-width:640px;margin:0 auto}
 .cta-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:rgba(200,168,75,.55);margin-bottom:18px}
@@ -292,8 +272,6 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .btn-ghost{padding:15px 36px;background:transparent;color:rgba(250,250,247,.65);text-decoration:none;font-family:var(--font-m);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;border:1px solid rgba(200,168,75,.3);border-radius:3px;transition:all .2s}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 .cta-brevets{font-family:var(--font-m);font-size:.62rem;color:rgba(200,168,75,.35);letter-spacing:.15em;line-height:2}
- 
-/* FOOTER */
 .footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:60px 48px 36px}
 .footer-inner{max-width:1100px;margin:0 auto}
 .footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(200,168,75,.2)}
@@ -310,7 +288,6 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .footer-link-special:hover{color:var(--gold-soft)!important;border-color:var(--gold)!important}
 .footer-meta{border-top:1px solid rgba(200,168,75,.15);padding-top:22px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
 .footer-meta strong{color:var(--gold-soft);font-weight:500}
- 
 @media(max-width:860px){
   .hero,.answer-band,.deal-sec,.args,.table-sec,.harvest-sec,.trust-sec,.cta-sec{padding-left:24px;padding-right:24px}
   .arg{grid-template-columns:1fr;gap:12px}
@@ -352,25 +329,31 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 <!-- ANSWER BAND -->
 <div class="answer-band">
   <div class="answer-inner">
-    <p class="answer-text">DocuSign signe. <em>Φ</em> <em>prouve.</em><br>DocuSign stocke. <em>Φ</em> <em>ignore.</em><br>DocuSign dépend d'eux. <em>Φ</em> <em>dépend de vous.</em></p>
+    <p class="answer-text">
+      DocuSign signe. <em>Φ</em> <em>prouve.</em><br>
+      DocuSign stocke. <em>Φ</em> <em>ignore.</em><br>
+      DocuSign dépend d'eux. <em>Φ</em> <em>dépend de vous.</em><br>
+      DocuSign authentifie avec un SMS. <em>Φ</em> <em>authentifie avec votre visage vivant.</em>
+    </p>
   </div>
 </div>
  
-<!-- LE DEAL INVISIBLE — argument fondateur, avant tout le reste -->
+<!-- LE DEAL INVISIBLE -->
 <section class="deal-sec" id="le-deal">
   <div class="deal-inner">
     <div class="deal-ey">Avant d'aller plus loin</div>
     <h2 class="deal-title">Un code SMS.<br><em>En échange de tout.</em></h2>
     <div class="deal-bloc">
       <p class="deal-text">
-        Le code SMS ne vaut techniquement presque rien. C'est une friction minimale — un geste symbolique, 
-        quatre chiffres reçus sur un téléphone. Mais en l'acceptant, le signataire ne signe pas seulement 
-        un document. <em>Il dépose.</em>
+        Le code SMS ne vaut techniquement presque rien. C'est une friction minimale — un geste symbolique,
+        quatre chiffres reçus sur un téléphone. Il ne prouve pas que vous êtes vivant. Il ne prouve pas
+        que vous êtes présent. Il ne prouve pas que vous avez lu. Mais en l'acceptant, le signataire
+        ne signe pas seulement un document. <em>Il dépose.</em>
       </p>
       <p class="deal-text">
-        Derrière ce code, DocuSign, Adobe Sign et Yousign héritent — légalement, contractuellement, 
-        avec votre accord implicite inscrit dans leurs conditions générales — de l'intégralité du contenu 
-        que vous leur confiez. Chaque acte. Chaque document. Chaque secret professionnel que vous avez 
+        Derrière ce code, DocuSign, Adobe Sign et Yousign héritent — légalement, contractuellement,
+        avec votre accord implicite inscrit dans leurs conditions générales — de l'intégralité du contenu
+        que vous leur confiez. Chaque acte. Chaque document. Chaque secret professionnel que vous avez
         fait transiter par leur plateforme :
       </p>
       <ul class="deal-list">
@@ -384,26 +367,26 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <li>Testaments, donations, actes de propriété</li>
       </ul>
       <p class="deal-text">
-        Multipliés par des millions d'utilisateurs. Accumulés sur des décennies. 
+        Multipliés par des millions d'utilisateurs. Accumulés sur des décennies.
         Hébergés sur AWS, sur Azure — <em>sous juridiction américaine.</em>
       </p>
       <p class="deal-text">
-        C'est le deal le plus déséquilibré de l'économie numérique. Le signataire croit qu'il signe. 
-        En réalité, il dépose les trésors documentaires de sa vie professionnelle et personnelle 
+        C'est le deal le plus déséquilibré de l'économie numérique. Le signataire croit qu'il signe.
+        En réalité, il dépose les trésors documentaires de sa vie professionnelle et personnelle
         dans un coffre dont il <strong>ne détient pas la serrure.</strong>
       </p>
       <p class="deal-text">
-        Et le Cloud Act referme le piège. Ce n'est pas seulement que DocuSign 
-        <em>peut</em> lire ce que vous avez confié. C'est que les autorités américaines 
-        <em>peuvent exiger</em> — sans vous en informer, sans recours possible devant une juridiction 
-        française ou européenne — l'accès à tout ce que vous avez déposé. 
+        Et le Cloud Act referme le piège. Ce n'est pas seulement que DocuSign
+        <em>peut</em> lire ce que vous avez confié. C'est que les autorités américaines
+        <em>peuvent exiger</em> — sans vous en informer, sans recours possible devant une juridiction
+        française ou européenne — l'accès à tout ce que vous avez déposé.
         Sur simple injonction. Sans procès contradictoire. Sans appel.
       </p>
       <blockquote class="deal-quote">
         Φ ne stocke rien.<br>
         Il n'y a rien à déposer.<br>
         Il n'y a rien à réquisitionner.
-        <span>La preuve vit dans votre enclave matérielle — pas dans la leur.</span>
+        <span>La preuve vit dans votre enclave matérielle — scellée par votre visage vivant. Pas dans la leur.</span>
       </blockquote>
     </div>
   </div>
@@ -418,24 +401,26 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
       <p class="args-intro">Voici pourquoi cette différence est structurelle — pas contractuelle. Pas une politique de confidentialité. Une impossibilité technique.</p>
     </div>
  
+    <!-- ARG 01 -->
     <div class="arg">
       <div class="arg-num">01</div>
       <div class="arg-body">
-        <h2 class="arg-title">DocuSign signe.<br><em>Φ</em> <em>prouve.</em></h2>
+        <h2 class="arg-title">DocuSign signe.<br><em>Φ</em> <em>prouve — et identifie.</em></h2>
         <div class="arg-compare">
           <div class="arg-col theirs">
             <div class="arg-col-label">DocuSign · Yousign · Adobe Sign</div>
-            <div class="arg-col-text">La preuve de votre signature <strong>vit sur leurs serveurs.</strong> Vous dépendez de leur survie, de leur conformité, de leur bonne volonté. En cas de litige, vous leur demandez un certificat — avec délais, frais, dépendance.</div>
+            <div class="arg-col-text">La preuve de votre signature <strong>vit sur leurs serveurs.</strong> L'identité du signataire repose sur un code SMS — qui ne prouve ni la présence physique, ni la vie, ni la lecture du document. En cas de litige, vous leur demandez un certificat — avec délais, frais, dépendance.</div>
           </div>
           <div class="arg-col">
             <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text">La preuve vit <strong>dans votre dispositif.</strong> Dans l'enclave matérielle de votre iPhone ou Android. Exportable. Vérifiable par tout expert judiciaire. <strong>Sans nous.</strong> Même si <em>Φ</em> disparaît demain.</div>
+            <div class="arg-col-text">La preuve vit <strong>dans votre dispositif.</strong> L'identité du signataire est établie par <strong>Face ID liveness</strong> — présence physique prouvée, personne vivante, à cet instant précis — combinée à l'empreinte digitale et à l'enclave matérielle. Exportable. Vérifiable par tout expert judiciaire. <strong>Sans nous.</strong> Même si <em>Φ</em> disparaît demain.</div>
           </div>
         </div>
-        <p class="arg-lede">La valeur cryptographique G est calculée, scellée et conservée localement. Un juge peut la <strong>recalculer</strong> avec votre doigt, votre téléphone et le document original. Pas besoin de nous. Pas besoin de DocuSign. Pas besoin de personne.</p>
+        <p class="arg-lede">La valeur cryptographique G est calculée, scellée et conservée localement. Un juge peut la <strong>recalculer</strong> avec votre visage en mouvement, votre empreinte, votre téléphone et le document original. Pas besoin de nous. Pas besoin de DocuSign. Pas besoin de personne.</p>
       </div>
     </div>
  
+    <!-- ARG 02 -->
     <div class="arg">
       <div class="arg-num">02</div>
       <div class="arg-body">
@@ -454,6 +439,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
       </div>
     </div>
  
+    <!-- ARG 03 -->
     <div class="arg">
       <div class="arg-num">03</div>
       <div class="arg-body">
@@ -465,13 +451,14 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
           </div>
           <div class="arg-col">
             <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text">La preuve <em>Φ</em> est <strong>autonome.</strong> Elle vit dans deux dispositifs — le vôtre et celui de votre signataire. Journal chaîné, scellé dans l'enclave hardware. Inaltérable. <strong>Pour toujours.</strong></div>
+            <div class="arg-col-text">La preuve <em>Φ</em> est <strong>autonome.</strong> Elle vit dans deux dispositifs — le vôtre et celui de votre signataire. Journal chaîné, scellé dans l'enclave hardware par liveness biométrique. Inaltérable. <strong>Pour toujours.</strong></div>
           </div>
         </div>
         <p class="arg-lede">Chaque acte est inscrit dans un journal cryptographiquement chaîné, ancré dans un <strong>compteur monotone matériel</strong> — irréversible, non réinitialisable, gravé dans le silicium. La falsification est structurellement impossible.</p>
       </div>
     </div>
  
+    <!-- ARG 04 -->
     <div class="arg">
       <div class="arg-num">04</div>
       <div class="arg-body">
@@ -479,14 +466,14 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <div class="arg-compare">
           <div class="arg-col theirs">
             <div class="arg-col-label">DocuSign · Yousign · Adobe Sign</div>
-            <div class="arg-col-text">RSA. AES-128. Des standards des années 1990. <strong>Les ordinateurs quantiques les casseront</strong> d'ici 2027–2029 (IBM Starling). Les données récoltées aujourd'hui seront déchiffrées demain.</div>
+            <div class="arg-col-text">RSA. AES-128. Des standards des années 1990. <strong>Les ordinateurs quantiques les casseront</strong> d'ici 2027–2029 (IBM Starling). Les données capturées aujourd'hui seront déchiffrées demain.</div>
           </div>
           <div class="arg-col">
             <div class="arg-col-label gold">Φ</div>
             <div class="arg-col-text"><strong>ML-DSA-65 · ML-KEM-768.</strong> Standardisés par le NIST en août 2024 après 8 ans de compétition mondiale. Résistants aux ordinateurs quantiques connus et anticipés. <strong>Harvest now, decrypt never.™</strong></div>
           </div>
         </div>
-        <p class="arg-lede">Des agences et acteurs malveillants <strong>récoltent déjà</strong> vos échanges chiffrés aujourd'hui, en attendant les ordinateurs quantiques. Avec <em>Φ</em>, ils peuvent récolter. Ils ne déchiffreront jamais.</p>
+        <p class="arg-lede">Des agences et acteurs malveillants <strong>capturent déjà</strong> vos échanges chiffrés aujourd'hui, en attendant les ordinateurs quantiques. Avec <em>Φ</em>, ils peuvent capturer. Ils ne déchiffreront jamais.</p>
       </div>
     </div>
  
@@ -504,6 +491,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
       <tbody>
         <tr><td>Transport et déchiffrement</td><td class="no">HTTPS standard · documents déchiffrés et accessibles en clair sur leurs serveurs</td><td class="yes phi-data">Chiffrement post-quantique en transit · déchiffrement exclusivement dans l'enclave matérielle du dispositif Φ autorisé</td></tr>
         <tr><td>Lieu de la preuve</td><td class="no">Serveurs tiers</td><td class="yes phi-data">Votre dispositif · Pour toujours</td></tr>
+        <tr><td>Authentification du signataire</td><td class="no">Code SMS à 4 chiffres · présence physique non prouvée</td><td class="yes phi-data">Face ID liveness + empreinte + enclave · personne vivante, présente, à cet instant précis</td></tr>
         <tr><td>Cloud Act applicable</td><td class="no">Oui (serveurs US pour DocuSign et Adobe)</td><td class="yes phi-data">Inapplicable — rien à saisir</td></tr>
         <tr><td>Survie si prestataire ferme</td><td class="no">Preuves perdues</td><td class="yes phi-data">Preuves intactes · Autonomes</td></tr>
         <tr><td>Vérification sans tiers</td><td class="no">Non</td><td class="yes phi-data">Oui · Par tout expert ou juge</td></tr>
@@ -523,7 +511,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
     <div class="harvest-left">
       <div class="harvest-ey">Résistance post-quantique</div>
       <h2 class="harvest-title">Harvest now,<br>decrypt <em>never.™</em></h2>
-      <p class="harvest-body">Les États, les services de renseignement et les acteurs malveillants <strong>récoltent aujourd'hui</strong> des échanges chiffrés qu'ils ne peuvent pas encore lire — dans l'attente des ordinateurs quantiques.<br><br>Avec <em>Φ</em>, la récolte est inutile. Le chiffrement post-quantique garantit que <strong>la clé ne sera jamais reconstituée.</strong> Pas dans 10 ans. Pas dans 30 ans.</p>
+      <p class="harvest-body">Les États, les services de renseignement et les acteurs malveillants <strong>capturent aujourd'hui</strong> des échanges chiffrés qu'ils ne peuvent pas encore lire — dans l'attente des ordinateurs quantiques.<br><br>Avec <em>Φ</em>, la capture est inutile. Le chiffrement post-quantique garantit que <strong>la clé ne sera jamais reconstituée.</strong> Pas dans 10 ans. Pas dans 30 ans.</p>
     </div>
     <div class="harvest-right">
       <div class="harvest-item">
@@ -552,17 +540,17 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
       <div class="trust-item">
         <div class="trust-item-tag">Pour les notaires &amp; avocats</div>
         <div class="trust-item-title">Vos actes vous appartiennent</div>
-        <div class="trust-item-body">La preuve vit dans votre cabinet. Pas chez DocuSign, pas chez Adobe, pas chez Yousign. Vos clients, vos actes, votre souveraineté.</div>
+        <div class="trust-item-body">La preuve vit dans votre cabinet. Pas chez DocuSign, pas chez Adobe, pas chez Yousign. Le consentement est établi par liveness biométrique — pas par un SMS.</div>
       </div>
       <div class="trust-item">
         <div class="trust-item-tag">Pour les DSI &amp; RSSI</div>
         <div class="trust-item-title">Zéro surface d'attaque serveur</div>
-        <div class="trust-item-body">Aucun serveur à protéger. Aucune donnée à chiffrer côté infrastructure. Conformité RGPD structurelle, pas contractuelle.</div>
+        <div class="trust-item-body">Aucun serveur à protéger. Aucune donnée à chiffrer côté infrastructure. Conformité RGPD structurelle, pas contractuelle. L'identité biométrique ne quitte jamais l'enclave.</div>
       </div>
       <div class="trust-item">
         <div class="trust-item-tag">Pour les dirigeants</div>
         <div class="trust-item-title">Indépendance totale</div>
-        <div class="trust-item-body">Vos preuves survivent à la fermeture de tout prestataire, y compris Φ elle-même. C'est inscrit dans le brevet.</div>
+        <div class="trust-item-body">Vos preuves survivent à la fermeture de tout prestataire, y compris Φ elle-même. Le consentement est scellé par votre visage vivant — recalculable par tout juge, sans nous.</div>
       </div>
     </div>
   </div>
@@ -573,7 +561,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
   <div class="cta-inner">
     <div class="cta-ey">Φ · AION ASEMANTIX</div>
     <h2 class="cta-title">Accédez à <em>Φ</em>.<br><em>Comprenez la différence.</em></h2>
-    <p class="cta-body">Deux envois offerts. Votre document. Votre signataire. La preuve générée sur votre dispositif — vérifiable par tout expert, sans infrastructure externe.</p>
+    <p class="cta-body">Deux envois offerts. Votre document. Votre signataire. La preuve générée sur votre dispositif — scellée par votre visage vivant, vérifiable par tout expert, sans infrastructure externe.</p>
     <div class="cta-btns">
       <a href="tarifications.html" class="btn-primary">Accéder à Φ</a>
       <a href="resistance-quantique.html" class="btn-ghost">Résistance post-quantique →</a>
@@ -641,4 +629,5 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
  
 </body>
 </html>
+
 
