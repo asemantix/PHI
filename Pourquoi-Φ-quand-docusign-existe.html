@@ -164,6 +164,8 @@
 :root{--navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#1a2942;--gold:#c8a84b;--gold-deep:#8b6914;--gold-soft:#e2c87a;--ink:#1d2330;--ink-muted:#4a5163;--ink-faded:#6c7384;--paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;--rule:#e6e3dc;--font-d:"Playfair Display",Georgia,serif;--font-m:"IBM Plex Mono","SF Mono",Menlo,monospace;--font-s:"IBM Plex Sans",-apple-system,system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-weight:300;-webkit-font-smoothing:antialiased}
+ 
+/* HEADER */
 .sec-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
 .sec-header-back{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
 .sec-header-back:hover{color:var(--navy)}
@@ -172,11 +174,15 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-wei
 .sec-header-cta:hover{background:var(--navy-deep)}
 .sec-header-cta .phi-cta{font-family:var(--font-d);font-style:italic;font-size:.9rem;margin-left:4px;letter-spacing:0;color:var(--gold-soft)}
 @media(max-width:720px){.sec-header{padding:0 24px}.sec-header-cta{display:none}}
+ 
+/* BREADCRUMB */
 .breadcrumb{padding:24px 64px 0;max-width:960px;margin:0 auto;font-family:var(--font-m);font-size:.62rem;color:var(--ink-faded);letter-spacing:.18em;text-transform:uppercase;font-weight:500}
 .breadcrumb a{color:var(--gold-deep);text-decoration:none}
 .breadcrumb a:hover{color:var(--navy)}
 .breadcrumb-sep{margin:0 10px;opacity:.5;color:var(--gold)}
 @media(max-width:720px){.breadcrumb{padding:16px 24px 0}}
+ 
+/* HERO */
 .hero{background:var(--navy);padding:72px 64px 64px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.018) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
 .hero-halo{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(200,168,75,.065) 0%,transparent 62%);pointer-events:none}
@@ -187,12 +193,34 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-wei
 .hero-title em{font-style:italic;color:var(--gold-soft)}
 .hero-sub{font-family:var(--font-d);font-style:italic;font-size:1.1rem;color:rgba(250,250,247,.5);line-height:1.65;max-width:640px;margin-top:20px}
 .hero-rule{width:60px;height:1px;background:var(--gold);opacity:.5;margin:28px 0}
+ 
+/* ANSWER BAND */
 .answer-band{background:var(--paper-deep);padding:48px 64px;border-bottom:1px solid var(--rule)}
 .answer-inner{max-width:960px;margin:0 auto}
 .answer-text{font-family:var(--font-d);font-size:clamp(1.15rem,2vw,1.5rem);font-weight:500;color:var(--navy);line-height:1.55;letter-spacing:-.01em}
 .answer-text em{font-style:italic;color:var(--gold-deep)}
+ 
+/* LE DEAL INVISIBLE */
+.deal-sec{padding:80px 64px;background:var(--paper-soft);border-bottom:2px solid var(--rule)}
+.deal-inner{max-width:960px;margin:0 auto}
+.deal-ey{font-family:var(--font-m);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px;font-weight:500}
+.deal-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:600;color:var(--navy);line-height:1.15;letter-spacing:-.015em;margin-bottom:36px}
+.deal-title em{font-style:italic;color:var(--gold-deep)}
+.deal-bloc{max-width:820px}
+.deal-text{font-family:var(--font-s);font-size:1.02rem;color:var(--ink-muted);line-height:1.85;font-weight:300;margin-bottom:22px}
+.deal-text em{font-style:italic;color:var(--navy);font-weight:500}
+.deal-text strong{color:var(--ink);font-weight:500}
+.deal-list{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--ink-muted);line-height:2.1;padding-left:0;list-style:none;margin-bottom:22px;border-left:2px solid rgba(200,168,75,.3);padding-left:20px}
+.deal-list li::before{content:"·  ";color:var(--gold-deep);font-style:normal}
+.deal-quote{margin-top:40px;padding:32px 36px;background:var(--navy);border-left:4px solid var(--gold);border-radius:2px;font-family:var(--font-d);font-size:1.32rem;font-weight:600;color:var(--paper);line-height:1.7;font-style:normal}
+.deal-quote span{display:block;margin-top:16px;font-size:1rem;font-style:italic;color:var(--gold-soft);font-weight:400}
+ 
+/* ARGS */
 .args{padding:80px 64px;background:var(--paper)}
 .args-inner{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+.args-header{margin-bottom:0}
+.args-ey{font-family:var(--font-m);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px;font-weight:500}
+.args-intro{font-family:var(--font-d);font-style:italic;font-size:1.08rem;color:var(--ink-muted);line-height:1.7;max-width:680px;margin-bottom:0;padding-bottom:40px;border-bottom:1px solid var(--rule)}
 .arg{display:grid;grid-template-columns:80px 1fr;gap:0;border-top:1px solid var(--rule);padding:52px 0}
 .arg:last-child{border-bottom:1px solid var(--rule)}
 .arg-num{font-family:var(--font-m);font-size:3.5rem;font-weight:300;color:var(--gold);opacity:.25;line-height:1;padding-top:6px}
@@ -208,6 +236,8 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-wei
 .arg-col-text .strike{text-decoration:line-through;opacity:.45}
 .arg-lede{font-family:var(--font-d);font-style:italic;font-size:1rem;color:var(--ink-muted);line-height:1.7;max-width:680px}
 .arg-lede strong{font-style:normal;font-weight:500;color:var(--navy)}
+ 
+/* TABLE */
 .table-sec{padding:0 64px 80px;background:var(--paper)}
 .table-inner{max-width:960px;margin:0 auto}
 .table-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:28px}
@@ -221,6 +251,8 @@ td:first-child{color:var(--ink);font-weight:400}
 td.yes{color:#2d6a4f;font-weight:500}
 td.no{color:#a33030}
 td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
+ 
+/* HARVEST */
 .harvest-sec{background:var(--navy);padding:72px 64px}
 .harvest-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .harvest-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:rgba(200,168,75,.6);margin-bottom:16px}
@@ -233,6 +265,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .harvest-item-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,168,75,.6);margin-bottom:6px}
 .harvest-item-text{font-family:var(--font-s);font-size:.85rem;color:rgba(250,250,247,.6);line-height:1.55;font-weight:300}
 .harvest-item-text strong{color:var(--paper);font-weight:500}
+ 
+/* TRUST */
 .trust-sec{background:var(--paper-deep);padding:72px 64px}
 .trust-inner{max-width:960px;margin:0 auto}
 .trust-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px}
@@ -244,6 +278,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .trust-item-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
 .trust-item-title{font-family:var(--font-d);font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.25}
 .trust-item-body{font-family:var(--font-s);font-size:.82rem;color:var(--ink-muted);line-height:1.65;font-weight:300}
+ 
+/* CTA */
 .cta-sec{background:var(--navy);padding:90px 64px;text-align:center}
 .cta-inner{max-width:640px;margin:0 auto}
 .cta-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:rgba(200,168,75,.55);margin-bottom:18px}
@@ -256,6 +292,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .btn-ghost{padding:15px 36px;background:transparent;color:rgba(250,250,247,.65);text-decoration:none;font-family:var(--font-m);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;border:1px solid rgba(200,168,75,.3);border-radius:3px;transition:all .2s}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 .cta-brevets{font-family:var(--font-m);font-size:.62rem;color:rgba(200,168,75,.35);letter-spacing:.15em;line-height:2}
+ 
+/* FOOTER */
 .footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:60px 48px 36px}
 .footer-inner{max-width:1100px;margin:0 auto}
 .footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(200,168,75,.2)}
@@ -263,7 +301,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .footer-line{width:48px;height:1px;background:var(--gold);margin:0 auto 12px}
 .footer-baseline-1{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--gold-soft);margin-bottom:3px}
 .footer-baseline-2{font-family:var(--font-d);font-style:italic;font-size:.85rem;color:rgba(226,200,122,.75)}
-.footer-nav{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-nav{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-bottom:32px}
 .footer-col h4{font-family:var(--font-m);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);font-weight:500;margin-bottom:14px}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
 .footer-col a{font-family:var(--font-d);font-style:italic;font-size:.92rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
@@ -272,23 +310,34 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
 .footer-link-special:hover{color:var(--gold-soft)!important;border-color:var(--gold)!important}
 .footer-meta{border-top:1px solid rgba(200,168,75,.15);padding-top:22px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
 .footer-meta strong{color:var(--gold-soft);font-weight:500}
-@media(max-width:860px){.hero,.answer-band,.args,.table-sec,.harvest-sec,.trust-sec,.cta-sec{padding-left:24px;padding-right:24px}.arg{grid-template-columns:1fr;gap:12px}.arg-num{font-size:2rem}.arg-compare{grid-template-columns:1fr}.harvest-inner{grid-template-columns:1fr;gap:40px}.trust-grid{grid-template-columns:1fr}.footer{padding:48px 24px 28px}.footer-nav{grid-template-columns:1fr;gap:24px}}
+ 
+@media(max-width:860px){
+  .hero,.answer-band,.deal-sec,.args,.table-sec,.harvest-sec,.trust-sec,.cta-sec{padding-left:24px;padding-right:24px}
+  .arg{grid-template-columns:1fr;gap:12px}
+  .arg-num{font-size:2rem}
+  .arg-compare{grid-template-columns:1fr}
+  .harvest-inner{grid-template-columns:1fr;gap:40px}
+  .trust-grid{grid-template-columns:1fr}
+  .footer{padding:48px 24px 28px}
+  .footer-nav{grid-template-columns:1fr;gap:24px}
+}
 </style>
 </head>
 <body>
-
+ 
 <header class="sec-header">
   <a href="index.html" class="sec-header-back">← Retour</a>
   <a href="index.html" class="sec-header-phi">Φ</a>
   <a href="tarifications.html" class="sec-header-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </header>
-
+ 
 <nav class="breadcrumb" aria-label="Fil d'Ariane">
   <a href="index.html">Accueil</a>
   <span class="breadcrumb-sep">·</span>
   <span>Pourquoi <em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-deep)">Φ</em> ?</span>
 </nav>
-
+ 
+<!-- HERO -->
 <header class="hero">
   <div class="hero-halo"></div>
   <div class="hero-inner">
@@ -299,16 +348,76 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
     <p class="hero-sub">Ce document répond en quatre arguments. Il s'adresse aux décideurs, aux juristes, aux DSI et aux RSSI qui ont déjà un outil de signature — et qui s'interrogent sur ce que <em>Φ</em> apporte de fondamentalement différent face à DocuSign, Adobe Sign et Yousign.</p>
   </div>
 </header>
-
+ 
+<!-- ANSWER BAND -->
 <div class="answer-band">
   <div class="answer-inner">
     <p class="answer-text">DocuSign signe. <em>Φ</em> <em>prouve.</em><br>DocuSign stocke. <em>Φ</em> <em>ignore.</em><br>DocuSign dépend d'eux. <em>Φ</em> <em>dépend de vous.</em></p>
   </div>
 </div>
-
-<section class="args">
+ 
+<!-- LE DEAL INVISIBLE — argument fondateur, avant tout le reste -->
+<section class="deal-sec" id="le-deal">
+  <div class="deal-inner">
+    <div class="deal-ey">Avant d'aller plus loin</div>
+    <h2 class="deal-title">Un code SMS.<br><em>En échange de tout.</em></h2>
+    <div class="deal-bloc">
+      <p class="deal-text">
+        Le code SMS ne vaut techniquement presque rien. C'est une friction minimale — un geste symbolique, 
+        quatre chiffres reçus sur un téléphone. Mais en l'acceptant, le signataire ne signe pas seulement 
+        un document. <em>Il dépose.</em>
+      </p>
+      <p class="deal-text">
+        Derrière ce code, DocuSign, Adobe Sign et Yousign héritent — légalement, contractuellement, 
+        avec votre accord implicite inscrit dans leurs conditions générales — de l'intégralité du contenu 
+        que vous leur confiez. Chaque acte. Chaque document. Chaque secret professionnel que vous avez 
+        fait transiter par leur plateforme :
+      </p>
+      <ul class="deal-list">
+        <li>Contrats commerciaux et conventions de cession</li>
+        <li>Mandats patrimoniaux et actes notariés</li>
+        <li>Bilans médicaux et consentements éclairés</li>
+        <li>Procédures disciplinaires et ruptures conventionnelles</li>
+        <li>Accords de confidentialité et dossiers d'acquisition</li>
+        <li>Correspondances entre avocats et clients</li>
+        <li>Questionnaires médicaux et dossiers salariés</li>
+        <li>Testaments, donations, actes de propriété</li>
+      </ul>
+      <p class="deal-text">
+        Multipliés par des millions d'utilisateurs. Accumulés sur des décennies. 
+        Hébergés sur AWS, sur Azure — <em>sous juridiction américaine.</em>
+      </p>
+      <p class="deal-text">
+        C'est le deal le plus déséquilibré de l'économie numérique. Le signataire croit qu'il signe. 
+        En réalité, il dépose les trésors documentaires de sa vie professionnelle et personnelle 
+        dans un coffre dont il <strong>ne détient pas la serrure.</strong>
+      </p>
+      <p class="deal-text">
+        Et le Cloud Act referme le piège. Ce n'est pas seulement que DocuSign 
+        <em>peut</em> lire ce que vous avez confié. C'est que les autorités américaines 
+        <em>peuvent exiger</em> — sans vous en informer, sans recours possible devant une juridiction 
+        française ou européenne — l'accès à tout ce que vous avez déposé. 
+        Sur simple injonction. Sans procès contradictoire. Sans appel.
+      </p>
+      <blockquote class="deal-quote">
+        Φ ne stocke rien.<br>
+        Il n'y a rien à déposer.<br>
+        Il n'y a rien à réquisitionner.
+        <span>La preuve vit dans votre enclave matérielle — pas dans la leur.</span>
+      </blockquote>
+    </div>
+  </div>
+</section>
+ 
+<!-- 4 ARGUMENTS TECHNIQUES -->
+<section class="args" id="arguments">
   <div class="args-inner">
-
+ 
+    <div class="args-header">
+      <div class="args-ey">Quatre arguments</div>
+      <p class="args-intro">Voici pourquoi cette différence est structurelle — pas contractuelle. Pas une politique de confidentialité. Une impossibilité technique.</p>
+    </div>
+ 
     <div class="arg">
       <div class="arg-num">01</div>
       <div class="arg-body">
@@ -326,8 +435,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <p class="arg-lede">La valeur cryptographique G est calculée, scellée et conservée localement. Un juge peut la <strong>recalculer</strong> avec votre doigt, votre téléphone et le document original. Pas besoin de nous. Pas besoin de DocuSign. Pas besoin de personne.</p>
       </div>
     </div>
-
-    <!-- ✦ ARG 02 — MODIFICATION : dispositif légitime ajouté -->
+ 
     <div class="arg">
       <div class="arg-num">02</div>
       <div class="arg-body">
@@ -339,13 +447,13 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
           </div>
           <div class="arg-col">
             <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text">Vos documents <strong>ne quittent jamais votre enclave.</strong> Ils traversent internet chiffrés — indistinguables du bruit aléatoire. Pas de serveur. Pas de Cloud Act. Pas d'IA qui analyse.<br><br>Le déchiffrement ne peut avoir lieu que dans <strong>l'enclave matérielle du dispositif qui porte l'identité Φ du destinataire autorisé.</strong> Aucun autre dispositif — même équipé de l'app — ne peut l'ouvrir. <strong>Confidentialité structurelle.</strong></div>
+            <div class="arg-col-text">Vos documents <strong>ne quittent jamais votre enclave.</strong> Ils traversent internet chiffrés — indistinguables du bruit aléatoire. Pas de serveur. Pas de Cloud Act. Pas d'IA qui analyse.<br><br>Le déchiffrement ne peut avoir lieu que dans <strong>l'enclave matérielle du dispositif qui porte l'identité Φ du destinataire autorisé.</strong> <strong>Confidentialité structurelle.</strong></div>
           </div>
         </div>
         <p class="arg-lede">Ce n'est pas une politique de confidentialité. C'est une <strong>impossibilité technique.</strong> Le document chiffré voyage sur le réseau comme une enveloppe aveugle — lisible par personne. Un seul endroit au monde peut l'ouvrir : l'enclave du bon dispositif, avec la bonne identité Φ. <strong>Nous ne pouvons pas lire vos documents. Personne ne le peut. Pas même nous.</strong></p>
       </div>
     </div>
-
+ 
     <div class="arg">
       <div class="arg-num">03</div>
       <div class="arg-body">
@@ -363,7 +471,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <p class="arg-lede">Chaque acte est inscrit dans un journal cryptographiquement chaîné, ancré dans un <strong>compteur monotone matériel</strong> — irréversible, non réinitialisable, gravé dans le silicium. La falsification est structurellement impossible.</p>
       </div>
     </div>
-
+ 
     <div class="arg">
       <div class="arg-num">04</div>
       <div class="arg-body">
@@ -381,10 +489,11 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
         <p class="arg-lede">Des agences et acteurs malveillants <strong>récoltent déjà</strong> vos échanges chiffrés aujourd'hui, en attendant les ordinateurs quantiques. Avec <em>Φ</em>, ils peuvent récolter. Ils ne déchiffreront jamais.</p>
       </div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
+<!-- TABLE COMPARATIVE -->
 <section class="table-sec">
   <div class="table-inner">
     <div class="table-ey">Comparaison point par point</div>
@@ -407,7 +516,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
     </table>
   </div>
 </section>
-
+ 
+<!-- HARVEST NOW -->
 <section class="harvest-sec">
   <div class="harvest-inner">
     <div class="harvest-left">
@@ -431,7 +541,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
     </div>
   </div>
 </section>
-
+ 
+<!-- TRUST -->
 <section class="trust-sec">
   <div class="trust-inner">
     <div class="trust-ey">Ce que Φ rend possible</div>
@@ -456,7 +567,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
     </div>
   </div>
 </section>
-
+ 
+<!-- CTA -->
 <section class="cta-sec">
   <div class="cta-inner">
     <div class="cta-ey">Φ · AION ASEMANTIX</div>
@@ -469,7 +581,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
     <div class="cta-brevets">Brevets FR 2604755 · FR 2605317 · AION ASEMANTIX · phi-signature.fr<br>Inline-Offline<sup style="font-size:.6em;color:rgba(200,168,75,.5)">®</sup> · Harvest now, decrypt never.™</div>
   </div>
 </section>
-
+ 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -478,7 +591,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
       <div class="footer-baseline-1">La signature mathématique</div>
       <div class="footer-baseline-2">de votre vie numérique</div>
     </div>
-    <div class="footer-nav" style="grid-template-columns:1fr 1fr 1fr;gap:40px">
+    <div class="footer-nav">
       <div class="footer-col">
         <h4>Comprendre</h4>
         <ul>
@@ -490,7 +603,6 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
           <li><a href="conformite.html">Conformité</a></li>
           <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
           <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
-          <li><a href="lapp-en-action.html">Voir l'app en action</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -503,6 +615,8 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
           <li><a href="professions/mutuelles-assurances.html">Mutuelles &amp; assurances</a></li>
           <li><a href="professions/rh-compliance.html">RH &amp; compliance</a></li>
           <li><a href="professions/journalistes.html">Journalistes</a></li>
+          <li><a href="professions/urssaf.html">URSSAF</a></li>
+          <li><a href="professions/secteur-public.html">Secteur public</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -511,7 +625,6 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
           <li><a href="tarifications.html">Accéder à Φ</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="portefeuille-brevets.html">Portefeuille de brevets</a></li>
-          <li><a href="vos-suggestions.html">Évaluer</a></li>
           <li><a href="contact.html">Demander une démonstration</a></li>
           <li><a href="contact.html">Nous contacter</a></li>
           <li><a href="Pourquoi-Φ-quand-docusign-existe.html" class="footer-link-special">Pourquoi Φ quand DocuSign existe ?</a></li>
@@ -525,6 +638,7 @@ td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
     </div>
   </div>
 </footer>
-
+ 
 </body>
 </html>
+
