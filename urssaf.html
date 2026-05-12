@@ -11,12 +11,14 @@
 <meta name="author" content="AION ASEMANTIX">
 <link rel="canonical" href="https://phi-signature.fr/professions/urssaf.html">
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+
+<!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://phi-signature.fr/professions/urssaf.html">
 <meta property="og:site_name" content="Φ — AION ASEMANTIX">
 <meta property="og:title" content="Signature électronique URSSAF tiers déclarant sans tiers — Déclarations sociales opposables · Φ">
-<meta property="og:description" content="Conventions tiers déclarant, DSN, actes de contrôle : preuve de transmission horodatée par compteur matériel, sans serveur, sans Cloud Act. Opposable par construction mathématique.">
+<meta property="og:description" content="Conventions tiers déclarant, DSN, actes de contrôle : preuve de transmission horodatée par compteur matériel, sans serveur, sans Cloud Act. Opposable par construction mathématique. eIDAS, RGPD, Code sécurité sociale.">
 <meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,8 +28,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@asemantix">
 <meta name="twitter:title" content="Signature électronique URSSAF tiers déclarant sans tiers — Déclarations sociales opposables · Φ">
-<meta name="twitter:description" content="Conventions tiers déclarant, DSN, actes de contrôle sans Cloud Act. Preuve horodatée par compteur matériel. Post-quantique native.">
+<meta name="twitter:description" content="Conventions tiers déclarant, DSN, actes de contrôle sans Cloud Act, sans serveur. Preuve horodatée par compteur matériel. Post-quantique native.">
 <meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,19 +40,34 @@
       "@id": "https://phi-signature.fr/professions/urssaf.html#webpage",
       "name": "Signature électronique URSSAF tiers déclarant sans tiers de confiance — Déclarations sociales opposables · Φ",
       "url": "https://phi-signature.fr/professions/urssaf.html",
-      "description": "Signature électronique pour l'URSSAF et les tiers déclarants : conventions, DSN, actes de contrôle sans tiers de confiance, sans cloud, sans Cloud Act.",
+      "description": "Signature électronique pour l'URSSAF et les tiers déclarants : conventions, DSN, actes de contrôle sans tiers de confiance, sans cloud, sans Cloud Act. Preuve opposable par construction mathématique.",
       "inLanguage": "fr",
       "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
       "about": [
-        {"@type": "Thing", "name": "Convention tiers déclarant et déclaration sociale opposable"},
-        {"@type": "Thing", "name": "Actes de contrôle URSSAF et preuve de notification"},
-        {"@type": "Thing", "name": "Données sociales et salariales sans serveur cloud étranger"}
+        {
+          "@type": "Thing",
+          "name": "Convention tiers déclarant et déclaration sociale opposable",
+          "description": "Les conventions de tiers déclarant et les DSN engagent la responsabilité civile et pénale des parties. Φ produit une preuve de transmission et de signature opposable — horodatée par compteur monotone hardware, recalculable par tout contrôleur URSSAF ou expert judiciaire sans dépendance à un tiers prestataire cloud."
+        },
+        {
+          "@type": "Thing",
+          "name": "Actes de contrôle URSSAF et preuve de notification",
+          "description": "Les mises en demeure, lettres d'observations et actes de redressement URSSAF doivent être prouvés en cas de contestation. Φ établit mathématiquement la date et l'heure de notification, la réception effective et la durée de lecture — sans dépendance à La Poste ni à un prestataire cloud."
+        },
+        {
+          "@type": "Thing",
+          "name": "Données sociales et salariales sans serveur cloud étranger",
+          "description": "Les DSN contiennent des données personnelles des salariés soumises au RGPD. Contrairement aux solutions cloud hébergées sur AWS ou Azure, Φ ne stocke aucune donnée sociale sur aucun serveur — conformité RGPD et Cloud Act par construction architecturale."
+        }
       ],
       "mentions": [
+        {"@type": "Legislation", "name": "Code de la sécurité sociale — article L. 243-1 et suivants"},
         {"@type": "Legislation", "name": "Code de la sécurité sociale — article R. 243-59 — contrôle URSSAF"},
-        {"@type": "Legislation", "name": "Règlement UE 2016/679 — RGPD"},
+        {"@type": "Legislation", "name": "Arrêté du 26 janvier 2011 — déclaration sociale nominative (DSN)"},
+        {"@type": "Legislation", "name": "Règlement UE 2016/679 — RGPD données personnelles salariés"},
         {"@type": "Legislation", "name": "Règlement UE 910/2014 — eIDAS article 26"},
-        {"@type": "Legislation", "name": "Cloud Act (2018)"},
+        {"@type": "Legislation", "name": "Article 1366 du Code civil français"},
+        {"@type": "Legislation", "name": "Cloud Act — Clarifying Lawful Overseas Use of Data Act (2018)"},
         {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
         {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"}
       ],
@@ -61,18 +79,51 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Comment Φ rend-il une convention de tiers déclarant opposable ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "La convention signée via Φ produit une preuve biométrique, mention manuscrite, durée de lecture mesurée et horodatage par compteur monotone hardware — recalculable par tout contrôleur URSSAF sans intervention d'AION ASEMANTIX."}
+          "name": "Comment Φ rend-il une convention de tiers déclarant opposable sans tiers prestataire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La convention de tiers déclarant signée via Φ produit une preuve de consentement biométrique, une mention manuscrite tracée, une durée de lecture mesurée et un horodatage par compteur monotone hardware — fusionnés par la Fonction G (brevet FR 2604755). Cette preuve est exportable instantanément et recalculable par tout contrôleur URSSAF ou expert judiciaire sans intervention d'AION ASEMANTIX."
+          }
         },
         {
           "@type": "Question",
-          "name": "Φ peut-il prouver la notification d'une mise en demeure URSSAF ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Oui. Φ établit mathématiquement la date de notification, la réception et la durée de lecture — plus robuste qu'un recommandé avec accusé de réception."}
+          "name": "Φ peut-il prouver la notification d'une mise en demeure ou d'une lettre d'observations URSSAF ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La transmission via Φ établit mathématiquement la date et l'heure de notification (compteur monotone hardware inaltérable), la réception sur le dispositif du destinataire légitime, et la durée de lecture effective. Cette chaîne probatoire est plus robuste qu'un recommandé avec accusé de réception — elle prouve non seulement la remise, mais la lecture effective du document, sans dépendance à La Poste ni à un opérateur cloud."
+          }
         },
         {
           "@type": "Question",
           "name": "Les DSN transmises via Φ sont-elles conformes au RGPD ?",
-          "acceptedAnswer": {"@type": "Answer", "text": "Oui, par construction architecturale. Φ ne stocke aucune donnée sociale sur aucun serveur — conformité RGPD structurelle."}
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, par construction architecturale. Les DSN contiennent des données personnelles des salariés (salaires, cotisations, arrêts maladie) soumises au RGPD. Les solutions cloud habituelles (DocuSign AWS, Yousign Azure) transfèrent ces données vers des serveurs sous juridiction américaine. Φ ne stocke aucune donnée sociale sur aucun serveur — la conformité RGPD est structurelle, pas contractuelle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Φ est-il soumis au Cloud Act pour les données URSSAF ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Le Cloud Act permet aux autorités américaines de réquisitionner les données stockées par toute entreprise sous juridiction US. AION ASEMANTIX ne stocke aucune donnée sociale : il n'y a rien à réquisitionner. Les données DSN et les conventions de tiers déclarant vivent uniquement dans l'enclave matérielle des dispositifs des parties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Un expert-comptable peut-il utiliser Φ pour ses clients sans infrastructure spécifique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le plan Solo (600 €/an) ou les plans entreprise permettent à un expert-comptable ou à un cabinet social d'utiliser Φ pour toutes ses déclarations et conventions sans infrastructure dédiée. L'application s'installe sur smartphone ou ordinateur. La preuve de chaque acte est stockée localement, exportable à la demande pour tout contrôle URSSAF ou litige prud'homal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les conventions et déclarations signées via Φ résistent-elles aux ordinateurs quantiques ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Les archives sociales et les conventions de tiers déclarant sont conservées pendant 5 à 10 ans minimum. Φ utilise ML-DSA-65 (NIST FIPS 204) et ML-KEM-768 (NIST FIPS 203) — les standards post-quantiques officiels du NIST (août 2024). Une convention signée aujourd'hui restera opposable lors d'un contrôle URSSAF dans cinq ou dix ans, même face aux futurs ordinateurs quantiques."
+          }
         }
       ]
     },
