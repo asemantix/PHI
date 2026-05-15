@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>Φ Sovereign — La signature dont la clé naît du silicium · AION ASEMANTIX</title>
+<meta name="description" content="Φ Sovereign : la clé privée naît du silicium lui-même, pas d'un fabricant, pas d'Apple, pas de Google. Zéro tiers dans la chaîne de confiance. Vérifiable par tout auditeur à perpétuité, sans infrastructure. Pour les organisations qui n'acceptent aucun intermédiaire.">
+<meta name="keywords" content="signature souveraine identité physique irréfutable, clé dérivée silicium sans fabricant, AUTOCERT sans autorité certification, signature défense ministères armée banques, alternative Google Key Attestation Apple Attestation, signature post-quantique souveraine sans tiers, AION ASEMANTIX phi-sovereign">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="AION ASEMANTIX">
+<link rel="canonical" href="https://phi-signature.fr/phi-sovereign.html">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/phi-sovereign.html">
+<meta property="og:site_name" content="Φ — AION ASEMANTIX">
+<meta property="og:title" content="Φ Sovereign — Identité physique irréfutable, zéro tiers, dérivée du silicium">
+<meta property="og:description" content="La clé naît du silicium. Pas d'Apple. Pas de Google. Pas de Samsung. Zéro tiers dans la chaîne de confiance. Vérifiable par tout auditeur, à perpétuité, sans infrastructure.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Φ Sovereign — AION ASEMANTIX">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:publisher" content="https://phi-signature.fr">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:title" content="Φ Sovereign — Identité physique irréfutable · AION ASEMANTIX">
+<meta name="twitter:description" content="La clé naît du silicium. Pas d'Apple. Pas de Google. Zéro tiers. Vérifiable à perpétuité par tout auditeur.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://phi-signature.fr/phi-sovereign.html#webpage",
+      "name": "Φ Sovereign — La signature dont la clé naît du silicium · AION ASEMANTIX",
+      "url": "https://phi-signature.fr/phi-sovereign.html",
+      "description": "Φ Sovereign : identité physique irréfutable par le procédé AUTOCERT. La clé privée est dérivée des identifiants matériels intrinsèques du silicium — sans fabricant, sans autorité de certification, sans tiers.",
+      "inLanguage": "fr",
+      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
+      "publisher": {
+        "@type": "Organization",
+        "name": "AION ASEMANTIX",
+        "url": "https://phi-signature.fr"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Φ Sovereign", "item": "https://phi-signature.fr/phi-sovereign.html"}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "AION ASEMANTIX",
+      "url": "https://phi-signature.fr",
+      "email": "asemantix@proton.me",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lyon",
+        "addressCountry": "FR"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0e1c35;
+    --navy-deep: #08111f;
+    --gold: #c8a84b;
+    --gold-deep: #8b6914;
+    --gold-light: #e2c87a;
+    --paper: #fafaf7;
+    --paper-soft: #f4f1e8;
+    --ink: #1d2330;
+    --ink-muted: #6c7384;
+    --rule: rgba(200, 168, 75, 0.3);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--navy); font-family: var(--font-sans); line-height: 1.55; }
+
+  /* ─── TOP ACTIONS ─── */
+  .top-actions { position: fixed; top: 24px; right: 32px; z-index: 100; display: flex; gap: 10px; align-items: center; }
+  .top-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; backdrop-filter: blur(8px); }
+  .top-cta:hover { background: var(--navy-deep); }
+  .top-cta .phi-cta { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; margin-left: 4px; letter-spacing: 0; color: var(--gold-light); }
+  .top-anticipate { background: rgba(250,250,247,0.85); color: var(--gold-deep); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; border: 1px solid var(--gold); border-radius: 2px; transition: all 0.2s; backdrop-filter: blur(8px); }
+  .top-anticipate:hover { background: var(--gold); color: var(--paper); }
+  @media (max-width: 720px) { .top-actions { top: 16px; right: 16px; gap: 8px; } .top-cta, .top-anticipate { padding: 10px 16px; font-size: 0.62rem; letter-spacing: 0.15em; } }
+
+  /* ─── BREADCRUMB ─── */
+  .breadcrumb { padding: 32px 48px 0; max-width: 1200px; margin: 0 auto; font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
+  .breadcrumb a { color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+  .breadcrumb a:hover { color: var(--navy); border-color: var(--navy); }
+  .breadcrumb-sep { margin: 0 12px; opacity: 0.5; color: var(--gold); }
+
+  /* ─── BADGE À VENIR ─── */
+  .badge-a-venir { display: inline-block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-deep); border: 1px solid var(--gold); padding: 5px 12px; border-radius: 2px; margin-bottom: 20px; font-weight: 600; }
+
+  /* ─── HERO ─── */
+  .page-hero { padding: 56px 48px 80px; max-width: 1200px; margin: 0 auto; text-align: center; }
+  .hero-statement { font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; color: var(--navy); line-height: 1.5; max-width: 680px; margin: 0 auto 40px; letter-spacing: -0.01em; }
+  .hero-statement br { display: block; }
+  .page-eyebrow { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 20px; font-weight: 600; }
+  .page-title { font-family: var(--font-display); font-size: 4rem; font-weight: 500; color: var(--navy); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 28px; }
+  .page-title em { font-style: italic; font-weight: 600; color: var(--gold-deep); }
+  .page-lede { font-family: var(--font-display); font-style: italic; font-size: 1.4rem; color: var(--ink-muted); line-height: 1.55; max-width: 720px; margin: 0 auto 40px; font-weight: 400; }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .hero-btn-primary { background: var(--navy); color: var(--paper); text-decoration: none; padding: 16px 32px; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
+  .hero-btn-primary:hover { background: var(--navy-deep); }
+  .hero-btn-secondary { color: var(--gold-deep); text-decoration: none; padding: 16px 32px; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; border: 1.5px solid var(--gold); border-radius: 2px; transition: all 0.2s; }
+  .hero-btn-secondary:hover { background: var(--gold); color: var(--paper); }
+
+  /* ─── SÉPARATEUR ─── */
+  .section-divider { width: 100%; padding: 0; display: flex; justify-content: center; align-items: center; }
+  .section-divider-line { width: 100px; height: 1px; background: var(--gold); opacity: 0.7; }
+
+  /* ─── BRANDING ─── */
+  em.brand { font-style: italic; color: var(--gold-deep); font-weight: inherit; }
+  sup.reg { font-size: 0.55em; font-weight: 400; vertical-align: super; margin-left: 0.05em; opacity: 0.85; font-style: normal; }
+
+  /* ═══ SECTION PROBLÈME ═══ */
+  .problem { background: var(--paper); padding: 110px 40px 100px; border-top: 1px solid var(--rule); }
+  .problem-inner { max-width: 1200px; margin: 0 auto; }
+  .problem-section-title { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold-deep); text-align: center; margin-bottom: 56px; font-weight: 600; }
+  .problem-headline { font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; color: var(--navy); text-align: center; line-height: 1.25; margin-bottom: 56px; letter-spacing: -0.01em; }
+  .problem-banner { max-width: 880px; margin: 0 auto 80px; padding: 36px 40px; border-top: 0.5px solid var(--gold); border-bottom: 0.5px solid var(--gold); text-align: center; }
+  .problem-banner-facts { font-family: var(--font-display); font-size: 1.1rem; color: var(--ink); font-weight: 400; line-height: 1.65; font-style: italic; }
+  .problem-banner-facts strong { color: var(--navy); font-weight: 600; font-style: normal; }
+  .problem-columns { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 60px; margin-bottom: 72px; }
+  .problem-divider { background: linear-gradient(to bottom, transparent 0%, var(--gold) 15%, var(--gold) 85%, transparent 100%); width: 1px; }
+  .problem-col { padding: 0 16px; }
+  .problem-col-title { font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--navy); font-weight: 600; margin-bottom: 28px; line-height: 1.5; min-height: 60px; }
+  .tool-list { list-style: none; padding: 0; margin: 0 0 28px; border-top: 1px solid var(--rule); }
+  .tool-list li { display: flex; flex-direction: column; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .tool-name { font-family: var(--font-display); font-size: 1.05rem; color: var(--navy); font-weight: 600; line-height: 1.3; }
+  .tool-detail { font-family: var(--font-sans); font-size: 0.82rem; color: var(--ink-muted); font-weight: 300; line-height: 1.5; margin-top: 4px; }
+  .tool-detail em { font-style: italic; color: var(--ink); }
+  .problem-col-body p { font-family: var(--font-display); font-size: 1.02rem; color: var(--ink); line-height: 1.65; margin-bottom: 18px; font-weight: 400; }
+  .problem-col-body p:last-child { margin-bottom: 0; }
+  .problem-col-body em { font-style: italic; color: var(--gold-deep); font-weight: 500; }
+  .problem-col-body strong { font-weight: 600; color: var(--navy); }
+  .problem-conclusion { text-align: center; font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; color: var(--navy); line-height: 1.5; max-width: 640px; margin: 0 auto; letter-spacing: -0.005em; }
+  .problem-conclusion em { font-style: italic; color: var(--gold-deep); }
+
+  /* ═══ SECTION RÉPONSE ═══ */
+  .response { background: var(--paper-soft); padding: 110px 40px 100px; border-top: 1px solid var(--rule); }
+  .response-inner { max-width: 1200px; margin: 0 auto; }
+  .response-section-title { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold-deep); text-align: center; margin-bottom: 56px; font-weight: 600; }
+  .response-headline { font-family: var(--font-display); font-size: 2.4rem; font-weight: 600; color: var(--navy); text-align: center; line-height: 1.25; margin-bottom: 56px; letter-spacing: -0.01em; }
+  .response-banner { max-width: 880px; margin: 0 auto 80px; padding: 36px 40px; border-top: 0.5px solid var(--gold); border-bottom: 0.5px solid var(--gold); text-align: center; }
+  .response-banner p { font-family: var(--font-display); color: var(--ink); font-size: 1.12rem; line-height: 1.6; margin-bottom: 16px; font-weight: 400; }
+  .response-banner p:last-child { margin-bottom: 0; }
+  .response-banner em { font-style: italic; color: var(--navy); font-weight: 500; }
+  .response-banner strong { color: var(--gold-deep); font-weight: 600; }
+  .response-columns { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 60px; margin-bottom: 72px; }
+  .response-divider { background: linear-gradient(to bottom, transparent 0%, var(--gold) 15%, var(--gold) 85%, transparent 100%); width: 1px; }
+  .response-col { padding: 0 16px; }
+  .response-col-title { font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--navy); font-weight: 600; margin-bottom: 36px; line-height: 1.5; min-height: 60px; }
+  .response-col-body p { font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); line-height: 1.65; margin-bottom: 18px; font-weight: 400; }
+  .response-col-body p:last-of-type { margin-bottom: 28px; }
+  .response-col-body em { font-style: italic; color: var(--gold-deep); font-weight: 500; }
+  .response-col-body strong { font-weight: 600; color: var(--navy); }
+  .response-col-link { display: inline-block; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 4px; transition: color 0.2s, border-color 0.2s; font-weight: 600; }
+  .response-col-link:hover { color: var(--navy); border-bottom-color: var(--navy); }
+
+  /* ─── FORMULE ─── */
+  .formula-block { background: var(--navy); color: var(--paper); padding: 32px 40px; border-radius: 2px; margin: 0 0 28px; font-family: var(--font-mono); font-size: 0.88rem; line-height: 2; letter-spacing: 0.04em; }
+  .formula-block .f-comment { color: rgba(200, 168, 75, 0.6); font-size: 0.75rem; }
+  .formula-block .f-key { color: var(--gold-light); font-weight: 600; }
+  .formula-block .f-val { color: rgba(250,250,247,0.85); }
+
+  .response-conclusion { text-align: center; font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; color: var(--navy); line-height: 1.55; max-width: 640px; margin: 0 auto; letter-spacing: -0.005em; }
+  .response-conclusion em { font-style: italic; color: var(--gold-deep); }
+
+  /* ═══ SECTION MARCHÉS ═══ */
+  .markets { background: var(--navy); padding: 110px 40px 100px; border-top: 1px solid rgba(200,168,75,0.2); }
+  .markets-inner { max-width: 1100px; margin: 0 auto; }
+  .markets-section-title { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold); text-align: center; margin-bottom: 56px; font-weight: 600; }
+  .markets-headline { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; color: var(--paper); text-align: center; line-height: 1.3; margin-bottom: 72px; letter-spacing: -0.01em; }
+  .markets-headline em { font-style: italic; color: var(--gold-light); }
+  .markets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(200,168,75,0.15); margin-bottom: 80px; }
+  .market-card { background: var(--navy-deep); padding: 48px 40px; }
+  .market-card:hover { background: rgba(8,17,31,0.7); }
+  .market-num { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.32em; color: var(--gold); font-weight: 600; margin-bottom: 16px; }
+  .market-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--paper); margin-bottom: 10px; line-height: 1.3; }
+  .market-subtitle { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--gold-light); margin-bottom: 18px; line-height: 1.4; }
+  .market-body { font-family: var(--font-sans); font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.65; font-weight: 300; }
+  .markets-conclusion { text-align: center; font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; color: var(--paper); line-height: 1.5; max-width: 600px; margin: 0 auto; }
+  .markets-conclusion em { font-style: italic; color: var(--gold-light); }
+
+  /* ═══ SECTION ACCÈS ANTICIPÉ ═══ */
+  .anticipate { background: var(--paper-soft); padding: 110px 40px 100px; border-top: 1px solid var(--rule); }
+  .anticipate-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+  .anticipate-eyebrow { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 24px; font-weight: 600; }
+  .anticipate-title { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 28px; letter-spacing: -0.01em; }
+  .anticipate-title em { font-style: italic; }
+  .anticipate-body { font-family: var(--font-display); font-style: italic; font-size: 1.1rem; color: var(--ink-muted); line-height: 1.6; margin-bottom: 40px; }
+  .anticipate-btn { display: inline-block; background: var(--navy); color: var(--paper); text-decoration: none; padding: 18px 40px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.24em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
+  .anticipate-btn:hover { background: var(--navy-deep); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 860px) {
+    .problem, .response, .markets { padding: 72px 24px 64px; }
+    .problem-headline, .response-headline, .markets-headline { font-size: 1.7rem; margin-bottom: 40px; }
+    .problem-banner, .response-banner { padding: 28px 24px; margin-bottom: 56px; }
+    .problem-columns, .response-columns { grid-template-columns: 1fr; gap: 48px; margin-bottom: 56px; }
+    .problem-divider, .response-divider { width: 60%; height: 1px; margin: 0 auto; background: linear-gradient(to right, transparent 0%, var(--gold) 50%, transparent 100%); }
+    .markets-grid { grid-template-columns: 1fr; }
+    .market-card { padding: 36px 24px; }
+    .problem-conclusion, .response-conclusion, .markets-conclusion { font-size: 1.25rem; }
+    .formula-block { padding: 24px; font-size: 0.78rem; }
+  }
+  @media (max-width: 720px) {
+    .page-hero { padding: 40px 24px 56px; }
+    .page-title { font-size: 2.6rem; }
+    .page-lede { font-size: 1.1rem; }
+    .breadcrumb { padding: 20px 24px 0; }
+    .anticipate { padding: 60px 24px; }
+    .anticipate-title { font-size: 1.6rem; }
+  }
+
+  /* ─── FOOTER ─── */
+  .footer { background: var(--navy-deep); color: rgba(255, 255, 255, 0.75); padding: 80px 48px 40px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(200, 168, 75, 0.2); }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 4.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 18px; }
+  .footer-line { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 18px; }
+  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--gold-light); margin-bottom: 4px; }
+  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(226, 200, 122, 0.8); }
+  .footer-nav { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-light); font-weight: 500; margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(255, 255, 255, 0.75); text-decoration: none; transition: color 0.2s; font-weight: 400; }
+  .footer-col a:hover { color: var(--gold-light); }
+  .footer-meta { border-top: 1px solid rgba(200, 168, 75, 0.15); padding-top: 28px; text-align: center; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.4); line-height: 1.8; }
+  .footer-meta strong { color: var(--gold-light); font-weight: 500; }
+  @media (max-width: 720px) {
+    .footer { padding: 60px 24px 30px; }
+    .footer-phi { font-size: 3.5rem; }
+    .footer-nav { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ TOP ACTIONS STICKY ═══ -->
+<div class="top-actions">
+  <a href="contact.html" class="top-anticipate">Accès anticipé</a>
+  <a href="tarifications.html" class="top-cta">Accéder à <span class="phi-cta">Φ</span></a>
+</div>
+
+<!-- ═══ BREADCRUMB ═══ -->
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb-sep">·</span>
+  <span>Φ Sovereign</span>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="page-hero">
+  <div class="badge-a-venir">Produit à venir · Brevet AUTOCERT FR2606431 déposé</div>
+
+  <h1 class="page-title">
+    Φ <em>Sovereign</em>
+  </h1>
+
+  <p class="hero-statement">
+    Φ Sovereign n'est pas un produit de masse.<br>
+    C'est une arme de précision pour les environnements<br>
+    où la compromission d'une identité<br>
+    a des conséquences irréversibles.
+  </p>
+
+  <div class="page-eyebrow">Pour les DSI, RSSI et architectes de confiance</div>
+
+  <p class="page-lede">
+    Vous savez ce qu'est une clé racine fabricant.
+    Vous savez ce que signifie le Cloud Act pour une chaîne d'attestation.
+    Vous savez pourquoi <em>Google Play Integrity</em> et <em>Apple Secure Enclave Attestation</em>
+    ne suffisent pas quand la souveraineté est une exigence opérationnelle — pas un argument commercial.
+    Φ Sovereign dérive la clé privée du silicium lui-même.
+    Aucun fabricant dans la chaîne. Aucun serveur d'attestation.
+    Vérifiable par tout auditeur, sans infrastructure, à perpétuité.
+  </p>
+  <div class="hero-actions">
+    <a href="contact.html" class="hero-btn-primary">Demander un accès anticipé</a>
+    <a href="la-signature-probatoire.html" class="hero-btn-secondary">Comprendre Φ Signature →</a>
+  </div>
+</header>
+
+<!-- ═══ SÉPARATEUR ═══ -->
+<div class="section-divider">
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ═══ SECTION PROBLÈME ═══ -->
+<section class="problem">
+  <div class="problem-inner">
+
+    <div class="problem-section-title">Le problème que personne ne nomme</div>
+
+    <h2 class="problem-headline">
+      Vous faites confiance à votre silicium.<br>
+      Mais votre silicium fait confiance à quelqu'un d'autre.
+    </h2>
+
+    <div class="problem-banner">
+      <p class="problem-banner-facts">
+        Toute signature électronique repose sur une clé. Toute clé repose sur une identité.
+        Et toute identité repose sur une autorité qui l'atteste.
+        <strong>C'est là que la souveraineté s'arrête — sans que personne ne le dise.</strong>
+      </p>
+    </div>
+
+    <div class="problem-columns">
+
+      <div class="problem-col">
+        <div class="problem-col-title">Apple · Google · Samsung · Qualcomm<br>Ce que font vos fabricants</div>
+        <ul class="tool-list">
+          <li>
+            <span class="tool-name">Apple Secure Enclave Attestation</span>
+            <span class="tool-detail"><em>Apple Inc.</em> — votre clé est certifiée par la clé racine Apple. Apple détient cette clé. Apple est soumis au droit américain et au Cloud Act.</span>
+          </li>
+          <li>
+            <span class="tool-name">Google Play Integrity · Android Keystore</span>
+            <span class="tool-detail"><em>Google LLC</em> — votre identité matérielle est attestée par les serveurs Google. Google est soumis au droit américain et coopère avec les agences fédérales.</span>
+          </li>
+          <li>
+            <span class="tool-name">Samsung Knox</span>
+            <span class="tool-detail"><em>Samsung Electronics</em> — attestation hébergée sur l'infrastructure Samsung. Samsung est soumis au droit coréen et à ses obligations de coopération avec l'État.</span>
+          </li>
+          <li>
+            <span class="tool-name">Qualcomm TEE · Secure Boot</span>
+            <span class="tool-detail"><em>Qualcomm Inc.</em> — les clés racines sont générées dans les usines Qualcomm avant la commercialisation des puces. Qualcomm est soumis au droit américain.</span>
+          </li>
+        </ul>
+        <div class="problem-col-body">
+          <p>Votre iPhone, votre Android, votre dispositif professionnel — <strong>tous génèrent et attestent leurs clés cryptographiques avec le concours de leur fabricant.</strong> Le fabricant est dans la chaîne. Il l'a toujours été. Vous ne l'avez simplement pas vu.</p>
+        </div>
+      </div>
+
+      <div class="problem-divider"></div>
+
+      <div class="problem-col">
+        <div class="problem-col-title">Les risques structurels<br>de cette dépendance</div>
+        <ul class="tool-list">
+          <li>
+            <span class="tool-name">Cloud Act — États-Unis, 2018</span>
+            <span class="tool-detail">Toute entreprise américaine peut être contrainte de livrer des données à un tribunal fédéral américain — y compris concernant des utilisateurs étrangers, sans les en informer, sous sceau judiciaire.</span>
+          </li>
+          <li>
+            <span class="tool-name">Compromission de clé racine fabricant</span>
+            <span class="tool-detail">Une seule compromission de la clé racine d'un fabricant invalide rétroactivement des millions d'attestations. Toutes les identités signées avec cette chaîne deviennent contestables simultanément.</span>
+          </li>
+          <li>
+            <span class="tool-name">Obligations légales par juridiction</span>
+            <span class="tool-detail">Apple répond au droit américain. Samsung au droit coréen. Huawei au droit chinois. Votre identité cryptographique est, structurellement, soumise à la loi du fabricant de votre puce.</span>
+          </li>
+          <li>
+            <span class="tool-name">Continuité du service d'attestation</span>
+            <span class="tool-detail">Si le service d'attestation du fabricant est suspendu, abandonné ou compromis — votre chaîne de vérification est rompue. La preuve ne peut plus être établie.</span>
+          </li>
+        </ul>
+        <div class="problem-col-body">
+          <p>Dans les domaines où la souveraineté n'est pas négociable — défense, renseignement, diplomatie, justice, finance de premier rang — <em>cette dépendance est inacceptable.</em></p>
+          <p>Ce n'est pas une hypothèse. Ce n'est pas une menace abstraite. <strong>C'est l'architecture de toute l'industrie.</strong> Et personne ne le dit.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="problem-conclusion">
+      Sans Φ Sovereign, votre identité cryptographique<br>
+      appartient aujourd'hui à votre fabricant —<br>
+      <em>pas à votre silicium, pas à vous.</em>
+    </p>
+
+  </div>
+</section>
+
+<!-- ═══ SECTION RÉPONSE ═══ -->
+<section class="response">
+  <div class="response-inner">
+
+    <div class="response-section-title">La réponse — Φ <em class="brand">Sovereign</em></div>
+
+    <h2 class="response-headline">
+      La clé ne vous est pas attribuée.<br>
+      Elle naît de votre silicium.
+    </h2>
+
+    <div class="response-banner">
+      <p>
+        Φ Sovereign rompt avec l'architecture de toute l'industrie.
+        La clé privée n'est <strong>pas générée aléatoirement</strong> puis attestée par un fabricant.
+        Elle est <em>dérivée</em> des identifiants physiques intrinsèques du silicium lui-même —
+        par opération déterministe et irréversible.
+      </p>
+      <p>
+        <strong>Aucun fabricant dans la chaîne. Aucun serveur d'attestation. Aucune autorité de certification.</strong>
+        La confiance est physique — pas institutionnelle.
+      </p>
+      <p>
+        Lors de l'activation, Φ Sovereign vous demande l'autorisation de <em>calculer pour vous une clé publique autocertifiée</em> —
+        une identité cryptographique unique dérivée de votre silicium, qui ne dépend d'aucun fabricant
+        et ne quitte jamais votre appareil sans votre accord explicite.
+        Ce calcul est irréversible et local.
+        <strong>Vous n'êtes pas consulté. Vous êtes servi.</strong>
+      </p>
+    </div>
+
+    <div class="response-columns">
+
+      <div class="response-col">
+        <div class="response-col-title">Le procédé AUTOCERT<br>Dérivation depuis le silicium</div>
+        <div class="response-col-body">
+          <p>Deux dispositifs identiques, sortis de la même chaîne de fabrication le même jour, produisent des clés différentes. <em>C'est le silicium qui les distingue — pas Apple, pas Google, pas Samsung.</em></p>
+        </div>
+        <div class="formula-block">
+          <span class="f-comment">// Graine dérivée du silicium physique</span><br>
+          <span class="f-key">G</span> <span class="f-val">= f(identifiants_matériels_intrinsèques)</span><br><br>
+          <span class="f-comment">// Clé privée dérivée de G — jamais aléatoire</span><br>
+          <span class="f-key">sk</span> <span class="f-val">= f(G, contexte)</span><br><br>
+          <span class="f-comment">// Clé publique liée au silicium</span><br>
+          <span class="f-key">pk</span> <span class="f-val">= DerivePublic(sk)</span><br><br>
+          <span class="f-comment">// Kit auto-porteur vérifiable par quiconque</span><br>
+          <span class="f-key">kit</span> <span class="f-val">= { pk, marqueurs, preuve }</span>
+        </div>
+        <div class="response-col-body">
+          <p><strong>G naît du silicium physique.</strong> Des variations imperceptibles propres à ce chip précis — uniques parmi tous les chips issus du même lot. La clé n'est pas attribuée. Elle est engendrée.</p>
+        </div>
+      </div>
+
+      <div class="response-divider"></div>
+
+      <div class="response-col">
+        <div class="response-col-title">Le kit auto-porteur<br>Vérifiable à perpétuité sans infrastructure</div>
+        <div class="response-col-body">
+          <p>Le kit <span style="font-family: var(--font-mono); font-size: 0.88rem;">{pk, marqueurs, preuve}</span> est <em>auto-porteur</em>. N'importe quel tiers peut vérifier par la seule clé publique que <span style="font-family: var(--font-mono); font-size: 0.88rem;">pk</span> provient du dispositif décrit par les marqueurs.</p>
+          <p><strong>Sans serveur. Sans autorité de certification. Sans connexion réseau. À tout moment ultérieur</strong> — y compris trente ans après, si l'éditeur, le fabricant et l'État ont tous disparu.</p>
+          <p>C'est la revendication centrale du brevet AUTOCERT : <em>un notaire, un juge, un auditeur de défense vérifie la preuve avec la seule clé publique.</em> Aucune infrastructure tierce requise. Jamais.</p>
+          <p>La substitution de clé est détectable sans base de données. Si un attaquant substitue une clé pirate, ses marqueurs décrivent un dispositif différent. <strong>L'usurpation est structurellement impossible.</strong></p>
+        </div>
+        <a href="la-mecanique-probatoire.html" class="response-col-link">La mécanique probatoire ↗</a>
+      </div>
+
+    </div>
+
+    <p class="response-conclusion">
+      Avec Φ Sovereign, votre clé n'appartient à aucun fabricant.<br>
+      <em>Elle appartient à votre silicium.</em><br>
+      Et votre silicium n'appartient qu'à vous.
+    </p>
+
+  </div>
+</section>
+
+<!-- ═══ SÉPARATEUR ═══ -->
+<div class="section-divider">
+  <div class="section-divider-line"></div>
+</div>
+
+<!-- ═══ SECTION MARCHÉS ═══ -->
+<section class="markets">
+  <div class="markets-inner">
+
+    <div class="markets-section-title">Pour qui</div>
+
+    <h2 class="markets-headline">
+      Les organisations qui savent<br>
+      ce que coûte <em>une brèche d'identité.</em>
+    </h2>
+
+    <div class="markets-grid">
+
+      <div class="market-card">
+        <div class="market-num">01 · DÉFENSE &amp; RENSEIGNEMENT</div>
+        <div class="market-title">Quand l'identité du signataire est une donnée classifiée</div>
+        <div class="market-subtitle">Armée · DRM · DGSE · SGDSN · Alliés OTAN</div>
+        <div class="market-body">Les ordres opérationnels, les comptes rendus de mission, les autorisations de manœuvre — signés par un dispositif dont la clé échappe structurellement à toute injonction étrangère. Aucun tribunal américain, coréen ou chinois ne peut contraindre le fabricant de votre puce — car votre puce n'a pas de fabricant dans la chaîne de confiance.</div>
+      </div>
+
+      <div class="market-card">
+        <div class="market-num">02 · BANQUES &amp; FINANCE DE PREMIER RANG</div>
+        <div class="market-title">Quand la clé d'un signataire vaut plusieurs milliards</div>
+        <div class="market-subtitle">Banques centrales · Salles des marchés · Family Offices · Transactions de gré à gré</div>
+        <div class="market-body">Les engagements à haute valeur, les mandats de gestion, les transactions hors marché — produits par des clés dont aucun fabricant américain ne peut être contraint de certifier la chaîne. La preuve est vérifiable par la contrepartie, par l'auditeur, par le régulateur — sans dépendance à l'infrastructure de qui que ce soit.</div>
+      </div>
+
+      <div class="market-card">
+        <div class="market-num">03 · MINISTÈRES &amp; DIPLOMATIE</div>
+        <div class="market-title">Quand la souveraineté numérique n'est pas négociable</div>
+        <div class="market-subtitle">Cabinets ministériels · Corps diplomatique · Traités internationaux</div>
+        <div class="market-body">Les actes diplomatiques, les décrets, les engagements de gouvernement à gouvernement — signés sur des dispositifs dont l'identité cryptographique ne traverse aucune juridiction étrangère. La clé naît du silicium français. Elle n'a jamais quitté la chaîne de confiance nationale.</div>
+      </div>
+
+      <div class="market-card">
+        <div class="market-num">04 · JURIDICTIONS &amp; COURS SUPRÊMES</div>
+        <div class="market-title">Quand la preuve doit survivre à tout</div>
+        <div class="market-subtitle">Cours d'appel · Tribunaux de commerce · Arbitrages internationaux · Notariat</div>
+        <div class="market-body">Les décisions judiciaires, les actes authentiques, les preuves versées au dossier — vérifiables par tout expert judiciaire dans cinquante ans, sans aucune infrastructure, même si l'éditeur, le fabricant et l'État ont tous changé. La preuve est dans le kit. Le kit se vérifie seul.</div>
+      </div>
+
+      <div class="market-card">
+        <div class="market-num">05 · INFRASTRUCTURES CRITIQUES</div>
+        <div class="market-title">Quand une signature invalide peut coûter des vies</div>
+        <div class="market-subtitle">Énergie · Nucléaire · SCADA · Eau · Transport</div>
+        <div class="market-body">Les ordres de manœuvre sur les systèmes de contrôle industriel, les autorisations d'accès aux infrastructures critiques — signés par des clés dont la chaîne de confiance ne traverse aucun serveur civil et ne dépend d'aucune connectivité réseau. Le silicium valide. Rien d'autre.</div>
+      </div>
+
+      <div class="market-card">
+        <div class="market-num">06 · SANTÉ INSTITUTIONNELLE</div>
+        <div class="market-title">Quand l'identité du prescripteur engage des vies</div>
+        <div class="market-subtitle">CHU · APHP · HAS · Agences sanitaires · Établissements classifiés</div>
+        <div class="market-body">Les ordonnances de médicaments à haut risque, les protocoles d'essais cliniques, les autorisations de mise en marché — signés par des praticiens dont l'identité est physiquement irréfutable, sans dépendance à l'infrastructure d'un éditeur américain ou d'un fabricant asiatique.</div>
+      </div>
+
+    </div>
+
+    <p class="markets-conclusion">
+      Φ Sovereign est conçu pour les organisations<br>
+      qui ne peuvent pas se permettre<br>
+      <em>de faire confiance à un fabricant étranger.</em>
+    </p>
+
+  </div>
+</section>
+
+<!-- ═══ SECTION ACCÈS ANTICIPÉ ═══ -->
+<section class="anticipate">
+  <div class="anticipate-inner">
+    <div class="anticipate-eyebrow">Accès anticipé</div>
+    <h2 class="anticipate-title">
+      Φ Sovereign est en développement.<br>
+      Les organisations <em>prioritaires</em><br>
+      sont identifiées maintenant.
+    </h2>
+    <p class="anticipate-body">
+      Φ Sovereign n'est pas encore disponible. Le développement suit la mise en production de Φ Signature. Si vous représentez une organisation pour laquelle l'identité physique irréfutable est une exigence opérationnelle, les accès en test fermé seront attribués par ordre de priorité stratégique.
+    </p>
+    <a href="contact.html" class="anticipate-btn">Demander un accès anticipé</a>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature mathématique</div>
+      <div class="footer-baseline-2">de votre vie numérique</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+          <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
+          <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">Φ Signature</a></li>
+          <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
+          <li><a href="index.html#ecosysteme">Φ PACT</a></li>
+          <li><a href="index.html#ecosysteme">Φ Ticketing</a></li>
+          <li><a href="index.html#ecosysteme">Φ Blind Mail</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="portefeuille-brevets.html">Portefeuille de brevets</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ-quand-docusign-existe.html">Pourquoi Φ ?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>AION ASEMANTIX</strong> · Lyon, France · asemantix@proton.me<br>
+      FR 2604755 · FR 2605317 · FR 2605030 (AUTOCERT) · Brevet divisionnaire en cours<br>
+      © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
