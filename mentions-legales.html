@@ -1,1 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>Mentions légales — Φ® · PHI</title>
+<meta name="description" content="Mentions légales de Φ® — éditeur, hébergeur, propriété intellectuelle, données personnelles. PHI SAS, filiale d'AION ASEMANTIX.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="PHI">
+<link rel="canonical" href="https://phi-signature.fr/mentions-legales.html">
 
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/mentions-legales.html">
+<meta property="og:site_name" content="Φ® — PHI">
+<meta property="og:title" content="Mentions légales — Φ® · PHI">
+<meta property="og:description" content="Mentions légales de Φ® — éditeur, hébergeur, propriété intellectuelle, données personnelles.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:title" content="Mentions légales — Φ® · PHI">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+
+<style>
+  :root {
+    --navy: #0e1c35;
+    --gold: #c8a84b;
+    --gold-deep: #8b6914;
+    --ink: #1a1a2e;
+    --ink-muted: #6b7a99;
+    --parchment: #faf8f4;
+    --rule: rgba(200,168,75,.18);
+    --font-display: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--parchment);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px;
+    height: 64px;
+    background: var(--navy);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.9rem;
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: -.01em;
+  }
+  .nav-cta {
+    font-family: var(--font-mono);
+    font-size: .68rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid rgba(200,168,75,.35);
+    padding: 8px 20px;
+    transition: all .2s;
+  }
+  .nav-cta:hover { background: rgba(200,168,75,.08); border-color: var(--gold); }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb {
+    padding: 32px 48px 0;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: var(--font-mono);
+    font-size: .66rem;
+    color: var(--ink-muted);
+    letter-spacing: .18em;
+    text-transform: uppercase;
+  }
+  .breadcrumb a { color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+  .breadcrumb-sep { margin: 0 10px; opacity: .5; color: var(--gold); }
+
+  /* ── MAIN ── */
+  .page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 48px 96px;
+  }
+
+  .page-eyebrow {
+    font-family: var(--font-mono);
+    font-size: .62rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 16px;
+    opacity: .85;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .page-date {
+    font-family: var(--font-mono);
+    font-size: .65rem;
+    color: var(--ink-muted);
+    letter-spacing: .1em;
+    margin-bottom: 56px;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 48px 0;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-family: var(--font-sans);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin: 28px 0 10px;
+  }
+
+  p {
+    color: #2a3050;
+    margin-bottom: 16px;
+    font-size: .97rem;
+  }
+
+  .info-block {
+    background: rgba(200,168,75,.05);
+    border-left: 2px solid var(--gold);
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: .93rem;
+    color: #2a3050;
+    line-height: 1.75;
+  }
+  .info-block strong { color: var(--navy); font-weight: 600; }
+
+  a { color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  a:hover { color: var(--navy); border-color: var(--navy); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--navy);
+    color: rgba(255,255,255,.45);
+    text-align: center;
+    padding: 40px 48px;
+    font-family: var(--font-mono);
+    font-size: .62rem;
+    letter-spacing: .1em;
+    line-height: 2;
+    border-top: 1px solid var(--rule);
+  }
+  .footer strong { color: rgba(200,168,75,.8); font-weight: 500; }
+
+  @media (max-width: 768px) {
+    .nav { padding: 0 20px; }
+    .breadcrumb { padding: 24px 20px 0; }
+    .page-wrap { padding: 32px 20px 64px; }
+    .footer { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigation principale">
+  <a href="index.html" class="nav-logo">Φ<sup style="font-size:.45em;vertical-align:super;font-family:Inter,sans-serif;font-weight:400">®</sup></a>
+  <a href="tarifications.html" class="nav-cta">Accéder à Φ®</a>
+</nav>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb-sep">›</span>
+  <span>Mentions légales</span>
+</nav>
+
+<main class="page-wrap">
+
+  <p class="page-eyebrow">Informations légales · LCEN art. 6</p>
+  <h1>Mentions légales</h1>
+  <p class="page-date">Dernière mise à jour : mai 2026</p>
+
+  <!-- ── 1. ÉDITEUR ── -->
+  <h2>1. Éditeur du site</h2>
+
+  <p>Le site <strong>phi-signature.fr</strong> est édité par :</p>
+
+  <div class="info-block">
+    <strong>PHI SAS</strong><br>
+    Société par actions simplifiée — en cours de constitution<br>
+    Filiale d'AION ASEMANTIX SNC<br>
+    33 rue du Frère Benoît<br>
+    69600 Oullins Pierre-Bénite<br>
+    France<br><br>
+    <strong>Numéro RCS :</strong> en cours d'immatriculation<br>
+    <strong>Directrice de la publication :</strong> Suzanne de Bégon de Larouzière<br>
+    <strong>Contact :</strong> <a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a>
+  </div>
+
+  <h3>Société mère — détentrice des brevets</h3>
+  <div class="info-block">
+    <strong>AION ASEMANTIX SNC</strong><br>
+    33 rue du Frère Benoît<br>
+    69600 Oullins Pierre-Bénite<br>
+    France<br><br>
+    Détentrice du portefeuille de brevets exploités sous licence exclusive par PHI SAS.
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── 2. HÉBERGEUR ── -->
+  <h2>2. Hébergeur</h2>
+
+  <div class="info-block">
+    <strong>GitHub, Inc.</strong><br>
+    88 Colin P. Kelly Jr. Street<br>
+    San Francisco, CA 94107<br>
+    États-Unis<br><br>
+    <a href="https://github.com" target="_blank" rel="noopener">github.com</a> · GitHub Pages
+  </div>
+
+  <p>Le site est hébergé sur la plateforme <strong>GitHub Pages</strong>, service de publication de sites statiques opéré par GitHub, Inc. Les fichiers du site sont distribués via le réseau de diffusion de contenu (CDN) de GitHub. Aucun traitement de données personnelles n'est opéré au niveau de l'hébergeur dans le cadre de la navigation sur ce site.</p>
+
+  <hr class="divider">
+
+  <!-- ── 3. PROPRIÉTÉ INTELLECTUELLE ── -->
+  <h2>3. Propriété intellectuelle</h2>
+
+  <p>L'ensemble des éléments constituant ce site — textes, visuels, architecture, identité visuelle, dénomination <strong>Φ®</strong> et procédé <strong>Inline-Offline®</strong> — sont la propriété exclusive d'AION ASEMANTIX SNC et de PHI SAS, protégés par le droit français et international de la propriété intellectuelle.</p>
+
+  <h3>Marques déposées</h3>
+  <p><strong>Φ®</strong> et <strong>Inline-Offline®</strong> sont des marques enregistrées. Toute reproduction, représentation ou utilisation, totale ou partielle, de ces marques sans autorisation préalable et écrite est constitutive de contrefaçon, passible de poursuites civiles et pénales.</p>
+
+  <h3>Brevets</h3>
+  <p>Les procédés mis en œuvre par l'application Φ® sont protégés par un portefeuille de brevets déposés auprès de l'INPI par AION ASEMANTIX SNC, exploités sous licence exclusive par PHI SAS. Toute reproduction ou mise en œuvre non autorisée est interdite.</p>
+
+  <hr class="divider">
+
+  <!-- ── 4. DONNÉES PERSONNELLES ── -->
+  <h2>4. Données personnelles</h2>
+
+  <p>L'application Φ® est conçue selon le principe de <strong>minimisation architecturale des données</strong> : aucune donnée personnelle, aucune biométrie, aucun document signé ou transmis via l'application n'est collecté, stocké ou traité par PHI SAS ou AION ASEMANTIX SNC.</p>
+
+  <p>Le traitement s'opère <strong>exclusivement en local</strong>, dans l'enclave matérielle sécurisée du dispositif de l'utilisateur (Secure Enclave Apple / Hardware Keystore Android). Aucun serveur de PHI SAS n'intervient dans la chaîne de traitement.</p>
+
+  <h3>Données de navigation</h3>
+  <p>Le site phi-signature.fr ne dépose aucun cookie de traçage. Aucun outil d'analyse comportementale tiers (Google Analytics, Matomo, etc.) n'est actif sur ce site. Les données de navigation éventuellement collectées par GitHub Pages (logs d'accès) sont soumises à la politique de confidentialité de GitHub, Inc.</p>
+
+  <h3>Exercice des droits</h3>
+  <p>Conformément au Règlement général sur la protection des données (RGPD, UE 2016/679) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition sur vos données. Pour toute demande : <a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a>.</p>
+
+  <hr class="divider">
+
+  <!-- ── 5. RESPONSABILITÉ ── -->
+  <h2>5. Limitation de responsabilité</h2>
+
+  <p>PHI SAS s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site, dont elle se réserve le droit de modifier le contenu à tout moment et sans préavis. PHI SAS ne saurait être tenue responsable des dommages directs ou indirects résultant de l'accès au site ou de l'utilisation des informations qui y sont publiées.</p>
+
+  <p>Les liens hypertextes présents sur ce site vers des sites tiers sont proposés à titre informatif. PHI SAS n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+
+  <hr class="divider">
+
+  <!-- ── 6. DROIT APPLICABLE ── -->
+  <h2>6. Droit applicable</h2>
+
+  <p>Les présentes mentions légales sont soumises au droit français. Tout litige relatif à l'utilisation du site phi-signature.fr relève de la compétence exclusive des juridictions françaises, nonobstant pluralité de défendeurs ou appel en garantie.</p>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
+    Procédés protégés · © 2026 — Tous droits réservés
+  </div>
+</footer>
+
+</body>
+</html>
