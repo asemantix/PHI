@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>L'intimité numérique — Le déchiffrement entre soi et soi · Φ® PHI</title>
+<meta name="description" content="La vraie confidentialité n'est pas contractuelle — elle est structurelle. Φ® est la seule architecture où le déchiffrement a lieu entre vous et votre dispositif. Jamais sur un serveur tiers. Le chiffrement de bout en bout vous trahit — voici pourquoi.">
+<meta name="keywords" content="intimité numérique vraie confidentialité, déchiffrement local dispositif, chiffrement bout en bout limite, Signal ProtonMail serveur déchiffre, confidentialité structurelle sans serveur, souveraineté numérique personnelle, dispositifs légitimes cercle confiance, Inline-Offline déchiffrement local, PHI signature électronique intimité, vie privée numérique garantie construction">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="PHI">
+<link rel="canonical" href="https://phi-signature.fr/intimite-numerique.html">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/intimite-numerique.html">
+<meta property="og:site_name" content="Φ® — PHI">
+<meta property="og:title" content="L'intimité numérique — Le déchiffrement entre soi et soi · Φ® PHI">
+<meta property="og:description" content="Signal déchiffre pour vous le montrer. ProtonMail aussi. À ce moment précis, votre contenu leur appartient. Φ® est la seule architecture où personne d'autre ne déchiffre à votre place.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="L'intimité numérique Φ® — Le déchiffrement entre soi et soi">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:publisher" content="https://phi-signature.fr">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:title" content="L'intimité numérique · Φ® — Quand le déchiffrement a lieu entre vous et vous">
+<meta name="twitter:description" content="Signal et ProtonMail déchiffrent pour vous montrer votre message. Φ® ne déchiffre pas pour vous — votre dispositif déchiffre pour lui-même.">
+<meta property="og:image:secure_url" content="https://phi-signature.fr/og-image.jpg">
+<meta property="article:published_time" content="2026-05-16T00:00:00+02:00">
+<meta property="article:modified_time" content="2026-05-16T00:00:00+02:00">
+<meta property="article:author" content="https://phi-signature.fr/a-propos/A-Propos.html">
+<meta property="article:section" content="Cryptographie & Souveraineté numérique">
+<meta name="twitter:image:alt" content="L'intimité numérique Φ® — Le déchiffrement entre soi et soi">
+<meta name="twitter:creator" content="@phi_signaturefr">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://phi-signature.fr/intimite-numerique.html#article",
+      "name": "L'intimité numérique — Le déchiffrement entre soi et soi",
+      "url": "https://phi-signature.fr/intimite-numerique.html",
+      "description": "La vraie confidentialité est structurelle, pas contractuelle. Φ® est la seule architecture où le déchiffrement a lieu exclusivement dans l'enclave matérielle du destinataire légitime — jamais sur un serveur tiers.",
+      "inLanguage": "fr",
+      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
+      "about": [
+        {"@type": "Thing", "name": "Intimité numérique", "description": "Propriété d'une communication dans laquelle le déchiffrement a lieu exclusivement entre les dispositifs des parties légitimes, sans qu'aucun tiers — opérateur, serveur, IA — n'accède au contenu en clair."},
+        {"@type": "Thing", "name": "Confidentialité structurelle", "description": "Confidentialité garantie par l'architecture du système, non par l'engagement contractuel d'un prestataire. Elle tient par l'absence de tiers, pas par leur promesse."},
+        {"@type": "Thing", "name": "Dispositifs légitimes", "description": "Cercle des dispositifs physiques autorisés à déchiffrer — défini par le propriétaire des données, non imposé par l'infrastructure. Seul ce cercle peut accéder au contenu en clair."}
+      ],
+      "mentions": [
+        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Inline-Offline®, transmission probatoire asémantique"},
+        {"@type": "CreativeWork", "name": "Brevet FR 2604517 — AUTHENTIX, jeton lié au dispositif"},
+        {"@type": "CreativeWork", "name": "Brevet FR 2606431 — AUTOCERT, identité dérivée du silicium"}
+      ],
+      "publisher": {"@type": "Organization", "name": "PHI", "url": "https://phi-signature.fr"}
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://phi-signature.fr/intimite-numerique.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pourquoi le chiffrement de bout en bout ne garantit-il pas la confidentialité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le chiffrement de bout en bout protège le transport — les données sont chiffrées entre l'émetteur et le destinataire. Mais pour afficher le message, l'application doit le déchiffrer. Ce déchiffrement a lieu dans l'environnement de l'opérateur — son serveur, son interface web, son application. À ce moment précis, le contenu est accessible à l'opérateur, à son infrastructure, et à ses obligations légales de coopération judiciaire. Signal voit vos messages quand il les affiche. ProtonMail aussi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la confidentialité structurelle ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La confidentialité structurelle est une propriété de l'architecture, non du contrat. Elle tient par l'absence de tiers, pas par leur engagement. Avec Φ®, il n'y a aucun serveur à qui faire confiance — parce qu'il n'y en a pas. Le déchiffrement a lieu dans l'enclave matérielle du dispositif du destinataire. Aucun opérateur ne peut accéder au contenu, même sous réquisition judiciaire, parce qu'il ne le détient pas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un dispositif légitime ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un dispositif légitime est un appareil physique que vous avez explicitement autorisé à déchiffrer vos données — votre iPhone, votre Android, l'appareil de votre correspondant. Ce cercle est défini par vous, pas par l'infrastructure. Deux dispositifs, trois, dix — mais jamais un serveur que vous n'avez pas choisi. C'est la seule limite de l'intimité numérique dans Φ® : le nombre de légitimes que vous décidez d'admettre."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "L'intimité numérique", "item": "https://phi-signature.fr/intimite-numerique.html"}
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0e1c35;
+    --navy-deep: #08111f;
+    --gold: #c8a84b;
+    --gold-deep: #8b6914;
+    --gold-light: #e2c87a;
+    --gold-soft: #e2c87a;
+    --paper: #faf9f6;
+    --paper-soft: #f4f2ec;
+    --ink: #1a1a2e;
+    --ink-muted: #6b7a99;
+    --rule: rgba(200,168,75,.14);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--navy); font-family: var(--font-sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+  /* ── HEADER ── */
+  .sec-header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: var(--navy); border-bottom: 1px solid rgba(200,168,75,.15); }
+  .sec-header-back { font-family: var(--font-mono); font-size: .7rem; color: rgba(200,168,75,.5); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+  .sec-header-back:hover { color: var(--gold); }
+  .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 1.55rem; color: var(--gold); font-weight: 500; text-decoration: none; }
+  .sec-header-cta { background: var(--gold); color: var(--navy); text-decoration: none; padding: 10px 22px; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
+  .sec-header-cta:hover { background: var(--gold-light); }
+  sup.reg { font-size: .52em; vertical-align: super; font-weight: 400; font-style: normal; opacity: .85; }
+
+  /* ── BREADCRUMB ── */
+  .breadcrumb { padding: 28px 48px 0; max-width: 1200px; margin: 0 auto; font-family: var(--font-mono); font-size: .66rem; color: var(--ink-muted); letter-spacing: .18em; text-transform: uppercase; }
+  .breadcrumb a { color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
+  .breadcrumb-sep { margin: 0 12px; opacity: .5; color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero { padding: 96px 48px 88px; background: var(--navy); color: var(--paper); position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse at 70% 50%, rgba(200,168,75,.06) 0%, transparent 60%); pointer-events: none; }
+  .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
+  .hero-eyebrow { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .44em; text-transform: uppercase; font-weight: 500; margin-bottom: 28px; opacity: .85; }
+  .hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 500; line-height: 1.08; letter-spacing: -.025em; color: var(--paper); margin-bottom: 14px; }
+  .hero-title em { font-style: italic; color: var(--gold-soft); }
+  .hero-subtitle { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; line-height: 1.65; color: rgba(250,249,246,.58); margin-bottom: 52px; max-width: 660px; }
+  .hero-rule { width: 60px; height: 1px; background: var(--gold); opacity: .45; margin-bottom: 36px; }
+  .hero-statement { border-left: 2px solid rgba(200,168,75,.4); padding-left: 28px; max-width: 720px; }
+  .hero-statement p { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.75; color: rgba(250,249,246,.78); font-weight: 400; margin-bottom: 16px; }
+  .hero-statement p:last-child { margin-bottom: 0; }
+  .hero-statement strong { color: var(--gold-soft); font-weight: 500; }
+  .hero-statement em { font-style: italic; color: rgba(250,249,246,.55); }
+
+  /* ── SECTION BASE ── */
+  .section { padding: 96px 48px; border-top: 1px solid var(--rule); }
+  .section-inner { max-width: 960px; margin: 0 auto; }
+  .section-eyebrow { font-family: var(--font-mono); font-size: .7rem; color: var(--gold-deep); letter-spacing: .42em; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
+  .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 500; color: var(--navy); line-height: 1.2; letter-spacing: -.015em; margin-bottom: 18px; }
+  .section-title em { font-style: italic; color: var(--gold-deep); }
+  .section-lede { font-family: var(--font-display); font-style: italic; font-size: 1.08rem; color: var(--ink-muted); line-height: 1.7; max-width: 720px; margin-bottom: 56px; }
+  em.brand { font-style: italic; color: var(--gold-deep); }
+
+  /* ── LE MENSONGE CONFORTABLE ── */
+  .mensonge-section { background: var(--paper-soft); }
+  .mensonge-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-bottom: 48px; }
+  .mc-card { padding: 40px 36px; }
+  .mc-card.them { background: #f0eeea; }
+  .mc-card.phi { background: var(--navy); color: var(--paper); }
+  .mc-label { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
+  .mc-card.them .mc-label { color: #9a8878; }
+  .mc-card.phi .mc-label { color: var(--gold); }
+  .mc-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; margin-bottom: 24px; line-height: 1.3; }
+  .mc-card.them .mc-title { color: var(--navy); }
+  .mc-card.phi .mc-title { color: var(--paper); }
+
+  /* Schéma flux */
+  .flux-schema { font-family: var(--font-mono); font-size: .8rem; line-height: 2.2; }
+  .flux-schema.them .flux-node { color: var(--ink-muted); }
+  .flux-schema.them .flux-arrow { color: #c0b090; }
+  .flux-schema.them .flux-danger { color: #c84b4b; font-weight: 600; }
+  .flux-schema.phi .flux-node { color: rgba(250,249,246,.7); }
+  .flux-schema.phi .flux-arrow { color: rgba(200,168,75,.5); }
+  .flux-schema.phi .flux-good { color: var(--gold); font-weight: 600; }
+
+  .mc-conclusion { font-family: var(--font-sans); font-size: .9rem; line-height: 1.65; margin-top: 20px; font-weight: 300; }
+  .mc-card.them .mc-conclusion { color: var(--ink-muted); }
+  .mc-card.phi .mc-conclusion { color: rgba(250,249,246,.6); }
+  .mc-conclusion strong { font-weight: 600; }
+  .mc-card.them .mc-conclusion strong { color: #c84b4b; }
+  .mc-card.phi .mc-conclusion strong { color: var(--gold-soft); }
+
+  .mensonge-verdict { max-width: 780px; margin: 0 auto; padding: 32px 36px; border-left: 3px solid var(--gold-deep); background: white; }
+  .mensonge-verdict p { font-family: var(--font-display); font-size: 1.08rem; color: var(--ink); line-height: 1.75; font-weight: 400; }
+  .mensonge-verdict strong { color: var(--navy); font-weight: 600; }
+  .mensonge-verdict em { font-style: italic; color: var(--gold-deep); }
+
+  /* ── MOMENT DU DÉCHIFFREMENT ── */
+  .moment-section { }
+  .moment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 56px; }
+  .moment-card { padding: 36px 28px; background: var(--paper-soft); }
+  .moment-card.central { background: var(--navy); color: var(--paper); }
+  .moment-who { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; font-weight: 600; }
+  .moment-card.central .moment-who { color: var(--gold); }
+  .moment-app { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; line-height: 1.3; }
+  .moment-card.central .moment-app { color: var(--paper); }
+  .moment-body { font-family: var(--font-sans); font-size: .85rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
+  .moment-card.central .moment-body { color: rgba(250,249,246,.6); }
+  .moment-tag { display: inline-block; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; padding: 5px 12px; margin-top: 16px; font-weight: 500; }
+  .moment-tag.danger { background: rgba(200,75,75,.1); color: #c84b4b; border: 1px solid rgba(200,75,75,.2); }
+  .moment-tag.safe { background: rgba(200,168,75,.1); color: var(--gold-deep); border: 1px solid var(--rule); }
+
+  /* ── FORTERESSE ── */
+  .forteresse-section { background: var(--navy); color: var(--paper); }
+  .forteresse-section .section-eyebrow { color: var(--gold); }
+  .forteresse-section .section-title { color: var(--paper); }
+  .forteresse-section .section-title em { color: var(--gold-soft); }
+  .forteresse-section .section-lede { color: rgba(250,249,246,.58); }
+
+  .forteresse-pilliers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 56px; }
+  .pillier { padding: 36px 28px; border: 1px solid rgba(200,168,75,.12); }
+  .pillier-num { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .32em; text-transform: uppercase; color: rgba(200,168,75,.5); margin-bottom: 14px; }
+  .pillier-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--paper); margin-bottom: 14px; line-height: 1.3; }
+  .pillier-body { font-family: var(--font-sans); font-size: .85rem; color: rgba(250,249,246,.5); line-height: 1.65; font-weight: 300; }
+  .pillier-body strong { color: rgba(200,168,75,.8); font-weight: 500; }
+
+  .forteresse-principe { max-width: 780px; margin: 0 auto; text-align: center; padding: 48px 0 0; border-top: 1px solid rgba(200,168,75,.12); }
+  .fp-text { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 500; color: var(--paper); line-height: 1.3; margin-bottom: 20px; }
+  .fp-text em { font-style: italic; color: var(--gold-soft); }
+  .fp-sub { font-family: var(--font-sans); font-size: .9rem; color: rgba(250,249,246,.45); line-height: 1.65; font-weight: 300; }
+
+  /* ── LÉGITIMES ── */
+  .legitimes-section { }
+  .legitimes-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-bottom: 56px; }
+  .lv-left { }
+  .lv-cercle { background: var(--paper-soft); padding: 40px; margin-bottom: 24px; position: relative; }
+  .lv-cercle-title { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 20px; }
+  .lv-dispositifs { display: flex; flex-direction: column; gap: 12px; }
+  .lv-dispositif { display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: white; border-left: 2px solid var(--gold); }
+  .lv-dispositif-icon { font-size: 1.1rem; }
+  .lv-dispositif-name { font-family: var(--font-sans); font-size: .85rem; color: var(--navy); font-weight: 500; }
+  .lv-dispositif-sub { font-family: var(--font-mono); font-size: .64rem; color: var(--ink-muted); letter-spacing: .1em; }
+  .lv-hors { padding: 24px; border: 1px solid rgba(200,75,75,.2); background: rgba(200,75,75,.03); }
+  .lv-hors-title { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .24em; text-transform: uppercase; color: #c84b4b; margin-bottom: 14px; opacity: .8; }
+  .lv-hors-item { font-family: var(--font-sans); font-size: .82rem; color: var(--ink-muted); margin-bottom: 8px; padding-left: 14px; position: relative; }
+  .lv-hors-item::before { content: '✕'; position: absolute; left: 0; color: #c84b4b; font-size: .7rem; }
+  .lv-right { }
+  .lv-principe { padding: 32px; border-left: 2px solid var(--gold); background: var(--paper-soft); margin-bottom: 24px; }
+  .lv-principe p { font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); line-height: 1.75; margin-bottom: 12px; font-weight: 400; }
+  .lv-principe p:last-child { margin: 0; }
+  .lv-principe strong { color: var(--navy); font-weight: 600; }
+  .lv-principe em { font-style: italic; color: var(--gold-deep); }
+  .lv-limite { padding: 24px; background: var(--paper); border: 1px solid var(--rule); }
+  .lv-limite-title { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; }
+  .lv-limite p { font-family: var(--font-sans); font-size: .85rem; color: var(--ink-muted); line-height: 1.65; font-weight: 300; }
+  .lv-limite strong { color: var(--navy); font-weight: 500; }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 800px; }
+  .faq-item { border-top: 1px solid var(--rule); padding: 28px 0; }
+  .faq-q { font-family: var(--font-display); font-size: 1.08rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; line-height: 1.4; }
+  .faq-a { font-family: var(--font-sans); font-size: .9rem; color: var(--ink-muted); line-height: 1.7; font-weight: 300; }
+  .faq-a strong { color: var(--navy); font-weight: 500; }
+
+  /* ── CTA ── */
+  .cta-section { background: var(--navy); color: var(--paper); padding: 96px 48px; text-align: center; }
+  .cta-eyebrow { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; opacity: .8; }
+  .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 500; color: var(--paper); line-height: 1.15; margin-bottom: 16px; }
+  .cta-title em { font-style: italic; color: var(--gold-soft); }
+  .cta-sub { font-family: var(--font-display); font-style: italic; font-size: 1.1rem; color: rgba(250,249,246,.5); margin-bottom: 44px; }
+  .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); text-decoration: none; padding: 15px 34px; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
+  .btn-primary:hover { background: var(--gold-light); }
+  .btn-ghost { display: inline-block; background: transparent; color: rgba(250,249,246,.7); text-decoration: none; padding: 14px 28px; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; border: 1.5px solid rgba(200,168,75,.3); transition: all .2s; }
+  .btn-ghost:hover { background: rgba(200,168,75,.08); border-color: var(--gold); }
+
+  /* ── FOOTER ── */
+  .footer { background: var(--navy-deep); border-top: 1px solid rgba(200,168,75,.1); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; padding: 56px 48px; display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 3.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 12px; }
+  .footer-tag { font-family: var(--font-sans); font-size: .8rem; color: rgba(200,168,75,.5); line-height: 1.5; }
+  .footer-nav { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(200,168,75,.5); margin-bottom: 14px; font-weight: 500; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 8px; }
+  .footer-col a { font-family: var(--font-sans); font-size: .82rem; color: rgba(250,249,246,.4); text-decoration: none; transition: color .2s; }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-legal { border-top: 1px solid rgba(200,168,75,.08); padding: 24px 48px; text-align: center; font-family: var(--font-mono); font-size: .62rem; color: rgba(250,249,246,.25); letter-spacing: .1em; line-height: 2; }
+  .footer-legal strong { color: rgba(200,168,75,.45); font-weight: 500; }
+
+  @media (max-width: 900px) {
+    .sec-header, .breadcrumb, .hero, .section, .cta-section { padding-left: 20px; padding-right: 20px; }
+    .hero { padding-top: 64px; padding-bottom: 64px; }
+    .section { padding-top: 64px; padding-bottom: 64px; }
+    .mensonge-compare, .moment-grid, .forteresse-pilliers, .legitimes-visual { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; padding: 40px 20px; }
+    .footer-nav { grid-template-columns: 1fr; }
+    .footer-legal { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="sec-header">
+  <a href="index.html" class="sec-header-back">← Retour</a>
+  <a href="index.html" class="sec-header-phi">Φ<sup class="reg">®</sup></a>
+  <a href="tarifications.html" class="sec-header-cta">Accéder à Φ<sup class="reg">®</sup></a>
+</header>
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a>
+  <span class="breadcrumb-sep">›</span>
+  <span>L'intimité numérique</span>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Φ<sup class="reg">®</sup> · Souveraineté numérique · Brevet FR 2604755</p>
+    <h1 class="hero-title">
+      L'intimité numérique —<br>
+      le déchiffrement <em>entre soi et soi.</em>
+    </h1>
+    <p class="hero-subtitle">
+      La confidentialité n'est pas contractuelle. Elle est structurelle.
+      Elle tient par l'absence de tiers — pas par leur promesse.
+    </p>
+    <div class="hero-rule"></div>
+    <div class="hero-statement">
+      <p>
+        Quand vous lisez un message sur Signal, ProtonMail ou Gmail —
+        <strong>c'est leur système qui déchiffre pour vous le montrer.</strong>
+        Leur serveur. Leur interface. Leur environnement d'exécution.
+        À ce moment précis, votre contenu leur appartient.
+      </p>
+      <p>
+        <em>Φ<sup class="reg">®</sup> ne déchiffre pas pour vous le montrer.</em>
+        Votre dispositif déchiffre pour lui-même.
+        Il n'y a pas d'intermédiaire à ce moment-là.
+        Il ne peut pas y en avoir. C'est la définition de l'intimité.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LE MENSONGE CONFORTABLE ══ -->
+<section class="section mensonge-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Le bout-en-bout et ses limites</p>
+    <h2 class="section-title">Chiffré en transit.<br><em>Lu à l'arrivée.</em></h2>
+    <p class="section-lede">
+      Le chiffrement de bout en bout est une réalité technique — et une confusion entretenue.
+      Il protège le transport. Il ne protège pas le moment de la lecture.
+      Ces deux choses sont radicalement différentes.
+    </p>
+
+    <div class="mensonge-compare">
+      <div class="mc-card them">
+        <p class="mc-label">Signal · ProtonMail · WhatsApp</p>
+        <h3 class="mc-title">Le transport est chiffré.<br>La lecture est chez eux.</h3>
+        <div class="flux-schema them">
+          <div class="flux-node">Vous ──chiffré──►</div>
+          <div class="flux-node flux-danger">Leur serveur ──déchiffre──►</div>
+          <div class="flux-node flux-danger">Leur interface affiche</div>
+          <div class="flux-node" style="margin-top:8px;font-size:.7rem;opacity:.6">↑ leur IA analyse ici</div>
+        </div>
+        <p class="mc-conclusion">
+          Pour afficher votre message, leur application doit le déchiffrer.
+          Ce déchiffrement a lieu <strong>dans leur environnement</strong> —
+          leur infrastructure, leur clé de session, leur obligation légale
+          de coopération judiciaire. Leur IA est présente à ce moment-là.
+          ProtonMail a livré une adresse IP en 2021. Signal est sur AWS.
+        </p>
+      </div>
+      <div class="mc-card phi">
+        <p class="mc-label">Φ<sup class="reg">®</sup> — Inline-Offline®</p>
+        <h3 class="mc-title">Le transport est du bruit.<br>La lecture est chez vous.</h3>
+        <div class="flux-schema phi">
+          <div class="flux-node">Vous ──bruit aléatoire──►</div>
+          <div class="flux-node">Canal aveugle (Gmail, WhatsApp…)</div>
+          <div class="flux-node flux-good">Votre silicium déchiffre ─► vous lisez</div>
+          <div class="flux-node" style="margin-top:8px;font-size:.7rem;opacity:.4">aucun tiers présent à ce moment</div>
+        </div>
+        <p class="mc-conclusion">
+          Internet transporte des octets <strong>qu'il ne peut pas lire</strong>.
+          Le déchiffrement n'a lieu que dans l'enclave matérielle
+          de votre dispositif. Aucun serveur Φ<sup class="reg">®</sup> n'existe.
+          Aucune réquisition judiciaire ne peut aboutir —
+          <strong>parce qu'il n'y a rien à requérir.</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="mensonge-verdict">
+      <p>
+        La différence n'est pas une question de degré — c'est une question de nature.
+        <strong>Le bout-en-bout protège le chemin.</strong>
+        <em>Φ<sup class="reg">®</sup> protège le moment.</em>
+        Le seul moment qui compte : celui où les données existent en clair.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LE MOMENT DU DÉCHIFFREMENT ══ -->
+<section class="section moment-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Le critère décisif</p>
+    <h2 class="section-title">Où le déchiffrement<br><em>a-t-il lieu ?</em></h2>
+    <p class="section-lede">
+      C'est la seule question qui compte.
+      Pas le nom du protocole, pas le niveau de chiffrement annoncé,
+      pas la juridiction du siège social. Où, physiquement,
+      votre contenu redevient-il lisible ?
+    </p>
+
+    <div class="moment-grid">
+      <div class="moment-card">
+        <p class="moment-who">Gmail · Outlook · Yahoo</p>
+        <p class="moment-app">Sur leurs serveurs.<br>Dans leur cloud.</p>
+        <p class="moment-body">Vos emails ne sont pas chiffrés au repos. Ils sont stockés en clair ou avec des clés que Google et Microsoft détiennent. Leurs IA — Gemini, Copilot — indexent, analysent, profilent.</p>
+        <span class="moment-tag danger">Soumis au Cloud Act</span>
+      </div>
+      <div class="moment-card central">
+        <p class="moment-who">Signal · ProtonMail · WhatsApp</p>
+        <p class="moment-app">Dans leur interface.<br>Dans leur environnement.</p>
+        <p class="moment-body">Le transport est chiffré — c'est vrai. Mais pour afficher le message, leur application déchiffre dans leur couche logicielle. Ils voient ce que vous lisez, au moment où vous le lisez. Les métadonnées — qui, quand, combien — sont toujours disponibles.</p>
+        <span class="moment-tag danger">Déchiffrement applicatif côté opérateur</span>
+      </div>
+      <div class="moment-card">
+        <p class="moment-who">Φ<sup class="reg">®</sup> — Inline-Offline®</p>
+        <p class="moment-app">Dans votre enclave.<br>Sur votre silicium.</p>
+        <p class="moment-body">Le canal transporte du bruit. Le déchiffrement n'a lieu que dans l'enclave sécurisée de votre dispositif physique — Secure Enclave Apple, Hardware Keystore Android. Aucun opérateur n'est présent. Aucun ne peut l'être.</p>
+        <span class="moment-tag safe">Déchiffrement exclusivement local</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LA FORTERESSE DE SOUVERAINETÉ ══ -->
+<section class="section forteresse-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">La vision fondatrice</p>
+    <h2 class="section-title">Une forteresse de<br><em>souveraineté numérique.</em></h2>
+    <p class="section-lede">
+      Φ<sup class="reg">®</sup> n'est pas un produit de sécurité parmi d'autres.
+      C'est une architecture conçue autour d'un seul principe :
+      votre vie numérique n'appartient qu'à vous.
+    </p>
+
+    <div class="forteresse-pilliers">
+      <div class="pillier">
+        <p class="pillier-num">Pilier I</p>
+        <h3 class="pillier-title">L'intimité par construction</h3>
+        <p class="pillier-body">
+          La confidentialité n'est pas une promesse contractuelle.
+          Elle est une propriété mathématique du procédé.
+          <strong>Il n'y a pas de serveur à compromettre
+          parce qu'il n'y en a pas.</strong>
+          Il n'y a pas de clé à saisir parce qu'elle ne quitte
+          jamais votre enclave matérielle.
+        </p>
+      </div>
+      <div class="pillier">
+        <p class="pillier-num">Pilier II</p>
+        <h3 class="pillier-title">L'agnosticité au canal</h3>
+        <p class="pillier-body">
+          Gmail, WhatsApp, Signal, une clé USB, AirDrop, Telegram,
+          une liaison satellite. Le canal est indifférent.
+          Il transporte du bruit. <strong>Il ne sait pas ce qu'il transporte.</strong>
+          Il ne peut pas le savoir. Cette indifférence est la forteresse.
+        </p>
+      </div>
+      <div class="pillier">
+        <p class="pillier-num">Pilier III</p>
+        <h3 class="pillier-title">La résistance dans le temps</h3>
+        <p class="pillier-body">
+          Les données chiffrées d'aujourd'hui seront déchiffrées
+          par les ordinateurs quantiques de demain —
+          <em>si elles ont pu être récoltées.</em>
+          <strong>Du bruit ne se récolte pas.</strong>
+          Du bruit ne se déchiffre pas. La forteresse tient dans le futur.
+        </p>
+      </div>
+    </div>
+
+    <div class="forteresse-principe">
+      <p class="fp-text">
+        J'ai voulu bâtir une forteresse<br>
+        de souveraineté numérique.<br>
+        <em>Elle passe par l'intimité.</em>
+      </p>
+      <p class="fp-sub">— Suzanne de Bégon de Larouzière, inventrice · AION ASEMANTIX</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LES DISPOSITIFS LÉGITIMES ══ -->
+<section class="section legitimes-section">
+  <div class="section-inner">
+    <p class="section-eyebrow">Le cercle de confiance</p>
+    <h2 class="section-title">Légitimes —<br><em>le seul mot qui compte.</em></h2>
+    <p class="section-lede">
+      L'intimité numérique de Φ<sup class="reg">®</sup> n'est pas absolue au sens d'une solitude.
+      Elle est absolue au sens d'un cercle choisi.
+      Vous définissez qui entre. L'infrastructure n'impose personne.
+    </p>
+
+    <div class="legitimes-visual">
+      <div class="lv-left">
+        <div class="lv-cercle">
+          <p class="lv-cercle-title">Le cercle des légitimes — votre choix</p>
+          <div class="lv-dispositifs">
+            <div class="lv-dispositif">
+              <span class="lv-dispositif-icon">📱</span>
+              <div>
+                <p class="lv-dispositif-name">Votre iPhone · Android</p>
+                <p class="lv-dispositif-sub">Enclave sécurisée · clé locale</p>
+              </div>
+            </div>
+            <div class="lv-dispositif">
+              <span class="lv-dispositif-icon">📱</span>
+              <div>
+                <p class="lv-dispositif-name">Le dispositif de votre correspondant</p>
+                <p class="lv-dispositif-sub">Autorisé par vous · clé partagée hors-bande</p>
+              </div>
+            </div>
+            <div class="lv-dispositif" style="border-color:var(--rule);opacity:.5">
+              <span class="lv-dispositif-icon">📱</span>
+              <div>
+                <p class="lv-dispositif-name">Un troisième dispositif</p>
+                <p class="lv-dispositif-sub">Si vous le décidez · pas autrement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lv-hors">
+          <p class="lv-hors-title">Hors du cercle — toujours</p>
+          <p class="lv-hors-item">Les serveurs de messagerie (Gmail, WhatsApp…)</p>
+          <p class="lv-hors-item">Les opérateurs de réseau</p>
+          <p class="lv-hors-item">Les intelligences artificielles tierces</p>
+          <p class="lv-hors-item">Les autorités de réquisition (Cloud Act…)</p>
+          <p class="lv-hors-item">PHI elle-même — par construction</p>
+        </div>
+      </div>
+
+      <div class="lv-right">
+        <div class="lv-principe">
+          <p>
+            <strong>Deux dispositifs légitimes.</strong>
+            C'est le cas le plus simple — et le plus courant.
+            Vous et votre correspondant. Deux enclaves matérielles.
+            Un canal aveugle entre elles.
+          </p>
+          <p>
+            Personne d'autre ne peut déchiffrer —
+            <em>non parce qu'on leur interdit,
+            mais parce que la clé n'existe nulle part ailleurs.</em>
+            Elle est dans vos siliciums. Nulle part ailleurs.
+          </p>
+          <p>
+            <strong>Légitimes réduit le nombre de témoins.</strong>
+            C'est la seule limite de l'intimité numérique dans Φ<sup class="reg">®</sup> :
+            le nombre de légitimes que vous décidez d'admettre.
+            Pas plus. Pas moins.
+          </p>
+        </div>
+        <div class="lv-limite">
+          <p class="lv-limite-title">La seule limite — et elle est vôtre</p>
+          <p>
+            Plus vous admettez de dispositifs légitimes,
+            plus le cercle s'élargit. C'est votre décision,
+            pas celle de l'infrastructure.
+            <strong>Un Cabinet d'avocats peut partager un canal
+            entre dix associés légitimes.</strong>
+            Jamais avec leur prestataire cloud sans le savoir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section" style="background:var(--paper-soft)">
+  <div class="section-inner">
+    <p class="section-eyebrow">Questions fréquentes</p>
+    <h2 class="section-title">Ce que l'on <em>nous demande.</em></h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Le chiffrement de bout en bout ne suffit-il pas ?</p>
+        <p class="faq-a">
+          Non — parce qu'il confond deux moments distincts.
+          Le bout-en-bout chiffre le <strong>transport</strong>.
+          Mais pour afficher votre message, l'application doit le déchiffrer.
+          Ce déchiffrement a lieu dans l'environnement de l'opérateur —
+          son serveur, son interface, sa couche logicielle.
+          À ce moment précis, votre contenu leur est accessible.
+          Signal voit vos messages quand il les affiche.
+          ProtonMail aussi. C'est structurel, pas accidentel.
+        </p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">ProtonMail n'est-il pas hors juridiction américaine ?</p>
+        <p class="faq-a">
+          ProtonMail est suisse — et a livré une adresse IP à des autorités françaises en 2021,
+          sur demande via Europol. Telegram, dont le fondateur a été arrêté en France,
+          a depuis annoncé une coopération avec les autorités.
+          <strong>La juridiction du siège social ne détermine pas la confidentialité.</strong>
+          Ce qui la détermine : le lieu du déchiffrement.
+          Avec Φ<sup class="reg">®</sup>, aucune réquisition ne peut aboutir
+          parce qu'il n'y a rien à requérir — les données ne résident sur aucun serveur.
+        </p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Qu'est-ce qui garantit que PHI elle-même ne peut pas lire mes données ?</p>
+        <p class="faq-a">
+          L'architecture. PHI ne possède aucun serveur.
+          <strong>Il n'y a aucune infrastructure PHI dans la chaîne de déchiffrement.</strong>
+          Le procédé Inline-Offline® (brevet FR 2604755) est conçu pour que
+          le déchiffrement ait lieu exclusivement dans l'enclave matérielle
+          du dispositif du destinataire autorisé.
+          PHI ne détient aucune clé, ne voit aucun contenu.
+          Cette impossibilité est mathématique, vérifiable par audit,
+          et décrite dans les brevets publics.
+        </p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Qu'est-ce qu'un dispositif légitime exactement ?</p>
+        <p class="faq-a">
+          Un dispositif physique — iPhone, Android —
+          dont l'identité matérielle a été incorporée dans la graine cryptographique
+          lors de l'enrôlement dans Φ<sup class="reg">®</sup>.
+          La légitimité est cryptographique : la clé est liée au silicium du dispositif
+          par construction (brevet AUTHENTIX FR 2604517).
+          <strong>Elle ne peut pas être copiée, transférée, ou simulée sur un autre matériel.</strong>
+          Présenter la même clé sur un autre dispositif produit une graine différente —
+          invalide. Il n'y a pas de contournement possible.
+        </p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Cette intimité est-elle compatible avec la preuve juridique ?</p>
+        <p class="faq-a">
+          Oui — et c'est ce qui distingue fondamentalement Φ<sup class="reg">®</sup>.
+          L'intimité n'exclut pas la preuve — elle l'organise différemment.
+          <strong>La preuve n'est pas détenue par un tiers.
+          Elle est gravée dans le silicium des deux parties légitimes.</strong>
+          Chaque partie détient sa boîte noire probatoire.
+          En cas de litige, l'expert judiciaire recalcule la fonction G
+          à partir des éléments locaux — sans accéder à aucun serveur PHI.
+          L'intimité et l'opposabilité ne s'excluent pas. Elles coexistent.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-section">
+  <p class="cta-eyebrow">Φ<sup class="reg">®</sup> · La forteresse de souveraineté numérique</p>
+  <h2 class="cta-title">
+    Votre vie numérique<br>
+    n'appartient <em>qu'à vous.</em>
+  </h2>
+  <p class="cta-sub">Le déchiffrement entre soi et soi. La seule vraie garantie.</p>
+  <div class="cta-buttons">
+    <a href="tarifications.html" class="btn-primary">Accéder à Φ<sup class="reg">®</sup></a>
+    <a href="asemantique.html" class="btn-ghost">L'asémanticité →</a>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-phi">Φ<sup style="font-size:.45em;vertical-align:super;font-family:'IBM Plex Sans',sans-serif;font-weight:400">®</sup></div>
+      <p class="footer-tag">La signature mathématique<br>de votre vie numérique</p>
+    </div>
+    <nav class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="asemantique.html">Asémanticité</a></li>
+          <li><a href="intimite-numerique.html">L'intimité numérique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ®</a></li>
+          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ-quand-docusign-existe.html">Pourquoi Φ® quand DocuSign existe ?</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer-legal">
+    <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
+    Procédés protégés · © 2026 — Tous droits réservés
+  </div>
+</footer>
+
+</body>
+</html>
