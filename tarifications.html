@@ -404,9 +404,11 @@
 <aside class="io-reminder">
   <div class="io-r-inner">
     <p class="io-r-eyebrow">Inline-Offline<sup style="font-size:.52em;vertical-align:super">®</sup> — en 10 secondes</p>
-    <p class="io-r-text">
-      Ce qui transite sur Internet est indéchiffrable par construction — non pas chiffré en transit, mais <strong>asémantique</strong> : indistinguable du bruit aléatoire pour tout observateur, y compris le canal porteur lui-même. Le déchiffrement n'a lieu qu'à destination, dans l'enclave matérielle du dispositif désigné, au moment de la fusion avec le document, la biométrie et l'identité silicium du destinataire. C'est le premier élément de <span class="io-r-formula">G = Φ(Qui · Document · Silicium · Instant)</span>. Aucun serveur intermédiaire n'en a la clé — parce qu'aucun ne peut l'avoir.
-    </p>
+    <div class="io-r-text" style="display:flex;flex-direction:column;gap:14px">
+      <p style="margin:0"><strong>Inline</strong> — la charge transmise sur Internet est <strong>asémantique</strong> : mathématiquement indistinguable d'un bruit aléatoire pour tout observateur du canal, y compris l'opérateur porteur lui-même. Ce n'est pas un chiffrement de transport ; c'est l'absence structurelle de signal exploitable.</p>
+      <p style="margin:0"><strong>Offline</strong> — le déchiffrement s'opère exclusivement dans l'enclave matérielle du dispositif désigné, isolée du réseau pendant toute l'opération. L'application ne sollicite aucun serveur, n'émet aucune requête sortante. La fusion entre le document, la biométrie du destinataire et l'identité silicium du dispositif se déroule dans un espace que le réseau ne peut atteindre. C'est le premier élément de <span class="io-r-formula">G = Φ(Qui · Document · Silicium · Instant)</span>.</p>
+      <p style="margin:0">Aucun serveur intermédiaire ne détient la clé. Aucun ne peut la détenir.</p>
+    </div>
     <a href="asemantique.html" class="io-r-link">L'asémanticité →</a>
   </div>
 </aside>
