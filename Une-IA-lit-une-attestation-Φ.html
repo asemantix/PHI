@@ -3,31 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Une IA lit une attestation Φ — sans outil, sans accès · PHI</title>
-<meta name="description" content="Nous avons envoyé une attestation Φ à un assistant IA — sans contexte, sans outil propriétaire. Il a identifié l'appareil, la date, les signatures, la biométrie. Voici sa réponse intégrale.">
-<meta name="keywords" content="attestation signature électronique lisible, vérification signature sans outil, preuve signature autonome, certificat probatoire IA, signature vérifiable juge expert, attestation post-quantique, Inline-Offline preuve, PHI Phi">
+<title>Une IA lit une attestation Φ — Huis-clos lisible par IA · sans outil ni accès · alternative à DocuSign · Φ PHI</title>
+<meta name="description" content="Le huis-clos cryptographique est lisible par toute IA, sans outil propriétaire ni accès aux serveurs PHI. Nous avons envoyé une attestation Φ à un assistant IA — sans contexte. Il a identifié l'appareil, la date, les signatures, la biométrie. La preuve est autonome — contrairement à DocuSign, Adobe Sign et Yousign qui exigent leur propre infrastructure de vérification. Brevet FR 2604755.">
+<meta name="keywords" content="huis-clos lisible par IA, signature en huis-clos vérifiable IA, attestation Φ lue par IA, attestation signature électronique lisible, vérification signature sans outil, preuve signature autonome, certificat probatoire IA, signature vérifiable juge expert, alternative DocuSign vérification autonome, alternative Adobe Sign preuve recalculable, alternative Yousign attestation lisible, attestation post-quantique ML-DSA-65, Inline-Offline preuve, PHI Phi">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="PHI">
 <link rel="canonical" href="https://phi-signature.fr/attestation-lue-par-une-ia.html">
 <meta name="theme-color" content="#0e1c35">
+
+<!-- Favicons -->
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
 <meta property="og:type" content="article">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://phi-signature.fr/attestation-lue-par-une-ia.html">
 <meta property="og:site_name" content="Φ — PHI">
-<meta property="og:title" content="Une IA lit une attestation Φ — sans outil, sans accès, sans explication">
-<meta property="og:description" content="Sans contexte ni outil propriétaire, un assistant IA identifie l'appareil, le document, les signatures cryptographiques et la biométrie. Le certificat se lit seul.">
+<meta property="og:title" content="Une IA lit une attestation Φ — Huis-clos lisible par IA · sans outil, sans accès · Φ">
+<meta property="og:description" content="Huis-clos lisible : sans contexte ni outil propriétaire, un assistant IA identifie l'appareil, le document, les signatures cryptographiques et la biométrie. La preuve Φ se lit seule — sans serveurs PHI, contrairement à DocuSign et Adobe Sign.">
 <meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:secure_url" content="https://phi-signature.fr/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Une IA lit une attestation Φ — huis-clos lisible par IA">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="article:publisher" content="https://phi-signature.fr">
-<meta property="article:published_time" content="2026-04-17">
+<meta property="article:published_time" content="2026-04-17T00:00:00+02:00">
+<meta property="article:modified_time" content="2026-05-20T00:00:00+02:00">
+<meta property="article:author" content="https://phi-signature.fr/a-propos/A-Propos.html">
+<meta property="article:section" content="Preuve autonome & Vérification IA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@phi_signaturefr">
-<meta name="twitter:title" content="Une IA lit une attestation Φ — sans outil, sans accès">
-<meta name="twitter:description" content="Appareil, date, hash, biométrie, compteur monotone : voici ce qu'un assistant IA comprend d'une attestation Φ, sans instruction ni outil propriétaire.">
+<meta name="twitter:creator" content="@phi_signaturefr">
+<meta name="twitter:title" content="Une IA lit une attestation Φ — Huis-clos lisible par IA · Φ">
+<meta name="twitter:description" content="Huis-clos lisible. Appareil, date, hash, biométrie : voici ce qu'une IA comprend d'une attestation Φ — sans outil propriétaire.">
 <meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+<meta name="twitter:image:alt" content="Une IA lit une attestation Φ — huis-clos lisible par IA">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,21 +48,24 @@
     {
       "@type": "Article",
       "@id": "https://phi-signature.fr/attestation-lue-par-une-ia.html#article",
-      "headline": "Une IA lit une attestation Φ — sans outil, sans accès, sans explication",
-      "description": "Nous avons envoyé une attestation Φ à un assistant IA sans contexte ni outil propriétaire. Il a identifié l'appareil, la date, les signatures cryptographiques, la biométrie et le compteur monotone.",
+      "headline": "Une IA lit une attestation Φ — Huis-clos lisible · sans outil, sans accès, sans explication",
+      "description": "Nous avons envoyé une attestation Φ à un assistant IA sans contexte ni outil propriétaire. Il a identifié l'appareil, la date, les signatures cryptographiques, la biométrie et le compteur monotone. Le huis-clos cryptographique est lisible — par tout expert, tout juge, toute IA.",
       "url": "https://phi-signature.fr/attestation-lue-par-une-ia.html",
       "inLanguage": "fr",
       "datePublished": "2026-04-17",
-      "dateModified": "2026-04-17",
-      "author": {"@type": "Organization","name": "PHI","url": "https://phi-signature.fr"},
-      "publisher": {"@type": "Organization","name": "PHI","url": "https://phi-signature.fr"},
+      "dateModified": "2026-05-20",
+      "author": {"@id": "https://phi-signature.fr/#organization"},
+      "publisher": {"@id": "https://phi-signature.fr/#organization"},
       "about": [
-        {"@type": "Thing","name": "Signature électronique probatoire","description": "Signature électronique dont la preuve est vérifiable mathématiquement par tout tiers sans outil propriétaire."},
-        {"@type": "Thing","name": "Attestation Φ","description": "Certificat d'acte signé via l'application Φ, lisible par tout expert, IA ou juge sans accès aux serveurs PHI."}
+        {"@type": "Thing","name": "Signature en huis-clos lisible par IA","description": "Φ produit une signature en huis-clos cryptographique dont l'attestation est lisible par toute IA, tout expert judiciaire et tout juge sans outil propriétaire ni accès aux serveurs PHI. La preuve est autonome — contrairement à DocuSign, Adobe Sign et Yousign qui requièrent leur propre infrastructure de vérification."},
+        {"@type": "Thing","name": "Signature électronique probatoire autonome","description": "Signature électronique dont la preuve est vérifiable mathématiquement par tout tiers sans outil propriétaire, sans serveur éditeur, sans autorité de certification commerciale."},
+        {"@type": "Thing","name": "Attestation Φ","description": "Certificat d'acte signé via l'application Φ, lisible par tout expert, IA ou juge sans accès aux serveurs PHI. Recalculable à partir du brevet public FR 2604755."}
       ],
       "mentions": [
         {"@type": "SoftwareApplication","name": "Φ (Phi)","applicationCategory": "BusinessApplication"},
-        {"@type": "Organization","name": "PHI"}
+        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Fonction G, procédé probatoire"},
+        {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
+        {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"}
       ]
     },
     {
@@ -81,28 +97,18 @@
       "@type": "Organization",
       "@id": "https://phi-signature.fr/#organization",
       "name": "PHI",
+      "alternateName": "Φ",
       "url": "https://phi-signature.fr",
       "email": "phi-signature@proton.me",
-      "address": {"@type": "PostalAddress","addressLocality": "Lyon","addressCountry": "FR"}
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet FR 2604755.",
+      "foundingDate": "2024",
+      "address": {"@type": "PostalAddress","addressLocality": "Lyon","addressCountry": "FR"},
+      "sameAs": ["https://github.com/asemantix", "https://www.linkedin.com/company/121854148/", "https://twitter.com/phi_signaturefr"],
+      "founder": {"@type": "Person", "name": "Suzanne Thâora de Begon de Larouzière", "sameAs": "https://www.linkedin.com/in/suzanne-dite-tha%C3%B4ra-de-begon-de-larouziere-73385a362/"}
     }
   ]
 }
 </script>
-<meta name="description" content="Nous avons envoyé une attestation Φ à un assistant IA — sans explication, sans contexte. Voici ce qu'il a compris. Aucun outil propriétaire. Aucun accès à nos serveurs.">
-<meta name="robots" content="index, follow">
-<meta name="author" content="PHI">
-<link rel="canonical" href="https://phi-signature.fr/attestation-lue-par-une-ia.html">
-<meta name="theme-color" content="#0e1c35">
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:url" content="https://phi-signature.fr/attestation-lue-par-une-ia.html">
-<meta property="og:site_name" content="Φ — PHI">
-<meta property="og:title" content="L'attestation Φ lue par une IA — PHI">
-<meta property="og:description" content="Sans explication, sans contexte, sans outil propriétaire — voici ce qu'un assistant IA comprend d'une attestation Φ.">
-<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@phi_signaturefr">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -139,8 +145,10 @@ a{color:inherit;text-decoration:none}
 .hero-halo{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(ellipse,rgba(200,168,75,.055) 0%,transparent 62%);pointer-events:none}
 .hero-inner{max-width:800px;margin:0 auto;position:relative;z-index:2}
 .hero-ey{font-family:var(--font-mono);font-size:.72rem;color:rgba(200,168,75,.55);letter-spacing:.42em;text-transform:uppercase;margin-bottom:28px;font-weight:600}
-.hero-title{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.4rem);font-weight:600;color:var(--paper);line-height:1.1;letter-spacing:-.018em;margin-bottom:24px}
+.hero-title{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.4rem);font-weight:600;color:var(--paper);line-height:1.1;letter-spacing:-.018em;margin-bottom:14px}
 .hero-title em{font-style:italic;color:var(--gold-light)}
+.hero-mark{font-family:var(--font-display);font-style:italic;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--gold-light);line-height:1;letter-spacing:-.015em;margin:10px auto 24px;max-width:760px;text-align:center}
+@media(max-width:720px){.hero-mark{font-size:1.9rem;margin:8px auto 18px}}
 .hero-rule{width:60px;height:1px;background:var(--gold);opacity:.5;margin:0 auto 28px}
 .hero-lead{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:rgba(250,250,247,.55);line-height:1.65;max-width:580px;margin:0 auto 32px}
 .hero-nota{display:inline-flex;gap:24px;flex-wrap:wrap;justify-content:center}
@@ -273,8 +281,9 @@ a{color:inherit;text-decoration:none}
 <header class="hero">
   <div class="hero-halo"></div>
   <div class="hero-inner">
-    <div class="hero-ey">Φ · Preuve autonome · PHI · Avril 2026</div>
+    <div class="hero-ey">Φ · Preuve autonome · Huis-clos lisible par IA · PHI · Avril 2026</div>
     <h1 class="hero-title">Une IA lit une attestation <em>Φ</em>.<br><em style="font-size:.75em;color:rgba(250,250,247,.45)">Sans outil. Sans accès. Sans explication.</em></h1>
+    <div class="hero-mark">Avec une IA.</div>
     <div class="hero-rule"></div>
     <p class="hero-lead">Nous lui avons envoyé le fichier — rien d'autre.<br>Voici ce qu'elle a compris.</p>
     <div class="hero-nota">
@@ -447,7 +456,7 @@ a{color:inherit;text-decoration:none}
       <div class="footer-col">
         <h4>Comprendre</h4>
         <ul>
-          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
           <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
           <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
           <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>

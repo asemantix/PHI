@@ -3,33 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le protocole Alice et Bob — Φ · PHI</title>
-<meta name="description" content="Le protocole Φ entre deux dispositifs souverains : envoi chiffré, lecture mesurée, signature probatoire bilatérale, certificat opposable. Par PHI.">
-<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0e1c35">
+<title>Le protocole Alice et Bob — Le huis-clos cryptographique en miroir · alternative à DocuSign · Φ PHI</title>
+<meta name="description" content="Le protocole Φ entre deux dispositifs souverains : envoi chiffré, lecture mesurée, signature probatoire bilatérale, certificat opposable. Un huis-clos cryptographique en miroir — deux journaux jumeaux dans les enclaves d'Alice et de Bob. Brevet FR 2604755.">
+<meta name="keywords" content="protocole Alice Bob, protocole signature en huis-clos, signature en miroir, huis-clos cryptographique en miroir, la signature électronique DocuSign, alternative DocuSign souveraine, alternative Yousign, alternative Adobe Sign, signature bilatérale, certificat opposable, ML-DSA-65, ML-KEM-768, journal chaîné enclave, Inline-Offline, PHI, phi-signature.fr">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="PHI">
 <link rel="canonical" href="https://phi-signature.fr/protocole-alice-bob.html">
-<meta name="theme-color" content="#0e1c35">
+
+<!-- Favicons -->
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
-<meta property="og:type" content="website">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://phi-signature.fr/protocole-alice-bob.html">
-<meta property="og:title" content="Le protocole Alice et Bob — Φ · PHI">
-<meta property="og:description" content="Le protocole Φ : envoi chiffré, lecture mesurée, signature bilatérale, certificat opposable.">
+<meta property="og:site_name" content="Φ — PHI">
+<meta property="og:title" content="Le protocole Alice et Bob — Le huis-clos cryptographique en miroir · Φ PHI">
+<meta property="og:description" content="Le protocole Φ entre deux dispositifs souverains : envoi chiffré, lecture mesurée, signature probatoire bilatérale, certificat opposable. Un huis-clos en miroir — deux journaux jumeaux.">
 <meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:secure_url" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Le protocole Alice et Bob — Huis-clos cryptographique en miroir · Φ PHI">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:publisher" content="https://phi-signature.fr">
+<meta property="article:published_time" content="2026-05-01T00:00:00+02:00">
+<meta property="article:modified_time" content="2026-05-20T00:00:00+02:00">
+<meta property="article:author" content="https://phi-signature.fr/a-propos/A-Propos.html">
+<meta property="article:section" content="Cryptographie & Souveraineté numérique">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:creator" content="@phi_signaturefr">
+<meta name="twitter:title" content="Le protocole Alice et Bob — Le huis-clos cryptographique en miroir · Φ">
+<meta name="twitter:description" content="Alice envoie. Bob signe. La preuve existe — en miroir dans les enclaves des deux dispositifs.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+<meta name="twitter:image:alt" content="Le protocole Alice et Bob — Huis-clos cryptographique en miroir">
+
+<!-- JSON-LD : WebPage + TechArticle + BreadcrumbList + Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://phi-signature.fr/protocole-alice-bob.html",
-  "name": "Le protocole Alice et Bob — Φ",
-  "url": "https://phi-signature.fr/protocole-alice-bob.html",
-  "inLanguage": "fr-FR",
-  "isPartOf": { "@type": "WebSite", "@id": "https://phi-signature.fr/#website" },
-  "publisher": { "@type": "Organization", "name": "PHI" },
-  "breadcrumb": { "@type": "BreadcrumbList", "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/" },
-    { "@type": "ListItem", "position": 2, "name": "Le protocole Alice et Bob", "item": "https://phi-signature.fr/protocole-alice-bob.html" }
-  ]}
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://phi-signature.fr/protocole-alice-bob.html#webpage",
+      "name": "Le protocole Alice et Bob — Le huis-clos cryptographique en miroir · Φ",
+      "url": "https://phi-signature.fr/protocole-alice-bob.html",
+      "description": "Le protocole Φ pas à pas entre deux dispositifs souverains : envoi chiffré, lecture mesurée, signature probatoire bilatérale, certificat opposable. Un huis-clos cryptographique en miroir.",
+      "inLanguage": "fr",
+      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Huis-clos cryptographique en miroir",
+          "description": "Le protocole Φ orchestre un face-à-face cryptographique entre les enclaves matérielles d'Alice et de Bob. Chaque étape — envoi, lecture, signature, certification — est inscrite en miroir dans les deux journaux probatoires. Aucune partie ne peut modifier le sien sans rompre la cohérence avec celui de l'autre. La preuve est irréfutable parce que jumelée."
+        },
+        {
+          "@type": "Thing",
+          "name": "Signature bilatérale",
+          "description": "Acte de signature où les deux parties produisent simultanément leur empreinte cryptographique, inscrite dans des journaux symétriquement chaînés."
+        },
+        {
+          "@type": "Thing",
+          "name": "Certificat opposable sans tiers",
+          "description": "Le certificat délivré par le protocole Φ est recalculable par tout expert judiciaire indépendamment de l'éditeur, à partir des deux journaux miroirs et des clés publiques des parties."
+        }
+      ],
+      "mentions": [
+        {"@type": "Legislation", "name": "Article 1366 du Code civil français"},
+        {"@type": "Legislation", "name": "Article 1367 du Code civil français"},
+        {"@type": "Legislation", "name": "Règlement UE 910/2014 (eIDAS) article 26"},
+        {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
+        {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"},
+        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Fonction G, procédé probatoire"},
+        {"@type": "CreativeWork", "name": "Brevet FR 2605317 — Architecture cryptographique post-quantique"}
+      ],
+      "publisher": {"@id": "https://phi-signature.fr/#organization"}
+    },
+    {
+      "@type": "TechArticle",
+      "@id": "https://phi-signature.fr/protocole-alice-bob.html#article",
+      "headline": "Le protocole Alice et Bob — Le huis-clos cryptographique en miroir",
+      "description": "Le détail pas à pas du protocole Φ entre deux dispositifs souverains. Pour cryptographes, juristes, magistrats, experts judiciaires, DSI, RSSI.",
+      "datePublished": "2026-05-01",
+      "dateModified": "2026-05-20",
+      "inLanguage": "fr",
+      "image": "https://phi-signature.fr/og-image.jpg",
+      "author": {"@id": "https://phi-signature.fr/#organization"},
+      "publisher": {"@id": "https://phi-signature.fr/#organization"},
+      "mainEntityOfPage": {"@id": "https://phi-signature.fr/protocole-alice-bob.html#webpage"},
+      "proficiencyLevel": "Expert",
+      "audience": {"@type": "Audience", "audienceType": "Cryptographes, juristes, magistrats, experts judiciaires, DSI, RSSI"},
+      "keywords": "protocole Alice Bob, signature en huis-clos en miroir, signature bilatérale, certificat opposable, ML-DSA-65, ML-KEM-768, Fonction G, eIDAS"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Le protocole Alice et Bob", "item": "https://phi-signature.fr/protocole-alice-bob.html"}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "PHI",
+      "alternateName": "Φ",
+      "url": "https://phi-signature.fr",
+      "email": "phi-signature@proton.me",
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet FR 2604755.",
+      "foundingDate": "2024",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lyon",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://github.com/asemantix",
+        "https://www.linkedin.com/company/121854148/",
+        "https://twitter.com/phi_signaturefr"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Suzanne Thâora de Begon de Larouzière",
+        "sameAs": "https://www.linkedin.com/in/suzanne-dite-tha%C3%B4ra-de-begon-de-larouziere-73385a362/"
+      }
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,8 +170,10 @@
 
   .page-header { padding: 100px 40px 80px; text-align: center; border-bottom: 1px solid var(--rule); }
   .page-eyebrow { font-family: var(--font-mono); font-size: .78rem; color: var(--gold-deep); letter-spacing: .42em; text-transform: uppercase; margin-bottom: 36px; font-weight: 600; }
-  .page-title { font-family: var(--font-display); font-size: 3rem; font-weight: 600; color: var(--navy); line-height: 1.15; letter-spacing: -.015em; margin: 0 auto 28px; max-width: 780px; }
+  .page-title { font-family: var(--font-display); font-size: 3rem; font-weight: 600; color: var(--navy); line-height: 1.15; letter-spacing: -.015em; margin: 0 auto 14px; max-width: 780px; }
   .page-title em { font-style: italic; font-weight: 500; color: var(--gold-deep); }
+  .page-mark { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: clamp(2.4rem, 5.5vw, 4rem); color: var(--gold-deep); line-height: 1; letter-spacing: -.018em; margin: 12px auto 28px; }
+  @media (max-width: 720px) { .page-mark { font-size: 2rem; margin: 10px auto 20px; } }
   .page-lead { font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--ink-muted); line-height: 1.6; max-width: 720px; margin: 0 auto; }
 
   .section { padding: 110px 40px 100px; border-top: 1px solid var(--rule); }
@@ -150,8 +257,9 @@
 </nav>
 
 <header class="page-header">
-  <div class="page-eyebrow">Le protocole</div>
+  <div class="page-eyebrow">Le protocole · Huis-clos en miroir</div>
   <h1 class="page-title">Alice envoie. Bob signe.<br><em>La preuve existe.</em></h1>
+  <div class="page-mark">En miroir.</div>
   <p class="page-lead">
     Le détail pas à pas du protocole entre deux dispositifs Φ — de l'envoi chiffré jusqu'au certificat opposable, en passant par la lecture mesurée et la signature triade.
   </p>
@@ -877,7 +985,7 @@
       <div class="footer-col">
         <h4>Comprendre</h4>
         <ul>
-          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
           <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
           <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
           <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>

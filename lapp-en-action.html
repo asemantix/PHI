@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Φ en action — Découvrez la signature probatoire en direct · PHI</title>
+<meta name="theme-color" content="#0e1c35">
+<title>Φ en action — Signature en huis-clos en direct · démonstration interactive · alternative à DocuSign · Φ PHI</title>
+<meta name="description" content="Découvrez la signature en huis-clos cryptographique en direct : démonstration interactive de l'application Φ — post-quantique, 100 % locale, sans tiers de confiance, sans serveur. Contrairement à DocuSign, Yousign et Adobe Sign, aucun serveur ne déchiffre vos actes. Brevet FR 2604755. ML-DSA-65, ML-KEM-768.">
+<meta name="keywords" content="signature en huis-clos en direct, démonstration huis-clos cryptographique, signature électronique en direct, application Φ démo, alternative DocuSign démo, alternative Yousign démonstration, alternative Adobe Sign démo, signature post-quantique en action, signature sans serveur, Inline-Offline démo, ML-DSA-65, ML-KEM-768, PHI, phi-signature.fr">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -21,7 +31,7 @@
   --pf:'Playfair Display',Georgia,serif;
   --mo:'IBM Plex Mono',monospace;
 }
-body{background:#1a1a2a;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:40px 20px;font-family:var(--pf);gap:40px}
+body{background:#1a1a2a;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:40px 20px;font-family:var(--pf);gap:40px;flex-wrap:wrap}
 
 /* ── PHONE SHELL ── */
 .phone{width:390px;height:844px;background:var(--iv);border-radius:50px;overflow:hidden;position:relative;color:var(--n);border:2px solid rgba(240,236,228,.65);flex-shrink:0;outline:1px solid rgba(240,236,228,.22);outline-offset:5px;box-shadow:inset 0 2px 0 rgba(255,255,255,.22),inset 0 -1px 0 rgba(0,0,0,.3),0 50px 100px rgba(0,0,0,.65)}
@@ -107,18 +117,109 @@ canvas.dz{width:330px;height:130px;border:.5px solid var(--nf);border-radius:2px
 
 .footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
 .footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c8a84b)!important}
+.page-mark-wrap{width:100%;text-align:center;padding:18px 24px 28px;color:rgba(240,236,228,.92);font-family:'Playfair Display',Georgia,serif}
+.page-mark{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);color:#e2c87a;line-height:1;letter-spacing:-.015em;margin:0 0 10px}
+.page-mark-sub{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(226,200,122,.6);font-weight:500}
+@media(max-width:720px){.page-mark{font-size:1.9rem}.page-mark-wrap{padding:14px 16px 22px}}
 </style>
 
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="PHI">
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/lapp-en-action.html">
 <meta property="og:site_name" content="Φ — PHI">
-<meta property="og:title" content="Φ en action — Découvrez la signature probatoire en direct · PHI">
-<meta property="og:description" content="Découvrez l'application Φ — signature post-quantique, 100 % locale, sans tiers de confiance.">
+<meta property="og:title" content="Φ en action — Signature en huis-clos en direct · démonstration interactive · Φ">
+<meta property="og:description" content="Démonstration interactive du huis-clos cryptographique : la signature électronique Φ en direct, post-quantique, 100 % locale, sans serveur. Contrairement à DocuSign, aucun serveur ne déchiffre vos actes.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:secure_url" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Φ en action — démonstration interactive de la signature en huis-clos">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:publisher" content="https://phi-signature.fr">
+<meta property="article:published_time" content="2026-05-01T00:00:00+02:00">
+<meta property="article:modified_time" content="2026-05-20T00:00:00+02:00">
+<meta property="article:author" content="https://phi-signature.fr/a-propos/A-Propos.html">
+<meta property="article:section" content="Démonstration interactive">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:creator" content="@phi_signaturefr">
+<meta name="twitter:title" content="Φ en action — Signature en huis-clos en direct · Φ">
+<meta name="twitter:description" content="Démonstration interactive du huis-clos cryptographique en direct. Post-quantique, 100 % locale, sans serveur. Alternative à DocuSign.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+<meta name="twitter:image:alt" content="Φ en action — démonstration interactive de la signature en huis-clos">
 <link rel="canonical" href="https://phi-signature.fr/lapp-en-action.html">
+
+<!-- JSON-LD : WebPage + BreadcrumbList + Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://phi-signature.fr/lapp-en-action.html#webpage",
+      "name": "Φ en action — Signature en huis-clos en direct · démonstration interactive",
+      "url": "https://phi-signature.fr/lapp-en-action.html",
+      "description": "Démonstration interactive de la signature en huis-clos cryptographique : l'application Φ en direct, post-quantique, 100 % locale, sans tiers de confiance.",
+      "inLanguage": "fr",
+      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Signature en huis-clos — démonstration en direct",
+          "description": "Φ orchestre un huis-clos cryptographique entre deux dispositifs légitimes : aucun serveur ne déchiffre les actes. La démonstration interactive reproduit le parcours complet du signataire — création de l'identité Φ, envoi d'un document, signature, vérification — entièrement local, sans cloud."
+        },
+        {
+          "@type": "Thing",
+          "name": "Démonstration interactive de l'application Φ",
+          "description": "Parcours pas-à-pas du signataire dans l'application Φ : engagement de conscience, création de l'identité, biométrie, signature manuscrite, envoi via canal libre, réception et vérification probatoire. Tout se déroule en huis-clos sur l'enclave matérielle."
+        },
+        {
+          "@type": "Thing",
+          "name": "Alternative à DocuSign en direct",
+          "description": "Là où DocuSign, Yousign et Adobe Sign déchiffrent les documents sur leurs serveurs, Φ ne le fait jamais. La démonstration montre que la signature électronique peut être post-quantique, locale et opposable sans aucun tiers de confiance."
+        }
+      ],
+      "mentions": [
+        {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
+        {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"},
+        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Fonction G, procédé probatoire"}
+      ],
+      "publisher": {"@id": "https://phi-signature.fr/#organization"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Φ en action", "item": "https://phi-signature.fr/lapp-en-action.html"}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "PHI",
+      "alternateName": "Φ",
+      "url": "https://phi-signature.fr",
+      "email": "phi-signature@proton.me",
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet FR 2604755.",
+      "foundingDate": "2024",
+      "address": {"@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR"},
+      "sameAs": ["https://github.com/asemantix", "https://www.linkedin.com/company/121854148/", "https://twitter.com/phi_signaturefr"],
+      "founder": {"@type": "Person", "name": "Suzanne Thâora de Begon de Larouzière", "sameAs": "https://www.linkedin.com/in/suzanne-dite-tha%C3%B4ra-de-begon-de-larouziere-73385a362/"}
+    }
+  ]
+}
+</script>
 </head>
 <body>
+
+<div class="page-mark-wrap" aria-label="Mot-marque de la page" style="width:100%;flex-basis:100%;order:-1;">
+  <h1 class="page-mark">En direct.</h1>
+  <div class="page-mark-sub">Démonstration · Signature en huis-clos</div>
+</div>
 
 <div class="phone">
 
@@ -1377,7 +1478,7 @@ function startCguTimer(){
       <div class="footer-col">
         <h4>Comprendre</h4>
         <ul>
-          <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
+          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
           <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
           <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
           <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
