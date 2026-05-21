@@ -413,9 +413,66 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .footer-meta{border-top:1px solid rgba(200,168,75,.15);padding-top:28px;text-align:center;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;color:rgba(255,255,255,.4);line-height:1.8}
 .footer-meta strong{color:var(--gold-light);font-weight:500}
 @media(max-width:720px){.footer{padding:60px 24px 30px}.footer-phi{font-size:3.5rem}.footer-nav{grid-template-columns:1fr;gap:32px}.section{padding:70px 24px}.section-title{font-size:1.7rem}.further,.ecosysteme,.final-cta{padding-left:24px;padding-right:24px}}
+/* Patch post-quantique : bandeau pré-hero */
+.prehero-band{background:var(--navy);color:var(--gold-light);padding:12px 24px;text-align:center;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;font-weight:500;border-bottom:1px solid rgba(200,168,75,.3)}
+.prehero-band .prehero-sep{color:var(--gold);margin:0 14px;opacity:.6}
+/* Patch post-quantique : sub-title hero */
+.hero-subtitle{max-width:800px;margin:0 auto;font-family:var(--font-display);font-weight:400;color:var(--navy);font-size:1.45rem;line-height:1.5}
+.hero-subtitle .line{display:block}
+.hero-subtitle .line-pq{font-style:italic;color:var(--gold-deep);font-size:1.65rem;margin:8px 0}
+/* Patch post-quantique : section Q-Day + sablier */
+.qday{background:var(--navy);color:var(--paper);padding:100px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.qday-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:center}
+.qday-visual{display:flex;justify-content:center;align-items:center}
+.qday-content{text-align:left}
+.qday-eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.42em;color:var(--gold-light);text-transform:uppercase;font-weight:500;margin-bottom:22px}
+.qday-title{font-family:var(--font-display);font-size:2.6rem;font-weight:500;color:var(--paper);line-height:1.15;letter-spacing:-.012em;margin-bottom:26px}
+.qday-title em{font-style:italic;color:var(--gold-light)}
+.qday-text{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:rgba(250,250,247,.78);line-height:1.65;margin-bottom:18px;max-width:640px}
+.qday-text strong{color:var(--gold-light);font-weight:500;font-style:italic}
+.qday-meta{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.25em;color:rgba(250,250,247,.5);text-transform:uppercase;margin-top:32px;margin-bottom:28px}
+.qday-meta strong{color:var(--gold-light);font-weight:600}
+.qday-cta{display:inline-flex;align-items:center;background:transparent;color:var(--gold-light);text-decoration:none;padding:14px 26px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;border:1.5px solid var(--gold);transition:all .2s;border-radius:2px}
+.qday-cta:hover{background:var(--gold);color:var(--navy)}
+.hourglass-svg{width:200px;height:auto;filter:drop-shadow(0 4px 20px rgba(200,168,75,.15));animation:hourglass-flip 7s ease-in-out infinite}
+@keyframes sand-top-fall{0%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(.05);transform-origin:top}}
+@keyframes sand-bot-rise{0%{transform:scaleY(.05);transform-origin:bottom}100%{transform:scaleY(1);transform-origin:bottom}}
+@keyframes sand-stream{0%,95%{opacity:.85}100%{opacity:0}}
+@keyframes hourglass-flip{0%,80%{transform:rotate(0deg)}90%,100%{transform:rotate(180deg)}}
+.hourglass-svg .sand-top{animation:sand-top-fall 6s ease-in infinite}
+.hourglass-svg .sand-bot{animation:sand-bot-rise 6s ease-out infinite}
+.hourglass-svg .sand-stream{animation:sand-stream 6s linear infinite}
+@media(max-width:800px){.qday{padding:70px 24px}.qday-inner{grid-template-columns:1fr;gap:40px;text-align:center}.qday-content{text-align:center}.qday-title{font-size:2rem}.hourglass-svg{width:140px}}
+/* Patch : section enclave anti-IA */
+.enclave-section{background:var(--navy);color:var(--paper);padding:110px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.enclave-inner{max-width:1000px;margin:0 auto}
+.enclave-eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.42em;color:var(--gold-light);text-transform:uppercase;font-weight:500;margin-bottom:22px;text-align:center}
+.enclave-title{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:500;color:var(--paper);line-height:1.18;letter-spacing:-.015em;margin-bottom:28px;text-align:center;max-width:880px;margin-left:auto;margin-right:auto}
+.enclave-title em{font-style:italic;color:var(--gold-light)}
+.enclave-rule{width:80px;height:1.5px;background:var(--gold);margin:0 auto 50px}
+.enclave-lede{font-family:var(--font-display);font-style:italic;font-size:1.25rem;color:rgba(250,250,247,.78);line-height:1.6;max-width:760px;margin:0 auto 50px;text-align:center;font-weight:400}
+.enclave-body{font-family:var(--font-sans);font-size:1.05rem;color:rgba(250,250,247,.85);line-height:1.75;max-width:720px;margin:0 auto 40px}
+.enclave-body p{margin-bottom:22px}
+.enclave-body strong{color:var(--gold-light);font-weight:500}
+.enclave-conclusion{text-align:center;margin-top:40px}
+.enclave-conclusion-text{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--paper);line-height:1.55;max-width:680px;margin:0 auto 28px;font-weight:400}
+.enclave-conclusion-text strong{color:var(--gold-light);font-weight:500;font-style:normal;font-family:var(--font-display)}
+.enclave-meta{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.25em;color:rgba(250,250,247,.5);text-transform:uppercase;margin-bottom:32px}
+.enclave-meta strong{color:var(--gold-light);font-weight:600}
+.enclave-cta{display:inline-flex;align-items:center;background:transparent;color:var(--gold-light);text-decoration:none;padding:14px 28px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;border:1.5px solid var(--gold);transition:all .2s;border-radius:2px}
+.enclave-cta:hover{background:var(--gold);color:var(--navy)}
+@media(max-width:720px){.enclave-section{padding:70px 24px}.enclave-title{font-size:1.9rem}}
 </style>
 </head>
 <body>
+
+<div class="prehero-band">
+  Post-Quantique
+  <span class="prehero-sep">·</span>
+  Breveté en France
+  <span class="prehero-sep">·</span>
+  Disponible
+</div>
 
 <div class="top-actions">
   <a href="vos-suggestions.html" class="top-evaluate">Évaluer</a>
@@ -425,17 +482,73 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 <section class="hero">
   <div class="hero-phi">Φ</div>
   <div class="hero-line"></div>
-  <div class="hero-baseline">
-    <div class="hero-baseline-1">La signature électronique</div>
-    <div class="hero-baseline-2">Post-Quantique</div>
-    <div class="hero-baseline-3">sans tiers de confiance</div>
-    <div class="hero-baseline-4">avec un journal chaîné dans l'enclave</div>
+  <div class="hero-subtitle">
+    <span class="line">La signature électronique</span>
+    <span class="line line-pq">qui survit à l'ordinateur quantique.</span>
+    <span class="line">Sans tiers de confiance.</span>
+    <span class="line">Avec un journal chaîné dans l'enclave.</span>
   </div>
   <a href="#promesse" class="hero-scroll-cue" aria-label="Découvrir la promesse Φ">
     <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <path d="M 2 4 L 12 14 L 22 4" fill="none" stroke="#8b6914" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
+</section>
+
+<section class="qday">
+  <div class="qday-inner">
+
+    <div class="qday-visual">
+      <svg class="hourglass-svg" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#e2c87a"/>
+            <stop offset="100%" stop-color="#c8a84b"/>
+          </linearGradient>
+          <clipPath id="topClip">
+            <path d="M58 35 L142 35 L106 148 L94 148 Z"/>
+          </clipPath>
+          <clipPath id="botClip">
+            <path d="M94 152 L106 152 L142 265 L58 265 Z"/>
+          </clipPath>
+        </defs>
+        <line x1="30" y1="30" x2="170" y2="30" stroke="#c8a84b" stroke-width="3" stroke-linecap="round"/>
+        <line x1="30" y1="270" x2="170" y2="270" stroke="#c8a84b" stroke-width="3" stroke-linecap="round"/>
+        <path d="M55 30 L145 30 L105 150 L145 270 L55 270 L95 150 Z"
+              fill="none" stroke="#c8a84b" stroke-width="1.5" stroke-linejoin="round"/>
+        <g clip-path="url(#topClip)">
+          <rect class="sand-top" x="58" y="35" width="84" height="113" fill="url(#sandGrad)" opacity="0.85"/>
+        </g>
+        <g clip-path="url(#botClip)">
+          <rect class="sand-bot" x="58" y="152" width="84" height="113" fill="url(#sandGrad)" opacity="0.85"/>
+        </g>
+        <line class="sand-stream" x1="100" y1="148" x2="100" y2="220"
+              stroke="#e2c87a" stroke-width="1.2" opacity="0.85"/>
+        <circle cx="98" cy="220" r="1.5" fill="#e2c87a" opacity="0.6"/>
+        <circle cx="103" cy="225" r="1.2" fill="#e2c87a" opacity="0.5"/>
+        <circle cx="100" cy="218" r="1" fill="#e2c87a" opacity="0.7"/>
+      </svg>
+    </div>
+
+    <div class="qday-content">
+      <div class="qday-eyebrow">L'horizon Q-Day</div>
+      <h2 class="qday-title">
+        Les signatures d'aujourd'hui<br>
+        seront <em>contestables demain.</em>
+      </h2>
+      <p class="qday-text">
+        D'ici 2030, l'ordinateur quantique cassera RSA et ECDSA — les fondations cryptographiques de <strong>DocuSign, Yousign, Adobe Sign</strong> et de toute la signature électronique mondiale.
+      </p>
+      <p class="qday-text">
+        Φ ne sera pas concernée. ML-DSA-65 et ML-KEM-768, standardisés par le NIST en 2024, sont conçus pour résister aux ordinateurs quantiques.
+      </p>
+      <div class="qday-meta">
+        Q-Day · estimation NIST <strong>2030 – 2035</strong>
+      </div>
+      <a href="resistance-quantique.html" class="qday-cta">Lire la résistance quantique →</a>
+    </div>
+
+  </div>
 </section>
 
 <div class="section-divider"><div class="section-divider-line"></div></div>
@@ -578,6 +691,49 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
   </div>
 </section>
 
+<section class="enclave-section" id="enclave-anti-ia">
+  <div class="enclave-inner">
+
+    <div class="enclave-eyebrow">Au-delà du chiffrement de bout-en-bout</div>
+
+    <h2 class="enclave-title">
+      Et aucune IA ne pourra <em>le lire.</em>
+    </h2>
+
+    <div class="enclave-rule"></div>
+
+    <p class="enclave-lede">
+      Le chiffrement de bout-en-bout protège vos documents pendant le transport. Φ va plus loin : il les protège aussi de votre propre téléphone.
+    </p>
+
+    <div class="enclave-body">
+      <p>
+        Vos documents Φ ne sont jamais déchiffrés en mémoire vive standard. Ils ne sont jamais affichés à un système d'exploitation qui pourrait les exposer. Le déchiffrement, la signature, la vérification — tout a lieu dans l'<strong>enclave matérielle</strong>, une zone du processeur isolée du système d'exploitation et inaccessible aux applications tierces.
+      </p>
+      <p>
+        <strong>Apple Intelligence</strong>, <strong>Google Gemini</strong>, <strong>Microsoft Copilot</strong> — les agents d'intelligence artificielle intégrés au cœur des systèmes d'exploitation s'exécutent dans l'espace utilisateur de l'OS. Ils peuvent lire ce que les applications affichent à l'écran, indexer, résumer, transmettre. C'est leur fonction.
+      </p>
+      <p>
+        L'enclave matérielle est isolée de cet espace par le processeur lui-même : <strong>Apple Secure Enclave</strong> (depuis l'A7), <strong>Samsung StrongBox</strong>, <strong>ARM TrustZone</strong>. Aucun service de l'OS n'y accède en lecture. Aucun agent IA non plus.
+      </p>
+      <p>
+        Ce n'est pas une politique de confidentialité qu'on vous demande de croire. C'est une propriété documentée par les fabricants de processeurs.
+      </p>
+    </div>
+
+    <div class="enclave-conclusion">
+      <p class="enclave-conclusion-text">
+        Le chiffrement de bout-en-bout devient une protection théorique dès qu'un agent IA peut lire l'écran. <strong>Φ s'arrête à l'enclave — par construction du processeur.</strong>
+      </p>
+      <div class="enclave-meta">
+        Procédé <strong>Inline-Offline®</strong> · FR 2604755 · AION ASEMANTIX
+      </div>
+      <a href="asemantique.html" class="enclave-cta">Comprendre l'asémanticité →</a>
+    </div>
+
+  </div>
+</section>
+
 <section class="tri" id="triade">
   <div class="tri-inner">
     <div class="tri-ey">L'app — Triade probatoire</div>
@@ -707,11 +863,11 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
     <h2 class="ecosysteme-title"><em class="phi-i">Φ</em>, premier produit <em>d'une famille.</em></h2>
     <p class="ecosysteme-sub">Quatre produits, un même socle probatoire : la mécanique probatoire. Ce que vous installez aujourd'hui est conçu pour s'étendre à vos engagements, vos billets, votre courrier.</p>
     <div class="ecosysteme-grid">
-      <article class="eco-card eco-card--active"><div class="eco-card-name"><em class="phi-i">Φ</em> Signature</div><div class="eco-card-rule"></div><div class="eco-card-desc">Transmission et signature de documents avec preuve mathématique vérifiable.</div><div class="eco-card-status eco-card-status--live">DISPONIBLE</div></article>
+      <article class="eco-card eco-card--active"><div class="eco-card-name"><em class="phi-i">Φ</em> Signature</div><div class="eco-card-rule"></div><div class="eco-card-desc">Transmission et signature de documents avec preuve mathématique vérifiable, <em>résistante aux ordinateurs quantiques.</em></div><div class="eco-card-status eco-card-status--live">DISPONIBLE</div></article>
       <article class="eco-card" onclick="window.location='phi-desktop.html'" style="cursor:pointer"><div class="eco-card-name"><em class="phi-i">Φ</em> Desktop</div><div class="eco-card-rule"></div><div class="eco-card-desc">Mac & Windows. La même signature post-quantique et la même confidentialité absolue — sur votre ordinateur de bureau.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card"><div class="eco-card-name">Φ PACT</div><div class="eco-card-rule"></div><div class="eco-card-desc">Cosignatures et multisignatures probatoires pour AG, conseils, accords multipartites.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card"><div class="eco-card-name">Φ Ticketing</div><div class="eco-card-rule"></div><div class="eco-card-desc">Authenticité d'un QR code par dispositif fusionné. Validation anti-fraude instantanée — billets de transport, événements — sans réseau.</div><div class="eco-card-status">À VENIR</div></article>
-      <article class="eco-card"><div class="eco-card-name">Φ Blind Mail</div><div class="eco-card-rule"></div><div class="eco-card-desc">Messagerie chiffrée. Transport public, lecture privée — vos messages voyagent <em>inline</em>, ne s'ouvrent qu'<em>offline</em>.</div><div class="eco-card-status">À VENIR</div></article>
+      <article class="eco-card"><div class="eco-card-name">Φ Blind</div><div class="eco-card-rule"></div><div class="eco-card-desc"><em>Noise, not Signal.</em><br>Vos messages ne sont pas chiffrés. Ils sont du bruit. Et même le bruit s'efface.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card" onclick="window.location='phi-sovereign.html'" style="cursor:pointer"><div class="eco-card-name"><em class="phi-i">Φ</em> Sovereign</div><div class="eco-card-rule"></div><div class="eco-card-desc">Identité physique irréfutable. La clé naît du silicium — aucun fabricant dans la chaîne. Pour les organisations qui n'acceptent aucun intermédiaire.</div><div class="eco-card-status">À VENIR</div></article>
     </div>
     <p class="ecosysteme-foot">Tous propulsés par <strong>ASOR CORE</strong> — la mécanique probatoire, déclinée pour chaque usage.</p>
