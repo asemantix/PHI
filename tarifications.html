@@ -11,7 +11,7 @@
 <meta name="author" content="PHI">
 <link rel="canonical" href="https://phi-signature.fr/tarifications.html">
 <link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
- 
+
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://phi-signature.fr/tarifications.html">
@@ -24,11 +24,11 @@
 <meta name="twitter:title" content="Tarifs Φ — Signature post-quantique · PHI">
 <meta name="twitter:description" content="Correspondances 110€ · Signatures 150€ · C+S 210€ · Cabinet 3p 350€ · 3 dispositifs. Sans Cloud Act.">
 <meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
- 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
- 
+
 <style>
   :root {
     --navy: #0e1c35;
@@ -45,59 +45,59 @@
     --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
     --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
   }
- 
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--paper); color: var(--navy); font-family: var(--font-sans); line-height: 1.55; }
- 
+
   .top-actions { position: fixed; top: 24px; right: 32px; z-index: 100; display: flex; gap: 10px; align-items: center; }
   .top-cta { background: var(--navy); color: var(--paper); text-decoration: none; padding: 12px 22px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
   .top-cta:hover { background: var(--navy-deep); }
   .top-cta .phi-cta { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; margin-left: 4px; letter-spacing: 0; color: var(--gold-light); }
   @media (max-width: 720px) { .top-actions { top: 16px; right: 16px; } .top-cta { padding: 10px 16px; font-size: 0.62rem; } }
- 
+
   .breadcrumb { padding: 32px 48px 0; max-width: 1200px; margin: 0 auto; font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); letter-spacing: 0.18em; text-transform: uppercase; }
   .breadcrumb a { color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; }
   .breadcrumb a:hover { color: var(--navy); }
   .breadcrumb-sep { margin: 0 12px; opacity: 0.5; color: var(--gold); }
- 
+
   .hero { padding: 56px 48px 72px; max-width: 1200px; margin: 0 auto; text-align: center; }
   .hero-eyebrow { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 24px; font-weight: 600; }
   .hero-title { font-family: var(--font-display); font-size: 3.6rem; font-weight: 500; color: var(--navy); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 20px; }
   .hero-title em { font-style: italic; color: var(--gold-deep); }
   .hero-lede { font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--ink-muted); line-height: 1.55; max-width: 640px; margin: 0 auto 16px; }
   .hero-note { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.12em; }
- 
+
   .divider { display: flex; justify-content: center; padding: 0; }
   .divider-line { width: 100px; height: 1px; background: var(--gold); opacity: 0.7; }
- 
+
   .plans { background: var(--paper); padding: 72px 40px 80px; border-top: 1px solid var(--rule); }
   .plans-inner { max-width: 1180px; margin: 0 auto; }
   .plans-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 24px; }
   .plans-sovereign { max-width: 1180px; margin: 0 auto; }
- 
+
   .plan-card { background: var(--paper-soft); border: 1px solid var(--rule); border-radius: 2px; padding: 36px 28px; display: flex; flex-direction: column; position: relative; transition: border-color 0.2s; }
   .plan-card:hover { border-color: var(--gold); }
   .plan-card--featured { border: 1.5px solid var(--gold); background: var(--paper); }
   .plan-card--featured::before { content: 'RECOMMANDÉ'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--navy-deep); font-family: var(--font-mono); font-size: 0.58rem; font-weight: 600; letter-spacing: 0.22em; padding: 4px 12px; border-radius: 2px; white-space: nowrap; }
   .plan-card--free { border: 1px solid var(--rule); opacity: 0.85; }
   .plan-card--sovereign { background: var(--navy); border: 1px solid rgba(200,168,75,0.3); border-radius: 2px; padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
- 
+
   .plan-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
   .plan-card--featured .plan-name { color: var(--gold-deep); }
   .plan-tagline { font-family: var(--font-sans); font-size: 0.8rem; color: var(--ink-muted); margin-bottom: 24px; font-weight: 300; }
- 
+
   .plan-price { margin-bottom: 28px; }
   .plan-price-amount { font-family: var(--font-display); font-size: 2.8rem; font-weight: 600; color: var(--navy); line-height: 1; }
   .plan-card--free .plan-price-amount { color: var(--ink-muted); }
   .plan-price-period { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); letter-spacing: 0.12em; display: block; margin-top: 4px; }
   .plan-price-note { font-family: var(--font-sans); font-size: 0.72rem; color: var(--ink-muted); margin-top: 6px; font-weight: 300; font-style: italic; }
- 
+
   .plan-features { list-style: none; margin-bottom: 32px; flex: 1; }
   .plan-features li { font-family: var(--font-sans); font-size: 0.85rem; color: var(--ink); padding: 7px 0; border-bottom: 1px solid var(--rule); line-height: 1.4; font-weight: 400; display: flex; gap: 8px; align-items: flex-start; }
   .plan-features li:last-child { border-bottom: none; }
   .plan-features li::before { content: '—'; color: var(--gold); font-family: var(--font-mono); font-size: 0.7rem; flex-shrink: 0; margin-top: 1px; }
   .plan-features li strong { color: var(--navy); font-weight: 500; }
- 
+
   .plan-cta { display: block; text-align: center; padding: 14px 20px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; border-radius: 2px; text-decoration: none; transition: all 0.2s; }
   .plan-cta--primary { background: var(--navy); color: var(--paper); }
   .plan-cta--primary:hover { background: var(--navy-deep); }
@@ -107,7 +107,7 @@
   .plan-cta--outline:hover { background: var(--gold); color: var(--navy-deep); }
   .plan-cta--free { border: 1px solid var(--rule); color: var(--ink-muted); background: transparent; }
   .plan-cta--free:hover { border-color: var(--navy); color: var(--navy); }
- 
+
   .sovereign-left { flex: 1; }
   .sovereign-name { font-family: var(--font-display); font-size: 1.8rem; font-weight: 600; color: var(--gold-light); margin-bottom: 6px; font-style: italic; }
   .sovereign-tagline { font-family: var(--font-sans); font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; font-weight: 300; }
@@ -118,7 +118,7 @@
   .sovereign-price { font-family: var(--font-display); font-size: 1.1rem; color: rgba(255,255,255,0.5); font-style: italic; }
   .sovereign-cta { display: inline-block; padding: 14px 28px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; border: 1px solid var(--gold); color: var(--gold-light); text-decoration: none; border-radius: 2px; transition: all 0.2s; white-space: nowrap; }
   .sovereign-cta:hover { background: var(--gold); color: var(--navy-deep); }
- 
+
   .included { background: var(--paper-soft); padding: 72px 40px; border-top: 1px solid var(--rule); }
   .included-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
   .included-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 20px; font-weight: 600; }
@@ -128,7 +128,7 @@
   .included-item { padding: 24px; border-top: 2px solid var(--rule); }
   .included-item-title { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--navy); font-weight: 600; margin-bottom: 10px; }
   .included-item-body { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--ink-muted); line-height: 1.6; }
- 
+
   .anchors-banner { background: var(--navy); padding: 48px 40px; border-top: 1px solid rgba(200,168,75,0.2); }
   .anchors-inner { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
   .anchors-left { flex: 1; }
@@ -138,7 +138,7 @@
   .anchors-body { font-family: var(--font-sans); font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.6; font-weight: 300; }
   .anchors-right { flex-shrink: 0; }
   .anchors-badge { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.2em; color: var(--gold); border: 1px solid rgba(200,168,75,0.4); padding: 8px 16px; border-radius: 2px; white-space: nowrap; }
- 
+
   .free-test { background: var(--paper); padding: 72px 40px; border-top: 1px solid var(--rule); }
   .free-test-inner { max-width: 680px; margin: 0 auto; text-align: center; }
   .free-test-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 20px; font-weight: 600; }
@@ -148,7 +148,7 @@
   .free-test-btn { display: inline-block; background: var(--navy); color: var(--paper); text-decoration: none; padding: 16px 36px; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; border-radius: 2px; transition: background 0.2s; }
   .free-test-btn:hover { background: var(--navy-deep); }
   .free-test-note { margin-top: 16px; font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); letter-spacing: 0.12em; }
- 
+
   .comparison { background: var(--paper-soft); padding: 72px 40px; border-top: 1px solid var(--rule); }
   .comparison-inner { max-width: 880px; margin: 0 auto; }
   .comparison-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 20px; font-weight: 600; text-align: center; }
@@ -163,7 +163,7 @@
   .comparison-table .bad { color: #cc3333; font-weight: 400; }
   .comparison-table .good { color: #2a7a6a; font-weight: 500; }
   .comparison-table tr:hover td { background: rgba(200,168,75,0.04); }
- 
+
   .footer { background: var(--navy-deep); color: rgba(255, 255, 255, 0.75); padding: 80px 48px 40px; }
   .footer-inner { max-width: 1100px; margin: 0 auto; }
   .footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(200, 168, 75, 0.2); }
@@ -178,7 +178,7 @@
   .footer-col a:hover { color: var(--gold-light); }
   .footer-meta { border-top: 1px solid rgba(200, 168, 75, 0.15); padding-top: 28px; text-align: center; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.18em; color: rgba(255, 255, 255, 0.4); line-height: 1.8; }
   .footer-meta strong { color: var(--gold-light); font-weight: 500; }
- 
+
   @media (max-width: 960px) {
     .plans-grid { grid-template-columns: repeat(2, 1fr); }
     .included-grid { grid-template-columns: repeat(2, 1fr); }
@@ -197,7 +197,7 @@
     .footer-nav { grid-template-columns: 1fr; gap: 32px; }
     .breadcrumb { padding: 20px 24px 0; }
   }
- 
+
   /* ── POURQUOI CE PRIX ── */
   .pourquoi-prix { background: var(--paper); padding: 96px 48px; border-top: 1px solid rgba(200,168,75,.15); }
   .pourquoi-inner { max-width: 860px; margin: 0 auto; }
@@ -226,7 +226,7 @@
     .pp-adversaire { padding: 40px 24px; }
     .pp-philosophie { padding: 32px 24px; }
   }
- 
+
   .io-reminder { background: var(--navy); border-top: 1px solid rgba(200,168,75,.15); border-bottom: 1px solid rgba(200,168,75,.15); padding: 28px 48px; }
   .io-r-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center; }
   .io-r-eyebrow { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); font-weight: 600; white-space: nowrap; }
@@ -239,26 +239,26 @@
 </style>
 </head>
 <body>
- 
+
 <div class="top-actions">
   <a href="tarifications.html" class="top-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </div>
- 
+
 <nav class="breadcrumb" aria-label="Fil d'Ariane">
   <a href="index.html">Accueil</a>
   <span class="breadcrumb-sep">·</span>
   <span>Tarifs</span>
 </nav>
- 
+
 <header class="hero">
   <div class="hero-eyebrow">Accéder à Φ</div>
   <h1 class="hero-title">Votre niveau de <em>souveraineté</em>.</h1>
   <p class="hero-lede">Transmissions confidentielles. Signatures probatoires. Post-quantique natif. Sans serveur, sans Cloud Act, sans tiers de confiance.</p>
   <p class="hero-note">Tous les plans sont mensuels · Sans engagement · Sans CB pour le test</p>
 </header>
- 
+
 <div class="divider"><div class="divider-line"></div></div>
- 
+
 <!-- FONDATEURS — pleine largeur -->
 <section style="background:var(--gold);padding:48px">
   <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center">
@@ -278,11 +278,11 @@
   </div>
 </section>
 <!-- FIN FONDATEURS -->
- 
+
 <!-- TARIFS CÔTE À CÔTE -->
 <section style="background:var(--paper);padding:64px 40px 80px;border-top:1px solid var(--rule)">
   <div style="max-width:1400px;margin:0 auto">
- 
+
     <!-- EN-TÊTES COLONNES -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:48px">
       <div style="padding:24px 32px;background:var(--navy);border-radius:2px">
@@ -296,13 +296,13 @@
         <div style="font-family:var(--font-sans);font-size:.85rem;color:var(--ink-muted);font-weight:300">Signature du quotidien · Archive exportable à vie · Sans abonnement · Post-quantique</div>
       </div>
     </div>
- 
+
     <!-- COLONNES TARIFS -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start">
- 
+
       <!-- COLONNE GAUCHE — Φ PROBATOIRE -->
       <div style="display:flex;flex-direction:column;gap:16px">
- 
+
         <!-- Fondateurs -->
         <div style="background:var(--navy);border:1px solid rgba(200,168,75,.35);border-radius:2px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
           <div>
@@ -321,10 +321,10 @@
             <a href="https://phi-signature.lemonsqueezy.com/checkout/buy/e745a37c-98df-400c-b3aa-b2673d95ff9e" style="padding:12px 22px;font-family:var(--font-mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border:1.5px solid var(--gold);color:var(--gold-light);text-decoration:none;border-radius:2px;white-space:nowrap" target="_blank" rel="noopener">Rejoindre</a>
           </div>
         </div>
- 
+
         <!-- Grille Probatoire -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
- 
+
           <!-- Test -->
           <article class="plan-card plan-card--free" style="padding:28px 22px">
             <div class="plan-name">Test</div>
@@ -343,7 +343,7 @@
             </ul>
             <a href="https://play.google.com/store/apps/details?id=app.laligature" class="plan-cta plan-cta--free" target="_blank" rel="noopener">Télécharger l'app</a>
           </article>
- 
+
           <!-- Essentiel -->
           <article class="plan-card" style="padding:28px 22px">
             <div class="plan-name">Essentiel</div>
@@ -364,7 +364,7 @@
             </ul>
             <a href="contact.html" class="plan-cta plan-cta--outline">Commencer</a>
           </article>
- 
+
           <!-- Correspondances -->
           <article class="plan-card" style="padding:28px 22px">
             <div class="plan-name">Correspondances</div>
@@ -385,7 +385,7 @@
             </ul>
             <a href="https://phi-signature.lemonsqueezy.com/checkout/buy/f0376842-ee6e-4170-a836-f67022be4726" class="plan-cta plan-cta--outline" target="_blank" rel="noopener">Commencer</a>
           </article>
- 
+
           <!-- Signatures -->
           <article class="plan-card plan-card--featured" style="padding:28px 22px">
             <div class="plan-name">Signatures</div>
@@ -406,7 +406,7 @@
             </ul>
             <a href="https://phi-signature.lemonsqueezy.com/checkout/buy/bea75f0d-a73b-4e9e-8a43-2afe648def7e" class="plan-cta plan-cta--gold" target="_blank" rel="noopener">Commencer</a>
           </article>
- 
+
           <!-- C+S -->
           <article class="plan-card" style="padding:28px 22px;grid-column:span 2">
             <div class="plan-name">Correspondances + Signatures</div>
@@ -428,9 +428,9 @@
             </ul>
             <a href="https://phi-signature.lemonsqueezy.com/checkout/buy/4828e994-7044-4544-8800-32034e90a90c" class="plan-cta plan-cta--primary" style="margin-top:16px" target="_blank" rel="noopener">Commencer</a>
           </article>
- 
+
         </div>
- 
+
         <!-- Cabinet 3p -->
         <article class="plan-card" style="padding:28px 22px">
           <div class="plan-name">Cabinet 3 personnes</div>
@@ -452,7 +452,7 @@
           </ul>
           <a href="contact.html" class="plan-cta plan-cta--primary" style="margin-top:16px">Commencer</a>
         </article>
- 
+
         <!-- Cabinet 5-10p + Sovereign -->
         <div style="background:var(--navy);border-radius:2px;padding:24px 28px">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:16px">
@@ -476,16 +476,16 @@
             </div>
           </div>
         </div>
- 
+
       </div>
- 
+
       <!-- COLONNE DROITE — Φ CONNECT -->
       <div style="display:flex;flex-direction:column;gap:12px;position:sticky;top:24px">
- 
+
         <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:var(--ink-muted);line-height:1.6;padding:0 4px;margin-bottom:8px">
           Achetez un pack · utilisez-le quand vous voulez · les signatures ne périment jamais.
         </div>
- 
+
         <!-- Pack 10 -->
         <div style="border:.5px solid var(--rule);border-radius:2px;padding:20px 24px;background:var(--paper-soft);display:flex;align-items:center;justify-content:space-between;gap:16px">
           <div>
@@ -497,7 +497,7 @@
             <a href="contact.html" style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border-bottom:.5px solid rgba(200,168,75,.3)">Acheter →</a>
           </div>
         </div>
- 
+
         <!-- Pack 50 -->
         <div style="border:1.5px solid var(--gold);border-radius:2px;padding:20px 24px;background:var(--paper);display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative">
           <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-family:var(--font-mono);font-size:.56rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:2px 10px;border-radius:2px;white-space:nowrap">Le plus choisi</div>
@@ -510,7 +510,7 @@
             <a href="contact.html" style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border-bottom:.5px solid rgba(200,168,75,.3)">Acheter →</a>
           </div>
         </div>
- 
+
         <!-- Pack 200 -->
         <div style="border:.5px solid var(--rule);border-radius:2px;padding:20px 24px;background:var(--paper-soft);display:flex;align-items:center;justify-content:space-between;gap:16px">
           <div>
@@ -522,40 +522,40 @@
             <a href="contact.html" style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border-bottom:.5px solid rgba(200,168,75,.3)">Acheter →</a>
           </div>
         </div>
- 
+
         <!-- Enterprise -->
         <div style="background:var(--navy);border-radius:2px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px">
           <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(255,255,255,.7)">300+ signatures/mois<br><span style="font-size:.8rem;color:rgba(255,255,255,.45)">Mutuelles · banques · groupements</span></div>
           <a href="contact.html" style="padding:10px 16px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:.5px solid rgba(200,168,75,.4);color:var(--gold);text-decoration:none;border-radius:2px;white-space:nowrap;flex-shrink:0">Sur devis →</a>
         </div>
- 
+
         <!-- Garantie expiration -->
         <div style="border-left:2px solid var(--gold);padding:14px 18px;background:rgba(200,168,75,.05);margin-top:8px">
           <div style="font-family:var(--font-mono);font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:4px">∞ Sans expiration</div>
           <div style="font-family:var(--font-display);font-style:italic;font-size:.9rem;color:var(--ink-muted);line-height:1.55">Achetez 50 signatures aujourd'hui. Utilisez-en 3 ce mois. Les 47 restantes seront là dans deux ans.</div>
         </div>
- 
+
         <!-- Lien vers page Connect -->
         <a href="connect.html" style="display:block;text-align:center;padding:12px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border:.5px solid var(--rule);border-radius:2px;transition:all .2s">Tout savoir sur Φ Connect →</a>
- 
+
       </div>
     </div>
   </div>
 </section>
 <!-- FIN TARIFS CÔTE À CÔTE -->
- 
- 
- 
+
+
+
 <section class="pourquoi-prix">
   <div class="pourquoi-inner">
- 
+
     <div class="pp-eyebrow">Le prix juste</div>
     <h2 class="pp-title">Pourquoi Φ<sup class="sup-reg">®</sup> coûte ce qu'il coûte.</h2>
     <p class="pp-lede">
       Φ n'est pas une version améliorée de l'existant.
       C'est une architecture fondamentalement différente.
     </p>
- 
+
     <div class="pp-philosophie">
       <p class="pp-phil-quote">« Une forteresse d'intimité numérique. »</p>
       <p class="pp-phil-body">
@@ -577,7 +577,7 @@
         <strong>C'est juste.</strong>
       </p>
     </div>
- 
+
     <div class="pp-block">
       <h3 class="pp-block-title">WeTransfer, AirDrop, email — la fausse gratuité.</h3>
       <p class="pp-block-body">
@@ -595,7 +595,7 @@
         C'est une architecture fondamentalement différente.
       </p>
     </div>
- 
+
     <div class="pp-block">
       <h3 class="pp-block-title">Les outils existants — même problème, mieux emballé.</h3>
       <p class="pp-block-body">
@@ -613,7 +613,7 @@
         Aucune réquisition ne peut aboutir — parce qu'il n'y a rien à requérir.
       </p>
     </div>
- 
+
     <div class="pp-adversaire">
       <p class="pp-adv-eyebrow">La vraie question</p>
       <p class="pp-adv-title">
@@ -639,10 +639,8 @@
         Structurellement. Par construction. Par brevet.</strong>
       </p>
     </div>
- 
-    </div>
-</section>
- 
+
+   
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
