@@ -601,26 +601,32 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
     </div>
 
     <div class="usps">
-      <a href="echanges-confidentiels.html" class="usp">
-        <div class="usp-eyebrow">Transmission confidentielle</div>
-        <div class="usp-title">Échange de documents sensibles entre enclaves certifiées.<span class="usp-arrow">↗</span></div>
-        <p class="usp-body">Le procédé <span class="brand-mark">Inline-Offline<sup>®</sup></span> assure le chiffrement de bout en bout avec déchiffrement exclusif dans l'enclave matérielle du dispositif destinataire. Aucun nœud intermédiaire — messagerie, serveur de transit, infrastructure opérateur — n'accède au contenu en clair. L'événement de réception est consigné au registre probatoire local et fait l'objet d'une attestation de lecture vérifiable par tout tiers habilité.</p>
-        <div class="usp-tags">
-          <span class="usp-tag">Inline-Offline®</span>
-          <span class="usp-tag">ML-KEM-768</span>
-          <span class="usp-tag">Attestation de lecture</span>
-        </div>
-      </a>
-      <a href="la-signature-probatoire.html" class="usp">
-        <div class="usp-eyebrow">Signature en huis-clos</div>
-        <div class="usp-title">Signature électronique à preuve distribuée, sans autorité centrale.<span class="usp-arrow">↗</span></div>
-        <p class="usp-body">L'acte de signature est scellé cryptographiquement dans le registre local de chaque partie, par activation biométrique de la clé privée résidente en enclave matérielle. Le module de vérification contrôle la cohérence séquentielle du registre — intégrité des hashes, monotonie du compteur, validité des horodatages — avant délivrance du certificat. Les cinq paramètres constitutifs du certificat sont recalculables de manière déterministe par toute juridiction compétente, sans sollicitation de PHI SAS.</p>
-        <div class="usp-tags">
-          <span class="usp-tag">Inline-Offline®</span>
-          <span class="usp-tag">ML-DSA-65</span>
-          <span class="usp-tag">Certificat de signature</span>
-        </div>
-      </a>
+    <a href="echanges-confidentiels.html" class="usp">
+  <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:20px">
+    <span style="font-family:var(--font-display);font-style:italic;font-size:3.5rem;color:var(--gold);line-height:1;font-weight:500">Φ</span>
+    <span style="font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--gold-deep);line-height:1;font-weight:500">Correspondances</span>
+  </div>
+  <div class="usp-title">Échange de documents sensibles entre enclaves certifiées.<span class="usp-arrow">↗</span></div>
+  <p class="usp-body">Le procédé <span class="brand-mark">Inline-Offline<sup>®</sup></span> assure le chiffrement de bout en bout avec déchiffrement exclusif dans l'enclave matérielle du dispositif destinataire. Aucun nœud intermédiaire — messagerie, serveur de transit, infrastructure opérateur — n'accède au contenu en clair. L'événement de réception est consigné au registre probatoire local et fait l'objet d'une attestation de lecture vérifiable par tout tiers habilité.</p>
+  <div class="usp-tags">
+    <span class="usp-tag">Inline-Offline®</span>
+    <span class="usp-tag">ML-KEM-768</span>
+    <span class="usp-tag">Attestation de lecture</span>
+  </div>
+</a>
+     <a href="la-signature-probatoire.html" class="usp">
+  <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:20px">
+    <span style="font-family:var(--font-display);font-style:italic;font-size:3.5rem;color:var(--gold);line-height:1;font-weight:500">Φ</span>
+    <span style="font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--gold-deep);line-height:1;font-weight:500">Probatoire</span>
+  </div>
+  <div class="usp-title">Signature électronique à preuve distribuée, sans autorité centrale.<span class="usp-arrow">↗</span></div>
+  <p class="usp-body">L'acte de signature est scellé cryptographiquement dans le registre local de chaque partie, par activation biométrique de la clé privée résidente en enclave matérielle. Le module de vérification contrôle la cohérence séquentielle du registre — intégrité des hashes, monotonie du compteur, validité des horodatages — avant délivrance du certificat. Les cinq paramètres constitutifs du certificat sont recalculables de manière déterministe par toute juridiction compétente, sans sollicitation de PHI SAS.</p>
+  <div class="usp-tags">
+    <span class="usp-tag">Inline-Offline®</span>
+    <span class="usp-tag">ML-DSA-65</span>
+    <span class="usp-tag">Certificat de signature</span>
+  </div>
+</a>
     </div>
 <a href="connect.html" class="usp" style="grid-column:span 2;background:var(--navy);border-color:var(--navy);position:relative;overflow:hidden">
   <div style="position:absolute;top:16px;right:16px;font-family:var(--font-mono);font-size:.58rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;background:var(--gold);color:var(--navy-deep);padding:4px 14px;border-radius:2px">À VENIR · ÉTÉ 2026</div>
