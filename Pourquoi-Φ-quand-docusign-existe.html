@@ -4,653 +4,398 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0e1c35">
-<title>Pourquoi Φ quand DocuSign existe — Huis-clos vs cloud · 4 arguments que DocuSign, Adobe Sign et Yousign ne peuvent pas tenir · alternative à DocuSign · Φ PHI</title>
-<meta name="description" content="Huis-clos cryptographique vs cloud DocuSign : DocuSign stocke vos documents sur AWS, Adobe Sign sur Adobe Cloud, Yousign sur Azure. Φ n'a aucun serveur — pas par contrat, par architecture. Quatre arguments : preuve autonome, souveraineté absolue, résistance post-quantique ML-DSA-65, survie à la disparition de l'éditeur. Sans Cloud Act, sans tiers de confiance. Brevet FR 2604755.">
-<meta name="keywords" content="signature en huis-clos vs cloud DocuSign, huis-clos cryptographique alternative DocuSign, pas par contrat par architecture, pourquoi Phi signature plutôt que DocuSign, alternative DocuSign sans tiers de confiance, alternative Adobe Sign souveraineté, alternative Yousign preuve autonome, DocuSign Cloud Act serveurs américains, Adobe Sign données stockées serveur, DocuSign vs Phi comparaison, signature sans cloud souveraineté numérique France, preuve cryptographique autonome sans tiers, signature post-quantique ML-DSA-65 ML-KEM-768, Harvest now decrypt never, NIST 2024 signature post-quantique, PHI Inline-Offline phi-signature.fr">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="author" content="PHI">
-<link rel="canonical" href="https://phi-signature.fr/Pourquoi-%CE%A6-quand-docusign-existe.html">
-
-<!-- Favicons -->
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-<!-- Open Graph -->
-<meta property="og:type" content="article">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:url" content="https://phi-signature.fr/Pourquoi-%CE%A6-quand-docusign-existe.html">
-<meta property="og:site_name" content="Φ — PHI">
-<meta property="og:title" content="Pourquoi Φ quand DocuSign existe — Huis-clos vs cloud · pas par contrat, par architecture · Φ">
-<meta property="og:description" content="Huis-clos cryptographique vs cloud DocuSign. DocuSign AWS. Adobe Sign Adobe Cloud. Yousign Azure. Φ : aucun serveur. Preuve autonome recalculable, souveraineté absolue, post-quantique native, survie à la disparition de l'éditeur. Sans Cloud Act.">
-<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
-<meta property="og:image:secure_url" content="https://phi-signature.fr/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Pourquoi Φ plutôt que DocuSign — huis-clos vs cloud">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="article:publisher" content="https://phi-signature.fr">
-<meta property="article:published_time" content="2026-05-01T00:00:00+02:00">
-<meta property="article:modified_time" content="2026-05-20T00:00:00+02:00">
-<meta property="article:author" content="https://phi-signature.fr/a-propos/A-Propos.html">
-<meta property="article:section" content="Comparatif & Souveraineté numérique">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@phi_signaturefr">
-<meta name="twitter:creator" content="@phi_signaturefr">
-<meta name="twitter:title" content="Pourquoi Φ quand DocuSign existe — Huis-clos vs cloud · Φ">
-<meta name="twitter:description" content="Huis-clos cryptographique vs cloud DocuSign. Pas par contrat, par architecture. Preuve autonome, post-quantique, Cloud Act sans objet.">
-<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
-<meta name="twitter:image:alt" content="Pourquoi Φ plutôt que DocuSign — huis-clos vs cloud">
-
-<!-- JSON-LD : Article + FAQPage + BreadcrumbList + Organization -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["WebPage", "Article"],
-      "@id": "https://phi-signature.fr/Pourquoi-%CE%A6-quand-docusign-existe.html#webpage",
-      "name": "Pourquoi Φ quand DocuSign existe — Alternative DocuSign Adobe Sign sans tiers de confiance",
-      "url": "https://phi-signature.fr/Pourquoi-%CE%A6-quand-docusign-existe.html",
-      "description": "Quatre arguments pour comprendre ce que Φ apporte face à DocuSign, Adobe Sign et Yousign. Preuve autonome, souveraineté absolue, cryptographie post-quantique, survie à la disparition de l'éditeur. Sans Cloud Act, sans tiers de confiance.",
-      "inLanguage": "fr",
-      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
-      "about": [
-        {
-          "@type": "Thing",
-          "name": "Signature en huis-clos vs cloud DocuSign",
-          "description": "Φ orchestre un huis-clos cryptographique entre les deux dispositifs des parties : aucun serveur ne déchiffre les actes. DocuSign, Adobe Sign et Yousign opèrent au contraire dans un cloud où l'éditeur voit chaque document en clair. Le huis-clos est garanti par construction architecturale — pas par engagement contractuel."
-        },
-        {
-          "@type": "Thing",
-          "name": "Comparaison Φ versus DocuSign Adobe Sign Yousign",
-          "description": "DocuSign (AWS), Adobe Sign (Adobe Cloud) et Yousign (Azure Microsoft) stockent et déchiffrent vos documents sur leurs serveurs cloud — soumis au Cloud Act américain. Φ ne possède aucun serveur : la preuve vit dans l'enclave matérielle des dispositifs des parties."
-        },
-        {
-          "@type": "Thing",
-          "name": "Preuve autonome recalculable sans éditeur",
-          "description": "Contrairement à DocuSign et Adobe Sign, dont la force probante dépend de la pérennité commerciale de l'éditeur, la preuve Φ est recalculable par tout expert judiciaire à partir du brevet public FR 2604755 — même si PHI disparaissait demain."
-        },
-        {
-          "@type": "Thing",
-          "name": "Souveraineté numérique et Cloud Act",
-          "description": "DocuSign et Adobe Sign sont soumis au Cloud Act américain (2018). Φ est structurellement hors d'atteinte : aucun serveur PHI n'existe dans la chaîne de transmission, rendant toute réquisition sans objet."
-        },
-        {
-          "@type": "Thing",
-          "name": "Résistance post-quantique face à DocuSign",
-          "description": "Les algorithmes RSA et ECDSA de DocuSign, Adobe Sign et Yousign seront cassables par les futurs ordinateurs quantiques. Φ utilise ML-DSA-65 et ML-KEM-768 (NIST FIPS 203/204, 2024) — résistants par construction mathématique."
-        }
-      ],
-      "mentions": [
-        {"@type": "Organization", "name": "DocuSign", "description": "Service de signature électronique hébergé sur AWS, soumis au Cloud Act américain"},
-        {"@type": "Organization", "name": "Adobe Sign", "description": "Service de signature électronique hébergé sur Adobe Cloud, soumis au Cloud Act américain"},
-        {"@type": "Organization", "name": "Yousign", "description": "Service de signature électronique français hébergé sur Azure (Microsoft), soumis indirectement au Cloud Act"},
-        {"@type": "Legislation", "name": "Cloud Act — Clarifying Lawful Overseas Use of Data Act (2018)"},
-        {"@type": "Legislation", "name": "Règlement UE 910/2014 — eIDAS article 26"},
-        {"@type": "Legislation", "name": "Article 1366 du Code civil français"},
-        {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
-        {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"},
-        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Fonction G, procédé probatoire"}
-      ],
-      "publisher": {"@id": "https://phi-signature.fr/#organization"}
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://phi-signature.fr/Pourquoi-%CE%A6-quand-docusign-existe.html#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Quelle est la différence fondamentale entre Φ et DocuSign ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "DocuSign est hébergé sur AWS (Amazon Web Services, Californie). Vos documents sont stockés et déchiffrés sur leurs serveurs — soumis au Cloud Act américain, réquisitionnables par les autorités américaines. DocuSign est également un tiers de confiance : si la société disparaissait, vos signatures perdraient progressivement leur opposabilité. Φ n'a aucun serveur : la preuve vit dans l'enclave matérielle de votre dispositif, recalculable par tout juge ou expert indépendamment de PHI."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pourquoi Yousign n'est-il pas une alternative souveraine suffisante ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yousign est une société française, mais ses serveurs sont hébergés sur Azure (Microsoft, juridiction américaine) — ce qui le soumet indirectement au Cloud Act. Par ailleurs, Yousign est un tiers de confiance dont la pérennité conditionne la force probante de vos signatures. Si Yousign était racheté, fusionné ou cessait son activité, vos preuves seraient compromises. Φ élimine cette dépendance : la preuve est locale et permanente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Qu'est-ce que le Cloud Act et pourquoi concerne-t-il DocuSign et Adobe Sign ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Le Cloud Act (Clarifying Lawful Overseas Use of Data Act, 2018) permet aux autorités américaines de réquisitionner les données stockées par toute entreprise sous juridiction US, où qu'elles soient hébergées dans le monde. DocuSign (AWS, Amazon), Adobe Sign (Adobe Corp) et leurs infrastructures sont concernés. Une réquisition américaine peut atteindre les documents de vos clients sans qu'aucune juridiction française ne puisse s'y opposer. Φ n'a aucun serveur à réquisitionner."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Que se passe-t-il si DocuSign ou Adobe Sign disparaissent — mes signatures restent-elles valides ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non — c'est le risque structurel des solutions cloud. Si DocuSign disparaissait, ses serveurs s'éteindraient, les chaînes de certification deviendraient invérifiables, et vos signatures perdraient progressivement leur opposabilité. C'est exactement ce que Φ résout : la preuve est recalculable à partir du brevet public FR 2604755, sans aucun serveur PHI. Si PHI disparaissait demain, toutes les signatures Φ existantes resteraient mathématiquement opposables."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Pourquoi les signatures DocuSign et Adobe Sign seront-elles vulnérables aux ordinateurs quantiques ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "DocuSign et Adobe Sign utilisent des algorithmes RSA et ECDSA, qui seront cassables par l'algorithme de Shor dès la maturité des ordinateurs quantiques (estimée 2030-2040). La menace dite Harvest now, decrypt later consiste à intercepter et stocker aujourd'hui des signatures pour les invalider rétroactivement demain. Φ utilise ML-DSA-65 (NIST FIPS 204) et ML-KEM-768 (NIST FIPS 203) — les premiers standards post-quantiques officiels du NIST (août 2024). Une signature Φ produite aujourd'hui restera opposable dans cinquante ans."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "DocuSign et Adobe Sign peuvent-ils lire le contenu de mes documents ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, techniquement. DocuSign et Adobe Sign déchiffrent les documents sur leurs serveurs pour les afficher dans leurs interfaces. Leurs équipes techniques, leurs hébergeurs (AWS, Adobe Cloud) et toute autorité bénéficiant du Cloud Act peuvent accéder au contenu. Φ est architecturalement incapable de lire vos documents : le déchiffrement n'a lieu que dans l'enclave matérielle des dispositifs légitimes des parties. Même PHI ne peut pas accéder au contenu de vos échanges."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
-        {"@type": "ListItem", "position": 2, "name": "Pourquoi Φ ?", "item": "https://phi-signature.fr/Pourquoi-%CE%A6-quand-docusign-existe.html"}
-      ]
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://phi-signature.fr/#organization",
-      "name": "PHI",
-      "alternateName": "Φ",
-      "url": "https://phi-signature.fr",
-      "email": "phi-signature@proton.me",
-      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet FR 2604755.",
-      "foundingDate": "2024",
-      "address": {"@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR"},
-      "sameAs": ["https://github.com/asemantix", "https://www.linkedin.com/company/121854148/", "https://twitter.com/phi_signaturefr"],
-      "founder": {"@type": "Person", "name": "Suzanne Thâora de Begon de Larouzière", "sameAs": "https://www.linkedin.com/in/suzanne-dite-tha%C3%B4ra-de-begon-de-larouziere-73385a362/"}
-    }
-  ]
-}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Architecture Φ Probatoire — Signature post-quantique sans opérateur tiers | PHI SAS</title>
+<meta name="description" content="Φ Probatoire : architecture de signature électronique post-quantique sans opérateur tiers. Standards NIST FIPS 203 / FIPS 204. Identification du signataire scellée cryptographiquement à l'enrôlement. Certification ANSSI CSPN en cours.">
+<link rel="canonical" href="https://phi-signature.fr/architecture-probatoire.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#1a2942;--gold:#c8a84b;--gold-deep:#8b6914;--gold-soft:#e2c87a;--ink:#1d2330;--ink-muted:#4a5163;--ink-faded:#6c7384;--paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;--rule:#e6e3dc;--font-d:"Playfair Display",Georgia,serif;--font-m:"IBM Plex Mono","SF Mono",Menlo,monospace;--font-s:"IBM Plex Sans",-apple-system,system-ui,sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--paper);color:var(--ink);font-family:var(--font-s);font-weight:300;-webkit-font-smoothing:antialiased}
-.sec-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
-.sec-header-back{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
-.sec-header-back:hover{color:var(--navy)}
-.sec-header-phi{font-family:var(--font-d);font-style:italic;font-size:2rem;color:var(--gold-deep);font-weight:500;text-decoration:none;line-height:1}
-.sec-header-cta{background:var(--navy);color:var(--paper);text-decoration:none;padding:10px 20px;font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s}
-.sec-header-cta:hover{background:var(--navy-deep)}
-.sec-header-cta .phi-cta{font-family:var(--font-d);font-style:italic;font-size:.9rem;margin-left:4px;letter-spacing:0;color:var(--gold-soft)}
-@media(max-width:720px){.sec-header{padding:0 24px}.sec-header-cta{display:none}}
-.breadcrumb{padding:24px 64px 0;max-width:960px;margin:0 auto;font-family:var(--font-m);font-size:.62rem;color:var(--ink-faded);letter-spacing:.18em;text-transform:uppercase;font-weight:500}
-.breadcrumb a{color:var(--gold-deep);text-decoration:none}
-.breadcrumb a:hover{color:var(--navy)}
-.breadcrumb-sep{margin:0 10px;opacity:.5;color:var(--gold)}
-@media(max-width:720px){.breadcrumb{padding:16px 24px 0}}
-.hero{background:var(--navy);padding:72px 64px 64px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(200,168,75,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,75,.018) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}
-.hero-halo{position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(200,168,75,.065) 0%,transparent 62%);pointer-events:none}
-.hero-inner{max-width:960px;margin:0 auto;position:relative;z-index:2}
-.hero-ey{font-family:var(--font-m);font-size:.72rem;color:rgba(200,168,75,.65);letter-spacing:.42em;text-transform:uppercase;margin-bottom:24px}
-.hero-question{font-family:var(--font-d);font-size:clamp(1rem,1.8vw,1.35rem);font-style:italic;color:rgba(250,250,247,.5);margin-bottom:10px;font-weight:400}
-.hero-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:700;color:var(--paper);line-height:1.08;letter-spacing:-.025em;margin-bottom:8px}
-.hero-title em{font-style:italic;color:var(--gold-soft)}
-.hero-mark{font-family:var(--font-d);font-style:italic;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--gold-soft);line-height:1;letter-spacing:-.015em;margin:14px 0 10px;max-width:900px}
-@media(max-width:720px){.hero-mark{font-size:1.9rem;margin:10px 0 8px}}
-.hero-sub{font-family:var(--font-d);font-style:italic;font-size:1.1rem;color:rgba(250,250,247,.5);line-height:1.65;max-width:640px;margin-top:20px}
-.hero-rule{width:60px;height:1px;background:var(--gold);opacity:.5;margin:28px 0}
-.contrast-marker{text-align:center;font-family:var(--font-m);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;margin:0 0 14px}
-.contrast-them{color:var(--ink-faded)}
-.contrast-us{color:var(--gold-deep)}
-.contrast-us .brand{color:var(--gold-deep);font-family:var(--font-d);font-style:italic;font-size:1rem;letter-spacing:0;margin-left:4px}
-.answer-band{background:var(--paper-deep);padding:48px 64px;border-bottom:1px solid var(--rule)}
-.answer-inner{max-width:960px;margin:0 auto}
-.answer-text{font-family:var(--font-d);font-size:clamp(1.15rem,2vw,1.5rem);font-weight:500;color:var(--navy);line-height:1.55;letter-spacing:-.01em}
-.answer-text em{font-style:italic;color:var(--gold-deep)}
-.deal-sec{padding:80px 64px;background:var(--paper-soft);border-bottom:2px solid var(--rule)}
-.deal-inner{max-width:960px;margin:0 auto}
-.deal-ey{font-family:var(--font-m);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px;font-weight:500}
-.deal-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:600;color:var(--navy);line-height:1.15;letter-spacing:-.015em;margin-bottom:36px}
-.deal-title em{font-style:italic;color:var(--gold-deep)}
-.deal-bloc{max-width:820px}
-.deal-text{font-family:var(--font-s);font-size:1.02rem;color:var(--ink-muted);line-height:1.85;font-weight:300;margin-bottom:22px}
-.deal-text em{font-style:italic;color:var(--navy);font-weight:500}
-.deal-text strong{color:var(--ink);font-weight:500}
-.deal-list{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--ink-muted);line-height:2.1;list-style:none;margin-bottom:22px;border-left:2px solid rgba(200,168,75,.3);padding-left:20px}
-.deal-list li::before{content:"·  ";color:var(--gold-deep);font-style:normal}
-.deal-quote{margin-top:40px;padding:32px 36px;background:var(--navy);border-left:4px solid var(--gold);border-radius:2px;font-family:var(--font-d);font-size:1.32rem;font-weight:600;color:var(--paper);line-height:1.7;font-style:normal}
-.deal-quote span{display:block;margin-top:16px;font-size:1rem;font-style:italic;color:var(--gold-soft);font-weight:400}
-.args{padding:80px 64px;background:var(--paper)}
-.args-inner{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:0}
-.args-header{margin-bottom:0}
-.args-ey{font-family:var(--font-m);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:16px;font-weight:500}
-.args-intro{font-family:var(--font-d);font-style:italic;font-size:1.08rem;color:var(--ink-muted);line-height:1.7;max-width:680px;margin-bottom:0;padding-bottom:40px;border-bottom:1px solid var(--rule)}
-.arg{display:grid;grid-template-columns:80px 1fr;gap:0;border-top:1px solid var(--rule);padding:52px 0}
-.arg:last-child{border-bottom:1px solid var(--rule)}
-.arg-num{font-family:var(--font-m);font-size:3.5rem;font-weight:300;color:var(--gold);opacity:.25;line-height:1;padding-top:6px}
-.arg-title{font-family:var(--font-d);font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:600;color:var(--navy);line-height:1.15;margin-bottom:16px;letter-spacing:-.015em}
-.arg-title em{font-style:italic;color:var(--gold-deep)}
-.arg-compare{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin-bottom:20px}
-.arg-col{background:var(--paper);padding:20px 24px}
-.arg-col.theirs{background:var(--paper-soft)}
-.arg-col-label{font-family:var(--font-m);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--ink-faded);margin-bottom:10px}
-.arg-col-label.gold{color:var(--gold-deep)}
-.arg-col-text{font-family:var(--font-s);font-size:.9rem;color:var(--ink-muted);line-height:1.7;font-weight:300}
-.arg-col-text strong{color:var(--ink);font-weight:500}
-.arg-col-text .strike{text-decoration:line-through;opacity:.45}
-.arg-lede{font-family:var(--font-d);font-style:italic;font-size:1rem;color:var(--ink-muted);line-height:1.7;max-width:680px}
-.arg-lede strong{font-style:normal;font-weight:500;color:var(--navy)}
-.table-sec{padding:0 64px 80px;background:var(--paper)}
-.table-inner{max-width:960px;margin:0 auto}
-.table-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:28px}
-table{width:100%;border-collapse:collapse}
-thead th{font-family:var(--font-m);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faded);padding:12px 16px;text-align:left;border-bottom:2px solid var(--rule)}
-thead th.phi-col{color:var(--navy);border-bottom-color:var(--gold)}
-tbody tr{border-bottom:1px solid var(--rule)}
-tbody tr:hover{background:var(--paper-soft)}
-td{font-family:var(--font-s);font-size:.85rem;padding:14px 16px;color:var(--ink-muted);font-weight:300;line-height:1.45;vertical-align:top}
-td:first-child{color:var(--ink);font-weight:400}
-td.yes{color:#2d6a4f;font-weight:500}
-td.no{color:#a33030}
-td.phi-data{color:var(--navy);font-weight:400;background:rgba(200,168,75,.04)}
-.harvest-sec{background:var(--navy);padding:72px 64px}
-.harvest-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.harvest-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:rgba(200,168,75,.6);margin-bottom:16px}
-.harvest-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:600;color:var(--paper);line-height:1.15;margin-bottom:14px}
-.harvest-title em{font-style:italic;color:var(--gold-soft)}
-.harvest-body{font-family:var(--font-d);font-style:italic;font-size:1rem;color:rgba(250,250,247,.55);line-height:1.7}
-.harvest-body strong{font-style:normal;color:var(--paper);font-weight:500}
-.harvest-right{display:flex;flex-direction:column;gap:16px}
-.harvest-item{padding:18px 22px;border-left:2px solid rgba(200,168,75,.35);background:rgba(255,255,255,.03)}
-.harvest-item-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(200,168,75,.6);margin-bottom:6px}
-.harvest-item-text{font-family:var(--font-s);font-size:.85rem;color:rgba(250,250,247,.6);line-height:1.55;font-weight:300}
-.harvest-item-text strong{color:var(--paper);font-weight:500}
-.trust-sec{background:var(--paper-deep);padding:72px 64px}
-.trust-inner{max-width:960px;margin:0 auto}
-.trust-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px}
-.trust-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;color:var(--navy);line-height:1.2;margin-bottom:14px}
-.trust-body{font-family:var(--font-d);font-style:italic;font-size:1.1rem;color:var(--ink-muted);line-height:1.75;max-width:760px;margin-bottom:36px}
-.trust-body strong{font-style:normal;color:var(--navy);font-weight:500}
-.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule)}
-.trust-item{background:var(--paper);padding:28px 24px}
-.trust-item-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
-.trust-item-title{font-family:var(--font-d);font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:8px;line-height:1.25}
-.trust-item-body{font-family:var(--font-s);font-size:.82rem;color:var(--ink-muted);line-height:1.65;font-weight:300}
-.cta-sec{background:var(--navy);padding:90px 64px;text-align:center}
-.cta-inner{max-width:640px;margin:0 auto}
-.cta-ey{font-family:var(--font-m);font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:rgba(200,168,75,.55);margin-bottom:18px}
-.cta-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:600;color:var(--paper);line-height:1.2;margin-bottom:14px}
-.cta-title em{font-style:italic;color:var(--gold-soft)}
-.cta-body{font-family:var(--font-d);font-style:italic;font-size:1rem;color:rgba(250,250,247,.5);line-height:1.65;margin-bottom:36px}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
-.btn-primary{padding:15px 36px;background:var(--paper);color:var(--navy);text-decoration:none;font-family:var(--font-m);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border-radius:3px;transition:background .2s}
-.btn-primary:hover{background:var(--gold-soft)}
-.btn-ghost{padding:15px 36px;background:transparent;color:rgba(250,250,247,.65);text-decoration:none;font-family:var(--font-m);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:400;border:1px solid rgba(200,168,75,.3);border-radius:3px;transition:all .2s}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.cta-brevets{font-family:var(--font-m);font-size:.62rem;color:rgba(200,168,75,.35);letter-spacing:.15em;line-height:2}
-.footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:60px 48px 36px}
-.footer-inner{max-width:1100px;margin:0 auto}
-.footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(200,168,75,.2)}
-.footer-phi{font-family:var(--font-d);font-style:italic;font-size:3.2rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:12px}
-.footer-line{width:48px;height:1px;background:var(--gold);margin:0 auto 12px}
-.footer-baseline-1{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--gold-soft);margin-bottom:3px}
-.footer-baseline-2{font-family:var(--font-d);font-style:italic;font-size:.85rem;color:rgba(226,200,122,.75)}
-.footer-nav{display:grid;grid-template-columns:repeat(3, 1fr);gap:40px;margin-bottom:32px}
-.footer-col h4{font-family:var(--font-m);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);font-weight:500;margin-bottom:14px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.footer-col a{font-family:var(--font-d);font-style:italic;font-size:.92rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
-.footer-col a:hover{color:var(--gold-soft)}
-.footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px}
-.footer-link-special:hover{color:var(--gold-soft)!important;border-color:var(--gold)!important}
-.footer-meta{border-top:1px solid rgba(200,168,75,.15);padding-top:22px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
-.footer-meta strong{color:var(--gold-soft);font-weight:500}
-@media(max-width:860px){
-  .hero,.answer-band,.deal-sec,.args,.table-sec,.harvest-sec,.trust-sec,.cta-sec{padding-left:24px;padding-right:24px}
-  .arg{grid-template-columns:1fr;gap:12px}
-  .arg-num{font-size:2rem}
-  .arg-compare{grid-template-columns:1fr}
-  .harvest-inner{grid-template-columns:1fr;gap:40px}
-  .trust-grid{grid-template-columns:1fr}
-  .footer{padding:48px 24px 28px}
-  .footer-nav{grid-template-columns:1fr;gap:24px}
+:root{
+  --navy:#0e1c35;--navy-deep:#08111f;
+  --gold:#c4a472;--gold-deep:#8b6914;--gold-light:#d4b888;
+  --paper:#fafaf7;--paper-soft:#f4f1e8;
+  --ink:#1d2330;--ink-muted:#6c7384;
+  --rule:rgba(196,164,114,.28);
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-mono:'IBM Plex Mono','Courier New',monospace;
+  --font-sans:'IBM Plex Sans',-apple-system,sans-serif;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);line-height:1.65;font-weight:300}
+
+.top{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);padding:14px 40px;display:flex;align-items:center;justify-content:space-between}
+.top-logo{font-family:var(--font-display);font-style:italic;font-size:1.7rem;color:var(--gold-deep);text-decoration:none;font-weight:500;letter-spacing:.02em}
+.top-nav{display:flex;gap:32px;align-items:center}
+.top-link{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;font-weight:500}
+.top-link:hover{color:var(--navy)}
+.top-cta{background:var(--navy);color:var(--paper);text-decoration:none;padding:10px 20px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px}
+@media(max-width:720px){.top{padding:14px 20px}.top-nav{gap:18px}.top-link{display:none}}
+
+.hero{padding:140px 48px 72px;max-width:960px;margin:0 auto}
+.hero-eyebrow{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px;font-weight:500}
+.hero-title{font-family:var(--font-display);font-size:clamp(2rem,4.4vw,3.2rem);font-weight:500;color:var(--navy);line-height:1.22;letter-spacing:-.012em;margin-bottom:24px}
+.hero-sub{font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--ink-muted);line-height:1.7;max-width:720px;font-weight:400}
+.hero-meta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted)}
+.hero-meta span{padding:5px 11px;border:1px solid var(--rule);border-radius:2px}
+
+.section{padding:80px 48px;max-width:1080px;margin:0 auto}
+.section-eyebrow{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px;font-weight:500}
+.section-title{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500;color:var(--navy);line-height:1.25;letter-spacing:-.01em;margin-bottom:28px}
+.section-lead{font-family:var(--font-display);font-style:italic;font-size:1.05rem;color:var(--ink-muted);line-height:1.7;max-width:820px;margin-bottom:36px;font-weight:400}
+.section p{margin-bottom:18px;font-size:.94rem;color:var(--ink);line-height:1.75}
+.section-soft{background:var(--paper-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:32px 40px;margin-top:36px}
+.principle{padding-top:8px}
+.principle-num{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.28em;color:var(--gold-deep);font-weight:600;margin-bottom:10px}
+.principle-title{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--navy);line-height:1.35;margin-bottom:10px}
+.principle-body{font-size:.88rem;color:var(--ink-muted);line-height:1.72;font-weight:300}
+.principle-body strong{color:var(--navy);font-weight:500}
+@media(max-width:720px){.principles{grid-template-columns:1fr;gap:32px}}
+
+.phases{margin:36px 0;border:1px solid var(--rule);border-radius:2px;background:var(--paper);overflow:hidden}
+.phase{padding:28px 32px;border-bottom:1px solid var(--rule)}
+.phase:last-child{border-bottom:none}
+.phase-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.phase-tag{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600}
+.phase-duration{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-muted)}
+.phase-title{font-family:var(--font-display);font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:14px;line-height:1.4;width:100%}
+.phase-list{list-style:none;padding:0}
+.phase-list li{padding:8px 0;font-size:.88rem;color:var(--ink);line-height:1.6}
+.phase-list li::before{content:"·";color:var(--gold);margin-right:10px;font-weight:600}
+.phase-list li strong{color:var(--navy);font-weight:500}
+
+.niveaux{margin:36px 0 8px;border:1px solid var(--rule);border-radius:2px;background:var(--paper)}
+.niveau{padding:24px 28px;border-bottom:1px solid var(--rule)}
+.niveau:last-child{border-bottom:none}
+.niveau-tag{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
+.niveau-title{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:10px;line-height:1.4}
+.niveau-body{font-size:.88rem;color:var(--ink-muted);line-height:1.72;font-weight:300}
+
+.compare-wrap{margin-top:36px;overflow-x:auto}
+table.compare{width:100%;border-collapse:collapse;font-size:.88rem}
+table.compare th{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;padding:14px 16px;border-bottom:2px solid var(--rule);text-align:left;vertical-align:bottom}
+table.compare th.col-phi{color:var(--gold-deep);border-bottom-color:var(--gold)}
+table.compare th.col-cert{color:var(--ink-muted)}
+table.compare td{padding:16px;border-bottom:.5px solid var(--rule);vertical-align:top}
+table.compare tr:last-child td{border-bottom:none}
+table.compare td.crit{font-family:var(--font-display);font-weight:500;color:var(--navy);font-size:.92rem;width:30%}
+table.compare td.phi{font-size:.86rem;color:var(--ink);line-height:1.65}
+table.compare td.cert{font-size:.86rem;color:var(--ink-muted);line-height:1.65;font-style:italic}
+
+.conformite{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:36px;border:1px solid var(--rule);border-radius:2px;background:var(--paper)}
+.conf-item{padding:22px 24px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.conf-item:nth-child(2n){border-right:none}
+.conf-item:nth-last-child(-n+2){border-bottom:none}
+.conf-tag{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
+.conf-title{font-family:var(--font-display);font-size:.98rem;font-weight:500;color:var(--navy);margin-bottom:8px;line-height:1.4}
+.conf-body{font-size:.84rem;color:var(--ink-muted);line-height:1.65;font-weight:300}
+@media(max-width:720px){.conformite{grid-template-columns:1fr}.conf-item{border-right:none}.conf-item:not(:last-child){border-bottom:1px solid var(--rule)}}
+
+.tarif{margin-top:36px;padding:32px 36px;border:1px solid var(--rule);border-radius:2px;background:var(--paper)}
+.tarif-row{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:18px}
+.tarif-label{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--navy)}
+.tarif-label em{font-style:italic;color:var(--gold-deep)}
+.tarif-price{font-family:var(--font-display);font-size:1.6rem;font-weight:500;color:var(--navy);letter-spacing:-.01em}
+.tarif-price-unit{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;color:var(--ink-muted);text-transform:uppercase;margin-left:8px;font-weight:500}
+.tarif-features{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-muted);text-transform:uppercase}
+.tarif-features span::before{content:"▸ ";color:var(--gold);margin-right:4px}
+.tarif-note{margin-top:20px;padding-top:18px;border-top:.5px solid var(--rule);font-size:.84rem;color:var(--ink-muted);line-height:1.7;font-style:italic}
+
+.finale{background:var(--navy);padding:80px 48px;text-align:center}
+.finale-inner{max-width:680px;margin:0 auto}
+.finale-eyebrow{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-light);margin-bottom:18px;font-weight:500}
+.finale h2{font-family:var(--font-display);font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:500;color:var(--paper);line-height:1.3;margin-bottom:18px;letter-spacing:-.01em}
+.finale h2 em{font-style:italic;color:var(--gold-light)}
+.finale p{font-family:var(--font-display);font-style:italic;font-size:.98rem;color:rgba(250,250,247,.65);line-height:1.7;margin-bottom:36px}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--navy-deep);text-decoration:none;padding:15px 32px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border-radius:2px}
+.btn-outline{display:inline-block;background:transparent;color:var(--gold-light);text-decoration:none;padding:14px 28px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;border:1px solid rgba(196,164,114,.4);border-radius:2px;margin-left:12px}
+@media(max-width:520px){.btn-outline{margin-left:0;margin-top:14px}}
+
+footer{background:var(--navy-deep);padding:48px 48px 36px;color:rgba(255,255,255,.45);font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;line-height:1.9}
+.footer-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.footer-col h5{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px;font-weight:600}
+.footer-col p{margin-bottom:6px}
+.footer-col a{color:rgba(255,255,255,.55);text-decoration:none}
+.footer-col a:hover{color:var(--gold-light)}
+.footer-bottom{max-width:1080px;margin:36px auto 0;padding-top:24px;border-top:1px solid rgba(196,164,114,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.6rem;letter-spacing:.14em;color:rgba(255,255,255,.3)}
+@media(max-width:720px){footer{padding:36px 24px}.footer-grid{grid-template-columns:1fr;gap:28px}.section{padding:64px 24px}.hero{padding:110px 24px 60px}.finale{padding:60px 24px}}
 </style>
 </head>
 <body>
- 
-<header class="sec-header">
-  <a href="index.html" class="sec-header-back">← Retour</a>
-  <a href="index.html" class="sec-header-phi">Φ</a>
-  <a href="tarifications.html" class="sec-header-cta">Accéder à <span class="phi-cta">Φ</span></a>
-</header>
- 
-<nav class="breadcrumb" aria-label="Fil d'Ariane">
-  <a href="index.html">Accueil</a>
-  <span class="breadcrumb-sep">·</span>
-  <span>Pourquoi <em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-deep)">Φ</em> ?</span>
-</nav>
- 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-halo"></div>
-  <div class="hero-inner">
-    <div class="hero-ey"><em style="font-family:'Playfair Display',serif;font-style:italic">Φ</em> · Note de présentation · Huis-clos vs cloud · PHI</div>
-    <div class="hero-question">La question que vous vous posez :</div>
-    <h1 class="hero-title">Pourquoi <em>Φ</em><br>quand DocuSign et consorts<br><em>existent ?</em></h1>
-    <div class="hero-mark">Pas par contrat.</div>
-    <div class="hero-rule"></div>
-    <p class="hero-sub">Ce document répond en quatre arguments. Il s'adresse aux décideurs, aux juristes, aux DSI et aux RSSI qui ont déjà un outil de signature — et qui s'interrogent sur ce que <em>Φ</em> apporte de fondamentalement différent face à DocuSign, Adobe Sign et Yousign.</p>
+
+<nav class="top">
+  <a href="index.html" class="top-logo">Φ</a>
+  <div class="top-nav">
+    <a href="#architecture" class="top-link">Architecture</a>
+    <a href="#identification" class="top-link">Identification</a>
+    <a href="#verification" class="top-link">Vérification</a>
+    <a href="#conformite" class="top-link">Conformité</a>
+    <a href="tarifications.html" class="top-cta">Accéder à Φ</a>
   </div>
-</header>
- 
-<!-- ANSWER BAND -->
-<div class="answer-band">
-  <div class="answer-inner">
-    <p class="answer-text">
-      DocuSign signe. <em>Φ</em> <em>prouve.</em><br>
-      DocuSign stocke. <em>Φ</em> <em>ignore.</em><br>
-      DocuSign dépend d'eux. <em>Φ</em> <em>dépend de vous.</em><br>
-      DocuSign authentifie avec un SMS. <em>Φ</em> <em>authentifie avec votre visage vivant.</em>
-    </p>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Architecture probatoire</div>
+  <h1 class="hero-title">Une signature électronique post-quantique, sans opérateur tiers.</h1>
+  <p class="hero-sub">Φ Probatoire est une architecture de preuve cryptographique autoportée, conçue pour les actes juridiques opposables à long terme. La preuve réside dans les dispositifs des deux parties, jamais sur un serveur intermédiaire.</p>
+  <div class="hero-meta">
+    <span>NIST FIPS 204 · ML-DSA-65</span>
+    <span>NIST FIPS 203 · ML-KEM-768</span>
+    <span>ANSSI CSPN en cours</span>
+    <span>RGPD art. 9 conforme</span>
+    <span>Brevet déposé</span>
+  </div>
+</section>
+
+<section class="section" id="architecture">
+  <div class="section-eyebrow">1 · Principe architectural</div>
+  <h2 class="section-title">La preuve réside chez les parties, pas chez un opérateur.</h2>
+  <p class="section-lead">L'architecture Φ se distingue par une rupture structurelle : aucun serveur de confiance ne stocke, ne valide, ni ne médie la preuve cryptographique. Le scellement est calculé localement sur les dispositifs des signataires, et la preuve y demeure de manière permanente.</p>
+
+  <div class="principles">
+    <div class="principle">
+      <div class="principle-num">1.1</div>
+      <h3 class="principle-title">Calcul cryptographique local</h3>
+      <p class="principle-body">Le scellement de l'acte mobilise <strong>ML-DSA-65</strong> (signature) et <strong>ML-KEM-768</strong> (chiffrement), algorithmes standardisés par le NIST en août 2024 (FIPS 204 et FIPS 203). Les clés privées résident dans le sous-système sécurisé de l'appareil (Android Keystore hardware-backed), liées à l'authentification biométrique du porteur.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">1.2</div>
+      <h3 class="principle-title">Pérennité de la preuve</h3>
+      <p class="principle-body">L'acte signé est inscrit dans les enclaves matérielles de l'expéditeur et du signataire. Sa lisibilité et son opposabilité ne dépendent ni de la pérennité de PHI SAS, ni d'un service en ligne tiers. Une preuve établie aujourd'hui demeure vérifiable indépendamment du cycle de vie de tout acteur commercial.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">1.3</div>
+      <h3 class="principle-title">Souveraineté des données</h3>
+      <p class="principle-body">Aucun document, ni élément d'identification, ni dérivé cryptographique ne transite par un serveur de PHI SAS ou d'un tiers. Le canal de transmission breveté <strong>Inline-Offline™</strong> achemine la donnée sous forme chiffrée à travers les messageries grand public, sans accès en clair par leurs opérateurs.</p>
+    </div>
+    <div class="principle">
+      <div class="principle-num">1.4</div>
+      <h3 class="principle-title">Indépendance juridictionnelle</h3>
+      <p class="principle-body">L'absence d'infrastructure centralisée place l'architecture hors du champ d'application des lois étrangères d'extraterritorialité sur les données stockées en cloud. Aucune ordonnance ne peut contraindre PHI SAS à produire un acte ou un élément d'identification — ces données n'existent pas dans nos systèmes.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-soft">
+<section class="section" id="identification">
+  <div class="section-eyebrow">2 · Identification du signataire</div>
+  <h2 class="section-title">Une chaîne d'identification fermée, fixée à l'enrôlement.</h2>
+  <p class="section-lead">L'identification du signataire repose sur cinq éléments capturés une seule fois à la création de l'identité Φ, puis scellés cryptographiquement à chaque acte. La signature elle-même se déroule en quelques secondes : empreinte biométrique et paraphe manuscrit.</p>
+
+  <div class="phases">
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-tag">Enrôlement — une seule fois</span>
+        <span class="phase-duration">≈ 3 minutes</span>
+      </div>
+      <h3 class="phase-title">Création de l'identité Φ — l'équivalent d'un face-à-face notarial initial.</h3>
+      <ul class="phase-list">
+        <li><strong>Scan A4 de la pièce d'identité</strong> — passeport, carte nationale d'identité ou titre de séjour, fourni via le sélecteur de fichiers local</li>
+        <li><strong>Photographie tenant la pièce</strong> — selfie capturé par la caméra frontale, le signataire tenant sa pièce d'identité ouverte à côté du visage</li>
+        <li><strong>Numéro de pièce manuscrit</strong> — recopié au stylet ou au doigt, échantillon graphologique de référence</li>
+        <li><strong>Paraphe manuscrit baseline</strong> — référence pour comparaison expertale future des paraphes</li>
+        <li><strong>Numéro de pièce saisi en texte</strong> — affiché automatiquement dans la mention de chaque acte signé</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-head">
+        <span class="phase-tag">Chaque signature — à chaque acte</span>
+        <span class="phase-duration">≈ 15 secondes</span>
+      </div>
+      <h3 class="phase-title">Emploi de l'identité — l'acte vivant à l'instant exact de la signature.</h3>
+      <ul class="phase-list">
+        <li><strong>Empreinte biométrique</strong> — déverrouille la clé privée ML-DSA-65 du signataire</li>
+        <li><strong>Paraphe manuscrit</strong> — tracé unique, daté par horodatage monotone, hashé dans la preuve cryptographique G, comparable graphologiquement au paraphe baseline en cas de contestation</li>
+        <li>Le numéro de pièce s'affiche automatiquement dans l'encadré de mention — aucune saisie supplémentaire demandée</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:24px;font-size:.86rem;color:var(--ink-muted);line-height:1.75">Fondement juridique de la mention manuscrite allégée : l'ordonnance n° 2016-131 du 10 février 2016 portant réforme du droit des contrats a supprimé l'exigence d'une formule sacramentelle (« lu et approuvé »). Le paraphe manuscrit accompagné de l'affichage automatique du numéro de pièce y est doctrinalement équivalent et probatoirement plus robuste.</p>
+  <p style="font-size:.86rem;color:var(--ink-muted);line-height:1.75">Exclusion du permis de conduire : Cass. civ. 1<sup>re</sup>, 25 juin 2009, n° 08-15.971 — le permis n'est pas une pièce d'identité au sens du Code civil.</p>
+</section>
+</div>
+
+<section class="section" id="verification">
+  <div class="section-eyebrow">3 · Vérification de la preuve</div>
+  <h2 class="section-title">Trois niveaux de vérification, selon le contexte juridique.</h2>
+  <p class="section-lead">La preuve cryptographique G n'est pas transmise au destinataire : ses composants biométriques ne quittent jamais l'appareil du signataire, conformément à la doctrine de minimisation des données sensibles (RGPD art. 9). La vérification s'effectue à trois niveaux distincts selon la gravité du contentieux.</p>
+
+  <div class="niveaux">
+    <div class="niveau">
+      <div class="niveau-tag">Niveau 1 — Destinataire</div>
+      <h3 class="niveau-title">Vérification cryptographique autonome.</h3>
+      <p class="niveau-body">Tout destinataire muni de la clé publique du signataire vérifie la validité de la signature post-quantique ML-DSA-65, l'intégrité du document, et la cohérence du dossier d'identification reçu (scan A4, selfie, mention manuscrite). La vérification est transitive : la signature atteste l'existence d'un calcul probatoire valide à l'instant τ, sans révéler les composants biométriques.</p>
+    </div>
+    <div class="niveau">
+      <div class="niveau-tag">Niveau 2 — Expertise forensique</div>
+      <h3 class="niveau-title">Reproduction du calcul mathématique.</h3>
+      <p class="niveau-body">En cas de contentieux judiciaire, un expert peut, en présence du signataire et de son appareil, reproduire intégralement le calcul de la preuve par déverrouillage biométrique. La concordance binaire avec la valeur scellée à l'instant τ constitue une preuve mathématique complète et opposable.</p>
+    </div>
+    <div class="niveau">
+      <div class="niveau-tag">Niveau 3 — Expertise graphologique</div>
+      <h3 class="niveau-title">Méthode procédurale civile classique.</h3>
+      <p class="niveau-body">Le paraphe manuscrit de chaque acte peut être analysé par un expert en écriture, comparé au paraphe baseline capturé à l'enrôlement et conservé dans le dossier d'identification. Cette voie est admissible en justice indépendamment de la couche cryptographique.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-soft">
+<section class="section">
+  <div class="section-eyebrow">4 · Comparaison structurelle</div>
+  <h2 class="section-title">Φ Probatoire face aux signatures centralisées.</h2>
+  <p class="section-lead">Cette comparaison porte sur les caractéristiques structurelles, indépendamment de toute marque. Les solutions de signature certifiée centralisée partagent une architecture commune fondée sur un opérateur tiers gestionnaire de la preuve.</p>
+
+  <div class="compare-wrap">
+  <table class="compare">
+    <thead>
+      <tr>
+        <th style="width:30%">Critère</th>
+        <th class="col-phi" style="width:35%">Φ Probatoire</th>
+        <th class="col-cert" style="width:35%">Signature certifiée centralisée</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="crit">Localisation de la preuve</td>
+        <td class="phi">Enclave matérielle sécurisée des dispositifs (expéditeur et signataire)</td>
+        <td class="cert">Serveurs de l'opérateur, hébergés en cloud</td>
+      </tr>
+      <tr>
+        <td class="crit">Pérennité de la preuve</td>
+        <td class="phi">Indépendante du cycle de vie de PHI SAS ou de tout acteur commercial</td>
+        <td class="cert">Conditionnée à la continuité du service de l'opérateur</td>
+      </tr>
+      <tr>
+        <td class="crit">Identification du signataire</td>
+        <td class="phi">Cinq éléments scellés cryptographiquement à l'enrôlement, vérifiés visuellement par le destinataire</td>
+        <td class="cert">Lien email, mot de passe, OTP par SMS ; vérification d'identité éventuellement déléguée à un opérateur tiers (KYC externe)</td>
+      </tr>
+      <tr>
+        <td class="crit">Résistance post-quantique</td>
+        <td class="phi">Native — ML-DSA-65 et ML-KEM-768 (NIST FIPS 204 et FIPS 203, 2024)</td>
+        <td class="cert">RSA ou ECDSA — vulnérables au calcul quantique à terme</td>
+      </tr>
+      <tr>
+        <td class="crit">Conformité Cloud Act</td>
+        <td class="phi">Structurellement hors champ — aucun serveur saisissable</td>
+        <td class="cert">Variable selon hébergeur ; exposition au Cloud Act américain si infrastructure AWS, Azure ou équivalent</td>
+      </tr>
+      <tr>
+        <td class="crit">Indépendance du destinataire</td>
+        <td class="phi">Le destinataire vérifie l'identité par lui-même, sur ses propres éléments d'identification reçus</td>
+        <td class="cert">Vérification déléguée au tiers de confiance — dépendance opérationnelle</td>
+      </tr>
+      <tr>
+        <td class="crit">Conservation par le signataire</td>
+        <td class="phi">À vie, dans son dispositif, sans abonnement</td>
+        <td class="cert">Téléchargement PDF conditionné au maintien du compte</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+</div>
+
+<section class="section" id="conformite">
+  <div class="section-eyebrow">5 · Conformité réglementaire</div>
+  <h2 class="section-title">Standards et fondements juridiques.</h2>
+  <p class="section-lead">L'architecture Φ s'aligne sur les standards cryptographiques internationaux les plus récents et respecte les exigences du droit français et européen en matière de données personnelles, d'identification et de mention manuscrite.</p>
+
+  <div class="conformite">
+    <div class="conf-item">
+      <div class="conf-tag">NIST FIPS 204</div>
+      <h4 class="conf-title">ML-DSA-65 — signature post-quantique</h4>
+      <p class="conf-body">Standard publié en août 2024 par le National Institute of Standards and Technology. Algorithme de signature à clé publique fondé sur les réseaux euclidiens structurés, résistant aux attaques par ordinateurs quantiques.</p>
+    </div>
+    <div class="conf-item">
+      <div class="conf-tag">NIST FIPS 203</div>
+      <h4 class="conf-title">ML-KEM-768 — chiffrement post-quantique</h4>
+      <p class="conf-body">Standard publié en août 2024. Mécanisme d'encapsulation de clé fondé sur les réseaux euclidiens structurés. Niveau de sécurité 3 (192 bits classiques équivalents).</p>
+    </div>
+    <div class="conf-item">
+      <div class="conf-tag">RGPD art. 9</div>
+      <h4 class="conf-title">Données biométriques sensibles</h4>
+      <p class="conf-body">Empreinte digitale et données graphologiques traitées exclusivement dans l'enclave matérielle de l'appareil. Aucun transfert vers PHI SAS ni vers un tiers. PHI SAS n'est ni responsable ni sous-traitant de traitement au sens de l'article 4 RGPD.</p>
+    </div>
+    <div class="conf-item">
+      <div class="conf-tag">Cass. civ. 1<sup>re</sup>, 25 juin 2009</div>
+      <h4 class="conf-title">Pièces d'identité opposables</h4>
+      <p class="conf-body">Décision n° 08-15.971 : exclusion du permis de conduire comme pièce d'identité au sens du Code civil. Pièces acceptées par Φ : passeport, carte nationale d'identité, titre de séjour.</p>
+    </div>
+    <div class="conf-item">
+      <div class="conf-tag">Ord. 2016-131</div>
+      <h4 class="conf-title">Mention manuscrite non sacramentelle</h4>
+      <p class="conf-body">L'ordonnance du 10 février 2016 portant réforme du droit des contrats a supprimé l'obligation d'une formule manuscrite sacramentelle. Le paraphe manuscrit, scellé cryptographiquement et associé à l'affichage du numéro de pièce, y est juridiquement équivalent.</p>
+    </div>
+    <div class="conf-item">
+      <div class="conf-tag">ANSSI CSPN</div>
+      <h4 class="conf-title">Certification de Sécurité de Premier Niveau</h4>
+      <p class="conf-body">Procédure de certification ANSSI en cours d'instruction. La cible de sécurité couvre l'ensemble de l'architecture probatoire, le canal Inline-Offline™ et la chaîne d'identification fermée à l'enrôlement.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-soft">
+<section class="section">
+  <div class="section-eyebrow">6 · Conditions d'accès</div>
+  <h2 class="section-title">Souscription professionnelle.</h2>
+
+  <div class="tarif">
+    <div class="tarif-row">
+      <div class="tarif-label"><em>Φ</em> Probatoire — accès professionnel</div>
+      <div class="tarif-price">150 €<span class="tarif-price-unit">/ mois HT</span></div>
+    </div>
+    <div class="tarif-features">
+      <span>Signatures illimitées</span>
+      <span>Trois dispositifs</span>
+      <span>Sans serveur</span>
+      <span>Post-quantique</span>
+    </div>
+    <p class="tarif-note">Le signataire conserve à vie la preuve cryptographique de chaque acte sans abonnement complémentaire. Aucun coût de stockage, aucun frais de tiers d'identification, aucun service en ligne dépendant du maintien d'un compte.</p>
+  </div>
+</section>
+</div>
+
+<div class="finale">
+  <div class="finale-inner">
+    <div class="finale-eyebrow">Φ Probatoire</div>
+    <h2>La vérification d'identité que vous faisiez en face à face, <em>scellée mathématiquement à distance.</em></h2>
+    <p>Aucun tiers de confiance. Aucun cloud. Aucune dépendance au cycle de vie d'un opérateur commercial.</p>
+    <a href="tarifications.html" class="btn-gold">Accéder à Φ</a>
+    <a href="index.html" class="btn-outline">Retour à l'accueil</a>
   </div>
 </div>
- 
-<!-- LE DEAL INVISIBLE -->
-<section class="deal-sec" id="le-deal">
-  <div class="deal-inner">
-    <div class="deal-ey">Avant d'aller plus loin</div>
-    <h2 class="deal-title">Un code SMS.<br><em>En échange de tout.</em></h2>
-    <div class="deal-bloc">
-      <p class="deal-text">
-        Le code SMS ne vaut techniquement presque rien. C'est une friction minimale — un geste symbolique,
-        quatre chiffres reçus sur un téléphone. Il ne prouve pas que vous êtes vivant. Il ne prouve pas
-        que vous êtes présent. Il ne prouve pas que vous avez lu. Mais en l'acceptant, le signataire
-        ne signe pas seulement un document. <em>Il dépose.</em>
-      </p>
-      <p class="deal-text">
-        Derrière ce code, DocuSign, Adobe Sign et Yousign héritent — légalement, contractuellement,
-        avec votre accord implicite inscrit dans leurs conditions générales — de l'intégralité du contenu
-        que vous leur confiez. Chaque acte. Chaque document. Chaque secret professionnel que vous avez
-        fait transiter par leur plateforme :
-      </p>
-      <ul class="deal-list">
-        <li>Contrats commerciaux et conventions de cession</li>
-        <li>Mandats patrimoniaux et actes notariés</li>
-        <li>Bilans médicaux et consentements éclairés</li>
-        <li>Procédures disciplinaires et ruptures conventionnelles</li>
-        <li>Accords de confidentialité et dossiers d'acquisition</li>
-        <li>Correspondances entre avocats et clients</li>
-        <li>Questionnaires médicaux et dossiers salariés</li>
-        <li>Testaments, donations, actes de propriété</li>
-      </ul>
-      <p class="deal-text">
-        Multipliés par des millions d'utilisateurs. Accumulés sur des décennies.
-        Hébergés sur AWS, sur Azure — <em>sous juridiction américaine.</em>
-      </p>
-      <p class="deal-text">
-        C'est le deal le plus déséquilibré de l'économie numérique. Le signataire croit qu'il signe.
-        En réalité, il dépose les trésors documentaires de sa vie professionnelle et personnelle
-        dans un coffre dont il <strong>ne détient pas la serrure.</strong>
-      </p>
-      <p class="deal-text">
-        Et le Cloud Act referme le piège. Ce n'est pas seulement que DocuSign
-        <em>peut</em> lire ce que vous avez confié. C'est que les autorités américaines
-        <em>peuvent exiger</em> — sans vous en informer, sans recours possible devant une juridiction
-        française ou européenne — l'accès à tout ce que vous avez déposé.
-        Sur simple injonction. Sans procès contradictoire. Sans appel.
-      </p>
-      <blockquote class="deal-quote">
-        Φ ne stocke rien.<br>
-        Il n'y a rien à déposer.<br>
-        Il n'y a rien à réquisitionner.
-        <span>La preuve vit dans votre enclave matérielle — scellée par votre visage vivant. Pas dans la leur.</span>
-      </blockquote>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>PHI SAS</h5>
+      <p>Filiale d'AION ASEMANTIX</p>
+      <p>Architecture probatoire post-quantique</p>
+      <p>Brevet déposé · Procédés protégés</p>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <p><a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a></p>
+      <p><a href="contact-commercial.html">Demande de démonstration</a></p>
+      <p><a href="dpo.html">Délégué à la Protection des Données</a></p>
+    </div>
+    <div class="footer-col">
+      <h5>Documents</h5>
+      <p><a href="cgu.html">Conditions générales</a></p>
+      <p><a href="politique-confidentialite.html">Politique de confidentialité</a></p>
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
     </div>
   </div>
-</section>
- 
-<!-- 4 ARGUMENTS TECHNIQUES -->
-<section class="args" id="arguments">
-  <div class="args-inner">
- 
-    <div class="args-header">
-      <div class="args-ey">Quatre arguments</div>
-      <p class="args-intro">Voici pourquoi cette différence est structurelle — pas contractuelle. Pas une politique de confidentialité. Une impossibilité technique.</p>
-    </div>
- 
-    <!-- ARG 01 -->
-    <div class="arg">
-      <div class="arg-num">01</div>
-      <div class="arg-body">
-        <h2 class="arg-title">DocuSign signe.<br><em>Φ</em> <em>prouve — et identifie.</em></h2>
-        <div class="arg-compare">
-          <div class="arg-col theirs">
-            <div class="arg-col-label">DocuSign · Yousign · Adobe Sign</div>
-            <div class="arg-col-text">La preuve de votre signature <strong>vit sur leurs serveurs.</strong> L'identité du signataire repose sur un code SMS — qui ne prouve ni la présence physique, ni la vie, ni la lecture du document. En cas de litige, vous leur demandez un certificat — avec délais, frais, dépendance.</div>
-          </div>
-          <div class="arg-col">
-            <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text">La preuve vit <strong>dans votre dispositif.</strong> L'identité du signataire est établie par <strong>Face ID liveness</strong> — présence physique prouvée, personne vivante, à cet instant précis — combinée à l'empreinte digitale et à l'enclave matérielle. Exportable. Vérifiable par tout expert judiciaire. <strong>Sans nous.</strong> Même si <em>Φ</em> disparaît demain.</div>
-          </div>
-        </div>
-        <p class="arg-lede">La valeur cryptographique G est calculée, scellée et conservée localement. Un juge peut la <strong>recalculer</strong> avec votre visage en mouvement, votre empreinte, votre téléphone et le document original. Pas besoin de nous. Pas besoin de DocuSign. Pas besoin de personne.</p>
-      </div>
-    </div>
- 
-    <!-- ARG 02 -->
-    <div class="arg">
-      <div class="arg-num">02</div>
-      <div class="arg-body">
-        <h2 class="arg-title">Vos données <em>chez eux.</em><br>Les nôtres chez vous.</h2>
-        <div class="arg-compare">
-          <div class="arg-col theirs">
-            <div class="arg-col-label">DocuSign · Yousign · Adobe Sign</div>
-            <div class="arg-col-text">Serveurs américains. <strong>Cloud Act.</strong> Vos documents déchiffrés sur leur infrastructure. Les IA analysent vos comportements, vos patterns de signature, vos actes. <span class="strike">Confidentialité contractuelle.</span></div>
-          </div>
-          <div class="arg-col">
-            <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text">Vos documents <strong>ne quittent jamais votre enclave.</strong> Ils traversent internet chiffrés — indistinguables du bruit aléatoire. Pas de serveur. Pas de Cloud Act. Pas d'IA qui analyse.<br><br>Le déchiffrement ne peut avoir lieu que dans <strong>l'enclave matérielle du dispositif qui porte l'identité Φ du destinataire autorisé.</strong> <strong>Confidentialité structurelle.</strong></div>
-          </div>
-        </div>
-        <p class="arg-lede">Ce n'est pas une politique de confidentialité. C'est une <strong>impossibilité technique.</strong> Le document chiffré voyage sur le réseau comme une enveloppe aveugle — lisible par personne. Un seul endroit au monde peut l'ouvrir : l'enclave du bon dispositif, avec la bonne identité Φ. <strong>Nous ne pouvons pas lire vos documents. Personne ne le peut. Pas même nous.</strong></p>
-      </div>
-    </div>
- 
-    <!-- ARG 03 -->
-    <div class="arg">
-      <div class="arg-num">03</div>
-      <div class="arg-body">
-        <h2 class="arg-title">Leur preuve dépend d'eux.<br>La nôtre <em>de personne.</em></h2>
-        <div class="arg-compare">
-          <div class="arg-col theirs">
-            <div class="arg-col-label">DocuSign · Yousign · Adobe Sign</div>
-            <div class="arg-col-text">Si leur plateforme ferme — <strong>vos preuves disparaissent.</strong> Si leur serveur est compromis — vos données sont exposées. Votre souveraineté dépend de leur santé financière et de leur conformité.</div>
-          </div>
-          <div class="arg-col">
-            <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text">La preuve <em>Φ</em> est <strong>autonome.</strong> Elle vit dans deux dispositifs — le vôtre et celui de votre signataire. Journal chaîné, scellé dans l'enclave hardware par liveness biométrique. Inaltérable. <strong>Pour toujours.</strong></div>
-          </div>
-        </div>
-        <p class="arg-lede">Chaque acte est inscrit dans un journal cryptographiquement chaîné, ancré dans un <strong>compteur monotone matériel</strong> — irréversible, non réinitialisable, gravé dans le silicium. La falsification est structurellement impossible.</p>
-      </div>
-    </div>
- 
-    <!-- ARG 04 -->
-    <div class="arg">
-      <div class="arg-num">04</div>
-      <div class="arg-body">
-        <h2 class="arg-title">Ils résistent au présent.<br>Nous résistons <em>au futur.</em></h2>
-        <div class="arg-compare">
-          <div class="arg-col theirs">
-            <div class="arg-col-label">DocuSign · Yousign · Adobe Sign</div>
-            <div class="arg-col-text">RSA. AES-128. Des standards des années 1990. <strong>Les ordinateurs quantiques les casseront</strong> d'ici 2027–2029 (IBM Starling). Les données capturées aujourd'hui seront déchiffrées demain.</div>
-          </div>
-          <div class="arg-col">
-            <div class="arg-col-label gold">Φ</div>
-            <div class="arg-col-text"><strong>ML-DSA-65 · ML-KEM-768.</strong> Standardisés par le NIST en août 2024 après 8 ans de compétition mondiale. Résistants aux ordinateurs quantiques connus et anticipés. <strong>Harvest now, decrypt never.™</strong></div>
-          </div>
-        </div>
-        <p class="arg-lede">Des agences et acteurs malveillants <strong>capturent déjà</strong> vos échanges chiffrés aujourd'hui, en attendant les ordinateurs quantiques. Avec <em>Φ</em>, ils peuvent capturer. Ils ne déchiffreront jamais.</p>
-      </div>
-    </div>
- 
-  </div>
-</section>
- 
-<!-- TABLE COMPARATIVE -->
-<section class="table-sec">
-  <div class="table-inner">
-    <div class="table-ey">Comparaison point par point</div>
-    <table>
-      <thead>
-        <tr><th>Critère</th><th>DocuSign · Yousign · Adobe Sign</th><th class="phi-col">Φ</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Transport et déchiffrement</td><td class="no">HTTPS standard · documents déchiffrés et accessibles en clair sur leurs serveurs</td><td class="yes phi-data">Chiffrement post-quantique en transit · déchiffrement exclusivement dans l'enclave matérielle du dispositif Φ autorisé</td></tr>
-        <tr><td>Lieu de la preuve</td><td class="no">Serveurs tiers</td><td class="yes phi-data">Votre dispositif · Pour toujours</td></tr>
-        <tr><td>Authentification du signataire</td><td class="no">Code SMS à 4 chiffres · présence physique non prouvée</td><td class="yes phi-data">Face ID liveness + empreinte + enclave · personne vivante, présente, à cet instant précis</td></tr>
-        <tr><td>Cloud Act applicable</td><td class="no">Oui (serveurs US pour DocuSign et Adobe)</td><td class="yes phi-data">Inapplicable — rien à saisir</td></tr>
-        <tr><td>Survie si prestataire ferme</td><td class="no">Preuves perdues</td><td class="yes phi-data">Preuves intactes · Autonomes</td></tr>
-        <tr><td>Vérification sans tiers</td><td class="no">Non</td><td class="yes phi-data">Oui · Par tout expert ou juge</td></tr>
-        <tr><td>Cryptographie post-quantique</td><td class="no">Non</td><td class="yes phi-data">ML-DSA · ML-KEM · NIST 2024</td></tr>
-        <tr><td>Autorité de certification requise</td><td class="no">Oui</td><td class="yes phi-data">Non · Auto-vérifiable</td></tr>
-        <tr><td>Journal matériel inaltérable</td><td class="no">Non</td><td class="yes phi-data">Oui · Compteur monotone hardware</td></tr>
-        <tr><td>RGPD by construction</td><td class="no">Contractuel</td><td class="yes phi-data">Structurel · Rien à transmettre</td></tr>
-        <tr><td>Souveraineté numérique</td><td class="no">Dépendante</td><td class="yes phi-data">Absolue · Par architecture</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
- 
-<!-- HARVEST NOW -->
-<section class="harvest-sec">
-  <div class="harvest-inner">
-    <div class="harvest-left">
-      <div class="harvest-ey">Résistance post-quantique</div>
-      <h2 class="harvest-title">Harvest now,<br>decrypt <em>never.™</em></h2>
-      <p class="harvest-body">Les États, les services de renseignement et les acteurs malveillants <strong>capturent aujourd'hui</strong> des échanges chiffrés qu'ils ne peuvent pas encore lire — dans l'attente des ordinateurs quantiques.<br><br>Avec <em>Φ</em>, la capture est inutile. Le chiffrement post-quantique garantit que <strong>la clé ne sera jamais reconstituée.</strong> Pas dans 10 ans. Pas dans 30 ans.</p>
-    </div>
-    <div class="harvest-right">
-      <div class="harvest-item">
-        <div class="harvest-item-tag">ML-DSA-65 · FIPS 204</div>
-        <div class="harvest-item-text"><strong>Signature post-quantique.</strong> Infalsifiable même par un ordinateur quantique. Recalculable par tout expert judiciaire.</div>
-      </div>
-      <div class="harvest-item">
-        <div class="harvest-item-tag">ML-KEM-768 · FIPS 203</div>
-        <div class="harvest-item-text"><strong>Chiffrement post-quantique.</strong> La clé ne peut être dérivée ni aujourd'hui ni après Q-Day. Vos documents restent illisibles pour toujours.</div>
-      </div>
-      <div class="harvest-item">
-        <div class="harvest-item-tag">NIST · Août 2024</div>
-        <div class="harvest-item-text">Standardisés après <strong>8 ans de compétition mondiale.</strong> Adoptés par les gouvernements américain et européen.</div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- TRUST -->
-<section class="trust-sec">
-  <div class="trust-inner">
-    <div class="trust-ey">Ce que Φ rend possible</div>
-    <h2 class="trust-title">La souveraineté numérique.<br>Pas une promesse. Une architecture.</h2>
-    <p class="trust-body">Tous les autres outils vous demandent de <strong>faire confiance</strong> à un prestataire. Avec <em>Φ</em>, la question ne se pose pas. Notre architecture est structurellement incapable de vous trahir — parce qu'elle ne détient rien.</p>
-    <div class="trust-grid">
-      <div class="trust-item">
-        <div class="trust-item-tag">Pour les notaires &amp; avocats</div>
-        <div class="trust-item-title">Vos actes vous appartiennent</div>
-        <div class="trust-item-body">La preuve vit dans votre cabinet. Pas chez DocuSign, pas chez Adobe, pas chez Yousign. Le consentement est établi par liveness biométrique — pas par un SMS.</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-item-tag">Pour les DSI &amp; RSSI</div>
-        <div class="trust-item-title">Zéro surface d'attaque serveur</div>
-        <div class="trust-item-body">Aucun serveur à protéger. Aucune donnée à chiffrer côté infrastructure. Conformité RGPD structurelle, pas contractuelle. L'identité biométrique ne quitte jamais l'enclave.</div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-item-tag">Pour les dirigeants</div>
-        <div class="trust-item-title">Indépendance totale</div>
-        <div class="trust-item-body">Vos preuves survivent à la fermeture de tout prestataire, y compris Φ elle-même. Le consentement est scellé par votre visage vivant — recalculable par tout juge, sans nous.</div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- CTA -->
-<section class="cta-sec">
-  <div class="cta-inner">
-    <div class="cta-ey">Φ · PHI</div>
-    <h2 class="cta-title">Accédez à <em>Φ</em>.<br><em>Comprenez la différence.</em></h2>
-    <p class="cta-body">Deux envois offerts. Votre document. Votre signataire. La preuve générée sur votre dispositif — scellée par votre visage vivant, vérifiable par tout expert, sans infrastructure externe.</p>
-    <div class="cta-btns">
-      <a href="tarifications.html" class="btn-primary">Accéder à Φ</a>
-      <a href="resistance-quantique.html" class="btn-ghost">Résistance post-quantique →</a>
-    </div>
-    <div class="cta-brevets">Brevets FR 2604755 · FR 2605317 · PHI · phi-signature.fr<br>Inline-Offline<sup style="font-size:.6em;color:rgba(200,168,75,.5)">®</sup> · Harvest now, decrypt never.™</div>
-  </div>
-</section>
- 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-phi">Φ</div>
-      <div class="footer-line"></div>
-      <div class="footer-baseline-1">La signature électronique</div>
-      <div class="footer-baseline-2">Post-Quantique</div>
-      <div class="footer-baseline-2">sans tiers de confiance</div>
-    </div>
-    <div class="footer-nav">
-      <div class="footer-col">
-        <h4>Comprendre</h4>
-        <ul>
-          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
-          <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
-          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
-          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
-          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
-          <li><a href="asemantique.html">Asémanticité</a></li>
-          <li><a href="intimite-numerique.html">L'intimité numérique</a></li>
-          <li><a href="conformite.html">Conformité</a></li>
-          <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
-          <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Professions</h4>
-        <ul>
-          <li><a href="professions.html">Toutes les professions</a></li>
-          <li><a href="professions/justice.html">Justice</a></li>
-          <li><a href="professions/medecins.html">Santé</a></li>
-          <li><a href="professions/banques.html">Banques &amp; finance</a></li>
-          <li><a href="professions/mutuelles-assurances.html">Mutuelles &amp; assurances</a></li>
-          <li><a href="professions/rh-compliance.html">RH &amp; compliance</a></li>
-          <li><a href="professions/journalistes.html">Journalistes</a></li>
-          <li><a href="professions/urssaf.html">URSSAF</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Accéder</h4>
-        <ul>
-          <li><a href="tarifications.html">Accéder à Φ</a></li>
-          <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
-          <li><a href="a-propos/A-Propos.html">À propos</a></li>
-          <li><a href="a-propos/portefeuille-brevets.html">Portefeuille de brevets</a></li>
-          <li><a href="contact.html">Demander une démonstration</a></li>
-          <li><a href="contact.html">Nous contacter</a></li>
-          <li><a href="Pourquoi-Φ-quand-docusign-existe.html" class="footer-link-special">Pourquoi Φ quand DocuSign existe ?</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-meta">
-      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
-      Procédés protégés · © 2026 — Tous droits réservés
-    </div>
+  <div class="footer-bottom">
+    <span>© 2026 PHI SAS — Tous droits réservés</span>
+    <span>Document v2.0 · 30 mai 2026</span>
   </div>
 </footer>
- 
+
 </body>
 </html>
-
-
