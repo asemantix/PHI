@@ -47,6 +47,9 @@ html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line-height:1.55;overflow-x:hidden}
 .top-actions{position:fixed;top:24px;right:32px;z-index:100;display:flex;gap:10px;align-items:center}
 .top-cta{background:var(--navy);color:var(--paper);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s;backdrop-filter:blur(8px)}
+.top-free{background:var(--gold);color:var(--navy-deep);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border-radius:2px;transition:background .2s;backdrop-filter:blur(8px)}
+.top-free:hover{background:var(--gold-light)}
+@media(max-width:720px){.top-free{padding:10px 14px;font-size:.6rem;letter-spacing:.1em}.tac-contact{display:none}}
 .top-cta:hover{background:var(--navy-deep)}
 .top-cta .phi-cta{font-family:var(--font-display);font-style:italic;font-size:.95rem;margin-left:4px;letter-spacing:0;color:var(--gold-light)}
 .top-evaluate{background:rgba(250,250,247,.85);color:var(--gold-deep);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);border-radius:2px;transition:all .2s;backdrop-filter:blur(8px)}
@@ -123,7 +126,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 @media(max-width:560px){.formule-cases{grid-template-columns:repeat(2,1fr)!important}}
 .canal{background:var(--paper-soft);padding:88px 48px 80px;text-align:center;border-top:1px solid var(--rule)}
 .canal-inner{max-width:880px;margin:0 auto}
-.canal-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.42em;color:var(--gold-deep);text-transform:uppercase;font-weight:600;margin-bottom:20px}
+.canal-eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:.2em;color:var(--gold-deep);text-transform:uppercase;font-weight:600;margin-bottom:20px}
 .canal-title{font-family:var(--font-display);font-size:clamp(22px,3.8vw,34px);font-weight:500;color:var(--navy);line-height:1.22;letter-spacing:-.012em;margin-bottom:14px}
 .canal-title em{font-style:italic;color:var(--gold-deep)}
 .canal-lede{font-family:var(--font-display);font-style:italic;font-size:clamp(14px,2vw,17px);color:var(--ink-muted);line-height:1.68;max-width:580px;margin:0 auto 52px}
@@ -143,7 +146,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .section{padding:100px 40px;border-top:1px solid var(--rule)}
 .section.section-soft{background:var(--paper-soft)}
 .section-inner{max-width:1080px;margin:0 auto}
-.section-eyebrow{font-family:var(--font-mono);font-size:.72rem;color:var(--gold-deep);letter-spacing:.42em;text-transform:uppercase;text-align:center;margin-bottom:22px;font-weight:500}
+.section-eyebrow{font-family:var(--font-mono);font-size:.82rem;color:var(--gold-deep);letter-spacing:.2em;text-transform:uppercase;text-align:center;margin-bottom:22px;font-weight:500}
 .section-title{font-family:var(--font-display);font-size:2.4rem;font-weight:500;color:var(--navy);line-height:1.2;letter-spacing:-.01em;text-align:center;margin-bottom:28px;max-width:820px;margin-left:auto;margin-right:auto}
 .section-title em{font-style:italic}
 .section-lede{font-family:var(--font-display);font-size:1.18rem;font-style:italic;color:var(--ink-muted);line-height:1.65;text-align:center;max-width:720px;margin:0 auto 56px;font-weight:400}
@@ -158,7 +161,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 @media(max-width:560px){.profession-card{flex:1 1 100%;max-width:480px}}
 .further{padding:100px 40px;background:var(--navy);color:var(--paper);border-top:1px solid var(--rule)}
 .further-inner{max-width:1200px;margin:0 auto}
-.further-eyebrow{font-family:var(--font-mono);font-size:.72rem;color:var(--gold-soft);letter-spacing:.42em;text-transform:uppercase;text-align:center;margin-bottom:22px;font-weight:500}
+.further-eyebrow{font-family:var(--font-mono);font-size:.82rem;color:var(--gold-soft);letter-spacing:.2em;text-transform:uppercase;text-align:center;margin-bottom:22px;font-weight:500}
 .further-title{font-family:var(--font-display);font-size:2rem;font-weight:500;color:var(--paper);line-height:1.25;letter-spacing:-.01em;text-align:center;margin-bottom:18px}
 .further-title em{font-style:italic}
 .further-lede{font-family:var(--font-display);font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.7);line-height:1.6;text-align:center;max-width:640px;margin:0 auto 56px;font-weight:400}
@@ -174,7 +177,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 @media(max-width:700px){.further-card{flex:1 1 100%;max-width:480px}}
 .ecosysteme{padding:110px 40px 100px;background:var(--paper-soft);border-top:1px solid var(--rule);text-align:center}
 .ecosysteme-inner{max-width:1200px;margin:0 auto}
-.ecosysteme-eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.42em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:22px;font-weight:600}
+.ecosysteme-eyebrow{font-family:var(--font-mono);font-size:13px;letter-spacing:.2em;color:var(--gold-deep);text-transform:uppercase;margin-bottom:22px;font-weight:600}
 .ecosysteme-title{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:500;margin:0 0 18px;letter-spacing:-.01em;color:var(--navy)}
 .ecosysteme-title em{font-style:italic}
 .ecosysteme-sub{font-family:var(--font-display);font-style:italic;color:var(--ink-muted);font-size:1.05rem;max-width:680px;margin:0 auto 60px;line-height:1.6}
@@ -216,13 +219,13 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .footer-meta{border-top:1px solid rgba(200,168,75,.15);padding-top:28px;text-align:center;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;color:rgba(255,255,255,.4);line-height:1.8}
 .footer-meta strong{color:var(--gold-light);font-weight:500}
 @media(max-width:720px){.footer{padding:60px 24px 30px}.footer-phi{font-size:3.5rem}.footer-nav{grid-template-columns:1fr;gap:32px}.section{padding:70px 24px}.section-title{font-size:1.7rem}.further,.ecosysteme,.final-cta{padding-left:24px;padding-right:24px}}
-.prehero-band{background:var(--navy);color:var(--gold-light);padding:12px 24px;text-align:center;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;font-weight:500;border-bottom:1px solid rgba(200,168,75,.3)}
+.prehero-band{background:var(--navy);color:var(--gold-light);padding:12px 24px;text-align:center;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-bottom:1px solid rgba(200,168,75,.3)}
 .prehero-band .prehero-sep{color:var(--gold);margin:0 14px;opacity:.6}
 .qday{background:var(--navy);color:var(--paper);padding:100px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .qday-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:center}
 .qday-visual{display:flex;justify-content:center;align-items:center}
 .qday-content{text-align:left}
-.qday-eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.42em;color:var(--gold-light);text-transform:uppercase;font-weight:500;margin-bottom:22px}
+.qday-eyebrow{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;font-weight:500;margin-bottom:22px}
 .qday-title{font-family:var(--font-display);font-size:2.6rem;font-weight:500;color:var(--paper);line-height:1.15;letter-spacing:-.012em;margin-bottom:26px}
 .qday-title em{font-style:italic;color:var(--gold-light)}
 .qday-text{font-family:var(--font-display);font-style:italic;font-size:1.15rem;color:rgba(250,250,247,.78);line-height:1.65;margin-bottom:18px;max-width:640px}
@@ -242,7 +245,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 @media(max-width:800px){.qday{padding:70px 24px}.qday-inner{grid-template-columns:1fr;gap:40px;text-align:center}.qday-content{text-align:center}.qday-title{font-size:2rem}.hourglass-svg{width:140px}}
 .enclave-section{background:var(--navy);color:var(--paper);padding:110px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .enclave-inner{max-width:1000px;margin:0 auto}
-.enclave-eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.42em;color:var(--gold-light);text-transform:uppercase;font-weight:500;margin-bottom:22px;text-align:center}
+.enclave-eyebrow{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;font-weight:500;margin-bottom:22px;text-align:center}
 .enclave-title{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:500;color:var(--paper);line-height:1.18;letter-spacing:-.015em;margin-bottom:28px;text-align:center;max-width:880px;margin-left:auto;margin-right:auto}
 .enclave-title em{font-style:italic;color:var(--gold-light)}
 .enclave-rule{width:80px;height:1.5px;background:var(--gold);margin:0 auto 50px}
@@ -273,7 +276,8 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 </div>
 
 <div class="top-actions">
-  <a href="mailto:phi-signature@proton.me?subject=Contact%20commercial%20Φ" style="background:transparent;color:var(--gold-deep);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);border-radius:2px;transition:all .2s;backdrop-filter:blur(8px)" onmouseover="this.style.background='var(--gold)';this.style.color='var(--paper)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold-deep)'">Contact commercial</a>
+  <a href="mailto:phi-signature@proton.me?subject=Contact%20commercial%20Φ" style="background:transparent;color:var(--gold-deep);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);border-radius:2px;transition:all .2s;backdrop-filter:blur(8px)" onmouseover="this.style.background='var(--gold)';this.style.color='var(--paper)'" onmouseout="this.style.background='transparent';this.style.color='var(--gold-deep)'" class="tac-contact">Contact commercial</a>
+  <a href="#recevoir" class="top-free">Recevoir &amp; signer — gratuit</a>
   <a href="tarifications.html" class="top-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </div>
 
@@ -290,6 +294,22 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
       <path d="M 2 4 L 12 14 L 22 4" fill="none" stroke="#8b6914" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
+</section>
+
+<section style="background:var(--paper-soft);padding:78px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+  <div style="max-width:780px;margin:0 auto;text-align:center">
+    <svg width="116" height="46" viewBox="0 0 116 46" style="display:block;margin:0 auto 24px;overflow:visible" aria-hidden="true">
+      <rect x="8" y="4" width="26" height="38" rx="6" fill="none" stroke="#c4a472" stroke-width="1.3" opacity="0.85"/>
+      <text x="21" y="27" text-anchor="middle" font-family="'Playfair Display',serif" font-style="italic" font-size="13" fill="#8b6914" opacity="0.9">Φ</text>
+      <rect x="82" y="4" width="26" height="38" rx="6" fill="none" stroke="#c4a472" stroke-width="1.3" opacity="0.55"/>
+      <text x="95" y="27" text-anchor="middle" font-family="'Playfair Display',serif" font-style="italic" font-size="13" fill="#8b6914" opacity="0.55">Φ</text>
+      <line x1="36" y1="23" x2="80" y2="23" stroke="#c4a472" stroke-width="1.1" stroke-dasharray="1.5 3" opacity="0.7"/>
+      <circle cx="58" cy="23" r="2.4" fill="#c4a472" opacity="0.9"/>
+    </svg>
+    <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:22px">01 · Le huis-clos <span style="color:var(--ink-muted);font-weight:500">— Φ en 5 secondes</span></div>
+    <p style="font-family:var(--font-display);font-size:clamp(1.25rem,2.7vw,1.75rem);font-weight:400;color:var(--navy);line-height:1.55;letter-spacing:-.005em">Φ met deux dispositifs légitimes en face-à-face — pour signer ou correspondre — et <em style="font-style:italic;color:var(--gold-deep)">personne d'autre n'entre dans la pièce</em> : ni cloud, ni Cloud Act, ni serveur de messagerie, ni serveur tout court, ni IA, ni ordinateur quantique. Le document ne sort jamais en clair ; la signature se calcule à l'intérieur de l'appareil. C'est la souveraineté ultime sur vos données — <em style="font-style:italic;color:var(--gold-deep)">la preuve vous appartient, à vie.</em></p>
+    <p style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-top:24px">Brevet <span style="font-family:var(--font-display);font-style:italic;text-transform:none;letter-spacing:0;font-size:1.05rem;color:var(--navy)">Inline-Offline</span><sup style="font-size:.55em;vertical-align:super;color:var(--gold-deep)">™</sup></p>
+  </div>
 </section>
 
 <section class="qday">
@@ -359,14 +379,14 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
     <!-- MANIFESTE (réintégré d'index 2) -->
     <div style="text-align:center;max-width:740px;margin:0 auto 52px">
-      <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">En huis-clos</div>
-      <div style="font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:500;color:var(--navy);line-height:1.2;letter-spacing:-.015em;margin-bottom:12px">Échangez. Signez. <em style="font-style:italic;color:var(--gold-deep)">Prouvez.</em></div>
+      <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">En huis-clos</div>
+      <div style="font-family:var(--font-display);font-size:clamp(2.7rem,6.5vw,4.6rem);font-weight:600;color:var(--navy);line-height:1.08;letter-spacing:-.02em;margin-bottom:14px">Échangez. Signez. <em style="font-style:italic;color:var(--gold-deep)">Prouvez.</em></div>
       <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,1.9vw,1.2rem);color:var(--ink-muted);line-height:1.5">Aucun cloud. Aucun Cloud Act. Aucune autorité de certification.</p>
     </div>
 
     <!-- CE QUE G SIGNIFIE VRAIMENT -->
     <div style="max-width:860px;margin:0 auto 52px;text-align:center">
-      <p style="font-family:var(--font-display);font-size:1.35rem;font-weight:500;color:var(--navy);line-height:1.55;margin-bottom:24px;letter-spacing:-.01em"><span style="display:block;font-size:clamp(1.7rem,3.2vw,2.2rem);line-height:1.2;margin-bottom:10px">G n'est pas un code SMS.</span><span style="display:block;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.18;margin:16px 0;letter-spacing:-.02em;font-weight:600">G est un acte probatoire complet, mathématiquement irrépudiable.</span><em style="color:var(--gold-deep)">Il dit que vous, identifié, avez signé ce document, sur ce téléphone, à cet instant précis.</em></p>
+      <p style="font-family:var(--font-display);font-size:1.35rem;font-weight:500;color:var(--navy);line-height:1.55;margin-bottom:24px;letter-spacing:-.01em"><span style="display:block;font-size:clamp(1.5rem,3vw,2rem);line-height:1.2;margin-bottom:10px">G n'est pas un code SMS.</span><span style="display:block;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.22;margin:16px 0;letter-spacing:-.015em;font-weight:600">G est un acte probatoire complet, mathématiquement irrépudiable.</span><em style="color:var(--gold-deep)">Il dit que vous, identifié, avez signé ce document, sur ce téléphone, à cet instant précis.</em></p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;align-items:center">
         <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid var(--rule);border-radius:2px;background:var(--paper-soft)">
           <span style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Brevets déposés</span>
@@ -385,7 +405,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
       <div style="max-width:1080px;margin:0 auto;position:relative;z-index:1">
 
         <!-- Eyebrow -->
-        <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:28px;text-align:center">La preuve mathématique</div>
+        <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:28px;text-align:center">La preuve mathématique</div>
 
         <!-- G monumental -->
         <div style="text-align:center;margin-bottom:40px">
@@ -440,7 +460,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
     <!-- TITRE SECTION -->
     <div style="max-width:860px;margin:0 auto 48px;text-align:center">
-      <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px">La preuve</div>
+      <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px">02 · La preuve</div>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:500;color:var(--navy);line-height:1.25;letter-spacing:-.015em">Φ fusionne quatre vérités en une preuve mathématique : <em style="font-style:italic;color:var(--gold-deep)">G</em>.</h2>
       <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-muted);line-height:1.6;max-width:720px;margin:18px auto 0">Inscrite en miroir sur le silicium de chaque partie — recalculable par tout expert ou juge, et rendant toute contestation unilatérale impossible.</p>
     </div>
@@ -456,7 +476,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 <!-- BANDEAU INLINE-OFFLINE -->
 <div style="background:#08111f;padding:28px 48px;text-align:center;border-top:1px solid rgba(196,164,114,.15);border-bottom:1px solid rgba(196,164,114,.15)">
   <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;font-weight:500;color:#c4a472;letter-spacing:.02em">Inline-Offline™ — </span><span style="font-family:'IBM Plex Mono',monospace;font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.22em;text-transform:uppercase">Never online.</span>
-  <div style="font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,250,247,.55);margin-top:10px">Votre document lisible n'existe jamais sur aucun réseau <span style="color:#c4a472;margin:0 8px">·</span> Brevets déposés</div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,250,247,.55);margin-top:10px">Φ emprunte internet sans jamais y être — illisible, asémantique, indéchiffrable même par l'IA et les ordinateurs quantiques <span style="color:#c4a472;margin:0 8px">·</span> Brevets déposés</div>
 </div>
 
 
@@ -465,7 +485,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
 <section style="background:var(--paper-soft);padding:88px 48px;border-top:1px solid var(--rule)">
   <div style="max-width:1000px;margin:0 auto;text-align:center">
-    <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">Tarifs</div>
+    <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">Tarifs</div>
     <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:500;color:var(--navy);margin-bottom:12px;letter-spacing:-.01em">Simple. <em style="font-style:italic">Transparent.</em></h2>
     <p style="font-family:var(--font-display);font-style:italic;font-size:1rem;color:var(--ink-muted);margin-bottom:44px">La réception est toujours gratuite. L'abonnement commence quand vous envoyez.</p>
 
@@ -527,7 +547,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
 <section class="canal" id="canal">
   <div class="canal-inner">
-    <div class="canal-eyebrow">Le canal Φ</div>
+    <div class="canal-eyebrow">03 · Le canal — le dehors</div>
     <h2 class="canal-title">Deux dispositifs souverains.<br><em>Un canal confidentiel en huis-clos.</em></h2>
     <p class="canal-lede">Le document à faire signer est illisible sur toutes les messageries. Il ne se déchiffre que dans l'enclave du dispositif autorisé — nulle part ailleurs.</p>
     <div class="canal-visual">
@@ -569,7 +589,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
 <section class="enclave-section" id="enclave-anti-ia">
   <div class="enclave-inner">
-    <div class="enclave-eyebrow">Au-delà du chiffrement de bout-en-bout</div>
+    <div class="enclave-eyebrow">04 · L'enclave — la forteresse</div>
     <h2 class="enclave-title"><em>Φ</em> est hermétique aux IA.<br><em>Quelles qu'elles soient.</em></h2>
     <div class="enclave-rule"></div>
     <p class="enclave-lede">Apple Intelligence, Google Gemini, Microsoft Copilot lisent ce que vous affichez à l'écran. Φ calcule dans l'enclave — jamais à l'écran. Aucune IA n'y accède. Par construction du processeur.</p>
@@ -649,7 +669,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
     .faq-a{font-family:var(--font-sans);font-size:.94rem;color:var(--ink-muted);line-height:1.72;padding:0 0 20px;max-width:680px}
   </style>
   <div class="faq-wrap">
-    <div style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px;text-align:center">FAQ</div>
+    <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px;text-align:center">FAQ</div>
     <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;color:var(--navy);line-height:1.2;text-align:center;margin-bottom:40px">Questions <em style="font-style:italic">fréquentes.</em></h2>
       <details class="faq-item">
         <summary class="faq-q">Qu&#x27;est-ce que Φ (Phi) ?</summary>
@@ -677,9 +697,9 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
       </details>
   </div>
 </section>
-<section class="final-cta" style="background:var(--navy);padding:90px 40px">
+<section class="final-cta" id="recevoir" style="background:var(--navy);padding:90px 40px">
   <div class="final-cta-inner">
-    <div style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:22px;text-align:center">Envie d'une démo ?</div>
+    <div style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:22px;text-align:center">Envie d'une démo ?</div>
     <h2 class="final-cta-title" style="color:var(--paper)">Être convaincu avant<br><em>d'y mettre votre nom.</em></h2>
     <p class="final-cta-lede" style="color:rgba(250,250,247,.65)">Laissez votre adresse — nous revenons vers vous pour une démonstration sur votre propre document.</p>
 
