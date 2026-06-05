@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0e1c35">
 <title>La mécanique probatoire Φ — Le procédé de la signature en huis-clos en détail · alternative à DocuSign · PHI</title>
-<meta name="description" content="La mécanique probatoire de Φ en détail : signature électronique post-quantique en huis-clos, procédé local sans serveur, journal probatoire enclavé, symétrie bilatérale, vérificateur déterministe. Un face-à-face entre deux dispositifs. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet FR 2604755.">
+<meta name="description" content="La mécanique probatoire de Φ en détail : signature électronique post-quantique en huis-clos, procédé local sans serveur, journal probatoire enclavé, symétrie bilatérale, vérificateur déterministe. Un face-à-face entre deux dispositifs. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet déposé.">
 <meta name="keywords" content="signature en huis-clos, mécanique probatoire en huis-clos, signature huis-clos sans tiers, la signature électronique DocuSign, signature électronique probatoire, alternative DocuSign souveraine, signature post-quantique, procédé probatoire local sans serveur, signature électronique sans tiers de confiance, ML-DSA-65, ML-KEM-768, journal probatoire enclavé, vérificateur déterministe, Fonction G, Inline-Offline, PHI, phi-signature.fr, signature électronique France">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="PHI">
 <link rel="canonical" href="https://phi-signature.fr/la-mecanique-probatoire.html">
 
 <!-- Favicons -->
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%236f520f" text-anchor="middle" x="50">Φ</text></svg>'>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -82,7 +82,7 @@
         {
           "@type": "Thing",
           "name": "Vérificateur déterministe — Fonction G",
-          "description": "Procédé probatoire breveté (FR 2604755) qui fusionne identité, document et contexte en une valeur G recalculable indépendamment de l'éditeur."
+          "description": "Procédé probatoire breveté (brevet déposé) qui fusionne identité, document et contexte en une valeur G recalculable indépendamment de l'éditeur."
         },
         {
           "@type": "Thing",
@@ -96,8 +96,8 @@
         {"@type": "Legislation", "name": "Règlement UE 910/2014 (eIDAS) article 26"},
         {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
         {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"},
-        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Fonction G, procédé probatoire"},
-        {"@type": "CreativeWork", "name": "Brevet FR 2605317 — Architecture cryptographique post-quantique"}
+        {"@type": "CreativeWork", "name": "Fonction G — procédé probatoire (brevet déposé)"},
+        {"@type": "CreativeWork", "name": "Architecture cryptographique post-quantique (brevet déposé)"}
       ],
       "publisher": {"@id": "https://phi-signature.fr/#organization"}
     },
@@ -130,15 +130,17 @@
     {
       "@type": "Organization",
       "@id": "https://phi-signature.fr/#organization",
-      "name": "PHI",
+      "name": "PHI SAS",
       "alternateName": "Φ",
       "url": "https://phi-signature.fr",
       "email": "phi-signature@proton.me",
-      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet FR 2604755.",
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign.",
       "foundingDate": "2024",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Lyon",
+        "streetAddress": "33 rue du Frère Benoît",
+        "postalCode": "69600",
+        "addressLocality": "Oullins-Pierre-Bénite",
         "addressCountry": "FR"
       },
       "sameAs": [
@@ -178,7 +180,7 @@
     --navy: #0e1c35;
     --navy-deep: #08111f;
     --gold: #c8a84b;
-    --gold-deep: #8b6914;
+    --gold-deep: #6f520f;
     --gold-light: #e2c87a;
     --paper: #fafaf7;
     --paper-soft: #f4f1e8;
@@ -933,7 +935,7 @@
         Le journal probatoire est une structure de données <em>chaînée</em> : chaque entrée <em>(par exemple : envoi du document, ouverture par le destinataire, lecture, signature)</em> est cryptographiquement liée à la précédente par un hash. Toute tentative d'altération ou de réécriture d'une entrée invalide la chaîne entière, et donc invalide la preuve.
       </p>
       <p>
-        Le journal réside dans l'enclave matérielle du dispositif. Il ne peut être ni lu, ni copié, ni extrait par aucun moyen logiciel — y compris par le système d'exploitation, par l'utilisateur lui-même, par l'éditeur Y.O.Y. ou par toute autorité judiciaire.
+        Le journal réside dans l'enclave matérielle du dispositif. Il ne peut être ni lu, ni copié, ni extrait par aucun moyen logiciel — y compris par le système d'exploitation, par l'utilisateur lui-même, par l'éditeur PHI ou par toute autorité judiciaire.
       </p>
       <p>
         Le journal s'appuie sur un <strong>compteur matériel strictement croissant et non réinitialisable</strong>, ancré dans le silicium du dispositif. Ce compteur garantit l'<em>ordre non réversible</em> des événements : il est techniquement impossible d'antidater ou de réordonner les entrées du journal.
@@ -961,7 +963,7 @@
       <ul style="list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(200,168,75,0.2); padding-top: 18px; display: flex; flex-direction: column; gap: 10px;">
         <li style="font-family: var(--font-sans); font-size: 0.9rem; color: rgba(250,250,247,0.7); padding-left: 20px; position: relative; font-weight: 300; line-height: 1.55;">
           <span style="position: absolute; left: 0; color: var(--gold);">→</span>
-          <strong style="font-weight: 500; color: var(--paper);">Preuve temporelle endògène</strong> — l'ordre des événements est établi par le silicium lui-même, sans recours à un horodatage externe.
+          <strong style="font-weight: 500; color: var(--paper);">Preuve temporelle endogène</strong> — l'ordre des événements est établi par le silicium lui-même, sans recours à un horodatage externe.
         </li>
         <li style="font-family: var(--font-sans); font-size: 0.9rem; color: rgba(250,250,247,0.7); padding-left: 20px; position: relative; font-weight: 300; line-height: 1.55;">
           <span style="position: absolute; left: 0; color: var(--gold);">→</span>
@@ -1343,7 +1345,7 @@
     </div>
 
     <p class="footnote">
-      Propriété établie par la revendication 10 du brevet <strong>FR 2605317</strong> — symétrie probatoire et impossibilité de contestation unilatérale.
+      Propriété établie par la revendication 10 du brevet probatoire déposé — symétrie probatoire et impossibilité de contestation unilatérale.
     </p>
   </div>
 </section>
@@ -1612,7 +1614,7 @@
         <div class="pesp-card-text">
           Architecture probatoire couverte par deux brevets et un divisionnaire en cours d'instruction.
         </div>
-        <a href="#">FR 2604755 · FR 2605317 →</a>
+        <a href="a-propos/portefeuille-brevets.html">Portefeuille de brevets →</a>
       </div>
       <div class="pesp-card">
         <div class="pesp-card-label">Cadre juridique</div>
