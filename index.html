@@ -41,7 +41,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0e1c35;--navy-deep:#08111f;--gold:#c4a472;--gold-deep:#8b6914;--gold-light:#d4b888;--gold-soft:#d4b888;--paper:#fafaf7;--paper-soft:#f4f1e8;--ink:#1d2330;--ink-muted:#6c7384;--ink-faded:#6c7384;--rule:rgba(200,168,75,.3);--success:#5a8033;--font-display:'Playfair Display',Georgia,serif;--font-mono:'IBM Plex Mono','Courier New',monospace;--font-sans:'IBM Plex Sans',-apple-system,sans-serif}
+:root{--navy:#0e1c35;--navy-deep:#08111f;--gold:#c4a472;--gold-deep:#6f520f;--gold-light:#d4b888;--gold-soft:#d4b888;--paper:#fafaf7;--paper-soft:#f4f1e8;--ink:#1d2330;--ink-muted:#6c7384;--ink-faded:#6c7384;--rule:rgba(200,168,75,.3);--success:#5a8033;--font-display:'Playfair Display',Georgia,serif;--font-mono:'IBM Plex Mono','Courier New',monospace;--font-sans:'IBM Plex Sans',-apple-system,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line-height:1.55;overflow-x:hidden}
@@ -296,19 +296,112 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
   </a>
 </section>
 
-<section style="background:var(--paper-soft);padding:78px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
-  <div style="max-width:780px;margin:0 auto;text-align:center">
-    <svg width="116" height="46" viewBox="0 0 116 46" style="display:block;margin:0 auto 24px;overflow:visible" aria-hidden="true">
-      <rect x="8" y="4" width="26" height="38" rx="6" fill="none" stroke="#c4a472" stroke-width="1.3" opacity="0.85"/>
-      <text x="21" y="27" text-anchor="middle" font-family="'Playfair Display',serif" font-style="italic" font-size="13" fill="#8b6914" opacity="0.9">Φ</text>
-      <rect x="82" y="4" width="26" height="38" rx="6" fill="none" stroke="#c4a472" stroke-width="1.3" opacity="0.55"/>
-      <text x="95" y="27" text-anchor="middle" font-family="'Playfair Display',serif" font-style="italic" font-size="13" fill="#8b6914" opacity="0.55">Φ</text>
-      <line x1="36" y1="23" x2="80" y2="23" stroke="#c4a472" stroke-width="1.1" stroke-dasharray="1.5 3" opacity="0.7"/>
-      <circle cx="58" cy="23" r="2.4" fill="#c4a472" opacity="0.9"/>
-    </svg>
-    <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:22px">01 · Le huis-clos <span style="color:var(--ink-muted);font-weight:500">— Φ en 5 secondes</span></div>
-    <p style="font-family:var(--font-display);font-size:clamp(1.25rem,2.7vw,1.75rem);font-weight:400;color:var(--navy);line-height:1.55;letter-spacing:-.005em">Φ met deux dispositifs légitimes en face-à-face — pour signer ou correspondre — et <em style="font-style:italic;color:var(--gold-deep)">personne d'autre n'entre dans la pièce</em> : ni cloud, ni Cloud Act, ni serveur de messagerie, ni serveur tout court, ni IA, ni ordinateur quantique. Le document ne sort jamais en clair ; la signature se calcule à l'intérieur de l'appareil. C'est la souveraineté ultime sur vos données — <em style="font-style:italic;color:var(--gold-deep)">la preuve vous appartient, à vie.</em></p>
-    <p style="font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-top:24px">Brevet <span style="font-family:var(--font-display);font-style:italic;text-transform:none;letter-spacing:0;font-size:1.05rem;color:var(--navy)">Inline-Offline</span><sup style="font-size:.55em;vertical-align:super;color:var(--gold-deep)">™</sup></p>
+<div class="section-divider"><div class="section-divider-line"></div></div>
+
+<section class="promesse" id="promesse">
+  <div class="promesse-inner">
+
+<!-- MANIFESTE (réintégré d'index 2) -->
+    <div style="text-align:center;max-width:740px;margin:0 auto 52px">
+      <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">En huis-clos</div>
+      <div style="font-family:var(--font-display);font-size:clamp(2.7rem,6.5vw,4.6rem);font-weight:600;color:var(--navy);line-height:1.08;letter-spacing:-.02em;margin-bottom:14px">Échangez. Signez. <em style="font-style:italic;color:var(--gold-deep)">Prouvez.</em></div>
+      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,1.9vw,1.2rem);color:var(--ink-muted);line-height:1.5">Aucun cloud. Aucun Cloud Act. Aucune autorité de certification.</p>
+    </div>
+
+    <!-- CE QUE G SIGNIFIE VRAIMENT -->
+    <div style="max-width:860px;margin:0 auto 52px;text-align:center">
+      <p style="font-family:var(--font-display);font-size:1.35rem;font-weight:500;color:var(--navy);line-height:1.55;margin-bottom:24px;letter-spacing:-.01em"><span style="display:block;font-size:clamp(1.5rem,3vw,2rem);line-height:1.2;margin-bottom:10px">G n'est pas un code SMS.</span><span style="display:block;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.22;margin:16px 0;letter-spacing:-.015em;font-weight:600">G est un acte probatoire complet, mathématiquement irrépudiable.</span><em style="color:var(--gold-deep)">Il dit que <strong style="color:var(--navy);font-weight:700;font-style:normal">vous</strong>, identifié, avez signé <strong style="color:var(--navy);font-weight:700;font-style:normal">ce document</strong>, sur <strong style="color:var(--navy);font-weight:700;font-style:normal">ce téléphone</strong>, à <strong style="color:var(--navy);font-weight:700;font-style:normal">cet instant précis</strong>.</em></p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;align-items:center">
+        <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid var(--rule);border-radius:2px;background:var(--paper-soft)">
+          <span style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Brevets déposés</span>
+          <span style="color:var(--rule)">·</span>
+          <span style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--ink-muted)">AION ASEMANTIX</span>
+        </div>
+        <a href="architecture-probatoire.html" style="display:inline-block;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border:1px solid var(--rule);padding:12px 22px;border-radius:2px">Architecture →</a>
+      </div>
+    </div>
+
+    <!-- FORMULE MONUMENTALE -->
+    <div class="formule-mono" style="background:var(--navy);margin:0 -48px 64px;padding:72px 48px;position:relative;overflow:hidden">
+      <!-- Φ fantôme -->
+      <div style="position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-style:italic;font-size:36rem;color:rgba(196,164,114,.03);font-weight:500;line-height:1;pointer-events:none;user-select:none">Φ</div>
+
+      <div style="max-width:1080px;margin:0 auto;position:relative;z-index:1">
+
+        <!-- Eyebrow -->
+        <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:28px;text-align:center">La preuve mathématique</div>
+
+        <!-- G monumental -->
+        <div style="text-align:center;margin-bottom:40px">
+          <span style="font-family:var(--font-display);font-style:italic;font-size:clamp(5rem,12vw,9rem);font-weight:600;color:var(--paper);line-height:.9;letter-spacing:-.04em">G</span>
+          <span style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:rgba(250,250,247,.4);margin:0 16px;vertical-align:middle">=</span>
+          <span style="font-family:var(--font-display);font-style:italic;font-size:clamp(5rem,12vw,9rem);font-weight:500;color:var(--gold);line-height:.9;letter-spacing:-.02em">Φ</span>
+          <span style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:rgba(250,250,247,.3);margin:0 8px;vertical-align:middle">(</span>
+          <span style="font-family:var(--font-mono);font-size:clamp(.8rem,2vw,1.3rem);color:rgba(250,250,247,.5);letter-spacing:.08em;vertical-align:middle">QUI SIGNE &thinsp;‖&thinsp; DOCUMENT &thinsp;‖&thinsp; SILICIUM &thinsp;‖&thinsp; INSTANT</span>
+          <span style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:rgba(250,250,247,.3);margin:0 8px;vertical-align:middle">)</span>
+        </div>
+
+        <!-- 4 cases -->
+        <div class="formule-cases" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(196,164,114,.15);margin-bottom:32px">
+          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
+            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">QUI SIGNE</div>
+            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Identité biométrique</div>
+            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(226,200,122,.85);letter-spacing:.08em">empreinte · paraphe · pièce d'identité</div>
+          </div>
+          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
+            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">DOCUMENT</div>
+            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Empreinte cryptographique</div>
+            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(226,200,122,.85);letter-spacing:.08em">SHA-3 · contenu · pages · titre</div>
+          </div>
+          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
+            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">SILICIUM</div>
+            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Enclave matérielle</div>
+            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(226,200,122,.85);letter-spacing:.08em">StrongBox · TrustZone · non extractible</div>
+          </div>
+          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
+            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">INSTANT</div>
+            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Horodatage irréversible</div>
+            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(226,200,122,.85);letter-spacing:.08em">τ · compteur monotone · anti-rollback</div>
+          </div>
+        </div>
+
+        <!-- Hash -->
+        <div style="text-align:center;margin-bottom:32px">
+          <span style="font-family:var(--font-mono);font-size:.6rem;letter-spacing:.18em;color:rgba(226,200,122,.72);text-transform:uppercase;margin-right:14px">hash</span>
+          <span style="font-family:var(--font-mono);font-size:.75rem;color:rgba(226,200,122,.88);letter-spacing:.06em;word-break:break-all">8f3a4c2b · 9d7e1f06 · a5cc8b2d · 4e7f9012 · a3b4c5d6 · e7f80991</span>
+        </div>
+
+        <!-- Marqueurs -->
+        <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap">
+          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(226,200,122,.9);font-weight:600">INFALSIFIABLE</span>
+          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(226,200,122,.9);font-weight:600">IRRÉVERSIBLE</span>
+          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(226,200,122,.9);font-weight:600">IRRÉFUTABLE</span>
+          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(226,200,122,.9);font-weight:600">SANS TIERS</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TITRE SECTION -->
+    <div style="max-width:860px;margin:0 auto 48px;text-align:center">
+      <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px">02 · La preuve</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:500;color:var(--navy);line-height:1.25;letter-spacing:-.015em">Φ fusionne quatre vérités en une preuve mathématique : <em style="font-style:italic;color:var(--gold-deep)">G</em>.</h2>
+      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-muted);line-height:1.6;max-width:720px;margin:18px auto 0">Inscrite en miroir sur le silicium de chaque partie — recalculable par tout expert ou juge, et rendant toute contestation unilatérale impossible.</p>
+    </div>
+
+    <!-- VOTRE MAIN SUFFIT -->
+    <div style="max-width:820px;margin:22px auto 48px;text-align:center">
+      <h3 style="font-family:var(--font-display);font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:600;color:var(--navy);line-height:1.2;letter-spacing:-.015em;margin-bottom:20px">Votre main suffit. <em style="font-style:italic;color:var(--gold-deep)">Aucune autorité requise.</em></h3>
+      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-muted);line-height:1.65;margin-bottom:18px">Un bon de commande signé de votre main fait foi — sans qu'aucune autorité de certification n'ait à l'attester. La signature manuscrite se suffit à elle-même : c'est le geste qui engage, pas un tiers.</p>
+      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-muted);line-height:1.65">Φ part de là, et va plus loin. Votre signature manuscrite n'est pas seulement capturée : elle est <em style="font-style:italic;color:var(--gold-deep)">fusionnée</em> à qui vous êtes, au document, à l'appareil et à l'instant, en une seule valeur mathématique — <em style="font-style:italic;color:var(--gold-deep)">G</em>. Unique parmi des milliards de combinaisons, infalsifiable, irreproductible. <em style="font-style:italic;color:var(--gold-deep)">C'est la révolution probatoire : une preuve qui se passe d'autorité parce qu'elle se recalcule.</em></p>
+    </div>
+
+    <!-- ENCADRÉ JOURNAL CHAÎNÉ -->
+    <div style="max-width:720px;margin:0 auto 64px;background:var(--paper-soft);border-left:3px solid var(--gold);border-radius:2px;padding:26px 32px;text-align:left">
+      <div style="font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:12px">Le journal chaîné</div>
+      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.25rem);color:var(--navy);line-height:1.55;margin:0">En plus de la signature manuscrite, un <em style="color:var(--gold-deep)">journal chaîné</em> tient par écrit, dans l'enclave de chaque dispositif, toutes les opérations enregistrées dans l'application — une boîte noire symétrique que chaque partie détient à l'identique.</p>
+    </div>
+
   </div>
 </section>
 
@@ -351,7 +444,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
 <div class="section-divider"><div class="section-divider-line"></div></div>
 
-<section class="promesse" id="promesse">
+<section class="promesse">
   <div class="promesse-inner">
 
 <div style="background:var(--paper);padding:0 48px 64px;text-align:center">
@@ -377,102 +470,9 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
       <a href="Une-IA-lit-une-attestation-Φ.html" style="display:inline-block;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border:1px solid var(--gold);padding:13px 28px;border-radius:2px">Une IA lit une attestation →</a>
     </div>
 
-    <!-- MANIFESTE (réintégré d'index 2) -->
-    <div style="text-align:center;max-width:740px;margin:0 auto 52px">
-      <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">En huis-clos</div>
-      <div style="font-family:var(--font-display);font-size:clamp(2.7rem,6.5vw,4.6rem);font-weight:600;color:var(--navy);line-height:1.08;letter-spacing:-.02em;margin-bottom:14px">Échangez. Signez. <em style="font-style:italic;color:var(--gold-deep)">Prouvez.</em></div>
-      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,1.9vw,1.2rem);color:var(--ink-muted);line-height:1.5">Aucun cloud. Aucun Cloud Act. Aucune autorité de certification.</p>
-    </div>
-
-    <!-- CE QUE G SIGNIFIE VRAIMENT -->
-    <div style="max-width:860px;margin:0 auto 52px;text-align:center">
-      <p style="font-family:var(--font-display);font-size:1.35rem;font-weight:500;color:var(--navy);line-height:1.55;margin-bottom:24px;letter-spacing:-.01em"><span style="display:block;font-size:clamp(1.5rem,3vw,2rem);line-height:1.2;margin-bottom:10px">G n'est pas un code SMS.</span><span style="display:block;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.22;margin:16px 0;letter-spacing:-.015em;font-weight:600">G est un acte probatoire complet, mathématiquement irrépudiable.</span><em style="color:var(--gold-deep)">Il dit que vous, identifié, avez signé ce document, sur ce téléphone, à cet instant précis.</em></p>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;align-items:center">
-        <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid var(--rule);border-radius:2px;background:var(--paper-soft)">
-          <span style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);font-weight:600">Brevets déposés</span>
-          <span style="color:var(--rule)">·</span>
-          <span style="font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--ink-muted)">AION ASEMANTIX</span>
-        </div>
-        <a href="architecture-probatoire.html" style="display:inline-block;font-family:var(--font-mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;border:1px solid var(--rule);padding:12px 22px;border-radius:2px">Architecture →</a>
-      </div>
-    </div>
-
-    <!-- FORMULE MONUMENTALE -->
-    <div class="formule-mono" style="background:var(--navy);margin:0 -48px 64px;padding:72px 48px;position:relative;overflow:hidden">
-      <!-- Φ fantôme -->
-      <div style="position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-style:italic;font-size:36rem;color:rgba(196,164,114,.03);font-weight:500;line-height:1;pointer-events:none;user-select:none">Φ</div>
-
-      <div style="max-width:1080px;margin:0 auto;position:relative;z-index:1">
-
-        <!-- Eyebrow -->
-        <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:28px;text-align:center">La preuve mathématique</div>
-
-        <!-- G monumental -->
-        <div style="text-align:center;margin-bottom:40px">
-          <span style="font-family:var(--font-display);font-style:italic;font-size:clamp(5rem,12vw,9rem);font-weight:600;color:var(--paper);line-height:.9;letter-spacing:-.04em">G</span>
-          <span style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:rgba(250,250,247,.4);margin:0 16px;vertical-align:middle">=</span>
-          <span style="font-family:var(--font-display);font-style:italic;font-size:clamp(5rem,12vw,9rem);font-weight:500;color:var(--gold);line-height:.9;letter-spacing:-.02em">Φ</span>
-          <span style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:rgba(250,250,247,.3);margin:0 8px;vertical-align:middle">(</span>
-          <span style="font-family:var(--font-mono);font-size:clamp(.8rem,2vw,1.3rem);color:rgba(250,250,247,.5);letter-spacing:.08em;vertical-align:middle">QUI SIGNE &thinsp;‖&thinsp; DOCUMENT &thinsp;‖&thinsp; SILICIUM &thinsp;‖&thinsp; INSTANT</span>
-          <span style="font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:rgba(250,250,247,.3);margin:0 8px;vertical-align:middle">)</span>
-        </div>
-
-        <!-- 4 cases -->
-        <div class="formule-cases" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(196,164,114,.15);margin-bottom:32px">
-          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">QUI SIGNE</div>
-            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Identité biométrique</div>
-            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(196,164,114,.45);letter-spacing:.08em">empreinte · paraphe · pièce d'identité</div>
-          </div>
-          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">DOCUMENT</div>
-            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Empreinte cryptographique</div>
-            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(196,164,114,.45);letter-spacing:.08em">SHA-3 · contenu · pages · titre</div>
-          </div>
-          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">SILICIUM</div>
-            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Enclave matérielle</div>
-            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(196,164,114,.45);letter-spacing:.08em">StrongBox · TrustZone · non extractible</div>
-          </div>
-          <div style="background:#0e1c35;padding:24px 22px;text-align:center">
-            <div style="font-family:var(--font-mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:10px">INSTANT</div>
-            <div style="font-family:var(--font-display);font-style:italic;font-size:.95rem;color:rgba(250,250,247,.75);line-height:1.55;margin-bottom:8px">Horodatage irréversible</div>
-            <div style="font-family:var(--font-mono);font-size:.62rem;color:rgba(196,164,114,.45);letter-spacing:.08em">τ · compteur monotone · anti-rollback</div>
-          </div>
-        </div>
-
-        <!-- Hash -->
-        <div style="text-align:center;margin-bottom:32px">
-          <span style="font-family:var(--font-mono);font-size:.6rem;letter-spacing:.18em;color:rgba(196,164,114,.35);text-transform:uppercase;margin-right:14px">hash</span>
-          <span style="font-family:var(--font-mono);font-size:.75rem;color:rgba(196,164,114,.55);letter-spacing:.06em;word-break:break-all">8f3a4c2b · 9d7e1f06 · a5cc8b2d · 4e7f9012 · a3b4c5d6 · e7f80991</span>
-        </div>
-
-        <!-- Marqueurs -->
-        <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap">
-          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(196,164,114,.5);font-weight:600">INFALSIFIABLE</span>
-          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(196,164,114,.5);font-weight:600">IRRÉVERSIBLE</span>
-          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(196,164,114,.5);font-weight:600">IRRÉFUTABLE</span>
-          <span style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(196,164,114,.5);font-weight:600">SANS TIERS</span>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- TITRE SECTION -->
-    <div style="max-width:860px;margin:0 auto 48px;text-align:center">
-      <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px">02 · La preuve</div>
-      <h2 style="font-family:var(--font-display);font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:500;color:var(--navy);line-height:1.25;letter-spacing:-.015em">Φ fusionne quatre vérités en une preuve mathématique : <em style="font-style:italic;color:var(--gold-deep)">G</em>.</h2>
-      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-muted);line-height:1.6;max-width:720px;margin:18px auto 0">Inscrite en miroir sur le silicium de chaque partie — recalculable par tout expert ou juge, et rendant toute contestation unilatérale impossible.</p>
-    </div>
-
-    <!-- DEPUIS 30 ANS -->
-    <div style="max-width:760px;margin:22px auto 64px;text-align:center">
-      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-muted);line-height:1.65;margin-bottom:18px">Depuis trente ans, la signature électronique délègue la confiance à un opérateur tiers. <em style="font-style:italic;color:var(--gold-deep)">Φ met fin à ce paradigme.</em></p>
-      <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,2vw,1.3rem);color:var(--ink-muted);line-height:1.65">Le tiers de confiance n'est pas supprimé — <em style="font-style:italic;color:var(--gold-deep)">il est internalisé.</em> Un journal chaîné dans l'enclave de chaque dispositif tient lieu de tiers. Sa symétrie probatoire en fait une <em style="font-style:italic;color:var(--gold-deep)">ligature mathématique.</em></p>
-    </div>
-
   </div>
 </section>
+
 <!-- BANDEAU INLINE-OFFLINE -->
 <div style="background:#08111f;padding:28px 48px;text-align:center;border-top:1px solid rgba(196,164,114,.15);border-bottom:1px solid rgba(196,164,114,.15)">
   <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:1.4rem;font-weight:500;color:#c4a472;letter-spacing:.02em">Inline-Offline™ — </span><span style="font-family:'IBM Plex Mono',monospace;font-size:1.1rem;font-weight:600;color:#fff;letter-spacing:.22em;text-transform:uppercase">Never online.</span>
@@ -647,7 +647,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
       <article class="eco-card"><div class="eco-card-name"><em class="phi-i">Φ</em> Desktop</div><div class="eco-card-rule"></div><div class="eco-card-desc">Mac &amp; Windows. La même signature post-quantique et la même confidentialité absolue — sur votre ordinateur de bureau.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card"><div class="eco-card-name">Φ PACT</div><div class="eco-card-rule"></div><div class="eco-card-desc">Cosignatures et multisignatures probatoires pour AG, conseils, accords multipartites.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card"><div class="eco-card-name">Φ Ticketing</div><div class="eco-card-rule"></div><div class="eco-card-desc">Authenticité d'un QR code par dispositif fusionné. Validation anti-fraude instantanée — billets de transport, événements — sans réseau.</div><div class="eco-card-status">À VENIR</div></article>
-      <article class="eco-card" onclick="window.location='connect.html'" style="position:relative;cursor:pointer"><div style="position:absolute;top:12px;right:12px;font-family:var(--font-mono);font-size:.55rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:var(--navy-deep);padding:3px 10px;border-radius:2px">ÉTÉ 2026</div><div class="eco-card-name"><em class="phi-i">Φ</em> Connect</div><div class="eco-card-rule"></div><div class="eco-card-desc">Signature probatoire embarquée dans un <em>PDF universel</em>. Trente secondes sur le téléphone du signataire.</div><div class="eco-card-status">À VENIR</div></article>
+      <article class="eco-card" onclick="window.location='connect.html'" style="position:relative;cursor:pointer"><div style="position:absolute;top:12px;right:12px;font-family:var(--font-mono);font-size:.55rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:var(--navy-deep);padding:3px 10px;border-radius:2px">ÉTÉ 2026</div><div class="eco-card-name"><em class="phi-i">Φ</em> Connect</div><div class="eco-card-rule"></div><div class="eco-card-desc">Votre signature, <em>à la main</em>, avec journal chaîné — mais <em>sans la formule mathématique G</em>. La preuve du quotidien, en trente secondes.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card"><div class="eco-card-name">Φ Blind</div><div class="eco-card-rule"></div><div class="eco-card-desc">La messagerie qui rend <em>tout internet aveugle.</em> Vos données traversent le réseau sous forme de bruit cryptographique — aucun opérateur, aucune IA, aucun État ne voit le signal.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card" style="position:relative"><div style="position:absolute;top:12px;right:12px;font-family:var(--font-mono);font-size:.55rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:var(--navy-deep);padding:3px 10px;border-radius:2px">GRATUIT</div><div class="eco-card-name"><em class="phi-i">Φ</em> Chut!</div><div class="eco-card-rule"></div><div class="eco-card-desc">La messagerie grand public. <em>Gratuite.</em> Vos messages ne sont pas chiffrés — ils sont du bruit. Et même le bruit s'efface.</div><div class="eco-card-status">À VENIR</div></article>
       <article class="eco-card" onclick="window.location='phi-sovereign.html'" style="cursor:pointer"><div class="eco-card-name"><em class="phi-i">Φ</em> Sovereign</div><div class="eco-card-rule"></div><div class="eco-card-desc">Identité physique irréfutable. La clé naît du silicium — aucun fabricant dans la chaîne. Pour les organisations qui n'acceptent aucun intermédiaire.</div><div class="eco-card-status">À VENIR</div></article>
