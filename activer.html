@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>Activer Φ — Lien d'activation · PHI</title>
+<meta name="description" content="Activez votre abonnement Φ. Si l'application est installée, l'activation s'ouvre automatiquement ; sinon, installez Φ sur Google Play.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%236f520f" text-anchor="middle" x="50">Φ</text></svg>'>
+
+<!-- ════════════════════════════════════════════════════════════════
+     Page de SECOURS de l'activation.
+     · Si l'app est installée, l'App Link l'ouvre AVANT d'arriver ici.
+     · Sinon, cette page tente le scheme custom, puis propose le Play Store.
+     La VRAIE activation (lecture clé → LemonSqueezy → déblocage) est
+     faite par l'APPLICATION (instance Compose), pas par cette page.
+     À ÉDITER : URL Play Store si le package change.
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=app.laligature.phi";
+  function getCle() {
+    var p = new URLSearchParams(window.location.search);
+    return (p.get("cle") || p.get("key") || "").trim();
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var cle = getCle();
+    document.getElementById("btn-play").href = PLAY_STORE_URL;
+    if (cle) {
+      document.getElementById("keyval").textContent = cle;
+      document.getElementById("keybox").style.display = "block";
+      var openBtn = document.getElementById("btn-open");
+      openBtn.style.display = "inline-block";
+      openBtn.addEventListener("click", function () {
+        window.location.href = "phi://activer?cle=" + encodeURIComponent(cle);
+      });
+      setTimeout(function () {
+        window.location.href = "phi://activer?cle=" + encodeURIComponent(cle);
+      }, 400);
+    }
+    document.getElementById("btn-copy").addEventListener("click", function () {
+      if (!cle) return;
+      navigator.clipboard.writeText(cle).then(function () {
+        var b = document.getElementById("btn-copy");
+        b.textContent = "Clé copiée ✓";
+        setTimeout(function(){ b.textContent = "Copier la clé"; }, 2000);
+      });
+    });
+  });
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e1c35;--navy-deep:#08111f;
+    --gold:#c4a472;--gold-b:#c8a84b;--gold-light:#e2c87a;--gold-eyebrow:#d4b888;
+    --ivory:#e8dcc8;--paper:#fafaf7;
+    --muted:#a9b0bd;--muted-2:#6b7a8f;
+    --font-d:'Playfair Display',Georgia,serif;
+    --font-g:'EB Garamond',Georgia,serif;
+    --font-m:'IBM Plex Mono',monospace;
+    --font-s:'IBM Plex Sans',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:var(--font-s);
+    background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:var(--paper);min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:40px 24px;line-height:1.6;
+  }
+  .card{
+    max-width:540px;width:100%;text-align:center;position:relative;
+    padding:60px 44px;
+    background:rgba(196,164,114,.04);
+    border:1px solid rgba(196,164,114,.45);
+    border-radius:28px;
+  }
+  .cv{position:absolute;width:18px;height:18px;border-color:rgba(196,164,114,.6)}
+  .cv.tl{top:16px;left:16px;border-top:1.5px solid;border-left:1.5px solid}
+  .cv.tr{top:16px;right:16px;border-top:1.5px solid;border-right:1.5px solid}
+  .cv.bl{bottom:16px;left:16px;border-bottom:1.5px solid;border-left:1.5px solid}
+  .cv.br{bottom:16px;right:16px;border-bottom:1.5px solid;border-right:1.5px solid}
+
+  .phi{font-family:var(--font-d);font-style:italic;font-size:4rem;color:var(--ivory);line-height:1;margin-bottom:10px}
+  .eyebrow{font-family:var(--font-m);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-eyebrow);margin-bottom:28px;font-weight:500}
+  h1{font-family:var(--font-d);font-style:italic;font-weight:500;font-size:1.75rem;line-height:1.3;color:var(--ivory);margin-bottom:16px}
+  em.phi-in{font-family:var(--font-g);font-style:italic;color:var(--ivory);font-weight:500;font-size:1.08em}
+  p.lead{font-family:var(--font-d);font-style:italic;font-size:1.04rem;color:rgba(232,220,200,.72);margin-bottom:34px}
+
+  .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:6px}
+  .btn{
+    display:inline-block;padding:16px 30px;border-radius:4px;
+    font-family:var(--font-m);font-weight:600;font-size:.8rem;
+    letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+    transition:background .2s,border-color .2s,color .2s;cursor:pointer;border:none;
+  }
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-light)}
+  .btn-outline{background:transparent;color:var(--ivory);border:1px solid rgba(196,164,114,.5)}
+  .btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light)}
+
+  #keybox{display:none;margin:26px auto 4px;padding:18px 20px;background:rgba(196,164,114,.06);border:1px dashed rgba(196,164,114,.45);border-radius:14px}
+  #keybox .lbl{font-family:var(--font-m);font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-eyebrow);margin-bottom:8px}
+  #keyval{font-family:var(--font-m);font-size:.95rem;color:var(--ivory);word-break:break-all;letter-spacing:.05em}
+  #btn-copy{margin-top:12px;background:transparent;color:rgba(196,164,114,.9);border:1px solid rgba(196,164,114,.45);padding:7px 16px;border-radius:3px;font-family:var(--font-m);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+  #btn-copy:hover{color:var(--gold-light);border-color:var(--gold-light)}
+
+  .sep{width:48px;height:1px;background:rgba(196,164,114,.4);margin:28px auto}
+  .note{font-family:var(--font-m);font-size:.72rem;line-height:1.9;color:rgba(232,220,200,.5);font-weight:400}
+  .note strong{color:var(--gold-light);font-weight:500}
+  .note em{font-family:var(--font-g);font-style:italic;color:var(--ivory)}
+  .back{display:inline-block;margin-top:32px;font-family:var(--font-m);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(196,164,114,.6);text-decoration:none}
+  .back:hover{color:var(--gold-light)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="cv tl"></span><span class="cv tr"></span><span class="cv bl"></span><span class="cv br"></span>
+
+    <div class="phi">Φ</div>
+    <div class="eyebrow">Activation</div>
+    <h1>Activons votre abonnement <em class="phi-in">Φ</em>.</h1>
+    <p class="lead">Si l'application est installée, elle s'ouvre toute seule. Sinon, installez Φ&#160;: votre clé sera reprise automatiquement.</p>
+
+    <div class="btns">
+      <button id="btn-open" class="btn btn-gold" style="display:none">Ouvrir Φ</button>
+      <a id="btn-play" class="btn btn-gold" href="https://play.google.com/store/apps/details?id=app.laligature.phi" rel="noopener">Installer Φ sur Google&nbsp;Play</a>
+    </div>
+
+    <div id="keybox">
+      <div class="lbl">Votre clé d'activation</div>
+      <div id="keyval">—</div>
+      <button id="btn-copy">Copier la clé</button>
+    </div>
+
+    <div class="sep"></div>
+    <p class="note">
+      Après l'installation, rouvrez ce lien&#160;: <strong>Φ s'activera automatiquement</strong>.<br>
+      Au besoin, ouvrez l'app puis collez la clé ci-dessus dans «&#160;Activer un abonnement&#160;».
+    </p>
+    <a class="back" href="index.html">← Retour au site</a>
+  </div>
+</body>
+</html>
