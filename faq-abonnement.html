@@ -99,7 +99,7 @@
   :root {
     --navy: #0e1c35;
     --navy-deep: #08111f;
-    --gold: #c8a84b;
+    --gold: #c4a472;
     --gold-deep: #6f520f;
     --gold-light: #e2c87a;
     --paper: #fafaf7;
@@ -107,7 +107,7 @@
     --ink: #1d2330;
     --ink-muted: #6c7384;
     --ink-faded: #9ca0aa;
-    --rule: rgba(200, 168, 75, 0.3);
+    --rule: rgba(196,164,114, 0.3);
     --font-display: 'Playfair Display', Georgia, serif;
     --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
     --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
@@ -137,7 +137,7 @@
   /* FAQ */
   .faq { max-width: 760px; margin: 0 auto; padding: 80px 40px 40px; }
   details { border: 1px solid var(--rule); border-radius: 4px; background: var(--paper); margin-bottom: 16px; overflow: hidden; transition: border-color 0.2s; }
-  details[open] { border-color: rgba(200,168,75,0.55); background: #fff; }
+  details[open] { border-color: rgba(196,164,114,0.55); background: #fff; }
   summary { list-style: none; cursor: pointer; padding: 24px 56px 24px 26px; position: relative; font-family: var(--font-display); font-size: 1.18rem; font-weight: 500; color: var(--navy); line-height: 1.4; }
   summary::-webkit-details-marker { display: none; }
   summary em { font-style: italic; }
@@ -149,10 +149,10 @@
 
   /* ENCART clé */
   .encart { max-width: 760px; margin: 40px auto 0; padding: 40px 36px; background: var(--navy); border-radius: 4px; text-align: center; position: relative; }
-  .encart::before, .encart::after { content: ""; position: absolute; width: 18px; height: 18px; border-color: rgba(200,168,75,0.5); }
+  .encart::before, .encart::after { content: ""; position: absolute; width: 18px; height: 18px; border-color: rgba(196,164,114,0.5); }
   .encart::before { top: 14px; left: 14px; border-top: 1.5px solid; border-left: 1.5px solid; }
   .encart::after { bottom: 14px; right: 14px; border-bottom: 1.5px solid; border-right: 1.5px solid; }
-  .encart-eyebrow { font-family: var(--font-mono); font-size: 0.66rem; color: rgba(200,168,75,0.8); letter-spacing: 0.32em; text-transform: uppercase; margin-bottom: 16px; font-weight: 600; }
+  .encart-eyebrow { font-family: var(--font-mono); font-size: 0.66rem; color: rgba(196,164,114,0.8); letter-spacing: 0.32em; text-transform: uppercase; margin-bottom: 16px; font-weight: 600; }
   .encart p { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--paper); line-height: 1.6; margin: 0; }
   .encart p strong { color: var(--gold-light); font-weight: 600; }
 
@@ -167,14 +167,14 @@
   /* FOOTER */
   .footer { background: var(--navy-deep); color: rgba(255,255,255,.75); padding: 80px 48px 40px; }
   .footer-inner { max-width: 1100px; margin: 0 auto; }
-  .footer-brand { text-align: center; margin-bottom: 48px; padding-bottom: 36px; border-bottom: 1px solid rgba(200,168,75,.2); }
+  .footer-brand { text-align: center; margin-bottom: 48px; padding-bottom: 36px; border-bottom: 1px solid rgba(196,164,114,.2); }
   .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 4rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 16px; }
   .footer-line { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 16px; }
   .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--gold-light); }
   .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 0.98rem; color: rgba(226,200,122,.8); }
   .footer-meta { text-align: center; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .18em; color: rgba(255,255,255,.4); line-height: 1.9; }
   .footer-meta strong { color: var(--gold-light); font-weight: 500; }
-  .footer-meta a { color: rgba(200,168,75,.6); text-decoration: none; }
+  .footer-meta a { color: rgba(196,164,114,.6); text-decoration: none; }
   .footer-meta a:hover { color: var(--gold-light); }
   @media (max-width: 720px) { .footer { padding: 60px 24px 30px; } .footer-phi { font-size: 3.2rem; } .page-title { font-size: 2.1rem; } .faq { padding: 60px 20px 30px; } }
 </style>
@@ -260,64 +260,11 @@
       <div class="footer-phi">Φ</div>
       <div class="footer-line"></div>
       <div class="footer-baseline-1">La signature électronique</div>
-      <div class="footer-baseline-2">Post-Quantique</div>
-      <div class="footer-baseline-2">sans tiers de confiance</div>
-    </div>
-    <div class="footer-nav">
-      <div class="footer-col">
-        <h4>Comprendre</h4>
-        <ul>
-          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
-          <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
-          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
-          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
-          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
-          <li><a href="asemantique.html">Asémanticité</a></li>
-          <li><a href="intimite-numerique.html">L'intimité numérique</a></li>
-          <li><a href="conformite.html">Conformité</a></li>
-          <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
-          <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Professions</h4>
-        <ul>
-          <li><a href="professions.html">Toutes les professions</a></li>
-          <li><a href="professions/justice.html">Justice</a></li>
-          <li><a href="professions/medecins.html">Santé</a></li>
-          <li><a href="professions/banques.html">Banques &amp; finance</a></li>
-          <li><a href="professions/mutuelles-assurances.html">Mutuelles &amp; assurances</a></li>
-          <li><a href="professions/rh-compliance.html">RH &amp; compliance</a></li>
-          <li><a href="professions/journalistes.html">Journalistes</a></li>
-          <li><a href="professions/urssaf.html">URSSAF</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Accéder</h4>
-        <ul>
-          <li><a href="tarifications.html">Accéder à Φ</a></li>
-          <li><a href="faq-abonnement.html">Abonnement &amp; FAQ</a></li>
-          <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
-          <li><span style="opacity:.45">Φ Desktop · à venir</span></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Société</h4>
-        <ul>
-          <li><a href="a-propos/A-Propos.html">À propos</a></li>
-          <li><a href="a-propos/portefeuille-brevets.html">Portefeuille de brevets</a></li>
-          <li><a href="Pourquoi-Φ.html" class="footer-link-special">Pourquoi Φ ?</a></li>
-          <li><a href="presse-rp.html">Espace presse</a></li>
-          <li><a href="vos-suggestions.html">Vos suggestions</a></li>
-          <li><a href="Assistance.html">Assistance</a></li>
-          <li><a href="contact.html">Demander une démonstration</a></li>
-          <li><a href="contact.html">Nous contacter</a></li>
-        </ul>
-      </div>
+      <div class="footer-baseline-2">Post-Quantique · sans tiers de confiance</div>
     </div>
     <div class="footer-meta">
-      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
-      Procédés protégés · © 2026 — Tous droits réservés
+      <strong>PHI SAS</strong> · 33 rue du Frère Benoît, 69600 Oullins-Pierre-Bénite · <a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a><br>
+      © 2026 — Tous droits réservés
     </div>
   </div>
 </footer>
