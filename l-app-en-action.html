@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>Φ en action — De l'identité à la preuve, écran par écran | PHI</title>
+<meta name="description" content="Découvrez Φ en action : le parcours complet, écran par écran, de la création d'identité jusqu'à la preuve constituée. Signature électronique post-quantique, en huis-clos, sans tiers de confiance.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://phi-signature.fr/l-app-en-action.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Φ en action — De l'identité à la preuve, écran par écran">
+<meta property="og:description" content="Le parcours complet de Φ, écran par écran : identité, envoi, signature, preuve constituée.">
+<meta property="og:site_name" content="Φ — PHI">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e1c35;--navy-deep:#08111f;--gold:#c4a472;--gold-deep:#6f520f;--gold-light:#d4b888;--ivory:#e8dcc8;--paper:#fafaf7;--paper-soft:#f4f1e8;--ink:#1d2330;--ink-muted:#6c7384;--rule:rgba(196,164,114,.3);--success:#5a8033;--font-display:'Playfair Display',Georgia,serif;--font-mono:'IBM Plex Mono',monospace;--font-sans:'IBM Plex Sans',-apple-system,sans-serif;--font-eb:'EB Garamond',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line-height:1.55;overflow-x:hidden}
 
+/* bandeau retour */
+.topbar{background:var(--navy);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(196,164,114,.3)}
+.topbar a.back{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);text-decoration:none;font-weight:500}
+.topbar a.back:hover{color:var(--paper)}
+.topbar .brand{font-family:var(--font-eb);font-style:italic;font-size:1.4rem;color:var(--gold-light)}
+.topbar a.access{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);background:var(--gold);text-decoration:none;font-weight:600;padding:9px 18px;border-radius:2px}
+
+/* en-tête */
+.head{padding:84px 32px 56px;text-align:center;background:var(--paper)}
+.head .eyebrow{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px}
+.head h1{font-family:var(--font-display);font-weight:500;color:var(--navy);font-size:clamp(2rem,5vw,3.2rem);line-height:1.14;letter-spacing:-.018em;margin-bottom:22px}
+.head h1 em{font-style:italic;color:var(--gold-deep)}
+.head p{font-family:var(--font-eb);font-style:italic;font-size:1.18rem;color:var(--ink-muted);max-width:640px;margin:0 auto;line-height:1.6}
+
+/* écrin du parcours */
+.parcours-frame{background:var(--paper);padding:0;overflow:hidden;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.parcours-frame iframe{display:block;width:100%;height:100vh;min-height:640px;border:0;margin:0}
+
+/* CTAs bas */
+.foot-ctas{padding:72px 32px 88px;text-align:center;background:var(--paper-soft)}
+.foot-ctas h2{font-family:var(--font-display);font-weight:500;color:var(--navy);font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.2;margin-bottom:14px}
+.foot-ctas h2 em{font-style:italic;color:var(--gold-deep)}
+.foot-ctas p{font-family:var(--font-eb);font-style:italic;color:var(--ink-muted);font-size:1.05rem;margin-bottom:36px}
+.foot-ctas .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--navy);color:var(--paper);text-decoration:none;padding:15px 30px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s}
+.btn-primary:hover{background:var(--navy-deep)}
+.btn-ghost{background:transparent;color:var(--gold-deep);text-decoration:none;padding:14px 28px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border:1.5px solid var(--gold);border-radius:2px;transition:all .2s}
+.btn-ghost:hover{background:var(--gold);color:var(--paper)}
+
+.mini-footer{background:var(--navy-deep);color:rgba(255,255,255,.5);padding:36px 32px;text-align:center;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;line-height:1.8}
+.mini-footer a{color:var(--gold-light);text-decoration:none}
+.mini-footer strong{color:var(--gold-light);font-weight:500}
+@media(max-width:640px){.head{padding:60px 24px 44px}.topbar{padding:12px 18px}.topbar .brand{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="back">← Accueil</a>
+  <span class="brand">Φ</span>
+  <a href="tarifications.html" class="access">Accéder à Φ</a>
+</div>
+
+<div class="head">
+  <div class="eyebrow">Φ en action</div>
+  <h1>De votre identité <em>à la preuve.</em></h1>
+  <p>Le parcours complet, écran par écran — de la création de votre identité jusqu'à la preuve constituée, scellée dans l'enclave. Rien n'est simulé : c'est l'app.</p>
+</div>
+
+<!-- ════ LE PARCOURS (enveloppe le fichier phi-parcours.html déjà à la racine) ════ -->
+<div class="parcours-frame">
+  <iframe src="phi-parcours.html" title="Φ en action — De l'identité à la preuve constituée, écran par écran" loading="lazy" scrolling="no"></iframe>
+</div>
+
+<div class="foot-ctas">
+  <h2>Prêt à <em>essayer ?</em></h2>
+  <p>La réception et la vérification sont gratuites, à vie. L'abonnement commence quand vous envoyez.</p>
+  <div class="row">
+    <a href="tarifications.html" class="btn-primary">Accéder à Φ →</a>
+    <a href="la-preuve-en-clair.html" class="btn-ghost">Comprendre la preuve →</a>
+  </div>
+</div>
+
+<div class="mini-footer">
+  <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · <a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a><br>
+  Procédés protégés · © 2026 — Tous droits réservés
+</div>
+
+</body>
+</html>
