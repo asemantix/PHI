@@ -39,11 +39,11 @@
   --ivory-d:  #f2ede3;
   --navy:     #0e1c35;
   --navy-d:   #08111f;
-  --gold:     #c8a84b;
+  --gold:     #c4a472;
   --gold-l:   #e2c87a;
   --gold-d:   #6f520f;
-  --gold-r:   rgba(200,168,75,.25);
-  --gold-f:   rgba(200,168,75,.07);
+  --gold-r:   rgba(196,164,114,.25);
+  --gold-f:   rgba(196,164,114,.07);
   --ink:      #1a2435;
   --muted:    #4a5a6e;
   --faded:    #8a96a8;
@@ -121,7 +121,7 @@ body {
   content: '';
   position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
   width: 800px; height: 800px;
-  background: radial-gradient(ellipse at center, rgba(200,168,75,.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(196,164,114,.06) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-eyebrow {
@@ -465,12 +465,12 @@ body {
 }
 .cta-name {
   font-family: var(--fm); font-size: 12px; font-weight: 600;
-  letter-spacing: .3em; color: rgba(200,168,75,.6); text-transform: uppercase;
+  letter-spacing: .3em; color: rgba(196,164,114,.6); text-transform: uppercase;
   margin-bottom: 24px;
 }
 .cta-title {
   font-family: var(--fd); font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 500; color: var(--ivory); line-height: 1.25; margin-bottom: 14px;
+  font-weight: 500; color: #e8dcc8; line-height: 1.25; margin-bottom: 14px;
 }
 .cta-title em { font-style: italic; color: var(--gold-l); }
 .cta-sub {
@@ -497,7 +497,7 @@ body {
 /* ── FOOTER (4 colonnes — charte commune) ── */
 .footer { background: var(--navy-d); color: rgba(255,255,255,.75); padding: 80px 48px 40px; }
 .footer-inner { max-width: 1100px; margin: 0 auto; }
-.footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(200,168,75,.2); }
+.footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(196,164,114,.2); }
 .footer-phi { font-family: var(--fd); font-style: italic; font-size: 4.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 18px; }
 .footer-line { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 18px; }
 .footer-baseline-1 { font-family: var(--fd); font-style: italic; font-size: 1.2rem; color: var(--gold-l); margin-bottom: 4px; }
@@ -507,9 +507,9 @@ body {
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-col a { font-family: var(--fd); font-style: italic; font-size: 1rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
 .footer-col a:hover { color: var(--gold-l); }
-.footer-meta { border-top: 1px solid rgba(200,168,75,.15); padding-top: 28px; text-align: center; font-family: var(--fm); font-size: .66rem; letter-spacing: .18em; color: rgba(255,255,255,.4); line-height: 1.8; }
+.footer-meta { border-top: 1px solid rgba(196,164,114,.15); padding-top: 28px; text-align: center; font-family: var(--fm); font-size: .66rem; letter-spacing: .18em; color: rgba(255,255,255,.4); line-height: 1.8; }
 .footer-meta strong { color: var(--gold-l); font-weight: 500; }
-.footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
+.footer-link-special{color:rgba(196,164,114,.65)!important;border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
 .footer-link-special:hover{color:var(--gold-l)!important;border-color:var(--gold)!important}
 
 /* ── RESPONSIVE ── */
@@ -564,7 +564,7 @@ body {
   <h1 class="hero-title">La signature <em>en 30 secondes.</em><br>La preuve, à vie.</h1>
   <p class="hero-lede">Signez, transmettez, archivez. Chaque acte est horodaté, traçable, exportable. Sans serveur entre vous et votre destinataire. Post-quantique de bout en bout.</p>
   <div class="hero-ctas">
-    <a href="https://play.google.com/store/apps/details?id=app.laligature" class="btn-primary" target="_blank" rel="noopener">Télécharger — Android</a>
+    <span class="btn-primary" style="opacity:.5;cursor:default;pointer-events:none">Bientôt disponible</span>
     <a href="#comment" class="btn-outline">Comment ça marche</a>
   </div>
   <div class="hero-note">Packs de <span>10 · 50 · 200</span> signatures · Sans expiration · iOS bientôt</div>
@@ -804,7 +804,7 @@ body {
   <h2 class="cta-title">Post-quantique.<br><em>En 30 secondes.</em></h2>
   <p class="cta-sub">La signature qui protège vos actes aujourd'hui contre les menaces de demain.</p>
   <div class="cta-btns">
-    <a href="https://play.google.com/store/apps/details?id=app.laligature" class="btn-gold" target="_blank" rel="noopener">Télécharger — Android</a>
+    <span class="btn-gold" style="opacity:.5;cursor:default;pointer-events:none">Bientôt disponible</span>
     <a href="index.html" class="btn-ghost">Découvrir Φ Probatoire</a>
   </div>
 </section>
