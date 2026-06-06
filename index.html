@@ -297,11 +297,26 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
   <a href="tarifications.html" class="top-cta">Accéder à <span class="phi-cta">Φ</span></a>
 </div>
 
-<!-- ════════ HERO ANIMÉ — DEUX TÉLÉPHONES (Vous signez, de votre main) ════════ -->
-<section class="hero">
+<!-- ════════ HERO STATIQUE Φ (premier — porteur du H1 SEO) ════════ -->
+<section class="hero-static" style="min-height:100vh;position:relative">
+  <div class="hero-phi">Φ</div>
+  <div class="hero-line"></div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:.82rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:32px;text-align:center">Inline-Offline<sup style="font-size:.5em;vertical-align:super;letter-spacing:0">™</sup> · Never Online</div>
+  <h1 class="hero-subtitle">
+    <span class="line" style="font-size:1.7rem">La signature électronique autoportée.</span>
+    <span class="line line-pq">Mathématiquement calculée, consignée symétriquement, elle fait foi.</span>
+  </h1>
+  <div style="margin-top:30px;display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border:1px solid var(--gold);border-radius:2px;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600"><span style="width:7px;height:7px;border-radius:50%;background:var(--success);display:inline-block"></span>Φ Signature · disponible le 15 juin sur Android</div>
+  <a href="#demo" class="hero-cue" aria-label="Voir l'app en action">
+    <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 4 L12 14 L22 4" fill="none" stroke="#6f520f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<!-- ════════ HERO ANIMÉ — DEUX TÉLÉPHONES ════════ -->
+<section class="hero" id="demo" style="min-height:auto;padding-top:96px">
   <div class="hero-eyebrow">Inline-Offline<sup>™</sup> · Never Online · Post-Quantique</div>
-  <h1 class="hero-h1">Vous signez, <em>de votre main.</em><br>Mathématiquement prouvée, elle fait foi.</h1>
-  <p class="hero-sub">Sans serveur. Sans tiers de confiance. Sans autorité de certification.</p>
+  <h2 class="hero-h1">Une application sans serveur. Deux téléphones. <em>Une preuve symétrique.</em></h2>
+  <p class="hero-sub">Aucun serveur. Aucun tiers de confiance. Aucune autorité de certification.</p>
 
   <div class="stage">
     <div class="stage-ghost">Φ</div>
@@ -356,21 +371,13 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
     </svg>
   </div>
 
-  <a href="#promesse" class="hero-cue" aria-label="Découvrir">
+  <div style="margin-top:36px">
+    <a href="l-app-en-action.html" style="display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:var(--ivory);text-decoration:none;padding:15px 32px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s" onmouseover="this.style.background='#16284a'" onmouseout="this.style.background='var(--navy)'">Voir l'app en action <span style="color:var(--gold-light);font-size:1.1em">→</span></a>
+  </div>
+
+  <a href="#promesse" class="hero-cue" aria-label="Découvrir" style="position:static;margin-top:28px;transform:none;animation:none">
     <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 4 L12 14 L22 4" fill="none" stroke="#6f520f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
-</section>
-
-<!-- ════════ HERO STATIQUE Φ (respiration) ════════ -->
-<section class="hero-static">
-  <div class="hero-phi">Φ</div>
-  <div class="hero-line"></div>
-  <div style="font-family:'IBM Plex Mono',monospace;font-size:.82rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:32px;text-align:center">Inline-Offline<sup style="font-size:.5em;vertical-align:super;letter-spacing:0">™</sup> · Never Online</div>
-  <h1 class="hero-subtitle">
-    <span class="line" style="font-size:1.7rem">La signature électronique autoportée.</span>
-    <span class="line line-pq">Mathématiquement calculée, consignée symétriquement, elle fait foi.</span>
-  </h1>
-  <div style="margin-top:30px;display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border:1px solid var(--gold);border-radius:2px;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600"><span style="width:7px;height:7px;border-radius:50%;background:var(--success);display:inline-block"></span>Φ Signature · disponible le 15 juin sur Android</div>
 </section>
 
 <div class="section-divider"><div class="section-divider-line"></div></div>
@@ -653,7 +660,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 <section class="canal" id="canal">
   <div class="canal-inner">
     <div class="canal-eyebrow">03 · Le canal — le dehors</div>
-    <h2 class="canal-title">Deux dispositifs souverains.<br><em>Un canal confidentiel, en face-à-face.</em></h2>
+    <h2 class="canal-title">Deux dispositifs souverains.<br><em>Un canal confidentiel, de bout en bout.</em></h2>
     <p class="canal-lede">Le document à faire signer est illisible sur toutes les messageries. Il ne se déchiffre que dans l'enclave du dispositif autorisé — nulle part ailleurs.</p>
     <div class="canal-visual">
       <svg id="cv" width="560" height="210" viewBox="0 0 560 210" style="max-width:100%;overflow:visible">
@@ -675,7 +682,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
       </svg>
     </div>
     <p class="canal-foot">Une fois signé, il revient muni de son certificat de signature et du dossier d'identité complet du signataire — une enveloppe intégralement chiffrée, post-quantique. Elle ne s'ouvre que dans l'enclave du téléphone de l'expéditeur, sans jamais apparaître en clair sur le réseau : c'est le procédé <em style="font-style:italic;color:var(--gold-deep)">Inline-Offline™ · Never Online</em>.</p>
-    <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,1.9vw,1.2rem);color:var(--navy);line-height:1.45;max-width:660px;margin:44px auto 52px;text-align:center;font-weight:500;letter-spacing:-.01em">En résumé, le procédé permet à <em style="color:var(--gold-deep)">deux dispositifs au monde</em> d'être connectés et de se comprendre.</p>
+    <p style="font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,1.9vw,1.2rem);color:var(--navy);line-height:1.45;max-width:660px;margin:44px auto 52px;text-align:center;font-weight:500;letter-spacing:-.01em">En résumé : <em style="color:var(--gold-deep)">deux dispositifs légitimes, seuls au monde</em> à pouvoir déchiffrer leur échange et le signer — en empruntant internet, sans jamais y être vus ni lus.</p>
     <div class="canal-ctas">
       <a href="echanges-confidentiels.html" class="canal-cta-primary">Échanges confidentiels</a>
       <a href="protocole-alice-bob.html" class="canal-cta-ghost">Le protocole Alice &amp; Bob →</a>
@@ -882,6 +889,7 @@ document.getElementById('lead-email').addEventListener('keydown',function(e){if(
         <h4>Accéder</h4>
         <ul>
           <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="l-app-en-action.html">L'app en action</a></li>
           <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
           <li><span style="opacity:.45">Φ Desktop · à venir</span></li>
         </ul>
