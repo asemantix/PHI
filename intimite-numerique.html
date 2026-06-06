@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0e1c35">
 <title>L'intimité numérique — Votre huis-clos numérique · Le déchiffrement entre soi et soi · alternative à DocuSign · PHI</title>
-<meta name="description" content="L'intimité numérique selon Φ = votre huis-clos numérique. La vraie confidentialité n'est pas contractuelle — elle est structurelle. Le déchiffrement a lieu entre vous et votre dispositif. Jamais sur un serveur tiers. Le chiffrement de bout en bout vous trahit — voici pourquoi. Brevet FR 2604755.">
+<meta name="description" content="L'intimité numérique selon Φ = votre huis-clos numérique. La vraie confidentialité n'est pas contractuelle — elle est structurelle. Le déchiffrement a lieu entre vous et votre dispositif. Jamais sur un serveur tiers. Le chiffrement de bout en bout vous trahit — voici pourquoi. Brevet déposé.">
 <meta name="keywords" content="huis-clos numérique, votre huis-clos numérique, intimité numérique huis-clos, intimité numérique vraie confidentialité, la signature électronique DocuSign, alternative DocuSign souveraine, alternative Yousign, alternative Adobe Sign, déchiffrement local dispositif, déchiffrement entre soi et soi, chiffrement bout en bout limite, Signal ProtonMail serveur déchiffre, confidentialité structurelle sans serveur, souveraineté numérique personnelle, dispositifs légitimes cercle confiance, Inline-Offline déchiffrement local, ML-DSA-65, ML-KEM-768, PHI, phi-signature.fr, vie privée numérique garantie construction">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="PHI">
 <link rel="canonical" href="https://phi-signature.fr/intimite-numerique.html">
 
 <!-- Favicons -->
-<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%238b6914" text-anchor="middle" x="50">Φ</text></svg>'>
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%236f520f" text-anchor="middle" x="50">Φ</text></svg>'>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -64,9 +64,9 @@
         {"@type": "Thing", "name": "Dispositifs légitimes", "description": "Cercle des dispositifs physiques autorisés à déchiffrer — défini par le propriétaire des données, non imposé par l'infrastructure. Seul ce cercle peut accéder au contenu en clair."}
       ],
       "mentions": [
-        {"@type": "CreativeWork", "name": "Brevet FR 2604755 — Inline-Offline®, transmission probatoire asémantique"},
-        {"@type": "CreativeWork", "name": "Brevet FR 2604517 — AUTHENTIX, jeton lié au dispositif"},
-        {"@type": "CreativeWork", "name": "Brevet FR 2606431 — AUTOCERT, identité dérivée du silicium"}
+        {"@type": "CreativeWork", "name": "Brevet AUTHENTIX SIGN déposé — transmission probatoire asémantique"},
+        {"@type": "CreativeWork", "name": "Brevet AUTHENTIX déposé — jeton lié au dispositif"},
+        {"@type": "CreativeWork", "name": "Brevet AUTOCERT déposé — identité dérivée du silicium"}
       ],
       "publisher": {"@id": "https://phi-signature.fr/#organization"}
     },
@@ -110,15 +110,17 @@
     {
       "@type": "Organization",
       "@id": "https://phi-signature.fr/#organization",
-      "name": "PHI",
+      "name": "PHI SAS",
       "alternateName": "Φ",
       "url": "https://phi-signature.fr",
       "email": "phi-signature@proton.me",
-      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Brevet FR 2604755.",
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign.",
       "foundingDate": "2024",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Lyon",
+        "streetAddress": "33 rue du Frère Benoît",
+        "postalCode": "69600",
+        "addressLocality": "Oullins-Pierre-Bénite",
         "addressCountry": "FR"
       },
       "sameAs": [
@@ -141,15 +143,15 @@
   :root {
     --navy: #0e1c35;
     --navy-deep: #08111f;
-    --gold: #c8a84b;
-    --gold-deep: #8b6914;
+    --gold: #c4a472;
+    --gold-deep: #6f520f;
     --gold-light: #e2c87a;
     --gold-soft: #e2c87a;
     --paper: #faf9f6;
     --paper-soft: #f4f2ec;
     --ink: #1a1a2e;
     --ink-muted: #6b7a99;
-    --rule: rgba(200,168,75,.14);
+    --rule: rgba(196,164,114,.14);
     --font-display: 'Playfair Display', Georgia, serif;
     --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
@@ -160,8 +162,8 @@
   body { background: var(--paper); color: var(--navy); font-family: var(--font-sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
   /* ── HEADER ── */
-  .sec-header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: var(--navy); border-bottom: 1px solid rgba(200,168,75,.15); }
-  .sec-header-back { font-family: var(--font-mono); font-size: .7rem; color: rgba(200,168,75,.5); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
+  .sec-header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: var(--navy); border-bottom: 1px solid rgba(196,164,114,.15); }
+  .sec-header-back { font-family: var(--font-mono); font-size: .7rem; color: rgba(196,164,114,.5); letter-spacing: .16em; text-transform: uppercase; text-decoration: none; transition: color .2s; }
   .sec-header-back:hover { color: var(--gold); }
   .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 1.55rem; color: var(--gold); font-weight: 500; text-decoration: none; }
   .sec-header-cta { background: var(--gold); color: var(--navy); text-decoration: none; padding: 10px 22px; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
@@ -175,7 +177,7 @@
 
   /* ── HERO ── */
   .hero { padding: 96px 48px 88px; background: var(--navy); color: var(--paper); position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse at 70% 50%, rgba(200,168,75,.06) 0%, transparent 60%); pointer-events: none; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse at 70% 50%, rgba(196,164,114,.06) 0%, transparent 60%); pointer-events: none; }
   .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
   .hero-eyebrow { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .44em; text-transform: uppercase; font-weight: 500; margin-bottom: 28px; opacity: .85; }
   .hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 500; line-height: 1.08; letter-spacing: -.025em; color: var(--paper); margin-bottom: 14px; }
@@ -184,7 +186,7 @@
   @media (max-width: 720px) { .hero-mark { font-size: 2.2rem; margin: 10px 0 18px; } }
   .hero-subtitle { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; line-height: 1.65; color: rgba(250,249,246,.58); margin-bottom: 52px; max-width: 660px; }
   .hero-rule { width: 60px; height: 1px; background: var(--gold); opacity: .45; margin-bottom: 36px; }
-  .hero-statement { border-left: 2px solid rgba(200,168,75,.4); padding-left: 28px; max-width: 720px; }
+  .hero-statement { border-left: 2px solid rgba(196,164,114,.4); padding-left: 28px; max-width: 720px; }
   .hero-statement p { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.75; color: rgba(250,249,246,.78); font-weight: 400; margin-bottom: 16px; }
   .hero-statement p:last-child { margin-bottom: 0; }
   .hero-statement strong { color: var(--gold-soft); font-weight: 500; }
@@ -218,7 +220,7 @@
   .flux-schema.them .flux-arrow { color: #c0b090; }
   .flux-schema.them .flux-danger { color: #c84b4b; font-weight: 600; }
   .flux-schema.phi .flux-node { color: rgba(250,249,246,.7); }
-  .flux-schema.phi .flux-arrow { color: rgba(200,168,75,.5); }
+  .flux-schema.phi .flux-arrow { color: rgba(196,164,114,.5); }
   .flux-schema.phi .flux-good { color: var(--gold); font-weight: 600; }
 
   .mc-conclusion { font-family: var(--font-sans); font-size: .9rem; line-height: 1.65; margin-top: 20px; font-weight: 300; }
@@ -246,7 +248,7 @@
   .moment-card.central .moment-body { color: rgba(250,249,246,.6); }
   .moment-tag { display: inline-block; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; padding: 5px 12px; margin-top: 16px; font-weight: 500; }
   .moment-tag.danger { background: rgba(200,75,75,.1); color: #c84b4b; border: 1px solid rgba(200,75,75,.2); }
-  .moment-tag.safe { background: rgba(200,168,75,.1); color: var(--gold-deep); border: 1px solid var(--rule); }
+  .moment-tag.safe { background: rgba(196,164,114,.1); color: var(--gold-deep); border: 1px solid var(--rule); }
 
   /* ── FORTERESSE ── */
   .forteresse-section { background: var(--navy); color: var(--paper); }
@@ -256,13 +258,13 @@
   .forteresse-section .section-lede { color: rgba(250,249,246,.58); }
 
   .forteresse-pilliers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 56px; }
-  .pillier { padding: 36px 28px; border: 1px solid rgba(200,168,75,.12); }
-  .pillier-num { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .32em; text-transform: uppercase; color: rgba(200,168,75,.5); margin-bottom: 14px; }
+  .pillier { padding: 36px 28px; border: 1px solid rgba(196,164,114,.12); }
+  .pillier-num { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .32em; text-transform: uppercase; color: rgba(196,164,114,.5); margin-bottom: 14px; }
   .pillier-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--paper); margin-bottom: 14px; line-height: 1.3; }
   .pillier-body { font-family: var(--font-sans); font-size: .85rem; color: rgba(250,249,246,.5); line-height: 1.65; font-weight: 300; }
-  .pillier-body strong { color: rgba(200,168,75,.8); font-weight: 500; }
+  .pillier-body strong { color: rgba(196,164,114,.8); font-weight: 500; }
 
-  .forteresse-principe { max-width: 780px; margin: 0 auto; text-align: center; padding: 48px 0 0; border-top: 1px solid rgba(200,168,75,.12); }
+  .forteresse-principe { max-width: 780px; margin: 0 auto; text-align: center; padding: 48px 0 0; border-top: 1px solid rgba(196,164,114,.12); }
   .fp-text { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 500; color: var(--paper); line-height: 1.3; margin-bottom: 20px; }
   .fp-text em { font-style: italic; color: var(--gold-soft); }
   .fp-sub { font-family: var(--font-sans); font-size: .9rem; color: rgba(250,249,246,.45); line-height: 1.65; font-weight: 300; }
@@ -309,35 +311,37 @@
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
   .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); text-decoration: none; padding: 15px 34px; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
   .btn-primary:hover { background: var(--gold-light); }
-  .btn-ghost { display: inline-block; background: transparent; color: rgba(250,249,246,.7); text-decoration: none; padding: 14px 28px; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; border: 1.5px solid rgba(200,168,75,.3); transition: all .2s; }
-  .btn-ghost:hover { background: rgba(200,168,75,.08); border-color: var(--gold); }
+  .btn-ghost { display: inline-block; background: transparent; color: rgba(250,249,246,.7); text-decoration: none; padding: 14px 28px; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; border: 1.5px solid rgba(196,164,114,.3); transition: all .2s; }
+  .btn-ghost:hover { background: rgba(196,164,114,.08); border-color: var(--gold); }
 
-  /* ── FOOTER ── */
-  .footer { background: var(--navy-deep); border-top: 1px solid rgba(200,168,75,.1); }
-  .footer-inner { max-width: 1200px; margin: 0 auto; padding: 56px 48px; display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
-  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 3.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 12px; }
-  .footer-tag { font-family: var(--font-sans); font-size: .8rem; color: rgba(200,168,75,.5); line-height: 1.5; }
-  .footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .footer-col h4 { font-family: var(--font-mono); font-size: .64rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(200,168,75,.5); margin-bottom: 14px; font-weight: 500; }
-  .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 8px; }
-  .footer-col a { font-family: var(--font-sans); font-size: .82rem; color: rgba(250,249,246,.4); text-decoration: none; transition: color .2s; }
-  .footer-col a:hover { color: var(--gold); }
-  .footer-legal { border-top: 1px solid rgba(200,168,75,.08); padding: 24px 48px; text-align: center; font-family: var(--font-mono); font-size: .62rem; color: rgba(250,249,246,.25); letter-spacing: .1em; line-height: 2; }
-  .footer-legal strong { color: rgba(200,168,75,.45); font-weight: 500; }
+  /* ── FOOTER (4 colonnes — charte commune) ── */
+  .footer { background: var(--navy-deep); color: rgba(255,255,255,.75); padding: 80px 48px 40px; border-top: 1px solid rgba(196,164,114,.1); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  .footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(196,164,114,.2); }
+  .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 4.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 18px; }
+  .footer-line { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 18px; }
+  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--gold-light); margin-bottom: 4px; }
+  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(226,200,122,.8); }
+  .footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 48px; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .32em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 18px; font-weight: 500; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col li { margin-bottom: 0; }
+  .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
+  .footer-col a:hover { color: var(--gold-light); }
+  .footer-meta { border-top: 1px solid rgba(196,164,114,.15); padding-top: 28px; text-align: center; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .18em; color: rgba(255,255,255,.4); line-height: 1.8; }
+  .footer-meta strong { color: var(--gold-light); font-weight: 500; }
 
   @media (max-width: 900px) {
     .sec-header, .breadcrumb, .hero, .section, .cta-section { padding-left: 20px; padding-right: 20px; }
     .hero { padding-top: 64px; padding-bottom: 64px; }
     .section { padding-top: 64px; padding-bottom: 64px; }
     .mensonge-compare, .moment-grid, .forteresse-pilliers, .legitimes-visual { grid-template-columns: 1fr; }
-    .footer-inner { grid-template-columns: 1fr; padding: 40px 20px; }
-    .footer-nav { grid-template-columns: 1fr; }
-    .footer-legal { padding: 20px; }
+    .footer { padding: 60px 20px 30px; }
+    .footer-nav { grid-template-columns: 1fr; gap: 32px; }
   }
 
-.footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
-.footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c8a84b)!important}
+.footer-link-special{color:rgba(196,164,114,.65)!important;border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
+.footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c4a472)!important}
 </style>
 </head>
 <body>
@@ -357,7 +361,7 @@
 <!-- ══ HERO ══ -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow">Φ · Huis-clos numérique · Brevet FR 2604755</p>
+    <p class="hero-eyebrow">Φ · Huis-clos numérique · Brevet déposé</p>
     <h1 class="hero-title">
       L'intimité numérique —<br>
       le déchiffrement <em>entre soi et soi.</em>
@@ -411,11 +415,11 @@
           Ce déchiffrement a lieu <strong>dans leur environnement</strong> —
           leur infrastructure, leur clé de session, leur obligation légale
           de coopération judiciaire. Leur IA est présente à ce moment-là.
-          ProtonMail a livré une adresse IP en 2021. Signal est sur AWS.
+          Et leur infrastructure reste soumise aux réquisitions de leur juridiction.
         </p>
       </div>
       <div class="mc-card phi">
-        <p class="mc-label">Φ — Inline-Offline®</p>
+        <p class="mc-label">Φ — Inline-Offline™</p>
         <h3 class="mc-title">Le transport est du bruit.<br>La lecture est chez vous.</h3>
         <div class="flux-schema phi">
           <div class="flux-node">Vous ──bruit aléatoire──►</div>
@@ -470,7 +474,7 @@
         <span class="moment-tag danger">Déchiffrement applicatif côté opérateur</span>
       </div>
       <div class="moment-card">
-        <p class="moment-who">Φ — Inline-Offline®</p>
+        <p class="moment-who">Φ — Inline-Offline™</p>
         <p class="moment-app">Dans votre enclave.<br>Sur votre silicium.</p>
         <p class="moment-body">Le canal transporte du bruit. Le déchiffrement n'a lieu que dans l'enclave sécurisée de votre dispositif physique — Secure Enclave Apple, Hardware Keystore Android. Aucun opérateur n'est présent. Aucun ne peut l'être.</p>
         <span class="moment-tag safe">Déchiffrement exclusivement local</span>
@@ -519,8 +523,8 @@
         <p class="pillier-body">
           Les données chiffrées d'aujourd'hui seront déchiffrées
           par les ordinateurs quantiques de demain —
-          <em>si elles ont pu être récoltées.</em>
-          <strong>Du bruit ne se récolte pas.</strong>
+          <em>si elles ont pu être capturées.</em>
+          <strong>Du bruit ne se capture pas.</strong>
           Du bruit ne se déchiffre pas. La forteresse tient dans le futur.
         </p>
       </div>
@@ -532,7 +536,7 @@
         de souveraineté numérique.<br>
         <em>Elle passe par l'intimité.</em>
       </p>
-      <p class="fp-sub">— Suzanne de Bégon de Larouzière, inventrice · AION ASEMANTIX</p>
+      <p class="fp-sub">— Suzanne de Begon de Larouzière, inventrice · PHI</p>
     </div>
   </div>
 </section>
@@ -644,11 +648,11 @@
         </p>
       </div>
       <div class="faq-item">
-        <p class="faq-q">ProtonMail n'est-il pas hors juridiction américaine ?</p>
+        <p class="faq-q">La juridiction du siège social protège-t-elle la confidentialité ?</p>
         <p class="faq-a">
-          ProtonMail est suisse — et a livré une adresse IP à des autorités françaises en 2021,
-          sur demande via Europol. Telegram, dont le fondateur a été arrêté en France,
-          a depuis annoncé une coopération avec les autorités.
+          Non — et c'est une confusion répandue. Plusieurs messageries réputées confidentielles,
+          y compris hors des États-Unis, ont dû transmettre des données sur réquisition.
+          Le lieu du siège ne change rien dès lors qu'un opérateur détient la clé ou le contenu en clair.
           <strong>La juridiction du siège social ne détermine pas la confidentialité.</strong>
           Ce qui la détermine : le lieu du déchiffrement.
           Avec Φ, aucune réquisition ne peut aboutir
@@ -660,7 +664,7 @@
         <p class="faq-a">
           L'architecture. PHI ne possède aucun serveur.
           <strong>Il n'y a aucune infrastructure PHI dans la chaîne de déchiffrement.</strong>
-          Le procédé Inline-Offline® (brevet FR 2604755) est conçu pour que
+          Le procédé Inline-Offline™ (brevet déposé) est conçu pour que
           le déchiffrement ait lieu exclusivement dans l'enclave matérielle
           du dispositif du destinataire autorisé.
           PHI ne détient aucune clé, ne voit aucun contenu.
@@ -675,7 +679,7 @@
           dont l'identité matérielle a été incorporée dans la graine cryptographique
           lors de l'enrôlement dans Φ.
           La légitimité est cryptographique : la clé est liée au silicium du dispositif
-          par construction (brevet AUTHENTIX FR 2604517).
+          par construction (brevet AUTHENTIX déposé).
           <strong>Elle ne peut pas être copiée, transférée, ou simulée sur un autre matériel.</strong>
           Présenter la même clé sur un autre dispositif produit une graine différente —
           invalide. Il n'y a pas de contournement possible.
