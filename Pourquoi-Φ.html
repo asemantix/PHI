@@ -216,6 +216,8 @@ footer{background:var(--navy-deep);padding:48px 48px 36px;color:rgba(255,255,255
 .cx-cap-txt{font-family:var(--fe);font-style:italic;font-size:1.05rem;color:var(--ivory)}
 
 .cx-dots{position:relative;z-index:1;display:flex;gap:9px;justify-content:center;margin-top:16px}
+.cx-dot{width:8px;height:8px;border-radius:50%;border:none;padding:0;background:rgba(196,164,114,.35);cursor:pointer;transition:background .3s,width .3s;outline:none}
+.cx-dot.cx-on{background:#c4a472;width:22px;border-radius:4px}
 .dot{width:8px;height:8px;border-radius:50%;background:rgba(212,184,136,.3);border:none;cursor:pointer;padding:0;transition:all .3s}
 .dot.on{background:var(--gold);width:22px;border-radius:4px}
 
@@ -688,17 +690,17 @@ footer{background:var(--navy-deep);padding:48px 48px 36px;color:rgba(255,255,255
   var capStep=document.getElementById('capStep'), capTxt=document.getElementById('capTxt');
   var i=0, timer, DUR=4200;
   slides.forEach(function(s,n){
-    var b=document.createElement('button'); b.className='dot'+(n===0?' on':''); b.setAttribute('aria-label','Étape '+(n+1));
+    var b=document.createElement('button'); b.className='cx-dot'+(n===0?' cx-on':''); b.setAttribute('aria-label','Étape '+(n+1));
     b.onclick=function(){go(n);reset();}; dotsBox.appendChild(b);
   });
   var dots=[].slice.call(dotsBox.children);
   function go(n){
-    slides[i].classList.remove('active'); dots[i].classList.remove('on');
+    slides[i].classList.remove('cx-active'); dots[i].classList.remove('cx-on');
     i=n%slides.length;
     var s=slides[i];
     // forcer le rejeu des animations
-    s.querySelectorAll('.dr,.fi,.sc').forEach(function(el){el.style.animation='none';el.offsetHeight;el.style.animation='';});
-    s.classList.add('active'); dots[i].classList.add('on');
+    s.querySelectorAll('.cx-dr,.cx-fi,.cx-sc').forEach(function(el){el.style.animation='none';el.offsetHeight;el.style.animation='';});
+    s.classList.add('cx-active'); dots[i].classList.add('cx-on');
     capStep.textContent=s.dataset.step; capTxt.textContent=s.dataset.cap;
   }
   function tick(){go(i+1);}
