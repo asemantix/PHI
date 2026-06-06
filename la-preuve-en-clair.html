@@ -85,13 +85,41 @@ p.big{font-family:var(--fe);font-style:italic;font-size:clamp(1.25rem,3vw,1.6rem
 .note{font-family:var(--fe);font-style:italic;color:var(--gold-deep);font-size:1.05em}
 .kicker{text-align:center;max-width:640px;margin:0 auto}
 
-/* footer light */
-.foot{padding:48px 24px;text-align:center;border-top:1px solid var(--rule);background:var(--paper)}
-.foot .fphi{font-family:var(--fe);font-style:italic;font-size:2rem;color:var(--gold-deep)}
-.foot .fbase{font-family:var(--fm);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-muted);margin-top:8px}
+/* nav */
+.nav{position:sticky;top:0;z-index:100;background:rgba(250,250,247,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav-in{max-width:1100px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-phi{font-family:var(--fe);font-style:italic;font-size:1.9rem;color:var(--gold-deep);text-decoration:none;line-height:1}
+.nav-r{display:flex;gap:24px;align-items:center}
+.nav-r a{font-family:var(--fm);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;font-weight:500;transition:color .2s}
+.nav-r a:hover{color:var(--navy)}
+.nav-cta{padding:9px 20px;background:var(--navy);color:#fff!important;border-radius:4px}
+.nav-cta em{font-family:var(--fe);font-style:italic;color:var(--gold-light)}
+@media(max-width:600px){.nav-r a:not(.nav-cta){display:none}}
+
+/* footer */
+.foot{padding:56px 24px 40px;border-top:1px solid var(--rule);background:var(--navy-deep)}
+.foot-in{max-width:1100px;margin:0 auto;text-align:center}
+.foot .fphi{font-family:var(--fe);font-style:italic;font-size:2.6rem;color:var(--gold)}
+.foot .fbase{font-family:var(--fm);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(212,184,136,.7);margin-top:8px}
+.foot-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:26px 0 22px}
+.foot-links a{font-family:var(--fm);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:color .2s}
+.foot-links a:hover{color:var(--gold-light)}
+.foot-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:20px;font-family:var(--fm);font-size:.62rem;letter-spacing:.16em;color:rgba(255,255,255,.4);line-height:1.8}
+.foot-meta strong{color:var(--gold-light);font-weight:500}
 </style>
 </head>
 <body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <a href="index.html" class="nav-phi" aria-label="Φ — Accueil">Φ</a>
+    <div class="nav-r">
+      <a href="la-mecanique-probatoire.html">La mécanique</a>
+      <a href="Pourquoi-Φ.html">Pourquoi Φ</a>
+      <a href="tarifications.html" class="nav-cta">Accéder à <em>Φ</em></a>
+    </div>
+  </div>
+</nav>
 
 <div class="top">
   <div class="eyebrow">Comprendre</div>
@@ -103,10 +131,17 @@ p.big{font-family:var(--fe);font-style:italic;font-size:clamp(1.25rem,3vw,1.6rem
 <section>
   <div class="wrap">
     <div class="step">D'abord, le problème</div>
-    <h2>Une signature électronique ordinaire, c'est un tampon.</h2>
-    <p>On prend un document, on pose une signature dessus, et le tout part vivre <strong>sur le serveur d'un prestataire</strong>. Le tampon atteste « quelqu'un a signé ». Mais un tampon, ça se décolle, ça se recopie — et surtout, pour le croire, il faut <strong>faire confiance au prestataire</strong> qui le garde, et à l'autorité qui l'a délivré.</p>
-    <p>Vos documents les plus sensibles dorment alors chez un tiers, souvent à l'étranger, sous une juridiction qui n'est pas la vôtre. Vous ne signez pas : <strong>vous confiez.</strong></p>
-    <p class="big"><em class="phi">Φ</em> ne pose pas de tampon. Il ne confie rien à personne. Il fait quelque chose de complètement différent.</p>
+    <h2>Que signez-vous, au juste, aujourd'hui ?</h2>
+    <p>Voici comment se passe une signature électronique courante. Vous recevez un document par email. En bas, un bouton « Signer ». Vous cliquez. Un code à six chiffres arrive par SMS sur votre téléphone. Vous le recopiez dans une case. C'est terminé : le document est « signé ».</p>
+    <p>Reculons d'un pas, et regardons ce qui vient <strong>réellement</strong> d'être attesté. Le prestataire certifie ceci : une personne — qui <em>prétend</em> être vous — disposant d'un téléphone qui a <em>reçu</em> un SMS, à une adresse email qui <em>prétend</em> être la vôtre, a <strong>recopié correctement six chiffres.</strong></p>
+    <p>C'est tout. Pas que c'est vous. Pas que vous avez lu. Pas que vous étiez d'accord. Seulement que quelqu'un, quelque part, a su retaper <span style="font-family:var(--fm);font-size:.92em;color:var(--gold-deep)">4&nbsp;8&nbsp;2&nbsp;9&nbsp;1&nbsp;7</span> dans le bon ordre. Et pour y croire, il faut <strong>faire confiance au prestataire</strong> qui l'affirme — et au serveur, souvent à l'étranger, où dort désormais votre document.</p>
+    <p>Le code SMS ne prouve pas une identité : il prouve l'accès à un téléphone, à un instant donné. Ce n'est pas la même chose. Un téléphone se prête, se vole, se déverrouille sous la contrainte. La case accepterait les six chiffres de la même façon.</p>
+
+    <p>Reste une question qu'on ne pose presque jamais : <strong>cette preuve, où est-elle, et à qui appartient-elle ?</strong> Elle vit sur le serveur du prestataire — fréquemment hébergé hors de France. Deux conséquences, rarement dites.</p>
+    <p><strong>Première conséquence : vous n'en avez pas la maîtrise.</strong> La preuve de ce que vous avez signé est <em>détenue</em> par le prestataire, pas par vous. Le jour où vous en avez besoin — un litige, un contrôle, une production en justice — il faut aller la <em>demander</em>. Et souvent la payer : export facturé, fonctionnalité réservée à un palier supérieur, abonnement qu'il faut maintenir des années pour ne pas perdre l'accès. Cessez de payer, et la preuve devient inaccessible. Le prestataire fait faillite, change ses conditions, ferme le service — et votre preuve part avec lui. Vous ne possédez pas votre preuve : <strong>vous la louez.</strong></p>
+    <p><strong>Seconde conséquence : elle relève d'une autre loi que la vôtre.</strong> Un document stocké sur un serveur soumis au droit américain peut être réclamé par une autorité américaine en vertu du <em>Cloud Act</em>, où qu'il se trouve physiquement, sans que vous en soyez informé. Vos actes les plus sensibles dorment sous une juridiction qui n'est pas la vôtre. Vous ne signez pas : <strong>vous confiez.</strong></p>
+
+    <p class="big"><em class="phi">Φ</em> ne demande pas de recopier un code. Il ne confie votre document à personne, et la preuve reste chez vous. Il fait quelque chose de complètement différent.</p>
   </div>
 </section>
 
@@ -140,7 +175,7 @@ p.big{font-family:var(--fe);font-style:italic;font-size:clamp(1.25rem,3vw,1.6rem
     </div>
 
     <p><strong>Qui signe · quel document · quel appareil · quel instant.</strong> <em class="phi">Φ</em> ne les additionne pas : il calcule l'unique point où ils se croisent. Déplacez un seul axe d'un cran, et vous n'êtes plus au même endroit — vous êtes ailleurs, sur un point qui <strong>n'ouvre rien.</strong></p>
-    <p>C'est pour cela qu'il n'y a pas, chez <em class="phi">Φ</em>, d'« objet document-signé » qui se promène et qu'on pourrait copier. Il y a une <strong>opération unique</strong>, qui n'a eu lieu qu'une seule fois, pour ce point précis. La preuve n'est pas un tampon : c'est le <strong>fait que ce point existe.</strong></p>
+    <p>C'est pour cela qu'il n'y a pas, chez <em class="phi">Φ</em>, d'« objet document-signé » qui se promène et qu'on pourrait copier. Il y a une <strong>opération unique</strong>, qui n'a eu lieu qu'une seule fois, pour ce point précis. La preuve n'est pas un code recopié : c'est le <strong>fait que ce point existe.</strong></p>
   </div>
 </section>
 
@@ -148,8 +183,8 @@ p.big{font-family:var(--fe);font-style:italic;font-size:clamp(1.25rem,3vw,1.6rem
 <section>
   <div class="wrap">
     <div class="step">La preuve par l'usage</div>
-    <h2>Vos « bugs » sont la sécurité en action.</h2>
-    <p>Le plus parlant : les messages de refus qu'on peut rencontrer ne sont pas des pannes. Ce sont les axes qui ne coïncident plus — donc la protection qui fonctionne.</p>
+    <h2>Un refus n'est pas une panne. C'est une preuve.</h2>
+    <p>Le plus parlant : les messages de refus qu'on peut rencontrer ne sont pas des dysfonctionnements. C'est le système qui fait précisément ce qu'on attend de lui — les axes ne coïncident plus, donc le point n'existe pas, donc rien ne s'ouvre. Le refus <strong>est</strong> la protection, pas son échec.</p>
     <div class="cases">
       <div class="case">
         <div class="case-q">Refusé</div>
@@ -240,8 +275,21 @@ p.big{font-family:var(--fe);font-style:italic;font-size:clamp(1.25rem,3vw,1.6rem
 </section>
 
 <footer class="foot">
-  <div class="fphi">Φ</div>
-  <div class="fbase">La signature mathématique</div>
+  <div class="foot-in">
+    <div class="fphi">Φ</div>
+    <div class="fbase">La signature mathématique</div>
+    <div class="foot-links">
+      <a href="index.html">Accueil</a>
+      <a href="Pourquoi-Φ.html">Pourquoi Φ</a>
+      <a href="la-mecanique-probatoire.html">La mécanique</a>
+      <a href="livre-blanc.html">Livre blanc</a>
+      <a href="tarifications.html">Accéder à Φ</a>
+    </div>
+    <div class="foot-meta">
+      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
+      Procédés protégés · © 2026 — Tous droits réservés
+    </div>
+  </div>
 </footer>
 
 <script>
