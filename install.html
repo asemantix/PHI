@@ -15,7 +15,7 @@
      2) Vérifier l'URL Play Store (id du package).
      ════════════════════════════════════════════════════════════════ -->
 <script>
-  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=app.laligature.phi";
+  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=phi.signature";
   const AUTO_REDIRECT  = false;   // ← passer à true le 15 juin
   document.addEventListener("DOMContentLoaded", function () {
     var a = document.getElementById("btn-play");
@@ -30,7 +30,7 @@
 <style>
   :root{
     --navy:#0e1c35;--navy-deep:#08111f;
-    --gold:#c4a472;--gold-b:#c8a84b;--gold-light:#e2c87a;
+    --gold:#c4a472;--gold-b:#c8a84b;--gold-light:#e2c87a;--gold-eyebrow:#d4b888;
     --ivory:#e8dcc8;--paper:#fafaf7;
     --muted:#a9b0bd;--muted-2:#6b7a8f;
     --font-d:'Playfair Display',Georgia,serif;
@@ -42,7 +42,7 @@
   body{
     font-family:var(--font-s);
     background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);
-    color:var(--paper);min-height:100vh;
+    color:var(--ivory);min-height:100vh;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     padding:40px 24px;line-height:1.6;
   }
@@ -61,7 +61,7 @@
   .cv.br{bottom:16px;right:16px;border-bottom:1.5px solid;border-right:1.5px solid}
 
   .phi{font-family:var(--font-d);font-style:italic;font-size:4rem;color:var(--ivory);line-height:1;margin-bottom:10px}
-  .eyebrow{font-family:var(--font-m);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:rgba(196,164,114,.85);margin-bottom:28px;font-weight:500}
+  .eyebrow{font-family:var(--font-m);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-eyebrow);margin-bottom:28px;font-weight:500}
   h1{font-family:var(--font-d);font-style:italic;font-weight:500;font-size:1.85rem;line-height:1.3;color:var(--ivory);margin-bottom:18px}
   em.phi-in{font-family:var(--font-g);font-style:italic;color:var(--ivory);font-weight:500;font-size:1.08em}
   p.lead{font-family:var(--font-d);font-style:italic;font-size:1.06rem;color:rgba(232,220,200,.72);margin-bottom:38px}
@@ -90,7 +90,7 @@
     <h1>Téléchargez <em class="phi-in">Φ</em> sur votre Android.</h1>
     <p class="lead">Gratuit. La réception et la signature sont incluses. L'émission se débloque avec un abonnement, depuis l'application.</p>
 
-    <a id="btn-play" class="btn" href="https://play.google.com/store/apps/details?id=app.laligature.phi" rel="noopener">Télécharger sur Google&nbsp;Play</a>
+    <a id="btn-play" class="btn" href="https://play.google.com/store/apps/details?id=phi.signature" rel="noopener">Télécharger sur Google&nbsp;Play</a>
 
     <div class="sep"></div>
     <p class="note">
