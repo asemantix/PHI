@@ -34,13 +34,13 @@
   :root {
     --navy: #0e1c35;
     --navy-deep: #08111f;
-    --gold: #c8a84b;
+    --gold: #c4a472;
     --gold-deep: #6f520f;
     --gold-light: #e2c87a;
     --paper: #fafaf7;
     --paper-soft: #f4f1e8;
     --ink-muted: #6c7384;
-    --rule: rgba(200, 168, 75, 0.3);
+    --rule: rgba(196,164,114, 0.3);
     --success: #5a8033;
     --font-display: 'Playfair Display', Georgia, serif;
     --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
@@ -70,7 +70,7 @@
   .field label .req { color: var(--gold-deep); margin-left: 3px; font-weight: 400; }
   .field input, .field select, .field textarea { background: #ffffff; border: 1px solid var(--rule); border-radius: 2px; padding: 14px 16px; font-family: var(--font-sans); font-size: 0.95rem; color: var(--navy); font-weight: 400; transition: border-color 0.2s, box-shadow 0.2s; outline: none; appearance: none; -webkit-appearance: none; width: 100%; }
   .field input::placeholder, .field textarea::placeholder { color: var(--ink-muted); font-style: italic; }
-  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(200,168,75,0.10); }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(196,164,114,0.10); }
   .field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236f520f' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; cursor: pointer; }
   .field textarea { resize: vertical; min-height: 260px; line-height: 1.6; }
   .field-hint { font-family: var(--font-display); font-style: italic; font-size: 0.82rem; color: var(--ink-muted); margin-top: 2px; }
@@ -96,7 +96,7 @@
 
   .footer { background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 60px 48px 36px; }
   .footer-inner { max-width: 1100px; margin: 0 auto; }
-  .footer-brand { text-align: center; margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid rgba(200,168,75,0.2); }
+  .footer-brand { text-align: center; margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid rgba(196,164,114,0.2); }
   .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 3.2rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 12px; }
   .footer-line { width: 48px; height: 1px; background: var(--gold); margin: 0 auto 12px; }
   .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--gold-light); margin-bottom: 3px; }
@@ -106,14 +106,14 @@
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
   .footer-col a { font-family: var(--font-display); font-style: italic; font-size: 0.92rem; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
   .footer-col a:hover { color: var(--gold-light); }
-  .footer-meta { border-top: 1px solid rgba(200,168,75,0.15); padding-top: 22px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.35); line-height: 1.8; }
+  .footer-meta { border-top: 1px solid rgba(196,164,114,0.15); padding-top: 22px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.18em; color: rgba(255,255,255,0.35); line-height: 1.8; }
   .footer-meta strong { color: var(--gold-light); font-weight: 500; }
   .footer-meta a { color: rgba(255,255,255,0.55); text-decoration: none; }
   .footer-meta a:hover { color: var(--gold-light); }
   @media (max-width: 720px) { .footer { padding: 48px 24px 28px; } .footer-nav { grid-template-columns: 1fr; gap: 24px; } }
 
-.footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
-.footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c8a84b)!important}
+.footer-link-special{color:rgba(196,164,114,.65)!important;border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
+.footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c4a472)!important}
 </style>
 </head>
 <body>
@@ -221,22 +221,12 @@
         <h4>Accéder</h4>
         <ul>
           <li><a href="tarifications.html">Accéder à Φ</a></li>
-          <li><a href="faq-abonnement.html">Abonnement &amp; FAQ</a></li>
           <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
-          <li><span style="opacity:.45">Φ Desktop · à venir</span></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Société</h4>
-        <ul>
           <li><a href="a-propos/A-Propos.html">À propos</a></li>
           <li><a href="a-propos/portefeuille-brevets.html">Portefeuille de brevets</a></li>
-          <li><a href="Pourquoi-Φ.html" class="footer-link-special">Pourquoi Φ ?</a></li>
-          <li><a href="presse-rp.html">Espace presse</a></li>
-          <li><a href="vos-suggestions.html">Vos suggestions</a></li>
-          <li><a href="Assistance.html">Assistance</a></li>
           <li><a href="contact.html">Demander une démonstration</a></li>
           <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ-quand-docusign-existe.html" class="footer-link-special">Pourquoi Φ quand DocuSign existe ?</a></li>
         </ul>
       </div>
     </div>
