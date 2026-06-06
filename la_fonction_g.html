@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La fonction G · Le sceau mathématique — Φ</title>
+<meta name="description" content="La fonction G scelle chaque signature Φ : une empreinte unique qui lie l'identité, le document, l'appareil et l'instant. Infalsifiable, purement mathématique.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='78' font-size='80' font-family='Georgia' font-style='italic' fill='%236f520f'%3E%CE%A6%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:ital@1&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#16233f;
+    --gold:#c4a472;--gold-light:#d4b888;--ivory:#e8dcc8;
+    --paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;--gold-deep:#6f520f;--rule:#e6e3dc;--ink:#0e1c35;--ink-muted:#4a5a73;--ink-faded:#8a96a8;
+    --font-display:'Playfair Display',Georgia,serif;
+    --font-mono:'IBM Plex Mono',monospace;
+    --font-sans:'IBM Plex Sans',-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased}
+  em.phi{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-weight:500;color:inherit}
+  a{color:inherit}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 40px}
+
+  /* topbar */
+  .topbar{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;max-width:1080px;margin:0 auto}
+  .tb-phi{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.8rem;color:var(--gold-deep);text-decoration:none}
+  .tb-back{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;padding-bottom:3px}
+  .tb-back:hover{color:var(--navy)}
+
+  /* hero */
+  .hero{text-align:center;padding:70px 40px 50px;max-width:840px;margin:0 auto}
+  .eyebrow{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:22px}
+  h1{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(2.4rem,6vw,4rem);line-height:1.08;color:var(--navy);margin-bottom:18px}
+  h1 b{font-style:normal;font-weight:600;color:var(--gold-deep)}
+  .role{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:8px}
+  .notaire{font-family:var(--font-display);font-style:italic;font-size:1.05rem;color:var(--gold-deep);margin-bottom:26px}
+  .lede{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--ink-muted);line-height:1.7;max-width:680px;margin:0 auto}
+
+  /* equation */
+  .geq-wrap{text-align:center;padding:48px 40px 8px}
+  .geq{display:inline-block;padding:34px 44px;border:1px solid rgba(196,164,114,.45);border-radius:28px;background:rgba(196,164,114,.08);position:relative}
+  .geq .cv{position:absolute;width:16px;height:16px;border-color:rgba(196,164,114,.6)}
+  .geq .tl{top:13px;left:13px;border-top:1.5px solid;border-left:1.5px solid}
+  .geq .tr{top:13px;right:13px;border-top:1.5px solid;border-right:1.5px solid}
+  .geq .bl{bottom:13px;left:13px;border-bottom:1.5px solid;border-left:1.5px solid}
+  .geq .br{bottom:13px;right:13px;border-bottom:1.5px solid;border-right:1.5px solid}
+  .geq .eq{font-family:var(--font-display);font-style:italic;font-size:clamp(1.4rem,3.4vw,2rem);color:var(--navy)}
+  .geq .eq .g{color:var(--gold-deep);font-weight:600}
+  .geq .eq .ph{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--gold-deep)}
+  .geq .terms{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:22px}
+  .geq .term{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);border:1px solid var(--rule);border-radius:4px;padding:7px 11px}
+
+  /* sections */
+  section.doctrine{padding:54px 0}
+  .four{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}
+  .elt{padding:30px 30px 28px;border:1px solid var(--rule);border-radius:28px;background:var(--paper-soft)}
+  .elt .k{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:12px;font-weight:600}
+  .elt h3{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.35rem;color:var(--navy);margin-bottom:10px}
+  .elt p{font-size:.92rem;color:var(--ink-muted);line-height:1.65}
+  h2.sec{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(1.7rem,4vw,2.4rem);color:var(--navy);text-align:center;margin-bottom:14px}
+  h2.sec b{font-style:normal;font-weight:600;color:var(--gold-deep)}
+  .sec-sub{text-align:center;font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--ink-muted);max-width:680px;margin:0 auto}
+  .prose{max-width:680px;margin:26px auto 0;font-size:1.02rem;color:var(--ink-muted);line-height:1.8}
+  .prose strong{color:var(--gold-deep);font-weight:600}
+  .rule{width:56px;height:1px;background:var(--gold);margin:0 auto 30px}
+
+  /* document A4 */
+  .docwrap{padding:54px 40px 44px;text-align:center;background:var(--paper-deep);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .doccap{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:22px}
+  .doc{max-width:430px;width:100%;margin:0 auto;border-radius:6px;box-shadow:0 18px 50px rgba(14,28,53,.16);border:1px solid var(--rule);display:block}
+
+  /* synthesis / next */
+  .next{padding:60px 0;text-align:center;background:var(--paper-soft);border-top:1px solid var(--rule)}
+  .next a{display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper);background:var(--navy);text-decoration:none;border-radius:3px;padding:14px 26px;transition:background .2s}
+  .next a:hover{background:var(--navy-deep)}
+  .next .small{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:18px}
+
+  /* footer */
+  .footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,114,.2);margin-top:50px;padding:60px 40px 36px}
+  .footer-inner{max-width:1080px;margin:0 auto}
+  .footer-brand{text-align:center;margin-bottom:42px}
+  .footer-phi{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:2rem;color:var(--ivory)}
+  .footer-line{width:42px;height:1px;background:var(--gold);margin:14px auto}
+  .footer-baseline-1{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light)}
+  .footer-baseline-2{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,220,200,.5);margin-top:4px}
+  .footer-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .footer-col h4{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:600}
+  .footer-col ul{list-style:none}
+  .footer-col li{margin-bottom:9px}
+  .footer-col a,.footer-col span{font-size:.84rem;color:rgba(232,220,200,.66);text-decoration:none;font-weight:300}
+  .footer-col a:hover{color:var(--gold-light)}
+  .footer-link-special{color:var(--gold-light)!important}
+  .footer-meta{text-align:center;margin-top:40px;padding-top:26px;border-top:1px solid rgba(196,164,114,.15);font-family:var(--font-mono);font-size:.66rem;letter-spacing:.05em;color:rgba(232,220,200,.5);line-height:1.9}
+  .footer-meta strong{color:var(--gold-light)}
+
+  @media(max-width:760px){.four{grid-template-columns:1fr}.footer-nav{grid-template-columns:1fr 1fr}.wrap{padding:0 22px}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://phi-signature.fr/la-fonction-g.html#webpage","url":"https://phi-signature.fr/la-fonction-g.html","name":"La fonction G — le sceau du procédé PROBATOR","inLanguage":"fr-FR","isPartOf":{"@id":"https://phi-signature.fr/#website"},"about":{"@id":"https://phi-signature.fr/#software"},"description":"La fonction G scelle chaque signature Φ : une empreinte unique qui lie l'identité, le document, l'appareil et l'instant. Infalsifiable, purement mathématique."},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://phi-signature.fr/"},{"@type":"ListItem","position":2,"name":"La fonction G","item":"https://phi-signature.fr/la-fonction-g.html"}]}]}
+</script>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="tb-phi">Φ</a>
+  <a href="index.html" class="tb-back">← Retour à l'accueil</a>
+</div>
+
+<header class="hero">
+  <p class="eyebrow">PROBATOR · Pilier I</p>
+  <h1>La fonction<br><b>mathématique G</b></h1>
+  <p class="role">Ce qui scelle</p>
+  <p class="notaire">— le sceau</p>
+  <p class="lede">À chaque signature, <em class="phi">Φ</em> calcule une empreinte unique. Pas un cachet posé après coup : un nombre qui <em>est</em> la signature, et qui ne peut exister qu'une seule fois.</p>
+</header>
+
+<div class="geq-wrap">
+  <div class="geq">
+    <span class="cv tl"></span><span class="cv tr"></span><span class="cv bl"></span><span class="cv br"></span>
+    <div class="eq"><span class="g">G</span> = <span class="ph">Φ</span> ( DI &#8214; Document &#8214; Silicium &#8214; Instant )</div>
+    <div class="terms"><span class="term">Identité</span><span class="term">Document</span><span class="term">Appareil</span><span class="term">Instant</span></div>
+  </div>
+</div>
+
+<section class="doctrine">
+  <div class="wrap">
+    <h2 class="sec">Quatre éléments,<br><b>un seul nombre</b></h2>
+    <p class="sec-sub">G noue ensemble, de manière indissociable, les quatre faits qui définissent un acte de signature.</p>
+    <div class="four">
+      <div class="elt">
+        <p class="k">DI · Qui</p>
+        <h3>L'identité</h3>
+        <p>L'empreinte d'identité du signataire — non un nom recopié, mais une donnée propre, vérifiable, qui ne désigne que lui.</p>
+      </div>
+      <div class="elt">
+        <p class="k">Document · Quoi</p>
+        <h3>Le document</h3>
+        <p>L'empreinte exacte du contenu signé. Un octet modifié, et ce n'est plus le même document — donc plus la même signature.</p>
+      </div>
+      <div class="elt">
+        <p class="k">Silicium · Où</p>
+        <h3>L'appareil</h3>
+        <p>L'ancrage matériel : l'acte naît sur un appareil donné, dont la signature porte la marque contextuelle.</p>
+      </div>
+      <div class="elt">
+        <p class="k">Instant · Quand</p>
+        <h3>L'instant</h3>
+        <p>Le moment de l'acte, scellé dans le calcul. La signature est datée de l'intérieur, pas par une horloge qu'on pourrait contredire.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="doctrine" style="padding-top:10px">
+  <div class="wrap">
+    <div class="rule"></div>
+    <h2 class="sec">Changez un détail,<br><b>tout change</b></h2>
+    <p class="prose">C'est la propriété qui rend <em class="phi">Φ</em> infalsifiable : <strong>l'effet d'avalanche</strong>. Modifiez un seul caractère du document, changez d'appareil, décalez l'instant d'une seconde — et l'empreinte G obtenue est <strong>entièrement différente</strong>, sans aucune ressemblance avec la précédente.</p>
+    <p class="prose">Il devient alors impossible de fabriquer une signature valide sans réunir réellement les quatre éléments d'origine. On ne peut ni recopier G d'un document à un autre, ni l'attribuer à un autre signataire, ni le pré-dater. La preuve ne repose sur la parole de personne : elle est <strong>purement mathématique</strong>.</p>
+  </div>
+</section>
+
+<div class="docwrap">
+  <p class="doccap">Ce que G produit — le certificat exporté</p>
+  <svg class="doc" viewBox="0 0 420 594" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Certificat de signature exporté">
+    <rect width="420" height="594" fill="#faf8f2"/>
+    <!-- header -->
+    <rect width="420" height="62" fill="#0e1c35"/>
+    <text x="22" y="33" font-family="Georgia,serif" font-style="italic" font-size="22" fill="#d4b888">Φ</text>
+    <text x="44" y="33" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="15" fill="#e8dcc8">Certificat de signature</text>
+    <text x="22" y="48" font-family="'IBM Plex Mono',monospace" font-size="6.4" letter-spacing="1.4" fill="#c4a472">AUTOPORTÉ · VÉRIFIABLE · SANS TIERS</text>
+    <text x="398" y="48" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="6.4" letter-spacing="1.2" fill="#d4b888">AUTOCERT · ML-DSA-65</text>
+    <rect y="62" width="420" height="2" fill="#c4a472"/>
+    <!-- meta row -->
+    <text x="22" y="84" font-family="'IBM Plex Mono',monospace" font-size="6" letter-spacing="1.2" fill="#6f520f">SIGNATAIRE</text>
+    <text x="160" y="84" font-family="'IBM Plex Mono',monospace" font-size="6" letter-spacing="1.2" fill="#6f520f">DOCUMENT</text>
+    <text x="398" y="84" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="6" letter-spacing="1.2" fill="#6f520f">SIGNÉ LE</text>
+    <text x="22" y="95" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#0e1c35">fjl · Φ · 3f14c6c2</text>
+    <text x="160" y="95" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#0e1c35">Attestation — pdf</text>
+    <text x="398" y="95" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#0e1c35">30/05/2026 · 21:28</text>
+    <line x1="22" y1="106" x2="398" y2="106" stroke="#e0d8c6" stroke-width="1"/>
+    <!-- doc signé -->
+    <text x="22" y="124" font-family="'IBM Plex Mono',monospace" font-size="7" letter-spacing="1.4" fill="#6f520f">DOCUMENT SIGNÉ</text>
+    <g font-family="'IBM Plex Mono',monospace" font-size="7" fill="#0e1c35">
+      <text x="22" y="140">Nom du fichier</text><text x="200" y="140" fill="#3a4761">Attestation_de_signature.pdf</text>
+      <text x="22" y="153">SHA3-256</text><text x="200" y="153" fill="#3a4761">e4fbfec6a&#8230;d6b1b81957144ab1&#8230;</text>
+      <text x="22" y="166">Taille</text><text x="200" y="166" fill="#3a4761">— Ko</text>
+    </g>
+    <line x1="22" y1="178" x2="398" y2="178" stroke="#e0d8c6" stroke-width="1"/>
+    <!-- attestation crypto -->
+    <text x="22" y="196" font-family="'IBM Plex Mono',monospace" font-size="7" letter-spacing="1.4" fill="#6f520f">ATTESTATION CRYPTOGRAPHIQUE</text>
+    <g font-family="'IBM Plex Mono',monospace" font-size="7" fill="#0e1c35">
+      <text x="22" y="212">Compteur monotone</text><text x="200" y="212" fill="#3a4761">29316736</text>
+      <text x="22" y="225">Instant signature</text><text x="200" y="225" fill="#3a4761">30/05/2026 · 21:28:04 UTC+2</text>
+      <text x="22" y="238">Instant émission cert.</text><text x="200" y="238" fill="#3a4761">30/05/2026 · 21:28:04 UTC+2</text>
+      <text x="22" y="251">ID certificat</text><text x="200" y="251" fill="#3a4761">d30a7449</text>
+      <text x="22" y="264">Signature crypto</text><text x="200" y="264" fill="#3a4761">ML-DSA-65 · 20378 octets · base64</text>
+    </g>
+    <line x1="22" y1="276" x2="398" y2="276" stroke="#e0d8c6" stroke-width="1"/>
+    <!-- silicium -->
+    <text x="22" y="294" font-family="'IBM Plex Mono',monospace" font-size="7" letter-spacing="1.4" fill="#6f520f">SILICIUM (CONTEXTUEL)</text>
+    <g font-family="'IBM Plex Mono',monospace" font-size="7" fill="#0e1c35">
+      <text x="22" y="310">Appareil vérificateur</text><text x="200" y="310" fill="#3a4761">samsung SM-A176B</text>
+      <text x="22" y="323">Lien au moment</text><text x="200" y="323" fill="#3a4761">vérification réelle ML-DSA-65</text>
+    </g>
+    <!-- ceremonial note -->
+    <rect x="22" y="340" width="376" height="92" rx="6" fill="none" stroke="#c4a472" stroke-width="1" opacity="0.55"/>
+    <text x="34" y="360" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="9.5" fill="#0e1c35">Ce certificat est auto-porté. La signature</text>
+    <text x="34" y="376" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="9.5" fill="#0e1c35">ML-DSA-65 et son appendice se vérifient par</text>
+    <text x="34" y="392" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="9.5" fill="#0e1c35">tout expert judiciaire avec une bibliothèque</text>
+    <text x="34" y="408" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="9.5" fill="#0e1c35">standard — sans contacter PHI SAS, sans tiers</text>
+    <text x="34" y="424" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="9.5" fill="#0e1c35">de confiance, même après la disparition de l'app.</text>
+    <!-- footer -->
+    <rect y="566" width="420" height="28" fill="#0e1c35"/>
+    <circle cx="26" cy="580" r="3" fill="#5a8033"/>
+    <text x="36" y="583" font-family="'IBM Plex Mono',monospace" font-size="6.2" letter-spacing="1.2" fill="#d4b888">OPPOSABLE EN JUSTICE · VÉRIFIE ML-DSA-65 · SANS TIERS · LOCAL</text>
+    <text x="398" y="583" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="6.2" fill="#c4a472">1 / 2</text>
+  </svg>
+</div>
+
+<section class="next">
+  <div class="wrap">
+    <p class="small">Le second pilier</p>
+    <h2 class="sec" style="margin-bottom:6px"><b>Le journal chaîné</b></h2>
+    <p class="sec-sub" style="margin-bottom:8px">G scelle l'instant. Le journal le garde — et le rend rejouable des années plus tard.</p>
+    <a href="le-journal-chaine.html">Le journal chaîné →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature mathématique</div>
+      <div class="footer-baseline-2">Post-Quantique · sans tiers de confiance</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-fonction-g.html" class="footer-link-special">La fonction G</a></li>
+          <li><a href="le-journal-chaine.html">Le journal chaîné</a></li>
+          <li><a href="l-enclave-silicium.html">L'enclave silicium</a></li>
+          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Professions</h4>
+        <ul>
+          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="professions/justice.html">Justice</a></li>
+          <li><a href="professions/banques.html">Banques &amp; finance</a></li>
+          <li><a href="professions/medecins.html">Santé</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
+          <li><span style="opacity:.45">Φ Desktop · à venir</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Société</h4>
+        <ul>
+          <li><a href="a-propos/A-Propos.html">À propos</a></li>
+          <li><a href="Pourquoi-Φ.html" class="footer-link-special">Pourquoi Φ ?</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
+      Procédés protégés · © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
