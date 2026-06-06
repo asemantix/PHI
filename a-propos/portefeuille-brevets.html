@@ -1,41 +1,360 @@
-Bien sûr — je te fais un état clair et honnête. On est le **6 juin**, lancement visé le **15**. Voici où on en est.
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portefeuille de brevets — Les brevets qui protègent le huis-clos cryptographique · alternative à DocuSign · Φ PHI</title>
+<meta name="description" content="Un portefeuille de brevets déposés, 8 familles techniques. Les brevets qui protègent le huis-clos cryptographique — indépendamment de l'algorithme. Toute implémentation équivalente est couverte. Fonction G, PACT, symétrie probatoire bilatérale post-quantique, AUTOCERT. L'architecture post-quantique souveraine signée PHI, alternative à DocuSign, Yousign et Adobe Sign.">
+<meta name="keywords" content="brevets signature en huis-clos, huis-clos cryptographique brevets, portefeuille brevets Φ PHI, fonction G, PACT co-signature, symétrie probatoire bilatérale, AUTOCERT, AION ASEMANTIX brevets INPI, alternative DocuSign brevetée, alternative Yousign brevetée, ML-DSA-65, ML-KEM-768, Inline-Offline marque déposée, phi-signature.fr">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="PHI">
+<link rel="canonical" href="https://phi-signature.fr/portefeuille-brevets.html">
+<meta name="theme-color" content="#0e1c35">
 
-## ✅ Ce qui est FAIT et poussé (sur la branche)
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-| Sujet | État |
-|---|---|
-| **Cœur crypto** (signature post-quantique, réception, dossier identité, attestation) | ✅ fait & vérifié réel (192 tests, KAT NIST) — c'est le plus dur, c'est solide |
-| **Fix bio** (« annulée » ≠ « refusée », faux négatif) + date huis-clos figée retirée | ✅ testé sur ton tel |
-| **Renommage app** → `applicationId = phi.signature` (identité Play définitive) | ✅ fait |
-| **Tunnel d'activation — étape 1** (ActivationActivity + lecture du lien `phi://activer`) | ✅ poussé, **15 tests JVM verts** |
-| **Tunnel d'activation — étape 2** (LemonSqueezy, mapping forfaits, licence chiffrée) | ✅ **codé et poussé** (à builder sur ton tel) |
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/portefeuille-brevets.html">
+<meta property="og:site_name" content="Φ — PHI">
+<meta property="og:title" content="Portefeuille de brevets — Les brevets qui protègent le huis-clos cryptographique · Φ">
+<meta property="og:description" content="Un portefeuille de brevets déposés, 8 familles. Les brevets qui protègent le huis-clos cryptographique — indépendamment de l'algorithme. Toute implémentation équivalente est couverte.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:secure_url" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portefeuille de brevets — les brevets qui protègent le huis-clos cryptographique">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:title" content="Portefeuille de brevets — Les brevets du huis-clos cryptographique · Φ">
+<meta name="twitter:description" content="Un portefeuille de brevets déposés, 8 familles. Les brevets qui protègent le huis-clos — indépendamment de l'algorithme. Toute implémentation équivalente est couverte.">
+<meta property="article:published_time" content="2026-05-01T00:00:00+02:00">
+<meta property="article:modified_time" content="2026-06-06T00:00:00+02:00">
+<meta property="article:author" content="https://phi-signature.fr/a-propos/A-Propos.html">
+<meta property="article:section" content="Propriété intellectuelle & Cryptographie">
+<meta name="twitter:image:alt" content="Portefeuille de brevets — les brevets qui protègent le huis-clos cryptographique">
+<meta name="twitter:creator" content="@phi_signaturefr">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://phi-signature.fr/portefeuille-brevets.html#webpage",
+      "name": "Portefeuille de brevets — Les brevets qui protègent le huis-clos cryptographique · Φ",
+      "url": "https://phi-signature.fr/portefeuille-brevets.html",
+      "description": "Un portefeuille de brevets déposés, 8 familles. Les brevets qui protègent le huis-clos cryptographique — indépendamment de l'algorithme. Toute implémentation équivalente est couverte.",
+      "inLanguage": "fr-FR",
+      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Les brevets qui protègent le huis-clos cryptographique",
+          "description": "Le portefeuille de brevets PHI protège le huis-clos cryptographique en tant que procédé — indépendamment de l'algorithme cryptographique sous-jacent. Toute implémentation équivalente du huis-clos (RSA, ECDSA, EdDSA, ML-DSA, ML-KEM, ou tout algorithme post-quantique futur) tombe sous la protection de ces brevets."
+        },
+        {
+          "@type": "Thing",
+          "name": "Brevets fondamentaux Φ",
+          "description": "Fonction G (fusion document-signataire-contexte), PACT (co-signatures multipartites), symétrie probatoire bilatérale post-quantique, AUTOCERT (dérivation de clé silicium). Tous les piliers du huis-clos cryptographique."
+        },
+        {
+          "@type": "Thing",
+          "name": "Alternative française brevetée à DocuSign",
+          "description": "Là où DocuSign, Adobe Sign et Yousign exploitent des architectures cloud non brevetées et facilement contournables, PHI protège l'architecture de preuve elle-même — la souveraineté française est protégée par des titres INPI, pas par engagement contractuel."
+        }
+      ],
+      "mentions": [
+        {"@type": "CreativeWork", "name": "Fonction G — procédé probatoire"},
+        {"@type": "CreativeWork", "name": "PACT — co-signatures multipartites"},
+        {"@type": "CreativeWork", "name": "Symétrie probatoire bilatérale post-quantique"},
+        {"@type": "CreativeWork", "name": "AUTOCERT — dérivation de clé silicium"},
+        {"@type": "Legislation", "name": "NIST FIPS 204 — ML-DSA"},
+        {"@type": "Legislation", "name": "NIST FIPS 203 — ML-KEM"}
+      ],
+      "publisher": {"@id": "https://phi-signature.fr/#organization"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+          {"@type": "ListItem", "position": 2, "name": "À propos", "item": "https://phi-signature.fr/a-propos/"},
+          {"@type": "ListItem", "position": 3, "name": "Portefeuille de brevets", "item": "https://phi-signature.fr/portefeuille-brevets.html"}
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "PHI",
+      "alternateName": "Φ",
+      "url": "https://phi-signature.fr",
+      "email": "phi-signature@proton.me",
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign. Un portefeuille de brevets déposés — Fonction G, PACT, symétrie probatoire, AUTOCERT.",
+      "foundingDate": "2024",
+      "address": {"@type": "PostalAddress", "streetAddress": "33 rue du Frère Benoît", "postalCode": "69600", "addressLocality": "Oullins-Pierre-Bénite", "addressCountry": "FR"},
+      "sameAs": ["https://github.com/asemantix", "https://www.linkedin.com/company/121854148/", "https://twitter.com/phi_signaturefr", "https://x.com/phi_signaturefr"]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#1a2942;--gold:#c4a472;--gold-deep:#6f520f;--gold-soft:#d4b888;--gold-light:#d4b888;--ivory:#e8dcc8;--paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;--rule:#e6e3dc;--ink:#0e1c35;--ink-muted:#4a5a73;--ink-faded:#8a96a8;--font-d:"Playfair Display",Georgia,serif;--font-m:"IBM Plex Mono",Consolas,monospace;--font-s:"IBM Plex Sans",-apple-system,sans-serif;--font-eb:"EB Garamond",Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font-s);color:var(--ink);background:var(--paper);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}.nav-inner{max-width:1200px;margin:0 auto;padding:16px 48px;display:flex;align-items:center;justify-content:space-between}.nav-phi{font-family:var(--font-eb);font-style:italic;font-size:2rem;color:var(--gold-deep);font-weight:500;text-decoration:none;line-height:1}.nav-links{display:flex;gap:28px;align-items:center}.nav-links a{font-family:var(--font-m);font-size:.7rem;color:var(--ink-muted);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:color .2s}.nav-links a:hover{color:var(--navy)}.nav-cta{padding:9px 22px;background:var(--navy);color:white!important;border-radius:4px;font-weight:500;font-size:.78rem;letter-spacing:.06em;transition:background .2s}.nav-cta:hover{background:var(--navy-deep)!important}@media(max-width:720px){.nav-inner{padding:14px 24px}.nav-links a:not(.nav-cta){display:none}}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:24px 48px 0;font-family:var(--font-m);font-size:.7rem;color:var(--ink-faded);letter-spacing:.12em;text-transform:uppercase}.breadcrumb a{color:var(--gold-deep);text-decoration:none}.breadcrumb a:hover{color:var(--navy)}.breadcrumb span{color:var(--gold)}@media(max-width:720px){.breadcrumb{padding:16px 24px 0}}
+.hero{background:var(--navy);padding:80px 48px 90px;position:relative;overflow:hidden}.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(196,164,114,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(196,164,114,.015) 1px,transparent 1px);background-size:56px 56px;pointer-events:none}.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2}.hero-eyebrow{font-family:var(--font-m);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(212,184,136,.55);margin-bottom:24px;font-weight:500}.hero-title{font-family:var(--font-d);font-size:clamp(2.4rem,5vw,4rem);line-height:1.08;font-weight:500;color:var(--ivory);margin-bottom:14px;letter-spacing:-.01em}.hero-title em{color:var(--gold-soft);font-style:italic}.hero-mark{font-family:var(--font-d);font-style:italic;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--gold-soft);line-height:1;letter-spacing:-.015em;margin:10px 0 26px;max-width:900px}@media(max-width:720px){.hero-mark{font-size:1.9rem;margin:8px 0 18px}}.hero-sub{font-family:var(--font-d);font-style:italic;font-size:1.15rem;color:rgba(232,220,200,.55);max-width:660px;line-height:1.6}
+.chiffres{background:var(--paper-deep);border-bottom:1px solid var(--rule)}.chiffres-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(3,1fr)}.chiffre{padding:40px 0;text-align:center;border-right:1px solid var(--rule)}.chiffre:last-child{border-right:none}.chiffre-n{font-family:var(--font-d);font-size:3.2rem;font-weight:500;color:var(--gold-deep);line-height:1;margin-bottom:8px}.chiffre-n.small{font-size:1.5rem;font-family:var(--font-m);letter-spacing:.05em;padding-top:14px}.chiffre-label{font-family:var(--font-m);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faded);font-weight:500}@media(max-width:600px){.chiffres-inner{grid-template-columns:1fr}.chiffre{border-right:none;border-bottom:1px solid var(--rule)}.chiffre:last-child{border-bottom:none}}
+.fil{max-width:1200px;margin:0 auto;padding:64px 48px;border-bottom:1px solid var(--rule)}.fil-inner{max-width:760px;margin:0 auto;text-align:center}.fil-eyebrow{font-family:var(--font-m);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px;font-weight:600}.fil-text{font-family:var(--font-d);font-size:1.45rem;line-height:1.55;color:var(--navy);font-weight:400}.fil-text em{font-style:italic;color:var(--gold-deep);font-weight:500}.fil-text .phi-eb{font-family:var(--font-eb);font-style:italic;color:var(--gold-deep)}@media(max-width:720px){.fil{padding:48px 24px}}
+.protection{background:var(--navy);padding:80px 48px;border-bottom:1px solid rgba(196,164,114,.12)}.protection-inner{max-width:900px;margin:0 auto}.protection-eyebrow{font-family:var(--font-m);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(212,184,136,.55);margin-bottom:20px;font-weight:600}.protection-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.12;font-weight:500;color:var(--ivory);margin-bottom:28px}.protection-title em{color:var(--gold-soft);font-style:italic}.protection-text{font-family:var(--font-s);font-size:.95rem;color:rgba(232,220,200,.6);line-height:1.82;font-weight:300;margin-bottom:16px;max-width:720px}.protection-text strong{color:rgba(232,220,200,.88);font-weight:500}.protection-encart{border:.5px solid rgba(196,164,114,.28);padding:28px 32px;margin-top:36px;max-width:720px}.protection-encart-eyebrow{font-family:var(--font-m);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(212,184,136,.45);margin-bottom:12px;font-weight:500}.protection-encart-text{font-family:var(--font-d);font-style:italic;font-size:1.05rem;line-height:1.65;color:rgba(232,220,200,.65)}.protection-encart-text strong{color:var(--gold-soft);font-style:normal;font-weight:500}@media(max-width:720px){.protection{padding:52px 24px}}
+.inside{background:var(--paper-deep);padding:80px 48px;border-bottom:1px solid var(--rule)}.inside-inner{max-width:900px;margin:0 auto}.inside-eyebrow{font-family:var(--font-m);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:20px;font-weight:600}.inside-title{font-family:var(--font-d);font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.12;font-weight:500;color:var(--navy);margin-bottom:28px}.inside-title em{font-style:italic;color:var(--gold-deep)}.inside-text{font-family:var(--font-s);font-size:.95rem;color:var(--ink-muted);line-height:1.82;font-weight:300;margin-bottom:16px;max-width:720px}.inside-text strong{color:var(--navy);font-weight:500}.inside-badge{display:inline-flex;align-items:center;gap:18px;background:var(--navy);padding:20px 30px;margin:28px 0;border:.5px solid rgba(196,164,114,.28)}.inside-badge-phi{font-family:var(--font-eb);font-style:italic;font-size:2.2rem;color:var(--gold);line-height:1}.inside-badge-sep{width:1px;height:40px;background:rgba(196,164,114,.28)}.inside-badge-text{display:flex;flex-direction:column;gap:1px}.inside-badge-name{font-family:var(--font-d);font-style:italic;font-weight:700;font-size:1.15rem;color:var(--ivory)}.inside-badge-inside{font-family:var(--font-d);font-style:italic;font-size:1.4rem;color:var(--gold)}.inside-badge-tagline{font-family:var(--font-m);font-size:.6rem;letter-spacing:.12em;color:rgba(232,220,200,.35);margin-top:3px}.inside-grille{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);margin-top:32px}.inside-item{background:var(--paper);padding:22px 26px}.inside-item-label{font-family:var(--font-m);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:7px;font-weight:600}.inside-item-text{font-family:var(--font-s);font-size:.88rem;color:var(--ink-muted);line-height:1.68;font-weight:300}@media(max-width:720px){.inside{padding:52px 24px}.inside-grille{grid-template-columns:1fr}}
+.familles{max-width:1200px;margin:0 auto;padding:80px 48px}@media(max-width:720px){.familles{padding:48px 24px}}.famille{display:grid;grid-template-columns:80px 1fr;gap:0;margin-bottom:1px;background:var(--paper)}.famille:last-child{margin-bottom:0}.famille-num{background:var(--paper-deep);border:.5px solid var(--rule);display:flex;align-items:flex-start;justify-content:center;padding:32px 0;font-family:var(--font-m);font-size:.65rem;color:var(--gold-deep);letter-spacing:.22em;font-weight:600;text-transform:uppercase}.famille-body{border:.5px solid var(--rule);border-left:none;padding:32px 40px}.famille-title{font-family:var(--font-d);font-size:1.35rem;font-weight:500;color:var(--navy);margin-bottom:8px;letter-spacing:-.008em}.famille-title em{font-style:italic;color:var(--gold-deep)}.famille-desc{font-family:var(--font-s);font-size:.9rem;color:var(--ink-muted);line-height:1.7;margin-bottom:16px;font-weight:300}.famille-brevets{display:flex;flex-wrap:wrap;gap:6px}.brevet-tag{font-family:var(--font-m);font-size:.62rem;letter-spacing:.1em;color:var(--navy);background:var(--paper-deep);border:.5px solid var(--rule);padding:5px 10px;border-radius:2px;font-weight:500;text-transform:uppercase}@media(max-width:600px){.famille{grid-template-columns:1fr}.famille-num{padding:16px 24px;justify-content:flex-start}.famille-body{border-left:.5px solid var(--rule);border-top:none;padding:24px}.famille:last-child .famille-body{border-bottom:.5px solid var(--rule)}}
+.conclusion{background:var(--navy);padding:80px 48px;text-align:center;position:relative;overflow:hidden}.conclusion::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(196,164,114,.012) 1px,transparent 1px),linear-gradient(90deg,rgba(196,164,114,.012) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}.conclusion-inner{max-width:720px;margin:0 auto;position:relative;z-index:2}.conclusion-phi{font-family:var(--font-eb);font-style:italic;font-size:3rem;color:var(--gold);line-height:1;margin-bottom:24px}.conclusion-text{font-family:var(--font-d);font-size:clamp(1.3rem,2.5vw,1.9rem);line-height:1.45;color:var(--ivory);font-weight:400;margin-bottom:32px}.conclusion-text em{color:var(--gold-soft);font-style:italic}.conclusion-sub{font-family:var(--font-m);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(212,184,136,.4);line-height:2}@media(max-width:720px){.conclusion{padding:60px 24px}}
+.footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:60px 48px 36px}.footer-inner{max-width:1100px;margin:0 auto}.footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(196,164,114,.2)}.footer-phi{font-family:var(--font-eb);font-style:italic;font-size:3.2rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:12px}.footer-line{width:48px;height:1px;background:var(--gold);margin:0 auto 12px}.footer-baseline-1{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--gold-soft);margin-bottom:3px}.footer-baseline-2{font-family:var(--font-d);font-style:italic;font-size:.85rem;color:rgba(212,184,136,.75)}.footer-nav{display:grid;grid-template-columns:repeat(3, 1fr);gap:48px;margin-bottom:32px}.footer-col h4{font-family:var(--font-m);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);font-weight:500;margin-bottom:14px}.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}.footer-col a{font-family:var(--font-d);font-style:italic;font-size:.92rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}.footer-col a:hover{color:var(--gold-soft)}.footer-link-special{color:rgba(196,164,114,.65)!important;border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;display:block;margin-top:4px}.footer-link-special:hover{color:var(--gold-soft)!important;border-color:var(--gold)!important}.footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:22px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}.footer-meta strong{color:var(--gold-soft);font-weight:500}@media(max-width:720px){.footer{padding:48px 24px 28px}.footer-nav{grid-template-columns:1fr;gap:24px}}
+</style>
+</head>
+<body>
 
-## ⏳ EN COURS / à valider
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-phi">Φ</a>
+    <nav class="nav-links">
+      <a href="a-propos/A-Propos.html">À propos</a>
+      <a href="la-mecanique-probatoire.html">La mécanique</a>
+      <a href="tarifications.html" class="nav-cta">Accéder à Φ</a>
+    </nav>
+  </div>
+</header>
 
-- **Étape 2 à builder** sur PowerShell (je n'ai pas de SDK ici) → 3 commandes que je t'ai données. C'est le seul truc « écrit mais pas encore vu tourner ».
-- **Reskin sombre** (la vraie planche navy) → l'autre fenêtre PowerShell s'en occupe.
-- **Compteur d'enrôlement** (le « ·5 » faux, vrai = 7 écrans) → à corriger par la fenêtre reskin.
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Accueil</a> <span>›</span>
+  <a href="a-propos/A-Propos.html">À propos</a> <span>›</span>
+  Portefeuille de brevets
+</nav>
 
-## 🔜 RESTE pour le lancement
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">PHI · Propriété intellectuelle · Huis-clos breveté</div>
+    <h1 class="hero-title">Un portefeuille de brevets.<br><em>Un seul fil conducteur.</em></h1>
+    <div class="hero-mark">Les brevets.</div>
+    <p class="hero-sub">Les brevets qui protègent le huis-clos cryptographique. Transmettre, authentifier et prouver — sans métadonnées, sans tiers de confiance, sans horloge externe. La souveraineté numérique face à la menace quantique.</p>
+  </div>
+</section>
 
-1. **Builder + tester l'étape 2** (avec une vraie clé LemonSqueezy).
-2. **Fichiers web** (`install`/`activer`/`assetlinks`) → `phi.signature` → c'est **Claude web** (autre repo).
-3. **Empreinte SHA-256** dans `assetlinks.json` → seulement **après la 1ʳᵉ publication** (l'App Link `https://` ne s'auto-vérifie qu'à ce moment).
-4. **Étape 4** (quota 50/100, multi-appareils, anti-triche horloge) → **gros morceau, pas commencé**.
+<div class="chiffres">
+  <div class="chiffres-inner">
+    <div class="chiffre"><div class="chiffre-n">8</div><div class="chiffre-label">Familles techniques</div></div>
+    <div class="chiffre"><div class="chiffre-n small">ML-DSA-65<br>ML-KEM-768</div><div class="chiffre-label">Standards NIST post-quantiques</div></div>
+    <div class="chiffre"><div class="chiffre-n">1</div><div class="chiffre-label">Découverte fondatrice</div></div>
+  </div>
+</div>
 
-## ❓ La vraie décision qui pèse sur le calendrier
+<div class="fil">
+  <div class="fil-inner">
+    <div class="fil-eyebrow">La découverte fondatrice</div>
+    <p class="fil-text">Le temps est une propriété <em>intrinsèque aux systèmes</em> — endogène, thermodynamique, mesurable sans horloge externe. De cette définition, toutes les inventions ont découlé. Chacune appelant la suivante. Jusqu'au paradigme <span class="phi-eb">Φ</span> lui-même : une signature qui ne se répudie pas.</p>
+  </div>
+</div>
 
-**L'étape 4 (le quota) est-elle indispensable au 15 juin ?**
-- Avec l'étape 2 seule : les gens peuvent **acheter et activer** leur abonnement. ✅
-- Sans l'étape 4 : le quota « 50 envois/mois » **n'est pas encore appliqué** (rien ne bloque au-delà).
-- Pour un lancement, beaucoup acceptent de partir **sans le compteur dur** (la spec prévoit même une « tolérance de dépassement ») et de l'ajouter juste après. **Un seul client = ses propres appareils**, le risque est faible.
+<!-- SECTION : PORTÉE DE LA PROTECTION -->
+<section class="protection">
+  <div class="protection-inner">
+    <div class="protection-eyebrow">Portée de la protection · Ce que couvrent nos brevets</div>
+    <h2 class="protection-title">Ces brevets protègent<br><em>le procédé — pas l'algorithme.</em></h2>
+    <p class="protection-text">Les brevets déposés sur la <strong>Fonction G</strong> et la <strong>symétrie probatoire bilatérale</strong>, ainsi que leurs familles divisionnaires en cours, protègent la <strong>méthode de fusion document-signataire-contexte</strong> et la <strong>preuve symétrique sans tiers de confiance</strong> — indépendamment de l'algorithme cryptographique utilisé pour les mettre en œuvre.</p>
+    <p class="protection-text">Cela signifie que toute implémentation équivalente — qu'elle utilise RSA, ECDSA, EdDSA, ML-DSA, ML-KEM, ou tout algorithme post-quantique standardisé par le NIST aujourd'hui ou demain — tombe sous la protection de ces brevets. <strong>L'objet protégé est l'architecture de preuve, pas le code source.</strong></p>
+  </div>
+</section>
 
-**Mon avis honnête : on n'est PAS très en retard.** Le cœur (la crypto, la preuve) est fait et vérifié — c'est 80 % de la valeur et le plus risqué. Ce qui reste est de la **plomberie** (activation à builder, web à brancher, reskin), pas de la recherche.
+<!-- SECTION : INLINE-OFFLINE INSIDE -->
+<section class="inside">
+  <div class="inside-inner">
+    <div class="inside-eyebrow">Inline-Offline™ · Marque déposée · Programme de certification</div>
+    <h2 class="inside-title">Le procédé a un nom.<br><em>Inline-Offline™ Core.</em></h2>
+    <p class="inside-text">Inline-Offline™ est le procédé breveté par lequel le chiffrement et le déchiffrement s'opèrent <strong>exclusivement sur le dispositif de l'utilisateur</strong> — jamais sur un serveur intermédiaire, jamais chez un tiers, jamais chez nous. Internet est le facteur. Il ne voit pas ce qu'il transporte.</p>
+    <p class="inside-text">Le badge <strong>Inline-Offline™ Core</strong> certifie qu'un produit ou une plateforme implémente ce procédé sous licence. C'est un signal de souveraineté réelle — pas marketing. Chaque porteur du badge a été audité et certifié.</p>
 
-**Pour tenir le 15, je te propose cette priorité :**
-1. **Builder/tester l'étape 2** (1h sur ton tel) — débloque la vente.
-2. **Reskin + compteur** (l'autre fenêtre).
-3. **Web + assetlinks** (Claude web).
-4. **Étape 4 (quota)** → **juste après le lancement**, sauf si tu la veux absolument avant.
+    <div class="inside-badge">
+      <div class="inside-badge-phi">Φ</div>
+      <div class="inside-badge-sep"></div>
+      <div class="inside-badge-text">
+        <span class="inside-badge-name">Inline-Offline<sup style="font-size:.6em;font-family:'IBM Plex Mono',monospace;font-style:normal">™</sup></span>
+        <span class="inside-badge-inside">Core</span>
+        <span class="inside-badge-tagline">Chiffrement souverain · sur votre dispositif</span>
+      </div>
+    </div>
 
-Tu veux qu'on parte là-dessus ? Et dis-moi : l'étape 4 (quota) **avant** ou **après** le 15 ?
+    <div class="inside-grille">
+      <div class="inside-item">
+        <div class="inside-item-label">Constructeurs mobiles</div>
+        <div class="inside-item-text">Tout smartphone équipé d'une enclave matérielle (Secure Enclave Apple, StrongBox Android) peut porter le badge après certification. Le Φ devient natif sur le device.</div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-item-label">Éditeurs de logiciels</div>
+        <div class="inside-item-text">Tout SaaS, application ou plateforme qui intègre notre API sous licence peut afficher Inline-Offline™ Core et garantir à ses utilisateurs une souveraineté réelle.</div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-item-label">Partenaires distributeurs</div>
+        <div class="inside-item-text">Cabinets informatiques, intégrateurs, revendeurs certifiés — le badge leur permet de distribuer Φ à leurs clients sous leur marque, avec notre certification.</div>
+      </div>
+      <div class="inside-item">
+        <div class="inside-item-label">Secteurs réglementés</div>
+        <div class="inside-item-text">Mutuelles, banques, hôpitaux — leurs applications mobiles peuvent certifier Inline-Offline™ Core et répondre aux exigences RGPD, HDS et NIS2 par architecture.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILLES DE BREVETS -->
+<div class="familles">
+
+  <div class="famille">
+    <div class="famille-num">01</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Transport <em>asémantique</em> — le socle</h2>
+      <p class="famille-desc">Des fragments transmis mathématiquement indistinguables du bruit aléatoire, validés localement sans métadonnées, sans serveur, sans sémantique applicative. La décision d'acceptation est indépendante du canal et du contenu. Résistant par construction à l'analyse quantique : aucun intercepteur, présent ou futur, ne peut distinguer un fragment légitime du bruit.</p>
+      <div class="famille-brevets"><span class="brevet-tag">CAMÉLÉON</span><span class="brevet-tag">PIP POLYMORPHE</span><span class="brevet-tag">BRIDGE</span><span class="brevet-tag">Orchestrateur</span></div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">02</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Messagerie &amp; commande<br><em>sur canal hostile</em></h2>
+      <p class="famille-desc">Messagerie sécurisée, boîte aux lettres asémantique et télécommande de dispositifs contraints — tous trois fonctionnant sans infrastructure centralisée, sans métadonnées apparentes, avec acquittement implicite. Le trafic légitime est indistinguable du bruit pour tout observateur externe.</p>
+      <div class="famille-brevets"><span class="brevet-tag">OCTOPUS</span><span class="brevet-tag">MAILBOX</span></div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">03</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Anonymat &amp; non-traçabilité <em>réseau</em></h2>
+      <p class="famille-desc">Identifiants non corrélables, identités réseau multiples simultanées, VPN indétectable par analyse de trafic, trafic collectif décorrélé, dispositif fantôme. Un observateur ne peut corréler deux identifiants distincts ni détecter l'existence d'une communication.</p>
+      <div class="famille-brevets"><span class="brevet-tag">PIP GHOST</span><span class="brevet-tag">SHADOW CROWD</span><span class="brevet-tag">HYDRA</span><span class="brevet-tag">PIP VPN</span><span class="brevet-tag">CLOAK</span><span class="brevet-tag">FANTOM INTERNET</span><span class="brevet-tag">PIP SATELLITE</span><span class="brevet-tag">PIP POLYMORPHE ÉLARGI</span><span class="brevet-tag">PONT CHRONOS</span><span class="brevet-tag">QUANTUM</span></div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">04</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Temps thermodynamique <em>endogène</em> — TUTE</h2>
+      <p class="famille-desc">Application directe de la découverte fondatrice : le temps comme grandeur physique locale, mesurée par l'énergie dissipée, strictement monotone croissante, sans référence externe. Une métrique temporelle souveraine, applicable à l'informatique, aux réseaux, à la gestion de batteries, aux grilles énergétiques.</p>
+      <div class="famille-brevets"><span class="brevet-tag">TUTE</span><span class="brevet-tag">ENERGYSYNC</span><span class="brevet-tag">KERNEL CHRONOS</span><span class="brevet-tag">COMPUTE TUTE</span><span class="brevet-tag">BATTERIES TUTE</span><span class="brevet-tag">TUTE GRID</span><span class="brevet-tag">TOKEN TUTE</span><span class="brevet-tag">GÉNÉRALISTE</span><span class="brevet-tag">RPAG</span></div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">05</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Authentification &amp; identité <em>sans tiers</em></h2>
+      <p class="famille-desc">Signature, jeton à usage unique, resynchronisation cryptographique et infrastructure de confiance décentralisée — sans autorité de certification, sans serveur, sans certificat X.509. La confiance est physique, ancrée dans l'énergie mesurée et les identifiants matériels intrinsèques du dispositif.</p>
+      <div class="famille-brevets"><span class="brevet-tag">AUTOCERT</span><span class="brevet-tag">HEIMDALL</span><span class="brevet-tag">EPKI</span><span class="brevet-tag">ANCHORS</span></div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">06</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Confidentialité &amp; intégrité <em>des données</em></h2>
+      <p class="famille-desc">Accès view-once avec effacement cryptographique, chaînage d'historique d'états sans métadonnées d'ordonnancement, reprise de session sans serveur central, et communication polymorphe autonome sans horloge partagée — y compris dans des environnements sans infrastructure.</p>
+      <div class="famille-brevets"><span class="brevet-tag">BLACKBOX</span><span class="brevet-tag">VCH</span><span class="brevet-tag">PHOENIX</span></div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">07</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Infrastructure <em>systèmes</em></h2>
+      <p class="famille-desc">Système d'exploitation entièrement post-quantique, ordinateur sans dispositif fixe dont l'environnement n'existe qu'en mémoire vive, passerelle domestique asémantique, paiement indistinguable du bruit, et protection autonome par profil énergétique sans base de signatures malware.</p>
+      <div class="famille-brevets"><span class="brevet-tag">Q-DOS</span><span class="brevet-tag">ORDINATEUR LIQUIDE</span><span class="brevet-tag">FHOME</span><span class="brevet-tag">AION PAY</span><span class="brevet-tag">SEKHMET</span></div>
+    </div>
+  </div>
+
+  <div class="famille">
+    <div class="famille-num">08</div>
+    <div class="famille-body">
+      <h2 class="famille-title">Paradigme <em>Φ</em> — auto-certification &amp; preuve sans tiers</h2>
+      <p class="famille-desc">L'aboutissement du fil conducteur : un protocole de signature électronique probatoire qui fusionne mathématiquement l'identité du signataire, le document et le contexte d'acte — sans autorité de certification externe, sans serveur, sans métadonnées. L'auto-certification AUTOCERT généralise ce mécanisme à tout dispositif capable de mesurer sa propre énergie dissipée. La preuve est locale, vérifiable de façon indépendante, et ne se répudie pas. C'est Φ.</p>
+      <div class="famille-brevets"><span class="brevet-tag">Fonction G</span><span class="brevet-tag">AUTOCERT</span><span class="brevet-tag">PACT</span><span class="brevet-tag">Paradigme Φ</span></div>
+    </div>
+  </div>
+
+</div>
+
+<section class="conclusion">
+  <div class="conclusion-inner">
+    <div class="conclusion-phi">Φ</div>
+    <p class="conclusion-text">8 familles techniques.<br><em>Aucune dépendance à un tiers.</em><br>Aucune licence tierce. Aucun algorithme propriétaire d'un éditeur étranger.</p>
+    <div class="conclusion-sub">
+      Fonction G · Symétrie probatoire bilatérale · Brevets déposés · familles divisionnaires en cours<br>
+      Inline-Offline™ · Marque déposée · PHI · © 2026
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature électronique</div>
+      <div class="footer-baseline-2">Post-Quantique</div>
+      <div class="footer-baseline-2">sans tiers de confiance</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
+          <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="asemantique.html">Asémanticité</a></li>
+          <li><a href="intimite-numerique.html">L'intimité numérique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+          <li><a href="protocole-alice-bob.html">Le protocole Alice &amp; Bob</a></li>
+          <li><a href="pour-la-salle-daudience.html">Pour la salle d'audience</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Professions</h4>
+        <ul>
+          <li><a href="professions.html">Toutes les professions</a></li>
+          <li><a href="professions/justice.html">Justice</a></li>
+          <li><a href="professions/medecins.html">Santé</a></li>
+          <li><a href="professions/banques.html">Banques &amp; finance</a></li>
+          <li><a href="professions/mutuelles-assurances.html">Mutuelles &amp; assurances</a></li>
+          <li><a href="professions/rh-compliance.html">RH &amp; compliance</a></li>
+          <li><a href="professions/journalistes.html">Journalistes</a></li>
+          <li><a href="professions/urssaf.html">URSSAF</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
+          <li><a href="a-propos/A-Propos.html">À propos</a></li>
+          <li><a href="portefeuille-brevets.html">Portefeuille de brevets</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ.html" class="footer-link-special">Pourquoi Φ ?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
+      Procédés protégés · © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
