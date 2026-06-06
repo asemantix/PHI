@@ -156,7 +156,7 @@
   :root {
     --navy: #0e1c35;
     --navy-deep: #08111f;
-    --gold: #c8a84b;
+    --gold: #c4a472;
     --gold-deep: #6f520f;
     --gold-light: #e2c87a;
     --gold-soft: #e2c87a;
@@ -164,7 +164,7 @@
     --paper-soft: #f4f2ec;
     --ink: #1a1a2e;
     --ink-muted: #6b7a99;
-    --rule: rgba(200,168,75,.14);
+    --rule: rgba(196,164,114,.14);
     --font-display: 'Playfair Display', Georgia, serif;
     --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
@@ -175,8 +175,8 @@
   body { background: var(--paper); color: var(--navy); font-family: var(--font-sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
   /* ── HEADER ── */
-  .sec-header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: var(--navy); border-bottom: 1px solid rgba(200,168,75,.15); }
-  .sec-header-back { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: color .2s; color: rgba(200,168,75,.5); }
+  .sec-header { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 64px; background: var(--navy); border-bottom: 1px solid rgba(196,164,114,.15); }
+  .sec-header-back { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: color .2s; color: rgba(196,164,114,.5); }
   .sec-header-back:hover { color: var(--gold); }
   .sec-header-phi { font-family: var(--font-display); font-style: italic; font-size: 1.55rem; color: var(--gold); font-weight: 500; text-decoration: none; line-height: 1; }
   .sec-header-cta { background: var(--gold); color: var(--navy); text-decoration: none; padding: 10px 22px; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
@@ -190,8 +190,8 @@
 
   /* ── HERO ── */
   .hero { padding: 96px 48px 88px; background: var(--navy); color: var(--paper); position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,168,75,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(200,168,75,.022) 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
-  .hero-halo { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; background: radial-gradient(ellipse, rgba(200,168,75,.055) 0%, transparent 65%); pointer-events: none; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(196,164,114,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(196,164,114,.022) 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
+  .hero-halo { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 700px; height: 700px; background: radial-gradient(ellipse, rgba(196,164,114,.055) 0%, transparent 65%); pointer-events: none; }
   .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
   .hero-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; color: var(--gold); letter-spacing: 0.44em; text-transform: uppercase; font-weight: 500; margin-bottom: 28px; opacity: .85; }
   .hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 500; line-height: 1.1; letter-spacing: -0.025em; color: var(--paper); margin-bottom: 12px; }
@@ -201,7 +201,7 @@
 
   /* Tags hero */
   .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
-  .hero-tag { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: .2em; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(200,168,75,.3); color: rgba(200,168,75,.7); }
+  .hero-tag { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: .2em; text-transform: uppercase; padding: 6px 14px; border: 1px solid rgba(196,164,114,.3); color: rgba(196,164,114,.7); }
 
   /* Statement central */
   .hero-statement { border-left: 2px solid var(--gold); padding-left: 28px; }
@@ -246,7 +246,7 @@
   .level-body { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); line-height: 1.7; font-weight: 300; }
   .level-card.l2 .level-body { color: rgba(250,249,246,.65); }
   .level-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: .22em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--rule); color: var(--ink-muted); margin-top: 20px; }
-  .level-card.l2 .level-tag { border-color: rgba(200,168,75,.3); color: rgba(200,168,75,.7); }
+  .level-card.l2 .level-tag { border-color: rgba(196,164,114,.3); color: rgba(196,164,114,.7); }
   .level-verdict { font-family: var(--font-sans); font-size: 0.84rem; font-weight: 500; color: #7a9944; margin-top: 16px; }
   .level-card.l2 .level-verdict { color: var(--gold); }
 
@@ -264,7 +264,7 @@
   .flux-line.tagged { color: var(--gold); font-weight: 600; }
   .flux-line.tagged::before { content: '→ '; color: var(--gold); }
   .markers-explain { }
-  .me-stat { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(200,168,75,.12); }
+  .me-stat { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(196,164,114,.12); }
   .me-stat:last-child { border-bottom: none; }
   .me-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: 600; color: var(--gold); line-height: 1; flex-shrink: 0; }
   .me-body { }
@@ -283,7 +283,7 @@
   .io-canal { text-align: center; padding: 0 24px; }
   .io-canal-line { width: 1px; height: 80px; background: linear-gradient(transparent, var(--gold), transparent); margin: 0 auto 12px; opacity: .4; }
   .io-canal-label { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-deep); opacity: .7; writing-mode: vertical-lr; margin: 0 auto; }
-  .io-canal-noise { font-family: var(--font-mono); font-size: 0.62rem; color: rgba(200,168,75,.25); letter-spacing: .05em; line-height: 1.8; text-align: center; margin-top: 12px; word-break: break-all; }
+  .io-canal-noise { font-family: var(--font-mono); font-size: 0.62rem; color: rgba(196,164,114,.25); letter-spacing: .05em; line-height: 1.8; text-align: center; margin-top: 12px; word-break: break-all; }
 
   .io-trademark { margin-top: 48px; padding: 32px 36px; border-left: 3px solid var(--gold); background: var(--paper-soft); }
   .io-trademark-eyebrow { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 14px; opacity: .8; }
@@ -316,22 +316,22 @@
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
   .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); text-decoration: none; padding: 15px 34px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
   .btn-primary:hover { background: var(--gold-light); }
-  .btn-ghost { display: inline-block; background: transparent; color: rgba(250,249,246,.75); text-decoration: none; padding: 14px 28px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; border: 1.5px solid rgba(200,168,75,.3); transition: all .2s; }
-  .btn-ghost:hover { background: rgba(200,168,75,.08); border-color: var(--gold); }
+  .btn-ghost { display: inline-block; background: transparent; color: rgba(250,249,246,.75); text-decoration: none; padding: 14px 28px; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; border: 1.5px solid rgba(196,164,114,.3); transition: all .2s; }
+  .btn-ghost:hover { background: rgba(196,164,114,.08); border-color: var(--gold); }
 
   /* ── FOOTER ── */
-  .footer { background: var(--navy-deep); border-top: 1px solid rgba(200,168,75,.1); }
+  .footer { background: var(--navy-deep); border-top: 1px solid rgba(196,164,114,.1); }
   .footer-inner { max-width: 1200px; margin: 0 auto; padding: 56px 48px; display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
   .footer-brand-phi { font-family: var(--font-display); font-style: italic; font-size: 3.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 12px; }
-  .footer-brand-tag { font-family: var(--font-sans); font-size: 0.8rem; color: rgba(200,168,75,.5); line-height: 1.5; }
+  .footer-brand-tag { font-family: var(--font-sans); font-size: 0.8rem; color: rgba(196,164,114,.5); line-height: 1.5; }
   .footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .footer-col h4 { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(200,168,75,.5); margin-bottom: 14px; font-weight: 500; }
+  .footer-col h4 { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: .28em; text-transform: uppercase; color: rgba(196,164,114,.5); margin-bottom: 14px; font-weight: 500; }
   .footer-col ul { list-style: none; }
   .footer-col li { margin-bottom: 8px; }
   .footer-col a { font-family: var(--font-sans); font-size: 0.82rem; color: rgba(250,249,246,.4); text-decoration: none; transition: color .2s; }
   .footer-col a:hover { color: var(--gold); }
-  .footer-legal { border-top: 1px solid rgba(200,168,75,.08); padding: 24px 48px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; color: rgba(250,249,246,.25); letter-spacing: .1em; line-height: 2; }
-  .footer-legal strong { color: rgba(200,168,75,.45); font-weight: 500; }
+  .footer-legal { border-top: 1px solid rgba(196,164,114,.08); padding: 24px 48px; text-align: center; font-family: var(--font-mono); font-size: 0.62rem; color: rgba(250,249,246,.25); letter-spacing: .1em; line-height: 2; }
+  .footer-legal strong { color: rgba(196,164,114,.45); font-weight: 500; }
 
 
   /* ── 3 BARRIÈRES ── */
@@ -341,13 +341,13 @@
   .barrieres-section .section-lede { color: rgba(250,249,246,.6); }
   .barrieres-section .section-eyebrow { color: var(--gold); }
   .barrieres-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-bottom: 56px; }
-  .barriere-card { padding: 36px 28px; background: rgba(255,255,255,.03); border: 1px solid rgba(200,168,75,.12); }
+  .barriere-card { padding: 36px 28px; background: rgba(255,255,255,.03); border: 1px solid rgba(196,164,114,.12); }
   .barriere-num { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; opacity: .7; }
   .barriere-question { font-family: var(--font-display); font-style: italic; font-size: 1.08rem; font-weight: 500; color: var(--paper); margin-bottom: 16px; line-height: 1.35; }
   .barriere-body { font-family: var(--font-sans); font-size: .85rem; color: rgba(250,249,246,.55); line-height: 1.65; font-weight: 300; margin-bottom: 20px; }
   .barriere-verdict { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: #c84b4b; font-weight: 600; }
-  .barrieres-formule { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(200,168,75,.15); }
-  .formule-text { font-family: var(--font-mono); font-size: clamp(.75rem, 1.5vw, 1rem); letter-spacing: .18em; text-transform: uppercase; color: rgba(200,168,75,.6); margin-bottom: 8px; }
+  .barrieres-formule { text-align: center; padding: 40px 0 20px; border-top: 1px solid rgba(196,164,114,.15); }
+  .formule-text { font-family: var(--font-mono); font-size: clamp(.75rem, 1.5vw, 1rem); letter-spacing: .18em; text-transform: uppercase; color: rgba(196,164,114,.6); margin-bottom: 8px; }
   .formule-equal { font-family: var(--font-display); font-style: italic; font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 600; color: var(--gold); line-height: 1.1; }
   .barrieres-sentence { text-align: center; padding: 40px 0 0; }
   .barrieres-sentence p { font-family: var(--font-display); font-size: clamp(1rem, 2vw, 1.4rem); font-weight: 400; color: rgba(250,249,246,.5); margin-bottom: 8px; line-height: 1.4; }
@@ -379,8 +379,8 @@
     .cta-section { padding: 64px 20px; }
   }
 
-.footer-link-special{color:rgba(200,168,75,.65)!important;border-left:1.5px solid rgba(200,168,75,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
-.footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c8a84b)!important}
+.footer-link-special{color:rgba(196,164,114,.65)!important;border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
+.footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c4a472)!important}
 </style>
 </head>
 <body>
@@ -645,7 +645,7 @@
       </div>
     </div>
 
-    <div class="harvest-verdict" style="border-color:rgba(200,168,75,.3);background:rgba(200,168,75,.04)">
+    <div class="harvest-verdict" style="border-color:rgba(196,164,114,.3);background:rgba(196,164,114,.04)">
       <p style="color:rgba(250,249,246,.75)">
         Pour un attaquant qui intercepte le canal : il voit des millions de blocs de bruit.
         Il ne sait pas lesquels sont des fragments Φ, ni lesquels portent un marqueur,
@@ -810,11 +810,8 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-phi">Φ</div>
-      <div class="footer-line"></div>
-      <div class="footer-baseline-1">La signature électronique</div>
-      <div class="footer-baseline-2">Post-Quantique</div>
-      <div class="footer-baseline-2">sans tiers de confiance</div>
+      <div class="footer-brand-phi">Φ</div>
+      <div class="footer-brand-tag">La signature électronique post-quantique, sans tiers de confiance.</div>
     </div>
     <div class="footer-nav">
       <div class="footer-col">
@@ -849,29 +846,19 @@
         <h4>Accéder</h4>
         <ul>
           <li><a href="tarifications.html">Accéder à Φ</a></li>
-          <li><a href="faq-abonnement.html">Abonnement &amp; FAQ</a></li>
           <li><a href="phi-sovereign.html">Φ Sovereign</a></li>
-          <li><span style="opacity:.45">Φ Desktop · à venir</span></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Société</h4>
-        <ul>
           <li><a href="a-propos/A-Propos.html">À propos</a></li>
           <li><a href="a-propos/portefeuille-brevets.html">Portefeuille de brevets</a></li>
-          <li><a href="Pourquoi-Φ.html" class="footer-link-special">Pourquoi Φ ?</a></li>
-          <li><a href="presse-rp.html">Espace presse</a></li>
-          <li><a href="vos-suggestions.html">Vos suggestions</a></li>
-          <li><a href="Assistance.html">Assistance</a></li>
           <li><a href="contact.html">Demander une démonstration</a></li>
           <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ-quand-docusign-existe.html" class="footer-link-special">Pourquoi Φ quand DocuSign existe ?</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-meta">
-      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
-      Procédés protégés · © 2026 — Tous droits réservés
-    </div>
+  </div>
+  <div class="footer-legal">
+    <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
+    Procédés protégés · © 2026 — Tous droits réservés
   </div>
 </footer>
 
