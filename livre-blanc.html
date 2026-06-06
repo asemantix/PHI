@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>Livre blanc technique Φ — Architecture de signature électronique post-quantique sans opérateur tiers · PHI</title>
+<meta name="description" content="Livre blanc technique de Φ Probatoire : spécification de la chaîne d'identification fermée, du format d'enveloppe .phi, du calcul de la preuve G, du journal cryptographique chaîné et du canal Inline-Offline. ML-DSA-65, ML-KEM-768, SHA3-256, enclave matérielle. Pour DSI, RSSI, ANSSI, experts judiciaires.">
+<meta name="keywords" content="livre blanc signature post-quantique, architecture probatoire Φ, preuve G, enveloppe .phi, journal cryptographique chaîné, ML-DSA-65, ML-KEM-768, SHA3-256, enclave matérielle TEE StrongBox, Inline-Offline, CSPN ANSSI, opposabilité juridique, PHI">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="PHI">
+<link rel="canonical" href="https://phi-signature.fr/livre-blanc.html">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/livre-blanc.html">
+<meta property="og:site_name" content="Φ — PHI">
+<meta property="og:title" content="Livre blanc technique Φ — Architecture de signature électronique post-quantique sans opérateur tiers">
+<meta property="og:description" content="Spécification technique : chaîne d'identification fermée, enveloppe .phi, preuve G, journal chaîné, canal Inline-Offline. ML-DSA-65, ML-KEM-768, SHA3-256.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:title" content="Livre blanc technique Φ — Architecture post-quantique sans opérateur tiers">
+<meta name="twitter:description" content="Spécification technique complète : enveloppe .phi, preuve G, journal chaîné, enclave matérielle, canal Inline-Offline.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://phi-signature.fr/livre-blanc.html#article",
+      "headline": "Livre blanc technique Φ — Architecture de signature électronique post-quantique sans opérateur tiers",
+      "description": "Spécification technique de la chaîne d'identification fermée, du format d'enveloppe .phi, du calcul de la preuve G, du journal cryptographique chaîné et du canal de transmission Inline-Offline.",
+      "datePublished": "2026-05-31",
+      "dateModified": "2026-06-06",
+      "inLanguage": "fr",
+      "image": "https://phi-signature.fr/og-image.jpg",
+      "proficiencyLevel": "Expert",
+      "audience": {"@type": "Audience", "audienceType": "DSI, RSSI, ANSSI, experts judiciaires, auditeurs sécurité"},
+      "keywords": "signature post-quantique, preuve G, enveloppe .phi, ML-DSA-65, ML-KEM-768, SHA3-256, enclave matérielle, journal chaîné, Inline-Offline, CSPN",
+      "author": {"@id": "https://phi-signature.fr/#organization"},
+      "publisher": {"@id": "https://phi-signature.fr/#organization"},
+      "mainEntityOfPage": {"@id": "https://phi-signature.fr/livre-blanc.html"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "La mécanique probatoire", "item": "https://phi-signature.fr/la-mecanique-probatoire.html"},
+        {"@type": "ListItem", "position": 3, "name": "Livre blanc technique", "item": "https://phi-signature.fr/livre-blanc.html"}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "PHI SAS",
+      "alternateName": "Φ",
+      "url": "https://phi-signature.fr",
+      "email": "phi-signature@proton.me",
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign.",
+      "foundingDate": "2024",
+      "address": {"@type": "PostalAddress", "streetAddress": "33 rue du Frère Benoît", "postalCode": "69600", "addressLocality": "Oullins-Pierre-Bénite", "addressCountry": "FR"},
+      "sameAs": ["https://github.com/asemantix", "https://www.linkedin.com/company/121854148/", "https://twitter.com/phi_signaturefr"]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy:#0e1c35; --navy-deep:#08111f; --navy-soft:#1a2942;
+    --gold:#c4a472; --gold-deep:#6f520f; --gold-light:#d4b888;
+    --ivory:#e8dcc8; --paper:#fafaf7; --paper-soft:#f4f1e8; --paper-white:#ffffff;
+    --ink:#1d2330; --ink-muted:#6c7384; --ink-faded:#9ca0aa;
+    --rule:rgba(196,164,114,0.3); --danger:#993333; --success:#5a8033;
+    --font-d:'Playfair Display',Georgia,serif; --font-m:'IBM Plex Mono',monospace;
+    --font-s:'IBM Plex Sans',-apple-system,sans-serif; --font-eb:'EB Garamond',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--font-s);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+
+  .nav{padding:20px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);background:rgba(250,250,247,0.96);backdrop-filter:blur(12px);position:sticky;top:0;z-index:50}
+  .nav-inner{max-width:1280px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{font-family:var(--font-eb);font-style:italic;font-size:2rem;color:var(--gold-deep);font-weight:500;text-decoration:none;line-height:1}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{font-family:var(--font-m);font-size:0.7rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--navy)}
+  .nav-cta{padding:9px 22px;background:var(--navy);color:#fff!important;border-radius:4px;font-size:0.78rem}
+  .nav-cta em{font-family:var(--font-eb);font-style:italic;color:var(--gold-light)}
+  @media(max-width:860px){.nav-links a:not(.nav-cta){display:none}.nav{padding:16px 20px}}
+
+  /* HERO */
+  .hero{background:var(--navy);padding:90px 40px 80px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(196,164,114,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(196,164,114,.02) 1px,transparent 1px);background-size:54px 54px;pointer-events:none}
+  .hero-inner{max-width:880px;margin:0 auto;position:relative;z-index:2;text-align:center}
+  .hero-eyebrow{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.4em;text-transform:uppercase;color:rgba(212,184,136,.6);margin-bottom:28px;font-weight:500}
+  .hero-phi{font-family:var(--font-eb);font-style:italic;font-size:3.4rem;color:var(--gold-light);line-height:1;margin-bottom:18px}
+  .hero-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:500;color:var(--ivory);line-height:1.18;letter-spacing:-.01em;margin-bottom:24px}
+  .hero-title em{font-style:italic;color:var(--gold-light)}
+  .hero-sub{font-family:var(--font-d);font-style:italic;font-size:1.15rem;color:rgba(232,220,200,.6);line-height:1.6;max-width:680px;margin:0 auto}
+  .hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:44px;border:1px solid rgba(196,164,114,.25);max-width:760px;margin-left:auto;margin-right:auto}
+  .hero-meta div{flex:1 1 33%;min-width:150px;padding:18px 20px;border-right:1px solid rgba(196,164,114,.18);border-bottom:1px solid rgba(196,164,114,.18)}
+  .hero-meta-label{font-family:var(--font-m);font-size:0.58rem;letter-spacing:0.24em;text-transform:uppercase;color:rgba(212,184,136,.5);margin-bottom:6px}
+  .hero-meta-val{font-family:var(--font-s);font-size:0.82rem;color:rgba(232,220,200,.85);font-weight:400;line-height:1.4}
+
+  /* LAYOUT TOC + CONTENT */
+  .wrap{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr;position:relative}
+  .toc{display:none}
+  @media(min-width:1080px){
+    .wrap{grid-template-columns:260px 1fr}
+    .toc{display:block;position:sticky;top:84px;align-self:start;max-height:calc(100vh - 84px);overflow-y:auto;padding:48px 28px 48px 40px;border-right:1px solid var(--rule)}
+    .toc-title{font-family:var(--font-m);font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px}
+    .toc ol{list-style:none;counter-reset:t}
+    .toc li{counter-increment:t;border-bottom:1px solid var(--rule)}
+    .toc li:last-child{border-bottom:none}
+    .toc a{display:flex;gap:10px;padding:9px 0;font-family:var(--font-s);font-size:0.78rem;color:var(--ink-muted);text-decoration:none;transition:color .2s;font-weight:300}
+    .toc a::before{content:counter(t,decimal-leading-zero);font-family:var(--font-m);font-size:0.66rem;color:var(--gold);font-weight:500;flex-shrink:0}
+    .toc a:hover{color:var(--navy)}
+  }
+
+  .content{padding:0 40px 40px;min-width:0}
+  @media(max-width:720px){.content{padding:0 20px 20px}}
+
+  .sec{padding:80px 0 0;max-width:760px;margin:0 auto;border-top:1px solid var(--rule)}
+  .sec:first-child{border-top:none}
+  .sec-num{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px}
+  .sec h2{font-family:var(--font-d);font-size:2rem;font-weight:600;color:var(--navy);line-height:1.2;letter-spacing:-.01em;margin-bottom:26px}
+  .sec h2 em{font-style:italic;font-weight:500;color:var(--gold-deep)}
+  .sec h3{font-family:var(--font-d);font-size:1.3rem;font-weight:500;color:var(--navy);line-height:1.3;margin:42px 0 18px}
+  .sec h4{font-family:var(--font-m);font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin:32px 0 14px}
+  .sec p{font-family:var(--font-s);font-size:1rem;color:var(--ink);line-height:1.78;margin-bottom:18px;font-weight:300}
+  .sec p strong{font-weight:600;color:var(--navy)}
+  .sec p em{font-style:italic}
+  .lead{font-family:var(--font-d)!important;font-style:italic;font-size:1.2rem!important;color:var(--ink-muted)!important;line-height:1.6!important;margin-bottom:34px!important}
+  .phi-eb{font-family:var(--font-eb);font-style:italic;color:var(--gold-deep)}
+
+  ul.li,ol.li{margin:18px 0 26px;padding-left:0;list-style:none}
+  ul.li li,ol.li li{font-family:var(--font-s);font-size:0.98rem;color:var(--ink);line-height:1.7;padding:9px 0 9px 26px;position:relative;font-weight:300;border-bottom:1px solid var(--rule)}
+  ul.li li:last-child,ol.li li:last-child{border-bottom:none}
+  ul.li li::before{content:"—";position:absolute;left:0;color:var(--gold-deep)}
+  ol.li{counter-reset:n}
+  ol.li li{counter-increment:n}
+  ol.li li::before{content:counter(n);position:absolute;left:0;color:var(--gold-deep);font-family:var(--font-m);font-size:0.8rem;font-weight:600}
+  ul.li li strong,ol.li li strong{font-weight:600;color:var(--navy)}
+
+  code,.mono{font-family:var(--font-m);font-size:0.85em;background:var(--paper-soft);padding:2px 6px;border-radius:3px;color:var(--gold-deep);font-weight:500;border:1px solid var(--rule)}
+
+  .codeblock{background:var(--navy);border-radius:8px;padding:24px 26px;margin:24px 0;overflow-x:auto}
+  .codeblock pre{font-family:var(--font-m);font-size:0.82rem;color:var(--ivory);line-height:1.7;white-space:pre;font-weight:400}
+  .codeblock .cm{color:rgba(212,184,136,.55)}
+  .codeblock .kw{color:var(--gold-light)}
+
+  table.spec{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.9rem}
+  table.spec th{font-family:var(--font-m);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-deep);text-align:left;padding:12px 14px;border-bottom:1.5px solid var(--gold);font-weight:600}
+  table.spec td{font-family:var(--font-s);font-size:0.88rem;color:var(--ink);padding:12px 14px;border-bottom:1px solid var(--rule);line-height:1.55;font-weight:300;vertical-align:top}
+  table.spec td:first-child{font-family:var(--font-m);font-size:0.78rem;color:var(--navy);font-weight:500;white-space:nowrap}
+  table.spec td strong{font-weight:600;color:var(--navy)}
+  @media(max-width:600px){table.spec td:first-child{white-space:normal}}
+
+  .ref{background:var(--paper-soft);border-left:2px solid var(--gold);padding:22px 26px;margin:26px 0;border-radius:0 4px 4px 0}
+  .ref-label{font-family:var(--font-m);font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
+  .ref-title{font-family:var(--font-d);font-size:1.05rem;color:var(--navy);font-weight:500;margin-bottom:8px}
+  .ref p{font-size:0.88rem!important;color:var(--ink-muted)!important;margin-bottom:0!important;line-height:1.65!important}
+
+  .note{background:var(--paper-white);border:1px solid var(--rule);padding:22px 26px;margin:26px 0;border-radius:4px}
+  .note-label{font-family:var(--font-m);font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink-faded);font-weight:600;margin-bottom:10px}
+  .note p{font-size:0.9rem!important;color:var(--ink-muted)!important;margin-bottom:10px!important}
+  .note p:last-child{margin-bottom:0!important}
+  .note p strong{color:var(--ink)!important}
+
+  .dark-encart{background:var(--navy);border-radius:8px;padding:32px 30px;margin:30px 0}
+  .dark-encart .note-label{color:rgba(212,184,136,.6)}
+  .dark-encart h3{color:var(--ivory)!important;margin-top:0!important}
+  .dark-encart p{color:rgba(232,220,200,.7)!important}
+  .dark-encart p strong{color:var(--gold-light)!important}
+  .dark-encart ul.li li{color:rgba(232,220,200,.7);border-color:rgba(196,164,114,.18)}
+  .dark-encart ul.li li::before{color:var(--gold)}
+  .dark-encart ul.li li strong{color:var(--gold-light)}
+
+  /* PROPRIÉTÉS GRID */
+  .props{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin:26px 0;border:1px solid var(--rule)}
+  @media(max-width:560px){.props{grid-template-columns:1fr}}
+  .prop{background:var(--paper-white);padding:20px 22px}
+  .prop-t{font-family:var(--font-m);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
+  .prop-d{font-family:var(--font-s);font-size:0.88rem;color:var(--ink-muted);line-height:1.6;font-weight:300}
+
+  .levels{margin:26px 0}
+  .level{border:1px solid var(--rule);border-radius:4px;padding:24px 26px;margin-bottom:14px;background:var(--paper-white)}
+  .level-h{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}
+  .level-n{font-family:var(--font-eb);font-style:italic;font-size:1.6rem;color:var(--gold);line-height:1}
+  .level-t{font-family:var(--font-d);font-size:1.12rem;color:var(--navy);font-weight:500}
+  .level p{font-size:0.92rem!important;margin-bottom:10px!important}
+  .level-guar{font-family:var(--font-d)!important;font-style:italic;font-size:0.92rem!important;color:var(--gold-deep)!important;border-top:1px solid var(--rule);padding-top:12px;margin-top:6px!important}
+
+  /* CONCLUSION */
+  .closing{background:var(--navy-deep);padding:72px 40px;text-align:center;margin-top:80px}
+  .closing-phi{font-family:var(--font-eb);font-style:italic;font-size:3rem;color:var(--gold);margin-bottom:20px}
+  .closing-t{font-family:var(--font-d);font-size:1.5rem;color:var(--ivory);line-height:1.4;font-weight:400;max-width:600px;margin:0 auto 16px}
+  .closing-t em{font-style:italic;color:var(--gold-light)}
+  .closing-sub{font-family:var(--font-m);font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(212,184,136,.45);line-height:2}
+
+  /* FOOTER */
+  .footer{background:var(--navy-deep);color:rgba(255,255,255,.7);padding:0 40px 36px}
+  .footer-inner{max-width:1100px;margin:0 auto;border-top:1px solid rgba(196,164,114,.15);padding-top:36px;text-align:center}
+  .footer-meta{font-family:var(--font-m);font-size:0.62rem;letter-spacing:0.18em;color:rgba(255,255,255,.4);line-height:1.9}
+  .footer-meta strong{color:var(--gold-light);font-weight:500}
+  .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:22px}
+  .footer-links a{font-family:var(--font-m);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);text-decoration:none}
+  .footer-links a:hover{color:var(--gold-light)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="PHI — Φ">Φ</a>
+    <div class="nav-links">
+      <a href="la-mecanique-probatoire.html">La mécanique</a>
+      <a href="conformite.html">Conformité</a>
+      <a href="tarifications.html" class="nav-cta">Accéder à <em>Φ</em></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Livre blanc technique</div>
+    <div class="hero-phi">Φ</div>
+    <h1 class="hero-title">Architecture de signature électronique<br><em>post-quantique sans opérateur tiers</em></h1>
+    <p class="hero-sub">Spécification technique de la chaîne d'identification fermée, du format d'enveloppe <span class="mono" style="background:rgba(196,164,114,.12);color:var(--gold-light);border-color:rgba(196,164,114,.3)">.phi</span>, du calcul de la preuve G, du journal cryptographique chaîné et du canal de transmission Inline-Offline™.</p>
+    <div class="hero-meta">
+      <div><div class="hero-meta-label">Version</div><div class="hero-meta-val">2.2 — révisée juin 2026</div></div>
+      <div><div class="hero-meta-label">Éditeur</div><div class="hero-meta-val">PHI SAS · filiale d'AION ASEMANTIX</div></div>
+      <div><div class="hero-meta-label">Standards</div><div class="hero-meta-val">NIST FIPS 203 · 204 · 202</div></div>
+      <div><div class="hero-meta-label">Certification</div><div class="hero-meta-val">ANSSI CSPN en cours d'instruction</div></div>
+      <div><div class="hero-meta-label">Propriété intellectuelle</div><div class="hero-meta-val">Brevet déposé · procédés protégés</div></div>
+      <div><div class="hero-meta-label">Audience</div><div class="hero-meta-val">DSI, RSSI, ANSSI, expert judiciaire, auditeur</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<aside class="toc">
+  <div class="toc-title">Sommaire</div>
+  <ol>
+    <li><a href="#s01">Avant-propos et périmètre</a></li>
+    <li><a href="#s02">L'enveloppe .phi v3</a></li>
+    <li><a href="#s03">La preuve G</a></li>
+    <li><a href="#s04">Le dossier identité</a></li>
+    <li><a href="#s05">Algorithmes cryptographiques</a></li>
+    <li><a href="#s06">L'enclave matérielle</a></li>
+    <li><a href="#s07">Le journal chaîné</a></li>
+    <li><a href="#s08">Vérification — trois niveaux</a></li>
+    <li><a href="#s09">Le canal Inline-Offline™</a></li>
+    <li><a href="#s10">Architecture logicielle</a></li>
+    <li><a href="#s11">Hypothèses de sécurité</a></li>
+    <li><a href="#s12">Conformité normative</a></li>
+    <li><a href="#s13">Glossaire</a></li>
+  </ol>
+</aside>
+
+<main class="content">
+
+<!-- 01 -->
+<section class="sec" id="s01">
+  <div class="sec-num">01 · Avant-propos</div>
+  <h2>Périmètre <em>du document</em></h2>
+  <p class="lead">Ce livre blanc décrit l'architecture technique de <span class="phi-eb">Φ</span> Probatoire dans sa version 2.2. Il s'adresse à un public technique et juridique averti.</p>
+  <p>Il s'adresse aux responsables de la sécurité des systèmes d'information (RSSI), aux directions des systèmes d'information (DSI), aux instructeurs ANSSI dans le cadre de l'évaluation CSPN en cours, aux experts judiciaires appelés à statuer sur l'opposabilité d'actes signés via <span class="phi-eb">Φ</span>, et aux auditeurs sécurité indépendants.</p>
+  <h4>Doctrine et stabilité</h4>
+  <p>L'architecture documentée ici repose sur une doctrine technique consolidée à travers quatre itérations successives entre mai et juin 2026. La version courante 2.2 est le point de référence : trois composants d'identification fermés à l'enrôlement, paraphe manuscrit vivant à chaque signature, ancrage cryptographique du dossier identité dans l'AAD signée ML-DSA-65 de chaque acte.</p>
+  <h4>Ce que ce document ne contient pas</h4>
+  <ul class="li">
+    <li>Les vecteurs de test KAT (Known Answer Tests) cryptographiques internes — réservés à l'instruction ANSSI CSPN sur demande formelle</li>
+    <li>Le code source intégral du crate Rust de scellement — repository privé, accès sur convention</li>
+    <li>Les éléments biométriques de tests opérationnels — exclus par construction (doctrine, RGPD art. 9)</li>
+  </ul>
+</section>
+
+<!-- 02 -->
+<section class="sec" id="s02">
+  <div class="sec-num">02 · Format d'enveloppe</div>
+  <h2>L'enveloppe <em>.phi</em> v3</h2>
+  <p class="lead">Chaque acte signé est sérialisé dans un conteneur portable <code>.phi</code>, conçu pour transiter via tout canal de transport — messagerie grand public, partage de fichier, support physique.</p>
+  <p>L'intégrité de bout en bout est garantie par une <strong>AAD signée ML-DSA-65</strong> (Additional Authenticated Data) sur neuf lignes canoniques. L'AAD est une chaîne canonique signée intégralement avec la clé privée du signataire, conservée dans l'enclave matérielle. Toute permutation, ajout ou retrait casse la signature.</p>
+
+  <div class="codeblock"><pre><span class="cm"># Structure de l'AAD signée (9 lignes canoniques)</span>
+<span class="kw">PHI/V3/ENVELOPE</span> / version=3 / type / ref
+recipient_pk_hash / kem_bundle / sender_pk
+document_hash / created_at / device_id
+identity_bundle_hash</pre></div>
+
+  <h4>Description champ par champ</h4>
+  <table class="spec">
+    <tr><th>Champ</th><th>Définition</th></tr>
+    <tr><td>PHI/V3/ENVELOPE</td><td>Préfixe immuable, garantit l'identification du format et bloque toute confusion avec une version antérieure (hard switch v2 → v3 depuis 2026-05-30)</td></tr>
+    <tr><td>version=3</td><td>Numéro de version explicite, doublon défensif du préfixe</td></tr>
+    <tr><td>type</td><td>Type d'acte (contrat, mandat, attestation, etc.)</td></tr>
+    <tr><td>ref</td><td>Référence professionnelle libre de l'expéditeur (numéro de dossier interne)</td></tr>
+    <tr><td>recipient_pk_hash</td><td>SHA3-256 de la clé publique ML-DSA-65 du destinataire — verrouille l'acte à un destinataire unique</td></tr>
+    <tr><td>kem_bundle</td><td>Ciphertext ML-KEM-768 contenant la clé symétrique AES-256-GCM de déchiffrement du payload</td></tr>
+    <tr><td>sender_pk</td><td>Clé publique ML-DSA-65 du signataire, fournie en clair pour permettre la vérification immédiate</td></tr>
+    <tr><td>document_hash</td><td>SHA3-256 du document signé (PDF, DOCX, etc.) — intégrité du contenu garantie</td></tr>
+    <tr><td>created_at</td><td>Horodatage de scellement, double : horloge murale + compteur monotone τ</td></tr>
+    <tr><td>device_id</td><td>Identifiant matériel stable du dispositif signataire (lié à l'attestation Android Keystore)</td></tr>
+    <tr><td>identity_bundle_hash</td><td>SHA3-256 du dossier identité du signataire — neuvième ligne, nouvelle en v3 (cf. §4)</td></tr>
+  </table>
+
+  <h4>Payload chiffré</h4>
+  <p>Le document signé et les trois composants du dossier identité voyagent dans un payload chiffré <strong>AES-256-GCM</strong>, dont la clé est encapsulée par <strong>ML-KEM-768</strong> pour le destinataire. Le payload est lisible uniquement après déchiffrement local dans l'enclave du destinataire.</p>
+
+  <div class="note">
+    <div class="note-label">Note technique — Hard switch v2 → v3</div>
+    <p>Depuis le 30 mai 2026, le module de signature n'émet plus aucune enveloppe v2. Le module de réception rejette toute enveloppe non préfixée <code>PHI/V3/ENVELOPE</code>. Pas de code de compatibilité descendante. Aucune enveloppe v2 n'a jamais été émise en production — la migration est sans régression.</p>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="sec" id="s03">
+  <div class="sec-num">03 · Preuve mathématique</div>
+  <h2>La preuve <em>G</em></h2>
+  <p class="lead">G est la signature mathématique centrale de <span class="phi-eb">Φ</span> Probatoire : une valeur scalaire de 32 octets qui fusionne irréversiblement quatre dimensions — qui signe, quoi est signé, quel matériel a signé, à quel instant.</p>
+
+  <div class="codeblock"><pre><span class="cm"># Formule canonique</span>
+G = Φ ( QUI | DOCUMENT | SILICIUM | INSTANT )
+
+compute_g(tag, tau, device_id, ctx, beta) → [u8; 32]
+SHA3-256(<span class="kw">"PHI/G/V1"</span> || CBOR_canonique)</pre></div>
+
+  <h4>Les quatre dimensions fusionnées</h4>
+  <table class="spec">
+    <tr><th>Dimension</th><th>Composants</th></tr>
+    <tr><td>QUI</td><td>Tag identité du signataire (<code>sender_pk_hash</code>), <code>betaBio</code> (token biométrique éphémère dérivé de l'empreinte digitale), <code>betaManuscrit</code> (SHA3 des strokes capacitifs du paraphe vivant à l'instant τ)</td></tr>
+    <tr><td>DOCUMENT</td><td><code>document_hash</code> (SHA3-256), contexte d'acte (<code>ctx</code>), type, référence</td></tr>
+    <tr><td>SILICIUM</td><td><code>device_id</code>, attestation matérielle Android Keystore, identifiant StrongBox si présent</td></tr>
+    <tr><td>INSTANT</td><td>τ monotone (compteur matériel) et horodatage absolu (horloge murale)</td></tr>
+  </table>
+
+  <h4>Propriétés fondamentales</h4>
+  <div class="props">
+    <div class="prop"><div class="prop-t">Inversibilité impossible</div><div class="prop-d">SHA3-256 sur 32 octets de sortie ne révèle aucune information sur les composants d'entrée.</div></div>
+    <div class="prop"><div class="prop-t">Non-malléabilité</div><div class="prop-d">Modification d'un seul bit d'un composant d'entrée produit une valeur G entièrement différente.</div></div>
+    <div class="prop"><div class="prop-t">Localité stricte</div><div class="prop-d">G est calculé exclusivement dans le téléphone du signataire ; <code>betaBio</code> et <code>betaManuscrit</code> ne quittent jamais l'appareil.</div></div>
+    <div class="prop"><div class="prop-t">Non-rejouable</div><div class="prop-d">τ monotone garantit qu'aucun G calculé à un instant donné ne peut être reproduit ultérieurement, même par l'appareil signataire lui-même.</div></div>
+  </div>
+
+  <div class="note">
+    <div class="note-label">Règle invariante du crate Rust</div>
+    <p><span class="phi-eb">Φ</span> est la seule source de G dans tout le crate. Aucune autre fonction ne produit, ne dérive ou ne reconstruit G. Cette invariance est garantie par l'isolement de la fonction <code>compute_g</code> dans le module crypto Rust, audité ligne à ligne dans le cadre de la procédure CSPN.</p>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="sec" id="s04">
+  <div class="sec-num">04 · Identification fermée</div>
+  <h2>Le dossier identité — <em>trois composants</em></h2>
+  <p class="lead">La chaîne d'identification fermée repose sur trois éléments capturés une seule fois à l'enrôlement, scellés cryptographiquement, et transportés chiffrés dans chaque <code>.phi</code> émis par le signataire.</p>
+
+  <table class="spec">
+    <tr><th>Composant</th><th>Source</th><th>Rôle probatoire</th></tr>
+    <tr><td>A · Scan A4</td><td>Sélecteur de fichiers local, PDF ou JPG ≤ 8 Mo, page photo de la pièce</td><td>Référence visuelle haute qualité — photo officielle, numéro, signature officielle imprimée</td></tr>
+    <tr><td>B · Selfie côté signature</td><td>Caméra frontale, capture unique à l'enrôlement</td><td>Identification visuelle de la personne + lien personne-pièce + lecture de la signature manuscrite officielle imprimée</td></tr>
+    <tr><td>Paraphe baseline</td><td>Capture capacitive des strokes, sérialisation CBOR</td><td>Référence graphologique pour comparaison expertale des paraphes ultérieurs</td></tr>
+  </table>
+
+  <h4>Cadrage du selfie B selon le type de pièce</h4>
+  <table class="spec">
+    <tr><th>Pièce</th><th>Cadrage</th></tr>
+    <tr><td>Passeport</td><td>Tenu ouvert à plat à côté du visage, pages photo et signature simultanément visibles. Une seule capture, dense en preuve.</td></tr>
+    <tr><td>Carte nationale d'identité</td><td>Verso à côté du visage (face signature manuscrite officielle).</td></tr>
+    <tr><td>Titre de séjour</td><td>Verso à côté du visage (face signature manuscrite officielle).</td></tr>
+  </table>
+
+  <div class="codeblock"><pre><span class="cm"># Calcul de identity_bundle_hash</span>
+identity_bundle_hash = SHA3-256(
+    sha3(scan_a4_bytes) ||
+    sha3(selfie_bytes) ||
+    sha3(paraphe_baseline_strokes)
+)</pre></div>
+
+  <h4>Stockage et transport</h4>
+  <ul class="li">
+    <li>Stockés localement dans le téléphone, chiffrés AES-256-GCM via une clé hardware-backed de l'Android Keystore, sérialisés en TLV</li>
+    <li>Embarqués chiffrés dans le payload ML-KEM-768 de chaque <code>.phi</code> émis — visibles en clair par le destinataire après déchiffrement local</li>
+    <li>Ancrés cryptographiquement dans l'AAD signée ML-DSA-65 via <code>identity_bundle_hash</code> — toute substitution post-enrôlement d'un composant fait échouer la vérification de signature à la réception</li>
+  </ul>
+
+  <div class="note">
+    <div class="note-label">Note technique — Pièces acceptées</div>
+    <p>Trois pièces : passeport, carte nationale d'identité, titre de séjour. Le permis de conduire est explicitement exclu, conformément à la jurisprudence <strong>Cass. civ. 1<sup>re</sup>, 25 juin 2009, n° 08-15.971</strong> : il n'est pas une pièce d'identité au sens du Code civil.</p>
+  </div>
+
+  <h4>Acte vivant à chaque signature</h4>
+  <p>Le paraphe manuscrit posé par le signataire à chaque acte est différent à chaque exécution (geste répété, jamais identique au stroke près). Il est haché dans G via <code>betaManuscrit</code>, daté par τ monotone, et expertisable graphologiquement par comparaison au paraphe baseline conservé dans le dossier identité.</p>
+</section>
+
+<!-- 05 -->
+<section class="sec" id="s05">
+  <div class="sec-num">05 · Algorithmes</div>
+  <h2>Algorithmes <em>cryptographiques</em></h2>
+  <p class="lead"><span class="phi-eb">Φ</span> Probatoire repose exclusivement sur des algorithmes standardisés par le NIST, au niveau de sécurité 3 (équivalent ≈ 192 bits classiques). Aucune primitive ad hoc, aucun rolling de crypto maison.</p>
+
+  <h3>Signature numérique — ML-DSA-65</h3>
+  <p>Module-Lattice-based Digital Signature Algorithm, niveau NIST 3, standardisé en août 2024 (FIPS 204). Fondé sur la difficulté des problèmes Module-LWE et Module-SIS sur les réseaux euclidiens structurés.</p>
+  <ul class="li">
+    <li>Taille de clé publique : <strong>1952 octets</strong></li>
+    <li>Taille de clé privée : <strong>4032 octets</strong></li>
+    <li>Taille de signature : <strong>3309 octets</strong></li>
+    <li>Sécurité quantique : niveau 3 NIST (≈ 192 bits classiques)</li>
+    <li>Algorithme prédécesseur : CRYSTALS-Dilithium</li>
+  </ul>
+  <div class="ref"><div class="ref-label">Référence normative</div><div class="ref-title">NIST FIPS 204 — Module-Lattice-Based Digital Signature Standard</div><p>Publication du 13 août 2024. <span class="phi-eb">Φ</span> Probatoire utilise exclusivement ML-DSA-65.</p></div>
+
+  <h3>Encapsulation de clé — ML-KEM-768</h3>
+  <p>Module-Lattice-based Key Encapsulation Mechanism, niveau NIST 3, standardisé en août 2024 (FIPS 203). Fondé sur Module-LWE.</p>
+  <ul class="li">
+    <li>Taille de clé publique : <strong>1184 octets</strong></li>
+    <li>Taille de ciphertext : <strong>1088 octets</strong></li>
+    <li>Taille de clé encapsulée : <strong>32 octets</strong> (AES-256)</li>
+    <li>Sécurité quantique : niveau 3 NIST</li>
+    <li>Algorithme prédécesseur : CRYSTALS-Kyber</li>
+  </ul>
+  <div class="ref"><div class="ref-label">Référence normative</div><div class="ref-title">NIST FIPS 203 — Module-Lattice-Based Key-Encapsulation Mechanism Standard</div><p>Publication du 13 août 2024. <span class="phi-eb">Φ</span> Probatoire utilise exclusivement ML-KEM-768.</p></div>
+
+  <h3>Fonction de hachage — SHA3-256</h3>
+  <p>Permutation Keccak-f[1600], capacité 512 bits, standardisée par la FIPS 202 (août 2015).</p>
+  <ul class="li">
+    <li>Taille de sortie : <strong>256 bits</strong> (32 octets)</li>
+    <li>Résistance à la collision : 128 bits classique, 85 bits quantique (Grover)</li>
+    <li>Usage : hash de document, hash de composants identité, hash de chaîne de journal, dérivation <code>betaBio</code> / <code>betaManuscrit</code></li>
+  </ul>
+
+  <h3>Chiffrement symétrique — AES-256-GCM</h3>
+  <p>Authenticated Encryption with Associated Data (AEAD) standardisé NIST. Clés de 256 bits, tag 128 bits. Utilisé pour le chiffrement du payload avec la clé encapsulée par ML-KEM-768, et pour le chiffrement du dossier identité dans l'Android Keystore.</p>
+
+  <h3>Justification du choix exclusivement post-quantique</h3>
+  <p><span class="phi-eb">Φ</span> Probatoire est conçu pour une opposabilité juridique de très long terme (50 ans et plus). L'industrie estime que des ordinateurs quantiques cryptographiquement pertinents pourraient apparaître à horizon 10 à 25 ans, capables de casser RSA, ECDSA et ECDH en temps polynomial via l'algorithme de Shor. Une signature RSA apposée aujourd'hui ne sera plus opposable à terme. ML-DSA-65 et ML-KEM-768, fondés sur des problèmes de réseaux euclidiens résistants à Shor, garantissent la robustesse de la preuve sur la durée d'archivage.</p>
+</section>
+
+<!-- 06 -->
+<section class="sec" id="s06">
+  <div class="sec-num">06 · Enclave matérielle</div>
+  <h2>L'enclave matérielle <em>sécurisée</em></h2>
+  <p class="lead">Les clés privées ML-DSA-65 et ML-KEM-768 de chaque utilisateur résident exclusivement dans un sous-système matériel isolé du processeur principal, conçu pour rendre l'extraction de clé matériellement et logiciellement impossible.</p>
+
+  <table class="spec">
+    <tr><th>Implémentation</th><th>Caractéristiques</th></tr>
+    <tr><td>TEE TrustZone (ARM)</td><td>Mode d'exécution sécurisé du SoC ARM, séparé du monde normal par hyperviseur matériel. Niveau de garantie Common Criteria EAL2+ typique.</td></tr>
+    <tr><td>StrongBox Keymaster</td><td>Sous-système matériel dédié (Secure Element ou chip discret) physiquement séparé du SoC. Common Criteria EAL5+ typique. Disponible sur Samsung, Pixel et certains Motorola récents.</td></tr>
+  </table>
+
+  <h4>Garanties fondamentales</h4>
+  <ol class="li">
+    <li><strong>Isolation matérielle</strong> — mémoire de l'enclave physiquement séparée de la RAM principale. Ni l'OS, ni aucune application même root ne peut lire le contenu de l'enclave.</li>
+    <li><strong>Opérations cryptographiques internes</strong> — la clé privée n'en sort jamais. L'API expose uniquement des opérations sur entrée externe (« signe ce hash », « déchiffre ce blob », « génère une clé »).</li>
+    <li><strong>Verrouillage biométrique</strong> — l'exécution d'une opération sensible exige une authentification biométrique matériellement vérifiée.</li>
+    <li><strong>Résistance physique</strong> — extraction d'une clé requiert décapsulation du silicium en laboratoire (FIB, side-channel, glitching) : coût estimé plusieurs dizaines de milliers d'euros par tentative, taux d'échec élevé, traces irréversibles.</li>
+    <li><strong>Attestation matérielle</strong> — chaque clé générée est accompagnée d'un certificat d'attestation signé par la racine de confiance du constructeur du chip.</li>
+  </ol>
+
+  <div class="codeblock"><pre><span class="cm"># Les seules opérations exposées par le silicium</span>
+sign(hash, key_handle)        → signature
+decrypt(ciphertext, key_handle) → plaintext
+generate(spec)                → key_handle
+attest(key_handle)            → certificate_chain
+
+<span class="cm"># L'API d'extraction de clé privée n'existe pas.</span></pre></div>
+
+  <div class="dark-encart">
+    <div class="note-label">Conséquence opérationnelle pour PHI SAS</div>
+    <h3 style="font-family:var(--font-d);font-size:1.25rem;font-weight:500;line-height:1.35;margin-bottom:14px">PHI SAS ne dispose d'aucun moyen technique d'extraire une clé ou de signer en votre nom.</h3>
+    <p style="font-family:var(--font-d);font-style:italic">Une réquisition judiciaire reçue par PHI SAS visant à produire des clés ou des actes signés est <strong>techniquement impossible à exécuter chez PHI SAS — la chose demandée n'existe pas dans nos systèmes.</strong> Aucune extraction, aucune reconstitution, aucune signature par procuration n'est réalisable, parce que la matière même requise (la clé privée) ne quitte jamais le silicium du dispositif de l'utilisateur et n'est dupliquée nulle part.</p>
+  </div>
+
+  <h3>Double verrouillage biométrique du dispositif</h3>
+  <p>Pour s'aligner sur les exigences ANSSI CSPN appliquées aux applications traitant des données sensibles et sur les pratiques bancaires établies, <span class="phi-eb">Φ</span> Probatoire impose une chaîne de défense biométrique en deux étages successifs et indépendants.</p>
+
+  <div class="levels">
+    <div class="level">
+      <div class="level-h"><div class="level-n">1</div><div class="level-t">Déverrouillage du téléphone</div></div>
+      <p>Géré par l'OS Android. L'empreinte digitale du propriétaire est vérifiée par l'enclave matérielle du SoC (TEE TrustZone ou StrongBox). Sans déverrouillage, le téléphone reste inaccessible.</p>
+    </div>
+    <div class="level">
+      <div class="level-h"><div class="level-n">2</div><div class="level-t">Déverrouillage de l'app Φ au lancement</div></div>
+      <p>À chaque ouverture de <span class="phi-eb">Φ</span>, l'application exige une vérification biométrique matérielle indépendante. Tant que l'empreinte n'est pas vérifiée : l'écran reste sur un fond minimal avec le logo <span class="phi-eb">Φ</span> uniquement, aucune donnée n'est affichée, aucune navigation arrière ne permet de contourner le verrouillage.</p>
+      <p class="level-guar">Φ refuse explicitement le bypass par code PIN du téléphone : la biométrie matérielle est exigée. Trois échecs consécutifs déclenchent un blocage de 60 secondes (anti-brute-force).</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="note-label">Garantie sur saisie ou vol du téléphone</div>
+    <p>Même un téléphone saisi et déverrouillé au niveau de l'OS ne permet pas l'accès à <span class="phi-eb">Φ</span>. La clé privée ML-DSA-65 reste verrouillée dans l'enclave, conditionnée à la biométrie du propriétaire — matériellement impossible à reproduire sans sa présence physique au moment de l'opération.</p>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="sec" id="s07">
+  <div class="sec-num">07 · Journal</div>
+  <h2>Le journal cryptographique <em>chaîné</em></h2>
+  <p class="lead">Chaque téléphone <span class="phi-eb">Φ</span> tient un journal d'événements horodatés et cryptographiquement chaînés, conservé en local, chiffré AES-256-GCM, et exportable pour production judiciaire.</p>
+
+  <div class="codeblock"><pre><span class="cm"># Structure d'une entrée de journal</span>
+{
+  <span class="kw">"seq"</span>          : N,                  <span class="cm">// numéro de séquence monotone</span>
+  <span class="kw">"timestamp"</span>    : horloge_murale,     <span class="cm">// horodatage absolu</span>
+  <span class="kw">"tau"</span>          : compteur_monotone,  <span class="cm">// horodatage matériel</span>
+  <span class="kw">"event_type"</span>   : "RECEIVED" | "SIGNED" | …,
+  <span class="kw">"payload_hash"</span> : SHA3-256(payload),  <span class="cm">// hash du contenu</span>
+  <span class="kw">"prev_hash"</span>    : SHA3-256(entry N-1), <span class="cm">// chaînage</span>
+  <span class="kw">"bio_required"</span> : true
+}</pre></div>
+
+  <h4>Événements enregistrés</h4>
+  <p>Le journal n'enregistre que des événements <em>positifs et caractérisés</em> — pas l'intention, pas le brouillon. Liste exhaustive : <code>CGU_ACCEPTED</code>/<code>CGU_REFUSED</code>, <code>SETUP_IDENTITY</code>, <code>IDENTITY_DOCUMENT_UPDATED</code>, <code>IDENTITY_BUNDLE_EXPORTED</code>, <code>RECIPIENT_IDENTITY_ACCEPTED</code>, <code>RECEIVED</code>, <code>SIGNED</code>, <code>RESET</code>.</p>
+
+  <h4>Chaînage et vérification d'intégrité</h4>
+  <p>Chaque entrée intègre le hash de l'entrée précédente (<code>prev_hash</code>), formant une chaîne immuable. Toute modification a posteriori invalide toutes les entrées suivantes. Le vérificateur de cohérence recompute la chaîne entière et retourne : <code>Valid(entryCount)</code>, <code>Invalid</code>, <code>Empty</code> ou <code>InternalError(cause)</code>.</p>
+
+  <h4>Pourquoi pas d'événement « envoyé »</h4>
+  <p>Le journal n'enregistre pas les événements sortants. Ce choix est doctrinal : l'application étant strictement locale, sans réseau, elle ne dispose d'aucun moyen de confirmer qu'un envoi a atteint son destinataire. L'intention d'envoyer n'est pas une preuve de la volonté de signer — seule la réception caractérisée par le destinataire fait preuve. La preuve d'envoi appartient au canal de transport, non au journal <span class="phi-eb">Φ</span>.</p>
+
+  <h4>Export pour production judiciaire</h4>
+  <p>Trois éléments exportables en PDF authentifié, sous protection biométrique : le journal complet sous forme tabulaire chaînée ; l'attestation visible en clair de chaque acte ; le certificat d'intégrité, émis si et seulement si la chaîne est intacte. Un expert ou un magistrat peut rejouer la vérification d'intégrité à partir du PDF exporté, en utilisant les hashs publics et la clé publique du signataire.</p>
+</section>
+
+<!-- 08 -->
+<section class="sec" id="s08">
+  <div class="sec-num">08 · Vérification</div>
+  <h2>Vérification destinataire — <em>trois niveaux</em></h2>
+  <p class="lead">G n'est jamais transmis ni recalculable depuis l'extérieur du téléphone signataire — deux de ses ingrédients sont des secrets biométriques qui ne quittent jamais l'appareil. La vérification s'opère donc sur trois niveaux distincts, selon le contexte juridique.</p>
+
+  <div class="levels">
+    <div class="level">
+      <div class="level-h"><div class="level-n">1</div><div class="level-t">Destinataire — vérification cryptographique autonome</div></div>
+      <p>Tout destinataire muni de la clé publique du signataire (fournie en clair dans l'enveloppe v3) effectue, sans aucun accès au téléphone signataire : vérification de la signature ML-DSA-65 sur l'AAD complète, recalcul du <code>document_hash</code>, recalcul de <code>identity_bundle_hash</code>, vérification de la cohérence du journal local.</p>
+      <p class="level-guar">Garantie : une signature post-quantique valide existe sur un G calculé à τ ; le document n'a pas été modifié ; le dossier identité n'a pas été substitué. G lui-même n'est pas révélé.</p>
+    </div>
+    <div class="level">
+      <div class="level-h"><div class="level-n">2</div><div class="level-t">Expertise forensique — avec téléphone signataire</div></div>
+      <p>En cas de contentieux, un expert judiciaire peut, en présence du signataire et de son appareil : demander au signataire de poser son empreinte (reproduction de <code>betaBio</code>), reproduire <code>betaManuscrit</code> si les strokes de l'acte sont conservés, recalculer G en local, et le comparer binairement au G signé à τ.</p>
+      <p class="level-guar">Garantie : preuve mathématique complète et opposable. C'est uniquement à ce niveau que G est recalculé au sens strict. Mode forensique opt-in, journalisé, jamais automatisable à distance.</p>
+    </div>
+    <div class="level">
+      <div class="level-h"><div class="level-n">3</div><div class="level-t">Expertise graphologique — indépendante du cryptographique</div></div>
+      <p>Méthode procédurale civile classique : un expert en écriture compare les strokes du paraphe vivant (capturés à l'acte) au paraphe baseline, et le cas échéant à d'autres écrits authentifiés. Admissible en justice indépendamment de la couche cryptographique.</p>
+    </div>
+  </div>
+
+  <div class="note">
+    <div class="note-label">Formulation canonique pour la communication externe</div>
+    <p>« Le destinataire vérifie cryptographiquement la signature post-quantique sur la preuve G et l'intégrité du dossier identité. En cas de litige, un expert judiciaire peut, en présence du signataire, reproduire intégralement le calcul mathématique. »</p>
+    <p>Cette architecture préserve la vie privée biométrique du signataire (RGPD art. 9) tout en garantissant une preuve mathématique post-quantique opposable.</p>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="sec" id="s09">
+  <div class="sec-num">09 · Transport</div>
+  <h2>Le canal <em>Inline-Offline™</em></h2>
+  <p class="lead"><span class="phi-eb">Φ</span> Probatoire n'opère aucune infrastructure réseau. Le transport de l'enveloppe <code>.phi</code> est délégué aux messageries grand public, sans que celles-ci aient jamais accès au contenu en clair.</p>
+
+  <h4>Principe</h4>
+  <p>L'enveloppe <code>.phi</code> est un conteneur binaire chiffré, indépendant de tout protocole de transport : chiffrée AES-256-GCM avec une clé encapsulée par ML-KEM-768 pour le destinataire uniquement, signée ML-DSA-65, sérialisée en CBOR canonique, sauvegardée comme fichier attachable à tout transport.</p>
+
+  <h4>Acheminement</h4>
+  <p>Le signataire envoie le fichier <code>.phi</code> par le canal de son choix : pièce jointe d'email, message WhatsApp/Signal/Telegram, AirDrop, clé USB, ou impression QR code multi-pages. L'opérateur du canal voit transiter un blob binaire opaque.</p>
+
+  <h4>Garanties contre les opérateurs de transport</h4>
+  <ul class="li">
+    <li>L'opérateur n'a aucun moyen de lire le contenu — chiffré ML-KEM-768 + AES-256-GCM</li>
+    <li>L'opérateur ne peut pas modifier le contenu sans casser la signature ML-DSA-65</li>
+    <li>L'opérateur ne peut pas déchiffrer le contenu, même contraint par une autorité étatique (Cloud Act ou équivalent) : la clé privée du destinataire est dans son enclave matérielle</li>
+    <li>Le contenu chiffré n'est pas exploitable pour entraîner des modèles d'apprentissage automatique, contrairement aux documents en clair des messageries grand public</li>
+  </ul>
+
+  <div class="dark-encart">
+    <div class="note-label">Indépendance juridictionnelle</div>
+    <p style="font-family:var(--font-d);font-style:italic">L'absence d'infrastructure centralisée chez PHI SAS place l'architecture hors du champ d'application des lois étrangères d'extraterritorialité sur les données stockées en cloud (Cloud Act américain et équivalents). <strong>Aucune ordonnance ne peut contraindre PHI SAS à produire le contenu d'un acte ou un élément d'identification — ces données n'existent pas dans nos systèmes.</strong></p>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="sec" id="s10">
+  <div class="sec-num">10 · Architecture logicielle</div>
+  <h2>Trinité de vérification <em>logicielle</em></h2>
+  <p class="lead">Côté destinataire, la vérification d'un <code>.phi</code> reçu repose sur trois composants logiciels indépendants. L'invocation est séquentielle — toute défaillance d'une couche entraîne le rejet de l'acte.</p>
+
+  <div class="levels">
+    <div class="level">
+      <div class="level-h"><div class="level-n">1</div><div class="level-t">Vérification cryptographique</div></div>
+      <p>Seul point d'appel autorisé du crate Rust depuis Kotlin. Vérifie la signature ML-DSA-65 sur l'AAD v3, l'attestation matérielle de la clé publique signataire, et le déchiffrement ML-KEM-768 du payload (échec implicite si la clé destinataire ne correspond pas).</p>
+    </div>
+    <div class="level">
+      <div class="level-h"><div class="level-n">2</div><div class="level-t">Cohérence du journal</div></div>
+      <p>Vérifie l'intégrité de la chaîne du journal local. Retourne un résultat scellé : <code>Valid(entryCount)</code> / <code>Invalid</code> / <code>Empty</code> / <code>InternalError</code>.</p>
+    </div>
+    <div class="level">
+      <div class="level-h"><div class="level-n">3</div><div class="level-t">Dossier identité — vérification visuelle</div></div>
+      <p>Présente au destinataire les éléments visuels du dossier reçu pour reconnaissance manuelle. Quatre comparaisons : photo officielle ↔ visage du selfie ; pièce du scan ↔ pièce du selfie ; signature officielle imprimée ↔ paraphe baseline ; paraphe baseline ↔ paraphe vivant posé à τ.</p>
+      <p class="level-guar">Validation explicite par bouton « Je reconnais l'identité » / « Je ne reconnais pas ». Le destinataire engage sa responsabilité professionnelle, comme dans un face-à-face physique notarial.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 — NOUVELLE SECTION : HYPOTHÈSES DE SÉCURITÉ -->
+<section class="sec" id="s11">
+  <div class="sec-num">11 · Modèle de sécurité</div>
+  <h2>Hypothèses de sécurité <em>explicites</em></h2>
+  <p class="lead">La robustesse de <span class="phi-eb">Φ</span> Probatoire repose sur deux hypothèses, énoncées ici sans détour. Elles ne sont pas des faiblesses : elles sont le socle vérifiable sur lequel toute la chaîne probatoire se construit.</p>
+
+  <div class="levels">
+    <div class="level">
+      <div class="level-h"><div class="level-n">H1</div><div class="level-t">Non-extractibilité de l'enclave</div></div>
+      <p>On suppose que la clé privée générée dans l'enclave matérielle (TEE TrustZone, EAL2+ ; ou StrongBox, EAL5+) ne peut être extraite ni par voie logicielle, ni par attaque physique à coût raisonnable. Cette hypothèse est adossée aux certifications Common Criteria des constructeurs de silicium et à l'attestation matérielle vérifiable à chaque clé.</p>
+      <p class="level-guar">Si cette hypothèse tombe pour un modèle de matériel donné, c'est ce matériel — non l'architecture Φ — qui est en cause.</p>
+    </div>
+    <div class="level">
+      <div class="level-h"><div class="level-n">H2</div><div class="level-t">Solidité de ML-DSA-65 et ML-KEM-768</div></div>
+      <p>On suppose que les problèmes Module-LWE et Module-SIS, sur lesquels reposent ML-DSA-65 et ML-KEM-768, demeurent intractables, y compris pour un ordinateur quantique cryptographiquement pertinent. Cette hypothèse est celle retenue par le NIST au terme de huit ans d'analyse publique (FIPS 203 / 204).</p>
+      <p class="level-guar">Le choix exclusivement post-quantique vise précisément à maximiser la durée de validité de cette hypothèse sur l'horizon d'archivage (50 ans et plus).</p>
+    </div>
+  </div>
+  <p>Énoncer ces hypothèses n'affaiblit pas la preuve : cela en délimite le périmètre de validité avec la rigueur attendue par un instructeur ANSSI ou un expert. Toute la chaîne probatoire — preuve G, journal chaîné, symétrie bilatérale — est <em>conditionnellement</em> sûre, sous H1 et H2. C'est le standard de tout système cryptographique sérieux.</p>
+</section>
+
+<!-- 12 -->
+<section class="sec" id="s12">
+  <div class="sec-num">12 · Conformité</div>
+  <h2>Conformité <em>normative</em></h2>
+  <p class="lead"><span class="phi-eb">Φ</span> Probatoire s'aligne sur les standards cryptographiques internationaux les plus récents et respecte les exigences du droit français et européen.</p>
+
+  <div class="ref"><div class="ref-label">Cryptographie — Standards NIST</div><div class="ref-title">FIPS 204, FIPS 203, FIPS 202</div><p>ML-DSA-65 (signature), ML-KEM-768 (encapsulation), SHA3-256 (hachage). Niveau de sécurité 3, ≈ 192 bits classiques.</p></div>
+
+  <div class="ref"><div class="ref-label">Données personnelles — RGPD</div><div class="ref-title">Règlement (UE) 2016/679, art. 4 et art. 9</div><p>Aucune donnée personnelle ni biométrique du signataire n'est transmise à PHI SAS ni à un tiers. L'empreinte digitale et les strokes graphologiques sont traités exclusivement dans l'enclave matérielle de l'appareil. PHI SAS n'est ni responsable ni sous-traitant de traitement. Les données biométriques (art. 9) ne quittent jamais l'appareil.</p></div>
+
+  <div class="ref"><div class="ref-label">Pièces d'identité — Code civil</div><div class="ref-title">Cass. civ. 1<sup>re</sup>, 25 juin 2009, n° 08-15.971</div><p>Exclusion du permis de conduire comme pièce d'identité au sens du Code civil. Pièces acceptées : passeport, carte nationale d'identité, titre de séjour.</p></div>
+
+  <div class="ref"><div class="ref-label">Droit des contrats — Ordonnance n° 2016-131</div><div class="ref-title">Réforme du droit des contrats, 10 février 2016</div><p>Suppression de l'exigence d'une formule manuscrite sacramentelle (« lu et approuvé »). Le paraphe manuscrit posé à chaque acte, scellé cryptographiquement à l'instant exact et comparable graphologiquement au paraphe baseline, y est juridiquement équivalent et probatoirement plus robuste.</p></div>
+
+  <div class="ref"><div class="ref-label">Certification française — ANSSI</div><div class="ref-title">CSPN — Certification de Sécurité de Premier Niveau</div><p>Procédure en cours d'instruction. La cible de sécurité couvre l'architecture probatoire (preuve G, dossier identité 3 composants, journal chaîné), le canal Inline-Offline™, et l'application mobile Android.</p></div>
+
+  <div class="ref"><div class="ref-label">Cadre européen</div><div class="ref-title">Règlement eIDAS 2 — UE 2024/1183 · Articles 1366 et 1367 du Code civil</div><p>L'architecture s'inscrit dans le cadre de l'écrit électronique et de la fiabilité présumée de la signature.</p></div>
+</section>
+
+<!-- 13 -->
+<section class="sec" id="s13">
+  <div class="sec-num">13 · Glossaire</div>
+  <h2>Glossaire <em>technique</em></h2>
+  <table class="spec">
+    <tr><th>Terme</th><th>Définition</th></tr>
+    <tr><td>AAD</td><td>Additional Authenticated Data — bytes signés par ML-DSA-65 mais non chiffrés. En v3, contient 9 lignes canoniques (cf. §2).</td></tr>
+    <tr><td>betaBio</td><td>Token biométrique éphémère dérivé de l'empreinte digitale au moment de la signature. Ne quitte jamais l'enclave. Ingrédient de G.</td></tr>
+    <tr><td>betaManuscrit</td><td>SHA3-256 des strokes capacitifs du paraphe manuscrit posé à chaque signature, à l'instant τ. Différent à chaque acte.</td></tr>
+    <tr><td>CSPN</td><td>Certification de Sécurité de Premier Niveau, administrée par l'ANSSI. <span class="phi-eb">Φ</span> est en cours d'instruction.</td></tr>
+    <tr><td>G</td><td>Preuve mathématique centrale. Valeur scalaire de 32 octets produite par <span class="phi-eb">Φ</span>, fusionnant QUI, DOCUMENT, SILICIUM, INSTANT. Calculée exclusivement dans le téléphone du signataire.</td></tr>
+    <tr><td>identity_bundle_hash</td><td>SHA3-256 de la concaténation des hashs des trois composants du dossier identité. Neuvième ligne de l'AAD v3. Statique par signataire, immuable après enrôlement.</td></tr>
+    <tr><td>Inline-Offline™</td><td>Marque désignant le canal de transmission : payload chiffré transitant via messageries grand public, lisible offline par le destinataire après déchiffrement local.</td></tr>
+    <tr><td>ML-DSA-65</td><td>Module-Lattice-based Digital Signature Algorithm, niveau 3 NIST (FIPS 204). Signature post-quantique de <span class="phi-eb">Φ</span>.</td></tr>
+    <tr><td>ML-KEM-768</td><td>Module-Lattice-based Key Encapsulation Mechanism, niveau 3 NIST (FIPS 203). Encapsulation de clé post-quantique de <span class="phi-eb">Φ</span>.</td></tr>
+    <tr><td>paraphe_baseline</td><td>SHA3 des strokes du paraphe de référence, capturé une seule fois à l'enrôlement. Référence graphologique.</td></tr>
+    <tr><td>SHA3-256</td><td>Fonction de hachage standardisée FIPS 202 (2015). 256 bits de sortie. Tous les hachages internes de <span class="phi-eb">Φ</span>.</td></tr>
+    <tr><td>StrongBox</td><td>Implémentation hardware-backed de l'Android Keystore sur sous-système matériel dédié (Common Criteria EAL5+ typique).</td></tr>
+    <tr><td>τ (tau)</td><td>Compteur monotone matériel — prouve l'ordre des faits, pas l'heure murale. Élément temporel de G garantissant la non-réplication.</td></tr>
+    <tr><td>TEE</td><td>Trusted Execution Environment — sous-système matériel sécurisé isolé de l'OS. ARM TrustZone ou StrongBox sur Android.</td></tr>
+  </table>
+
+  <h4>Références normatives</h4>
+  <ul class="li">
+    <li>NIST FIPS 204 — Module-Lattice-Based Digital Signature Standard, août 2024</li>
+    <li>NIST FIPS 203 — Module-Lattice-Based Key-Encapsulation Mechanism Standard, août 2024</li>
+    <li>NIST FIPS 202 — SHA-3 Standard, août 2015</li>
+    <li>Règlement (UE) 2016/679 — RGPD</li>
+    <li>Ordonnance n° 2016-131 du 10 février 2016 — réforme du droit des contrats</li>
+    <li>Cour de cassation, 1<sup>re</sup> civ., 25 juin 2009, pourvoi n° 08-15.971</li>
+    <li>Règlement (UE) 2024/1183 — eIDAS 2</li>
+    <li>ANSSI — Méthodologie CSPN</li>
+  </ul>
+
+  <div class="note">
+    <div class="note-label">Contact instruction CSPN et auditeurs</div>
+    <p>Pour toute demande d'accès au code source, aux KAT cryptographiques internes, à la documentation de cible de sécurité ou aux tests d'intrusion : <strong>phi-signature@proton.me</strong>, ligne dédiée à l'instruction ANSSI et aux auditeurs indépendants sous convention de confidentialité.</p>
+  </div>
+</section>
+
+</main>
+</div>
+
+<section class="closing">
+  <div class="closing-phi">Φ</div>
+  <p class="closing-t">Une preuve qui ne dépend <em>de personne.</em><br>Ni d'un serveur. Ni d'un tiers. Ni d'une juridiction.</p>
+  <div class="closing-sub">
+    Architecture probatoire post-quantique · Brevet déposé · Procédés protégés<br>
+    Livre blanc technique v2.2 · révisé juin 2026
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="la-mecanique-probatoire.html">La mécanique</a>
+      <a href="conformite.html">Conformité</a>
+      <a href="portefeuille-brevets.html">Brevets</a>
+      <a href="tarifications.html">Accéder à Φ</a>
+    </div>
+    <div class="footer-meta">
+      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX · phi-signature@proton.me<br>
+      Architecture probatoire post-quantique · Brevet déposé · © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
