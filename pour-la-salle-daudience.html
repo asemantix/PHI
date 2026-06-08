@@ -178,8 +178,8 @@
       ],
       "founder": {
         "@type": "Person",
-        "name": "Suzanne Thâora de Begon de Larouzière",
-        "sameAs": "https://www.linkedin.com/in/suzanne-dite-tha%C3%B4ra-de-begon-de-larouziere-73385a362/"
+        "name": "Suzanne de Begon de Larouzière",
+        "sameAs": "https://www.linkedin.com/in/suzanne-de-begon-de-larouziere/"
       }
     }
   ]
@@ -457,38 +457,6 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--ink);background:va
   </div>
 </header>
 
-<!-- DOULEUR -->
-<section class="douleur">
-  <div class="douleur-inner">
-    <div class="section-eyebrow">Aujourd'hui — dans votre cabinet</div>
-    <h2 class="section-title">
-      Vos clients vous font confiance.<br>
-      Leurs données sont <em>chez Microsoft.</em>
-    </h2>
-    <p class="section-sub">
-      Yousign tourne sur Azure. DocuSign sur AWS. Adobe Sign sur Adobe Cloud.<br>
-      Le secret professionnel — celui que l'article 66-5 de la loi de 1971 vous impose — repose sur des opérateurs étrangers, soumis au Cloud Act.
-    </p>
-    <div class="douleur-grid">
-      <div class="douleur-card">
-        <div class="douleur-num">01</div>
-        <div class="douleur-title">Le secret professionnel<br>n'est pas le vôtre.</div>
-        <p class="douleur-text">Vos correspondances, vos consultations, vos pièces transitent par des serveurs que vous ne contrôlez pas. Votre adversaire le sait. Le bâtonnier aussi.</p>
-      </div>
-      <div class="douleur-card">
-        <div class="douleur-num">02</div>
-        <div class="douleur-title">L'horodatage de votre prestataire<br>n'est pas le vôtre.</div>
-        <p class="douleur-text">En cas de litige, vous demandez un certificat à votre prestataire. Il vous le facture. Il met dix jours. La force probante repose sur la pérennité commerciale d'une entreprise tierce.</p>
-      </div>
-      <div class="douleur-card">
-        <div class="douleur-num">03</div>
-        <div class="douleur-title">Vous êtes facturé chaque envoi.<br>Pas chaque preuve.</div>
-        <p class="douleur-text">Trois à sept euros par signature, cinquante euros par certificat opposable. La conservation à long terme reste à votre charge — sans garantie de pérennité du format ni de l'opérateur.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PIVOT -->
 <section class="pivot">
   <div class="pivot-inner">
@@ -719,7 +687,7 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--ink);background:va
       <ul class="tarif-features">
         <li>SDK Android natif</li>
         <li>API d'intégration aux logiciels métier</li>
-        <li>Volume d'envois selon licence</li>
+        <li>Volume d'preuves selon licence</li>
         <li>Documentation technique complète</li>
         <li>Support intégrateur dédié</li>
         <li>Conformité auditée</li>
@@ -807,7 +775,7 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--ink);background:va
     <div class="footer-brand">
       <div class="footer-phi">Φ</div>
       <div class="footer-line"></div>
-      <div class="footer-baseline-1">La signature électronique autoportée</div>
+      <div class="footer-baseline-1">La signature électronique souveraine</div>
       <div class="footer-baseline-2">Post-Quantique</div>
       <div class="footer-baseline-2">sans tiers de confiance</div>
     </div>
@@ -867,6 +835,68 @@ body{font-family:var(--font-sans);font-weight:300;color:var(--ink);background:va
     </div>
   </div>
 </footer>
+
+<!-- ═══ ENCART FLOTTANT CLÉ .PHI ═══ -->
+<!-- À coller juste avant </body> sur chaque page -->
+<div id="phi-invite" style="
+  position:fixed;bottom:24px;right:24px;z-index:999;
+  max-width:340px;
+  background:var(--navy-deep,#08111f);
+  border:1px solid rgba(196,164,114,.35);
+  border-radius:8px;
+  padding:18px 20px 16px;
+  box-shadow:0 8px 32px rgba(8,17,31,.45);
+  display:flex;flex-direction:column;gap:8px;
+  font-family:'IBM Plex Mono',monospace;
+  transition:opacity .3s,transform .3s;
+">
+  <!-- Fermer -->
+  <button onclick="document.getElementById('phi-invite').style.display='none';localStorage.setItem('phi-invite-closed','1')" style="
+    position:absolute;top:10px;right:12px;
+    background:none;border:none;cursor:pointer;
+    font-size:14px;color:rgba(212,184,136,.5);
+    line-height:1;padding:2px 4px;
+  ">✕</button>
+
+  <!-- Ligne 1 -->
+  <div style="display:flex;align-items:center;gap:10px">
+    <span style="font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.5rem;color:#c4a472;line-height:1">Φ</span>
+    <span style="font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(212,184,136,.7);font-weight:600">Écrivez-nous</span>
+  </div>
+
+  <!-- Ligne 2 -->
+  <p style="
+    font-family:'Playfair Display',Georgia,serif;
+    font-style:italic;font-size:.88rem;
+    color:rgba(232,220,200,.85);
+    line-height:1.5;margin:0;
+  ">Téléchargez notre clé <strong style="color:#c4a472;font-style:normal">.phi</strong> et écrivez-nous en toute confidentialité.</p>
+
+  <!-- Contacts -->
+  <div style="font-size:.62rem;letter-spacing:.1em;color:rgba(255,255,255,.4);line-height:1.8">
+    phi-signature@proton.me<br>
+    WhatsApp · SMS : 06 11 76 86 32
+  </div>
+
+  <!-- CTA -->
+  <a href="/phi-public.phi" download style="
+    display:inline-block;margin-top:4px;
+    font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+    color:#c4a472;text-decoration:none;
+    border-bottom:1px solid rgba(196,164,114,.4);
+    padding-bottom:2px;width:fit-content;
+  ">Télécharger notre clé Φ →</a>
+</div>
+
+<script>
+(function(){
+  if(localStorage.getItem('phi-invite-closed')==='1'){
+    var el=document.getElementById('phi-invite');
+    if(el) el.style.display='none';
+  }
+})();
+</script>
+<!-- ═══ / ENCART FLOTTANT ═══ -->
 
 </body>
 </html>
