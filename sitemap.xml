@@ -4,18 +4,43 @@
   <!-- ══ ACCUEIL ══ -->
   <url>
     <loc>https://phi-signature.fr/</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-
-  <!-- ══ PAGES CONCEPT FONDATEURS ══ -->
+  <!-- ══ PAGES PRODUIT CŒUR ══ -->
   <url>
-    <loc>https://phi-signature.fr/lapp-en-action.html</loc>
+    <loc>https://phi-signature.fr/quatre-plans-phi.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phi-signature.fr/tarifications.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phi-signature.fr/la-signature-probatoire.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phi-signature.fr/echanges-confidentiels.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ══ PAGES CONCEPT ══ -->
+  <url>
+    <loc>https://phi-signature.fr/l-app-en-action.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://phi-signature.fr/asemantique.html</loc>
@@ -30,27 +55,13 @@
     <priority>0.85</priority>
   </url>
 
-  <!-- ══ PAGES PRODUIT CŒUR ══ -->
-  <url>
-    <loc>https://phi-signature.fr/la-signature-probatoire.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://phi-signature.fr/echanges-confidentiels.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://phi-signature.fr/tarifications.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
   <!-- ══ CONTENU CLÉ ══ -->
+  <url>
+    <loc>https://phi-signature.fr/Pourquoi-%CE%A6.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
   <url>
     <loc>https://phi-signature.fr/Pourquoi-%CE%A6-quand-docusign-existe.html</loc>
     <lastmod>2026-05-20</lastmod>
@@ -64,19 +75,49 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://phi-signature.fr/la-fonction-g.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://phi-signature.fr/le-journal-chaine.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://phi-signature.fr/l-enclave-silicium.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://phi-signature.fr/la-preuve-en-clair.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://phi-signature.fr/architecture-probatoire.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://phi-signature.fr/resistance-quantique.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://phi-signature.fr/professions.html</loc>
+    <loc>https://phi-signature.fr/phi-sovereign.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://phi-signature.fr/phi-sovereign.html</loc>
+    <loc>https://phi-signature.fr/professions.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -125,12 +166,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://phi-signature.fr/urssaf.html</loc>
-    <lastmod>2026-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
 
   <!-- ══ CONTENU SECONDAIRE ══ -->
   <url>
@@ -164,6 +199,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://phi-signature.fr/ecosysteme.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://phi-signature.fr/a-propos/portefeuille-brevets.html</loc>
     <lastmod>2026-05-20</lastmod>
     <changefreq>yearly</changefreq>
@@ -189,7 +230,7 @@
   </url>
   <url>
     <loc>https://phi-signature.fr/presse-rp.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -203,7 +244,7 @@
   <!-- ══ PAGES LÉGALES ══ -->
   <url>
     <loc>https://phi-signature.fr/cgu.html</loc>
-    <lastmod>2026-05-20</lastmod>
+    <lastmod>2026-06-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
