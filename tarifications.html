@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -178,7 +177,13 @@
   .ecosystem { margin-top: 56px; text-align: center; padding: 52px 40px; border: 1.5px solid var(--gold); border-radius: 22px; background: linear-gradient(160deg, rgba(196,164,114,0.08) 0%, rgba(14,28,53,0.95) 100%); position: relative; overflow: hidden; }
   .ecosystem::after { content: ''; position: absolute; bottom: -1px; left: 15%; right: 15%; height: 1.5px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
   .ecosystem-eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 20px; }
-  .ecosystem-number { font-family: var(--font-display); font-size: clamp(4rem, 8vw, 6.5rem); font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em; }
+  .ecosystem-number {
+    font-family: var(--font-display); font-size: clamp(4rem, 8vw, 6.5rem); font-weight: 700; line-height: 1; margin-bottom: 8px; letter-spacing: -0.03em;
+    background: linear-gradient(170deg, #e8d5a8 0%, #c4a472 25%, #8b6914 50%, #c4a472 75%, #e8d5a8 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 3px rgba(8,17,31,0.6)) drop-shadow(0 0 8px rgba(196,164,114,0.25));
+    position: relative;
+  }
   .ecosystem-label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 28px; }
   .ecosystem-title { font-family: var(--font-display); font-style: italic; font-size: clamp(1.3rem, 2.6vw, 1.8rem); font-weight: 500; color: var(--ivory); line-height: 1.4; max-width: 640px; margin: 0 auto 24px; }
   .ecosystem-body { font-family: var(--font-sans); font-size: 0.95rem; color: rgba(232,220,200,0.72); font-weight: 300; line-height: 1.75; max-width: 580px; margin: 0 auto; }
@@ -437,7 +442,7 @@
       <div class="ent-card">
         <div class="ent-card-num">01</div>
         <div class="ent-card-title">Vous vous engagez</div>
-        <p class="ent-card-body">Un montant mensuel négocié active vos clés. Plus l'engagement est élevé, <strong>plus la cerise et la ristourne montent.</strong></p>
+        <p class="ent-card-body">Un montant mensuel négocié active vos clés. Plus l'engagement est élevé, <strong>plus la cerise et la RFA montent.</strong></p>
       </div>
       <div class="ent-card">
         <div class="ent-card-num">02</div>
@@ -447,7 +452,7 @@
       <div class="ent-card">
         <div class="ent-card-num">03</div>
         <div class="ent-card-title">Vous êtes récompensé</div>
-        <p class="ent-card-body">En fin d'année, une <strong>ristourne jusqu'à 10%</strong> sur votre volume réel. Réservée aux clients de l'écosystème <em class="phi">Φ</em>.</p>
+        <p class="ent-card-body">En fin d'année, la <strong>RFA — ristourne de fidélité annuelle — jusqu'à 10%</strong> sur votre volume réel. Réservée aux clients de l'écosystème <em class="phi">Φ</em>.</p>
       </div>
     </div>
     <div class="facturation">
@@ -460,13 +465,29 @@
       <p class="facturation-quote">En toute transparence. Pas de surcoûts cachés. Pas de dépassement facturé dans votre dos. Pas de siège dormant. Pas de signature non aboutie facturée. Si votre correspondant ne signe pas, vous ne payez pas.</p>
     </div>
 
-    <!-- ENCART ÉCOSYSTÈME 10% -->
+    <!-- RFA — RISTOURNE DE FIDÉLITÉ ANNUELLE -->
     <div class="ecosystem">
-      <div class="ecosystem-eyebrow">Programme écosystème</div>
+      <div class="ecosystem-eyebrow">RFA</div>
       <div class="ecosystem-number">10%</div>
       <div class="ecosystem-label">Ristourne de fidélité annuelle</div>
-      <p class="ecosystem-title">Réservé aux organisations qui font de <em class="phi">Φ</em> leur standard de confiance numérique.</p>
-      <p class="ecosystem-body">Les clients qui adoptent <strong>plusieurs solutions Φ</strong> — Signature, Connect, messagerie souveraine — accèdent au palier de ristourne le plus élevé. Ce n'est pas une remise de volume : c'est la reconnaissance d'un engagement dans un écosystème qui protège l'ensemble de vos échanges, de vos preuves et de votre souveraineté.</p>
+      <p class="ecosystem-title">Vous vous engagez dans l'écosystème <em class="phi">Φ</em>. Nous vous le rendons.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:640px; margin:28px auto 32px; text-align:center">
+        <div style="padding:20px 14px; border:1px solid rgba(196,164,114,0.25); border-radius:12px; background:rgba(196,164,114,0.04)">
+          <div style="font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--gold-light); line-height:1; margin-bottom:6px">2%</div>
+          <div style="font-family:var(--font-mono); font-size:0.55rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(232,220,200,0.55)">Sur volume annuel</div>
+        </div>
+        <div style="padding:20px 14px; border:1px solid rgba(196,164,114,0.35); border-radius:12px; background:rgba(196,164,114,0.06)">
+          <div style="font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--gold-light); line-height:1; margin-bottom:6px">3%</div>
+          <div style="font-family:var(--font-mono); font-size:0.55rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(232,220,200,0.55)">Sur volume élevé</div>
+        </div>
+        <div style="padding:20px 14px; border:1.5px solid var(--gold); border-radius:12px; background:rgba(196,164,114,0.08)">
+          <div style="font-family:var(--font-display); font-size:2rem; font-weight:700; color:var(--gold); line-height:1; margin-bottom:6px">10%</div>
+          <div style="font-family:var(--font-mono); font-size:0.55rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold)">+1 produit écosystème</div>
+        </div>
+      </div>
+
+      <p class="ecosystem-body">Les paliers 2% et 3% récompensent votre <strong>volume annuel</strong> de signatures. Le palier 10% s'active dès que vous adoptez un <strong>deuxième produit Φ</strong> — Signature + Blind, Signature + Chut!, ou les trois. Ce n'est pas une remise de volume : c'est la reconnaissance d'un engagement dans un écosystème qui protège l'ensemble de vos échanges, de vos preuves et de votre souveraineté.</p>
     </div>
 
     <div class="ent-cta-row">
