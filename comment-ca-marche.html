@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>Comment ça marche — Φ, la signature en huis-clos étape par étape | PHI SAS</title>
+<meta name="description" content="Comment fonctionne Φ, étape par étape : inscription du signataire, transmission chiffrée, vérification d'identité, preuve probatoire. Sans serveur, sans tiers, post-quantique.">
+<meta name="keywords" content="signature électronique sans serveur, signature électronique probatoire, signature électronique souveraine, alternative DocuSign, alternative Yousign, alternative Adobe Sign, signature post-quantique, signature sans tiers de confiance, preuve cryptographique locale, journal chaîné, signature avocat notaire, ML-DSA-65, ML-KEM-768, PHI, phi-signature.fr, signature électronique France">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="PHI SAS">
+<link rel="canonical" href="https://phi-signature.fr/comment-ca-marche.html">
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%236f520f" text-anchor="middle" x="50">Φ</text></svg>'>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/comment-ca-marche.html">
+<meta property="og:site_name" content="Φ — PHI">
+<meta property="og:title" content="Comment ça marche — Φ, la signature en huis-clos étape par étape">
+<meta property="og:description" content="Φ signe vos actes sans serveur, sans tiers, sans abonnement opérateur. La preuve reste chez vous et chez votre client. Alternative souveraine à DocuSign, Yousign et Adobe Sign.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:secure_url" content="https://phi-signature.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Φ — Signature électronique souveraine, sans serveur, post-quantique">
+<meta property="og:image:type" content="image/jpeg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:creator" content="@phi_signaturefr">
+<meta name="twitter:title" content="Φ — Une signature électronique qui ne dépend de personne">
+<meta name="twitter:description" content="Sans serveur, sans tiers, sans abonnement opérateur. La preuve reste chez vous. Alternative souveraine à DocuSign, Yousign, Adobe Sign.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+<meta name="twitter:image:alt" content="Φ — Signature électronique souveraine, sans serveur, sans tiers de confiance">
+
+<!-- JSON-LD : WebPage + Organization + BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://phi-signature.fr/comment-ca-marche.html#webpage",
+      "name": "Comment ça marche — Φ étape par étape",
+      "url": "https://phi-signature.fr/comment-ca-marche.html",
+      "description": "Φ signe vos actes sans serveur, sans tiers, sans abonnement opérateur. La preuve reste chez vous et chez votre client. Alternative française souveraine à DocuSign, Yousign et Adobe Sign.",
+      "inLanguage": "fr",
+      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
+      "publisher": {"@id": "https://phi-signature.fr/#organization"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://phi-signature.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Comment ça marche", "item": "https://phi-signature.fr/comment-ca-marche.html"}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "PHI SAS",
+      "alternateName": "Φ",
+      "url": "https://phi-signature.fr",
+      "email": "phi-signature@proton.me",
+      "description": "Éditeur de Φ, signature électronique post-quantique sans serveur, sans tiers de confiance. Alternative française souveraine à DocuSign, Yousign et Adobe Sign.",
+      "foundingDate": "2024",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "33 rue du Frère Benoît",
+        "postalCode": "69600",
+        "addressLocality": "Oullins-Pierre-Bénite",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://github.com/asemantix",
+        "https://www.linkedin.com/company/121854148/",
+        "https://twitter.com/phi_signaturefr"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Suzanne Thâora de Begon de Larouzière",
+        "sameAs": "https://www.linkedin.com/in/suzanne-dite-tha%C3%B4ra-de-begon-de-larouziere-73385a362/"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0e1c35;--navy-deep:#08111f;
+  --gold:#c4a472;--gold-deep:#6f520f;--gold-light:#d4b888;
+  --paper:#fafaf7;--paper-soft:#f4f1e8;
+  --ink:#1d2330;--ink-muted:#6c7384;
+  --rule:rgba(196,164,114,.28);
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-mono:'IBM Plex Mono','Courier New',monospace;
+  --font-sans:'IBM Plex Sans',-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);line-height:1.7;font-weight:300}
+
+.top{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);padding:14px 40px;display:flex;align-items:center;justify-content:space-between}
+.top-logo{font-family:var(--font-display);font-style:italic;font-size:1.7rem;color:var(--gold-deep);text-decoration:none;font-weight:500;letter-spacing:.02em}
+.top-nav{display:flex;gap:32px;align-items:center}
+.top-link{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted);text-decoration:none;font-weight:500}
+.top-link:hover{color:var(--navy)}
+.top-cta{background:var(--navy);color:var(--paper);text-decoration:none;padding:10px 20px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px}
+@media(max-width:720px){.top{padding:14px 20px}.top-nav{gap:18px}.top-link{display:none}}
+
+.hero{padding:160px 48px 80px;max-width:880px;margin:0 auto}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.6rem);font-weight:500;color:var(--navy);line-height:1.15;letter-spacing:-.015em;margin-bottom:32px}
+.hero-lead{font-family:var(--font-display);font-style:italic;font-size:1.25rem;color:var(--ink-muted);line-height:1.7;font-weight:400;margin-bottom:24px}
+.hero-soft{font-size:1.02rem;color:var(--ink);line-height:1.75;margin-bottom:12px}
+
+.section{padding:90px 48px;max-width:880px;margin:0 auto}
+.section-soft{background:var(--paper-soft);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.section-eyebrow{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px}
+.section h2{font-family:var(--font-display);font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:500;color:var(--navy);line-height:1.25;letter-spacing:-.01em;margin-bottom:40px}
+.section h2 em{font-style:italic;color:var(--gold-deep)}
+.section p{font-size:1.02rem;color:var(--ink);line-height:1.8;margin-bottom:22px}
+.section p.intro{font-family:var(--font-display);font-style:italic;color:var(--ink-muted);font-size:1.1rem;margin-bottom:32px;font-weight:400}
+
+.steps{list-style:none;padding:0;margin:32px 0;counter-reset:s}
+.steps li{padding:18px 0 18px 50px;position:relative;font-size:1.04rem;color:var(--ink);line-height:1.65;counter-increment:s;border-bottom:.5px solid var(--rule)}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(s);position:absolute;left:0;top:18px;font-family:var(--font-display);font-style:italic;font-size:1.4rem;color:var(--gold-deep);font-weight:500;width:32px;text-align:center}
+
+.dots{list-style:none;padding:0;margin:24px 0}
+.dots li{padding:10px 0 10px 22px;position:relative;font-size:1.02rem;color:var(--ink);line-height:1.65}
+.dots li::before{content:"·";position:absolute;left:0;top:10px;color:var(--gold);font-size:1.4rem;font-weight:700}
+
+.questions{margin:32px 0;padding:32px 36px;background:var(--paper);border-left:3px solid var(--gold);border-radius:2px}
+.questions p.q-lead{font-family:var(--font-display);font-style:italic;color:var(--ink-muted);margin-bottom:20px;font-size:1rem}
+.questions ol{list-style:none;counter-reset:q;padding:0}
+.questions ol li{padding:14px 0 14px 40px;position:relative;font-size:1.04rem;color:var(--ink);line-height:1.65;counter-increment:q;border-bottom:.5px solid var(--rule)}
+.questions ol li:last-child{border-bottom:none}
+.questions ol li::before{content:counter(q);position:absolute;left:0;top:14px;font-family:var(--font-mono);font-size:.78rem;color:var(--gold-deep);font-weight:600;border:1px solid var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;line-height:1}
+.questions .q-after{font-family:var(--font-display);font-style:italic;color:var(--navy);margin-top:24px;font-size:1.02rem;line-height:1.65}
+
+.usp{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 48px;margin-top:8px}
+.usp-item h3{font-family:var(--font-display);font-size:1.15rem;font-weight:500;color:var(--navy);margin-bottom:12px;line-height:1.4}
+.usp-item p{font-size:.96rem;color:var(--ink-muted);line-height:1.7;font-weight:300}
+@media(max-width:720px){.usp{grid-template-columns:1fr;gap:32px}}
+
+.garanties{margin-top:8px}
+.garantie{padding:20px 0;border-bottom:1px solid var(--rule)}
+.garantie:last-child{border-bottom:none}
+.garantie h4{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--navy);margin-bottom:8px}
+.garantie p{font-size:.94rem;color:var(--ink-muted);line-height:1.65;font-weight:300;margin-bottom:0}
+
+.tarif{margin-top:8px;padding:36px 40px;background:var(--paper);border:1px solid var(--rule);border-radius:2px;text-align:center}
+.tarif-price{font-family:var(--font-display);font-size:2.4rem;font-weight:500;color:var(--navy);letter-spacing:-.02em;line-height:1}
+.tarif-unit{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;color:var(--ink-muted);text-transform:uppercase;margin-left:6px;font-weight:500}
+.tarif-label{margin-top:12px;font-family:var(--font-display);font-style:italic;color:var(--ink-muted);font-size:1rem}
+.tarif-features{margin-top:24px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;font-size:.92rem;color:var(--ink)}
+.tarif-note{margin-top:24px;padding-top:20px;border-top:.5px solid var(--rule);font-size:.92rem;color:var(--ink-muted);line-height:1.7;font-style:italic}
+
+.suite{margin-top:8px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.suite a{display:block;padding:24px 28px;background:var(--paper);border:1px solid var(--rule);border-radius:2px;text-decoration:none;transition:border-color .2s}
+.suite a:hover{border-color:var(--gold)}
+.suite-tag{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
+.suite-title{font-family:var(--font-display);font-size:1.1rem;font-weight:500;color:var(--navy);margin-bottom:6px}
+.suite-sub{font-size:.92rem;color:var(--ink-muted);line-height:1.55;font-weight:300}
+@media(max-width:560px){.suite{grid-template-columns:1fr}}
+
+.finale{background:var(--navy);padding:90px 48px;text-align:center}
+.finale-inner{max-width:680px;margin:0 auto}
+.finale h2{font-family:var(--font-display);font-size:clamp(1.6rem,2.8vw,2.1rem);font-weight:500;color:var(--paper);line-height:1.35;margin-bottom:20px;letter-spacing:-.01em}
+.finale h2 em{font-style:italic;color:var(--gold-light)}
+.finale p{font-family:var(--font-display);font-style:italic;font-size:1.05rem;color:rgba(250,250,247,.7);line-height:1.7;margin-bottom:40px}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--navy-deep);text-decoration:none;padding:16px 36px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border-radius:2px}
+.btn-outline{display:inline-block;background:transparent;color:var(--gold-light);text-decoration:none;padding:15px 30px;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;border:1px solid rgba(196,164,114,.4);border-radius:2px;margin-left:12px}
+@media(max-width:520px){.btn-outline{margin-left:0;margin-top:14px}}
+
+footer{background:var(--navy-deep);padding:48px 48px 36px;color:rgba(255,255,255,.45);font-family:var(--font-mono);font-size:.66rem;letter-spacing:.06em;line-height:1.9}
+.footer-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.footer-col h5{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light);margin-bottom:14px;font-weight:600}
+.footer-col p{margin-bottom:6px}
+.footer-col a{color:rgba(255,255,255,.55);text-decoration:none}
+.footer-col a:hover{color:var(--gold-light)}
+.footer-bottom{max-width:1080px;margin:36px auto 0;padding-top:24px;border-top:1px solid rgba(196,164,114,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.6rem;letter-spacing:.14em;color:rgba(255,255,255,.3)}
+@media(max-width:720px){footer{padding:36px 24px}.footer-grid{grid-template-columns:1fr;gap:28px}.section{padding:64px 24px}.hero{padding:120px 24px 60px}.finale{padding:60px 24px}}
+
+/* ===== CARROUSEL 7 scènes (cx-) ===== */
+
+
+ 
+
+.cx-hero{position:relative;min-height:auto;padding:64px 24px 56px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--paper);overflow:hidden}
+.cx-hero-eyebrow{font-family:var(--fm);font-size:.76rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px}
+.cx-hero-eyebrow sup{font-size:.5em;vertical-align:super;letter-spacing:0}
+.cx-hero-h1{font-family:var(--fd);font-weight:500;color:var(--navy);font-size:clamp(1.6rem,4.2vw,2.7rem);line-height:1.18;letter-spacing:-.015em;max-width:720px;margin-bottom:6px}
+.cx-hero-h1 em{font-style:italic;color:var(--gold-deep)}
+.cx-hero-sub{font-family:var(--fe);font-style:italic;font-size:clamp(1rem,2.2vw,1.2rem);color:var(--ink-muted);margin-bottom:34px}
+
+.cx-stage{position:relative;width:min(420px,100%);background:linear-gradient(180deg,#0e1c35,#08111f);border-radius:30px;padding:30px 20px 22px;box-shadow:0 28px 70px rgba(8,17,31,.35);overflow:hidden}
+.cx-stage-ghost{position:absolute;right:-50px;top:46%;transform:translateY(-50%);font-family:var(--fe);font-style:italic;font-size:24rem;line-height:1;color:rgba(196,164,114,.045);pointer-events:none;user-select:none}
+
+.cx-track{position:relative;z-index:1;height:330px}
+.cx-slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.cx-slide.cx-active{opacity:1;pointer-events:auto}
+.cx-slide svg{width:auto;height:330px;display:block}
+
+.cx-cap{position:relative;z-index:1;margin-top:18px;min-height:48px}
+.cx-cap-step{font-family:var(--fm);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:6px}
+.cx-cap-txt{font-family:var(--fe);font-style:italic;font-size:1.05rem;color:var(--ivory)}
+
+.cx-dots{position:relative;z-index:1;display:flex;gap:9px;justify-content:center;margin-top:16px}
+.cx-dot{width:8px;height:8px;border-radius:50%;border:none;padding:0;background:rgba(196,164,114,.35);cursor:pointer;transition:background .3s,width .3s;outline:none}
+.cx-dot.cx-on{background:#c4a472;width:22px;border-radius:4px}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(212,184,136,.3);border:none;cursor:pointer;padding:0;transition:all .3s}
+.dot.on{background:var(--gold);width:22px;border-radius:4px}
+
+.cx-hero-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);opacity:.7;animation:bob 3.2s ease-in-out infinite}
+.cx-hero-cue svg{width:28px;height:18px;display:block}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* tracés animés : ne se déclenchent que sur la slide active */
+.cx-dr{stroke-dasharray:var(--len,600);stroke-dashoffset:var(--len,600)}
+.cx-active .cx-dr{animation:draw 1.6s ease-in-out .3s forwards}
+.cx-fi{opacity:0}
+.cx-active .cx-fi{animation:fin .5s ease forwards}
+.cx-active .cx-fi.cx-d1{animation-delay:.5s}.cx-active .cx-fi.cx-d2{animation-delay:.8s}
+.cx-active .cx-fi.cx-d3{animation-delay:1.1s}.cx-active .cx-fi.cx-d4{animation-delay:1.4s}.cx-active .cx-fi.cx-d5{animation-delay:1.7s}
+.cx-sc{transform-box:fill-box;transform-origin:center}
+.cx-active .cx-sc{animation:scan 2s ease-in-out .4s}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fin{to{opacity:1}}
+@keyframes scan{0%{transform:translateY(-44px);opacity:0}15%{opacity:.9}85%{opacity:.9}100%{transform:translateY(44px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.cx-dr{stroke-dashoffset:0!important}.cx-fi{opacity:1!important}.cx-dr,.cx-fi,.cx-sc{animation:none!important}}
+@media(max-width:480px){.cx-track,.cx-slide svg{height:300px}.cx-track{height:300px}}
+
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <a href="index.html" class="top-logo">Φ</a>
+  <div class="top-nav">
+    <a href="#fonctionnement" class="top-link">Fonctionnement</a>
+    <a href="#difference" class="top-link">Différences</a>
+    <a href="#garanties" class="top-link">Garanties</a>
+    <a href="tarifications.html" class="top-cta">Accéder à Φ</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Comment ça marche.</h1>
+  <p class="hero-lead">Φ Probatoire signe vos actes sans serveur, sans tiers, sans abonnement à un opérateur. La preuve reste chez vous et chez votre client.</p>
+  <p class="hero-soft">Si demain notre société disparaît, vos actes restent vérifiables.</p>
+  <p class="hero-soft">Si une autorité étrangère veut saisir votre dossier, elle ne trouvera rien — il n'y a rien à saisir chez nous.</p>
+</section>
+
+<!-- ════ CARROUSEL — Φ EN 7 SCÈNES ════ -->
+<section class="cx-hero">
+  <div class="cx-hero-eyebrow">Inline-Offline<sup>™</sup> · Never Online · Post-Quantique</div>
+  <h1 class="cx-hero-h1">De votre identité <em>à la preuve.</em></h1>
+  <p class="cx-hero-sub">Tout se passe dans votre téléphone. Rien sur aucun serveur.</p>
+
+  <div class="cx-stage">
+    <div class="cx-stage-ghost">Φ</div>
+    <div class="cx-track" id="track">
+
+      <!-- ===== S1 · PIÈCE D'IDENTITÉ ===== -->
+      <div class="cx-slide cx-active" data-step="Étape 1" data-cap="Je scanne ma pièce d'identité.">
+        <svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="330" rx="30" fill="#11203b" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="9" y="9" width="212" height="312" rx="22" fill="#fafaf7"/>
+          <rect x="93" y="17" width="44" height="6" rx="3" fill="#11203b"/>
+          <text x="115" y="50" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="2.2" fill="#6f520f">MON IDENTITÉ</text>
+          <text x="115" y="72" text-anchor="middle" font-family="Playfair Display" font-size="15" font-style="italic" fill="#0e1c35">Ma pièce d'identité</text>
+          <!-- carte passeport -->
+          <rect x="34" y="92" width="162" height="150" rx="12" fill="#fff" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="48" y="108" width="46" height="58" rx="5" fill="#f4f1e8" stroke="#e8dcc8"/>
+          <!-- visage simple (ouvert, occidental) -->
+          <circle cx="71" cy="128" r="13" fill="#d8c4a0"/>
+          <path d="M58 132 q13 -22 26 0" fill="#6f520f" opacity=".6"/>
+          <path d="M60 166 q11 -16 22 0" fill="#d8c4a0"/>
+          <rect x="104" y="110" width="80" height="7" rx="3" fill="#0e1c35" opacity=".8"/>
+          <rect x="104" y="124" width="64" height="5" rx="2" fill="#6c7384" opacity=".4"/>
+          <rect x="104" y="136" width="72" height="5" rx="2" fill="#6c7384" opacity=".4"/>
+          <rect x="104" y="148" width="50" height="5" rx="2" fill="#6c7384" opacity=".4"/>
+          <text x="48" y="190" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="1.2" fill="#0e1c35" opacity=".7">P&lt;FRADUPONT&lt;&lt;MARTHE&lt;&lt;&lt;&lt;&lt;&lt;</text>
+          <text x="48" y="204" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="1.2" fill="#0e1c35" opacity=".7">7E2K4M19&lt;3FRA8806&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+          <text x="48" y="226" font-family="IBM Plex Mono" font-size="7" letter-spacing="1.4" fill="#6f520f">DOCUMENT VÉRIFIÉ</text>
+          <!-- ligne de scan -->
+          <rect class="cx-sc" x="34" y="160" width="162" height="3" rx="1.5" fill="#c4a472" opacity="0"/>
+          <!-- check -->
+          <g class="cx-fi cx-d4"><circle cx="115" cy="278" r="16" fill="none" stroke="#5a8033" stroke-width="2.2"/><path d="M108 278 l5 5 l9 -11" fill="none" stroke="#5a8033" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+        </svg>
+      </div>
+
+      <!-- ===== S2 · SELFIE ===== -->
+      <div class="cx-slide" data-step="Étape 2" data-cap="Je me prends en selfie avec ma pièce.">
+        <svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="330" rx="30" fill="#11203b" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="9" y="9" width="212" height="312" rx="22" fill="#fafaf7"/>
+          <rect x="93" y="17" width="44" height="6" rx="3" fill="#11203b"/>
+          <text x="115" y="50" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="2.2" fill="#6f520f">MA PHOTO</text>
+          <text x="115" y="72" text-anchor="middle" font-family="Playfair Display" font-size="15" font-style="italic" fill="#0e1c35">Selfie avec ma pièce</text>
+          <!-- cadre photo -->
+          <rect x="40" y="90" width="150" height="170" rx="14" fill="#f4f1e8" stroke="#c4a472" stroke-width="1.2"/>
+          <!-- cercle de cadrage visage -->
+          <circle class="cx-dr" style="--len:440" cx="115" cy="150" r="48" fill="none" stroke="#c4a472" stroke-width="1.6" stroke-dasharray="6 7"/>
+          <!-- visage ouvert occidental -->
+          <circle cx="115" cy="150" r="30" fill="#d8c4a0"/>
+          <path d="M88 144 q27 -34 54 0 q0 -26 -27 -26 q-27 0 -27 26Z" fill="#6f520f" opacity=".55"/>
+          <circle cx="105" cy="150" r="3" fill="#0e1c35"/><circle cx="125" cy="150" r="3" fill="#0e1c35"/>
+          <path d="M107 166 q8 7 16 0" fill="none" stroke="#0e1c35" stroke-width="2" stroke-linecap="round"/>
+          <!-- épaules -->
+          <path d="M80 210 q35 -34 70 0 v18 h-70Z" fill="#0e1c35"/>
+          <!-- petite pièce tenue -->
+          <g class="cx-fi cx-d3"><rect x="138" y="206" width="44" height="30" rx="4" fill="#fff" stroke="#c4a472" transform="rotate(8 160 221)"/><rect x="143" y="212" width="12" height="14" rx="2" fill="#d8c4a0" transform="rotate(8 160 221)"/><rect x="159" y="213" width="20" height="3" rx="1.5" fill="#0e1c35" opacity=".6" transform="rotate(8 160 221)"/><rect x="159" y="220" width="16" height="2.5" rx="1.2" fill="#6c7384" opacity=".5" transform="rotate(8 160 221)"/></g>
+          <text x="115" y="290" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="12" fill="#0e1c35">Visage et pièce, ensemble.</text>
+        </svg>
+      </div>
+
+      <!-- ===== S3 · EMPREINTE ===== -->
+      <div class="cx-slide" data-step="Étape 3" data-cap="Je valide par mon empreinte.">
+        <svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="330" rx="30" fill="#11203b" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="9" y="9" width="212" height="312" rx="22" fill="#fafaf7"/>
+          <rect x="93" y="17" width="44" height="6" rx="3" fill="#11203b"/>
+          <text x="115" y="50" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="2.2" fill="#6f520f">MA BIOMÉTRIE</text>
+          <text x="115" y="72" text-anchor="middle" font-family="Playfair Display" font-size="15" font-style="italic" fill="#0e1c35">Mon empreinte</text>
+          <!-- empreinte : arcs concentriques tracés -->
+          <g transform="translate(115 168)">
+            <path class="cx-dr" style="--len:150" d="M-34 6 a34 40 0 0 1 68 0" fill="none" stroke="#0e1c35" stroke-width="2.4" stroke-linecap="round"/>
+            <path class="cx-dr" style="--len:120" d="M-26 10 a26 32 0 0 1 52 0" fill="none" stroke="#0e1c35" stroke-width="2.4" stroke-linecap="round"/>
+            <path class="cx-dr" style="--len:90" d="M-18 14 a18 24 0 0 1 36 0" fill="none" stroke="#0e1c35" stroke-width="2.4" stroke-linecap="round"/>
+            <path class="cx-dr" style="--len:60" d="M-10 18 a10 16 0 0 1 20 0" fill="none" stroke="#c4a472" stroke-width="2.6" stroke-linecap="round"/>
+            <path class="cx-dr" style="--len:40" d="M-30 -2 a30 36 0 0 1 60 0" fill="none" stroke="#0e1c35" stroke-width="2.4" stroke-linecap="round"/>
+            <path class="cx-dr" style="--len:200" d="M-22 28 a22 28 0 0 0 44 0" fill="none" stroke="#0e1c35" stroke-width="2.2" stroke-linecap="round"/>
+          </g>
+          <rect class="cx-sc" x="60" y="168" width="110" height="3" rx="1.5" fill="#c4a472" opacity="0"/>
+          <g class="cx-fi cx-d4"><circle cx="115" cy="270" r="15" fill="none" stroke="#5a8033" stroke-width="2.2"/><path d="M108 270 l5 5 l9 -11" fill="none" stroke="#5a8033" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <text x="115" y="306" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="11" fill="#0e1c35">Clé scellée dans le silicium</text>
+        </svg>
+      </div>
+
+      <!-- ===== S4 · SIGNATURE ===== -->
+      <div class="cx-slide" data-step="Étape 4" data-cap="Je signe de ma vraie main.">
+        <svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="330" rx="30" fill="#11203b" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="9" y="9" width="212" height="312" rx="22" fill="#fafaf7"/>
+          <rect x="93" y="17" width="44" height="6" rx="3" fill="#11203b"/>
+          <text x="115" y="50" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="2.2" fill="#6f520f">MA SIGNATURE</text>
+          <text x="115" y="72" text-anchor="middle" font-family="Playfair Display" font-size="15" font-style="italic" fill="#0e1c35">Maître Dupont</text>
+          <rect x="34" y="92" width="162" height="140" rx="14" fill="#fff" stroke="#c4a472" stroke-width="1.2"/>
+          <line x1="50" y1="196" x2="180" y2="196" stroke="#6c7384" stroke-width=".8" stroke-dasharray="2 3" opacity=".5"/>
+          <path class="cx-dr" style="--len:520" d="M54 186 C 62 126, 70 124, 74 164 C 77 192, 80 196, 88 172 C 96 148, 104 146, 104 172 C 104 192, 110 194, 120 172 C 132 146, 138 126, 144 150 C 149 170, 156 182, 168 150 C 176 130, 184 140, 188 160" fill="none" stroke="#0e1c35" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <g class="cx-fi cx-d4"><rect x="34" y="250" width="162" height="40" rx="11" fill="#c4a472"/><text x="115" y="275" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" letter-spacing="2.4" fill="#0e1c35" font-weight="600">SIGNER</text></g>
+        </svg>
+      </div>
+
+      <!-- ===== S5 · MENTION MANUSCRITE ===== -->
+      <div class="cx-slide" data-step="Étape 5" data-cap="Je recopie la mention, de ma main.">
+        <svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="330" rx="30" fill="#11203b" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="9" y="9" width="212" height="312" rx="22" fill="#fafaf7"/>
+          <rect x="93" y="17" width="44" height="6" rx="3" fill="#11203b"/>
+          <text x="115" y="50" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="2.2" fill="#6f520f">MA MENTION</text>
+          <text x="115" y="72" text-anchor="middle" font-family="Playfair Display" font-size="15" font-style="italic" fill="#0e1c35">Consentement éclairé</text>
+          <!-- consigne imprimée -->
+          <rect x="30" y="88" width="170" height="46" rx="10" fill="#f4f1e8" stroke="#e8dcc8"/>
+          <text x="40" y="104" font-family="IBM Plex Mono" font-size="6.5" letter-spacing="1.2" fill="#6f520f">À RECOPIER DE MA MAIN</text>
+          <text x="115" y="122" text-anchor="middle" font-family="Playfair Display" font-size="10.5" font-style="italic" fill="#0e1c35">« Lu et approuvé, bon pour engagement »</text>
+          <!-- zone d'écriture manuscrite -->
+          <rect x="30" y="144" width="170" height="106" rx="12" fill="#fff" stroke="#c4a472" stroke-width="1.2"/>
+          <line x1="44" y1="186" x2="186" y2="186" stroke="#6c7384" stroke-width=".6" stroke-dasharray="2 3" opacity=".4"/>
+          <line x1="44" y1="222" x2="186" y2="222" stroke="#6c7384" stroke-width=".6" stroke-dasharray="2 3" opacity=".4"/>
+          <!-- tracé cursif ligne 1 -->
+          <path class="cx-dr" style="--len:330" d="M46 182 c3 -16 7 -15 9 -1 c2 12 6 11 8 -2 c2 -11 7 -10 8 2 c1 10 5 10 8 -1 c3 -12 9 -12 11 1 c2 11 7 10 9 -3 c2 -12 8 -11 10 3 c2 12 8 11 11 -2 c3 -13 9 -12 11 2 c2 11 6 11 9 0" fill="none" stroke="#0e1c35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- tracé cursif ligne 2 -->
+          <path class="cx-dr" style="--len:300" d="M46 218 c2 -13 7 -12 9 0 c2 12 7 11 9 -2 c3 -12 9 -11 10 2 c2 11 7 10 9 -2 c3 -13 9 -12 11 1 c2 12 7 11 10 -2 c3 -12 8 -11 10 2 c2 10 7 10 10 0" fill="none" stroke="#0e1c35" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- check + valeur probante -->
+          <g class="cx-fi cx-d5"><circle cx="46" cy="272" r="13" fill="none" stroke="#5a8033" stroke-width="2"/><path d="M40 272 l4 4 l8 -9" fill="none" stroke="#5a8033" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="66" y="270" font-family="EB Garamond" font-style="italic" font-size="11.5" fill="#0e1c35">Consentement libre</text>
+          <text x="66" y="284" font-family="EB Garamond" font-style="italic" font-size="11.5" fill="#0e1c35">et éclairé, de ma main.</text></g>
+        </svg>
+      </div>
+
+      <!-- ===== S6 · RECONNAISSANCE (EXPÉDITEUR) ===== -->
+      <div class="cx-slide" data-step="Étape 6" data-cap="Je reconnais l'identité du signataire.">
+        <svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="330" rx="30" fill="#11203b" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="9" y="9" width="212" height="312" rx="22" fill="#fafaf7"/>
+          <rect x="93" y="17" width="44" height="6" rx="3" fill="#11203b"/>
+          <text x="115" y="50" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="2.2" fill="#6f520f">DOSSIER SIGNÉ REÇU</text>
+          <text x="115" y="72" text-anchor="middle" font-family="Playfair Display" font-size="15" font-style="italic" fill="#0e1c35">Je reconnais le signataire</text>
+          <!-- carte dossier signataire -->
+          <rect x="30" y="88" width="170" height="156" rx="12" fill="#fff" stroke="#c4a472" stroke-width="1.2"/>
+          <!-- photo -->
+          <circle cx="62" cy="124" r="19" fill="#f4f1e8" stroke="#e8dcc8"/>
+          <circle cx="62" cy="120" r="12" fill="#d8c4a0"/>
+          <path d="M50 116 q12 -16 24 0 q0 -12 -12 -12 q-12 0 -12 12Z" fill="#6f520f" opacity=".55"/>
+          <path d="M48 140 q14 -13 28 0 v6 h-28Z" fill="#0e1c35"/>
+          <text x="92" y="116" font-family="Playfair Display" font-size="14" font-weight="600" fill="#0e1c35">Marthe Dupont</text>
+          <text x="92" y="132" font-family="IBM Plex Mono" font-size="7" letter-spacing="1" fill="#6f520f">PARTIE SIGNATAIRE</text>
+          <!-- 3 badges vérifiés -->
+          <g class="cx-fi cx-d2"><circle cx="44" cy="158" r="5.6" fill="none" stroke="#5a8033" stroke-width="1.6"/><path d="M41.6 158 l1.9 1.9 l3.5 -4.3" fill="none" stroke="#5a8033" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="162" font-family="EB Garamond" font-style="italic" font-size="11" fill="#0e1c35">Sa pièce d'identité</text></g>
+          <g class="cx-fi cx-d3"><circle cx="44" cy="178" r="5.6" fill="none" stroke="#5a8033" stroke-width="1.6"/><path d="M41.6 178 l1.9 1.9 l3.5 -4.3" fill="none" stroke="#5a8033" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="182" font-family="EB Garamond" font-style="italic" font-size="11" fill="#0e1c35">Sa signature manuscrite</text></g>
+          <g class="cx-fi cx-d4"><circle cx="44" cy="198" r="5.6" fill="none" stroke="#5a8033" stroke-width="1.6"/><path d="M41.6 198 l1.9 1.9 l3.5 -4.3" fill="none" stroke="#5a8033" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="202" font-family="EB Garamond" font-style="italic" font-size="11" fill="#0e1c35">Sa mention manuscrite</text></g>
+          <g class="cx-fi cx-d5"><circle cx="44" cy="218" r="5.6" fill="none" stroke="#5a8033" stroke-width="1.6"/><path d="M41.6 218 l1.9 1.9 l3.5 -4.3" fill="none" stroke="#5a8033" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><text x="55" y="222" font-family="EB Garamond" font-style="italic" font-size="11" fill="#0e1c35">Son empreinte liée à G</text></g>
+          <!-- bouton confirmer -->
+          <g class="cx-fi cx-d5"><rect x="30" y="256" width="170" height="40" rx="11" fill="#0e1c35"/>
+          <path d="M52 276 l5 5 l9 -11" fill="none" stroke="#5a8033" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="124" y="280" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" letter-spacing="1.8" fill="#d4b888">JE RECONNAIS</text></g>
+          <text x="115" y="312" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="10.5" fill="#6f520f">Reconnaissance en miroir, bilatérale.</text>
+        </svg>
+      </div>
+
+      <!-- ===== S7 · CERTIFICAT ===== -->
+      <div class="cx-slide" data-step="Étape 7" data-cap="Ma preuve est scellée. Elle fait foi.">
+        <svg viewBox="0 0 230 330" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="230" height="330" rx="30" fill="#11203b" stroke="#c4a472" stroke-width="1.2"/>
+          <rect x="9" y="9" width="212" height="312" rx="22" fill="#fafaf7"/>
+          <rect x="93" y="17" width="44" height="6" rx="3" fill="#11203b"/>
+          <text x="115" y="48" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" letter-spacing="2.2" fill="#6f520f">MA PREUVE</text>
+          <text x="115" y="70" text-anchor="middle" font-family="Playfair Display" font-size="15" font-style="italic" fill="#0e1c35">Mon certificat</text>
+          <!-- sceau notarial -->
+          <g class="cx-fi cx-d1" transform="translate(115 110)">
+            <circle r="30" fill="none" stroke="#c4a472" stroke-width="1.4"/>
+            <circle r="24" fill="none" stroke="#c4a472" stroke-width=".8" stroke-dasharray="2 3"/>
+            <text y="9" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="30" fill="#6f520f">Φ</text>
+          </g>
+          <!-- 4 lignes de preuve -->
+          <g class="cx-fi cx-d2"><circle cx="48" cy="160" r="6.5" fill="none" stroke="#5a8033" stroke-width="1.8"/><path d="M45.2 160 l2.3 2.3 l4.3 -5.2" fill="none" stroke="#5a8033" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="61" y="164" font-family="EB Garamond" font-style="italic" font-size="11.5" fill="#0e1c35">Signature manuscrite</text></g>
+          <g class="cx-fi cx-d3"><circle cx="48" cy="182" r="6.5" fill="none" stroke="#5a8033" stroke-width="1.8"/><path d="M45.2 182 l2.3 2.3 l4.3 -5.2" fill="none" stroke="#5a8033" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="61" y="186" font-family="EB Garamond" font-style="italic" font-size="11.5" fill="#0e1c35">Mention manuscrite</text></g>
+          <g class="cx-fi cx-d4"><circle cx="48" cy="204" r="6.5" fill="none" stroke="#5a8033" stroke-width="1.8"/><path d="M45.2 204 l2.3 2.3 l4.3 -5.2" fill="none" stroke="#5a8033" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="61" y="208" font-family="EB Garamond" font-style="italic" font-size="11.5" fill="#0e1c35">Identité vérifiée</text></g>
+          <g class="cx-fi cx-d5"><circle cx="48" cy="226" r="6.5" fill="none" stroke="#5a8033" stroke-width="1.8"/><path d="M45.2 226 l2.3 2.3 l4.3 -5.2" fill="none" stroke="#5a8033" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><text x="61" y="230" font-family="EB Garamond" font-style="italic" font-size="11.5" fill="#0e1c35">Empreinte biométrique</text></g>
+          <g class="cx-fi cx-d5">
+            <line x1="34" y1="244" x2="196" y2="244" stroke="#c4a472" stroke-width=".6" opacity=".4"/>
+            <text x="115" y="261" text-anchor="middle" font-family="'IBM Plex Mono','EB Garamond',monospace" font-size="6.2" letter-spacing=".3" fill="#6f520f">G = Φ( QUI · DOCUMENT · SILICIUM · INSTANT )</text>
+            <text x="115" y="278" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" letter-spacing=".5" fill="#0e1c35">= 8f3a·9d7e·a5cc·4e7f·a3b4</text>
+            <text x="115" y="299" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" letter-spacing=".7" fill="#6f520f">ML-DSA-65 · RECALCULABLE PAR TOUT JUGE</text>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+
+    <div class="cx-cap"><div class="cx-cap-step" id="capStep">Étape 1</div><div class="cx-cap-txt" id="capTxt">Je scanne ma pièce d'identité.</div></div>
+    <div class="cx-dots" id="dots"></div>
+  </div>
+
+  <a href="#promesse" class="cx-hero-cue" aria-label="Découvrir">
+    <svg viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 4 L12 14 L22 4" fill="none" stroke="#6f520f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+
+<div class="section-soft" id="fonctionnement">
+<section class="section">
+  <div class="section-eyebrow">1 · L'inscription</div>
+  <h2>Comment ça marche <em>pour votre client</em></h2>
+  <p class="intro">Vous l'invitez à signer un acte, par email ou SMS, à l'adresse et au numéro que vous avez vous-même renseignés. Il reçoit l'invitation, installe l'application Φ sur son téléphone, et s'inscrit en trois minutes.</p>
+
+  <ol class="steps">
+    <li>Il photographie sa pièce d'identité (passeport, carte d'identité ou titre de séjour).</li>
+    <li>Il se prend en selfie en tenant sa pièce à côté de son visage, face signature visible.</li>
+    <li>Il trace sa signature au doigt sur l'écran — c'est <strong>sa signature de référence</strong>, conservée comme témoin.</li>
+  </ol>
+
+  <p>C'est fini. Ces trois éléments restent dans son téléphone, protégés par son empreinte digitale.</p>
+
+  <p>Sa <strong>signature de référence</strong> est précieuse : elle servira plus tard à vérifier, à chaque acte, que c'est bien lui qui signe — en comparant son geste du jour avec ce témoin de départ.</p>
+
+  <p>À chaque acte qu'il signera ensuite, il pose son empreinte et trace sa signature.<br>
+  Quinze secondes.</p>
+</section>
+</div>
+
+<section class="section">
+  <div class="section-eyebrow">2 · Confidentialité</div>
+  <h2>Le document n'arrive <em>que chez vous</em></h2>
+  <p class="intro">Quand votre client signe et envoie l'acte, le document est chiffré spécifiquement pour votre téléphone — et pour lui seul.</p>
+
+  <p>Si quelqu'un interceptait le fichier en route — un opérateur de messagerie, une autorité étrangère, un pirate — il aurait sous les yeux un fichier chiffré, parfaitement illisible.</p>
+
+  <p>Et même quelqu'un qui parviendrait à copier votre empreinte digitale ne pourrait pas ouvrir le document sur un autre appareil. Le fichier est <strong>cryptographiquement fusionné</strong> avec l'enclave de votre téléphone : il ne s'ouvrira nulle part ailleurs au monde.</p>
+</section>
+
+<section class="section">
+  <div class="section-eyebrow">3 · Vérification</div>
+  <h2>Comment vous vérifiez <em>son identité</em></h2>
+  <p class="intro">Quand vous recevez son acte signé, vous disposez de quatre éléments.</p>
+
+  <ul class="dots">
+    <li>sa <strong>pièce d'identité</strong> en PDF</li>
+    <li>sa <strong>pièce d'identité tenue en main</strong>, sur un selfie pris à son inscription</li>
+    <li>sa <strong>signature de référence</strong>, tracée à la main au moment où il a créé son compte</li>
+    <li>le <strong>paraphe</strong> qu'il vient de poser sur votre acte</li>
+  </ul>
+
+  <div class="questions">
+    <p class="q-lead">Quatre recoupements :</p>
+    <ol>
+      <li>La photo sur la pièce ressemble-t-elle au visage du selfie ?</li>
+      <li>La pièce sur le PDF est-elle bien celle qu'on voit dans le selfie ?</li>
+      <li>La signature imprimée sur la pièce ressemble-t-elle à sa signature de référence ?</li>
+      <li>Sa signature de référence ressemble-t-elle au paraphe qu'il vient de poser sur votre acte ?</li>
+    </ol>
+    <p class="q-after">Si oui, vous cliquez « Je le reconnais ». C'est le geste que vous feriez en face à face dans votre étude, sauf qu'il est à 400 kilomètres.</p>
+  </div>
+
+  <p style="margin-top:32px">En cliquant « Je le reconnais », vous attestez que c'est bien <strong>cette personne</strong> — celle dont le visage et la signature viennent d'être captés à l'instant exact où elle signe votre acte.</p>
+
+  <p>C'est aussi <strong>votre client</strong> : celui à qui vous avez envoyé l'invitation à signer, à l'adresse email et au numéro de téléphone que vous avez vous-même renseignés. C'est sur ce téléphone-là qu'il a installé Φ et qu'il s'est inscrit.</p>
+</section>
+
+<section class="section">
+  <div class="section-eyebrow">4 · La preuve</div>
+  <h2>Si un jour il faut <em>prouver</em></h2>
+  <p class="intro">La signature d'un contrat est la première preuve de son existence. Si un contentieux survient, il faudra produire cette preuve devant un juge ou un expert.</p>
+
+  <p>Vous disposez pour cela d'un <strong>journal cryptographique chaîné</strong> dans votre téléphone. Votre client en a un dans le sien. Les deux journaux ont enregistré chaque événement reçu :</p>
+
+  <ul class="dots">
+    <li>la taille du document signé</li>
+    <li>son nombre de pages</li>
+    <li>la signature qui le scelle</li>
+    <li>l'attestation, visible en clair</li>
+    <li>le certificat émis à l'acte</li>
+  </ul>
+
+  <p>Trois éléments sont <strong>exportables sous PDF</strong>, à tout moment : le journal, l'attestation, le certificat. Tout tiers — juge ou expert — peut les rejouer et vérifier qu'ils sont cohérents entre eux.</p>
+
+  <p>Un certificat n'est émis que <strong>si la chaîne du journal est intacte</strong> et si tous les événements concordent. Sinon, pas de certificat. C'est ce qui rend toute falsification immédiatement détectable.</p>
+
+  <div style="margin-top:36px;padding:26px 30px;background:var(--paper);border-left:3px solid var(--gold);border-radius:2px">
+    <p style="font-family:var(--font-display);font-style:italic;color:var(--ink-muted);font-size:1rem;margin-bottom:14px">Le journal n'enregistre que ce qui est positif et caractérisé — pas l'intention.</p>
+    <p style="font-size:.96rem;color:var(--ink);line-height:1.7;margin-bottom:10px">Constitutifs de la preuve, et donc enregistrés :</p>
+    <ul class="dots" style="margin:0 0 14px 0">
+      <li>la réception du Φ de votre client</li>
+      <li>la réception du document à signer</li>
+      <li>la réception de l'attestation de signature et du dossier d'identité du signataire</li>
+      <li>la réception de l'attestation et du certificat</li>
+    </ul>
+    <p style="font-size:.96rem;color:var(--ink);line-height:1.7;margin-bottom:0">Tous les éléments constitutifs de la preuve, réceptionnés par le téléphone de l'un ou de l'autre. Les envois, eux, ne sont pas, dans l'absolu, une preuve de la volonté de signer.</p>
+  </div>
+</section>
+
+<div class="section-soft" id="difference">
+<section class="section">
+  <div class="section-eyebrow">5 · Différences</div>
+  <h2>Pourquoi c'est <em>différent</em></h2>
+  <p class="intro">Les solutions actuelles passent toutes par un opérateur tiers qui détient la preuve sur ses serveurs. Pas vous. Et si vous vous désabonnez, vous perdez l'accès à toutes vos signatures passées.</p>
+
+  <div class="usp">
+    <div class="usp-item">
+      <h3>Aucun serveur, aucun cloud</h3>
+      <p>L'acte signé existe uniquement dans le téléphone de votre client et dans le vôtre. Personne d'autre n'y a accès, jamais.</p>
+    </div>
+    <div class="usp-item">
+      <h3>Pérenne par construction</h3>
+      <p>Votre acte reste vérifiable dans cinq ans, dans vingt ans, dans cinquante ans — indépendamment de ce qui arrive à notre société ou à quelque opérateur que ce soit.</p>
+    </div>
+    <div class="usp-item">
+      <h3>Vous vérifiez vous-même</h3>
+      <p>Pas besoin de demander à un tiers si le signataire est bien lui. Vous le voyez. Vous le reconnaissez. Comme dans votre étude.</p>
+    </div>
+    <div class="usp-item">
+      <h3>Pensé pour durer</h3>
+      <p>La signature est calculée avec les algorithmes officiels résistants aux ordinateurs quantiques (standards américains publiés en 2024). Elle restera sûre quand les ordinateurs quantiques arriveront.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="section" id="garanties">
+  <div class="section-eyebrow">6 · Garanties</div>
+  <h2>Vos garanties <em>juridiques</em></h2>
+
+  <div class="garanties">
+    <div class="garantie">
+      <h4>Pièces d'identité opposables</h4>
+      <p>Passeport, carte nationale d'identité, titre de séjour — les trois pièces reconnues par le Code civil. Le permis de conduire est exclu (Cour de cassation, 25 juin 2009).</p>
+    </div>
+    <div class="garantie">
+      <h4>Mention manuscrite</h4>
+      <p>Le paraphe manuscrit, daté à la seconde près et scellé cryptographiquement, suffit. L'ordonnance du 10 février 2016 a supprimé l'exigence d'une formule sacramentelle type « lu et approuvé ».</p>
+    </div>
+    <div class="garantie">
+      <h4>Données personnelles</h4>
+      <p>Aucune empreinte, aucune donnée biométrique de votre client ne transite par notre société. Tout reste dans son téléphone. Nous ne sommes ni responsable ni sous-traitant de traitement au sens du RGPD.</p>
+    </div>
+    <div class="garantie">
+      <h4>Certification</h4>
+      <p>Une procédure de certification est en cours auprès de l'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information). Brevets déposés pour notre architecture d'identification et notre canal de transmission.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-soft">
+<section class="section">
+  <div class="section-eyebrow">7 · Tarif</div>
+  <h2>Combien <em>ça coûte</em></h2>
+
+  <div class="tarif">
+    <div>
+      <span class="tarif-price">À partir de 15 €</span><span class="tarif-unit">/ mois HT</span>
+    </div>
+    <p class="tarif-label">Un crédit, un acte de signature.</p>
+    <div class="tarif-features">
+      <span>Solo — 15 € · 18 crédits</span>
+      <span>Équipe — 300 € · 330 crédits · 3 users</span>
+      <span>Business — 450 € · 495 crédits · 5 users</span>
+    </div>
+    <div class="tarif-features" style="margin-top:14px">
+      <span>Pack — 15 € unique · 15 crédits</span>
+      <span>Fondateurs — tarif gelé à vie · 300 places</span>
+    </div>
+    <p class="tarif-note">Tous les plans : sans engagement. Vous ne payez que les signatures réalisées.<br>
+    Votre client reçoit et signe gratuitement (Transmettre, 0 €) et conserve ses actes à vie — aucun frais de stockage, aucun frais d'identification de son côté.<br>
+    <a href="tarifications.html" style="color:var(--gold-deep);text-decoration:underline">Voir tous les tarifs →</a></p>
+  </div>
+</section>
+</div>
+
+<section class="section">
+  <div class="section-eyebrow">8 · Pour aller plus loin</div>
+  <h2>Pour aller plus loin</h2>
+
+  <div class="suite">
+    <a href="livre-blanc.html">
+      <div class="suite-tag">Livre blanc</div>
+      <div class="suite-title">Le détail technique</div>
+      <div class="suite-sub">Pour les directions techniques et juridiques qui veulent comprendre la mécanique cryptographique en profondeur.</div>
+    </a>
+    <a href="contact-commercial.html">
+      <div class="suite-tag">Démonstration</div>
+      <div class="suite-title">Voir Φ en main</div>
+      <div class="suite-sub">Nous prenons rendez-vous, dans votre étude ou à distance, pour vous montrer l'application sur un cas concret.</div>
+    </a>
+  </div>
+</section>
+
+<div class="finale">
+  <div class="finale-inner">
+    <h2>La vérification d'identité que vous faisiez en face à face,<br><em>scellée à distance.</em></h2>
+    <p>Aucun tiers de confiance. Aucun cloud. Aucune dépendance à un opérateur.</p>
+    <a href="tarifications.html" class="btn-gold">Accéder à Φ</a>
+    <a href="contact-commercial.html" class="btn-outline">Demander une démo</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>PHI SAS</h5>
+      <p>Filiale d'AION ASEMANTIX</p>
+      <p>Signature électronique souveraine</p>
+      <p>Brevets déposés</p>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <p><a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a></p>
+      <p><a href="contact-commercial.html">Demande de démonstration</a></p>
+      <p><a href="dpo.html">Délégué à la Protection des Données</a></p>
+    </div>
+    <div class="footer-col">
+      <h5>Documents</h5>
+      <p><a href="livre-blanc.html">Livre blanc technique</a></p>
+      <p><a href="cgu.html">Conditions générales</a></p>
+      <p><a href="mentions-legales.html">Mentions légales</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 PHI SAS — Tous droits réservés</span>
+    <span>Document v2.3 · 5 juin 2026</span>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.cx-slide'));
+  var dotsBox=document.getElementById('dots');
+  var capStep=document.getElementById('capStep'), capTxt=document.getElementById('capTxt');
+  var i=0, timer, DUR=4200;
+  slides.forEach(function(s,n){
+    var b=document.createElement('button'); b.className='cx-dot'+(n===0?' cx-on':''); b.setAttribute('aria-label','Étape '+(n+1));
+    b.onclick=function(){go(n);reset();}; dotsBox.appendChild(b);
+  });
+  var dots=[].slice.call(dotsBox.children);
+  function go(n){
+    slides[i].classList.remove('cx-active'); dots[i].classList.remove('cx-on');
+    i=n%slides.length;
+    var s=slides[i];
+    // forcer le rejeu des animations
+    s.querySelectorAll('.cx-dr,.cx-fi,.cx-sc').forEach(function(el){el.style.animation='none';el.offsetHeight;el.style.animation='';});
+    s.classList.add('cx-active'); dots[i].classList.add('cx-on');
+    capStep.textContent=s.dataset.step; capTxt.textContent=s.dataset.cap;
+  }
+  function tick(){go(i+1);}
+  function reset(){clearInterval(timer);timer=setInterval(tick,DUR);}
+  reset();
+  var stage=document.querySelector('.cx-stage');
+  stage.addEventListener('mouseenter',function(){clearInterval(timer);});
+  stage.addEventListener('mouseleave',reset);
+})();
+</script>
+</body>
+</html>
