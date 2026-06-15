@@ -232,6 +232,8 @@ body{font-family:var(--font-s);color:var(--ink);background:var(--paper);line-hei
       <li>votre <strong>journal probatoire</strong> et vos clés cryptographiques.</li>
     </ul>
     <p class="pc-text">Les données biométriques sont traitées par le sous-système sécurisé de votre téléphone (par exemple le Keystore d'Android ou la Secure Enclave d'iOS) ; <strong>nous n'y avons jamais accès</strong>. Cette conception applique par construction le principe de <strong>minimisation des données</strong> du RGPD : nous ne collectons pas ce dont nous n'avons pas besoin, et nous n'avons pas besoin de vos données sensibles pour que Φ fonctionne.</p>
+    <h3 class="pc-h3">La seule donnée transmise depuis l'application</h3>
+    <p class="pc-text">Par souci de transparence : l'application effectue <strong>un seul appel réseau</strong>, vers le service de gestion de licence de notre prestataire, à seule fin d'<strong>activer et de vérifier votre abonnement</strong>. Cet appel transmet uniquement la <strong>marque et le modèle de votre appareil</strong> (par exemple « samsung SM-G991B »), afin d'identifier l'installation associée à la licence. Il ne s'agit pas d'un identifiant unique : aucun numéro de série, aucun identifiant publicitaire, aucune adresse, aucun nom ni aucune donnée biométrique n'est transmis. Cette information n'est pas rattachée à votre identité et n'est jamais utilisée à des fins de suivi. Aucun autre appel réseau n'existe : ni mesure d'audience, ni rapport d'erreur, ni notification, ni outil tiers d'analyse.</p>
   </section>
 
   <section class="pc-section" id="donnees">
@@ -301,6 +303,7 @@ body{font-family:var(--font-s);color:var(--ink);background:var(--paper);line-hei
     <ul class="pc-list">
       <li><strong>L'hébergeur du site</strong> (GitHub Pages), pour la mise à disposition des pages ;</li>
       <li><strong>Le prestataire de paiement</strong>, pour le traitement des règlements par carte ;</li>
+      <li><strong>Le prestataire de gestion de licence</strong>, qui reçoit la marque et le modèle de l'appareil pour l'activation et la vérification de l'abonnement ;</li>
       <li>Le cas échéant, notre <strong>prestataire de messagerie</strong>, pour la réception et l'envoi de courriels.</li>
     </ul>
     <p class="pc-text">Chaque sous-traitant n'accède qu'aux données strictement nécessaires à sa mission.</p>
