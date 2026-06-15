@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Φ · Signature post-quantique sans serveur · PHI</title>
+<meta name="description" content="Politique de confidentialité de Φ. Application 100% locale, sans serveur : vos documents, signatures et données biométriques ne quittent jamais votre appareil. Minimisation des données, conformité RGPD. PHI SAS.">
+<meta name="keywords" content="politique de confidentialité, RGPD, signature électronique locale, sans serveur, données personnelles, Φ, PHI, signature post-quantique, protection des données, CNIL">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="PHI">
+<link rel="canonical" href="https://phi-signature.fr/politique-confidentialite.html">
+<meta name="theme-color" content="#0e1c35">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90" font-style="italic" font-family="Georgia,serif" fill="%236f520f" text-anchor="middle" x="50">Φ</text></svg>'>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://phi-signature.fr/politique-confidentialite.html">
+<meta property="og:site_name" content="Φ — PHI">
+<meta property="og:title" content="Politique de confidentialité — Φ · PHI">
+<meta property="og:description" content="Application 100% locale, sans serveur : vos documents, signatures et données biométriques ne quittent jamais votre appareil. Conformité RGPD.">
+<meta property="og:image" content="https://phi-signature.fr/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@phi_signaturefr">
+<meta name="twitter:title" content="Politique de confidentialité — Φ · PHI">
+<meta name="twitter:description" content="Φ : application locale sans serveur. Vos données ne quittent jamais votre appareil. Conformité RGPD.">
+<meta name="twitter:image" content="https://phi-signature.fr/og-image.jpg">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://phi-signature.fr/politique-confidentialite.html#webpage",
+      "name": "Politique de confidentialité — Φ",
+      "url": "https://phi-signature.fr/politique-confidentialite.html",
+      "description": "Politique de confidentialité de Φ, application de signature 100% locale sans serveur. Conformité RGPD.",
+      "inLanguage": "fr",
+      "isPartOf": {"@type": "WebSite", "@id": "https://phi-signature.fr/#website"},
+      "publisher": {"@id": "https://phi-signature.fr/#organization"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Accueil","item":"https://phi-signature.fr/"},
+          {"@type":"ListItem","position":2,"name":"Politique de confidentialité","item":"https://phi-signature.fr/politique-confidentialite.html"}
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://phi-signature.fr/#organization",
+      "name": "PHI SAS",
+      "alternateName": "Φ",
+      "url": "https://phi-signature.fr",
+      "email": "phi-signature@proton.me"
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#0e1c35;--navy-deep:#08111f;--navy-soft:#1a2942;
+  --gold:#c4a472;--gold-deep:#6f520f;--gold-soft:#e2c87a;
+  --paper:#ffffff;--paper-soft:#fafaf7;--paper-deep:#f4f1e8;
+  --rule:#e6e3dc;--ink:#0e1c35;--ink-muted:#4a5a73;--ink-faded:#8a96a8;
+  --font-d:"Playfair Display",Georgia,serif;
+  --font-m:"IBM Plex Mono",Consolas,monospace;
+  --font-s:"IBM Plex Sans",-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-s);color:var(--ink);background:var(--paper);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased}
+
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:16px 48px;display:flex;align-items:center;justify-content:space-between}
+.nav-phi{font-family:var(--font-d);font-style:italic;font-size:2rem;color:var(--gold-deep);font-weight:500;text-decoration:none;line-height:1}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-family:var(--font-m);font-size:.7rem;color:var(--ink-muted);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{padding:9px 22px;background:var(--navy);color:white!important;border-radius:4px;font-weight:500;font-size:.78rem;letter-spacing:.06em;transition:background .2s}
+.nav-cta:hover{background:var(--navy-deep)!important}
+@media(max-width:720px){.nav-inner{padding:14px 24px}.nav-links a:not(.nav-cta){display:none}}
+
+.breadcrumb{max-width:920px;margin:0 auto;padding:24px 32px 0;font-family:var(--font-m);font-size:.7rem;color:var(--ink-faded);letter-spacing:.12em;text-transform:uppercase}
+.breadcrumb a{color:var(--gold-deep);text-decoration:none}
+.breadcrumb a:hover{color:var(--navy)}
+.breadcrumb span{color:var(--gold)}
+
+.pc-container{max-width:920px;margin:0 auto;padding:60px 32px 100px}
+
+.pc-hero{padding:32px 0 48px;max-width:760px}
+.pc-eyebrow{font-family:var(--font-m);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:18px}
+.pc-h1{font-family:var(--font-d);font-size:2.4rem;line-height:1.2;font-weight:500;color:var(--navy);margin-bottom:22px;letter-spacing:-.012em}
+.pc-h1 em{font-style:italic;color:var(--gold-deep);font-weight:500}
+.pc-lead{font-family:var(--font-d);font-style:italic;font-size:1.12rem;line-height:1.6;color:var(--ink-muted);font-weight:400;max-width:720px}
+
+.pc-meta{background:var(--paper-soft);padding:20px 26px;border-left:3px solid var(--gold);border-radius:4px;margin:32px 0 40px;font-family:var(--font-m);font-size:.78rem;line-height:1.7;color:var(--ink)}
+.pc-meta strong{color:var(--navy);font-weight:600}
+
+.pc-highlight{background:var(--navy);color:rgba(255,255,255,.92);padding:30px 34px;border-radius:8px;margin:0 0 48px}
+.pc-highlight-label{font-family:var(--font-m);font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft);font-weight:600;margin-bottom:12px}
+.pc-highlight p{font-family:var(--font-d);font-style:italic;font-size:1.15rem;line-height:1.55;color:#fff;font-weight:400}
+.pc-highlight strong{color:var(--gold-soft);font-weight:500}
+
+.pc-toc{background:var(--paper-soft);padding:28px 32px;border-radius:6px;margin:0 0 56px;border-left:3px solid var(--gold)}
+.pc-toc-title{font-family:var(--font-m);font-size:.7rem;letter-spacing:.22em;color:var(--gold-deep);font-weight:600;margin-bottom:14px;text-transform:uppercase}
+.pc-toc ul{list-style:none;padding:0;margin:0;columns:2;column-gap:28px}
+.pc-toc li{padding:5px 0;font-family:var(--font-s);font-size:.88rem;break-inside:avoid}
+.pc-toc a{color:var(--navy);text-decoration:none;font-weight:400}
+.pc-toc a:hover{color:var(--gold-deep)}
+.pc-toc-num{font-family:var(--font-m);color:var(--gold-deep);font-size:.74rem;margin-right:6px;font-weight:500}
+@media(max-width:620px){.pc-toc ul{columns:1}}
+
+.pc-section{margin-bottom:56px;padding-bottom:48px;border-bottom:1px solid var(--rule)}
+.pc-section:last-of-type{border-bottom:none}
+.pc-section-num{font-family:var(--font-m);font-size:.66rem;letter-spacing:.32em;color:var(--gold-deep);text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.pc-section-title{font-family:var(--font-d);font-size:1.65rem;line-height:1.25;font-weight:500;color:var(--navy);margin-bottom:14px;letter-spacing:-.008em}
+.pc-section-title em{font-style:italic;color:var(--gold-deep)}
+.pc-h3{font-family:var(--font-d);font-size:1.1rem;font-weight:500;color:var(--navy);margin-top:24px;margin-bottom:10px}
+.pc-h3 em{font-style:italic;color:var(--gold-deep)}
+.pc-text{font-family:var(--font-s);font-size:.97rem;line-height:1.78;color:var(--ink);margin-bottom:14px;font-weight:400}
+.pc-text strong{font-weight:500;color:var(--navy)}
+.pc-text em{font-style:italic;color:var(--navy)}
+.pc-text a{color:var(--gold-deep);text-decoration:underline}
+.pc-list{font-family:var(--font-s);font-size:.96rem;line-height:1.78;color:var(--ink);padding-left:22px;margin-bottom:18px;font-weight:400}
+.pc-list li{margin-bottom:6px}
+.pc-list strong{font-weight:500;color:var(--navy)}
+
+.pc-table{width:100%;border-collapse:collapse;margin:18px 0;font-family:var(--font-s);font-size:.9rem}
+.pc-table th{text-align:left;font-family:var(--font-m);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;padding:10px 14px;border-bottom:2px solid var(--rule);background:var(--paper-soft)}
+.pc-table td{padding:11px 14px;border-bottom:1px solid var(--rule);color:var(--ink);line-height:1.6;vertical-align:top}
+.pc-table tr:last-child td{border-bottom:none}
+.pc-table td strong{color:var(--navy);font-weight:500}
+
+.footer{background:var(--navy-deep);color:rgba(255,255,255,.75);padding:60px 48px 36px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(196,164,114,.2)}
+.footer-phi{font-family:var(--font-d);font-style:italic;font-size:3.2rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:12px}
+.footer-line{width:48px;height:1px;background:var(--gold);margin:0 auto 12px}
+.footer-baseline-1{font-family:var(--font-d);font-style:italic;font-size:.95rem;color:var(--gold-soft);margin-bottom:3px}
+.footer-baseline-2{font-family:var(--font-d);font-style:italic;font-size:.85rem;color:rgba(226,200,122,.75)}
+.footer-nav{display:grid;grid-template-columns:repeat(3, 1fr);gap:48px;margin-bottom:32px}
+.footer-col h4{font-family:var(--font-m);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);font-weight:500;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col a{font-family:var(--font-d);font-style:italic;font-size:.92rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.footer-col a:hover{color:var(--gold-soft)}
+.footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:22px;text-align:center;font-family:var(--font-m);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
+.footer-meta strong{color:var(--gold-soft);font-weight:500}
+@media(max-width:720px){.footer{padding:48px 24px 28px}.footer-nav{grid-template-columns:1fr;gap:24px}}
+.footer-link-special{color:rgba(196,164,114,.65)!important;border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;display:block;margin-top:4px;transition:color .2s,border-color .2s}
+.footer-link-special:hover{color:var(--gold-soft,#e2c87a)!important;border-color:var(--gold,#c4a472)!important}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-phi">Φ</a>
+    <nav class="nav-links">
+      <a href="la-mecanique-probatoire.html">La mécanique</a>
+      <a href="resistance-quantique.html">Résistance quantique</a>
+      <a href="tarifications.html" class="nav-cta">Accéder à Φ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a> &nbsp;·&nbsp; <span>Politique de confidentialité</span>
+</div>
+
+<main class="pc-container">
+
+  <div class="pc-hero">
+    <div class="pc-eyebrow">Protection des données</div>
+    <h1 class="pc-h1">Politique de <em>confidentialité</em></h1>
+    <p class="pc-lead">Φ a été conçu pour qu'aucune donnée sensible ne nous parvienne. Vos documents, vos signatures et vos données biométriques ne quittent jamais votre appareil. Cette politique explique, en toute transparence, le peu que nous traitons et pourquoi.</p>
+  </div>
+
+  <div class="pc-meta">
+    <strong>Responsable du traitement :</strong> PHI SAS, filiale d'AION ASEMANTIX SNC<br>
+    <strong>Siège social :</strong> 33 rue du Frère Benoît, 69600 Oullins-Pierre-Bénite, France<br>
+    <strong>Contact (exercice des droits) :</strong> phi-signature@proton.me<br><br>
+    <strong>Version :</strong> 1.0 — <strong>Dernière mise à jour :</strong> 12 juin 2026
+  </div>
+
+  <div class="pc-highlight">
+    <div class="pc-highlight-label">Le principe fondateur</div>
+    <p>L'application Φ fonctionne <strong>100% en local, sans serveur</strong>. Vos documents, vos signatures, votre identité et vos données biométriques sont traités <strong>exclusivement sur votre appareil</strong> et ne nous sont jamais transmis. Nous ne pouvons pas lire ce que nous ne recevons pas.</p>
+  </div>
+
+  <nav class="pc-toc">
+    <div class="pc-toc-title">Sommaire</div>
+    <ul>
+      <li><span class="pc-toc-num">1.</span><a href="#responsable">Responsable du traitement</a></li>
+      <li><span class="pc-toc-num">2.</span><a href="#principe">L'architecture sans serveur</a></li>
+      <li><span class="pc-toc-num">3.</span><a href="#donnees">Données que nous traitons</a></li>
+      <li><span class="pc-toc-num">4.</span><a href="#finalites">Finalités et bases légales</a></li>
+      <li><span class="pc-toc-num">5.</span><a href="#site">Le site phi-signature.fr</a></li>
+      <li><span class="pc-toc-num">6.</span><a href="#paiements">Paiements</a></li>
+      <li><span class="pc-toc-num">7.</span><a href="#destinataires">Destinataires et sous-traitants</a></li>
+      <li><span class="pc-toc-num">8.</span><a href="#durees">Durées de conservation</a></li>
+      <li><span class="pc-toc-num">9.</span><a href="#transferts">Transferts hors UE</a></li>
+      <li><span class="pc-toc-num">10.</span><a href="#droits">Vos droits</a></li>
+      <li><span class="pc-toc-num">11.</span><a href="#securite">Sécurité</a></li>
+      <li><span class="pc-toc-num">12.</span><a href="#modifications">Modifications</a></li>
+    </ul>
+  </nav>
+
+  <section class="pc-section" id="responsable">
+    <div class="pc-section-num">01</div>
+    <h2 class="pc-section-title">Responsable du traitement</h2>
+    <p class="pc-text">Le responsable du traitement des données personnelles est <strong>PHI SAS</strong>, société par actions simplifiée, filiale d'AION ASEMANTIX SNC, dont le siège social est situé 33 rue du Frère Benoît, 69600 Oullins-Pierre-Bénite, France.</p>
+    <p class="pc-text">Pour toute question relative à la présente politique ou pour exercer vos droits, vous pouvez nous écrire à : <a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a>.</p>
+  </section>
+
+  <section class="pc-section" id="principe">
+    <div class="pc-section-num">02</div>
+    <h2 class="pc-section-title">L'architecture <em>sans serveur</em></h2>
+    <p class="pc-text">Φ repose sur un choix d'architecture fondamental : <strong>l'absence de serveur central</strong>. Contrairement aux plateformes de signature classiques, qui hébergent vos documents et vos signatures sur leurs serveurs, Φ effectue l'intégralité de ses opérations cryptographiques <strong>localement, sur votre appareil</strong>.</p>
+    <p class="pc-text">Concrètement, cela signifie que les éléments suivants <strong>ne nous sont jamais transmis</strong> et ne transitent par aucun serveur sous notre contrôle :</p>
+    <ul class="pc-list">
+      <li>les <strong>documents</strong> que vous transmettez, recevez ou signez ;</li>
+      <li>vos <strong>signatures</strong> et les preuves cryptographiques associées ;</li>
+      <li>vos <strong>données biométriques</strong> (empreinte, reconnaissance faciale) ;</li>
+      <li>les <strong>pièces d'identité</strong> et selfies utilisés pour la vérification d'identité ;</li>
+      <li>votre <strong>journal probatoire</strong> et vos clés cryptographiques.</li>
+    </ul>
+    <p class="pc-text">Les données biométriques sont traitées par le sous-système sécurisé de votre téléphone (par exemple le Keystore d'Android ou la Secure Enclave d'iOS) ; <strong>nous n'y avons jamais accès</strong>. Cette conception applique par construction le principe de <strong>minimisation des données</strong> du RGPD : nous ne collectons pas ce dont nous n'avons pas besoin, et nous n'avons pas besoin de vos données sensibles pour que Φ fonctionne.</p>
+  </section>
+
+  <section class="pc-section" id="donnees">
+    <div class="pc-section-num">03</div>
+    <h2 class="pc-section-title">Données que nous traitons réellement</h2>
+    <p class="pc-text">Puisque l'application est locale, les seules données personnelles que <strong>nous</strong> traitons en tant que responsable sont celles que vous nous communiquez volontairement en dehors de l'application, ou qui sont nécessaires à la facturation :</p>
+    <ul class="pc-list">
+      <li><strong>Vos coordonnées de contact</strong> (adresse email, et le cas échéant nom et message), lorsque vous nous écrivez, demandez une démonstration ou souhaitez être informé du lancement ;</li>
+      <li><strong>Les données de facturation</strong> nécessaires à l'établissement et au suivi de votre commande ou de votre abonnement ;</li>
+      <li>Pour les clients <strong>grands comptes</strong> réglant par prélèvement : les coordonnées bancaires nécessaires à la mise en place du mandat de prélèvement, dans le cadre du contrat.</li>
+    </ul>
+    <p class="pc-text">Nous ne traitons aucune donnée biométrique, aucun document signé, et aucune pièce d'identité — ces éléments restent sur votre appareil.</p>
+  </section>
+
+  <section class="pc-section" id="finalites">
+    <div class="pc-section-num">04</div>
+    <h2 class="pc-section-title">Finalités et bases légales</h2>
+    <table class="pc-table">
+      <thead>
+        <tr><th>Donnée</th><th>Finalité</th><th>Base légale</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Email de contact / demande de démonstration</strong></td>
+          <td>Répondre à votre demande, vous recontacter</td>
+          <td>Mesures précontractuelles / intérêt légitime</td>
+        </tr>
+        <tr>
+          <td><strong>Email d'inscription au lancement</strong></td>
+          <td>Vous informer du lancement, des nouveautés et mises à jour</td>
+          <td>Consentement</td>
+        </tr>
+        <tr>
+          <td><strong>Données de facturation</strong></td>
+          <td>Établir et suivre commandes, abonnements et factures</td>
+          <td>Exécution du contrat / obligation légale (comptabilité)</td>
+        </tr>
+        <tr>
+          <td><strong>Coordonnées bancaires (grands comptes)</strong></td>
+          <td>Mise en place du prélèvement convenu</td>
+          <td>Exécution du contrat</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="pc-text">Lorsque la base légale est le <strong>consentement</strong> (communications commerciales), vous pouvez le retirer à tout moment, sans que cela affecte la licéité des traitements antérieurs.</p>
+  </section>
+
+  <section class="pc-section" id="site">
+    <div class="pc-section-num">05</div>
+    <h2 class="pc-section-title">Le site <em>phi-signature.fr</em></h2>
+    <p class="pc-text">Notre site n'utilise <strong>aucun cookie de mesure d'audience</strong>, aucun traceur publicitaire et aucun outil d'analyse comportementale (ni Google Analytics, ni équivalent). Nous ne vous suivons pas, nous ne dressons pas de profil, nous ne déposons pas de cookie à des fins de ciblage.</p>
+    <p class="pc-text">Le site est hébergé sur <strong>GitHub Pages</strong> (GitHub, Inc., États-Unis). Dans le cadre de la fourniture de la page, l'hébergeur peut, pour des raisons techniques et de sécurité, traiter des données de connexion telles que l'adresse IP. Ce traitement relève de l'hébergeur ; nous ne l'exploitons pas à des fins de suivi.</p>
+  </section>
+
+  <section class="pc-section" id="paiements">
+    <div class="pc-section-num">06</div>
+    <h2 class="pc-section-title">Paiements</h2>
+    <p class="pc-text">Deux modalités de règlement coexistent :</p>
+    <p class="pc-text"><strong>Paiement par carte.</strong> Le traitement des paiements par carte est assuré par un <strong>prestataire de paiement sécurisé</strong>, qui agit en qualité de sous-traitant pour l'opération de paiement et traite les données de transaction (données de carte, éléments de facturation) conformément à ses propres engagements de sécurité et de conformité. Nous ne stockons pas vos numéros de carte.</p>
+    <p class="pc-text"><strong>Paiement par prélèvement (grands comptes).</strong> Pour les clients institutionnels réglant par prélèvement, les coordonnées bancaires sont traitées aux seules fins de la mise en place et de l'exécution du mandat de prélèvement convenu contractuellement.</p>
+  </section>
+
+  <section class="pc-section" id="destinataires">
+    <div class="pc-section-num">07</div>
+    <h2 class="pc-section-title">Destinataires et sous-traitants</h2>
+    <p class="pc-text">Vos données ne sont ni vendues, ni louées, ni cédées à des tiers à des fins commerciales. Elles sont accessibles uniquement aux personnes habilitées de PHI SAS et, le cas échéant, aux sous-traitants strictement nécessaires au fonctionnement du service :</p>
+    <ul class="pc-list">
+      <li><strong>L'hébergeur du site</strong> (GitHub Pages), pour la mise à disposition des pages ;</li>
+      <li><strong>Le prestataire de paiement</strong>, pour le traitement des règlements par carte ;</li>
+      <li>Le cas échéant, notre <strong>prestataire de messagerie</strong>, pour la réception et l'envoi de courriels.</li>
+    </ul>
+    <p class="pc-text">Chaque sous-traitant n'accède qu'aux données strictement nécessaires à sa mission.</p>
+  </section>
+
+  <section class="pc-section" id="durees">
+    <div class="pc-section-num">08</div>
+    <h2 class="pc-section-title">Durées de conservation</h2>
+    <ul class="pc-list">
+      <li><strong>Emails de contact / demandes de démonstration :</strong> le temps nécessaire au traitement de la demande, puis archivage limité ou suppression ;</li>
+      <li><strong>Inscriptions au lancement / liste de diffusion :</strong> jusqu'au retrait de votre consentement (désinscription), ou à défaut d'interaction prolongée ;</li>
+      <li><strong>Données de facturation :</strong> conservées pendant la durée requise par les obligations légales et comptables (notamment dix ans pour les pièces comptables) ;</li>
+      <li><strong>Données contenues dans l'application :</strong> elles demeurent sur votre appareil et sous votre contrôle ; leur suppression dépend de vous (désinstallation, effacement local).</li>
+    </ul>
+  </section>
+
+  <section class="pc-section" id="transferts">
+    <div class="pc-section-num">09</div>
+    <h2 class="pc-section-title">Transferts hors Union européenne</h2>
+    <p class="pc-text">Certains prestataires techniques (par exemple l'hébergeur du site) peuvent être établis hors de l'Union européenne. Lorsqu'un transfert de données hors UE a lieu, il est encadré par les garanties prévues par le RGPD (notamment les clauses contractuelles types de la Commission européenne ou un mécanisme d'adéquation reconnu).</p>
+    <p class="pc-text">Par construction, l'essentiel de vos données sensibles ne fait l'objet d'<strong>aucun transfert</strong>, puisqu'elles ne quittent jamais votre appareil.</p>
+  </section>
+
+  <section class="pc-section" id="droits">
+    <div class="pc-section-num">10</div>
+    <h2 class="pc-section-title">Vos droits</h2>
+    <p class="pc-text">Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants sur les données que nous traitons :</p>
+    <ul class="pc-list">
+      <li><strong>Droit d'accès</strong> — obtenir la confirmation que des données vous concernant sont traitées et en obtenir une copie ;</li>
+      <li><strong>Droit de rectification</strong> — faire corriger des données inexactes ou incomplètes ;</li>
+      <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données, dans les conditions prévues par la loi ;</li>
+      <li><strong>Droit à la limitation</strong> du traitement ;</li>
+      <li><strong>Droit d'opposition</strong>, notamment à la prospection commerciale ;</li>
+      <li><strong>Droit à la portabilité</strong> de vos données ;</li>
+      <li><strong>Droit de retirer votre consentement</strong> à tout moment, lorsque le traitement repose sur celui-ci.</li>
+    </ul>
+    <p class="pc-text">Pour exercer ces droits, écrivez-nous à <a href="mailto:phi-signature@proton.me">phi-signature@proton.me</a>. Vous disposez également du droit d'introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong>, 3 place de Fontenoy, 75007 Paris, ou via <a href="https://www.cnil.fr">www.cnil.fr</a>.</p>
+  </section>
+
+  <section class="pc-section" id="securite">
+    <div class="pc-section-num">11</div>
+    <h2 class="pc-section-title">Sécurité</h2>
+    <p class="pc-text">La sécurité est au cœur de la conception de Φ. Les opérations cryptographiques reposent sur des primitives <strong>résistantes aux ordinateurs quantiques</strong> (signature ML-DSA-65, encapsulation ML-KEM-768, standardisées par le NIST), et s'exécutent localement dans un environnement protégé de votre appareil.</p>
+    <p class="pc-text">Pour les données que nous traitons effectivement (contact, facturation), nous mettons en œuvre des mesures techniques et organisationnelles appropriées afin d'en préserver la confidentialité et l'intégrité.</p>
+  </section>
+
+  <section class="pc-section" id="modifications">
+    <div class="pc-section-num">12</div>
+    <h2 class="pc-section-title">Modifications de la présente politique</h2>
+    <p class="pc-text">Nous pouvons être amenés à faire évoluer la présente politique de confidentialité, notamment pour tenir compte d'évolutions légales, réglementaires ou techniques. La version applicable est celle publiée sur cette page, dont la date de dernière mise à jour figure en tête de document. Nous vous invitons à la consulter régulièrement.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-phi">Φ</div>
+      <div class="footer-line"></div>
+      <div class="footer-baseline-1">La signature électronique</div>
+      <div class="footer-baseline-2">Post-Quantique</div>
+      <div class="footer-baseline-2">sans tiers de confiance</div>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <h4>Comprendre</h4>
+        <ul>
+          <li><a href="la-signature-probatoire.html">La signature en huis-clos</a></li>
+          <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
+          <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
+          <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
+          <li><a href="conformite.html">Conformité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="cgu.html">Conditions générales</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Accéder</h4>
+        <ul>
+          <li><a href="tarifications.html">Accéder à Φ</a></li>
+          <li><a href="a-propos/A-Propos.html">À propos</a></li>
+          <li><a href="contact.html">Demander une démonstration</a></li>
+          <li><a href="contact.html">Nous contacter</a></li>
+          <li><a href="Pourquoi-Φ.html" class="footer-link-special">Pourquoi Φ ?</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <strong>PHI SAS</strong> · filiale d'AION ASEMANTIX SNC · phi-signature@proton.me<br>
+      Procédés protégés · © 2026 — Tous droits réservés
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
