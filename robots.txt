@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /index(1).html
 
 Sitemap: https://phi-signature.fr/sitemap.xml
