@@ -1,0 +1,41 @@
+<svg width="1024" height="500" viewBox="0 0 1024 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13243f"/>
+      <stop offset="0.55" stop-color="#0c1a30"/>
+      <stop offset="1" stop-color="#070f1c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#1b2f4e" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0a1424" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <rect width="1024" height="500" fill="url(#glow)"/>
+
+  <!-- Φ fantôme -->
+  <text x="512" y="446" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-weight="600" font-size="600" fill="#c4a472" opacity="0.05">Φ</text>
+
+  <!-- liseré + chevrons -->
+  <rect x="20" y="20" width="984" height="460" rx="5" fill="none" stroke="#c4a472" stroke-opacity="0.22" stroke-width="1"/>
+  <path d="M34 50 L34 36 L48 36 M976 36 L990 36 L990 50 M990 450 L990 464 L976 464 M48 464 L34 464 L34 450" fill="none" stroke="#c4a472" stroke-opacity="0.6" stroke-width="1.4"/>
+
+  <!-- eyebrow : le slogan -->
+  <line x1="356" y1="74" x2="404" y2="74" stroke="#c4a472" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="512" y="78" text-anchor="middle" font-family="IBM Plex Mono" font-weight="600" font-size="15" letter-spacing="7" fill="#d4b888">ÉCHANGEZ · SIGNEZ · PROUVEZ</text>
+  <line x1="620" y1="74" x2="668" y2="74" stroke="#c4a472" stroke-opacity="0.5" stroke-width="1"/>
+
+  <!-- Φ -->
+  <text x="512" y="300" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-weight="600" font-size="220" fill="#c4a472">Φ</text>
+
+  <!-- paraphe manuscrit sous le Φ -->
+  <path d="M356 322 C 404 300 466 300 506 316 C 532 326 548 330 562 322 C 588 310 582 292 560 293 C 542 294 540 316 566 328 C 604 346 656 334 690 312"
+        fill="none" stroke="#d4b888" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- baseline -->
+  <text x="512" y="392" text-anchor="middle" font-family="Playfair Display" font-style="italic" font-weight="400" font-size="30" fill="#fafaf7">La signature mathématique</text>
+
+  <!-- tokens -->
+  <text x="512" y="450" text-anchor="middle" font-family="IBM Plex Mono" font-weight="500" font-size="12.5" letter-spacing="4.5" fill="#c4a472" opacity="0.72">SANS TIERS · SANS SERVEUR · POST-QUANTIQUE · INLINE-OFFLINE™</text>
+</svg>
