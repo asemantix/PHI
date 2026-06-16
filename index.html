@@ -39,7 +39,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=EB+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#0e1c35;--navy-deep:#08111f;--gold:#c4a472;--gold-deep:#6f520f;--gold-light:#d4b888;--gold-soft:#d4b888;--ivory:#e8dcc8;--paper:#fafaf7;--paper-soft:#f4f1e8;--ink:#1d2330;--ink-muted:#6c7384;--ink-faded:#6c7384;--rule:rgba(196,164,114,.3);--success:#5a8033;--font-display:'Playfair Display',Georgia,serif;--font-mono:'IBM Plex Mono','Courier New',monospace;--font-sans:'IBM Plex Sans',-apple-system,sans-serif;--font-eb:'EB Garamond',Georgia,serif}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -94,6 +94,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 /* ====== HERO STATIQUE Φ (2e respiration) ====== */
 .hero-static{position:relative;padding:100px 48px 80px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--paper)}
 .hero-phi{font-family:var(--font-display);font-style:italic;font-size:20rem;color:var(--navy);font-weight:500;line-height:1;margin-bottom:40px;text-shadow:0 0 40px rgba(14,28,53,.08)}
+.hero-logo{width:min(520px,76vw);height:auto;display:block;margin-bottom:30px}
 .hero-line{width:100px;height:1.5px;background:var(--gold);margin-bottom:36px}
 .hero-subtitle{max-width:800px;margin:0 auto;font-family:var(--font-display);font-weight:400;color:var(--navy);font-size:1.45rem;line-height:1.5}
 .hero-subtitle .line{display:block}
@@ -297,12 +298,18 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
 <!-- ════════ HERO STATIQUE Φ (premier — porteur du H1 SEO) ════════ -->
 <section class="hero-static" style="min-height:100vh;position:relative">
-  <div class="hero-phi">Φ</div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:.82rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:30px;text-align:center">Signature électronique post-quantique</div>
+
+  <svg class="hero-logo" viewBox="40 45 520 268" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Φ — La signature mathématique">
+    <text x="60" y="232" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-weight="500" font-size="240" fill="#0e1c35">&#934;</text>
+    <path d="M240 196 C 254 142 282 136 296 184 C 304 210 296 234 283 232 C 272 230 274 208 294 196 C 322 178 350 236 378 198 C 395 174 414 176 431 204 C 448 232 469 204 487 178 C 500 158 524 166 520 206 C 517 224 506 232 494 234" fill="none" stroke="#6f520f" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M500 220 C 520 252 488 270 442 271 C 350 274 240 272 175 259 C 152 254 148 244 167 241" fill="none" stroke="#6f520f" stroke-width="2.4" stroke-linecap="round"/>
+  </svg>
+
   <div class="hero-line"></div>
-  <div style="font-family:'IBM Plex Mono',monospace;font-size:.82rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:32px;text-align:center">Inline-Offline<sup style="font-size:.5em;vertical-align:super;letter-spacing:0">™</sup> · Never Online</div>
   <h1 class="hero-subtitle">
     <span class="line" style="font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(1.9rem,4.4vw,3.4rem);color:var(--navy);letter-spacing:-.02em;line-height:1.1">La plateforme souveraine</span>
-    <span class="line" style="font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(1.4rem,3vw,2.4rem);color:var(--gold-deep);letter-spacing:-.01em;line-height:1.2;margin-top:8px">des signatures électroniques post-quantiques.</span>
+    <span class="line" style="font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(1.3rem,2.7vw,2.1rem);color:var(--gold-deep);letter-spacing:-.01em;line-height:1.2;margin-top:8px">des communications et signatures électroniques post-quantiques.</span>
   </h1>
   <a href="echanges-confidentiels.html" style="margin-top:30px;display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border:1px solid var(--gold);border-radius:2px;font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;text-decoration:none;transition:background .2s" onmouseover="this.style.background='rgba(196,164,114,.1)'" onmouseout="this.style.background=''">Signatures et transmissions post-quantiques →</a>
   <a href="#demo" class="hero-cue" aria-label="Voir l'app en action">
@@ -735,7 +742,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
       <div>
         <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--navy);font-weight:700;margin-bottom:8px">Fondateurs Φ — 300 places par niveau</div>
         <div style="font-family:var(--font-display);font-style:italic;font-size:1.6rem;font-weight:600;color:var(--navy);line-height:1.1;margin-bottom:4px">Fondateurs</div>
-        <div style="font-family:var(--font-sans);font-size:.85rem;color:var(--navy);opacity:.85;line-height:1.5">Solo 150€/an · Équipe 2 880€/an · Business 4 320€/an. Prix gelé à vie.</div>
+        <div style="font-family:var(--font-sans);font-size:.85rem;color:var(--navy);opacity:.85;line-height:1.5">Solo 150€/an · Équipe 2 880€/an · Business 4 320€/an. Prix gelé à vie.</div>
       </div>
       <div style="text-align:right;flex-shrink:0">
         <div style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--navy);line-height:1">dès 150€</div>
@@ -785,6 +792,45 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
     <div class="enclave-eyebrow">04 · L'enclave — la forteresse</div>
     <h2 class="enclave-title"><em>Φ</em> est hermétique aux IA.<br><em>Quelles qu'elles soient.</em></h2>
     <div class="enclave-rule"></div>
+    <div style="display:flex;justify-content:center;margin:0 auto 48px;max-width:460px">
+      <svg width="460" height="420" viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un dispositif dont le calcul reste confiné à l'enclave matérielle, isolée de l'OS, des applications, de l'IA et d'internet" style="width:100%;max-width:460px;height:auto;display:block">
+        <!-- internet déconnecté en haut -->
+        <g transform="translate(230,34)">
+          <circle cx="0" cy="0" r="14" fill="none" stroke="rgba(250,250,247,.35)" stroke-width="1"/>
+          <ellipse cx="0" cy="0" rx="14" ry="6" fill="none" stroke="rgba(250,250,247,.35)" stroke-width=".8"/>
+          <line x1="-14" y1="0" x2="14" y2="0" stroke="rgba(250,250,247,.35)" stroke-width=".8"/>
+          <line x1="0" y1="-14" x2="0" y2="14" stroke="rgba(250,250,247,.35)" stroke-width=".8"/>
+          <line x1="-13" y1="11" x2="13" y2="-11" stroke="#c4a472" stroke-width="1.6"/>
+          <text x="0" y="32" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" letter-spacing="2.5" fill="#d4b888" font-weight="600">SANS INTERNET</text>
+        </g>
+        <line x1="230" y1="74" x2="230" y2="92" stroke="rgba(250,250,247,.2)" stroke-width="1" stroke-dasharray="2 3"/>
+
+        <!-- cadre dispositif + chevrons -->
+        <path d="M96 96 L96 90 L102 90 M358 90 L364 90 L364 96 M364 398 L364 404 L358 404 M102 404 L96 404 L96 398" fill="none" stroke="#c4a472" stroke-width="1.4"/>
+        <rect x="102" y="96" width="256" height="302" rx="22" fill="#0a1426" stroke="rgba(200,168,75,.4)" stroke-width="1.1"/>
+        <rect x="200" y="90" width="60" height="7" rx="3.5" fill="none" stroke="rgba(200,168,75,.3)" stroke-width=".8"/>
+
+        <!-- couche OS / apps / IA -->
+        <rect x="122" y="120" width="216" height="258" rx="12" fill="none" stroke="rgba(250,250,247,.18)" stroke-width="1" stroke-dasharray="4 4"/>
+        <text x="230" y="140" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7.5" letter-spacing="2" fill="rgba(250,250,247,.5)">OS · APPLICATIONS · AGENTS IA</text>
+
+        <!-- enclave centrale -->
+        <rect x="152" y="176" width="156" height="170" rx="10" fill="rgba(200,168,75,.06)" stroke="#c4a472" stroke-width="1.6"/>
+        <!-- cadenas en haut de l'enclave -->
+        <g transform="translate(230,176)">
+          <rect x="-8" y="-6" width="16" height="12" rx="2" fill="#0a1426" stroke="#c4a472" stroke-width="1.2"/>
+          <path d="M-4.5 -6 L-4.5 -10 A4.5 4.5 0 0 1 4.5 -10 L4.5 -6" fill="none" stroke="#c4a472" stroke-width="1.2"/>
+        </g>
+        <text x="230" y="216" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" letter-spacing="3" fill="#d4b888" font-weight="600">ENCLAVE</text>
+        <text x="230" y="262" text-anchor="middle" font-family="'EB Garamond',Georgia,serif" font-style="italic" font-size="40" fill="#c4a472" font-weight="500">&#934;</text>
+
+        <!-- 3 opérations -->
+        <text x="230" y="296" text-anchor="middle" font-family="'IBM Plex Sans',sans-serif" font-size="8.5" fill="rgba(250,250,247,.7)" letter-spacing=".5">déchiffrer · signer · vérifier</text>
+        <line x1="172" y1="308" x2="288" y2="308" stroke="rgba(200,168,75,.3)" stroke-width=".8"/>
+        <text x="230" y="324" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="6.5" letter-spacing="1.4" fill="rgba(200,168,75,.6)">StrongBox · TrustZone · Secure Enclave</text>
+        <text x="230" y="338" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="6.5" letter-spacing="1.4" fill="rgba(200,168,75,.45)">clé non extractible</text>
+      </svg>
+    </div>
     <p class="enclave-lede">Apple Intelligence, Google Gemini, Microsoft Copilot lisent ce que vous affichez à l'écran. Φ calcule dans l'enclave — jamais à l'écran. Aucune IA n'y accède. Par construction du processeur.</p>
     <div style="text-align:center;margin-top:36px">
       <a href="l-enclave-silicium.html" class="enclave-cta">L'enclave silicium →</a>
