@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0e1c35">
+<meta name="color-scheme" content="light">
 <title>Communication souveraine post-quantique pour la défense — Hors Cloud Act, sans tiers de confiance · Φ PHI</title>
 <meta name="description" content="Φ pour la défense et la BITD : communication souveraine et signature probatoire post-quantiques. Aucun serveur ne déchiffre vos échanges — structurellement hors Cloud Act et FISA. Chiffrement ML-KEM-768, signature ML-DSA-65, transit sur tout canal jusqu'à la zone air-gap. Conçu pour les exigences de souveraineté (RGS, LPM, doctrine ANSSI).">
 <meta name="keywords" content="communication souveraine, messagerie souveraine défense, souveraineté numérique défense, signature souveraine, alternative au cloud américain, sans Cloud Act, sans FISA, ITAR-free, chiffrement post-quantique défense, ML-DSA-65, ML-KEM-768, Harvest Now Decrypt Later, BITD, OIV, base industrielle et technologique de défense, RGS, ANSSI, LPM, NIS2, eIDAS 2, communication asémantique, Inline-Offline, PHI, phi-signature.fr">
@@ -136,6 +137,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
+    color-scheme:only light;
     --navy:#0e1c35; --navy-deep:#08111f; --navy-soft:#16233f;
     --gold:#c4a472; --gold-deep:#6f520f; --gold-light:#d4b888; --ivory:#e8dcc8;
     --paper:#fafaf7; --paper-soft:#f4f1e8; --paper-deep:#ffffff;
@@ -148,8 +150,10 @@
     --font-sans:'IBM Plex Sans',-apple-system,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;color-scheme:only light}
   body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);line-height:1.6;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  /* === ANTI MODE SOMBRE FORCÉ : on réimpose la charte claire === */
+  @media(prefers-color-scheme:dark){:root{color-scheme:only light}html,body{background:#fafaf7!important;color:#1d2330!important}}
   em.phi{font-family:var(--font-em);font-style:italic;color:var(--gold-deep)}
   a{color:inherit}
 
