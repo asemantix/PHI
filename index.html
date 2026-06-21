@@ -42,9 +42,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=EB+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light;--navy:#0e1c35;--navy-deep:#08111f;--gold:#c4a472;--gold-deep:#6f520f;--gold-light:#d4b888;--gold-soft:#d4b888;--ivory:#e8dcc8;--paper:#fafaf7;--paper-soft:#f4f1e8;--ink:#1d2330;--ink-muted:#6c7384;--ink-faded:#6c7384;--rule:rgba(196,164,114,.3);--success:#5a8033;--font-display:'Playfair Display',Georgia,serif;--font-mono:'IBM Plex Mono','Courier New',monospace;--font-sans:'IBM Plex Sans',-apple-system,sans-serif;--font-eb:'EB Garamond',Georgia,serif}
+:root{color-scheme:only light;--navy:#0e1c35;--navy-deep:#08111f;--gold:#c4a472;--gold-deep:#6f520f;--gold-light:#d4b888;--gold-soft:#d4b888;--ivory:#e8dcc8;--paper:#fafaf7;--paper-soft:#f4f1e8;--ink:#1d2330;--ink-muted:#6c7384;--ink-faded:#6c7384;--rule:rgba(196,164,114,.3);--success:#5a8033;--font-display:'Playfair Display',Georgia,serif;--font-mono:'IBM Plex Mono','Courier New',monospace;--font-sans:'IBM Plex Sans',-apple-system,sans-serif;--font-eb:'EB Garamond',Georgia,serif}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;color-scheme:light}
+html{scroll-behavior:smooth;color-scheme:only light}
 body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line-height:1.55;overflow-x:hidden}
 .top-actions{position:fixed;top:52px;right:32px;z-index:100;display:flex;gap:10px;align-items:center}
 .top-cta{background:var(--navy);color:var(--paper);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s;backdrop-filter:blur(8px)}
@@ -280,6 +280,8 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .enclave-cta:hover{background:var(--gold);color:var(--navy)}
 @media(max-width:720px){.enclave-section{padding:70px 24px}.enclave-title{font-size:1.9rem}}
 @media(max-width:640px){#essai-grid{grid-template-columns:1fr!important;gap:28px}}
+/* === ANTI MODE SOMBRE FORCÉ (Samsung Internet, Chrome force-dark) : on réimpose la charte claire === */
+@media(prefers-color-scheme:dark){:root{color-scheme:only light}html,body{background:#fafaf7!important;color:#0e1c35!important}}
 </style>
 </head>
 <body>
