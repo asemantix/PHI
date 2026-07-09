@@ -80,7 +80,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .hero-cine-motto span{border-bottom:1px solid rgba(196,164,114,.35);padding-bottom:3px}
 .hero-cine-motto sup{font-family:var(--font-mono);font-size:.42em;font-style:normal;letter-spacing:0;color:var(--gold-light);margin-left:2px;vertical-align:super;opacity:.85}
 .hero-cine-h2{font-family:var(--font-eb);font-style:italic;font-size:clamp(1.14rem,1.95vw,1.46rem);color:rgba(232,220,200,.86);line-height:1.62;max-width:620px;margin:0 0 30px;text-shadow:0 1px 12px rgba(0,0,0,.3)}
-.hero-cine-h2 .sans{color:var(--gold-light);font-style:italic;font-weight:500}
+.hero-cine-h2 .sans{color:var(--gold-light);font-style:italic;font-weight:500;display:inline-block}
 .hero-cine-souv{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(1.15rem,2.1vw,1.6rem);color:var(--gold);line-height:1.3;margin:0 0 34px;letter-spacing:-.005em;text-shadow:0 1px 12px rgba(0,0,0,.35)}
 .hero-cine-baseline{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:38px}
 .hero-cine-ctas{display:flex;gap:14px;flex-wrap:wrap}
@@ -225,7 +225,6 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .essai-visual{text-align:center}
 .essai-pictos{border-radius:18px;background:#001331;box-shadow:0 12px 40px rgba(8,17,31,.35);border:1px solid rgba(196,164,114,.22);margin-bottom:24px;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;gap:8px;padding:30px 20px}
 .essai-pictos img{width:100%;height:auto;max-height:150px;object-fit:contain;display:block;filter:drop-shadow(0 6px 18px rgba(196,164,114,.18))}
-.essai-pictos img[src*="enveloppe"]{transform:scale(.84)}
 .essai-visual-label{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:14px;opacity:.85}
 .essai-visual-verbs{font-family:var(--font-display);font-style:italic;font-size:clamp(1.15rem,2.1vw,1.4rem);color:var(--gold);line-height:1.4}
 .essai-visual-verbs .sep{color:var(--gold);opacity:.45;margin:0 12px;font-style:normal}
@@ -360,7 +359,10 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
 /* ═══ Q-DAY ═══ */
 .qday{background:var(--navy);color:var(--paper);padding:100px 48px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.qday-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:220px 1fr;gap:80px;align-items:center}
+.qday-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:center}
+.qday-img{position:relative;width:100%;border-radius:18px;overflow:hidden}
+.qday-img img{width:100%;height:auto;display:block;border-radius:18px}
+.qday-img::after{content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;box-shadow:inset 0 0 60px 20px var(--navy)}
 .qday-visual{display:flex;justify-content:center;align-items:center}
 .qday-content{text-align:left}
 .qday-eyebrow{font-family:var(--font-mono);font-size:.9rem;letter-spacing:.2em;color:var(--gold-light);text-transform:uppercase;font-weight:500;margin-bottom:22px}
@@ -372,15 +374,11 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .qday-meta strong{color:var(--gold-light);font-weight:600}
 .qday-cta{display:inline-flex;align-items:center;background:transparent;color:var(--gold-light);text-decoration:none;padding:14px 26px;font-family:var(--font-mono);font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;border:1.5px solid var(--gold);transition:all .2s;border-radius:2px}
 .qday-cta:hover{background:var(--gold);color:var(--navy)}
-.hourglass-svg{width:200px;height:auto;filter:drop-shadow(0 4px 20px rgba(196,164,114,.15));animation:hourglass-flip 7s ease-in-out infinite}
-@keyframes hourglass-flip{0%,80%{transform:rotate(0deg)}90%,100%{transform:rotate(180deg)}}
-.hourglass-svg .sand-top{animation:sand-top-fall 6s ease-in infinite}
-.hourglass-svg .sand-bot{animation:sand-bot-rise 6s ease-out infinite}
-.hourglass-svg .sand-stream{animation:sand-stream 6s linear infinite}
-@keyframes sand-top-fall{0%{transform:scaleY(1);transform-origin:top}100%{transform:scaleY(.05);transform-origin:top}}
-@keyframes sand-bot-rise{0%{transform:scaleY(.05);transform-origin:bottom}100%{transform:scaleY(1);transform-origin:bottom}}
-@keyframes sand-stream{0%,95%{opacity:.85}100%{opacity:0}}
-@media(max-width:820px){.qday{padding:70px 24px}.qday-inner{grid-template-columns:1fr;gap:40px;text-align:center}.qday-content{text-align:center}.qday-title{font-size:2rem}.hourglass-svg{width:140px}}
+90%,100%{transform:rotate(180deg)}}
+100%{transform:scaleY(.05);transform-origin:top}}
+100%{transform:scaleY(1);transform-origin:bottom}}
+100%{opacity:0}}
+@media(max-width:820px){.qday{padding:70px 24px}.qday-inner{grid-template-columns:1fr;gap:40px;text-align:center}.qday-content{text-align:center}.qday-title{font-size:2rem}.qday-inner{grid-template-columns:1fr}}
 
 /* ═══ ENCLAVE ANTI-IA — split-screen chip + composition typo ═══ */
 .enclave-section{background:var(--navy);color:var(--paper);padding:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);overflow:hidden}
@@ -531,7 +529,7 @@ details[open] .faq-q::after{content:"−"}
     <div class="hero-cine-text">
       <h1 class="hero-cine-h1">Le secret des correspondances, <em>retrouvé.</em></h1>
       <div class="hero-cine-motto"><span>Harvest Now, Decrypt Never</span><sup>™</sup></div>
-      <p class="hero-cine-h2">L'infrastructure souveraine de signature et de correspondance électroniques — d'Enclave-À-Enclave, de dispositif à dispositif, <span class="sans">sans serveur, sans Cloud Act, sans tiers de confiance.</span></p>
+      <p class="hero-cine-h2">L'infrastructure souveraine de signature et de correspondance électroniques — d'Enclave-À-Enclave, de dispositif à dispositif,<br><span class="sans">sans serveur, sans Cloud Act, sans tiers de confiance.</span></p>
       <p class="hero-cine-souv">La vraie souveraineté, retrouvée.</p>
       <div class="hero-cine-baseline">La signature mathématique du nombre d'or</div>
       <div class="hero-cine-ctas">
@@ -966,22 +964,9 @@ details[open] .faq-q::after{content:"−"}
 <section class="qday">
   <div class="qday-inner">
     <div class="qday-visual">
-      <svg class="hourglass-svg" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#d4b888"/>
-            <stop offset="100%" stop-color="#c4a472"/>
-          </linearGradient>
-          <clipPath id="topClip"><path d="M58 35 L142 35 L106 148 L94 148 Z"/></clipPath>
-          <clipPath id="botClip"><path d="M94 152 L106 152 L142 265 L58 265 Z"/></clipPath>
-        </defs>
-        <line x1="30" y1="30" x2="170" y2="30" stroke="#c4a472" stroke-width="3" stroke-linecap="round"/>
-        <line x1="30" y1="270" x2="170" y2="270" stroke="#c4a472" stroke-width="3" stroke-linecap="round"/>
-        <path d="M55 30 L145 30 L105 150 L145 270 L55 270 L95 150 Z" fill="none" stroke="#c4a472" stroke-width="1.5" stroke-linejoin="round"/>
-        <g clip-path="url(#topClip)"><rect class="sand-top" x="58" y="35" width="84" height="113" fill="url(#sandGrad)" opacity="0.85"/></g>
-        <g clip-path="url(#botClip)"><rect class="sand-bot" x="58" y="152" width="84" height="113" fill="url(#sandGrad)" opacity="0.85"/></g>
-        <line class="sand-stream" x1="100" y1="148" x2="100" y2="220" stroke="#d4b888" stroke-width="1.2" opacity="0.85"/>
-      </svg>
+      <figure class="qday-img">
+        <img src="/assets/cadenas-reseau-quantique.jpg" alt="Un cadenas d'or ancien se fracture et part en poussière tandis qu'un réseau doré se dresse, intact — RSA et ECDSA tomberont au Q-Day, la cryptographie à base de réseaux résiste">
+      </figure>
     </div>
     <div class="qday-content">
       <div class="qday-eyebrow">L'horizon Q-Day</div>
