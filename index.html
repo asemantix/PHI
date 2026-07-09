@@ -71,8 +71,8 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .hero-cine{position:relative;min-height:100vh;background:#1C2230;overflow:hidden}
 .hero-cine-grid{max-width:1600px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:0;min-height:100vh;align-items:stretch;box-sizing:border-box}
 .hero-cine-text{padding:56px 40px 56px 32px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
-.hero-cine-image{position:relative;overflow:hidden;background:#1C2230;display:flex;align-items:center;justify-content:center;padding:56px 40px}
-.hero-cine-image img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;max-height:78vh}
+.hero-cine-image{position:relative;overflow:hidden;background:#1C2230;display:flex;align-items:center;justify-content:center;padding:16px 8px}
+.hero-cine-image img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;max-height:94vh;transform:scale(1.1)}
 .hero-cine-image::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#1C2230 0%,transparent 10%,transparent 100%)}
 .hero-cine-h1{font-family:var(--font-display);font-weight:400;font-size:clamp(2.5rem,5.6vw,4.4rem);line-height:1.05;letter-spacing:-.024em;color:#f4ede0;margin-bottom:26px;text-shadow:0 2px 20px rgba(0,0,0,.35)}
 .hero-cine-h1 em{font-style:italic;color:var(--gold-light)}
@@ -223,8 +223,8 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 /* ═══ ESSAI GRID — 3 pictos + CTA téléchargement ═══ */
 .essai-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;text-align:left;max-width:1000px;margin:0 auto}
 .essai-visual{text-align:center}
-.essai-pictos{border-radius:18px;overflow:hidden;background:#001331;box-shadow:0 12px 40px rgba(8,17,31,.35);border:1px solid rgba(196,164,114,.22);margin-bottom:24px}
-.essai-pictos img{width:100%;height:auto;display:block}
+.essai-pictos{border-radius:18px;background:#001331;box-shadow:0 12px 40px rgba(8,17,31,.35);border:1px solid rgba(196,164,114,.22);margin-bottom:24px;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;gap:8px;padding:30px 20px}
+.essai-pictos img{width:100%;height:auto;max-height:150px;object-fit:contain;display:block;filter:drop-shadow(0 6px 18px rgba(196,164,114,.18))}
 .essai-visual-label{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:14px;opacity:.85}
 .essai-visual-verbs{font-family:var(--font-display);font-style:italic;font-size:clamp(1.15rem,2.1vw,1.4rem);color:var(--gold);line-height:1.4}
 .essai-visual-verbs .sep{color:var(--gold);opacity:.45;margin:0 12px;font-style:normal}
@@ -692,7 +692,9 @@ details[open] .faq-q::after{content:"−"}
     <div class="essai-grid">
       <div class="essai-visual">
         <div class="essai-pictos">
-          <img src="/assets/trois-pictos.jpg" alt="La clé .phi, l'enveloppe Φ, le paraphe Φ — trois pictogrammes dorés sur navy">
+          <img src="/assets/picto-cle-phi.png" alt="Une clé dorée gravée .phi — recevoir : votre adresse souveraine">
+          <img src="/assets/picto-enveloppe-phi.png" alt="Une enveloppe dorée scellée du sceau Φ — correspondre en toute confidentialité">
+          <img src="/assets/picto-plume-phi.png" alt="Une plume dorée et un sceau de cire Φ — signer avec preuve probatoire">
         </div>
         <div class="essai-visual-label">Trois usages avec la clé .phi</div>
         <div class="essai-visual-verbs">
