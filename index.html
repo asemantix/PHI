@@ -73,13 +73,15 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .hero-cine-text{padding:56px 40px 56px 32px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
 .hero-cine-image{position:relative;overflow:hidden;background:#1C2230}
 .hero-cine-image img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
-.hero-cine-image::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(135% 108% at 58% 46%,transparent 46%,#1C2230 100%),linear-gradient(90deg,#1C2230 0%,rgba(28,34,48,.42) 14%,rgba(28,34,48,.16) 34%,rgba(28,34,48,.16) 100%),linear-gradient(0deg,#1C2230 0%,transparent 16%,transparent 88%,#1C2230 100%)}
+.hero-cine-image::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#1C2230 0%,transparent 12%,transparent 100%)}
 .hero-cine-h1{font-family:var(--font-display);font-weight:400;font-size:clamp(2.5rem,5.6vw,4.4rem);line-height:1.05;letter-spacing:-.024em;color:#f4ede0;margin-bottom:26px;text-shadow:0 2px 20px rgba(0,0,0,.35)}
 .hero-cine-h1 em{font-style:italic;color:var(--gold-light)}
 .hero-cine-motto{font-family:var(--font-eb);font-style:italic;font-size:clamp(1rem,1.7vw,1.22rem);color:var(--gold);letter-spacing:.01em;margin:-6px 0 30px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
 .hero-cine-motto span{border-bottom:1px solid rgba(196,164,114,.35);padding-bottom:3px}
 .hero-cine-motto sup{font-family:var(--font-mono);font-size:.42em;font-style:normal;letter-spacing:0;color:var(--gold-light);margin-left:2px;vertical-align:super;opacity:.85}
-.hero-cine-h2{font-family:var(--font-eb);font-style:italic;font-size:clamp(1rem,1.55vw,1.22rem);color:rgba(232,220,200,.78);line-height:1.6;max-width:560px;margin:0 0 36px;text-shadow:0 1px 12px rgba(0,0,0,.3)}
+.hero-cine-h2{font-family:var(--font-eb);font-style:italic;font-size:clamp(1.14rem,1.95vw,1.46rem);color:rgba(232,220,200,.86);line-height:1.62;max-width:620px;margin:0 0 30px;text-shadow:0 1px 12px rgba(0,0,0,.3)}
+.hero-cine-h2 .sans{color:var(--gold-light);font-style:italic;font-weight:500}
+.hero-cine-souv{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(1.15rem,2.1vw,1.6rem);color:var(--gold);line-height:1.3;margin:0 0 34px;letter-spacing:-.005em;text-shadow:0 1px 12px rgba(0,0,0,.35)}
 .hero-cine-baseline{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:38px}
 .hero-cine-ctas{display:flex;gap:14px;flex-wrap:wrap}
 .hero-cine-cta-primary{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy-deep);text-decoration:none;padding:16px 32px;font-family:var(--font-mono);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;border-radius:2px;transition:background .2s}
@@ -528,7 +530,8 @@ details[open] .faq-q::after{content:"−"}
     <div class="hero-cine-text">
       <h1 class="hero-cine-h1">Le secret des correspondances, <em>retrouvé.</em></h1>
       <div class="hero-cine-motto"><span>Harvest Now, Decrypt Never</span><sup>™</sup></div>
-      <p class="hero-cine-h2">L'infrastructure souveraine de signature et de correspondance électroniques — d'Enclave-À-Enclave, de dispositif à dispositif, sans serveur, sans Cloud Act, sans tiers de confiance.</p>
+      <p class="hero-cine-h2">L'infrastructure souveraine de signature et de correspondance électroniques — d'Enclave-À-Enclave, de dispositif à dispositif, <span class="sans">sans serveur, sans Cloud Act, sans tiers de confiance.</span></p>
+      <p class="hero-cine-souv">La vraie souveraineté, retrouvée.</p>
       <div class="hero-cine-baseline">La signature mathématique du nombre d'or</div>
       <div class="hero-cine-ctas">
         <a href="communication-souveraine.html" class="hero-cine-cta-primary">Grands comptes stratégiques →</a>
@@ -536,7 +539,7 @@ details[open] .faq-q::after{content:"−"}
       </div>
     </div>
     <div class="hero-cine-image">
-      <img src="/assets/hero-phi-fibonacci.png2" alt="Φ (Phi) sculpté selon le nombre d'or, avec sa spirale de Fibonacci — la signature mathématique">
+      <img src="/assets/hero-phi-fibonacci.png" alt="Φ (Phi) sculpté selon le nombre d'or, avec sa spirale de Fibonacci — la signature mathématique">
     </div>
   </div>
   <a href="#pense-pour" class="hero-cine-cue" aria-label="Descendre">
