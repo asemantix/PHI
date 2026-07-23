@@ -378,7 +378,8 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 .pil-sub b{font-style:normal;color:var(--gold-light);font-weight:400}
 .pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:880px){.pil-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
-.pcv{position:absolute;width:16px;height:16px;border-color:rgba(196,164,114,.6);z-index:3}.pcv.tl{top:14px;left:14px;border-top:1.5px solid;border-left:1.5px solid}.pcv.tr{top:14px;right:14px;border-top:1.5px solid;border-right:1.5px solid}.pcv.bl{bottom:14px;left:14px;border-bottom:1.5px solid;border-left:1.5px solid}.pcv.br{bottom:14px;right:14px;border-bottom:1.5px solid;border-right:1.5px solid}
+@media(max-width:760px){.portes-grid{grid-template-columns:1fr!important}}
+  .pcv{position:absolute;width:16px;height:16px;border-color:rgba(196,164,114,.6);z-index:3}.pcv.tl{top:14px;left:14px;border-top:1.5px solid;border-left:1.5px solid}.pcv.tr{top:14px;right:14px;border-top:1.5px solid;border-right:1.5px solid}.pcv.bl{bottom:14px;left:14px;border-bottom:1.5px solid;border-left:1.5px solid}.pcv.br{bottom:14px;right:14px;border-bottom:1.5px solid;border-right:1.5px solid}
   .pcard{position:relative;border:1px solid rgba(196,164,114,.4);border-radius:28px;padding:0 0 34px;background:rgba(196,164,114,.04);overflow:hidden}
 .pcard::before,.pcard::after{content:"";position:absolute;width:14px;height:14px;border:1.5px solid rgba(196,164,114,.5);z-index:3}
 .pcard::before{top:12px;left:12px;border-right:none;border-bottom:none}
@@ -1489,7 +1490,7 @@ details[open] .faq-q::after{content:"−"}
         <div class="hn-k">La menace</div>
         <h3 class="hn-t">Harvest Now,<br><em>Decrypt Later.</em></h3>
         <p class="hn-p">Des services de renseignement <b>capturent aujourd'hui</b> des volumes entiers de correspondances chiffrées qu'ils ne savent pas encore lire — pour les <b>déchiffrer demain</b>, le jour où l'ordinateur quantique brisera RSA et ECDSA.</p>
-        <a href="harvest-now-decrypt-later.html" class="hn-link">Comprendre la menace →</a>
+        
       </div>
       <div class="hn-col hn-mid">
         <div class="hn-k">Notre sceau</div>
@@ -1579,41 +1580,41 @@ details[open] .faq-q::after{content:"−"}
      ★ LES QUATRE PORTES — l'entonnoir
      ══════════════════════════════════════════════════════════════ -->
 <section id="portes" style="background:var(--paper);padding:92px 40px;border-top:1px solid var(--rule)">
-  <div style="max-width:1100px;margin:0 auto">
+  <div style="max-width:1180px;margin:0 auto">
     <div style="text-align:center;margin-bottom:48px">
-      <div style="font-family:var(--font-mono);font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">Par où commencer</div>
-      <h2 style="font-family:var(--font-display);font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:500;color:var(--navy);line-height:1.2;margin-bottom:12px">Quatre portes, <em style="font-style:italic;color:var(--gold-deep)">une seule primitive.</em></h2>
-      <p style="font-family:var(--font-eb);font-style:italic;font-size:1.08rem;color:var(--ink-muted);max-width:620px;margin:0 auto;line-height:1.6">Sans magasin d'applications : tout se télécharge ici, directement, sans compte ni intermédiaire.</p>
+      <div style="font-family:var(--font-mono);font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:16px">Par où commencer</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(1.75rem,4.4vw,2.9rem);font-weight:500;color:var(--navy);line-height:1.2;margin-bottom:12px">Quatre portes, <em style="font-style:italic;color:var(--gold-deep)">une seule primitive.</em></h2>
+      <p style="font-family:var(--font-eb);font-style:italic;font-size:clamp(1.08rem,2.05vw,1.3rem);color:var(--ink-muted);max-width:680px;margin:0 auto;line-height:1.6">Sans magasin d'applications : tout se télécharge ici, directement, sans compte ni intermédiaire.</p>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:22px" class="portes-grid">
 
-      <div style="background:#fff;border:1.5px solid var(--gold);border-radius:14px;padding:30px 24px;display:flex;flex-direction:column">
-        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(90,128,51,.12);color:var(--success);border:1px solid rgba(90,128,51,.4);margin-bottom:16px">Disponible</div>
-        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:8px">Les correspondances</h3>
-        <p style="font-family:var(--font-sans);font-size:.9rem;font-weight:300;color:var(--ink-muted);line-height:1.6;flex-grow:1;margin-bottom:20px">Transmettez vos documents chiffrés de dispositif à dispositif. Gratuit, illimité, sans compte.</p>
-        <a href="telecharger.html" style="display:block;text-align:center;padding:14px 18px;background:var(--gold);color:var(--navy-deep);text-decoration:none;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:3px">Télécharger — Android</a>
+      <div style="background:#fff;border:1.5px solid var(--gold);border-radius:22px;padding:38px 34px 34px;display:flex;flex-direction:column">
+        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(90,128,51,.12);color:var(--success);border:1px solid rgba(90,128,51,.4);margin-bottom:16px">Disponible</div>
+        <h3 style="font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--navy);margin-bottom:8px">Les correspondances</h3>
+        <p style="font-family:var(--font-sans);font-size:clamp(1.02rem,1.8vw,1.16rem);font-weight:300;color:var(--ink-muted);line-height:1.6;flex-grow:1;margin-bottom:20px">Transmettez vos documents chiffrés de dispositif à dispositif. Gratuit, illimité, sans compte.</p>
+        <a href="telecharger.html" style="display:block;text-align:center;padding:16px 22px;background:var(--gold);color:var(--navy-deep);text-decoration:none;font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:3px">Télécharger — Android</a>
       </div>
 
-      <div style="background:var(--paper-soft);border:1px solid var(--rule);border-radius:14px;padding:30px 24px;display:flex;flex-direction:column">
-        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(90,128,51,.12);color:var(--success);border:1px solid rgba(90,128,51,.4);margin-bottom:16px">Disponible</div>
-        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:8px">Le vérificateur</h3>
-        <p style="font-family:var(--font-sans);font-size:.9rem;font-weight:300;color:var(--ink-muted);line-height:1.6;flex-grow:1;margin-bottom:20px">Vous avez reçu un certificat ? Contrôlez-le hors ligne, sur tout appareil, sans rien installer.</p>
-        <a href="telecharger.html" style="display:block;text-align:center;padding:14px 18px;background:var(--navy);color:var(--ivory-bright);text-decoration:none;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:3px">Télécharger — tous appareils</a>
+      <div style="background:var(--paper-soft);border:1px solid var(--rule);border-radius:22px;padding:38px 34px 34px;display:flex;flex-direction:column">
+        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(90,128,51,.12);color:var(--success);border:1px solid rgba(90,128,51,.4);margin-bottom:16px">Disponible</div>
+        <h3 style="font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--navy);margin-bottom:8px">Le vérificateur</h3>
+        <p style="font-family:var(--font-sans);font-size:clamp(1.02rem,1.8vw,1.16rem);font-weight:300;color:var(--ink-muted);line-height:1.6;flex-grow:1;margin-bottom:20px">Vous avez reçu un certificat ? Contrôlez-le hors ligne, sur tout appareil, sans rien installer.</p>
+        <a href="telecharger.html" style="display:block;text-align:center;padding:16px 22px;background:var(--navy);color:var(--ivory-bright);text-decoration:none;font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:3px">Télécharger — tous appareils</a>
       </div>
 
-      <div style="background:var(--paper-soft);border:1px solid var(--rule);border-radius:14px;padding:30px 24px;display:flex;flex-direction:column">
-        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(196,164,114,.14);color:var(--gold-deep);border:1px solid var(--rule);margin-bottom:16px">20 août</div>
-        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:8px">Les actes de preuve</h3>
-        <p style="font-family:var(--font-sans);font-size:.9rem;font-weight:300;color:var(--ink-muted);line-height:1.6;flex-grow:1;margin-bottom:20px">La preuve légère et la preuve renforcée, en jetons. Les correspondances resteront gratuites.</p>
-        <a href="#recevoir" style="display:block;text-align:center;padding:14px 18px;background:transparent;color:var(--gold-deep);text-decoration:none;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);border-radius:3px">Être prévenue à la sortie</a>
+      <div style="background:var(--paper-soft);border:1px solid var(--rule);border-radius:22px;padding:38px 34px 34px;display:flex;flex-direction:column">
+        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(196,164,114,.14);color:var(--gold-deep);border:1px solid var(--rule);margin-bottom:16px">20 août</div>
+        <h3 style="font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--navy);margin-bottom:8px">Les actes de preuve</h3>
+        <p style="font-family:var(--font-sans);font-size:clamp(1.02rem,1.8vw,1.16rem);font-weight:300;color:var(--ink-muted);line-height:1.6;flex-grow:1;margin-bottom:20px">La preuve légère et la preuve renforcée, en jetons. Les correspondances resteront gratuites.</p>
+        <a href="#recevoir" style="display:block;text-align:center;padding:16px 22px;background:transparent;color:var(--gold-deep);text-decoration:none;font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:1px solid var(--gold);border-radius:3px">Être prévenue à la sortie</a>
       </div>
 
-      <div style="background:var(--navy);border:1px solid rgba(196,164,114,.3);border-radius:14px;padding:30px 24px;display:flex;flex-direction:column">
-        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(196,164,114,.16);color:var(--gold-light);border:1px solid rgba(196,164,114,.4);margin-bottom:16px">Sur mesure</div>
-        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--ivory-bright);margin-bottom:8px">Défense &amp; grands comptes</h3>
-        <p style="font-family:var(--font-sans);font-size:.9rem;font-weight:300;color:rgba(232,220,200,.72);line-height:1.6;flex-grow:1;margin-bottom:20px">Environnements souverains, OIV, déploiement en parc maîtrisé, intégration par SDK.</p>
-        <a href="contact.html" style="display:block;text-align:center;padding:14px 18px;background:var(--gold);color:var(--navy-deep);text-decoration:none;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:3px">Nous parler</a>
+      <div style="background:var(--navy);border:1px solid rgba(196,164,114,.3);border-radius:22px;padding:38px 34px 34px;display:flex;flex-direction:column">
+        <div style="display:inline-block;align-self:flex-start;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 10px;border-radius:2px;background:rgba(196,164,114,.16);color:var(--gold-light);border:1px solid rgba(196,164,114,.4);margin-bottom:16px">Sur mesure</div>
+        <h3 style="font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--ivory-bright);margin-bottom:8px">Défense &amp; grands comptes</h3>
+        <p style="font-family:var(--font-sans);font-size:clamp(1.02rem,1.8vw,1.16rem);font-weight:300;color:rgba(232,220,200,.72);line-height:1.6;flex-grow:1;margin-bottom:20px">Environnements souverains, OIV, déploiement en parc maîtrisé, intégration par SDK.</p>
+        <a href="contact.html" style="display:block;text-align:center;padding:16px 22px;background:var(--gold);color:var(--navy-deep);text-decoration:none;font-family:var(--font-mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-radius:3px">Nous parler</a>
       </div>
 
     </div>
@@ -1957,8 +1958,7 @@ document.getElementById('lead-email').addEventListener('keydown',function(e){if(
           <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
           <li><a href="echanges-confidentiels.html">Échanges confidentiels</a></li>
           <li><a href="la-mecanique-probatoire.html">La mécanique probatoire</a></li>
-          <li><a href="resistance-quantique.html">Résistance post-quantique</a></li>
-          <li><a href="harvest-now-decrypt-later.html">Harvest Now, Decrypt Later</a></li>
+          <li><a href="resistance-quantique.html">Résistance post-quantique — Harvest Now, Decrypt Later</a></li>
           <li><a href="enclave-a-enclave.html">Enclave-À-Enclave</a></li>
           <li><a href="asemantique.html">Asémanticité</a></li>
           <li><a href="intimite-numerique.html">L'intimité numérique</a></li>
