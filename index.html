@@ -36,7 +36,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://lapreuveparphi.fr/#organization","name":"AION ASEMANTIX","url":"https://lapreuveparphi.fr/","email":"contact@lapreuveparphi.fr","description":"Éditeur de La preuve par Φ, primitive probatoire souveraine et post-quantique — preuve auto-portée, sans tiers de confiance, sans autorité de certification, sans serveur. Brevets déposés à l'INPI.","logo":{"@type":"ImageObject","url":"https://lapreuveparphi.fr/android-chrome-192x192.png","width":192,"height":192},"sameAs":["https://github.com/asemantix"]},
-{"@type":"SoftwareApplication","@id":"https://lapreuveparphi.fr/#software","name":"La preuve par Φ","alternateName":"Φ","url":"https://lapreuveparphi.fr/","operatingSystem":"iOS, Android, Windows, macOS, Linux","applicationCategory":"BusinessApplication","applicationSubCategory":"Preuve numérique","audience":{"@type":"BusinessAudience","name":"Défense, aérospatiale, opérateurs d'importance vitale (OIV), banques privées, notaires, mutuelles, assurances, justice"},"description":"Primitive probatoire auto-portée : la preuve se calcule dans le dispositif et se recalcule par tout juge ou expert judiciaire, hors ligne, sans tiers de confiance, sans autorité de certification, sans serveur. Post-quantique dès le premier jour (ML-DSA-65, ML-KEM-768).","featureList":["Preuve auto-portée, recalculable par tout juge ou expert judiciaire","Ligature QUI · QUOI · QUAND · silicium en un seul nombre","Résistance post-quantique ML-DSA-65 / ML-KEM-768 (NIST FIPS 203/204)","Sans serveur, sans autorité de certification, sans tiers de confiance","Journal probatoire chaîné, strictement croissant, infalsifiable","Vérification hors ligne, sans compte","Transport Inline-Offline™ chiffré, indistinguable du bruit","Conformité visée : signature avancée eIDAS art. 26, Code civil art. 1366"],"offers":[
+{"@type":"SoftwareApplication","@id":"https://lapreuveparphi.fr/#software","name":"La preuve par Φ","alternateName":"Φ","url":"https://lapreuveparphi.fr/","operatingSystem":"iOS, Android, Windows, macOS, Linux","applicationCategory":"BusinessApplication","applicationSubCategory":"Preuve numérique","audience":{"@type":"BusinessAudience","name":"Défense, aérospatiale, opérateurs d'importance vitale (OIV), banques privées, notaires, mutuelles, assurances, justice"},"description":"Primitive probatoire auto-portée : la preuve se calcule dans le dispositif et se recalcule par tout juge ou expert judiciaire, hors ligne, sans tiers de confiance, sans autorité de certification, sans serveur. Post-quantique dès le premier jour (ML-DSA-65, ML-KEM-768).","featureList":["Preuve auto-portée, recalculable par tout juge ou expert judiciaire","Ligature QUI · QUOI · QUAND · silicium · contexte en un seul nombre","Résistance post-quantique ML-DSA-65 / ML-KEM-768 (NIST FIPS 203/204)","Sans serveur, sans autorité de certification, sans tiers de confiance","Journal probatoire chaîné, strictement croissant, infalsifiable","Vérification hors ligne, sans compte","Transport Inline-Offline™ chiffré, indistinguable du bruit","Conformité visée : signature avancée eIDAS art. 26, Code civil art. 1366"],"offers":[
 {"@type":"Offer","name":"Correspondre","price":"0","priceCurrency":"EUR","description":"Correspondances chiffrées de dispositif à dispositif, illimitées, gratuites."},
 {"@type":"Offer","name":"Vérifier","price":"0","priceCurrency":"EUR","description":"Vérification d'une preuve Φ, hors ligne, sans compte, gratuite."},
 {"@type":"Offer","name":"Preuve légère — signature et accusé de réception","price":"4","priceCurrency":"EUR","description":"1 jeton par preuve légère. Jeton à 4 €, dégressif jusqu'à 2 € par paliers de volume."},
@@ -97,7 +97,7 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 
 /* ═══ HERO ═══ */
 .hero{position:relative;background:var(--navy);overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px;max-width:1320px;margin:0 auto;padding:96px 48px 88px;min-height:88vh}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:64px;max-width:1320px;margin:0 auto;padding:96px 48px 88px;min-height:88vh}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;text-align:center;padding:36px 26px 56px;min-height:auto;gap:8px}}
 .hero-txt{max-width:640px}
 @media(max-width:900px){.hero-txt{margin:0 auto;order:2}}
@@ -122,8 +122,8 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 .hero-cta-ghost .phi{font-family:var(--font-eb);font-style:italic;letter-spacing:0;color:var(--gold-light)}
 .hero-phi{display:flex;align-items:center;justify-content:flex-end;position:relative}
 @media(max-width:900px){.hero-phi{order:1;margin-bottom:14px}}
-.hero-ring{position:relative;width:min(56vw,660px);aspect-ratio:1;display:flex;align-items:center;justify-content:center}
-@media(max-width:900px){.hero-ring{width:min(82vw,440px)}}
+.hero-ring{position:relative;width:min(40vw,560px);margin-right:-40px;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+@media(max-width:900px){.hero-ring{width:min(82vw,440px);margin-right:0}}
 .hero-ring img{width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.0)}
 .hero-cue{position:absolute;bottom:26px;left:calc(52.5% - 17px);z-index:3;opacity:.55;animation:cuebob 3.2s ease-in-out infinite}
 .hero-cue svg{width:34px;height:22px;display:block}
@@ -161,7 +161,8 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 .pillar-lead .phi{font-family:var(--font-eb);font-style:italic;color:var(--gold-light)}
 .pillar-quote{font-family:var(--font-display);font-style:italic;font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--gold);margin:30px auto 0;max-width:34ch;line-height:1.4}
 /* exergue lexical — le nom commun mis à l'honneur */
-.lexeme{max-width:600px;margin:0 auto 36px;text-align:center}
+.lig-wide{max-width:1140px}.lig-grid{display:grid;grid-template-columns:1fr .82fr;gap:52px;align-items:center;text-align:left;margin:8px auto 0}.lig-txt .lexeme-word{margin-bottom:14px}.lig-txt .lexeme-rule{margin:22px 0 24px}.lig-txt .pillar-lead{max-width:none;margin:0 0 18px;text-align:left}.lig-grid .assets{justify-content:flex-start;max-width:none;margin:22px 0 0}.lig-grid .pillar-plate{max-width:none;margin:0;width:100%}@media(max-width:880px){.lig-grid{grid-template-columns:1fr;gap:34px;text-align:center}.lig-txt .pillar-lead{text-align:center;margin-left:auto;margin-right:auto;max-width:56ch}.lig-grid .assets{justify-content:center}.lig-txt .lexeme-rule{margin:22px auto 24px}.lig-grid .pillar-plate{max-width:380px;margin:0 auto}}
+  .lexeme{max-width:600px;margin:0 auto 36px;text-align:center}
 .lexeme-word{font-family:var(--font-display);font-weight:500;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1;letter-spacing:-.02em;color:var(--ivory-bright);margin-bottom:22px}
 .lexeme-word em{font-style:italic;color:var(--gold-light)}
 .lexeme-gram{font-family:var(--font-eb);font-style:italic;font-size:clamp(1.1rem,1.95vw,1.3rem);color:var(--slate);margin-bottom:22px;letter-spacing:.01em}
@@ -187,7 +188,7 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 .pillar-tail p .g{color:var(--gold-light)}
 .pillar-tail a{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(196,164,114,.4);padding-bottom:3px;display:inline-block;margin-top:22px}
 
-/* ═══ LA LIGATURE NOUE — split image + quatre axes ═══ */
+/* ═══ LA LIGATURE NOUE — split image + axes hétérogènes ═══ */
 .lig{padding:96px 32px;border-top:1px solid rgba(196,164,114,.18);background:var(--navy-deep)}
 .lig-grid{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
 @media(max-width:900px){.lig-grid{grid-template-columns:1fr;gap:44px;max-width:640px}}
@@ -1204,7 +1205,7 @@ details[open] .faq-q::after{content:"−"}
         <div class="gera">La preuve <em>auto-portée</em></div>
         <div class="grole">Ni homme, ni serveur — la mathématique</div>
         <div class="gline"></div>
-        <div class="gbody">La preuve tient parce qu'elle se ligature : QUI · QUOI · QUAND · le silicium, liés en un seul nombre. Elle se recalcule par tout juge ou expert, hors ligne, sans rien demander à personne.</div>
+        <div class="gbody">La preuve tient parce qu'elle se ligature : QUI · QUOI · QUAND · le silicium · le contexte, liés en un seul nombre. Elle se recalcule par tout juge ou expert, hors ligne, sans rien demander à personne.</div>
         <div class="gtiers t-none"><span class="d"></span>Aucun tiers · auto-portée</div>
       </div>
     </div>
@@ -1222,29 +1223,34 @@ details[open] .faq-q::after{content:"−"}
      SÉPARATEUR — PREMIÈRE JAMBE : LA LIGATURE
      ══════════════════════════════════════════════════════════════ -->
 <section class="pillar" id="ce-quon-ligature">
-  <div class="pillar-in">
+  <div class="pillar-in lig-wide">
     <div class="leg-mark">
       <div class="leg-num">Première force</div>
       <div class="leg-title">La mécanique probatoire</div>
     </div>
     <div class="pillar-eb"><span class="phi">Φ</span>, une primitive cryptographique de preuve</div>
-    <div class="lexeme">
-      <div class="lexeme-word">La <em>Ligature.</em></div>
-      <div class="lexeme-def">Nouer mathématiquement plusieurs éléments hétérogènes en une seule valeur — comme un lieu unique naît du croisement d'une longitude et d'une latitude.</div>
-      <div class="lexeme-rule"></div>
+
+    <div class="lig-grid">
+      <div class="lig-txt">
+        <div class="lexeme-word">La <em>Ligature.</em></div>
+        <div class="lexeme-def">Nouer mathématiquement plusieurs éléments hétérogènes en une seule valeur — comme un lieu unique naît du croisement d'une longitude et d'une latitude.</div>
+        <div class="lexeme-rule"></div>
+        <p class="pillar-lead">Qui scelle, quoi, quand, sur quel dispositif, dans quel contexte : <strong>des axes hétérogènes, liés en un seul nombre.</strong> Le nœud est mathématique — la preuve qui en naît se porte elle-même et se recalcule par <span class="g">tout juge ou expert</span>. Plus de tiers, plus d'autorité de certification, plus de cloud.</p>
+        <p class="pillar-lead">La ligature ne connaît pas la nature de ce qu'elle noue : dès lors qu'il existe une empreinte, il existe une preuve.</p>
+        <div class="assets">
+          <span>une photo</span><span>un document</span><span>un rapport</span><span>un état des lieux</span>
+          <span>une œuvre d'art</span><span>un bijou</span><span>un yacht</span><span>un jet</span>
+        </div>
+      </div>
+
+      <div class="pillar-plate">
+        <span class="cv tl"></span><span class="cv tr"></span><span class="cv bl"></span><span class="cv br"></span>
+        <img src="/assets/laligature.jpg" alt="Un ruban d'or noue en une seule gerbe un document scellé, une maison, une montre, un cadre, une clé et un rouleau — la ligature universelle de la preuve" loading="lazy">
+      </div>
     </div>
-    <p class="pillar-lead">Qui scelle, quoi, quand, sur quel dispositif : <strong>quatre axes, liés en un seul nombre.</strong> Le nœud est mathématique — et la preuve qui en naît se porte elle-même. Elle se calcule avec <span class="phi">Φ</span>, et se recalcule par <span class="g">tout juge ou expert</span> : plus de tiers, plus d'autorité de certification, plus de cloud, plus de réseau pour la lire ou la vérifier.</p>
-    <div class="pillar-plate">
-      <span class="cv tl"></span><span class="cv tr"></span><span class="cv bl"></span><span class="cv br"></span>
-      <img src="/assets/laligature.jpg" alt="Un ruban d'or noue en une seule gerbe un document scellé, une maison, une montre, un cadre, une clé et un rouleau — la ligature universelle de la preuve" loading="lazy">
-    </div>
-    <p class="pillar-lead" style="margin-bottom:30px">La ligature ne connaît pas la nature de ce qu'elle noue. Dès lors qu'il existe une empreinte, il existe une preuve auto-portée.</p>
-    <div class="assets">
-      <span>une photo</span><span>un document</span><span>un rapport</span><span>un état des lieux</span>
-      <span>une œuvre d'art</span><span>un bijou</span><span>un yacht</span><span>un jet</span>
-    </div>
+
     <div class="pillar-quote">Quelle qu'elle soit, toute preuve se ligature avec <span class="phi">Φ</span>.</div>
-    <div style="text-align:center;margin-top:32px">
+    <div style="text-align:center;margin-top:28px">
       <a href="la-preuve-en-clair.html" style="display:inline-block;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid rgba(196,164,114,.45);padding:14px 30px;border-radius:2px;transition:all .2s" onmouseover="this.style.background='rgba(196,164,114,.12)';this.style.borderColor='var(--gold-light)'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(196,164,114,.45)'">La preuve, en clair →</a>
     </div>
   </div>
@@ -1269,7 +1275,7 @@ details[open] .faq-q::after{content:"−"}
           <div class="pt">La fonction <em>G</em></div>
           <div class="pr">La ligature</div>
           <div class="pline"></div>
-          <div class="pb">Une valeur unique et irréversible où se croisent l'auteur, l'empreinte de l'actif, le silicium du dispositif, l'instant et le contexte métier. Elle ne peut procéder que de cette configuration exacte : <b>changer un seul élément la change tout entière.</b></div>
+          <div class="pb">Une valeur unique et irréversible où se croisent l'auteur, l'empreinte de l'actif, l'instant, le silicium du dispositif, le contexte métier. Elle ne procède que de cette configuration exacte : <b>un élément change, le nombre change, et la preuve échoue.</b></div>
           <div class="pestab"><a href="la-fonction-g.html">La fonction G <span class="arw">→</span></a></div>
         </div>
       </div>
@@ -1563,39 +1569,7 @@ details[open] .faq-q::after{content:"−"}
   </div>
 </section>
 
-<section class="qr-invite">
-  <div class="qr-invite-inner">
-    <div style="font-family:var(--font-mono);font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:18px">Essayez maintenant</div>
-    <h2 style="font-family:var(--font-display);font-style:italic;font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:500;color:#e8dcc8;line-height:1.3;margin-bottom:44px">Écrivez-nous en toute confidentialité.</h2>
 
-    <div class="essai-grid">
-      <div class="essai-visual">
-        <div class="essai-pictos">
-          <img src="/assets/picto-cle-phi.png" alt="Une clé dorée gravée .phi — recevoir : votre adresse souveraine" loading="lazy" decoding="async">
-          <img src="/assets/picto-enveloppe-phi.png" alt="Une enveloppe dorée scellée du sceau Φ — correspondre en toute confidentialité" loading="lazy" decoding="async">
-          <img src="/assets/picto-plume-phi.png" alt="Une plume dorée et un sceau de cire Φ — signer avec preuve probatoire" loading="lazy" decoding="async">
-        </div>
-        <div class="essai-visual-label">Trois usages avec la clé .phi</div>
-        <div class="essai-visual-verbs">
-          <span>Recevoir</span>
-          <span class="sep">·</span>
-          <span>Correspondre</span>
-          <span class="sep">·</span>
-          <span>Signer</span>
-        </div>
-      </div>
-
-      <div class="essai-content">
-        <p style="font-family:var(--font-eb);font-style:italic;font-size:1.08rem;color:rgba(232,220,200,.72);line-height:1.7;margin-bottom:28px">Téléchargez notre clé publique <strong style="color:var(--gold);font-style:normal;font-family:var(--font-mono);font-size:.94em;letter-spacing:.02em">.phi</strong>. Installez l'app, écrivez-nous — votre document ne pourra être ouvert que par notre appareil.</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px">
-          <a href="/phi-public.phi" download style="display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;background:var(--gold);color:var(--navy-deep);text-decoration:none;border-radius:2px;transition:background .2s" onmouseover="this.style.background='#d4b888'" onmouseout="this.style.background='#c4a472'">Notre clé .phi →</a>
-          <a href="telecharger.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;background:transparent;color:var(--gold);text-decoration:none;border:1px solid rgba(196,164,114,.45);border-radius:2px;transition:background .2s" onmouseover="this.style.background='rgba(196,164,114,.1)'" onmouseout="this.style.background='transparent'">Installer l'app</a>
-        </div>
-        <p style="font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;color:rgba(255,255,255,.4);line-height:1.7">Post-quantique · Sans serveur · Votre document ne quitte jamais votre appareil</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ══════════════════════════════════════════════════════════════
      ★ LES QUATRE PORTES — l'entonnoir
