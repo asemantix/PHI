@@ -97,9 +97,9 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 
 /* ═══ HERO ═══ */
 .hero{position:relative;background:var(--navy);overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:64px;max-width:1320px;margin:0 auto;padding:96px 48px 88px;min-height:88vh}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch;gap:0;max-width:1600px;margin:0 auto;padding:0 40px;min-height:100vh;box-sizing:border-box}
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;text-align:center;padding:36px 26px 56px;min-height:auto;gap:8px}}
-.hero-txt{max-width:640px}
+.hero-txt{max-width:none;padding:56px 40px 56px 32px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
 @media(max-width:900px){.hero-txt{margin:0 auto;order:2}}
 .hero-metier{font-family:var(--font-mono);font-size:.9rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px}
 .hero-h1{font-family:var(--font-display);font-weight:400;font-size:clamp(3rem,6.8vw,5.4rem);line-height:1.04;letter-spacing:-.022em;color:var(--ivory-bright);margin-bottom:24px;text-shadow:0 2px 20px rgba(0,0,0,.35)}
@@ -120,11 +120,11 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 .hero-cta-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--gold-light);text-decoration:none;padding:15px 30px;font-family:var(--font-mono);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border:1px solid rgba(196,164,114,.55);border-radius:2px;transition:all .2s}
 .hero-cta-ghost:hover{background:rgba(196,164,114,.15);border-color:var(--gold-light)}
 .hero-cta-ghost .phi{font-family:var(--font-eb);font-style:italic;letter-spacing:0;color:var(--gold-light)}
-.hero-phi{display:flex;align-items:center;justify-content:flex-end;position:relative}
+.hero-phi{display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:16px 8px}
 @media(max-width:900px){.hero-phi{order:1;margin-bottom:14px}}
-.hero-ring{position:relative;width:min(40vw,560px);margin-right:-40px;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
-@media(max-width:900px){.hero-ring{width:min(82vw,440px);margin-right:0}}
-.hero-ring img{width:100%;height:100%;object-fit:contain;display:block;transform:scale(1.0)}
+.hero-ring{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+
+.hero-ring img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;max-height:94vh;transform:scale(1.1)}@media(max-width:900px){.hero-ring{width:100%;height:auto}.hero-ring img{max-height:52vh;transform:none}.hero-phi{padding:28px 24px 8px;max-height:56vh}.hero-txt{padding:56px 28px 80px;text-align:center}}
 .hero-cue{position:absolute;bottom:26px;left:calc(52.5% - 17px);z-index:3;opacity:.55;animation:cuebob 3.2s ease-in-out infinite}
 .hero-cue svg{width:34px;height:22px;display:block}
 @keyframes cuebob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
@@ -367,7 +367,7 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 @keyframes pop{0%{opacity:0;transform:translateY(6px)}100%{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.ph,.arc,.arc-phi,.doc-line,.sign,.sign2,.btn-send,.btn-sign,.proof{animation:none!important;opacity:1!important;stroke-dashoffset:0!important;transform:none!important}}
 
-/* ═══ TROIS PILIERS — le point · la ligne · le lieu ═══ */
+/* ═══ TROIS PILIERS ═══ */
 .pil{padding:96px 32px 104px;border-top:1px solid rgba(196,164,114,.18);background:var(--navy)}
 .pil-in{max-width:1180px;margin:0 auto}
 .pil-head{text-align:center;max-width:780px;margin:0 auto 60px}
@@ -378,7 +378,8 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 .pil-sub b{font-style:normal;color:var(--gold-light);font-weight:400}
 .pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:880px){.pil-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
-.pcard{position:relative;border:1px solid rgba(196,164,114,.24);border-radius:22px;padding:0 0 34px;background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0));display:flex;flex-direction:column;overflow:hidden}
+.pcv{position:absolute;width:16px;height:16px;border-color:rgba(196,164,114,.6);z-index:3}.pcv.tl{top:14px;left:14px;border-top:1.5px solid;border-left:1.5px solid}.pcv.tr{top:14px;right:14px;border-top:1.5px solid;border-right:1.5px solid}.pcv.bl{bottom:14px;left:14px;border-bottom:1.5px solid;border-left:1.5px solid}.pcv.br{bottom:14px;right:14px;border-bottom:1.5px solid;border-right:1.5px solid}
+  .pcard{position:relative;border:1px solid rgba(196,164,114,.4);border-radius:28px;padding:0 0 34px;background:rgba(196,164,114,.04);overflow:hidden}
 .pcard::before,.pcard::after{content:"";position:absolute;width:14px;height:14px;border:1.5px solid rgba(196,164,114,.5);z-index:3}
 .pcard::before{top:12px;left:12px;border-right:none;border-bottom:none}
 .pcard::after{bottom:12px;right:12px;border-left:none;border-top:none}
@@ -386,14 +387,14 @@ body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line
 .pplate img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.95)}
 .pplate::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(8,17,31,.5) 100%);pointer-events:none}
 .pbody-wrap{padding:30px 30px 0;display:flex;flex-direction:column;flex:1}
-.glyph{height:44px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.g-point{width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#f0d69e,#a9863f);box-shadow:0 0 24px rgba(196,164,114,.6)}
-.g-line{width:74%;height:2px;background:linear-gradient(90deg,rgba(196,164,114,0),var(--gold-light) 22%,var(--gold-light) 78%,rgba(196,164,114,0));position:relative}
-.g-line::before,.g-line::after{content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;background:var(--gold-light);transform:translateY(-50%)}
-.g-line::before{left:16%}
-.g-line::after{right:16%}
-.g-place{width:34px;height:34px;border:2px solid var(--gold-light);border-radius:9px;position:relative;transform:rotate(45deg)}
-.g-place::after{content:"";position:absolute;inset:8px;border-radius:3px;background:radial-gradient(circle,rgba(212,184,136,.55),rgba(212,184,136,.06))}
+
+
+
+
+
+
+
+
 .pk{font-family:var(--font-mono);font-weight:600;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;text-align:center}
 .pt{font-family:var(--font-display);font-weight:400;font-size:clamp(1.3rem,2.6vw,1.62rem);color:var(--ivory-bright);line-height:1.15;margin-bottom:6px;text-align:center}
 .pt em{font-style:italic;color:var(--gold-light)}
@@ -1200,7 +1201,7 @@ details[open] .faq-q::after{content:"−"}
         <div class="gtiers t-need"><span class="d"></span>Tiers requis : une autorité</div>
       </div>
       <div class="gcard now">
-        <div class="gimg"><img src="/assets/assets/sceau-dore-hex-phi.jpg" alt="Un sceau d'or gravé du Φ, en lévitation, sans support — la preuve auto-portée" loading="lazy" decoding="async"></div>
+        <div class="gimg"><img src="/assets/sceau-dore-hex-phi.jpg" alt="Un sceau d'or gravé du Φ, en lévitation, sans support — la preuve auto-portée" loading="lazy" decoding="async"></div>
         <div class="gnum">03 — À PARTIR D'AUJOURD'HUI</div>
         <div class="gera">La preuve <em>auto-portée</em></div>
         <div class="grole">Ni homme, ni serveur — la mathématique</div>
@@ -1257,21 +1258,22 @@ details[open] .faq-q::after{content:"−"}
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════
-     TROIS PILIERS — le point · la ligne · le lieu (le procédé)
+     TROIS PILIERS (le procédé)
      ══════════════════════════════════════════════════════════════ -->
 <section class="pil" id="trois-piliers">
   <div class="pil-in">
     <div class="pil-head">
       <div class="eb">Le procédé</div>
-      <h2>Trois piliers indissociables.<br><em>Un point, une ligne, un lieu.</em></h2>
+      <h2>Trois piliers,<br><em>indissociables.</em></h2>
       <div class="pil-sub">Une preuve doit établir trois choses : <b>la nature de l'acte</b>, <b>son rang dans l'ordre des événements</b>, et <b>la machine dont il procède</b>. Φ y répond par trois piliers qui ne valent qu'ensemble.</div>
     </div>
     <div class="pil-grid">
       <div class="pcard">
+        <span class="pcv tl"></span><span class="pcv tr"></span><span class="pcv bl"></span><span class="pcv br"></span>
         <div class="pplate"><img src="/assets/pilier-fonction-g.jpg" alt="Quatre anneaux dorés gravés de glyphes cryptographiques, entrecroisés autour de la lettre G, faisceau vertical de lumière — la fusion mathématique qui scelle" loading="lazy"></div>
         <div class="pbody-wrap">
-          <div class="glyph"><span class="g-point"></span></div>
-          <div class="pk">Premier pilier — le point</div>
+          
+          <div class="pk">Premier pilier</div>
           <div class="pt">La fonction <em>G</em></div>
           <div class="pr">La ligature</div>
           <div class="pline"></div>
@@ -1280,10 +1282,11 @@ details[open] .faq-q::after{content:"−"}
         </div>
       </div>
       <div class="pcard">
+        <span class="pcv tl"></span><span class="pcv tr"></span><span class="pcv bl"></span><span class="pcv br"></span>
         <div class="pplate"><img src="/assets/pilier-journal-chaine.jpg" alt="Chaîne verticale de maillons dorés portant des chiffres et horodatages gravés, éclairage volumétrique — le journal chaîné strictement ordonné" loading="lazy"></div>
         <div class="pbody-wrap">
-          <div class="glyph"><span class="g-line"></span></div>
-          <div class="pk">Deuxième pilier — la ligne</div>
+          
+          <div class="pk">Deuxième pilier</div>
           <div class="pt">Le journal <em>chaîné</em></div>
           <div class="pr">La chaîne croisée</div>
           <div class="pline"></div>
@@ -1292,10 +1295,11 @@ details[open] .faq-q::after{content:"−"}
         </div>
       </div>
       <div class="pcard">
+        <span class="pcv tl"></span><span class="pcv tr"></span><span class="pcv bl"></span><span class="pcv br"></span>
         <div class="pplate"><img src="/assets/pilier-enclave-silicium.jpg" alt="Une puce ouverte révélant une cathédrale intérieure lumineuse, sanctuaire au cœur du silicium — l'enveloppe matérielle où la clé demeure" loading="lazy"></div>
         <div class="pbody-wrap">
-          <div class="glyph"><span class="g-place"></span></div>
-          <div class="pk">Troisième pilier — le lieu</div>
+          
+          <div class="pk">Troisième pilier</div>
           <div class="pt">Le <em>silicium</em></div>
           <div class="pr">L'enveloppe matérielle</div>
           <div class="pline"></div>
@@ -1945,9 +1949,9 @@ document.getElementById('lead-email').addEventListener('keydown',function(e){if(
         <h4>Comprendre</h4>
         <ul>
           <li><a href="communication-souveraine.html">Communication souveraine</a></li>
-          <li><a href="la-fonction-g.html">La fonction G — le point</a></li>
-          <li><a href="le-journal-chaine.html">Le journal chaîné — la ligne</a></li>
-          <li><a href="l-enclave-silicium.html">Le silicium — le lieu</a></li>
+          <li><a href="la-fonction-g.html">La fonction G</a></li>
+          <li><a href="le-journal-chaine.html">Le journal chaîné</a></li>
+          <li><a href="l-enclave-silicium.html">Le silicium</a></li>
           <li><a href="la-preuve-en-clair.html">La preuve, en clair</a></li>
           <li><a href="la-signature-probatoire.html">La signature probatoire</a></li>
           <li><a href="valeur-et-fiabilite-de-la-signature.html">Valeur &amp; fiabilité</a></li>
