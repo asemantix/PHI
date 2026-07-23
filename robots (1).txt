@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /
-
-# pages de travail, non destinées à l'indexation
-Disallow: /index2.html
-Disallow: /install.html
-Disallow: /activer.html
-
-Sitemap: https://lapreuveparphi.fr/sitemap.xml
