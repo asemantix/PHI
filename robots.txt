@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://phi-signature.fr/sitemap.xml
+# pages de travail, non destinées à l'indexation
+Disallow: /index2.html
+Disallow: /install.html
+Disallow: /activer.html
+
+Sitemap: https://lapreuveparphi.fr/sitemap.xml
