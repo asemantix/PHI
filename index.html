@@ -1,4 +1,113 @@
-;font-size:clamp(1.06rem,2.1vw,1.4rem);color:var(--gold);border-bottom:1px solid rgba(196,164,114,.4);padding-bottom:6px;display:inline-block;margin-bottom:28px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<meta name="color-scheme" content="light">
+<title>Signature électronique post-quantique, sans tiers — La preuve par Φ</title>
+<meta name="description" content="Signature électronique post-quantique sans autorité de certification. Une preuve autoportée, vérifiable hors ligne par tout juge. Correspondances chiffrées gratuites.">
+<meta name="keywords" content="signature électronique, signature électronique post-quantique, signature électronique souveraine, alternative signature électronique, signature sans autorité de certification, preuve électronique, preuve autoportée, valeur probante, eIDAS article 26, signature avancée, chiffrement post-quantique, ML-DSA, ML-KEM, souveraineté numérique, sans tiers de confiance">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="AION ASEMANTIX">
+<link rel="canonical" href="https://lapreuveparphi.fr/">
+<link rel="alternate" hreflang="fr-FR" href="https://lapreuveparphi.fr/">
+<link rel="alternate" hreflang="x-default" href="https://lapreuveparphi.fr/">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://lapreuveparphi.fr/">
+<meta property="og:site_name" content="La preuve par Φ">
+<meta property="og:title" content="La preuve par Φ — signature électronique post-quantique, sans tiers de confiance">
+<meta property="og:description" content="Signez et prouvez sans autorité de certification. Une preuve autoportée, post-quantique, vérifiable hors ligne par tout juge ou expert — sans serveur, sans tiers.">
+<meta property="og:image" content="https://lapreuveparphi.fr/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="La preuve par Φ — la primitive probatoire auto-portée, sans tiers de confiance">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:secure_url" content="https://lapreuveparphi.fr/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La preuve par Φ — signature électronique post-quantique, sans tiers de confiance">
+<meta name="twitter:description" content="Signez et prouvez sans autorité de certification. Une preuve autoportée, post-quantique, vérifiable hors ligne par tout juge ou expert — sans serveur, sans tiers.">
+<meta name="twitter:image" content="https://lapreuveparphi.fr/og-image.jpg">
+<meta name="twitter:image:alt" content="La preuve par Φ — la primitive probatoire auto-portée, sans tiers de confiance">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://lapreuveparphi.fr/#organization","name":"AION ASEMANTIX","url":"https://lapreuveparphi.fr/","email":"contact@lapreuveparphi.fr","description":"Éditeur de La preuve par Φ, primitive probatoire souveraine et post-quantique — preuve auto-portée, sans tiers de confiance, sans autorité de certification, sans serveur. Brevets déposés à l'INPI.","logo":{"@type":"ImageObject","url":"https://lapreuveparphi.fr/android-chrome-192x192.png","width":192,"height":192},"sameAs":["https://github.com/asemantix"]},
+{"@type":"SoftwareApplication","@id":"https://lapreuveparphi.fr/#software","name":"La preuve par Φ","alternateName":"Φ","url":"https://lapreuveparphi.fr/","operatingSystem":"iOS, Android, Windows, macOS, Linux","applicationCategory":"BusinessApplication","applicationSubCategory":"Preuve numérique","audience":{"@type":"BusinessAudience","name":"Défense, aérospatiale, opérateurs d'importance vitale (OIV), banques privées, notaires, mutuelles, assurances, justice"},"description":"Primitive probatoire auto-portée : la preuve se calcule dans le dispositif et se recalcule par tout juge ou expert judiciaire, hors ligne, sans tiers de confiance, sans autorité de certification, sans serveur. Post-quantique dès le premier jour (ML-DSA-65, ML-KEM-768).","featureList":["Preuve auto-portée, recalculable par tout juge ou expert judiciaire","Ligature QUI · QUOI · QUAND · silicium en un seul nombre","Résistance post-quantique ML-DSA-65 / ML-KEM-768 (NIST FIPS 203/204)","Sans serveur, sans autorité de certification, sans tiers de confiance","Journal probatoire chaîné, strictement croissant, infalsifiable","Vérification hors ligne, sans compte","Transport Inline-Offline™ chiffré, indistinguable du bruit","Conformité visée : signature avancée eIDAS art. 26, Code civil art. 1366"],"offers":[
+{"@type":"Offer","name":"Correspondre","price":"0","priceCurrency":"EUR","description":"Correspondances chiffrées de dispositif à dispositif, illimitées, gratuites."},
+{"@type":"Offer","name":"Vérifier","price":"0","priceCurrency":"EUR","description":"Vérification d'une preuve Φ, hors ligne, sans compte, gratuite."},
+{"@type":"Offer","name":"Preuve légère — signature et accusé de réception","price":"4","priceCurrency":"EUR","description":"1 jeton par preuve légère. Jeton à 4 €, dégressif jusqu'à 2 € par paliers de volume."},
+{"@type":"Offer","name":"Preuve renforcée","price":"12","priceCurrency":"EUR","description":"3 jetons par preuve renforcée. Jeton à 4 €, dégressif jusqu'à 2 € par paliers."}],
+"publisher":{"@id":"https://lapreuveparphi.fr/#organization"},"softwareVersion":"1.0","releaseNotes":"Première version incluant ML-DSA-65 et ML-KEM-768 (NIST FIPS 203/204)"},
+{"@type":"WebSite","@id":"https://lapreuveparphi.fr/#website","url":"https://lapreuveparphi.fr/","name":"La preuve par Φ","inLanguage":"fr-FR","publisher":{"@id":"https://lapreuveparphi.fr/#organization"}},
+{"@type":"BreadcrumbList","@id":"https://lapreuveparphi.fr/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://lapreuveparphi.fr/"}]},
+{"@type":"FAQPage","@id":"https://lapreuveparphi.fr/#faq","mainEntity":[
+{"@type":"Question","name":"Pourquoi n'y a-t-il pas d'autorité de certification ?","acceptedAnswer":{"@type":"Answer","text":"Parce que Φ n'en a structurellement pas besoin. Une autorité de certification sert à faire attester la preuve par un tiers ; Φ ligature la preuve dans l'objet lui-même — auteur, empreinte du document, dispositif, instant, liés en un seul nombre recalculable par tout juge ou expert judiciaire, hors ligne, sans le concours de l'éditeur. Φ ne relève donc pas de la signature qualifiée au sens eIDAS, qui suppose un prestataire de confiance : il vise la signature électronique avancée (art. 26) et constitue un mode de preuve au sens de l'article 1366 du Code civil. La confiance ne se délègue plus — elle se recalcule."}},
+{"@type":"Question","name":"Qu'est-ce que La preuve par Φ ?","acceptedAnswer":{"@type":"Answer","text":"La première primitive probatoire auto-portée. Elle permet de sceller un document, un acte ou un actif et de produire une preuve vérifiable sans tiers de confiance, sans autorité de certification et sans serveur — post-quantique dès le premier jour. La preuve vit dans l'enclave matérielle de votre dispositif, pas chez nous."}},
+{"@type":"Question","name":"Quelle exposition au Cloud Act et au FISA ?","acceptedAnswer":{"@type":"Answer","text":"Aucune. AION ASEMANTIX est une société française. L'infrastructure Φ ne comporte aucun serveur de déchiffrement : le déchiffrement s'effectue exclusivement dans l'enclave matérielle de l'appareil du destinataire légitime. Il n'existe donc, structurellement, aucun serveur qu'un État étranger pourrait contraindre — ni chez l'éditeur, ni chez un sous-traitant."}},
+{"@type":"Question","name":"Φ est-il compatible avec les exigences ANSSI et la Diffusion Restreinte ?","acceptedAnswer":{"@type":"Answer","text":"L'architecture Φ est conçue pour s'aligner sur les principes fondamentaux du RGS et des recommandations ANSSI en matière de chiffrement souverain : cryptographie post-quantique standardisée (NIST FIPS 203/204), absence de tiers cloud étranger, clé non extractible confinée au silicium, journal probatoire recalculable localement. Pour les usages en Diffusion Restreinte et les besoins de qualification spécifiques, nous accompagnons les RSSI et DSSI dans un cadre confidentiel."}},
+{"@type":"Question","name":"Φ est-il reconnu par eIDAS et le droit français ?","acceptedAnswer":{"@type":"Answer","text":"Φ est conçue pour répondre aux exigences de la signature électronique avancée au sens de l'article 26 du règlement UE 910/2014 (eIDAS) et pour constituer un mode de preuve au sens de l'article 1366 du Code civil. Φ ne revendique pas la présomption de fiabilité de l'article 1367, qui suppose un dispositif qualifié par un tiers : c'est un choix d'architecture — la preuve se démontre au lieu de se présumer. Comme pour toute signature électronique, sa valeur probante est appréciée par le juge ; eIDAS interdit toutefois de l'écarter au seul motif qu'elle est électronique."}},
+{"@type":"Question","name":"Φ résiste-t-il aux ordinateurs quantiques ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Φ utilise ML-DSA-65 (NIST FIPS 204) pour les signatures et ML-KEM-768 (NIST FIPS 203) pour les échanges de clés — les premiers standards post-quantiques officiels publiés par le NIST en août 2024. Une preuve Φ produite aujourd'hui restera vérifiable et confidentielle dans vingt ou cinquante ans, même face aux futurs ordinateurs quantiques."}},
+{"@type":"Question","name":"Quel est le prix de Φ ?","acceptedAnswer":{"@type":"Answer","text":"Correspondre : 0 €, gratuit et illimité. Vérifier une preuve : 0 €, sans compte. Engagement (signature + accusé de réception) : 1 jeton. Preuve renforcée : 3 jetons. Le jeton : 4 €, dégressif jusqu'à 2 € par paliers (100, 500, 2 000, 10 000 jetons). La réception et la vérification sont toujours gratuites. Diffusion en nombre et SDK : sur contrat. Grands comptes : sur devis."}},
+{"@type":"Question","name":"Qu'est-ce que le procédé Inline-Offline™ ?","acceptedAnswer":{"@type":"Answer","text":"Inline-Offline™ est le canal de transmission de Φ : les données traversent Internet sous forme d'octets chiffrés indistinguables du bruit aléatoire. Aucun opérateur — pas même la messagerie porteuse — ne peut voir le contenu. Le déchiffrement n'a lieu que dans l'enclave matérielle du dispositif du destinataire légitime. C'est structurellement différent d'un chiffrement de canal classique, qui se termine à l'arrivée sur les serveurs de l'opérateur."}}
+]}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=EB+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   TOKENS — charte Φ (navy · or · parchemin)
+   ═══════════════════════════════════════════════════════════════ */
+:root{
+  color-scheme:only light;
+  --navy:#0e1c35;--navy-deep:#08111f;
+  --gold:#c4a472;--gold-deep:#6f520f;--gold-light:#d4b888;--gold-soft:#d4b888;
+  --ivory:#e8dcc8;--ivory-bright:#f4ede0;--slate:#9aa4b4;
+  --paper:#fafaf7;--paper-soft:#f4f1e8;
+  --ink:#1d2330;--ink-muted:#6c7384;--success:#5a8033;
+  --rule:rgba(196,164,114,.3);
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-mono:'IBM Plex Mono','Courier New',monospace;
+  --font-sans:'IBM Plex Sans',-apple-system,sans-serif;
+  --font-eb:'EB Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden;color-scheme:only light}
+body{background:var(--navy);color:var(--ivory);font-family:var(--font-sans);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ═══ PRE-HERO BAND ═══ */
+.prehero-band{background:var(--navy-deep);color:var(--gold-light);padding:18px 24px;text-align:center;font-family:var(--font-mono);font-size:.9rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;border-bottom:1px solid rgba(196,164,114,.42)}
+.prehero-band .sep{color:var(--gold);margin:0 12px;opacity:.6}
+
+/* ═══ TOP ACTIONS ═══ */
+.top-actions{position:absolute;top:70px;right:32px;z-index:100;display:flex;gap:10px;align-items:center}
+.top-evaluate{background:rgba(250,250,247,.10);color:var(--gold-light);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border:1px solid rgba(196,164,114,.5);border-radius:2px;transition:all .2s;backdrop-filter:blur(10px)}
+.top-evaluate:hover{background:var(--gold);color:var(--navy-deep);border-color:var(--gold)}
+.top-free{display:inline-flex;align-items:center;gap:9px;background:rgba(196,164,114,.95);color:var(--navy-deep);text-decoration:none;padding:9px 20px 9px 9px;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;border-radius:2px;transition:background .2s;backdrop-filter:blur(10px)}
+.top-free:hover{background:var(--gold-light)}
+.top-picto{width:28px;height:28px;object-fit:cover;border-radius:50%;background:#08111f;flex-shrink:0;display:block}
+.top-cta{background:rgba(14,28,53,.85);color:var(--paper);text-decoration:none;padding:12px 22px;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:background .2s;backdrop-filter:blur(10px);border:1px solid rgba(196,164,114,.35)}
+.top-cta:hover{background:var(--navy)}
+.top-cta .phi-cta{font-family:var(--font-eb);font-style:italic;font-size:1.02rem;margin-left:4px;letter-spacing:0;color:var(--gold-light)}
+@media(max-width:900px){.top-actions{position:static;padding:12px 16px;background:var(--navy-deep);gap:8px;flex-wrap:wrap;justify-content:center;border-bottom:1px solid rgba(196,164,114,.3)}.top-evaluate,.top-free,.top-cta{padding:10px 16px;font-size:.76rem;letter-spacing:.15em}}
+
+/* ═══ HERO ═══ */
+.hero{position:relative;background:var(--navy);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:64px;max-width:1320px;margin:0 auto;padding:96px 48px 88px;min-height:88vh}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;text-align:center;padding:36px 26px 56px;min-height:auto;gap:8px}}
+.hero-txt{max-width:640px}
+@media(max-width:900px){.hero-txt{margin:0 auto;order:2}}
+.hero-metier{font-family:var(--font-mono);font-size:.9rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px}
+.hero-h1{font-family:var(--font-display);font-weight:400;font-size:clamp(3rem,6.8vw,5.4rem);line-height:1.04;letter-spacing:-.022em;color:var(--ivory-bright);margin-bottom:24px;text-shadow:0 2px 20px rgba(0,0,0,.35)}
+.hero-h1 .sov{font-style:italic;color:var(--gold-light);font-size:1.06em}
+.hero-theoreme{font-family:var(--font-display);font-style:italic;font-size:clamp(1.05rem,1.9vw,1.42rem);line-height:1.5;color:var(--ivory);border-left:2px solid var(--gold);padding-left:18px;margin:22px 0 20px;max-width:34ch}.hero-theoreme em{font-style:italic;color:var(--gold-light);font-weight:500}@media(max-width:820px){.hero-theoreme{padding-left:14px;margin:18px auto 16px;max-width:38ch}}
+  .hero-slogan{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,3.2vw,2.3rem);line-height:1.15;letter-spacing:-.01em;color:var(--ivory-bright);margin-bottom:22px;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.hero-slogan em{font-style:italic;color:var(--gold-light)}
+.hero-tag{font-family:var(--font-eb);font-style:italic;font-size:clamp(1.06rem,2.1vw,1.4rem);color:var(--gold);border-bottom:1px solid rgba(196,164,114,.4);padding-bottom:6px;display:inline-block;margin-bottom:28px;text-shadow:0 1px 10px rgba(0,0,0,.4)}
 .hero-desc{font-family:var(--font-eb);font-style:italic;font-size:clamp(1.16rem,2vw,1.46rem);line-height:1.6;color:rgba(232,220,200,.92);margin-bottom:24px;max-width:47ch;text-shadow:0 1px 12px rgba(0,0,0,.3)}
 .hero-desc strong{font-style:italic;color:var(--gold-light);font-weight:500}
 .hero-desc .phi{font-family:var(--font-eb);font-style:italic;color:var(--gold-light)}
