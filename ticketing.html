@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Φ Ticketing — fiche produit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital@1&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--serif:'Playfair Display',Georgia,serif;--gara:'EB Garamond',Georgia,serif;--mono:'IBM Plex Mono',monospace;}
+  @page{size:A4;margin:0;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Helvetica','Arial',sans-serif;color:#1d2330;line-height:1.5;font-size:9.6pt;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .page{width:210mm;min-height:297mm;padding:13mm 16mm;position:relative;background:#fff;}
+
+  .head{background:#0e1c35;color:#fafaf7;margin:-13mm -16mm 6mm;padding:11mm 16mm 8mm;}
+  .brand{font-family:var(--gara);font-style:italic;font-size:15pt;color:#c4a472;margin-bottom:2mm;}
+  .head h1{font-family:var(--serif);font-size:25pt;line-height:1.1;color:#f4ede0;letter-spacing:-.4pt;margin-bottom:3mm;}
+  .head h1 em{font-style:italic;color:#d4b888;}
+  .head .tag{font-family:var(--gara);font-style:italic;font-size:13pt;color:#e8dcc8;}
+
+  .demo{background:#f4f1e8;border-left:3pt solid #c4a472;padding:4mm 5mm;margin:5mm 0;}
+  .demo-t{font-family:var(--mono);font-weight:600;font-size:7.5pt;letter-spacing:2pt;text-transform:uppercase;color:#6f520f;margin-bottom:2mm;}
+  .demo-b{font-family:var(--serif);font-size:13.5pt;color:#0e1c35;line-height:1.35;}
+  .demo-b strong{color:#6f520f;}
+
+  h2{font-family:var(--mono);font-weight:600;font-size:8pt;letter-spacing:2pt;text-transform:uppercase;color:#6f520f;margin:6mm 0 3mm;padding-bottom:1.5mm;border-bottom:.5pt solid rgba(196,164,114,.5);}
+  p{margin-bottom:2.4mm;}
+  strong{color:#0e1c35;font-weight:bold;}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin:3mm 0;}
+  .pain{background:#fcfbf8;border:.5pt solid rgba(196,164,114,.5);border-radius:2mm;padding:3.5mm 4mm;}
+  .pain-t{font-family:var(--serif);font-size:11.5pt;color:#0e1c35;margin-bottom:1.5mm;}
+  .pain-t em{font-style:italic;color:#6f520f;}
+  .pain p{font-size:9pt;color:#4a5a73;margin-bottom:0;line-height:1.45;}
+
+  .steps{counter-reset:s;margin:2mm 0;}
+  .step{display:grid;grid-template-columns:8mm 1fr;gap:3mm;padding:2.2mm 0;border-bottom:.5pt solid rgba(196,164,114,.35);align-items:start;}
+  .step:last-child{border-bottom:none;}
+  .step .n{counter-increment:s;font-family:var(--serif);font-size:15pt;color:#c4a472;line-height:1;}
+  .step .n::before{content:counter(s);}
+  .step .t{font-size:9.3pt;color:#3a4759;line-height:1.45;}
+  .step .t strong{color:#0e1c35;}
+
+  .box{background:#f4f1e8;border-left:2.5pt solid #c4a472;padding:3.5mm 4.5mm;margin:4mm 0;}
+  .box-t{font-family:var(--serif);font-size:11pt;color:#0e1c35;margin-bottom:2mm;}
+  .box p{font-size:9pt;color:#4a5a73;margin-bottom:1.5mm;}
+  .box p:last-child{margin-bottom:0;}
+  .box em{font-family:var(--gara);font-style:italic;color:#6f520f;}
+
+  .cta{background:#0e1c35;color:#fafaf7;padding:5mm 6mm;margin:6mm -16mm -13mm;text-align:center;}
+  .cta .l{font-family:var(--serif);font-size:14pt;color:#f4ede0;margin-bottom:2mm;}
+  .cta .l em{font-style:italic;color:#d4b888;}
+  .cta .m{font-family:var(--mono);font-size:8pt;letter-spacing:1.2pt;color:#c4a472;}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">
+    <div class="brand">La preuve par &#934;</div>
+    <h1>&#934; Ticketing — le billet qui se valide<br><em>hors réseau, et ne se copie pas.</em></h1>
+    <div class="tag">Anti-fraude. Hors-ligne. Instantané.</div>
+  </div>
+
+  <div class="demo">
+    <div class="demo-t">La démonstration tient en 5 secondes</div>
+    <div class="demo-b">Mode avion. On présente le billet. Le validateur dit <strong>oui</strong> — <strong>sans réseau, sans serveur, sans attente.</strong> Le même billet, présenté sur un autre téléphone : <strong>refusé.</strong></div>
+  </div>
+
+  <h2>Deux douleurs que tout exploitant connaît</h2>
+  <div class="two">
+    <div class="pain">
+      <div class="pain-t">La fraude <em>au screenshot</em></div>
+      <p>Un QR ou code-barres mobile se <strong>capture et se partage</strong> en une seconde. Le jeton &#934; est <strong>lié au dispositif, rejeté ailleurs</strong> : la copie d'écran ne vaut rien.</p>
+    </div>
+    <div class="pain">
+      <div class="pain-t">Le <em>« pas de réseau »</em></div>
+      <p>Tunnel, avion, portique de stade bondé, gare saturée : la validation en ligne <strong>rame ou échoue</strong>. &#934; valide <strong>hors-ligne, en local, immédiatement.</strong></p>
+    </div>
+  </div>
+
+  <h2>Comment ça marche</h2>
+  <div class="steps">
+    <div class="step"><div class="n"></div><div class="t"><strong>Émission</strong> — à l'achat (n'importe quel canal), un <strong>jeton AUTOCERT</strong> est créé, unique et infalsifiable.</div></div>
+    <div class="step"><div class="n"></div><div class="t"><strong>Chargement</strong> — le voyageur charge le billet sur <strong>son</strong> téléphone : le jeton se <strong>lie à ce dispositif</strong> et à ce seul dispositif.</div></div>
+    <div class="step"><div class="n"></div><div class="t"><strong>Validation</strong> — au portique, le contrôle vérifie le jeton <strong>en local, hors réseau</strong>. Authentique et sur le bon dispositif → <strong>oui</strong>. Copié ailleurs → <strong>non</strong>.</div></div>
+  </div>
+
+  <h2>« Et si l'acheteur n'est pas le voyageur ? »</h2>
+  <p>L'objection légitime — cadeau, achat au guichet, voyage d'affaires, groupe. La réponse : <strong>la liaison se fait au chargement, pas à l'achat.</strong> On achète le billet par n'importe quel canal, on reçoit un <strong>code de revendication à usage unique</strong>, et <strong>le voyageur le charge sur son propre téléphone</strong>. Acheteur et porteur peuvent différer — c'est géré, comme un billet que l'on transfère.</p>
+
+  <div class="box">
+    <div class="box-t">Ce n'est pas 100 % des billets — et c'est voulu</div>
+    <p>&#934; est la <strong>couche anti-fraude et hors-ligne pour les billets mobiles</strong> — un segment déjà majoritaire et croissant. Les voyageurs <strong>sans smartphone gardent le système actuel</strong> : &#934; se déploie <em>en complément</em>, pas en remplacement. <strong>La valeur tient dès la première ligne, le premier stade, le premier événement.</strong></p>
+  </div>
+
+  <h2>Ce qui n'existe nulle part ailleurs</h2>
+  <p>Post-quantique &#183; sans serveur à superviser ni donnée à héberger (aucune charge DORA) &#183; vérifiable par l'exploitant <strong>lui-même</strong>, hors ligne &#183; technologie <strong>brevetée</strong> (AUTOCERT), donc défendable — le modèle, pas seulement l'application.</p>
+
+  <div class="cta">
+    <div class="l">Un <em>pilote</em> sur une ligne, un stade, un événement.</div>
+    <div class="m">LA PREUVE PAR &#934; &nbsp;·&nbsp; LAPREUVEPARPHI.FR</div>
+  </div>
+</div>
+</body>
+</html>
