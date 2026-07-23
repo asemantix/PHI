@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0e1c35">
+<title>Les trois volets Φ — Correspondre, preuve légère, preuve renforcée · La preuve par Φ</title>
+<meta name="description" content="Une seule application, trois volets d'intensité croissante : le secret des correspondances (gratuit), la preuve légère avec accusé de réception (1 jeton), la preuve renforcée avec pièce d'identité (3 jetons). Post-quantique. Sans tiers. Sans serveur.">
+<meta name="keywords" content="preuve post-quantique, secret des correspondances, preuve légère accusé de réception, preuve renforcée irrépudiable, preuve autoportée sans serveur, alternative souveraine, La preuve par Phi, AION Asemantix">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="AION Asemantix">
+<link rel="canonical" href="https://lapreuveparphi.fr/trois-volets.html">
+<link rel="alternate" hreflang="fr-FR" href="https://lapreuveparphi.fr/trois-volets.html">
+<link rel="alternate" hreflang="x-default" href="https://lapreuveparphi.fr/trois-volets.html">
+<link rel="icon" type="image/svg+xml" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".92em" font-size="86" font-style="italic" font-family="Georgia,serif" fill="%23c4a472" text-anchor="middle" x="50">&#934;</text></svg>'>
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://lapreuveparphi.fr/trois-volets.html">
+<meta property="og:site_name" content="La preuve par Φ">
+<meta property="og:title" content="Les trois volets Φ — Une application, trois niveaux de preuve">
+<meta property="og:description" content="Le secret des correspondances (gratuit) · La preuve légère, accusé de réception compris (1 jeton) · La preuve renforcée, identité liée (3 jetons). Sans tiers, sans serveur, post-quantique.">
+<meta property="og:image" content="https://lapreuveparphi.fr/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Les trois volets Φ — La preuve par Φ">
+<meta name="twitter:description" content="Correspondre, prouver légèrement, prouver de façon renforcée. Une application, trois volets. Sans tiers, sans serveur, post-quantique.">
+<meta name="twitter:image" content="https://lapreuveparphi.fr/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lapreuveparphi.fr/trois-volets.html#webpage",
+      "name": "Les trois volets Φ",
+      "url": "https://lapreuveparphi.fr/trois-volets.html",
+      "description": "Une application, trois volets d'intensité croissante : le secret des correspondances (gratuit, illimité), la preuve légère avec accusé de réception (1 jeton), la preuve renforcée avec pièce d'identité liée (3 jetons).",
+      "inLanguage": "fr-FR",
+      "isPartOf": {"@type": "WebSite", "@id": "https://lapreuveparphi.fr/#website"},
+      "publisher": {"@id": "https://lapreuveparphi.fr/#organization"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lapreuveparphi.fr/"},
+        {"@type": "ListItem", "position": 2, "name": "Les trois volets", "item": "https://lapreuveparphi.fr/trois-volets.html"}
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://lapreuveparphi.fr/#organization",
+      "name": "AION Asemantix",
+      "alternateName": "La preuve par Φ",
+      "url": "https://lapreuveparphi.fr",
+      "email": "contact@lapreuveparphi.fr",
+      "description": "Éditeur de La preuve par Φ : preuve autoportée post-quantique, sans serveur ni tiers de confiance.",
+      "address": {"@type": "PostalAddress", "streetAddress": "48 rue du Docteur Roux", "postalCode": "03100", "addressLocality": "Montluçon", "addressCountry": "FR"},
+      "sameAs": ["https://github.com/asemantix", "https://asemantix.tech"]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=EB+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #0e1c35;
+    --navy-deep: #08111f;
+    --gold: #c4a472;
+    --gold-deep: #6f520f;
+    --gold-light: #d4b888;
+    --ivory: #e8dcc8;
+    --paper: #fafaf7;
+    --paper-soft: #f4f1e8;
+    --ink: #1d2330;
+    --ink-muted: #6c7384;
+    --success: #7ba84a;
+    --rule: rgba(196,164,114,0.3);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-eb: 'EB Garamond', Georgia, serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 0; background: var(--paper); color: var(--navy); font-family: var(--font-sans); line-height: 1.6; }
+  a { color: inherit; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--rule); }
+  .nav-inner { max-width: 1200px; margin: 0 auto; padding: 16px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: inline-flex; align-items: center; text-decoration: none; font-family: var(--font-eb); font-style: italic; font-size: 2rem; color: var(--gold-deep); font-weight: 500; line-height: 1; }
+  .nav-links { display: flex; gap: 14px; align-items: center; }
+  .nav-links a { font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta { padding: 9px 22px; background: var(--navy); color: white !important; border-radius: 4px; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.06em; transition: background 0.2s; }
+  .nav-cta:hover { background: var(--navy-deep); }
+  @media (max-width: 720px) { .nav-inner { padding: 14px 20px; } .nav-logo { font-size: 1.6rem; } .nav-links a:not(.nav-cta) { display: none; } }
+
+  /* HERO */
+  .hero { padding: 96px 40px 56px; text-align: center; max-width: 980px; margin: 0 auto; }
+  .eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 24px; }
+  h1 { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--navy); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 24px; }
+  h1 em { font-style: italic; color: var(--gold-deep); }
+  .hero-lede { font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--ink-muted); line-height: 1.65; max-width: 740px; margin: 0 auto; }
+
+  /* TABLE COMPARATIF */
+  .compare-section { padding: 40px 40px 72px; max-width: 1100px; margin: 0 auto; }
+  .compare-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); border-radius: 4px; overflow: hidden; }
+  .compare-card { background: var(--navy); padding: 36px 26px; display: flex; flex-direction: column; min-height: 460px; }
+  .compare-eyebrow { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
+  .compare-title { font-family: var(--font-display); font-size: 1.28rem; font-style: italic; font-weight: 500; color: var(--ivory); line-height: 1.2; margin-bottom: 20px; min-height: 62px; }
+  .compare-block { padding: 14px 0; border-top: 1px solid rgba(196,164,114,0.2); border-bottom: 1px solid rgba(196,164,114,0.2); margin-bottom: 16px; }
+  .compare-block-label { font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(196,164,114,0.6); margin-bottom: 6px; }
+  .compare-block-value { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: var(--ivory); }
+  .compare-cta { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(196,164,114,0.4); padding-bottom: 2px; align-self: flex-start; margin-top: 12px; }
+  @media (max-width: 900px) { .compare-grid { grid-template-columns: 1fr; } .compare-card { min-height: 0; } }
+
+  /* BANDE VÉRIFICATEUR */
+  .verif-band { max-width: 1100px; margin: 20px auto 0; padding: 26px 30px; border: 1px solid var(--rule); border-radius: 4px; background: var(--paper-soft); display: flex; gap: 26px; align-items: flex-start; }
+  .verif-tag { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; border: 1px solid var(--rule); border-radius: 2px; padding: 6px 10px; white-space: nowrap; margin-top: 2px; }
+  .verif-band h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; color: var(--navy); margin: 0 0 6px; }
+  .verif-band p { font-family: var(--font-sans); font-size: 0.92rem; color: var(--ink-muted); font-weight: 300; line-height: 1.65; margin: 0; }
+  .verif-band strong { color: var(--navy); font-weight: 500; }
+  @media (max-width: 720px) { .verif-band { flex-direction: column; gap: 14px; margin-left: 20px; margin-right: 20px; } }
+
+  /* SECTIONS DÉTAILLÉES */
+  .detail-section { padding: 80px 40px; max-width: 900px; margin: 0 auto; border-top: 1px solid var(--rule); }
+  .detail-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 16px; }
+  .detail-h2 { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--navy); line-height: 1.2; margin: 0 0 24px; }
+  .detail-lede { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--ink); line-height: 1.65; margin-bottom: 36px; }
+  .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 36px; }
+  @media (max-width: 720px) { .detail-grid { grid-template-columns: 1fr; } }
+  .detail-block-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 10px; }
+  .detail-block-content { font-family: var(--font-sans); font-size: 0.95rem; color: var(--ink); line-height: 1.7; }
+  .detail-block-content ul { margin: 0; padding-left: 18px; }
+  .detail-block-content li { margin-bottom: 6px; }
+  .retenir { background: var(--paper-soft); border-left: 3px solid var(--gold); padding: 20px 24px; }
+  .retenir-l { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 6px; }
+  .retenir-t { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--navy); line-height: 1.6; }
+
+  /* CTA FINAL */
+  .cta-final { background: var(--navy); padding: 88px 40px; text-align: center; margin-top: 60px; }
+  .cta-final-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 18px; }
+  .cta-final h2 { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--ivory); line-height: 1.2; margin: 0 0 24px; }
+  .cta-final p { font-family: var(--font-display); font-style: italic; font-size: 1.1rem; color: rgba(232,220,200,0.7); max-width: 660px; margin: 0 auto 36px; line-height: 1.65; }
+  .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .cta-btn-primary { padding: 16px 32px; background: var(--gold); color: var(--navy-deep); text-decoration: none; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border-radius: 2px; transition: background 0.2s; }
+  .cta-btn-primary:hover { background: var(--gold-light); }
+  .cta-btn-outline { padding: 16px 32px; background: transparent; color: var(--gold); text-decoration: none; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; border: 1px solid rgba(196,164,114,0.4); border-radius: 2px; transition: background 0.2s; }
+  .cta-btn-outline:hover { background: rgba(196,164,114,0.1); }
+
+  /* FOOTER */
+  .footer { background: var(--navy); padding: 56px 40px 32px; color: rgba(232,220,200,0.6); border-top: 1px solid rgba(196,164,114,0.15); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+  .footer-phi { font-family: var(--font-eb); font-style: italic; font-size: 2.5rem; color: var(--gold); margin-bottom: 12px; }
+  .footer-baseline { font-family: var(--font-display); font-style: italic; font-size: 0.95rem; color: rgba(232,220,200,0.7); margin-bottom: 8px; }
+  .footer-meta { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.14em; color: rgba(255,255,255,0.4); margin-top: 24px; line-height: 1.9; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Φ</a>
+    <div class="nav-links">
+      <a href="index.html">Accueil</a>
+      <a href="tarifications.html">Tarifs</a>
+      <a href="echanges-confidentiels.html">Correspondances</a>
+      <a href="ecosysteme.html">Écosystème</a>
+      <a href="telecharger.html" class="nav-cta">Télécharger Φ</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">Une primitive de preuve, souveraine</div>
+  <h1>Les trois volets <em>Φ</em>.</h1>
+  <p class="hero-lede">Une seule application, trois volets d'intensité croissante. De la correspondance chiffrée — gratuite, illimitée — à la preuve irrépudiable liée à votre identité. Sans tiers, sans serveur, post-quantique.</p>
+</section>
+
+<!-- TABLEAU COMPARATIF -->
+<section class="compare-section">
+  <div class="compare-grid">
+
+    <!-- Volet 1 : Le secret des correspondances -->
+    <div class="compare-card">
+      <div class="compare-eyebrow" style="color: rgba(196,164,114,0.55);">Gratuit · illimité</div>
+      <div class="compare-title">Le secret des correspondances</div>
+
+      <div class="compare-block">
+        <div class="compare-block-label">Ce que vous faites</div>
+        <div class="compare-block-value">Transmettre, sans demander de preuve</div>
+      </div>
+
+      <div class="compare-block">
+        <div class="compare-block-label">Preuve produite</div>
+        <div class="compare-block-value">Aucune — pur transport chiffré-cacheté</div>
+      </div>
+
+      <div class="compare-block" style="border-bottom: none;">
+        <div class="compare-block-label">Pour</div>
+        <div class="compare-block-value">Médecins · Laboratoires · Écoles · Particuliers</div>
+      </div>
+
+      <a href="#correspondances" class="compare-cta">En détail ↓</a>
+    </div>
+
+    <!-- Volet 2 : La preuve légère -->
+    <div class="compare-card">
+      <div class="compare-eyebrow" style="color: rgba(196,164,114,0.75);">1 jeton · 2 à 4 €</div>
+      <div class="compare-title">La preuve légère</div>
+
+      <div class="compare-block">
+        <div class="compare-block-label">Ce que vous faites</div>
+        <div class="compare-block-value">Faire signer — accusé de réception compris</div>
+      </div>
+
+      <div class="compare-block">
+        <div class="compare-block-label">Preuve produite</div>
+        <div class="compare-block-value">Acte scellé · biométrie · signature manuscrite · « lu et approuvé » · accusé de réception</div>
+      </div>
+
+      <div class="compare-block" style="border-bottom: none;">
+        <div class="compare-block-label">Pour</div>
+        <div class="compare-block-value">Mutuelles · Assurances · RH · Bailleurs · Créanciers</div>
+      </div>
+
+      <a href="#legere" class="compare-cta">En détail ↓</a>
+    </div>
+
+    <!-- Volet 3 : La preuve renforcée -->
+    <div class="compare-card" style="border-left: 1px solid rgba(196,164,114,0.2);">
+      <div class="compare-eyebrow" style="color: var(--gold); font-weight: 700;">3 jetons · 6 à 12 €</div>
+      <div class="compare-title">La preuve renforcée</div>
+
+      <div class="compare-block" style="border-color: var(--gold);">
+        <div class="compare-block-label" style="color: var(--gold);">Ce que vous faites</div>
+        <div class="compare-block-value">Faire signer avec l'identité liée à la personne</div>
+      </div>
+
+      <div class="compare-block" style="border-color: var(--gold);">
+        <div class="compare-block-label" style="color: var(--gold);">Preuve produite</div>
+        <div class="compare-block-value">Tout le volet 2 · dossier d'identité · journal chaîné croisé · certificat .phi-cert opposable</div>
+      </div>
+
+      <div class="compare-block" style="border-bottom: none;">
+        <div class="compare-block-label" style="color: var(--gold);">Pour</div>
+        <div class="compare-block-value">Avocats · Notaires · Banques · Cabinets</div>
+      </div>
+
+      <a href="#renforcee" class="compare-cta">En détail ↓</a>
+    </div>
+
+  </div>
+
+  <div class="verif-band">
+    <span class="verif-tag">Hors produit</span>
+    <div>
+      <h3>Le vérificateur — <span style="font-family:var(--font-mono);font-size:0.9em;color:var(--gold-deep)">Verifier.html</span></h3>
+      <p>Un fichier autonome, téléchargeable par quiconque, sans compte, qui contrôle <strong>hors ligne</strong> l'authenticité d'un certificat <strong>.phi-cert</strong>. Le destinataire vérifie dans l'application ; toute autre personne — un juge, un expert, un tiers — vérifie avec le seul vérificateur. <strong>Gratuit par principe.</strong></p>
+    </div>
+  </div>
+
+  <p style="text-align: center; font-family: var(--font-display); font-style: italic; font-size: 1rem; color: var(--ink-muted); margin-top: 32px; line-height: 1.6; max-width: 820px; margin-left: auto; margin-right: auto;">Dans les trois volets : chiffré de dispositif à dispositif, dans le silicium. <strong style="color: var(--navy); font-weight: 500;">Aucune messagerie ne voit le contenu.</strong></p>
+</section>
+
+<!-- SECTION 1 : LE SECRET DES CORRESPONDANCES -->
+<section class="detail-section" id="correspondances">
+  <div class="detail-eyebrow">Volet 1 · Gratuit, illimité</div>
+  <h2 class="detail-h2">Le secret des correspondances.</h2>
+  <p class="detail-lede">Envoyer un document chiffré, sans demander de preuve. C'est la fondation de Φ — la transmission souveraine, gratuite pour tous, sans limite. Le document voyage en huis-clos cryptographique : le réseau ne voit que du bruit, et seul le dispositif du destinataire peut le déchiffrer.</p>
+
+  <div class="detail-grid">
+    <div>
+      <div class="detail-block-label">Comment ça fonctionne</div>
+      <div class="detail-block-content">
+        <ul>
+          <li>Chiffrement post-quantique ML-KEM-768 vers la clé publique du destinataire</li>
+          <li>Transport par la messagerie de votre choix — vous gardez vos outils habituels</li>
+          <li>Déchiffrement exclusif dans le dispositif du destinataire, jamais sur un serveur</li>
+          <li>Aucune trace exploitable sur les intermédiaires</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="detail-block-label">Cas d'usage typiques</div>
+      <div class="detail-block-content">
+        <ul>
+          <li>Médecin envoyant une ordonnance ou un résultat de laboratoire</li>
+          <li>Banque remettant un relevé ou un courrier confidentiel</li>
+          <li>École transmettant un dossier scolaire</li>
+          <li>Particulier partageant des pièces administratives sensibles</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="retenir">
+    <div class="retenir-l">À retenir</div>
+    <div class="retenir-t">La correspondance est gratuite et illimitée. On paie pour la preuve, jamais pour le transport.</div>
+  </div>
+</section>
+
+<!-- SECTION 2 : LA PREUVE LÉGÈRE -->
+<section class="detail-section" id="legere">
+  <div class="detail-eyebrow">Volet 2 · 1 jeton — soit 2 à 4 € selon le volume</div>
+  <h2 class="detail-h2">La preuve <em>légère</em>.</h2>
+  <p class="detail-lede">Faire signer rapidement, sans embarquement lourd — et savoir que c'est reçu. Le signataire ouvre, pose son doigt, trace sa signature, écrit « lu et approuvé » : trois écrans, trente secondes. La signature et l'accusé de réception ne font qu'un seul acte, un seul jeton. Aussi rapide que les solutions web actuelles, infiniment plus probant : chaque acte est ancré dans le silicium et résiste aux ordinateurs quantiques.</p>
+
+  <div class="detail-grid">
+    <div>
+      <div class="detail-block-label">Comment ça fonctionne</div>
+      <div class="detail-block-content">
+        <ul>
+          <li>Clé ML-DSA-65 générée dans l'enclave matérielle du signataire</li>
+          <li>Ancrage biométrique de l'acte</li>
+          <li>Signature manuscrite tracée à l'écran et mention « lu et approuvé »</li>
+          <li>Accusé de réception scellé — qui a reçu, et quand</li>
+          <li>Inscription au journal chaîné, ordonné par compteur monotone</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="detail-block-label">Cas d'usage typiques</div>
+      <div class="detail-block-content">
+        <ul>
+          <li>Mutuelle faisant signer un contrat à un assuré</li>
+          <li>Service RH faisant signer un avenant ou un règlement</li>
+          <li>Bailleur adressant une mise en demeure à un locataire</li>
+          <li>Créancier notifiant une échéance, avec preuve de réception</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="retenir">
+    <div class="retenir-l">À retenir</div>
+    <div class="retenir-t">Signature et accusé de réception fusionnés en un seul acte, un seul jeton. Ce qui exigeait deux démarches n'en fait plus qu'une.</div>
+  </div>
+</section>
+
+<!-- SECTION 3 : LA PREUVE RENFORCÉE -->
+<section class="detail-section" id="renforcee">
+  <div class="detail-eyebrow">Volet 3 · 3 jetons — soit 6 à 12 € selon le volume</div>
+  <h2 class="detail-h2">La preuve <em>renforcée</em>.</h2>
+  <p class="detail-lede">Le procédé probatoire complet, pour les engagements lourds. L'identité est liée à la personne — pièce d'identité renseignée à l'enrôlement — et l'acte fusionne cette identité, le document, le dispositif et l'instant. S'y ajoutent le journal chaîné croisé, le dossier d'identité et le certificat de preuve. Une preuve irrépudiable, recalculable par un juge ou un expert, indépendamment de l'éditeur.</p>
+
+  <div class="detail-grid">
+    <div>
+      <div class="detail-block-label">Comment ça fonctionne</div>
+      <div class="detail-block-content">
+        <ul>
+          <li>Enrôlement renforcé : pièce d'identité, signature manuscrite, mention manuscrite, biométrie — une fois pour toutes</li>
+          <li>Fusion de l'identité, du document, du dispositif et de l'instant</li>
+          <li>Journal chaîné écrit en miroir sur les deux dispositifs — l'antidatage devient impossible</li>
+          <li>Dossier de preuves à chaque signature : document signé, dossier d'identité, certificat <strong>.phi-cert</strong></li>
+          <li>Certificat autoportant, vérifiable indépendamment, hors ligne</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="detail-block-label">Cas d'usage typiques</div>
+      <div class="detail-block-content">
+        <ul>
+          <li>Avocat faisant signer un acte sous seing privé</li>
+          <li>Notaire formalisant un engagement</li>
+          <li>Banque scellant un contrat de prêt</li>
+          <li>Assureur constatant un sinistre, pièces à l'appui</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="retenir">
+    <div class="retenir-l">À retenir</div>
+    <div class="retenir-t">Le plus haut niveau de preuve. Irrépudiable, post-quantique, vérifiable pour toujours — sans dépendance à l'éditeur ni à aucun tiers de confiance.</div>
+  </div>
+
+  <div style="margin-top: 28px; padding: 20px 24px; border: 1px solid var(--rule); border-radius: 4px;">
+    <div class="detail-block-label">La réciprocité</div>
+    <div class="detail-block-content">La preuve renforcée suppose que votre correspondant dispose lui aussi d'un <strong>enrôlement renforcé</strong>. Si sa clé Φ ne l'a pas, l'application vous le signale — à vous de décider : attendre qu'il complète son enrôlement, ou lui adresser une preuve légère. L'application ne dégrade jamais l'acte à votre place.</div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-final-eyebrow">Une application · trois volets</div>
+  <h2>Choisissez le niveau de preuve dont vous avez besoin.</h2>
+  <p>Avec Φ, la correspondance confidentielle, la signature et la preuve opposable tiennent dans une seule application souveraine — post-quantique, sans serveur, sans autorité de certification.</p>
+  <div class="cta-buttons">
+    <a href="tarifications.html" class="cta-btn-primary">Voir les tarifs →</a>
+    <a href="/phi-public.phi" download class="cta-btn-outline">Télécharger notre clé Φ</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-phi">Φ</div>
+    <div class="footer-baseline">La preuve autoportée</div>
+    <div class="footer-baseline">Post-quantique · sans tiers, sans serveur</div>
+    <div class="footer-meta">
+      AION ASEMANTIX · La preuve par Φ · 48 rue du Docteur Roux, 03100 Montluçon<br>
+      lapreuveparphi.fr · contact@lapreuveparphi.fr
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
