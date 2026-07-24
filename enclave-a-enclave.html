@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0e1c35">
-<title>D'Enclave-À-Enclave — Le transport chiffré, en ligne. Le déchiffrement, hors ligne. | Φ · PHI</title>
-<meta name="description" content="Le procédé Inline-Offline™ de Φ : le transport est chiffré, le déchiffrement est hors ligne, sur le dispositif du destinataire. Les standards NIST protègent ce qui voyage ; l'architecture fait qu'il n'y a rien d'autre à déchiffrer. D'Enclave-À-Enclave, de dispositif à dispositif.">
-<meta name="keywords" content="enclave à enclave, de dispositif à dispositif, Inline-Offline, déchiffrement local, sans serveur, correspondance souveraine, enclave matérielle, chiffrement souverain, ML-KEM-768, ML-DSA-65, sans Cloud Act, asémanticité, alternative DocuSign souveraine, PHI, lapreuveparphi.fr">
+<title>Inline-Offline — Le transport chiffré, en ligne. Le déchiffrement, hors ligne. | Φ · PHI</title>
+<meta name="description" content="Le procédé Inline-Offline™ de Φ : le transport est chiffré et emprunte internet ; le déchiffrement est hors ligne, sur le dispositif du destinataire. Les standards NIST protègent ce qui voyage ; l'architecture fait qu'il n'y a rien d'autre à déchiffrer. De dispositif à dispositif, sans serveur.">
+<meta name="keywords" content="Inline-Offline, déchiffrement local, hors ligne, mode avion, sans serveur, de dispositif à dispositif, correspondance souveraine, chiffrement souverain, ML-KEM-768, ML-DSA-65, sans Cloud Act, alternative DocuSign souveraine, PHI, lapreuveparphi.fr">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="PHI">
 <link rel="canonical" href="https://lapreuveparphi.fr/enclave-a-enclave.html">
@@ -20,13 +20,13 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:url" content="https://lapreuveparphi.fr/enclave-a-enclave.html">
 <meta property="og:site_name" content="Φ — PHI">
-<meta property="og:title" content="D'Enclave-À-Enclave — Le transport chiffré, en ligne. Le déchiffrement, hors ligne.">
+<meta property="og:title" content="Inline-Offline — Le transport chiffré, en ligne. Le déchiffrement, hors ligne.">
 <meta property="og:description" content="On vous vend le chiffrement. On oublie le déchiffrement. Vos correspondances ne redeviennent lisibles que sur le dispositif du destinataire légitime — jamais sur un serveur.">
 <meta property="og:image" content="https://lapreuveparphi.fr/og-image.jpg">
 <meta property="og:image:secure_url" content="https://lapreuveparphi.fr/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="D'Enclave-À-Enclave — Φ, la correspondance souveraine, de dispositif à dispositif">
+<meta property="og:image:alt" content="Inline-Offline — Φ, la correspondance souveraine, de dispositif à dispositif">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="article:publisher" content="https://lapreuveparphi.fr">
 <meta property="article:section" content="Cryptographie &amp; Souveraineté numérique">
@@ -34,10 +34,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@phi_signaturefr">
 <meta name="twitter:creator" content="@phi_signaturefr">
-<meta name="twitter:title" content="D'Enclave-À-Enclave — Le transport chiffré, en ligne. Le déchiffrement, hors ligne.">
+<meta name="twitter:title" content="Inline-Offline — Le transport chiffré, en ligne. Le déchiffrement, hors ligne.">
 <meta name="twitter:description" content="Le vrai secret d'une correspondance n'est pas dans son transport chiffré. Il est dans le moment où elle redevient lisible.">
 <meta name="twitter:image" content="https://lapreuveparphi.fr/og-image.jpg">
-<meta name="twitter:image:alt" content="D'Enclave-À-Enclave — Φ, la correspondance souveraine">
+<meta name="twitter:image:alt" content="Inline-Offline — Φ, la correspondance souveraine">
 
 <script type="application/ld+json">
 {
@@ -46,32 +46,32 @@
     {
       "@type": "WebPage",
       "@id": "https://lapreuveparphi.fr/enclave-a-enclave.html#webpage",
-      "name": "D'Enclave-À-Enclave — Φ · PHI",
+      "name": "Inline-Offline — Φ · PHI",
       "url": "https://lapreuveparphi.fr/enclave-a-enclave.html",
-      "description": "Le procédé Inline-Offline™ de Φ : le transport est chiffré et emprunte internet ; le déchiffrement s'effectue hors ligne, exclusivement sur le dispositif du destinataire légitime, sous le contrôle de son enclave matérielle. Aucun serveur ne voit le clair.",
+      "description": "Le procédé Inline-Offline™ de Φ : le transport est chiffré et emprunte internet ; le déchiffrement s'effectue hors ligne, exclusivement sur le dispositif du destinataire légitime, après déverrouillage par son empreinte. Aucun serveur ne voit le clair.",
       "inLanguage": "fr",
       "genre": "TechArticle",
       "isPartOf": {"@type": "WebSite", "@id": "https://lapreuveparphi.fr/#website"},
       "about": [
         {
           "@type": "Thing",
-          "name": "Enclave-À-Enclave",
-          "description": "Procédé de correspondance dans lequel les clés de déchiffrement demeurent confinées, non extractibles, dans l'enclave matérielle de chaque dispositif. Le message ne redevient lisible que sur le dispositif du destinataire légitime, jamais sur un serveur intermédiaire."
-        },
-        {
-          "@type": "Thing",
           "name": "Inline-Offline",
-          "description": "Le transport est chiffré et en ligne ; le déchiffrement est hors ligne. Les données traversent internet sous forme d'octets indistinguables du bruit aléatoire."
+          "description": "Procédé de correspondance dans lequel le transport est chiffré et en ligne, tandis que le déchiffrement est hors ligne : le message ne redevient lisible que sur le dispositif du destinataire légitime, jamais sur un serveur intermédiaire."
         },
         {
           "@type": "Thing",
-          "name": "Enclave matérielle",
-          "description": "Coprocesseur sécurisé, isolé du système d'exploitation, dans lequel les clés privées sont générées et demeurent non extractibles."
+          "name": "Déchiffrement local",
+          "description": "Opération de déchiffrement calculée exclusivement sur le dispositif du destinataire, sans réseau ni serveur, après déverrouillage par l'utilisateur légitime."
         },
         {
           "@type": "Thing",
-          "name": "Asémanticité",
-          "description": "Propriété d'un flux de données transitant sans structure ni signification discernables, indistinguable d'un bruit aléatoire."
+          "name": "Clé scellée par le matériel",
+          "description": "La clé privée est chiffrée au repos par une clé d'enveloppe matérielle du téléphone (Keystore, StrongBox ou TEE), déverrouillée par l'empreinte de l'utilisateur ; elle n'est en clair en mémoire que le temps d'une opération."
+        },
+        {
+          "@type": "Thing",
+          "name": "Sauvegarde souveraine",
+          "description": "L'identité Φ se régénère à l'identique sur un nouveau dispositif, uniquement depuis une sauvegarde froide de 24 mots et une passphrase, sans serveur ni tiers."
         }
       ],
       "mentions": [
@@ -88,10 +88,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Qu'est-ce que le procédé d'Enclave-À-Enclave ?",
+          "name": "Qu'est-ce que le procédé Inline-Offline ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "D'Enclave-À-Enclave désigne un procédé de correspondance dans lequel les clés de déchiffrement sont générées et demeurent confinées, non extractibles, dans l'enclave matérielle de chaque dispositif. Le document est chiffré à destination d'une enclave précise, celle du destinataire légitime, et de nulle autre. Il traverse internet sous forme d'octets indistinguables du bruit aléatoire, puis ne redevient lisible que sur le dispositif de ce destinataire — jamais sur un serveur, jamais sur une plateforme intermédiaire."
+            "text": "Inline-Offline désigne un procédé où le transport est chiffré et en ligne, tandis que le déchiffrement est hors ligne. Le document est chiffré à destination du dispositif du destinataire légitime, et de nul autre. Il traverse internet sous forme chiffrée, illisible sans la clé, puis ne redevient lisible que sur le dispositif de ce destinataire — jamais sur un serveur, jamais sur une plateforme intermédiaire."
           }
         },
         {
@@ -104,10 +104,10 @@
         },
         {
           "@type": "Question",
-          "name": "Le message redevient-il lisible dans l'enclave ou sur le dispositif ?",
+          "name": "Le message redevient-il lisible dans le matériel ou sur le dispositif ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sur le dispositif. L'enclave matérielle conserve la clé privée, non extractible, et n'autorise l'opération cryptographique qu'après vérification de l'utilisateur légitime. Le document en clair apparaît sur l'appareil du destinataire, sous le contrôle de l'enclave, et nulle part ailleurs. La clé ne quitte jamais le silicium."
+            "text": "Sur le dispositif. Le matériel du téléphone conserve la clé d'enveloppe qui protège la clé privée au repos, et ne la déverrouille qu'après vérification de l'utilisateur légitime par son empreinte. Le document en clair apparaît sur l'appareil du destinataire — et nulle part ailleurs. Aucun serveur n'y participe."
           }
         },
         {
@@ -115,7 +115,7 @@
           "name": "Que voit une messagerie qui transporte une correspondance Φ ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Des octets. Le contenu chiffré est indistinguable du bruit aléatoire : aucune structure, aucune étiquette, aucun sens. La messagerie porteuse achemine sans jamais rien voir. C'est le principe de l'asémanticité : les données transitent sans signification."
+            "text": "Un contenu chiffré, illisible sans la clé. La messagerie porteuse achemine sans jamais pouvoir lire, car elle ne détient aucune clé de déchiffrement."
           }
         },
         {
@@ -123,7 +123,7 @@
           "name": "Que se passe-t-il si quelqu'un intercepte le fichier ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Il obtient du bruit. Le chiffrement est post-quantique (ML-KEM-768, NIST FIPS 203) : capturer aujourd'hui pour déchiffrer demain, à l'arrivée des ordinateurs quantiques, ne fonctionnera pas. Et même le vol d'un dispositif ne suffirait pas : la clé, confinée dans l'enclave, ne s'active que pour l'utilisateur légitime authentifié."
+            "text": "Il obtient du chiffré post-quantique (ML-KEM-768, NIST FIPS 203) : capturer aujourd'hui pour déchiffrer demain, à l'arrivée des ordinateurs quantiques, ne fonctionnera pas. Et même le vol d'un dispositif ne suffirait pas : la clé, scellée par le matériel du téléphone, ne se déverrouille que pour l'utilisateur légitime authentifié par son empreinte."
           }
         },
         {
@@ -147,7 +147,7 @@
           "name": "Faut-il être connecté pour lire une correspondance reçue ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Non. Le déchiffrement est une opération strictement locale, calculée sur votre dispositif. Une fois le fichier reçu, votre appareil peut être hors réseau : le document s'ouvrira. C'est la seconde moitié du procédé Inline-Offline : le transport est en ligne, le déchiffrement ne l'est pas."
+            "text": "Non. Le déchiffrement est une opération strictement locale, calculée sur votre dispositif. Une fois le fichier reçu, votre appareil peut être en mode avion : le document s'ouvrira. C'est la seconde moitié du procédé Inline-Offline : le transport est en ligne, le déchiffrement ne l'est pas."
           }
         }
       ]
@@ -156,7 +156,7 @@
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://lapreuveparphi.fr/"},
-        {"@type": "ListItem", "position": 2, "name": "Enclave-À-Enclave", "item": "https://lapreuveparphi.fr/enclave-a-enclave.html"}
+        {"@type": "ListItem", "position": 2, "name": "Inline-Offline", "item": "https://lapreuveparphi.fr/enclave-a-enclave.html"}
       ]
     },
     {
@@ -400,7 +400,7 @@
 <nav class="breadcrumb" aria-label="Fil d'Ariane">
   <a href="index.html">Accueil</a>
   <span class="breadcrumb-sep">·</span>
-  <span>Enclave-À-Enclave</span>
+  <span>Inline-Offline</span>
 </nav>
 
 <header class="ee-hero">
@@ -414,14 +414,14 @@
       Votre correspondance emprunte internet sans jamais s'y livrer. Elle ne redevient
       lisible que sur le dispositif du destinataire légitime — jamais sur un serveur,
       jamais sur une plateforme intermédiaire.<br>
-      <span style="color:var(--gold-soft)">D'Enclave-À-Enclave, de dispositif à dispositif.</span>
+      <span style="color:var(--gold-soft)">Inline&#8209;Offline<sup class="reg">™</sup> — de dispositif à dispositif.</span>
     </p>
     <div class="ee-hero-rule"></div>
     <div class="ee-hero-tags">
       <span class="ee-hero-tag">Inline&#8209;Offline<sup class="reg">™</sup></span>
       <span class="ee-hero-tag">Sans serveur</span>
       <span class="ee-hero-tag">Post-quantique</span>
-      <span class="ee-hero-tag">Asémantique</span>
+      <span class="ee-hero-tag">Mode avion</span>
       <span class="ee-hero-tag">Brevets déposés</span>
     </div>
   </div>
@@ -438,7 +438,7 @@
 
     <p>Toutes les messageries et toutes les plateformes de signature vous promettent la même chose : le chiffrement. Elles disent vrai. Le trajet est protégé. Personne ne lit votre document pendant qu'il voyage.</p>
 
-    <p>Mais le trajet s'achève. Le message arrive quelque part, et là, <strong>il redevient lisible</strong>. Ce lieu, c'est leur serveur. C'est là qu'il est déchiffré, stocké, indexé. C'est là qu'il devient pleinement exploitable : analysé, profilé, classé, livré aux intelligences artificielles qui les servent. C'est là, aussi, qu'un État peut le réquisitionner — car un serveur qui détient une clé est un serveur que l'on peut contraindre.</p>
+    <p>Mais le trajet s'achève. Sur les plateformes classiques, le message arrive quelque part, et là, <strong>il redevient lisible</strong>. Ce lieu, c'est leur serveur. C'est là qu'il est déchiffré, stocké, indexé. C'est là qu'il devient pleinement exploitable : analysé, profilé, classé, livré aux intelligences artificielles qui les servent. C'est là, aussi, qu'un État peut le réquisitionner — car un serveur qui détient une clé est un serveur que l'on peut contraindre.</p>
 
     <p>Le chiffrement protège le trajet. Il ne protège pas <strong>l'arrivée</strong>. Et c'est à l'arrivée que tout se joue : c'est là qu'existe le texte en clair, c'est là qu'il a de la valeur, c'est là qu'on le prend.</p>
 
@@ -463,9 +463,9 @@
         <span class="volet-cv tl"></span><span class="volet-cv tr"></span><span class="volet-cv bl"></span><span class="volet-cv br"></span>
         <div class="volet-num">Volet I · Inline</div>
         <h3 class="volet-title">Le transport, <em>en ligne.</em></h3>
-        <div class="volet-tag">Chiffré post-quantique · asémantique</div>
+        <div class="volet-tag">Chiffré post-quantique</div>
         <p class="volet-body">Votre document traverse internet par vos canaux habituels — un courriel, une messagerie, n'importe quel transporteur. Il est scellé par <strong>ML-KEM-768</strong> (NIST FIPS 203) pour l'échange de clé et <strong>ML-DSA-65</strong> (NIST FIPS 204) pour la signature : les premiers standards post-quantiques officiels, publiés en août 2024.</p>
-        <p class="volet-body">Sur le réseau, il ne se présente que comme des <strong>octets indistinguables du bruit aléatoire</strong> : sans structure, sans étiquette, sans sens. Le transporteur achemine. Il ne voit rien, parce qu'il n'y a rien à voir.</p>
+        <p class="volet-body">Sur le réseau, il ne se présente que comme un <strong>contenu chiffré, illisible sans la clé</strong>. Le transporteur achemine. Il ne peut rien lire, parce qu'il ne détient aucune clé.</p>
       </div>
 
       <div class="volet">
@@ -473,7 +473,7 @@
         <div class="volet-num">Volet II · Offline</div>
         <h3 class="volet-title">Le déchiffrement, <em>hors ligne.</em></h3>
         <div class="volet-tag">Local · sur le dispositif</div>
-        <p class="volet-body">Le document n'est déchiffrable que par <strong>une seule enclave au monde</strong> : celle du destinataire légitime. L'opération se calcule localement, sur son appareil, sous le contrôle du silicium. Aucun serveur n'y participe. Aucun réseau n'est requis.</p>
+        <p class="volet-body">Le document n'est déchiffrable que par <strong>un seul dispositif au monde</strong> : celui du destinataire légitime. L'opération se calcule localement, sur son appareil, <strong>sans serveur ni réseau</strong>, après déverrouillage par son empreinte.</p>
         <p class="volet-body">Ici, aucun standard cryptographique n'est en jeu — <strong>et c'est le propos</strong>. Le clair n'existe nulle part ailleurs que sur ce dispositif. Il n'y a rien à intercepter, parce qu'il n'y a rien qui circule.</p>
       </div>
     </div>
@@ -482,7 +482,7 @@
       <div class="io-banner-label">Le procédé Inline-Offline<sup class="reg">™</sup></div>
       <p class="io-banner-text">
         <span style="font-family:var(--font-eb);font-style:italic;color:var(--gold)">Φ</span> emprunte internet <strong>sans jamais y être.</strong><br>
-        Ce qui voyage est du bruit. Ce qui parle n'existe que chez vous.
+        Ce qui voyage est chiffré. Ce qui parle n'existe que chez vous.
       </p>
     </div>
   </div>
@@ -491,25 +491,25 @@
 <section class="trajet" id="le-trajet">
   <div class="trajet-inner">
     <div class="sec-eyebrow">Le trajet</div>
-    <h2 class="sec-title">D'une enclave <em>à l'autre.</em></h2>
+    <h2 class="sec-title">D'un dispositif <em>à l'autre.</em></h2>
     <p class="sec-lede">Quatre moments, et pas un serveur.</p>
 
     <ol class="etapes">
       <li class="etape">
-        <h3 class="etape-title">La clé naît dans le silicium</h3>
-        <p class="etape-body">À l'installation, votre dispositif génère sa paire de clés <strong>à l'intérieur de son enclave matérielle</strong> — un coprocesseur isolé du système d'exploitation. La clé privée n'en sort jamais. Elle n'est pas déposée dans un fichier, pas sauvegardée dans un nuage, pas connue de PHI. Elle ne peut pas être copiée, parce qu'elle ne peut pas être lue. Votre clé publique, elle, circule librement : c'est votre <strong>clé .phi</strong>, votre adresse souveraine.</p>
+        <h3 class="etape-title">La clé, scellée par le matériel</h3>
+        <p class="etape-body">À l'installation, votre dispositif génère votre identité Φ. La clé privée est <strong>chiffrée au repos par une clé d'enveloppe matérielle</strong> du téléphone (Keystore, StrongBox ou TEE selon l'appareil), déverrouillée par <strong>votre seule empreinte</strong>. Elle n'est jamais stockée en clair, jamais déposée dans un nuage, jamais connue de PHI. Votre clé publique, elle, circule librement : c'est votre <strong>clé .phi</strong>, votre adresse souveraine.</p>
       </li>
       <li class="etape">
-        <h3 class="etape-title">Le document est scellé pour une enclave, et une seule</h3>
-        <p class="etape-body">Au moment de l'envoi, votre appareil chiffre le document à destination de <strong>l'enclave précise du destinataire</strong>, au moyen de sa clé .phi. L'échange de clé emploie <strong>ML-KEM-768</strong> (NIST FIPS 203), un standard post-quantique. Le document ainsi scellé n'ouvrira sur aucun autre appareil au monde.</p>
+        <h3 class="etape-title">Le document est scellé pour un dispositif, et un seul</h3>
+        <p class="etape-body">Au moment de l'envoi, votre appareil chiffre le document à destination du <strong>dispositif précis du destinataire</strong>, au moyen de sa clé .phi. L'échange de clé emploie <strong>ML-KEM-768</strong> (NIST FIPS 203), un standard post-quantique. Le document ainsi scellé n'ouvrira sur aucun autre appareil au monde.</p>
       </li>
       <li class="etape">
-        <h3 class="etape-title">Le bruit traverse l'internet</h3>
-        <p class="etape-body">Le fichier chiffré emprunte le canal de votre choix. Le transporteur — messagerie, opérateur, hébergeur — <strong>ne détient aucune clé</strong>. Il ne voit qu'une suite d'octets sans forme, statistiquement indiscernable d'un bruit aléatoire. Il peut la stocker, la copier, la conserver vingt ans : il n'en tirera rien. Les acteurs qui <strong>capturent</strong> aujourd'hui pour déchiffrer demain n'auront rien capturé.</p>
+        <h3 class="etape-title">Le chiffré traverse l'internet</h3>
+        <p class="etape-body">Le fichier chiffré emprunte le canal de votre choix. Le transporteur — messagerie, opérateur, hébergeur — <strong>ne détient aucune clé</strong>. Il ne voit qu'un contenu chiffré, illisible sans elle. Il peut le stocker, le copier, le conserver vingt ans : il n'en tirera rien. Les acteurs qui <strong>capturent</strong> aujourd'hui pour déchiffrer demain n'auront capturé que du chiffré post-quantique.</p>
       </li>
       <li class="etape">
         <h3 class="etape-title">Le clair réapparaît — sur le dispositif, et là seulement</h3>
-        <p class="etape-body">À la réception, l'enclave du destinataire vérifie qu'il est bien l'utilisateur légitime, puis <strong>autorise l'opération de déchiffrement sans jamais livrer la clé</strong>. Le document redevient lisible sur son appareil, sous la garde du silicium. Entre l'expéditeur et le destinataire, aucun serveur n'a jamais tenu le texte en clair — <em>parce qu'aucun serveur n'a jamais pu le tenir.</em></p>
+        <p class="etape-body">À la réception, <strong>votre empreinte déverrouille la clé d'enveloppe matérielle</strong>, qui autorise le déchiffrement sur votre appareil. Le document redevient lisible sur son appareil, sans réseau. Entre l'expéditeur et le destinataire, aucun serveur n'a jamais tenu le texte en clair — <em>parce qu'aucun serveur n'a jamais pu le tenir.</em></p>
       </li>
     </ol>
   </div>
@@ -535,11 +535,11 @@
         <div class="voit-line">Le chiffrement repose sur RSA ou ECDSA — <strong>cassables au Q-Day</strong>.</div>
       </div>
       <div class="voit-col phi">
-        <div class="voit-col-head">Φ · d'Enclave-À-Enclave</div>
+        <div class="voit-col-head">Φ · Inline-Offline</div>
         <div class="voit-line">Le trajet est <strong>chiffré</strong>. Personne ne lit en route.</div>
         <div class="voit-line">Le déchiffrement n'a lieu que <strong>sur le dispositif du destinataire</strong>.</div>
         <div class="voit-line">Aucun serveur ne stocke le document. <strong>Il n'y a pas de serveur.</strong></div>
-        <div class="voit-line">Aucune IA n'y accède — <strong>elle ne voit que du bruit</strong>.</div>
+        <div class="voit-line">Aucune IA n'y accède — <strong>elle ne voit que du chiffré</strong>.</div>
         <div class="voit-line">Il n'existe <strong>rien à réquisitionner</strong>, ni chez PHI, ni ailleurs.</div>
         <div class="voit-line">Vos actes vivent dans <strong>votre appareil</strong>. Ils survivent à l'abonnement.</div>
         <div class="voit-line"><strong>ML-KEM-768 · ML-DSA-65</strong> — post-quantique dès le premier jour.</div>
@@ -552,9 +552,9 @@
   <div class="precision-inner">
     <div class="precision-card">
       <h3>Une précision qui compte</h3>
-      <p>On lit parfois que le message « redevient lisible dans l'enclave ». C'est une commodité de langage, et elle est inexacte.</p>
-      <p>L'enclave matérielle n'est pas une pièce où l'on lirait des lettres. C'est un coprocesseur qui <strong>détient la clé privée sans jamais la livrer</strong>, et qui n'autorise l'opération cryptographique qu'après avoir vérifié l'utilisateur légitime. Le document en clair, lui, apparaît <strong>sur le dispositif</strong> — sous la garde de l'enclave, et nulle part ailleurs.</p>
-      <p>La distinction n'est pas académique. Elle dit exactement où vit le secret : <strong>dans deux appareils au monde</strong>, celui de l'expéditeur et celui du destinataire. Ni sur un serveur, ni chez un tiers, ni chez nous.</p>
+      <p>On lit parfois que la clé serait « enfermée dans le matériel » et n'en sortirait jamais. C'est une commodité de langage, et elle est inexacte.</p>
+      <p>Le matériel du téléphone <strong>ne déchiffre pas lui-même</strong>. Il protège la clé privée <strong>au repos</strong>, chiffrée par une clé d'enveloppe matérielle (Keystore, StrongBox ou TEE), et ne la déverrouille qu'après avoir vérifié l'utilisateur légitime par son empreinte. La clé n'est en clair, en mémoire, que <strong>le temps d'une opération</strong>, puis effacée. Le document en clair, lui, apparaît <strong>sur le dispositif</strong> — et nulle part ailleurs.</p>
+      <p>La distinction n'est pas académique. Elle dit exactement où vit le clair d'une correspondance : <strong>dans deux appareils au monde</strong>, celui de l'expéditeur et celui du destinataire. Ni sur un serveur, ni chez un tiers, ni chez nous.</p>
     </div>
   </div>
 </section>
@@ -589,7 +589,7 @@
         Le hors ligne fait qu'il <strong>n'y a rien d'autre à déchiffrer.</strong>
       </p>
       <p class="couches-foot">
-        Un ordinateur quantique ne casse pas ce qui n'a jamais quitté le silicium.
+        Un ordinateur quantique ne casse pas ce qui n'a jamais quitté votre appareil.
       </p>
     </div>
   </div>
@@ -608,11 +608,11 @@
       </div>
       <div class="cons-card">
         <h3>Les IA restent dehors</h3>
-        <p>Apple Intelligence, Gemini, Copilot lisent ce qui s'affiche ou ce qui transite en clair. Le procédé <span class="phi-eb">Φ</span> ne leur présente que du bruit, et calcule sous la garde du silicium. Aucune ne franchit l'enclave — par construction du processeur, pas par réglage.</p>
+        <p>Gemini, Copilot, les assistants qui capturent l'écran lisent ce qui s'affiche en clair. Chez <span class="phi-eb">Φ</span>, l'écran est <strong>scellé</strong> : le document s'affiche pour vos yeux seuls, invisible aux captures d'écran et à l'enregistrement. Et le transport ne présente que du chiffré.</p>
       </div>
       <div class="cons-card">
         <h3>Harvest now, decrypt never™</h3>
-        <p>Capturer aujourd'hui pour déchiffrer demain suppose que le chiffrement d'aujourd'hui tombera. ML-KEM-768 et ML-DSA-65, standardisés par le NIST en 2024, sont conçus pour résister aux ordinateurs quantiques. Ce qui est capturé restera du bruit.</p>
+        <p>Capturer aujourd'hui pour déchiffrer demain suppose que le chiffrement d'aujourd'hui tombera. ML-KEM-768 et ML-DSA-65, standardisés par le NIST en 2024, sont conçus pour résister aux ordinateurs quantiques. Ce qui est capturé restera du chiffré.</p>
       </div>
     </div>
   </div>
@@ -624,8 +624,8 @@
     <h2 class="sec-title" style="margin-bottom:44px">Le procédé, <em>en clair.</em></h2>
 
     <details class="faq-item">
-      <summary class="faq-q">Qu'est-ce que le procédé d'Enclave-À-Enclave ?</summary>
-      <div class="faq-a">Les clés de déchiffrement sont générées et demeurent confinées, non extractibles, dans l'enclave matérielle de chaque dispositif. Le document est chiffré à destination d'une enclave précise — celle du destinataire légitime — et de nulle autre. Il traverse internet sous forme d'octets indistinguables du bruit aléatoire, puis ne redevient lisible que sur le dispositif de ce destinataire. Jamais sur un serveur, jamais sur une plateforme intermédiaire.</div>
+      <summary class="faq-q">Qu'est-ce que le procédé Inline-Offline ?</summary>
+      <div class="faq-a">Le transport est chiffré et en ligne ; le déchiffrement est hors ligne. Le document est chiffré à destination du dispositif du destinataire légitime — et de nul autre. Il traverse internet sous forme chiffrée, illisible sans la clé, puis ne redevient lisible que sur le dispositif de ce destinataire. Jamais sur un serveur, jamais sur une plateforme intermédiaire.</div>
     </details>
 
     <details class="faq-item">
@@ -634,18 +634,18 @@
     </details>
 
     <details class="faq-item">
-      <summary class="faq-q">Le message redevient-il lisible dans l'enclave, ou sur le dispositif ?</summary>
-      <div class="faq-a">Sur le dispositif. L'enclave matérielle conserve la clé privée, non extractible, et n'autorise l'opération cryptographique qu'après vérification de l'utilisateur légitime. Le document en clair apparaît sur l'appareil du destinataire, sous le contrôle de l'enclave — et nulle part ailleurs. La clé, elle, ne quitte jamais le silicium.</div>
+      <summary class="faq-q">Le message redevient-il lisible dans le matériel, ou sur le dispositif ?</summary>
+      <div class="faq-a">Sur le dispositif. Le matériel du téléphone conserve la clé d'enveloppe qui protège la clé privée au repos, et ne la déverrouille qu'après vérification de l'utilisateur légitime par son empreinte. Le document en clair apparaît sur l'appareil du destinataire — et nulle part ailleurs. Aucun serveur n'y participe.</div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-q">Que voit une messagerie qui transporte une correspondance Φ ?</summary>
-      <div class="faq-a">Des octets. Le contenu chiffré est indistinguable du bruit aléatoire : aucune structure, aucune étiquette, aucun sens. La messagerie porteuse — Gmail, Outlook, WhatsApp, n'importe quel canal — achemine sans jamais rien voir. C'est le principe de l'asémanticité : les données transitent sans signification.</div>
+      <div class="faq-a">Un contenu chiffré, illisible sans la clé. La messagerie porteuse — Gmail, Outlook, WhatsApp, n'importe quel canal — achemine sans jamais pouvoir lire, car elle ne détient aucune clé de déchiffrement.</div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-q">Que se passe-t-il si quelqu'un intercepte le fichier ?</summary>
-      <div class="faq-a">Il obtient du bruit. Le chiffrement est post-quantique (ML-KEM-768, NIST FIPS 203) : capturer aujourd'hui pour déchiffrer demain, à l'arrivée des ordinateurs quantiques, ne fonctionnera pas. Et même le vol d'un dispositif ne suffirait pas : la clé, confinée dans l'enclave, ne s'active que pour l'utilisateur légitime authentifié.</div>
+      <div class="faq-a">Il obtient du chiffré post-quantique (ML-KEM-768, NIST FIPS 203) : capturer aujourd'hui pour déchiffrer demain, à l'arrivée des ordinateurs quantiques, ne fonctionnera pas. Et même le vol d'un dispositif ne suffirait pas : la clé, scellée par le matériel du téléphone, ne se déverrouille que pour l'utilisateur légitime authentifié par son empreinte.</div>
     </details>
 
     <details class="faq-item">
@@ -660,12 +660,12 @@
 
     <details class="faq-item">
       <summary class="faq-q">Faut-il être connecté pour lire une correspondance reçue ?</summary>
-      <div class="faq-a">Non. Le déchiffrement est une opération strictement locale, calculée sur votre dispositif. Une fois le fichier reçu, votre appareil peut être hors réseau : le document s'ouvrira. C'est la seconde moitié du procédé Inline-Offline™ — le transport est en ligne, le déchiffrement ne l'est pas.</div>
+      <div class="faq-a">Non. Le déchiffrement est une opération strictement locale, calculée sur votre dispositif. Une fois le fichier reçu, votre appareil peut être en mode avion : le document s'ouvrira. C'est la seconde moitié du procédé Inline-Offline™ — le transport est en ligne, le déchiffrement ne l'est pas.</div>
     </details>
 
     <details class="faq-item">
       <summary class="faq-q">Et si je change de dispositif ?</summary>
-      <div class="faq-a">Votre clé privée ne quitte pas l'enclave de l'ancien appareil : elle ne peut donc pas être transférée. Un nouveau dispositif génère sa propre paire de clés, et donc une nouvelle clé .phi, qu'il vous suffit de communiquer à vos correspondants. C'est la contrepartie directe de la non-extractibilité — celle qui garantit qu'aucune copie de votre clé n'existe nulle part au monde.</div>
+      <div class="faq-a">Votre identité Φ se régénère à l'identique sur un nouvel appareil — mais uniquement depuis votre sauvegarde souveraine : vos 24 mots et votre passphrase. Sans ces deux secrets, elle est irréductible : personne ne peut vous reproduire. C'est la garantie que vous ne perdez jamais vos signatures, et que vous seul détenez les moyens de renaître votre identité.</div>
     </details>
   </div>
 </section>
@@ -700,7 +700,7 @@
       <div class="footer-col">
         <h4>Comprendre</h4>
         <ul>
-          <li><a href="enclave-a-enclave.html">Enclave-À-Enclave</a></li>
+          <li><a href="enclave-a-enclave.html">Inline-Offline</a></li>
           <li><a href="l-enclave-silicium.html">L'enclave silicium</a></li>
           <li><a href="la-fonction-g.html">La fonction G — le sceau</a></li>
           <li><a href="le-journal-chaine.html">Le journal chaîné</a></li>
