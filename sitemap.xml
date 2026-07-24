@@ -217,12 +217,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://lapreuveparphi.fr/urssaf.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://lapreuveparphi.fr/valeur-et-fiabilite-de-la-signature.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -236,12 +230,6 @@
   </url>
   <url>
     <loc>https://lapreuveparphi.fr/Pourquoi-%CE%A6.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://lapreuveparphi.fr/Une-IA-lit-une-attestation-%CE%A6.html</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -285,6 +273,18 @@
   <url>
     <loc>https://lapreuveparphi.fr/professions/rh-compliance.html</loc>
     <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lapreuveparphi.fr/professions/urssaf.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lapreuveparphi.fr/a-propos/A-Propos.html</loc>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
