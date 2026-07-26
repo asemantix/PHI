@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /phi-parcours.html
 
 Sitemap: https://lapreuveparphi.fr/sitemap.xml
