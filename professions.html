@@ -33,8 +33,8 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@phi_signaturefr">
-<meta name="twitter:creator" content="@phi_signaturefr">
+<meta name="twitter:site" content="@lapreuveparphi">
+<meta name="twitter:creator" content="@lapreuveparphi">
 <meta name="twitter:title" content="Signature électronique par profession · La preuve par Φ">
 <meta name="twitter:description" content="Signature électronique probatoire adaptée à chaque profession réglementée : justice, santé, banque, assurance, RH, presse, URSSAF. Alternative française.">
 <meta name="twitter:image" content="https://lapreuveparphi.fr/og-image.jpg">
@@ -78,8 +78,8 @@
       "address": {"@type": "PostalAddress", "streetAddress": "48 rue du Docteur Roux", "postalCode": "03100", "addressLocality": "Montluçon", "addressCountry": "FR"},
       "sameAs": [
         "https://github.com/asemantix",
-        "https://www.linkedin.com/company/121854148/",
-        "https://twitter.com/phi_signaturefr"
+        "https://www.linkedin.com/company/lapreuveparphi/",
+        "https://x.com/lapreuveparphi"
       ],
       "founder": {
         "@type": "Person",
@@ -93,7 +93,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -104,7 +104,7 @@
   --rule:rgba(196,164,114,.3);
   --font-display:'Playfair Display',Georgia,serif;
   --font-mono:'IBM Plex Mono','Courier New',monospace;
-  --font-sans:'IBM Plex Sans',-apple-system,sans-serif;
+  --font-sans:'EB Garamond',Georgia,serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -112,17 +112,17 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 
 /* HEADER */
 .sec-header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
-.sec-header-back{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
+.sec-header-back{font-family:var(--font-mono);font-size:0.722rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .2s}
 .sec-header-back:hover{color:var(--navy)}
 .sec-header-phi{font-family:var(--font-display);font-style:italic;font-size:2rem;color:var(--gold-deep);font-weight:500;text-decoration:none;line-height:1}
 @media(max-width:720px){.sec-header{padding:0 24px}}
 
 /* PAGE */
 .page{flex:1;padding:80px 48px 100px;max-width:1080px;margin:0 auto;width:100%}
-.page-eyebrow{font-family:var(--font-mono);font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px;text-align:center}
+.page-eyebrow{font-family:var(--font-mono);font-size:0.722rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:20px;text-align:center}
 .page-title{font-family:var(--font-display);font-size:2.8rem;font-weight:500;color:var(--navy);line-height:1.18;letter-spacing:-.015em;margin-bottom:16px;text-align:center}
 .page-title em{font-style:italic;color:var(--gold-deep)}
-.page-lede{font-family:var(--font-display);font-style:italic;font-size:1.05rem;color:var(--ink-muted);line-height:1.68;margin-bottom:20px;text-align:center;max-width:660px;margin-left:auto;margin-right:auto}
+.page-lede{font-family:var(--font-display);font-style:italic;font-size:1.115rem;color:var(--ink-muted);line-height:1.68;margin-bottom:20px;text-align:center;max-width:660px;margin-left:auto;margin-right:auto}
 .page-lede strong{font-style:normal;color:var(--navy);font-weight:600}
 .form-rule{width:60px;height:1px;background:var(--gold);margin:0 auto 60px;opacity:.7}
 
@@ -132,10 +132,10 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .profession-card:hover{border-color:var(--gold);background:var(--paper-soft);transform:translateY(-3px);box-shadow:0 6px 24px rgba(14,28,53,.07)}
 .profession-card:hover .profession-arrow{color:var(--gold-deep);transform:translate(2px,-2px)}
 .profession-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px}
-.profession-name{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:var(--navy)}
-.profession-arrow{font-family:var(--font-display);font-size:1rem;color:var(--gold);transition:all .25s ease}
-.profession-roles{font-family:var(--font-sans);font-size:.84rem;color:var(--ink-muted);line-height:1.6;font-weight:300;margin-bottom:20px;flex:1}
-.profession-cta{font-family:var(--font-mono);font-size:.64rem;color:var(--gold-deep);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.profession-name{font-family:var(--font-display);font-size:1.328rem;font-weight:600;color:var(--navy)}
+.profession-arrow{font-family:var(--font-display);font-size:1.062rem;color:var(--gold);transition:all .25s ease}
+.profession-roles{font-family:var(--font-sans);font-size:0.99rem;color:var(--ink-muted);line-height:1.6;font-weight:400;margin-bottom:20px;flex:1}
+.profession-cta{font-family:var(--font-mono);font-size:0.68rem;color:var(--gold-deep);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
 @media(max-width:900px){.profession-card{flex:1 1 calc(50% - 10px)}}
 @media(max-width:560px){.page{padding:56px 24px 80px}.page-title{font-size:2rem}.profession-card{flex:1 1 100%;max-width:480px}}
 
@@ -145,12 +145,12 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
 .footer-brand{text-align:center;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(196,164,114,.2)}
 .footer-phi{font-family:var(--font-display);font-style:italic;font-size:3.2rem;color:var(--gold);font-weight:500;line-height:1;margin-bottom:12px}
 .footer-line{width:48px;height:1px;background:var(--gold);margin:0 auto 12px}
-.footer-baseline-1{font-family:var(--font-display);font-style:italic;font-size:.95rem;color:var(--gold-light);margin-bottom:3px}
-.footer-baseline-2{font-family:var(--font-display);font-style:italic;font-size:.85rem;color:rgba(212,184,136,.75)}
+.footer-baseline-1{font-family:var(--font-display);font-style:italic;font-size:1.009rem;color:var(--gold-light);margin-bottom:3px}
+.footer-baseline-2{font-family:var(--font-display);font-style:italic;font-size:0.99rem;color:rgba(212,184,136,.75)}
 .footer-nav{display:grid;grid-template-columns:repeat(4, 1fr);gap:32px;margin-bottom:32px}
-.footer-col h4{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light);font-weight:500;margin-bottom:14px}
+.footer-col h4{font-family:var(--font-mono);font-size:0.658rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light);font-weight:500;margin-bottom:14px}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.footer-col a{font-family:var(--font-display);font-style:italic;font-size:.92rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
+.footer-col a{font-family:var(--font-display);font-style:italic;font-size:0.977rem;color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s}
 .footer-col a:hover{color:var(--gold-light)}
 .footer-link-audience,.footer-link-special{
   color:rgba(196,164,114,.65) !important;
@@ -164,7 +164,7 @@ body{background:var(--paper);color:var(--navy);font-family:var(--font-sans);line
   color:var(--gold-light) !important;
   border-color:var(--gold) !important;
 }
-.footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:22px;text-align:center;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
+.footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:22px;text-align:center;font-family:var(--font-mono);font-size:0.658rem;letter-spacing:.18em;color:rgba(255,255,255,.35);line-height:1.8}
 .footer-meta strong{color:var(--gold-light);font-weight:500}
 @media(max-width:720px){.footer{padding:48px 24px 28px}.footer-nav{grid-template-columns:1fr;gap:24px}}
 </style>
@@ -178,19 +178,19 @@ footer.footer .footer-inner{max-width:1100px;margin:0 auto}
 footer.footer .footer-brand{text-align:center;margin-bottom:56px;padding-bottom:40px;border-bottom:1px solid rgba(196,164,114,.2)}
 footer.footer .footer-phi{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:4.5rem;color:#c4a472;font-weight:500;line-height:1;margin-bottom:18px}
 footer.footer .footer-line{width:60px;height:1px;background:#c4a472;margin:0 auto 18px}
-footer.footer .footer-baseline-1{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.2rem;color:#d4b888;margin-bottom:4px}
-footer.footer .footer-baseline-2{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.1rem,1.95vw,1.3rem);color:rgba(226,200,122,.8)}
+footer.footer .footer-baseline-1{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.274rem;color:#d4b888;margin-bottom:4px}
+footer.footer .footer-baseline-2{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.168rem,2.07vw,1.381rem);color:rgba(226,200,122,.8)}
 footer.footer .footer-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:44px;margin-bottom:48px;text-align:left}
-footer.footer .footer-col h4{font-family:'IBM Plex Mono','Courier New',monospace;font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:#d4b888;font-weight:500;margin:0 0 18px}
+footer.footer .footer-col h4{font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.828rem;letter-spacing:.32em;text-transform:uppercase;color:#d4b888;font-weight:500;margin:0 0 18px}
 footer.footer .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
 footer.footer .footer-col li{margin:0;padding:0;list-style:none}
 footer.footer .footer-col li::before{content:none}
-footer.footer .footer-col a{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.05rem,1.9vw,1.25rem);color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;font-weight:400;background:none;border:0;padding:0}
+footer.footer .footer-col a{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.115rem,2.02vw,1.328rem);color:rgba(255,255,255,.75);text-decoration:none;transition:color .2s;font-weight:400;background:none;border:0;padding:0}
 footer.footer .footer-col a:hover{color:#d4b888}
 footer.footer .footer-col a.footer-link-special{color:rgba(196,164,114,.65);border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;margin-top:4px;display:block}
 footer.footer .footer-col a.footer-link-special:hover{color:#d4b888;border-color:#c4a472}
-footer.footer .footer-soon{opacity:.4;cursor:default;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.05rem,1.9vw,1.25rem);color:rgba(255,255,255,.55)}
-footer.footer .footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:28px;text-align:center;font-family:'IBM Plex Mono','Courier New',monospace;font-size:.78rem;letter-spacing:.18em;color:rgba(255,255,255,.4);line-height:1.8}
+footer.footer .footer-soon{opacity:.4;cursor:default;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.115rem,2.02vw,1.328rem);color:rgba(255,255,255,.55)}
+footer.footer .footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:28px;text-align:center;font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.828rem;letter-spacing:.18em;color:rgba(255,255,255,.4);line-height:1.8}
 footer.footer .footer-meta strong{color:#d4b888;font-weight:500}
 footer.footer .footer-meta a{color:rgba(255,255,255,.55);text-decoration:none}
 footer.footer .footer-meta a:hover{color:#d4b888}
@@ -199,12 +199,13 @@ footer.footer .footer-key-qr{width:100px;height:100px;background:#f4f1e8;border-
 footer.footer .footer-key-qr span.g{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:2rem;color:#c4a472;line-height:1}
 footer.footer .footer-key-qr span.m{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,164,114,.8);margin-top:6px}
 footer.footer .footer-key-txt{text-align:left}
-footer.footer .footer-key-txt .t{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.02rem;color:#e8dcc8;margin-bottom:6px}
-footer.footer .footer-key-txt .s{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:#c4a472;border-bottom:1px solid rgba(196,164,114,.3);padding-bottom:2px;opacity:.45;cursor:default}
-footer.footer .footer-entity{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.1em;color:rgba(232,220,200,.55);line-height:1.9;margin-top:10px;text-align:center}
-footer.footer .footer-fp{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:rgba(196,164,114,.6);line-height:1.9;margin-top:14px;text-align:center}
+footer.footer .footer-key-txt .t{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.083rem;color:#e8dcc8;margin-bottom:6px}
+footer.footer .footer-key-txt .s{font-family:'IBM Plex Mono',monospace;font-size:0.786rem;letter-spacing:.14em;text-transform:uppercase;color:#c4a472;border-bottom:1px solid rgba(196,164,114,.3);padding-bottom:2px;opacity:.45;cursor:default}
+footer.footer .footer-entity{font-family:'IBM Plex Mono',monospace;font-size:0.701rem;letter-spacing:.1em;color:rgba(232,220,200,.55);line-height:1.9;margin-top:10px;text-align:center}
+footer.footer .footer-fp{font-family:'IBM Plex Mono',monospace;font-size:0.658rem;letter-spacing:.1em;color:rgba(196,164,114,.6);line-height:1.9;margin-top:14px;text-align:center}
 @media(max-width:720px){footer.footer{padding:60px 24px 30px}footer.footer .footer-phi{font-size:3.5rem}footer.footer .footer-nav{grid-template-columns:1fr;gap:32px}}
 </style>
+<style data-phi-echelle>/* Échelle typographique Φ — six niveaux, tout le site */h1{font-size:clamp(2.625rem,4.8vw,3.75rem)!important;font-family:'Playfair Display',Georgia,serif;line-height:1.08}h2{font-size:clamp(1.875rem,3.1vw,2.375rem)!important;font-family:'Playfair Display',Georgia,serif;line-height:1.16}h3{font-size:1.4375rem!important;font-family:'Playfair Display',Georgia,serif;line-height:1.32}h4{font-size:.8125rem!important;font-family:'IBM Plex Mono','Courier New',monospace;letter-spacing:.28em;text-transform:uppercase}body{font-size:17px}</style>
 </head>
 <body>
 
