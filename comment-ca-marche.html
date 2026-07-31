@@ -119,7 +119,7 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);line-
 
 .hero{padding:160px 48px 80px;max-width:880px;margin:0 auto}
 .hero h1{font-family:var(--font-display);font-size:clamp(2.336rem,5.31vw,3.823rem);font-weight:500;color:var(--navy);line-height:1.15;letter-spacing:-.015em;margin-bottom:32px}
-.hero-lead{font-family:var(--font-display);font-style:italic;font-size:1.328rem;color:var(--ink-muted);line-height:1.7;font-weight:400;margin-bottom:24px}
+.hero-lead{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.328rem;color:var(--ink-muted);line-height:1.7;font-weight:400;margin-bottom:24px}
 .hero-soft{font-size:1.083rem;color:var(--ink);line-height:1.75;margin-bottom:12px}
 
 .section{padding:90px 48px;max-width:880px;margin:0 auto}
@@ -128,12 +128,12 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);line-
 .section h2{font-family:var(--font-display);font-size:clamp(1.699rem,3.4vw,2.336rem);font-weight:500;color:var(--navy);line-height:1.25;letter-spacing:-.01em;margin-bottom:40px}
 .section h2 em{font-style:italic;color:var(--gold-deep)}
 .section p{font-size:1.083rem;color:var(--ink);line-height:1.8;margin-bottom:22px}
-.section p.intro{font-family:var(--font-display);font-style:italic;color:var(--ink-muted);font-size:1.168rem;margin-bottom:32px;font-weight:400}
+.section p.intro{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--ink-muted);font-size:1.168rem;margin-bottom:32px;font-weight:400}
 
 .steps{list-style:none;padding:0;margin:32px 0;counter-reset:s}
 .steps li{padding:18px 0 18px 50px;position:relative;font-size:1.104rem;color:var(--ink);line-height:1.65;counter-increment:s;border-bottom:.5px solid var(--rule)}
 .steps li:last-child{border-bottom:none}
-.steps li::before{content:counter(s);position:absolute;left:0;top:18px;font-family:var(--font-display);font-style:italic;font-size:1.487rem;color:var(--gold-deep);font-weight:500;width:32px;text-align:center}
+.steps li::before{content:counter(s);position:absolute;left:0;top:18px;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.487rem;color:var(--gold-deep);font-weight:500;width:32px;text-align:center}
 
 .dots{list-style:none;padding:0;margin:24px 0}
 .dots li{padding:10px 0 10px 22px;position:relative;font-size:1.083rem;color:var(--ink);line-height:1.65}
@@ -145,39 +145,39 @@ body{background:var(--paper);color:var(--ink);font-family:var(--font-sans);line-
 .questions ol li{padding:14px 0 14px 40px;position:relative;font-size:1.104rem;color:var(--ink);line-height:1.65;counter-increment:q;border-bottom:.5px solid var(--rule)}
 .questions ol li:last-child{border-bottom:none}
 .questions ol li::before{content:counter(q);position:absolute;left:0;top:14px;font-family:var(--font-mono);font-size:0.828rem;color:var(--gold-deep);font-weight:600;border:1px solid var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;line-height:1}
-.questions .q-after{font-family:var(--font-display);font-style:italic;color:var(--navy);margin-top:24px;font-size:1.083rem;line-height:1.65}
+.questions .q-after{font-family:'EB Garamond',Georgia,serif;font-style:italic;color:var(--navy);margin-top:24px;font-size:1.083rem;line-height:1.65}
 
 .usp{display:grid;grid-template-columns:repeat(2,1fr);gap:36px 48px;margin-top:8px}
 .usp-item h3{font-family:var(--font-display);font-size:1.221rem;font-weight:500;color:var(--navy);margin-bottom:12px;line-height:1.4}
-.usp-item p{font-size:1.02rem;color:var(--ink-muted);line-height:1.7;font-weight:400}
+.usp-item p{font-size:1.0625rem;color:var(--ink-muted);line-height:1.7;font-weight:400}
 @media(max-width:720px){.usp{grid-template-columns:1fr;gap:32px}}
 
 .garanties{margin-top:8px}
 .garantie{padding:20px 0;border-bottom:1px solid var(--rule)}
 .garantie:last-child{border-bottom:none}
 .garantie h4{font-family:var(--font-display);font-size:1.115rem;font-weight:500;color:var(--navy);margin-bottom:8px}
-.garantie p{font-size:0.998rem;color:var(--ink-muted);line-height:1.65;font-weight:400;margin-bottom:0}
+.garantie p{font-size:1.0625rem;color:var(--ink-muted);line-height:1.65;font-weight:400;margin-bottom:0}
 
 .tarif{margin-top:8px;padding:36px 40px;background:var(--paper);border:1px solid var(--rule);border-radius:2px;text-align:center}
 .tarif-price{font-family:var(--font-display);font-size:2.4rem;font-weight:500;color:var(--navy);letter-spacing:-.02em;line-height:1}
-.tarif-unit{font-family:var(--font-mono);font-size:0.99rem;letter-spacing:.12em;color:var(--ink-muted);text-transform:uppercase;margin-left:6px;font-weight:500}
+.tarif-unit{font-family:var(--font-mono);font-size:1.0625rem;letter-spacing:.12em;color:var(--ink-muted);text-transform:uppercase;margin-left:6px;font-weight:500}
 .tarif-label{margin-top:12px;font-family:var(--font-display);font-style:italic;color:var(--ink-muted);font-size:1.062rem}
-.tarif-features{margin-top:24px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;font-size:0.977rem;color:var(--ink)}
-.tarif-note{margin-top:24px;padding-top:20px;border-top:.5px solid var(--rule);font-size:0.977rem;color:var(--ink-muted);line-height:1.7;font-style:italic}
+.tarif-features{margin-top:24px;display:flex;justify-content:center;gap:32px;flex-wrap:wrap;font-size:1.0625rem;color:var(--ink)}
+.tarif-note{margin-top:24px;padding-top:20px;border-top:.5px solid var(--rule);font-size:1.0625rem;color:var(--ink-muted);line-height:1.7;font-style:italic}
 
 .suite{margin-top:8px;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .suite a{display:block;padding:24px 28px;background:var(--paper);border:1px solid var(--rule);border-radius:2px;text-decoration:none;transition:border-color .2s}
 .suite a:hover{border-color:var(--gold)}
 .suite-tag{font-family:var(--font-mono);font-size:0.701rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:8px}
-.suite-title{font-family:var(--font-display);font-size:1.168rem;font-weight:500;color:var(--navy);margin-bottom:6px}
-.suite-sub{font-size:0.977rem;color:var(--ink-muted);line-height:1.55;font-weight:400}
+.suite-title{font-family:'EB Garamond',Georgia,serif;font-size:1.168rem;font-weight:500;color:var(--navy);margin-bottom:6px}
+.suite-sub{font-size:1.0625rem;color:var(--ink-muted);line-height:1.55;font-weight:400}
 @media(max-width:560px){.suite{grid-template-columns:1fr}}
 
 .finale{background:var(--navy);padding:90px 48px;text-align:center}
 .finale-inner{max-width:680px;margin:0 auto}
 .finale h2{font-family:var(--font-display);font-size:clamp(1.699rem,2.97vw,2.23rem);font-weight:500;color:var(--paper);line-height:1.35;margin-bottom:20px;letter-spacing:-.01em}
 .finale h2 em{font-style:italic;color:var(--gold-light)}
-.finale p{font-family:var(--font-display);font-style:italic;font-size:1.115rem;color:rgba(250,250,247,.7);line-height:1.7;margin-bottom:40px}
+.finale p{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.115rem;color:rgba(250,250,247,.7);line-height:1.7;margin-bottom:40px}
 .btn-gold{display:inline-block;background:var(--gold);color:var(--navy-deep);text-decoration:none;padding:16px 36px;font-family:var(--font-mono);font-size:0.765rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border-radius:2px}
 .btn-outline{display:inline-block;background:transparent;color:var(--gold-light);text-decoration:none;padding:15px 30px;font-family:var(--font-mono);font-size:0.765rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;border:1px solid rgba(196,164,114,.4);border-radius:2px;margin-left:12px}
 @media(max-width:520px){.btn-outline{margin-left:0;margin-top:14px}}
@@ -584,14 +584,14 @@ footer.footer .footer-fp{font-family:'IBM Plex Mono',monospace;font-size:0.658re
 
   <div style="margin-top:36px;padding:26px 30px;background:var(--paper);border-left:3px solid var(--gold);border-radius:2px">
     <p style="font-family:var(--font-display);font-style:italic;color:var(--ink-muted);font-size:1.062rem;margin-bottom:14px">Le journal n'enregistre que ce qui est positif et caractérisé — pas l'intention.</p>
-    <p style="font-size:1.02rem;color:var(--ink);line-height:1.7;margin-bottom:10px">Constitutifs de la preuve, et donc enregistrés :</p>
+    <p style="font-size:1.0625rem;color:var(--ink);line-height:1.7;margin-bottom:10px">Constitutifs de la preuve, et donc enregistrés :</p>
     <ul class="dots" style="margin:0 0 14px 0">
       <li>la réception du Φ de votre client</li>
       <li>la réception du document à signer</li>
       <li>la réception de l'attestation de signature et du dossier d'identité du signataire</li>
       <li>la réception de l'attestation et du certificat</li>
     </ul>
-    <p style="font-size:1.02rem;color:var(--ink);line-height:1.7;margin-bottom:0">Tous les éléments constitutifs de la preuve, réceptionnés par le téléphone de l'un ou de l'autre. Les envois, eux, ne sont pas, dans l'absolu, une preuve de la volonté de signer.</p>
+    <p style="font-size:1.0625rem;color:var(--ink);line-height:1.7;margin-bottom:0">Tous les éléments constitutifs de la preuve, réceptionnés par le téléphone de l'un ou de l'autre. Les envois, eux, ne sont pas, dans l'absolu, une preuve de la volonté de signer.</p>
   </div>
 </section>
 

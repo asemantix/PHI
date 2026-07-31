@@ -172,15 +172,15 @@
   .hero { padding: 96px 48px 88px; background: var(--navy); color: var(--paper); position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(ellipse at 70% 50%, rgba(196,164,114,.06) 0%, transparent 60%); pointer-events: none; }
   .hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 2; }
-  .hero-eyebrow { font-family: var(--font-mono); font-size:0.99rem; color: var(--gold); letter-spacing: .44em; text-transform: uppercase; font-weight: 500; margin-bottom: 28px; opacity: .85; }
+  .hero-eyebrow { font-family: var(--font-mono); font-size:1.0625rem; color: var(--gold); letter-spacing: .44em; text-transform: uppercase; font-weight: 500; margin-bottom: 28px; opacity: .85; }
   .hero-title { font-family: var(--font-display); font-size:clamp(2.834rem,5.91vw,4.96rem); font-weight: 500; line-height: 1.08; letter-spacing: -.025em; color: var(--paper); margin-bottom: 14px; }
   .hero-title em { font-style: italic; color: var(--gold-soft); }
   .hero-mark { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size:clamp(3.071rem,7.09vw,5.669rem); color: var(--gold-soft); line-height: 1; letter-spacing: -.018em; margin: 14px 0 22px; }
   @media (max-width: 720px) { .hero-mark { font-size: 2.2rem; margin: 10px 0 18px; } }
-  .hero-subtitle { font-family: var(--font-display); font-style: italic; font-size:1.394rem; line-height: 1.65; color: rgba(250,249,246,.58); margin-bottom: 52px; max-width: 660px; }
+  .hero-subtitle { font-family:'EB Garamond',Georgia,serif; font-style: italic; font-size:1.394rem; line-height: 1.65; color: rgba(250,249,246,.58); margin-bottom: 52px; max-width: 660px; }
   .hero-rule { width: 60px; height: 1px; background: var(--gold); opacity: .45; margin-bottom: 36px; }
   .hero-statement { border-left: 2px solid rgba(196,164,114,.4); padding-left: 28px; max-width: 720px; }
-  .hero-statement p { font-family: var(--font-display); font-size:1.323rem; line-height: 1.75; color: rgba(250,249,246,.78); font-weight: 400; margin-bottom: 16px; }
+  .hero-statement p { font-family:'EB Garamond',Georgia,serif; font-size:1.323rem; line-height: 1.75; color: rgba(250,249,246,.78); font-weight: 400; margin-bottom: 16px; }
   .hero-statement p:last-child { margin-bottom: 0; }
   .hero-statement strong { color: var(--gold-soft); font-weight: 500; }
   .hero-statement em { font-style: italic; color: rgba(250,249,246,.55); }
@@ -191,7 +191,7 @@
   .section-eyebrow { font-family: var(--font-mono); font-size:0.827rem; color: var(--gold-deep); letter-spacing: .42em; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
   .section-title { font-family: var(--font-display); font-size:clamp(2.126rem,3.54vw,3.071rem); font-weight: 500; color: var(--navy); line-height: 1.2; letter-spacing: -.015em; margin-bottom: 18px; }
   .section-title em { font-style: italic; color: var(--gold-deep); }
-  .section-lede { font-family: var(--font-display); font-style: italic; font-size:1.275rem; color: var(--ink-muted); line-height: 1.7; max-width: 720px; margin-bottom: 56px; }
+  .section-lede { font-family:'EB Garamond',Georgia,serif; font-style: italic; font-size:1.275rem; color: var(--ink-muted); line-height: 1.7; max-width: 720px; margin-bottom: 56px; }
   em.brand { font-style: italic; color: var(--gold-deep); }
 
   /* ── LE MENSONGE CONFORTABLE ── */
@@ -203,7 +203,7 @@
   .mc-label { font-family: var(--font-mono); font-size:0.779rem; letter-spacing: .28em; text-transform: uppercase; margin-bottom: 20px; font-weight: 600; }
   .mc-card.them .mc-label { color: #9a8878; }
   .mc-card.phi .mc-label { color: var(--gold); }
-  .mc-title { font-family: var(--font-display); font-size:1.535rem; font-weight: 600; margin-bottom: 24px; line-height: 1.3; }
+  .mc-title { font-family:'EB Garamond',Georgia,serif; font-size:1.535rem; font-weight: 600; margin-bottom: 24px; line-height: 1.3; }
   .mc-card.them .mc-title { color: var(--navy); }
   .mc-card.phi .mc-title { color: var(--paper); }
 
@@ -224,7 +224,7 @@
   .mc-card.phi .mc-conclusion strong { color: var(--gold-soft); }
 
   .mensonge-verdict { max-width: 780px; margin: 0 auto; padding: 32px 36px; border-left: 3px solid var(--gold-deep); background: white; }
-  .mensonge-verdict p { font-family: var(--font-display); font-size:1.275rem; color: var(--ink); line-height: 1.75; font-weight: 400; }
+  .mensonge-verdict p { font-family:'EB Garamond',Georgia,serif; font-size:1.275rem; color: var(--ink); line-height: 1.75; font-weight: 400; }
   .mensonge-verdict strong { color: var(--navy); font-weight: 600; }
   .mensonge-verdict em { font-style: italic; color: var(--gold-deep); }
 
@@ -235,7 +235,7 @@
   .moment-card.central { background: var(--navy); color: var(--paper); }
   .moment-who { font-family: var(--font-mono); font-size:0.779rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; font-weight: 600; }
   .moment-card.central .moment-who { color: var(--gold); }
-  .moment-app { font-family: var(--font-display); font-size:1.299rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; line-height: 1.3; }
+  .moment-app { font-family:'EB Garamond',Georgia,serif; font-size:1.299rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; line-height: 1.3; }
   .moment-card.central .moment-app { color: var(--paper); }
   .moment-body { font-family: var(--font-sans); font-size:1.122rem; color: var(--ink-muted); line-height: 1.65; font-weight:400; }
   .moment-card.central .moment-body { color: rgba(250,249,246,.6); }
@@ -253,7 +253,7 @@
   .forteresse-pilliers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 56px; }
   .pillier { padding: 36px 28px; border: 1px solid rgba(196,164,114,.12); }
   .pillier-num { font-family: var(--font-mono); font-size:0.779rem; letter-spacing: .32em; text-transform: uppercase; color: rgba(196,164,114,.5); margin-bottom: 14px; }
-  .pillier-title { font-family: var(--font-display); font-size:1.358rem; font-weight: 600; color: var(--paper); margin-bottom: 14px; line-height: 1.3; }
+  .pillier-title { font-family:'EB Garamond',Georgia,serif; font-size:1.358rem; font-weight: 600; color: var(--paper); margin-bottom: 14px; line-height: 1.3; }
   .pillier-body { font-family: var(--font-sans); font-size:1.122rem; color: rgba(250,249,246,.5); line-height: 1.65; font-weight:400; }
   .pillier-body strong { color: rgba(196,164,114,.8); font-weight: 500; }
 
@@ -279,19 +279,19 @@
   .lv-hors-item::before { content: '✕'; position: absolute; left: 0; color: #c84b4b; font-size:0.827rem; }
   .lv-right { }
   .lv-principe { padding: 32px; border-left: 2px solid var(--gold); background: var(--paper-soft); margin-bottom: 24px; }
-  .lv-principe p { font-family: var(--font-display); font-size:1.24rem; color: var(--ink); line-height: 1.75; margin-bottom: 12px; font-weight: 400; }
+  .lv-principe p { font-family:'EB Garamond',Georgia,serif; font-size:1.24rem; color: var(--ink); line-height: 1.75; margin-bottom: 12px; font-weight: 400; }
   .lv-principe p:last-child { margin: 0; }
   .lv-principe strong { color: var(--navy); font-weight: 600; }
   .lv-principe em { font-style: italic; color: var(--gold-deep); }
   .lv-limite { padding: 24px; background: var(--paper); border: 1px solid var(--rule); }
   .lv-limite-title { font-family: var(--font-mono); font-size:0.756rem; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 12px; }
-  .lv-limite p { font-family: var(--font-sans); font-size:1.004rem; color: var(--ink-muted); line-height: 1.65; font-weight:400; }
+  .lv-limite p { font-family: var(--font-sans); font-size:1.0625rem; color: var(--ink-muted); line-height: 1.65; font-weight:400; }
   .lv-limite strong { color: var(--navy); font-weight: 500; }
 
   /* ── FAQ ── */
   .faq-list { max-width: 800px; }
   .faq-item { border-top: 1px solid var(--rule); padding: 28px 0; }
-  .faq-q { font-family: var(--font-display); font-size:1.275rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; line-height: 1.4; }
+  .faq-q { font-family:'EB Garamond',Georgia,serif; font-size:1.275rem; font-weight: 600; color: var(--navy); margin-bottom: 14px; line-height: 1.4; }
   .faq-a { font-family: var(--font-sans); font-size:1.063rem; color: var(--ink-muted); line-height: 1.7; font-weight:400; }
   .faq-a strong { color: var(--navy); font-weight: 500; }
 
@@ -300,11 +300,11 @@
   .cta-eyebrow { font-family: var(--font-mono); font-size:0.827rem; letter-spacing: .42em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; opacity: .8; }
   .cta-title { font-family: var(--font-display); font-size:clamp(2.362rem,4.72vw,3.779rem); font-weight: 500; color: var(--paper); line-height: 1.15; margin-bottom: 16px; }
   .cta-title em { font-style: italic; color: var(--gold-soft); }
-  .cta-sub { font-family: var(--font-display); font-style: italic; font-size:1.299rem; color: rgba(250,249,246,.5); margin-bottom: 44px; }
+  .cta-sub { font-family:'EB Garamond',Georgia,serif; font-style: italic; font-size:1.299rem; color: rgba(250,249,246,.5); margin-bottom: 44px; }
   .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); text-decoration: none; padding: 15px 34px; font-family: var(--font-mono); font-size:0.99rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
+  .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); text-decoration: none; padding: 15px 34px; font-family: var(--font-mono); font-size:1.0625rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; transition: background .2s; }
   .btn-primary:hover { background: var(--gold-light); }
-  .btn-ghost { display: inline-block; background: transparent; color: rgba(250,249,246,.7); text-decoration: none; padding: 14px 28px; font-family: var(--font-mono); font-size:0.99rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; border: 1.5px solid rgba(196,164,114,.3); transition: all .2s; }
+  .btn-ghost { display: inline-block; background: transparent; color: rgba(250,249,246,.7); text-decoration: none; padding: 14px 28px; font-family: var(--font-mono); font-size:1.0625rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 500; border: 1.5px solid rgba(196,164,114,.3); transition: all .2s; }
   .btn-ghost:hover { background: rgba(196,164,114,.08); border-color: var(--gold); }
 
   /* ── FOOTER (4 colonnes — charte commune) ── */
@@ -313,13 +313,13 @@
   .footer-brand { text-align: center; margin-bottom: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(196,164,114,.2); }
   .footer-phi { font-family: var(--font-display); font-style: italic; font-size: 4.5rem; color: var(--gold); font-weight: 500; line-height: 1; margin-bottom: 18px; }
   .footer-line { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 18px; }
-  .footer-baseline-1 { font-family: var(--font-display); font-style: italic; font-size:1.417rem; color: var(--gold-light); margin-bottom: 4px; }
-  .footer-baseline-2 { font-family: var(--font-display); font-style: italic; font-size:1.181rem; color: rgba(226,200,122,.8); }
+  .footer-baseline-1 { font-family:'EB Garamond',Georgia,serif; font-style: italic; font-size:1.417rem; color: var(--gold-light); margin-bottom: 4px; }
+  .footer-baseline-2 { font-family:'EB Garamond',Georgia,serif; font-style: italic; font-size:1.181rem; color: rgba(226,200,122,.8); }
   .footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin-bottom: 48px; }
   .footer-col h4 { font-family: var(--font-mono); font-size:0.779rem; letter-spacing: .32em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 18px; font-weight: 500; }
   .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .footer-col li { margin-bottom: 0; }
-  .footer-col a { font-family: var(--font-display); font-style: italic; font-size:1.181rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
+  .footer-col a { font-family:'EB Garamond',Georgia,serif; font-style: italic; font-size:1.181rem; color: rgba(255,255,255,.75); text-decoration: none; transition: color .2s; }
   .footer-col a:hover { color: var(--gold-light); }
   .footer-meta { border-top: 1px solid rgba(196,164,114,.15); padding-top: 28px; text-align: center; font-family: var(--font-mono); font-size:0.779rem; letter-spacing: .18em; color: rgba(255,255,255,.4); line-height: 1.8; }
   .footer-meta strong { color: var(--gold-light); font-weight: 500; }
@@ -349,7 +349,7 @@ footer.footer .footer-line{width:60px;height:1px;background:#c4a472;margin:0 aut
 footer.footer .footer-baseline-1{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.417rem;color:#d4b888;margin-bottom:4px}
 footer.footer .footer-baseline-2{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.299rem,2.3vw,1.535rem);color:rgba(226,200,122,.8)}
 footer.footer .footer-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:44px;margin-bottom:48px;text-align:left}
-footer.footer .footer-col h4{font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.99rem;letter-spacing:.32em;text-transform:uppercase;color:#d4b888;font-weight:500;margin:0 0 18px}
+footer.footer .footer-col h4{font-family:'IBM Plex Mono','Courier New',monospace;font-size:1.0625rem;letter-spacing:.32em;text-transform:uppercase;color:#d4b888;font-weight:500;margin:0 0 18px}
 footer.footer .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin:0;padding:0}
 footer.footer .footer-col li{margin:0;padding:0;list-style:none}
 footer.footer .footer-col li::before{content:none}
@@ -358,7 +358,7 @@ footer.footer .footer-col a:hover{color:#d4b888}
 footer.footer .footer-col a.footer-link-special{color:rgba(196,164,114,.65);border-left:1.5px solid rgba(196,164,114,.3);padding-left:10px;margin-top:4px;display:block}
 footer.footer .footer-col a.footer-link-special:hover{color:#d4b888;border-color:#c4a472}
 footer.footer .footer-soon{opacity:.4;cursor:default;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.24rem,2.24vw,1.476rem);color:rgba(255,255,255,.55)}
-footer.footer .footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:28px;text-align:center;font-family:'IBM Plex Mono','Courier New',monospace;font-size:0.99rem;letter-spacing:.18em;color:rgba(255,255,255,.4);line-height:1.8}
+footer.footer .footer-meta{border-top:1px solid rgba(196,164,114,.15);padding-top:28px;text-align:center;font-family:'IBM Plex Mono','Courier New',monospace;font-size:1.0625rem;letter-spacing:.18em;color:rgba(255,255,255,.4);line-height:1.8}
 footer.footer .footer-meta strong{color:#d4b888;font-weight:500}
 footer.footer .footer-meta a{color:rgba(255,255,255,.55);text-decoration:none}
 footer.footer .footer-meta a:hover{color:#d4b888}
@@ -368,7 +368,7 @@ footer.footer .footer-key-qr span.g{font-family:'EB Garamond',Georgia,serif;font
 footer.footer .footer-key-qr span.m{font-family:'IBM Plex Mono',monospace;font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(196,164,114,.8);margin-top:6px}
 footer.footer .footer-key-txt{text-align:left}
 footer.footer .footer-key-txt .t{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.205rem;color:#e8dcc8;margin-bottom:6px}
-footer.footer .footer-key-txt .s{font-family:'IBM Plex Mono',monospace;font-size:0.99rem;letter-spacing:.14em;text-transform:uppercase;color:#c4a472;border-bottom:1px solid rgba(196,164,114,.3);padding-bottom:2px;opacity:.45;cursor:default}
+footer.footer .footer-key-txt .s{font-family:'IBM Plex Mono',monospace;font-size:1.0625rem;letter-spacing:.14em;text-transform:uppercase;color:#c4a472;border-bottom:1px solid rgba(196,164,114,.3);padding-bottom:2px;opacity:.45;cursor:default}
 footer.footer .footer-entity{font-family:'IBM Plex Mono',monospace;font-size:0.779rem;letter-spacing:.1em;color:rgba(232,220,200,.55);line-height:1.9;margin-top:10px;text-align:center}
 footer.footer .footer-fp{font-family:'IBM Plex Mono',monospace;font-size:0.732rem;letter-spacing:.1em;color:rgba(196,164,114,.6);line-height:1.9;margin-top:14px;text-align:center}
 @media(max-width:720px){footer.footer{padding:60px 24px 30px}footer.footer .footer-phi{font-size:3.5rem}footer.footer .footer-nav{grid-template-columns:1fr;gap:32px}}
